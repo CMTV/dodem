@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}        
+    </head>
+    <body class="page-task">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <section class="block-section task">
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>{{ task }}</span>
+                </div>
+                <div class="block-section-container">
+                    <div class="task-nav">
+                        <div title="{{ location.section.title }}" class="section">
+                            <span class="accent">{{ location.section.id }}</span>
+                            <span class="title">{{ location.section.title }}</span>
+                        </div>
+
+                        <div title="{{ location.paragraph.title }}" class="paragraph">
+                            └─ <span class="accent">§{{ location.paragraph.id }}</span>
+                            <span class="title">{{ location.paragraph.title }}</span>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="block-section-content">
+                        {{{ taskHtml }}}
+                    </div>
+                </div>
+            </section>
+
+            {{ #hintHtml }}
+            <section class="block-section hint">
+                <div class="block-section-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Указание</span>
+                </div>
+
+                <div class="block-section-container">
+                    <div class="block-section-content">{{{ hintHtml }}}</div>
+                </div>
+            </section>
+            {{ /hintHtml }}
+
+            <section class="block-section solution">
+                <div class="block-section-header">
+                    <i class="fas fa-check"></i>
+                    <span>Решение</span>
+                </div>
+                <div class="block-section-container">
+                    <div class="block-section-content">
+                        {{{ solutionHtml }}}
+                    </div>
+
+                    <div class="solver">
+                        <a href="{{{ site_root }}}solvers.html#{{ solver.id }}" title="Узнать больше о решателе">
+                            {{ #solver.hasAvatar }}
+                                <img class="solver-avatar" src="{{{ site_root }}}graphics/solvers/{{ solver.id }}.png">
+                            {{ /solver.hasAvatar }}
+
+                            {{ ^solver.hasAvatar }}
+                                <i class="solver-icon fas fa-user-graduate"></i>
+                            {{ /solver.hasAvatar }}
+
+                            <span class="solver-name">{{ solver.name }}</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="block-section refs">
+                <div class="block-section-header">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Ссылки</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                        {{ #refs }}
+                            <dt>
+                                <a href="{{{ link }}}" title="{{ title }}" target="_blank">
+                                    {{ title }}
+                                </a>
+                            </dt>
+                            <dd>{{ desc }}</dd>
+                        {{ /refs }}
+                    
+                    </dl>
+                </div>
+            </section>
+
+            <section class="nav">
+                {{ #nav.next }}
+                    <a href="{{{ site_root }}}tasks/{{ nav.next }}/" title="Следующая задача" class="next">
+                        <span class="label">{{ nav.next }}</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                {{ /nav.next }}
+
+                {{ #nav.prev }}
+                    <a href="{{{ site_root }}}tasks/{{ nav.prev }}/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">{{ nav.prev }}</span>
+                    </a>
+                {{ /nav.prev }}
+            </section>
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

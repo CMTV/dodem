@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}        
+    </head>
+    <body class="page-solvers">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <h2 class="title">Решатели</h2>
+
+            <section class="solvers-list">
+
+                {{ #solvers }}
+                    <a id="{{ id }}"></a>
+                    <div class="solver">
+                        <div class="solver-data">
+                            <a {{#link}} href="{{{ link }}}" {{/link}} target="_blank" class="avatar">
+                                {{ #hasAvatar }}
+                                    <img src="{{{ site_root }}}graphics/solvers/{{ id }}.png">
+                                {{ /hasAvatar }}
+    
+                                {{ ^hasAvatar }}
+                                    <i class="fas fa-user-graduate"></i>
+                                {{ /hasAvatar }}
+                            </a>
+    
+                            <div class="info">
+                                <div class="name">
+                                    <a {{#link}} href="{{{ link }}}" {{/link}}  target="_blank" title="Ссылка решателя">
+                                        {{ name }}
+                                    </a>
+                                </div>
+    
+                                {{ #slogan }}
+                                    <span class="slogan">{{{ slogan }}}</span>
+                                {{ /slogan }}
+                            </div>
+    
+                            <div title="Задач решено" class="solved-amount">
+                                {{ solvedNum }}
+                            </div>
+                        </div>
+
+                        <div class="solved-list">
+                            <div class="wrapper">
+                                {{ #tasks }}
+                                    <a title="К решению {{ . }}" href="{{{ site_root }}}tasks/{{ . }}/">{{ . }}</a>
+                                {{ /tasks }}
+                            </div>
+                        </div>
+                    </div>
+                {{ /solvers }}
+
+            </section>
+
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

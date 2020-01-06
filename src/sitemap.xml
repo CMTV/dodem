@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url><loc>https://www.dodem.ru/index.html</loc></url>
+    <url><loc>https://www.dodem.ru/solvers.html</loc></url>
+
+    {{ #tasks}}
+    <url><loc>https://www.dodem.ru/tasks/{{ . }}/index.html</loc></url>
+    {{ /tasks}}
+</urlset> 

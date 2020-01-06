@@ -1,0 +1,33 @@
+@import 'import';
+
+header
+{
+    text-align: center;
+
+    font-family: 'Yandex';
+    font-size: 60px;
+
+    @include layout(mini)
+    {
+        font-size: 40px;
+    }
+
+    color: $fblack-color;
+
+    &::first-letter
+    {
+        color: $brand-color;
+    }
+
+    margin-top: 35px;
+
+    .page-index &
+    {
+        margin-top: 25vh;
+    }
+
+    a
+    {
+        text-decoration: none;
+    }
+}

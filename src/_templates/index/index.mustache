@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}
+        
+        <script async src="{{{ site_root }}}scripts/luck.js"></script>
+    </head>
+    <body class="page-index">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <section class="info-bar">
+                <a title="Что? Зачем? Как и почему?" href="https://radkopeter.info" target="_blank" class="info-item about">
+                    <i class="fas fa-info"></i>
+                    <span>О проекте</span>
+                </a>
+
+                <a title="Светочи знаний, приславшие решения задач." href="{{{ site_root }}}solvers.html" target="_blank" class="info-item donate">
+                    <i class="fas fa-users"></i>
+                    <span>Решатели</span>
+                </a>
+                
+                <a title="Телепортироваться к случайному решению!" class="info-item luck">
+                    <i class="fas fa-dice"></i>
+                    <span>Мне повезет!</span>
+                </a>
+            </section>
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

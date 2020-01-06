@@ -1,0 +1,12 @@
+{
+    "task": 1,
+    "location": "I.1",
+
+    "solver": "CMTV",
+
+    "refs": 
+    [
+        { "title": "Метод математической индукции", "link": "https://google.com", "desc": "Описашки!" },
+        { "title": "Метод индукции", "link": "https://google.com" }
+    ]
+}

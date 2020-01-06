@@ -1,0 +1,11 @@
+{
+    "task": 2,
+    "location": "II.2",
+
+    "solver": "nagibin",
+
+    "refs": 
+    [
+        { "title": "КЕк математической индукции", "link": "https://google.com", "desc": "Опись!" }
+    ]
+}

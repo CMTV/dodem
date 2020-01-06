@@ -1,0 +1,76 @@
+@import 'import';
+
+.info-bar
+{
+    opacity: .6;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px 0;
+    padding-bottom: 50px;
+
+    transition: opacity $anim-speed;
+
+    @include layout(mini)
+    {
+        opacity: .8;
+        padding-bottom: 0;
+    }
+
+    &:hover
+    {
+        opacity: 1;
+    }
+
+    .info-item
+    {
+        font-size: 95%;
+        text-decoration: none;
+        color: $fmuted-color;
+
+        @include layout(mini)
+        {   
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            width: 40px;
+            height: 40px;
+
+            border: 2px solid $border-color;
+            border-radius: $border-radius;
+
+            background: white;
+
+            span
+            {
+                display: none;
+            }
+        }
+
+        &:not(:last-of-type)
+        {
+            margin-right: 20px;
+        }
+
+        &:hover
+        {
+            color: $fblack-color;
+        }
+
+        i
+        {
+            margin-right: 3px;
+
+            @include layout(mini)
+            {
+                margin: 0;
+            }
+        }
+    }
+}
