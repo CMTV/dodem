@@ -1,0 +1,40 @@
+@import 'import';
+
+.progress-bar-container
+{
+    flex-shrink: 0;
+    opacity: .6;
+
+    position: absolute;
+
+    top: 0;
+    right: 0;
+    left: 0;
+
+    padding-bottom: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover
+    {
+        cursor: help;
+    }
+
+    .progress-bar
+    {
+        width: 100%;
+        height: 5px;
+
+        background: lighten($brand-color, 45%);
+
+        border-bottom: 1px solid $border-faint-color;
+
+        div
+        {
+            height: 100%;
+            background: $brand-color;
+        }
+    }
+}

@@ -1,0 +1,418 @@
+@import 'import';
+
+$search-height: 45px;
+
+$search-states: 'normal', 'success', 'error', 'wtf';
+
+$search-colors: (
+    "normal":   #C8C8C8, 
+    "success":    $brand-color, 
+    "error":    rgb(228, 0, 0), 
+    "wtf":      rgb(255, 166, 0)
+);
+
+$search-muted-bg: rgb(241, 241, 241);
+$search-muted-border-color: rgb(204, 204, 204);
+
+@mixin search-style($style: 'normal')
+{
+    #search-input,
+    .search-bar--button,
+    .search-results
+    {
+        border-color: map-get($search-colors, $style);
+        transition: border-color $anim-speed; // Не работает при переключении состояний через JS!
+    }
+
+    .search-results
+    {
+        @if $style == 'normal'
+        {
+            display: none;
+        }
+
+        @if $style == 'success'
+        {
+            border-top: none;
+        }
+        
+        transition: border-color $anim-speed, box-shadow $anim-speed;
+        box-shadow: 0px 2px 3px -1px map-get($search-colors, $style);
+    }
+
+    @if $style != 'normal'
+    {
+        #search-input { border-bottom-left-radius: 0; }
+
+        @include layout(stretch)
+        {
+            .search-bar--button { border-bottom-right-radius: 0;}
+        }
+    }
+    
+    @each $state in $search-states
+    {
+        @if $state != $style
+        {
+            .search-icon--#{$state} { display: none; }
+            .search-results-pane--#{$state} { display: none; }
+        }
+    }
+}
+
+.search-container
+{
+    position: relative;
+
+    margin-top: 25px;
+
+    @include layout(mini)
+    {
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+
+    .search-bar
+    {
+        position: relative;
+
+        height: $search-height;
+
+        #search-input
+        {
+            height: 100%;
+            width: 100%;
+
+            border: 2px solid #C8C8C8;
+            border-radius: $border-radius;
+
+            padding: 0 0.75em;
+            padding-right: $search-height;
+
+            outline: none;
+
+            font-family: "Open Sans";
+            font-size: 107%;
+
+            @include layout(mini)
+            {
+                font-size: 95%;
+            }
+        }
+
+        .search-bar--button
+        {
+            position: absolute;
+
+            top: 0;
+            right: 0;
+
+            z-index: 100;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 2px solid #C8C8C8;
+            border-top-right-radius: $border-radius;
+            border-bottom-right-radius: $border-radius;
+
+            font-size: 18px;
+
+            height: $search-height;
+            width: $search-height;
+
+            text-decoration: none;
+
+            @each $state in $search-states 
+            {
+                .search-icon--#{$state}
+                {
+                    color: darken(map-get($search-colors, $state), 7%);
+
+                    @if $state == 'normal'
+                    {
+                        color: darken(map-get($search-colors, $state), 50%);
+                    }
+                }
+            }
+        }
+    }
+
+    .search-results
+    {
+        position: absolute;
+        top: $search-height - 2px;
+        z-index: 99;
+
+        width: 100%;
+
+        @include layout-full
+        {
+            width: calc(100% - #{$search-height - 2px});
+        }
+        
+        border: 2px solid #C8C8C8;
+        border-bottom-left-radius: $border-radius;
+        border-bottom-right-radius: $border-radius;
+        border-top-style: dashed;
+
+        background-color: white;
+
+        .search-results-pane
+        {
+            width: 100%;
+            height: 100%;
+
+            &--success
+            {
+                position: relative;
+
+                .task-view,
+                .task-loading
+                {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                &._loading { .task-view { display: none; } }
+                &:not(._loading) { .task-loading { display: none; } }
+
+                .task-view
+                {
+                    display: flex;
+                    flex-direction: column;
+
+                    .task-nav,
+                    .task-preview
+                    {
+                        padding: 0.75em;
+                    }
+
+                    .task-nav
+                    {
+                        padding-top: 0.35em;
+                        padding-bottom: 0.35em;
+
+                        position: relative;
+
+                        display: flex;
+                        flex-direction: column;
+
+                        white-space: nowrap;
+                        overflow: hidden;
+
+                        font-size: 85%;
+                        color: $fmuted-color;
+
+                        background-color: $search-muted-bg;
+                        
+                        border-top: 2px solid $search-muted-border-color;
+                        border-bottom: 2px solid $search-muted-border-color;
+
+                        @include layout(mini)
+                        {
+                            font-size: 75%;
+                        }
+
+                        .accent
+                        {
+                            font-weight: bold;
+                        }
+
+                        .section
+                        {
+                            margin-bottom: 2px;
+                        }
+
+                        .overlay
+                        {
+                            position: absolute;
+
+                            top: 0;
+                            right: 0;
+
+                            height: 100%;
+                            width: 45px;
+                            
+                            background: linear-gradient(90deg, rgba($search-muted-bg, 0), rgba($search-muted-bg, 1) 75%);
+                        }
+                    }
+
+                    .task-preview
+                    {
+                        flex: 1;
+                        font-size: 90%;
+
+                        max-height: 170px;
+                        overflow: hidden;
+                        overflow-y: auto;
+
+                        @include layout(mini)
+                        {
+                            font-size: 85%;
+                            max-height: 100px;
+                        }
+
+                        &::-webkit-scrollbar
+                        {
+                            width: 10px;
+                        }
+
+                        &::-webkit-scrollbar-thumb
+                        {
+                            background: #c8c8c8;
+
+                            &:hover
+                            {
+                                background-color: darken(#c8c8c8, 10%);
+                            }
+                        }
+                    }
+                }
+
+                .task-loading
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    border-top: 2px dashed map-get($search-colors, 'success');
+
+                    .spinner
+                    {
+                        width: 200px;
+                        margin: 30px 0;
+
+                        @include layout(mini)
+                        {
+                            width: 120px;
+                        }
+                    }
+                }
+
+                .goto-solution-button
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    color: white;
+                    font-size: 20px;
+                    text-decoration: none;
+
+                    border-top: 2px solid map-get($search-colors, 'success');
+
+                    background: lighten($brand-color, 10%);
+
+                    height: 45px;
+
+                    transition: background-color $anim-speed;
+
+                    i
+                    {
+                        margin-left: 7px;
+                        transition: transform $anim-speed;
+                    }
+
+                    &:hover
+                    {
+                        background-color: $brand-color;
+
+                        i
+                        {
+                            transform: translateX(4px);
+                        }
+                    }
+
+                    &:focus,
+                    &:active
+                    {
+                        background-color: darken($brand-color, 5%);
+                    }
+                }
+            }
+
+            &--error,
+            &--wtf
+            {
+                display: flex;
+                flex-wrap: wrap;
+
+                align-items: center;
+                justify-content: center;
+
+                padding: 25px 15px;
+
+                font-size: 95%;
+
+                @include layout(stretch)
+                {
+                    flex-direction: column;
+                }
+
+                @include layout(mini)
+                {
+                    font-size: 85%;
+                }
+
+                .emoji
+                {
+                    i 
+                    { 
+                        font-size: 100px;
+
+                        @include layout(mini)
+                        {
+                            font-size: 70px;
+                        }
+                    }
+
+                    @include layout-full
+                    {
+                        margin-right: 30px;
+                    }
+                }
+
+                .info
+                {
+                    @include layout-full
+                    {
+                        width: 320px;
+                    }
+
+                    @include layout(stretch)
+                    {
+                        margin-top: 15px;
+                        text-align: center;
+                    }
+                }
+            }
+
+            &--error
+            {
+                color: darken(map-get($search-colors, 'error'), 7%);
+            }
+
+            &--wtf
+            {
+                color: darken(map-get($search-colors, 'wtf'), 7%);
+
+                .info
+                {
+                    color: darken(map-get($search-colors, 'wtf'), 15%);
+                }
+            }
+        }
+    }
+
+    &.state
+    {
+        @each $state in $search-states 
+        {
+            &--#{$state} { @include search-style($state); }
+        }
+    }
+}

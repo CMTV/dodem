@@ -1,0 +1,14 @@
+@import 'import';
+
+@media print
+{
+    .page-task
+    {
+        .search-container,
+        .block-section.refs,
+        .nav
+        {
+            display: none;
+        }
+    }
+}

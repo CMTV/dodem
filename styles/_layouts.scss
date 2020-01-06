@@ -1,0 +1,25 @@
+// Ширина сайта в различных конфигурациях
+$layouts: (
+    stretch: 650px,
+    mini: 430px
+);
+
+//
+// Миксины для корректировки стиля для конкретной конфигурации
+//
+
+@mixin layout($layout)
+{
+    @media (max-width: map-get($layouts, $layout)) 
+    {
+        @content;
+    }
+}
+
+@mixin layout-full
+{
+    @media (min-width: map-get($layouts, stretch)) 
+    {
+        @content;
+    }
+}

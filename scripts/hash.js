@@ -1,0 +1,1 @@
+var SOLVED = 2; var HASH = {"1":null,"2":null};
