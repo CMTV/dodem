@@ -45,7 +45,8 @@ task('move_files', () =>
             'src/**/*',
             '!src/**/_*/',
             '!src/**/_*/**/*',
-            '!src/sitemap.xml' 
+            '!src/**/_*',
+            '!src/sitemap.xml'
         ], { nodir: true })
         .pipe(dest('out'));
 });
@@ -90,6 +91,8 @@ task('build_look', done =>
 task('test', done =>
 {
     let tools = require('./tools');
+
+    tools.genImg();
 
     done();
 });
