@@ -16,7 +16,7 @@ const tools =       require('./tools');
 
 task('build_scss', () =>
 {
-    return src(['src/styles/**/*.scss', '!src/styles/**/_*.scss'])
+    return src(['src/_styles/**/*.scss', '!src/styles/**/_*.scss'])
         .pipe(concat('style.min.css'))
         .pipe(scss())
         .pipe(clean_css())
@@ -25,7 +25,7 @@ task('build_scss', () =>
 
 task('build_js', () =>
 {
-    return src('src/scripts/**/*.js')
+    return src('src/_scripts/**/*.js')
         .pipe(babel( { presets: ['@babel/preset-env'] }))
         .pipe(uglify_js())
         .pipe(dest('out/scripts'));
