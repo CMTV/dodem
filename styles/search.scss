@@ -214,7 +214,7 @@ $search-muted-border-color: rgb(204, 204, 204);
 
                         @include layout(mini)
                         {
-                            font-size: 75%;
+                            display: none;
                         }
 
                         .accent
@@ -252,6 +252,7 @@ $search-muted-border-color: rgb(204, 204, 204);
 
                         @include layout(mini)
                         {
+                            border-top: 2px solid $brand-color;
                             font-size: 85%;
                             max-height: 100px;
                         }
@@ -355,11 +356,17 @@ $search-muted-border-color: rgb(204, 204, 204);
 
                 @include layout(mini)
                 {
+                    padding: 15px 10px;
                     font-size: 85%;
                 }
 
                 .emoji
                 {
+                    @include layout(mini)
+                    {
+                        display: none;
+                    }
+
                     i 
                     { 
                         font-size: 100px;
@@ -387,6 +394,11 @@ $search-muted-border-color: rgb(204, 204, 204);
                     {
                         margin-top: 15px;
                         text-align: center;
+                    }
+
+                    @include layout(mini)
+                    {
+                        margin-top: 0;
                     }
                 }
             }

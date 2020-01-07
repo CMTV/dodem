@@ -9,6 +9,18 @@
         margin-top: 30px;
     }
 
+    &.task, &.solution
+    {
+        .block-section-content
+        {
+            img 
+            {
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+
     &.task
     {
         .block-section-header
