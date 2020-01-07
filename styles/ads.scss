@@ -1,0 +1,70 @@
+@import 'import';
+
+.dark-magic-container
+{
+    overflow: hidden;
+
+    .ads
+    {
+        &--before-solution,
+        &--after-solution
+        {
+            margin-top: 30px;
+
+            width: auto;
+            height: 100px;
+        }
+    }
+}
+
+.no-dark-magic
+{
+    margin-top: 30px;
+
+    padding: 10px;
+
+    width: auto;
+    min-height: 100px;
+
+    border: 2px solid #b90000;
+    border-radius: $border-radius;
+
+    background: #ffeaea;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include layout(mini)
+    {
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+
+        flex-direction: column;
+    }
+
+    i
+    {
+        color: #660000;
+
+        font-size: 60px;
+        margin-right: 10px;
+
+        @include layout(mini)
+        {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    }
+
+    .message
+    {
+        font-size: 80%;
+
+        strong
+        {
+            color: #660000;
+        }
+    }
+}
