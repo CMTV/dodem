@@ -1,16 +1,1 @@
-function get_location(str_location)
-{
-    let arr_location = str_location.split('.');
-
-    return {
-        "section": { 
-            "id": arr_location[0], 
-            "title": TOC[arr_location[0]].title 
-        },
-
-        "paragraph": {
-            "id": arr_location[1],
-            "title": TOC[arr_location[0]].paragraphs[arr_location[1] - 1] 
-        }
-    }
-}
+"use strict";function get_location(t){var i=t.split(".");return{section:{id:i[0],title:TOC[i[0]].title},paragraph:{id:i[1],title:TOC[i[0]].paragraphs[i[1]-1]}}}

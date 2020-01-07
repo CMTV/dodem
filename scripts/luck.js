@@ -1,13 +1,1 @@
-$(document).ready(() =>
-{
-    let rndTaskNumber = () =>
-    {
-        let keys = Object.keys(HASH);
-
-        return keys[ keys.length * Math.random() << 0 ];
-    };
-
-    let $link = $('.info-bar').find('.info-item.luck');
-
-    $link.prop('href', `${SITE_ROOT}tasks/` + rndTaskNumber());
-});
+"use strict";$(document).ready(function(){var t;$(".info-bar").find(".info-item.luck").prop("href","".concat(SITE_ROOT,"tasks/")+(t=Object.keys(HASH))[t.length*Math.random()<<0])});
