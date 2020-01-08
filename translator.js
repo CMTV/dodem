@@ -3,7 +3,7 @@ const TRANSLATORS =
     paragraph: (text) =>
     {
         let out = '';
-        let paragraphs = text.split(/^\r\n/gm);
+        let paragraphs = text.split(/\n\s*\n/);
 
         paragraphs.forEach((paragraph) =>
         {
