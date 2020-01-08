@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../favicon.png" type="image/png">
 
-        <title>1 | Демидович. Решения</title>
-        <meta name="description" content="$$ 1+2+\ldots+n &#x3D; \frac{n(n+1)}{2} $$">
+        <title>4 | Демидович. Решения</title>
+        <meta name="description" content="$$ 1 + 2 + 2^2 + \ldots + 2^{n-1} &#x3D; 2^{n} - 1 $$">
         <meta name="keywords" content="демидович,демидович задачник,демидович решебник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -118,7 +118,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>1</span>
+                    <span>4</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -135,7 +135,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>$$ 1+2+\ldots+n = \frac{n(n+1)}{2} $$</p>
+                        <p>$$ 1 + 2 + 2^2 + \ldots + 2^{n-1} = 2^{n} - 1 $$</p>
                     </div>
                 </div>
             </section>
@@ -160,19 +160,21 @@
                 </div>
                 <div class="block-section-container">
                     <div class="block-section-content">
-                        <p>Докажем по методу математической индукции.</p>
+                        <p>Так как $1 = 2^0$ и $2 = 2^1$, то доказать нужно следующее равенство:</p>
+<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{n-1} = 2^n - 1 $$</p>
+<p>Докажем по методу математической индукции.</p>
 <p><strong>База индукции:</strong> пусть $n = 1$. Получаем:</p>
-<p>$$ 1 = \frac{1\cdot 2}{2} = 1 $$</p>
+<p>$$ 2^{1-1} = 2^0 = 1 \qquad \qquad 2^{1} - 1 = 1 $$</p>
 <p><strong>Индукционный переход:</strong></p>
-<p>Предположим, что равенство выполняется для суммы первых $k$ натуральных чисел:</p>
-<p>$$ 1 + 2 + \ldots + k = \frac{k(k+1)}{2} $$</p>
-<p>К обеим частям равенства прибавляем $k+1$:</p>
-<p>$$ 1 + 2 + \ldots + k + (k+1) = \frac{k(k + 1)}{2} + (k+1) $$</p>
-<p>Приводим правую часть равенства к общему знаменателю и выносим за скобки $k+1$:</p>
-<p>$$ \frac{k(k+1)}{2} + (k+1) = \frac{(k+1)((k+1)+1)}{2} $$</p>
-<p>Подставляем полученный результат обратно:</p>
-<p>$$ 1 + 2 + \ldots + k + (k+1) = \frac{(k+1)((k+1)+1)}{2} $$</p>
-<p>Итак, равенство выполняется и для суммы первых $k+1$ натуральных чисел.</p>
+<p>Предположим, что равенство выполняется для натурального $k$. Другими словами, предположим, что равенство выполняется для суммы первых $k-1$ натуральных степеней числа $2$:</p>
+<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} = 2^k - 1 $$</p>
+<p>К обеим частям равенства прибавляем $2^k$:</p>
+<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^k - 1 + 2^k $$</p>
+<p>Преобразуем правую часть:</p>
+<p>$$ 2^k + 2^k - 1 = 2\cdot 2^k - 1 = 2^{k+1} -1 $$</p>
+<p>Подставляем полученный результат обратно в доказываемое равенство:</p>
+<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^{k+1} -1 $$</p>
+<p>Итак, равенство выполняется и для суммы первых $k+1$ натуральных степеней числа $2$.</p>
 <p>Мы доказали индукционный переход. Это означает, что указанное в условии равенство выполняется для любых натуральных чисел.
  $\blacksquare$</p>
                     </div>
@@ -220,11 +222,11 @@
             </section>
 
             <section class="nav">
-                    <a href="../../tasks/2/" title="Следующая задача" class="next">
-                        <span class="label">2</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
+                    <a href="../../tasks/3/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">3</span>
+                    </a>
             </section>
         </section>
 

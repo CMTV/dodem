@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../favicon.png" type="image/png">
 
-        <title>1 | Демидович. Решения</title>
-        <meta name="description" content="$$ 1+2+\ldots+n &#x3D; \frac{n(n+1)}{2} $$">
+        <title>3 | Демидович. Решения</title>
+        <meta name="description" content="$$ 1^3+2^3+\ldots+n^3 &#x3D; (1+2+3+\ldots+n)^2 $$">
         <meta name="keywords" content="демидович,демидович задачник,демидович решебник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -118,7 +118,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>1</span>
+                    <span>3</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -135,7 +135,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>$$ 1+2+\ldots+n = \frac{n(n+1)}{2} $$</p>
+                        <p>$$ 1^3+2^3+\ldots+n^3 = (1+2+3+\ldots+n)^2 $$</p>
                     </div>
                 </div>
             </section>
@@ -162,17 +162,25 @@
                     <div class="block-section-content">
                         <p>Докажем по методу математической индукции.</p>
 <p><strong>База индукции:</strong> пусть $n = 1$. Получаем:</p>
-<p>$$ 1 = \frac{1\cdot 2}{2} = 1 $$</p>
+<p>$$ 1^3 = 1^2 = 1 $$</p>
 <p><strong>Индукционный переход:</strong></p>
-<p>Предположим, что равенство выполняется для суммы первых $k$ натуральных чисел:</p>
-<p>$$ 1 + 2 + \ldots + k = \frac{k(k+1)}{2} $$</p>
-<p>К обеим частям равенства прибавляем $k+1$:</p>
-<p>$$ 1 + 2 + \ldots + k + (k+1) = \frac{k(k + 1)}{2} + (k+1) $$</p>
-<p>Приводим правую часть равенства к общему знаменателю и выносим за скобки $k+1$:</p>
-<p>$$ \frac{k(k+1)}{2} + (k+1) = \frac{(k+1)((k+1)+1)}{2} $$</p>
-<p>Подставляем полученный результат обратно:</p>
-<p>$$ 1 + 2 + \ldots + k + (k+1) = \frac{(k+1)((k+1)+1)}{2} $$</p>
-<p>Итак, равенство выполняется и для суммы первых $k+1$ натуральных чисел.</p>
+<p>Предположим, что равенство выполняется для суммы кубов первых $k$ натуральных чисел:</p>
+<p>$$ 1^3 + 2^3 + \ldots + k^3 = (1+2+\ldots+k)^2 $$</p>
+<p>Воспользуемся доказанным в <a href="/tasks/1">задаче 1</a> равенством и заменим сумму в скобках в правой части:</p>
+<p>$$ (1+2+\ldots+k)^2 = \left(\frac{k(k+1)}{2}\right)^2 $$</p>
+<p>К обеим частям равенства прибавляем $(k+1)^3$:</p>
+<p>$$ 1^3 + 2^3 + \ldots + k^3 + (k+1)^3 = \left(\frac{k(k+1)}{2}\right)^2 + (k+1)^3 $$</p>
+<p>Приводим правую часть равенства к общему знаменателю и выносим за скобки $(k+1)^2$:</p>
+<p>$$ \left(\frac{k(k+1)}{2}\right)^2 + (k+1)^3 = \frac{(k+1)^2(k^2 + 4k + 4)}{2^2} $$</p>
+<p>В числителе правой части есть квадратный трехлен. Заменим его на квадрат суммы:</p>
+<p>$$ k^2 + 4k + k = (k+2)^2 $$</p>
+<p>Подставим квадрат суммы обратно и вынесем показатель степени за скобки:</p>
+<p>$$ \frac{(k+1)^2(k + 2)^2}{2^2} = \left(\frac{(k+1)((k+1)+1)}{2}\right)^2 $$</p>
+<p>Дробь в скобках на самом деле является суммой первых $k+1$ натуральных чисел (<a href="/tasks/1">задача 1</a>):</p>
+<p>$$ \left(\frac{(k+1)((k+1)+1)}{2}\right)^2 = (1 + 2 + \ldots + k + (k+1))^2 $$</p>
+<p>Подставляем полученный результат обратно в доказываемое равенство:</p>
+<p>$$ 1^3 + 2^3 + \ldots + k^3 + (k+1)^3 = (1 + 2 + \ldots + k + (k+1))^2 $$</p>
+<p>Итак, равенство выполняется и для суммы кубов первых $k+1$ натуральных чисел.</p>
 <p>Мы доказали индукционный переход. Это означает, что указанное в условии равенство выполняется для любых натуральных чисел.
  $\blacksquare$</p>
                     </div>
@@ -214,17 +222,27 @@
                                 </a>
                             </dt>
                             <dd>Статья на Википедии</dd>
+                            <dt>
+                                <a href="https://foxford.ru/wiki/matematika/formuly-sokraschennogo-umnozheniya" title="Формулы сокращенного умножения" target="_blank">
+                                    Формулы сокращенного умножения
+                                </a>
+                            </dt>
+                            <dd>В том числе и квадрат суммы</dd>
                     
                     </dl>
                 </div>
             </section>
 
             <section class="nav">
-                    <a href="../../tasks/2/" title="Следующая задача" class="next">
-                        <span class="label">2</span>
+                    <a href="../../tasks/4/" title="Следующая задача" class="next">
+                        <span class="label">4</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
+                    <a href="../../tasks/2/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">2</span>
+                    </a>
             </section>
         </section>
 
