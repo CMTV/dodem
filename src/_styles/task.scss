@@ -194,7 +194,7 @@
         border: 2px solid $border-color;
         border-radius: $border-radius;
 
-        font-size: 95%;
+        font-size: 97%;
 
         border-top-left-radius: 0;
 
@@ -215,6 +215,11 @@
             @include layout(mini)
             {
                 text-align: left;
+            }
+
+            & > p:not(:last-of-type)
+            {
+                margin-bottom: 15px;
             }
         }
     }

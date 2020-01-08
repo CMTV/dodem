@@ -4,7 +4,9 @@
 
     &[display=true]
     {
-        overflow: hidden;
+        padding: 5px 0;
+
+        overflow-y: visible !important;
         overflow-x: auto !important;
 
         &::-webkit-scrollbar

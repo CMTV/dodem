@@ -199,9 +199,17 @@ function getSrcTask(taskNumber)
     return task;
 }
 
+function setupShowdown()
+{
+    showdown.setOption('literalMidWordUnderscores', true);
+}
+
 function getTask(taskNumber, removeMd = true)
 {
     let srcTask = getSrcTask(taskNumber);
+
+    setupShowdown();
+
     let converter = new showdown.Converter();
 
     srcTask.task_html =     converter.makeHtml(srcTask.task_md);
