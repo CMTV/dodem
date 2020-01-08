@@ -1,6 +1,6 @@
 const fs =          require('fs');
 const p =           require('path');
-const showdown =    require('showdown');
+const translator =  require('./translator');
 const mustache =    require('mustache');
 
 const TASKS_NUM = 4462;
@@ -185,46 +185,39 @@ function getSrcTask(taskNumber)
         throw new Error("Task " + taskNumber + " not found!");
     }
 
-    let task = { task_md: null, solution_md: null, meta: null };
+    let task = { task_src: null, solution_src: null, meta: null };
 
-    task.task_md =      readFile(p.join(path, 'task.md'));
-    task.solution_md =  readFile(p.join(path, 'solution.md'));
+    task.task_src =      readFile(p.join(path, 'task.html'));
+    task.solution_src =  readFile(p.join(path, 'solution.html'));
     task.meta =         JSON.parse(readFile(p.join(path, 'meta.json')));
 
-    if (fs.existsSync(p.join(path, 'hint.md')))
+    if (fs.existsSync(p.join(path, 'hint.html')))
     {
-        task.hint_md =  readFile(p.join(path, 'hint.md'));
+        task.hint_src =  readFile(p.join(path, 'hint.html'));
     }
 
     return task;
 }
 
-function setupShowdown()
-{
-    showdown.setOption('literalMidWordUnderscores', true);
-}
-
-function getTask(taskNumber, removeMd = true)
+function getTask(taskNumber, removeSrc = true)
 {
     let srcTask = getSrcTask(taskNumber);
 
-    setupShowdown();
+    let translators = ['paragraph'];
 
-    let converter = new showdown.Converter();
+    srcTask.task_html =     translator.translate(srcTask.task_src, translators);
+    srcTask.solution_html = translator.translate(srcTask.solution_src, translators);
 
-    srcTask.task_html =     converter.makeHtml(srcTask.task_md);
-    srcTask.solution_html = converter.makeHtml(srcTask.solution_md);
-
-    if (srcTask.hint_md)
+    if (srcTask.hint_src)
     {
-        srcTask.hint_html = converter.makeHtml(srcTask.hint_md);
+        srcTask.hint_html = translator.translate(srcTask.hint_src, translators);
     }
 
-    if (removeMd)
+    if (removeSrc)
     {
-        delete srcTask.task_md;
-        delete srcTask.solution_md;
-        delete srcTask.hint_md;
+        delete srcTask.task_src;
+        delete srcTask.solution_src;
+        delete srcTask.hint_src;
     }
 
     return srcTask;
@@ -343,7 +336,7 @@ function genAll(devMode = false)
             let view =
             {
                 title: `${taskNumber} | Демидович. Решения`,
-                description: (task.task_md).replace(/(\r\n|\n|\r)/gm, "").replace('"', '').substring(0, 400),
+                description: (task.task_src).replace(/(\r\n|\n|\r)/gm, "").replace('"', '').substring(0, 400),
                 task: taskNumber,
 
                 taskHtml: task.task_html,
