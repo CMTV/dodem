@@ -118,21 +118,63 @@ const _tasks_Iterators =
         {
             if (!taskExists) return data;
 
-            if (!('solver' in meta))
+            if (!('solver' in meta) && !('solvers' in meta))
             {
-                throw new Error("'Solvers' iterator error on task " + i + ". Missing 'solver' property!");
+                throw new Error("'Solvers' iterator error on task " + i + ". Missing 'solver' or 'solvers' properties!");
             }
 
-            let solver = meta.solver;
+            let solvers = [];
 
-            if (solver in data)
+            if ('solver' in meta)
             {
-                data[solver].push(i);
+                solvers.push(meta.solver);
             }
             else
             {
-                data[solver] = [i];
+                Object.keys(meta.solvers).forEach((solver) =>
+                {
+                    if (typeof meta.solvers[solver] === 'string')
+                    {
+                        solvers.push(solver)
+                    }
+                    else
+                    {
+                        solvers.push({ id: solver, num: meta.solvers[solver].length });
+                    }
+                })
+                
             }
+
+            solvers.forEach((solver) =>
+            {
+                if (typeof solver === 'string')
+                {
+                    if (solver in data)
+                    {
+                        data[solver].push({ num: i });
+                    }
+                    else
+                    {
+                        data[solver] = [{ num: i }];
+                    }
+                }
+                else
+                {
+                    if (!solver.id in data)
+                    {
+                        data[solver.id] = [{ num: i, sub: 1 }];
+                    }
+                    else
+                    {
+                        data[solver.id].push({ num: i, sub: 1 });
+                    }
+
+                    for (let j = 2; j <= solver.num; j++)
+                    {
+                        data[solver.id].push({ num: i, sub: j });
+                    }
+                }
+            });
 
             return data;
         },
@@ -185,11 +227,51 @@ function getSrcTask(taskNumber)
         throw new Error("Task " + taskNumber + " not found!");
     }
 
-    let task = { task_src: null, solution_src: null, meta: null };
+    let task = { task_src: null, solutions_src: [], meta: null };
 
-    task.task_src =      readFile(p.join(path, 'task.html'));
-    task.solution_src =  readFile(p.join(path, 'solution.html'));
-    task.meta =         JSON.parse(readFile(p.join(path, 'meta.json')));
+    task.task_src = readFile(p.join(path, 'task.html'));
+
+    task.meta = JSON.parse(readFile(p.join(path, 'meta.json')));
+
+    if ('solver' in task.meta)
+    {
+        task.solutions_src = [
+            {
+                solver: task.meta.solver,
+                reason: null,
+                data: readFile(p.join(path, 'solution.html'))
+            }
+        ];
+    }
+    else
+    {
+        Object.keys(task.meta.solvers).forEach((solver) =>
+        {
+            if (typeof task.meta.solvers[solver] === 'string')
+            {
+                task.solutions_src.push(
+                    {
+                        solver: solver,
+                        reason: task.meta.solvers[solver],
+                        data: readFile(p.join(path, `solution_${solver}.html`))
+                    }
+                );
+            }
+            else
+            {
+                task.meta.solvers[solver].forEach((reason, i) =>
+                {
+                    task.solutions_src.push(
+                        {
+                            solver: solver,
+                            reason: reason,
+                            data: readFile(p.join(path, `solution_${solver}_${i+1}.html`))
+                        }
+                    );
+                });
+            }
+        });
+    }
 
     if (fs.existsSync(p.join(path, 'hint.html')))
     {
@@ -205,8 +287,17 @@ function getTask(taskNumber, removeSrc = true)
 
     let translators = ['paragraph'];
 
-    srcTask.task_html =     translator.translate(srcTask.task_src, translators);
-    srcTask.solution_html = translator.translate(srcTask.solution_src, translators);
+    srcTask.task_html = translator.translate(srcTask.task_src, translators);
+
+    srcTask.solutions_html = srcTask.solutions_src;
+
+    srcTask.solutions_html.forEach((solution, i) =>
+    {
+        srcTask.solutions_html[i].data = translator.translate(
+            solution.data,
+            translators
+        );
+    });
 
     if (srcTask.hint_src)
     {
@@ -216,7 +307,7 @@ function getTask(taskNumber, removeSrc = true)
     if (removeSrc)
     {
         delete srcTask.task_src;
-        delete srcTask.solution_src;
+        delete srcTask.solutions_src;
         delete srcTask.hint_src;
     }
 
@@ -333,6 +424,17 @@ function genAll(devMode = false)
 
             let locationArr = (task.meta.location).split('.');
 
+            let solutions = [];
+
+            task.solutions_html.forEach((solution, j) =>
+            {
+                solution.solver = DATA.solvers[solution.solver];
+
+                solutions.push(Object.assign({ index: j + 1 }, solution));
+            });
+
+            let isOneSolution = (solutions.length === 1);
+
             let view =
             {
                 title: `${taskNumber} | Демидович. Решения`,
@@ -340,7 +442,9 @@ function genAll(devMode = false)
                 task: taskNumber,
 
                 taskHtml: task.task_html,
-                solutionHtml: task.solution_html,
+
+                isOneSolution: isOneSolution,
+                solutions: solutions,
 
                 location:
                 {
@@ -354,8 +458,6 @@ function genAll(devMode = false)
                         title: toc[locationArr[0]].paragraphs[locationArr[1] - 1]
                     }
                 },
-
-                solver: DATA.solvers[task.meta.solver],
 
                 refs: task.meta.refs,
 

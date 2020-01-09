@@ -48,7 +48,7 @@
                         <div class="solved-list">
                             <div class="wrapper">
                                 {{ #tasks }}
-                                    <a title="К решению {{ . }}" href="{{{ site_root }}}tasks/{{ . }}/">{{ . }}</a>
+                                    <a title="К решению {{ num }}" href="{{{ site_root }}}tasks/{{ num }}/">{{ num }}{{ #sub }}.{{ sub }}{{ /sub }}</a>
                                 {{ /tasks }}
                             </div>
                         </div>

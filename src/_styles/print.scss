@@ -6,9 +6,30 @@
     {
         .search-container,
         .block-section.refs,
-        .nav
+        .nav,
+        .no-dark-magic,
+        .dark-magic-container
         {
             display: none;
+        }
+
+        .block-section.solution
+        {
+            .reason-overlay
+            {
+                display: none !important;
+            }
+
+            .reason
+            {
+                display: block !important;
+            }
+
+            .block-section-content
+            {
+                position: static !important;
+                height: auto !important;
+            }
         }
     }
 }
