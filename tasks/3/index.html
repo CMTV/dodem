@@ -53,7 +53,9 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../scripts/dark-magic.js"></script>    </head>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
     <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
@@ -154,12 +156,25 @@
                 </script>
             </div>
 
-            <section class="block-section solution">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
+                    <div title="Скрыть решение" class="action action--hide">
+                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
+                    </div>
+                </div>
+
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
                     <span>Решение</span>
                 </div>
+                
                 <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
                     <div class="block-section-content">
                         <p>Докажем по методу математической индукции.</p>
 <p><strong>База индукции:</strong> пусть $n = 1$. Получаем:</p>
@@ -187,6 +202,12 @@
 
                     </div>
 
+                    <div class="reason-overlay">
+                        
+
+                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
                     <div class="solver">
                         <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
                                 <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
@@ -197,6 +218,7 @@
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
