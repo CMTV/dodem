@@ -5,8 +5,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../favicon.png" type="image/png">
 
-        <title>5 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ a^{[n]} &#x3D; a(a-h)\ldots[a - (n-1)h] \text{ и } a^{[0]} &#x3D; 1 $$Доказать, что$$ (a+b)^{[n]} &#x3D; \sum\limits_{m&#x3D;0}^n C^m_n a^{[n-m]}b^{[m]}, $$где $C^m_n$ — число сочетаний из $n$ элементов по $m$. Вывести отсюда формулу &lt;em&gt;бинома Ньютона&lt;&#x2F;em&gt;.">
+        <title>10 | Демидович. Решения</title>
+        <meta name="description" content="Доказать неравенства:$$ \text{а) } 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{n}} &gt; \sqrt{n} \quad (n \geqslant 2) $$$$ \text{б) } n^{n+1} &gt; (n+1)^n \quad (n\geqslant 3) $$$$ \text{в) } \left| \sin{\left(\sum\limits_{k&#x3D;1}^n x_k\right)} \right| \leqslant \sum\limits_{k&#x3D;1}^n \sin{x_k} \quad (0\leqslant x_k \leqslant \pi; \ k &#x3D; 1, 2, \ldots n) $$$$ \text{г) } (2n)! &lt; 2^{2n}">
         <meta name="keywords" content="демидович,демидович задачник,демидович решебник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -121,7 +121,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>5</span>
+                    <span>10</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -138,11 +138,11 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть
-$$ a^{[n]} = a(a-h)\ldots[a - (n-1)h] \text{ и } a^{[0]} = 1 $$</p>
-<p>Доказать, что
-$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]}, $$</p>
-<p>где $C^m_n$ — число сочетаний из $n$ элементов по $m$. Вывести отсюда формулу <em>бинома Ньютона</em>.</p>
+                        <p>Доказать неравенства:</p>
+<p>$$ \text{а) } 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{n}} > \sqrt{n} \quad (n \geqslant 2) $$
+$$ \text{б) } n^{n+1} > (n+1)^n \quad (n\geqslant 3) $$
+$$ \text{в) } \left| \sin{\left(\sum\limits_{k=1}^n x_k\right)} \right| \leqslant \sum\limits_{k=1}^n \sin{x_k} \quad (0\leqslant x_k \leqslant \pi; \ k = 1, 2, \ldots n) $$
+$$ \text{г) } (2n)! < 2^{2n}(n!)^2 $$</p>
 
                     </div>
                 </div>
@@ -181,66 +181,38 @@ $$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]}, $$</p>
                     </div>
 
                     <div class="block-section-content">
-                        <p>Сначала разбремся, что вообще такое $a^{[n]}$. Запишем данное в условии определение чуть более понятным образом:</p>
-<p>$$ a^{[n]} = (a - 0\cdot h)(a - 1\cdot h)(a-2\cdot h)\cdot\ldots\cdot (a-(n-1)h) $$</p>
-<p>Короче, это просто некоторая операция, похожая на степень. Плюс эта операция зависит от какого-то числа $h$.</p>
-<p>Вот пример выражения $a^{[n]}$ при $h = 3$.</p>
-<p>$$ a^{[n]} = a(a - 3)(a-6)\cdot\ldots\cdot (a-(n-1)\cdot 3) $$</p>
-<p>Важный частный случай получаем, когда $h = 0$:</p>
-<p>$$ a^{[n]} = a\cdot a\cdot \ldots \cdot a = a^n $$</p>
-<p>То есть, при $h = 0$ выражение $a^{[n]}$ сводится к обычному возведению $a$ в степень $n$.</p>
-<p>Теперь, когда мы разобрались, что из себя представляет $a^{[n]}$ можно приступать к доказательству следующего равенства для всех натуральных $n$:</p>
-<p>$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]} $$</p>
+                        <p><b>а)</b></p>
+<p>$$ 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{n}} > \sqrt{n} \quad (n \geqslant 2) $$</p>
 <p>Докажем по методу математической индукции.</p>
-<p><b>База индукции:</b> пусть $ n = 1 $. Тогда:</p>
-<p>$$ (a+b)^{[1]} = (a+b) - 0\cdot h = a+b $$</p>
-<p>$$ \sum\limits_{m=0}^1 C^m_1 a^{[1-m]}b^{[m]} = C^0_1 a^{[1]}b^{[0]} + C^1_1a^{[0]}b^{[1]} = a + b, $$</p>
-<p>так как $C^0_1 = C^1_1 = 1$ и $a^{[0]} = b^{[0]} = 1$ (по условию). Итак, база индукции выполняется.</p>
+<p><b>База индукции:</b> в качестве базы возьмем $n=2$, так как по условию $n\geq 2$:</p>
+<p>$$ 1 + \frac{1}{\sqrt{2}} > \sqrt{2}$$</p>
+<p>$$ (\sqrt{2} + 1) \approx 2.4 > 2  $$</p>
 <p><b>Индукционный переход:</b></p>
-<p>Предположим, что равенство выполняется для некоторого натурального $k$:</p>
-<p>$$ (a+b)^{[k]} = \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} $$</p>
-<p>Докажем, что тогда равенство выполняется и для $k+1$:</p>
-<p>$$ (a+b)^{[k+1]} = \sum\limits_{m = 0}^{k+1} C^m_{k+1} a^{[k+1-m]}b^{[m]} $$</p>
-<p>Рассмотрим левую часть равенства и примем $t = a+b$:</p>
-<p>$$ t^{[k+1]} = t(t - h)\cdot \ldots \cdot (t - (k-1)h)(t-kh) $$</p>
-<p>Замечаем, что все множители кроме последнего по определению образуют $t^{[k]}$:</p>
-<p>$$ t^{[k+1]} = t^{[k]} \cdot (t-k h) $$</p>
-<p>Возвращаемся от $t$ обратно к $a+b$:</p>
-<p>$$ (a+b)^{[k+1]} = (a+b)^{[k]} (a+b - k h) $$</p>
-<p>Исходя из предположения индукционного перехода выше мы можем заменить $(a+b)^{[k]}$ на сумму:</p>
-<p>$$ (a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} $$</p>
-<p>Итак, скобка умножается на каждое слагаемое из суммы. Распишем несколько подобных умножений:</p>
-<p>Для первого слагаемого ($m = 0$):</p>
+<p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
+<p>$$ 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{k}} > \sqrt{k} $$</p>
+<p>Прибавим к обеим частям $\frac{1}{\sqrt{k+1}}$:</p>
+<p>\begin{equation}\label{induction_step_inequality_a}
+1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k} + \frac{1}{\sqrt{k+1}}
+\end{equation}</p>
+<p>Теперь надо лишь доказать, что</p>
+<p>$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
+<p>Избавимся от корня в знаменателе дроби слева:</p>
+<p>$$ \sqrt{k} + \frac{\sqrt{k+1}}{k+1} > \sqrt{k+1} $$</p>
+<p>Возводим в квадрат обе части:</p>
+<p>$$ k + \frac{2\sqrt{k(k+1)}}{k+1} + \frac{1}{k+1} > k+1 $$</p>
+<p>Вычитаем из обеих частей $k$ и домножаем их на $k+1$:</p>
+<p>$$ 2\sqrt{k(k+1)} + 1 > k + 1 $$</p>
+<p>Вычитаем из обеих частей $1$ и снова возводим в квадрат:</p>
 <p>\begin{gather*}
-(a+b - kh)\cdot \left( C^0_k a^{[k]}b^{[0]} \right) = \\[5px] = (a - kh)\cdot \left( C^0_k a^{[k]}b^{[0]} \right) + b\cdot \left( C^0_k a^{[k]}b^{[0]} \right) = \\[5px] = C^0_k a^{[k+1]}b^{[0]} + C^0_k a^{[k]}b^{[1]}
+    4k(k+1) > k \\ 4(k+1) > 1 \\ k > \frac{1}{4} - 1
 \end{gather*}</p>
-<p>Для второго слагаемого ($m = 1$):</p>
-<p>\begin{gather*}
-(a+b - kh)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) = \\[5px] = (a - (k-1)h)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) + (b+h)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) = \\[5px] = C^1_k a^{[k]}b^{[1]} + C^1_k a^{[k-1]}b^{[2]}
-\end{gather*}</p>
-<p>Для последнего слагаемого ($m = k$):</p>
-<p>\begin{gather*}
-(a+b - kh)\cdot \left( C^k_k a^{[0]}b^{[k]} \right) = \\[5px] = a\cdot \left( C^k_k a^{[0]}b^{[k]} \right) + (b-kh)\cdot \left( C^k_k a^{[0]}b^{[k]} \right) = \\[5px] = C^k_k a^{[1]}b^{[k]} + C^k_k a^{[0]}b^{[k+1]}
-\end{gather*}</p>
-<p>То есть, для каждого слагаемого мы раскладываем скобку $(a+b-kh)$ так, чтобы увеличить степень $a$ и степень $b$. Соберем все эти слагаемые вместе:</p>
-<p>\begin{gather*}
-(a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} = \\[5px] = C^0_k a^{[k+1]}b^{[0]} + C^0_k a^{[k]}b^{[1]} + C^1_k a^{[k]}b^{[1]} + C^1_k a^{[k-1]}b^{[2]} + \ldots + \\[5px] + C^k_k a^{[1]}b^{[k]} + C^k_k a^{[0]}b^{[k+1]} = \\[5px] = C^0_ka^{[k+1]}b^{[0]} + a^{[k]}b^{[1]}\left(C^0_k + C^1_k \right) + a^{[k-1]}b^{[2]}\left(C^1_k + C^2_k\right) + \\[5px] + \ldots + C^k_k a^{[0]}b^{[k+1]}
-\end{gather*}</p>
-<p>Все слагаемые, кроме первого и последнего, умножаются на скобку с суммой сочетаний. Эти скобки можно схлопнуть с помощью свойства сочетаний:</p>
-<p>$$ C^i_k + C^{i+1}_k = C^{i+1}_{k+1} $$</p>
-<p>С множителями $C^0_k$ первого и $C^k_k$ последнего слагаемых можно проделать следующие преобразования:</p>
-<p>$$ C^0_k = 1 = C^0_{k+1} \qquad  C^k_k = 1 = C^{k+1}_{k+1} $$</p>
-<p>Получаем итоговую сумму:</p>
-<p>\begin{gather*}
-(a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k = \\[5px] = C^0_{k+1}a^{[k+1]}b^{[0]} + C^1_{k+1}a^{[k]}b^{[1]} + \ldots + C^{k+1}_{k+1} a^{[0]}b^{[k+1]} = \\[5px] = \sum\limits_{m=0}^{k+1}C^m_{k+1} a^{[k+1-m]}b^{[m]}
-\end{gather*}</p>
-<p>Индукционный переход доказан.
+<p>Последнее выполняется, так как по условию $k \geq 2$. Итак, мы доказали неравенство:</p>
+<p>$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
+<p>Применяем его к неравенству \eqref{induction_step_inequality_a}:</p>
+<p>$$ 1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
+<p>$$ 1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
+<p>Мы доказали индукционный переход. Это означает, что указанное в условии неравенство выполняется для всех натуральных $n\geq 2$.
 $\blacksquare$</p>
-<p>Итак, мы доказали, что для всех натуральных чисел верна формула:</p>
-<p>$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]} $$</p>
-<p>В самом начале решения мы установили, что если $h = 0$, то $a^{[n]} = a^n$. Так вот, доказанная формула при $h = 0$ принимает вид:</p>
-<p>$$ (a+b)^n = \sum\limits_{m=0}^n C^m_n a^{n-m}b^{m} $$</p>
-<p>А это и есть формула бинома Ньютона.</p>
 
                     </div>
 
@@ -294,14 +266,10 @@ $\blacksquare$</p>
             </section>
 
             <section class="nav">
-                    <a href="../../tasks/6/" title="Следующая задача" class="next">
-                        <span class="label">6</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/4/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/9/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">4</span>
+                        <span class="label">9</span>
                     </a>
             </section>
         </section>
