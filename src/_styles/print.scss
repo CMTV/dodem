@@ -20,7 +20,7 @@
                 display: none !important;
             }
 
-            .reason
+            &:not(.single) .reason
             {
                 display: block !important;
             }
