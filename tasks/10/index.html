@@ -191,27 +191,140 @@ $$ \text{г) } (2n)! < 2^{2n}(n!)^2 $$</p>
 <p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
 <p>$$ 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{k}} > \sqrt{k} $$</p>
 <p>Прибавим к обеим частям $\frac{1}{\sqrt{k+1}}$:</p>
-<p>\begin{equation}\label{induction_step_inequality_a}
+<p>\begin{equation}\label{induction_step_inequality_1}
 1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k} + \frac{1}{\sqrt{k+1}}
 \end{equation}</p>
 <p>Теперь надо лишь доказать, что</p>
-<p>$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
+<p>$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} \overset{\text{?}}{>} \sqrt{k+1} $$</p>
 <p>Избавимся от корня в знаменателе дроби слева:</p>
-<p>$$ \sqrt{k} + \frac{\sqrt{k+1}}{k+1} > \sqrt{k+1} $$</p>
+<p>$$ \sqrt{k} + \frac{\sqrt{k+1}}{k+1} \overset{\text{?}}{>} \sqrt{k+1} $$</p>
 <p>Возводим в квадрат обе части:</p>
-<p>$$ k + \frac{2\sqrt{k(k+1)}}{k+1} + \frac{1}{k+1} > k+1 $$</p>
+<p>$$ k + \frac{2\sqrt{k(k+1)}}{k+1} + \frac{1}{k+1} \overset{\text{?}}{>} k+1 $$</p>
 <p>Вычитаем из обеих частей $k$ и домножаем их на $k+1$:</p>
-<p>$$ 2\sqrt{k(k+1)} + 1 > k + 1 $$</p>
+<p>$$ 2\sqrt{k(k+1)} + 1 \overset{\text{?}}{>} k + 1 $$</p>
 <p>Вычитаем из обеих частей $1$ и снова возводим в квадрат:</p>
-<p>\begin{gather*}
-    4k(k+1) > k \\ 4(k+1) > 1 \\ k > \frac{1}{4} - 1
-\end{gather*}</p>
+<p>\begin{align*}
+    4k(k+1) &\overset{\text{?}}{>} k \\ 4(k+1) &\overset{\text{?}}{>} 1 \\ k &> \frac{1}{4} - 1
+\end{align*}</p>
 <p>Последнее выполняется, так как по условию $k \geq 2$. Итак, мы доказали неравенство:</p>
 <p>$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
-<p>Применяем его к неравенству \eqref{induction_step_inequality_a}:</p>
+<p>Применяем его к неравенству \eqref{induction_step_inequality_1}:</p>
 <p>$$ 1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
 <p>$$ 1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
-<p>Мы доказали индукционный переход. Это означает, что указанное в условии неравенство выполняется для всех натуральных $n\geq 2$.
+<p>Мы доказали индукционный переход. Это означает, что доказываемое выполняется для всех натуральных $n\geq 2$.
+$\blacksquare$</p>
+<p><hr></p>
+<p><b>б)</b></p>
+<p>$$ n^{n+1} > (n+1)^n \quad (n\geqslant 3) $$</p>
+<p>Докажем по методу математической индукции.</p>
+<p><b>База индукции:</b> в качестве базы возьмем $n=3$, так как по условию $n\geq 3$:</p>
+<p>$$ 3^4 = 81 > 4^3 = 64 $$</p>
+<p><b>Индукционный переход:</b></p>
+<p>Предположим, неравенство выполняется для некоторого натурального $k$:</p>
+<p>$$ k^{k+1} > (k+1)^k $$</p>
+<p>Докажем, что оно выполняется и для $k+1$:</p>
+<p>$$ (k+1)^{k+2} > (k+2)^{k+1} $$</p>
+<p>Правую часть домножим на дробь $\frac{(k+1)^{k}}{(k+1)^k}$:</p>
+<p>$$ (k+2)^{k+1} = \frac{(k+2)^{k+1}(k+1)^k}{(k+1)^k} $$</p>
+<p>Воспользуемся предположением индукции, которое мы сделали выше:</p>
+<p>$$ (k+2)^{k+1} = \frac{(k+2)^{k+1}(k+1)^k}{(k+1)^k} < \frac{(k+2)^{k+1}k^{k+1}}{(k+1)^k} $$</p>
+<p>Получили цепное неравенство:</p>
+<p>$$ (k+1)^{k+2} \overset{\text{?}}{>} \frac{(k+2)^{k+1}k^{k+1}}{(k+1)^k} > (k+2)^{k+1} $$</p>
+<p>Другими словами, для доказательства индукционного перехода надо показать, что полученная нами дробь действительно меньше $(k+1)^{k+2}$.</p>
+<p>Докажем это постепенным упрощением обеих частей. Сначала домножим обе части на $(k+1)^k$:</p>
+<p>$$ (k+1)^{2k+2} \overset{\text{?}}{>} \left( (k+2)k \right)^{k+1} $$</p>
+<p>В левой части вынесем двойку из показателя:</p>
+<p>$$ \left( (k+1)^2 \right)^{k+1} \overset{\text{?}}{>} \left( (k+2)k \right)^{k+1} $$</p>
+<p>Из обеих частей возьмем корень $k+1$ степени. Корень можно взять, так как оба выражения положительные:</p>
+<p>\begin{align*}
+    (k+1)^2 &\overset{\text{?}}{>} (k+2)k \\
+    k^2 + 2k + 1 &\overset{\text{?}}{>} k^2 + 2k \\
+    1 &> 0
+\end{align*}</p>
+<p>Итак, мы доказали цепное неравенство:</p>
+<p>$$ (k+1)^{k+2} > \frac{(k+2)^{k+1}k^{k+1}}{(k+1)^k} > (k+2)^{k+1} $$</p>
+<p>$$ (k+1)^{k+2} > (k+2)^{k+1} $$</p>
+<p>Индукционный переход доказан. Это означает, что доказываемое неравенство выполняется для всех натуральных $n\geq 3$.
+$\blacksquare$</p>
+<p><hr></p>
+<p><b>в)</b></p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^n x_k\right)} \right| \leqslant \sum\limits_{k=1}^n \sin{x_k} \quad (0\leqslant x_k \leqslant \pi; \ k = 1, 2, \ldots n) $$</p>
+<p>Докажем по методу математической индукции.</p>
+<p><b>База индукции:</b> при $n=1$ получаем</p>
+<p>$$ \sin{x_1} = \sin{x_1} $$</p>
+<p>Знак модуля мы сняли, так как по условию $0\leq x_k \leq \pi$, то есть отрицательным синус получиться не может.</p>
+<p><b>Индукционный переход:</b></p>
+<p>Предположим, неравенство выполняется для некоторого натурального $m$:</p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^m x_k\right)} \right| \leq \sum\limits_{k=1}^m \sin{x_k}  $$</p>
+<p>Докажем, что оно выполняется и для $m+1$:</p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^{m+1} x_k\right)} \right| \leq \sum\limits_{k=1}^{m+1} \sin{x_k}  $$</p>
+<p>Будем работать с левой частью:</p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^{m+1} x_k\right)} \right| = \left| \sin{\left(x_{m+1} + \sum\limits_{k=1}^{m} x_k\right)} \right| $$</p>
+<p>Воспольуемся формулой синуса суммы двух углов:</p>
+<p>\begin{gather*}
+    \left| \sin{\left(x_{m+1} + \sum\limits_{k=1}^{m} x_k\right)} \right| = \\ = \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
+\end{gather*}</p>
+<p>Воспользуемся свойством модуля $|x+y|\leq |x| + |y|$:</p>
+<p>\begin{gather*}
+\left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right| \leq \\ \leq \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
+\end{gather*}</p>
+<p>Применим еще одно свойство модуля $|x\cdot y|=|x|\cdot|y|$:</p>
+<p>\begin{gather*}
+\left| \sin{(x_{m+1})}\right| \cdot \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot \left|\cos{(x_{m+1})} \right|
+\end{gather*}</p>
+<p>Теперь надо избавиться от двух множителей с косинусами:</p>
+<p>$$ \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| \qquad \left|\cos{(x_{m+1})} \right| $$</p>
+<p>Так как мы берем их модуль, то их значение всегда между $0$ и $1$:</p>
+<p>$$ 0\leq\left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right|\leq 1 \qquad 0\leq \left|\cos{(x_{m+1})} \right|\leq 1 $$</p>
+<p>Поэтому, для получения наибольшего значения можно просто вместо них взять $1$:</p>
+<p>\begin{gather*}
+\left| \sin{(x_{m+1})}\right| \cdot \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot \left|\cos{(x_{m+1})} \right| \leq \\ \leq \left| \sin{(x_{m+1})}\right| \cdot 1 + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot 1
+\end{gather*}</p>
+<p>Модуль у слагаемого $|\sin{(x_{m+1})}|$ можно убрать, так как по условию $0\leq x_{m+1} \leq \pi$. Ко второму слагаемому можно применить неравенство по предположению индукции:</p>
+<p>\begin{gather*}
+|\sin{(x_{m+1})}| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \leq \sin{(x_{m+1})} + \sum\limits_{k=1}^m\sin{( x_k)}
+\end{gather*}</p>
+<p>Но</p>
+<p>$$ \sin{(x_{m+1})} + \sum\limits_{k=1}^m\sin{( x_k)} = \sum\limits_{k=1}^{m+1}\sin{(x_k)} $$</p>
+<p>Поэтому</p>
+<p>$$ |\sin{(x_{m+1})}| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \leq \sum\limits_{k=1}^{m+1}\sin{(x_k)} $$</p>
+<p>Итак, все это время мы преобразовывали левую часть неравенства, поэтому</p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^{m+1} x_k\right)} \right| \leq \ldots \leq \sum\limits_{k=1}^{m+1} \sin{x_k}  $$</p>
+<p>$$ \left| \sin{\left(\sum\limits_{k=1}^{m+1} x_k\right)} \right| \leq \sum\limits_{k=1}^{m+1} \sin{x_k}  $$</p>
+<p>Индукционный переход доказан. Это означает, что доказываемое неравенство выполняется для всех натуральных $n$.
+$\blacksquare$</p>
+<p><hr></p>
+<p><b>г)</b></p>
+<p>$$ (2n)! < 2^{2n}(n!)^2 $$</p>
+<p>Докажем по методу математической индукции.</p>
+<p><b>База индукции:</b> при $n=1$ получаем</p>
+<p>$$ 2! = 2 < 4 $$</p>
+<p><b>Индукционный переход:</b></p>
+<p>Предположим, неравенство выполняется для некоторого натурального $k$:</p>
+<p>$$ (2k)! < 2^{2k}(k!)^2 $$</p>
+<p>Докажем, что оно выполняется и для $k+1$. Домножим обе части на положительное $ (2k+2)^2 $:</p>
+<p>$$ (2k)!(2k+2)^2 < 2^{2k}(k!)^2(2k+2)^2 $$</p>
+<p>Правую часть неравенства, с учетом новой скобки, можно записать так:</p>
+<p>$$ 2^{2k}(k!)^2(2k+2)^2 = 2^{2k+2}\left( (k+1)! \right)^2 $$</p>
+<p>Подставим результат обратно в неравенство:</p>
+<p>\begin{equation}\label{induction_step_inequality_4} (2k)!(2k+2)^2 < 2^{2k+2}\left( (k+1)! \right)^2
+\end{equation}</p>
+<p>Докажем, что</p>
+<p>\begin{align*}
+    (2k+2)^2 &\overset{\text{?}}{>} (2k+1)(2k+2) \\
+    4k^2 + 8k + 4 &\overset{\text{?}}{>} 4k^2 + 6k + 2 \\
+    2k+2 &> 0
+\end{align*}</p>
+<p>Мы доказали, что</p>
+<p>$$ (2k+2)^2 > (2k+1)(2k+2) $$</p>
+<p>Этот результат можно использовать в неравенстве \eqref{induction_step_inequality_4} с помощью цепного неравенства:</p>
+<p>$$ (2k)!(2k+1)(2k+2) < (2k)!(2k+2)^2 < 2^{2k+2}\left( (k+1)! \right)^2 $$</p>
+<p>Но</p>
+<p>$$ (2k)!(2k+1)(2k+2) = (2k+2)! $$</p>
+<p>Поэтому в итоге получаем</p>
+<p>$$ (2k+2)! < (2k)!(2k+2)^2 < 2^{2k+2}\left( (k+1)! \right)^2 $$</p>
+<p>$$ (2k+2)! < 2^{2k+2}\left( (k+1)! \right)^2 $$</p>
+<p>Индукционный переход доказан. Это означает, что доказываемое неравенство выполняется для всех натуральных $n$.
 $\blacksquare$</p>
 
                     </div>
@@ -260,12 +373,22 @@ $\blacksquare$</p>
                                 </a>
                             </dt>
                             <dd>Статья на Википедии</dd>
+                            <dt>
+                                <a href="https://ru.wikipedia.org/wiki/%D0%9D%D0%B5%D1%80%D0%B0%D0%B2%D0%B5%D0%BD%D1%81%D1%82%D0%B2%D0%BE_%D1%82%D1%80%D0%B5%D1%83%D0%B3%D0%BE%D0%BB%D1%8C%D0%BD%D0%B8%D0%BA%D0%B0" title="Неравенство треугольника" target="_blank">
+                                    Неравенство треугольника
+                                </a>
+                            </dt>
+                            <dd>Геометрический смысл свойства $|x+y|\leq |x| + |y|$. Статья на википедии.</dd>
                     
                     </dl>
                 </div>
             </section>
 
             <section class="nav">
+                    <a href="../../tasks/11/" title="Следующая задача" class="next">
+                        <span class="label">11</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
 
                     <a href="../../tasks/9/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
