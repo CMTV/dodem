@@ -231,4 +231,24 @@ $(document).ready(() =>
     StateController.init();
     PreviewController.init();
     InputController.init();
+
+    // Замена placeholder на более короткий при маленькой ширине окна браузера
+
+    let adjustPlaceholderTimer = null;
+
+    $(window).resize(function()
+    {
+        clearTimeout(adjustPlaceholderTimer);
+        adjustPlaceholderTimer = setTimeout(adjustPlaceholder, 100, $(this).width());
+    });
+
+    let adjustPlaceholder = (width) =>
+    {
+        $('#search-input').prop(
+            'placeholder', 
+            (width <= 450) ? 'Номер задачи (от 1 до 4462)' : 'Введите номер задачи (от 1 до 4462)'
+        );
+    };
+
+    adjustPlaceholder($(window).width());
 });
