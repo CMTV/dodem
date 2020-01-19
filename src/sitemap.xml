@@ -5,6 +5,6 @@
     <url><loc>https://www.dodem.ru/solvers.html</loc></url>
 
     {{ #tasks}}
-    <url><loc>https://www.dodem.ru/tasks/{{ . }}/index.html</loc></url>
+    <url><loc>https://www.dodem.ru/tasks/{{ . }}/</loc></url>
     {{ /tasks}}
 </urlset> 
