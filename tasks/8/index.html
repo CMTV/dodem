@@ -17,7 +17,11 @@
                 tex: {
                     inlineMath: [['$', '$']],
                     displayMath: [['$$', '$$']],
-                    tags: 'ams'
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1]
+                    }
                 }
             };
         </script>
@@ -141,8 +145,7 @@
                     </div>
                     <div class="block-section-content">
                         <p>Доказать неравенство</p>
-<p>$$ n! < \left(\frac{n+1}{2}\right)^n \text { при } n > 1 $$</p>
-
+<p class="display-math">$$ n! < \left(\frac{n+1}{2}\right)^n \text { при } n > 1 $$</p>
                     </div>
                 </div>
             </section>
@@ -155,8 +158,7 @@
 
                 <div class="block-section-container">
                     <div class="block-section-content"><p>Использовать неравенство</p>
-<p>$$ \left( \frac{n+2}{n+1} \right)^{n+1} = \left( 1 + \frac{1}{n+1} \right)^{n+1} > 2 \quad (n = 1,2,\ldots) $$</p>
-</div>
+<p class="display-math">$$ \left( \frac{n+2}{n+1} \right)^{n+1} = \left( 1 + \frac{1}{n+1} \right)^{n+1} > 2 \quad (n = 1,2,\ldots) $$</p></div>
                 </div>
             </section>
 
@@ -193,32 +195,32 @@
 
                     <div class="block-section-content">
                         <p>Сначала докажем неравенство из Указания для всех натуральных $n$.</p>
-<p>$$ \left( \frac{n+2}{n+1} \right)^{n+1} = \left( 1 + \frac{1}{n+1} \right)^{n+1} > 2 $$</p>
+<p class="display-math">$$ \left( \frac{n+2}{n+1} \right)^{n+1} = \left( 1 + \frac{1}{n+1} \right)^{n+1} > 2 $$</p>
 <p>Воспользуемся неравенством Бернулли, которое мы доказали в <a href="/tasks/7/">задаче 7</a>.</p>
-<p>$$ \left( 1 + \frac{1}{n+1} \right)^{n+1} > 1 + \frac{n+1}{n+1}  = 2  $$</p>
-<p>В этом неравенстве стоит знак "строго больше", так как неравенство Бернулли обращается в равенство только при $n=-1$ (но мы проверяем только для натуральных $n$) или только когда $\frac{1}{n+1} = 0$, а этого не может быть, так как эта дробь будет при любом натуральном $n$ положительной.</p>
+<p class="display-math">$$ \left( 1 + \frac{1}{n+1} \right)^{n+1} > 1 + \frac{n+1}{n+1}  = 2  $$</p>
+<p>В этом неравенстве стоит знак &quot;строго больше&quot;, так как неравенство Бернулли обращается в равенство только при $n=-1$ (но мы проверяем только для натуральных $n$) или только когда $\frac{1}{n+1} = 0$, а этого не может быть, так как эта дробь будет при любом натуральном $n$ положительной.</p>
 <p>Итак, доказали неравенство</p>
-<p>$$ \left( \frac{n+2}{n+1} \right)^{n+1} > 2 $$</p>
+<p class="display-math">$$ \left( \frac{n+2}{n+1} \right)^{n+1} > 2 $$</p>
 <p>Применим степень к числителю и знаменателю дроби и домножим обе части неравенства на знаменатель:</p>
-<p>\begin{equation}\label{hint_inequality}
+<p class="display-math">\begin{equation}\label{hint_inequality}
     (n+2)^{n+1} > 2\cdot (n+1)^{n+1}
 \end{equation}</p>
-<p><hr></p>
+<hr>
 <p>Докажем теперь неравенство из условия по методу математической индукции.</p>
-<p><b>База индукции:</b> в качестве базы возьмем $n=2$, так как по условию $n>1$:</p>
-<p>$$ 2! = 2 \qquad \qquad \left(\frac{2 + 1}{2}\right)^{2} = \frac{9}{4} = 2.25 $$</p>
-<p>$$ 2 < 2.25 $$</p>
+<p><b>База индукции:</b> в качестве базы возьмем $n=2$, так как по условию $n&gt;1$:</p>
+<p class="display-math">$$ 2! = 2 \qquad \qquad \left(\frac{2 + 1}{2}\right)^{2} = \frac{9}{4} = 2.25 $$</p>
+<p class="display-math">$$ 2 < 2.25 $$</p>
 <p><b>Индукционный переход:</b></p>
 <p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
-<p>$$ k! < \left( \frac{k+1}{2} \right)^{k} $$</p>
+<p class="display-math">$$ k! < \left( \frac{k+1}{2} \right)^{k} $$</p>
 <p>Надо доказать, что оно выполняется и для $k+1$. Домножим обе части неравенства на положительное $(k+1)$.</p>
-<p>$$ (k+1)! < \left( \frac{k+1}{2} \right)^{k}(k+1) $$</p>
+<p class="display-math">$$ (k+1)! < \left( \frac{k+1}{2} \right)^{k}(k+1) $$</p>
 <p>Запишем правую часть неравенства в другом виде:</p>
-<p>$$ \left( \frac{k+1}{2} \right)^{k}(k+1) = \frac{2\cdot (k+1)^{k+1}}{2^{k+1}} $$</p>
+<p class="display-math">$$ \left( \frac{k+1}{2} \right)^{k}(k+1) = \frac{2\cdot (k+1)^{k+1}}{2^{k+1}} $$</p>
 <p>Для числителя в правой части теперь можно применить неравество номер \eqref{hint_inequality}, которое мы вывели в самом начале решения!</p>
-<p>$$ (k+1)! < \frac{2\cdot (k+1)^{k+1}}{2^{k+1}} < \frac{(k+2)^{k+1}}{2^{k+1}} $$</p>
-<p>$$ (k+1)! < \frac{(k+2)^{k+1}}{2^{k+1}} $$</p>
-<p>Мы доказали индукционный переход. Это означает, что указанное в условии неравенство выполняется для любых натуральных $n>1$.
+<p class="display-math">$$ (k+1)! < \frac{2\cdot (k+1)^{k+1}}{2^{k+1}} < \frac{(k+2)^{k+1}}{2^{k+1}} $$</p>
+<p class="display-math">$$ (k+1)! < \frac{(k+2)^{k+1}}{2^{k+1}} $$</p>
+<p>Мы доказали индукционный переход. Это означает, что указанное в условии неравенство выполняется для любых натуральных $n&gt;1$.
 $\blacksquare$</p>
 
                     </div>
@@ -253,6 +255,7 @@ $\blacksquare$</p>
                 </script>
             </div>
 
+
             <section class="block-section refs">
                 <div class="block-section-header">
                     <i class="fas fa-external-link-alt"></i>
@@ -277,6 +280,7 @@ $\blacksquare$</p>
                     </dl>
                 </div>
             </section>
+
 
             <section class="nav">
                     <a href="../../tasks/9/" title="Следующая задача" class="next">

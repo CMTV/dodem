@@ -17,7 +17,11 @@
                 tex: {
                     inlineMath: [['$', '$']],
                     displayMath: [['$$', '$$']],
-                    tags: 'ams'
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1]
+                    }
                 }
             };
         </script>
@@ -140,8 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>$$ 1^2 + 2^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6} $$</p>
-
+                        <p class="display-math">$$ 1^2 + 2^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6} $$</p>
                     </div>
                 </div>
             </section>
@@ -181,29 +184,29 @@
                     <div class="block-section-content">
                         <p>Докажем по методу математической индукции.</p>
 <p><b>База индукции:</b> пусть $n = 1$. Получаем:</p>
-<p>$$ 1^2 = \frac{1\cdot 2 \cdot 3}{6} = \frac{1\cdot 6}{6} = 1 $$</p>
+<p class="display-math">$$ 1^2 = \frac{1\cdot 2 \cdot 3}{6} = \frac{1\cdot 6}{6} = 1 $$</p>
 <p><b>Индукционный переход:</b></p>
 <p>Предположим, что равенство выполняется для суммы квадратов первых $k$ натуральных чисел:</p>
-<p>$$ 1^2 + 2^2 + \ldots + k^2 = \frac{k(k+1)(2k + 1)}{6} $$</p>
+<p class="display-math">$$ 1^2 + 2^2 + \ldots + k^2 = \frac{k(k+1)(2k + 1)}{6} $$</p>
 <p>К обеим частям равенства прибавляем $(k+1)^2$:</p>
-<p>$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{k(k + 1)(2k + 1)}{6} + (k+1)^2 $$</p>
+<p class="display-math">$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{k(k + 1)(2k + 1)}{6} + (k+1)^2 $$</p>
 <p>Приводим правую часть равенства к общему знаменателю и выносим за скобки $(k+1)$:</p>
-<p>$$ \frac{k(k + 1)(2k + 1)}{6} + (k+1)^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} $$</p>
+<p class="display-math">$$ \frac{k(k + 1)(2k + 1)}{6} + (k+1)^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} $$</p>
 <p>Получаем следующее равенство:</p>
-<p>$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} $$</p>
+<p class="display-math">$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{(k+1)(2k^2 + 7k + 6)}{6} $$</p>
 <p>В числителе правой части имеем квадратный трехчлен. Решим уравнение:</p>
-<p>$$ 2k^2 + 7k + 6 = 0 $$</p>
+<p class="display-math">$$ 2k^2 + 7k + 6 = 0 $$</p>
 <p>Через дискриминант находим оба корня:</p>
-<p>$$ k_1 = -2 \qquad k_2 = -\frac{3}{2} $$</p>
+<p class="display-math">$$ k_1 = -2 \qquad k_2 = -\frac{3}{2} $$</p>
 <p>Разложим этот квадратный трехчлен на множители:</p>
-<p>$$ 2k^2 + 7k + 6 = 2(k+2)\left(k + \frac{3}{2}\right) $$</p>
+<p class="display-math">$$ 2k^2 + 7k + 6 = 2(k+2)\left(k + \frac{3}{2}\right) $$</p>
 <p>Заносим двойку во вторую скобку. Получаем:</p>
-<p>$$ (k+2)(2k+3) $$</p>
+<p class="display-math">$$ (k+2)(2k+3) $$</p>
 <p>Подставляем полученное выражение обратно вместо квадратного трехчлена в наше равенство:</p>
-<p>$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{(k+1)(k+2)(2k+3)}{6} $$</p>
+<p class="display-math">$$ 1^2 + 2^2 + \ldots + k^2 + (k+1)^2 = \frac{(k+1)(k+2)(2k+3)}{6} $$</p>
 <p>Итак, равенство выполняется и для суммы квадратов первых $k+1$ натуральных чисел.</p>
 <p>Мы доказали индукционный переход. Это означает, что указанное в условии равенство выполняется для любых натуральных чисел.
- $\blacksquare$</p>
+$\blacksquare$</p>
 
                     </div>
 
@@ -237,6 +240,7 @@
                 </script>
             </div>
 
+
             <section class="block-section refs">
                 <div class="block-section-header">
                     <i class="fas fa-external-link-alt"></i>
@@ -261,6 +265,7 @@
                     </dl>
                 </div>
             </section>
+
 
             <section class="nav">
                     <a href="../../tasks/3/" title="Следующая задача" class="next">

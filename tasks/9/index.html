@@ -17,7 +17,11 @@
                 tex: {
                     inlineMath: [['$', '$']],
                     displayMath: [['$$', '$$']],
-                    tags: 'ams'
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1]
+                    }
                 }
             };
         </script>
@@ -141,9 +145,8 @@
                     </div>
                     <div class="block-section-content">
                         <p>Доказать неравенства:</p>
-<p>$$ \text{а) } 2!\cdot 4! \ldots (2n)! > [(n+1)!]^n \text{ при } n>1 $$
-$$ \text{б) } \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}} $$</p>
-
+<p class="display-math">$$ \text{а) } 2!\cdot 4! \ldots (2n)! > [(n+1)!]^n \text{ при } n>1 $$</p>
+<p class="display-math">$$ \text{б) } \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}} $$</p>
                     </div>
                 </div>
             </section>
@@ -182,53 +185,53 @@ $$ \text{б) } \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt
 
                     <div class="block-section-content">
                         <p><b>a)</b></p>
-<p>$$ 2!\cdot 4! \ldots (2n)! > [(n+1)!]^n \text{ при } n>1 $$</p>
+<p class="display-math">$$ 2!\cdot 4! \ldots (2n)! > [(n+1)!]^n \text{ при } n>1 $$</p>
 <p>Докажем по методу математической индукции.</p>
-<p><b>База индукции:</b> в качестве базы возьмем $n=2$, так как по условию $n>1$:</p>
-<p>$$ 2!\cdot 4! = 48 > (3!)^2 = 36 $$</p>
+<p><b>База индукции:</b> в качестве базы возьмем $n=2$, так как по условию $n&gt;1$:</p>
+<p class="display-math">$$ 2!\cdot 4! = 48 > (3!)^2 = 36 $$</p>
 <p><b>Индукционный переход:</b></p>
 <p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
-<p>$$ 2!\cdot 4!\ldots(2k)! > [(k+1)!]^k $$</p>
+<p class="display-math">$$ 2!\cdot 4!\ldots(2k)! > [(k+1)!]^k $$</p>
 <p>Докажем, что оно верно и для $k+1$. Умножим обе части неравенства на положительное $[2(k+1)]!$</p>
-<p>$$ 2!\cdot 4! \ldots [2(k+1)]! > [(k+1)!]^k\cdot[2(k+1)]! $$</p>
+<p class="display-math">$$ 2!\cdot 4! \ldots [2(k+1)]! > [(k+1)!]^k\cdot[2(k+1)]! $$</p>
 <p>$[2(k+1)]!$ можно записать так:</p>
-<p>$$ [2(k+1)]! = (k+1)! \cdot (k+2)(k+3)\ldots2(k+1) $$</p>
+<p class="display-math">$$ [2(k+1)]! = (k+1)! \cdot (k+2)(k+3)\ldots2(k+1) $$</p>
 <p>Подставляем эту форму обратно в правую часть неравенства:</p>
-<p>$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+1)!]^{k+1}\cdot(k+2)(k+3)\ldots2(k+1) $$</p>
+<p class="display-math">$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+1)!]^{k+1}\cdot(k+2)(k+3)\ldots2(k+1) $$</p>
 <p>Неравенство сохранит знак, если мы заменим все правые скобки $(k+3)$, $(k+4)$ и так далее на $(k+2)$:</p>
-<p>$$ (k+2)\underbrace{(k+3)\ldots 2k}_{\text{$k-2$ скобок}} \cdot \underbrace{(2k + 1) \cdot (2k+2)}_{\text{Еще $2$}} > (k+2)^{k+1} $$</p>
-<p>$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+1)!]^{k+1}\cdot(k+2)^{k+1} $$</p>
+<p class="display-math">$$ (k+2)\underbrace{(k+3)\ldots 2k}_{\text{$k-2$ скобок}} \cdot \underbrace{(2k + 1) \cdot (2k+2)}_{\text{Еще $2$}} > (k+2)^{k+1} $$</p>
+<p class="display-math">$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+1)!]^{k+1}\cdot(k+2)^{k+1} $$</p>
 <p>Объединяем $(k+1)!$ и $(k+2)$ под степенью $k+1$:</p>
-<p>$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+2)!]^{k+1} $$</p>
-<p>Мы доказали индукционный переход. Это означает, что доказываемое неравенство выполняется для любых натуральных $n>1$.
+<p class="display-math">$$ 2! \cdot 4! \ldots [2(k+1)]! > [(k+2)!]^{k+1} $$</p>
+<p>Мы доказали индукционный переход. Это означает, что доказываемое неравенство выполняется для любых натуральных $n&gt;1$.
 $\blacksquare$</p>
-<p><hr></p>
+<hr>
 <p><b>б)</b></p>
-<p>$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}} $$</p>
+<p class="display-math">$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}} $$</p>
 <p>Докажем по методу математической индукции.</p>
 <p><b>База индукции:</b> при $n=1$ имеем:</p>
-<p>$$ \frac{1}{2} < \frac{1}{\sqrt{3}\approx 1.7} $$</p>
+<p class="display-math">$$ \frac{1}{2} < \frac{1}{\sqrt{3}\approx 1.7} $$</p>
 <p><b>Индукционный переход:</b></p>
 <p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
-<p>$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k} < \frac{1}{\sqrt{2k+1}} $$</p>
+<p class="display-math">$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k} < \frac{1}{\sqrt{2k+1}} $$</p>
 <p>Докажем, что оно выполняется и для $k+1$. Домножим обе части на дробь $\frac{2k+1}{2k+2}$:</p>
-<p>$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{1}{\sqrt{2k+1}}\cdot\frac{2k+1}{2k+2} $$</p>
+<p class="display-math">$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{1}{\sqrt{2k+1}}\cdot\frac{2k+1}{2k+2} $$</p>
 <p>Упрощаем правую часть:</p>
-<p>\begin{equation}\label{induction_step_inequality}
+<p class="display-math">\begin{equation}\label{induction_step_inequality}
 \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{\sqrt{2k+1}}{2k+2}
 \end{equation}</p>
 <p>Докажем следующее неравенство:</p>
-<p>$$ \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
+<p class="display-math">$$ \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
 <p>Избавляемся от дробей:</p>
-<p>$$ \sqrt{2k+3}\sqrt{2k+1} < 2k+2 $$</p>
+<p class="display-math">$$ \sqrt{2k+3}\sqrt{2k+1} < 2k+2 $$</p>
 <p>Возводим обе части в квадрат:</p>
-<p>$$ 4k^2 + 8k + 3 < 4k^2 + 8k + 4 $$</p>
-<p>$$ 0 < 1 $$</p>
+<p class="display-math">$$ 4k^2 + 8k + 3 < 4k^2 + 8k + 4 $$</p>
+<p class="display-math">$$ 0 < 1 $$</p>
 <p>Мы доказали, что</p>
-<p>$$ \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
+<p class="display-math">$$ \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
 <p>Теперь применим это к неравенству \eqref{induction_step_inequality}:</p>
-<p>$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
-<p>$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
+<p class="display-math">$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{\sqrt{2k+1}}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
+<p class="display-math">$$ \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2k-1}{2k}\cdot\frac{2k+1}{2k+2} < \frac{1}{\sqrt{2k+3}} $$</p>
 <p>Мы доказали индукционный переход. Это означает, что доказываемое неравенство выполняется для любых натуральных $n$.
 $\blacksquare$</p>
 
@@ -264,6 +267,7 @@ $\blacksquare$</p>
                 </script>
             </div>
 
+
             <section class="block-section refs">
                 <div class="block-section-header">
                     <i class="fas fa-external-link-alt"></i>
@@ -282,6 +286,7 @@ $\blacksquare$</p>
                     </dl>
                 </div>
             </section>
+
 
             <section class="nav">
                     <a href="../../tasks/10/" title="Следующая задача" class="next">

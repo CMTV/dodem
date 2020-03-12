@@ -17,7 +17,11 @@
                 tex: {
                     inlineMath: [['$', '$']],
                     displayMath: [['$$', '$$']],
-                    tags: 'ams'
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1]
+                    }
                 }
             };
         </script>
@@ -140,8 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>$$ 1 + 2 + 2^2 + \ldots + 2^{n-1} = 2^{n} - 1 $$</p>
-
+                        <p class="display-math">$$ 1 + 2 + 2^2 + \ldots + 2^{n-1} = 2^{n} - 1 $$</p>
                     </div>
                 </div>
             </section>
@@ -180,22 +183,22 @@
 
                     <div class="block-section-content">
                         <p>Так как $1 = 2^0$ и $2 = 2^1$, то доказать нужно следующее равенство:</p>
-<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{n-1} = 2^n - 1 $$</p>
+<p class="display-math">$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{n-1} = 2^n - 1 $$</p>
 <p>Докажем по методу математической индукции.</p>
 <p><b>База индукции:</b> пусть $n = 1$. Получаем:</p>
-<p>$$ 2^{1-1} = 2^0 = 1 \qquad \qquad 2^{1} - 1 = 1 $$</p>
+<p class="display-math">$$ 2^{1-1} = 2^0 = 1 \qquad \qquad 2^{1} - 1 = 1 $$</p>
 <p><b>Индукционный переход:</b></p>
 <p>Предположим, что равенство выполняется для натурального числа $k$, то есть для суммы первых $k-1$ натуральных степеней числа $2$:</p>
-<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} = 2^k - 1 $$</p>
+<p class="display-math">$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} = 2^k - 1 $$</p>
 <p>К обеим частям равенства прибавляем $2^k$:</p>
-<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^k - 1 + 2^k $$</p>
+<p class="display-math">$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^k - 1 + 2^k $$</p>
 <p>Преобразуем правую часть:</p>
-<p>$$ 2^k + 2^k - 1 = 2\cdot 2^k - 1 = 2^{k+1} -1 $$</p>
+<p class="display-math">$$ 2^k + 2^k - 1 = 2\cdot 2^k - 1 = 2^{k+1} -1 $$</p>
 <p>Подставляем полученный результат обратно в доказываемое равенство:</p>
-<p>$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^{k+1} -1 $$</p>
+<p class="display-math">$$ 2^0 + 2^1 + 2^2 + \ldots + 2^{k-1} + 2^k = 2^{k+1} -1 $$</p>
 <p>Итак, равенство выполняется и для натурального числа $k+1$, то есть для суммы первых $k$ натуральных степеней числа $2$.</p>
 <p>Мы доказали индукционный переход. Это означает, что указанное в условии равенство выполняется для любых натуральных чисел.
- $\blacksquare$</p>
+$\blacksquare$</p>
 
                     </div>
 
@@ -229,6 +232,7 @@
                 </script>
             </div>
 
+
             <section class="block-section refs">
                 <div class="block-section-header">
                     <i class="fas fa-external-link-alt"></i>
@@ -247,6 +251,7 @@
                     </dl>
                 </div>
             </section>
+
 
             <section class="nav">
                     <a href="../../tasks/5/" title="Следующая задача" class="next">
