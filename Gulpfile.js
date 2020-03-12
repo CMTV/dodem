@@ -7,10 +7,10 @@ const { src, dest, series, task, watch  } = require('gulp');
 const scss =        require('gulp-sass');
 const clean_css =   require('gulp-clean-css')
 const concat =      require('gulp-concat');
-const clean =       require('gulp-clean');
 const uglify_js =   require('gulp-uglify');
 const babel =       require('gulp-babel');
 const tools =       require('./tools');
+const rimraf =      require('rimraf');
 
 // ===
 
@@ -64,9 +64,10 @@ task('move_tasks_files', () =>
         .pipe(dest('out/tasks'));
 });
 
-task('clear', () =>
+task('clear', done =>
 {
-    return src('out', { allowEmpty: true, read: false }).pipe(clean()); 
+    rimraf.sync('out/*');
+    done();
 });
 
 //

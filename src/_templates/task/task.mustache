@@ -122,6 +122,8 @@
                 </script>
             </div>
 
+            {{ #hasRefs }}
+
             <section class="block-section refs">
                 <div class="block-section-header">
                     <i class="fas fa-external-link-alt"></i>
@@ -142,6 +144,8 @@
                     </dl>
                 </div>
             </section>
+
+            {{ /hasRefs }}
 
             <section class="nav">
                 {{ #nav.next }}

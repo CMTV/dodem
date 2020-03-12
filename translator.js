@@ -11,6 +11,18 @@ const TRANSLATORS =
         });
 
         return out;
+    },
+
+    isolateMath: (text) =>
+    {
+        let out = '';
+
+        out = text.replace(/(\$\$|\\begin{.*?})[\s\S]*?(\$\$|\\end{.*?})/g, (match) =>
+        {
+            return `<p class="display-math">${match}</p>`;
+        });
+
+        return out;
     }
 }
 

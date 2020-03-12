@@ -3,6 +3,12 @@ const p =           require('path');
 const translator =  require('./translator');
 const mustache =    require('mustache');
 
+const mdIt =        require('markdown-it')({
+    html: true,
+    subscript: false,
+    superscript: false
+});
+
 const TASKS_NUM = 4462;
 
 //
@@ -229,7 +235,7 @@ function getSrcTask(taskNumber)
 
     let task = { task_src: null, solutions_src: [], meta: null };
 
-    task.task_src = readFile(p.join(path, 'task.html'));
+    task.task_src = getSrc('task', taskNumber);
 
     task.meta = JSON.parse(readFile(p.join(path, 'meta.json')));
 
@@ -239,7 +245,7 @@ function getSrcTask(taskNumber)
             {
                 solver: task.meta.solver,
                 reason: null,
-                data: readFile(p.join(path, 'solution.html'))
+                data: getSrc('solution', taskNumber)
             }
         ];
     }
@@ -253,7 +259,7 @@ function getSrcTask(taskNumber)
                     {
                         solver: solver,
                         reason: task.meta.solvers[solver],
-                        data: readFile(p.join(path, `solution_${solver}.html`))
+                        data: getSrc(`solution_${solver}`, taskNumber)
                     }
                 );
             }
@@ -265,7 +271,7 @@ function getSrcTask(taskNumber)
                         {
                             solver: solver,
                             reason: reason,
-                            data: readFile(p.join(path, `solution_${solver}_${i+1}.html`))
+                            data: getSrc(`solution_${solver}_${i+1}`, taskNumber)
                         }
                     );
                 });
@@ -273,9 +279,9 @@ function getSrcTask(taskNumber)
         });
     }
 
-    if (fs.existsSync(p.join(path, 'hint.html')))
+    if (fs.existsSync(p.join(path, 'hint.html') || fs.existsSync(p.join(path, 'hint.md'))))
     {
-        task.hint_src =  readFile(p.join(path, 'hint.html'));
+        task.hint_src = getSrc('hint', taskNumber);
     }
 
     return task;
@@ -285,23 +291,35 @@ function getTask(taskNumber, removeSrc = true)
 {
     let srcTask = getSrcTask(taskNumber);
 
-    let translators = ['paragraph'];
+    let translators = ['isolateMath'];
 
-    srcTask.task_html = translator.translate(srcTask.task_src, translators);
+    // New way
+    srcTask.task_html = mdIt.render(translator.translate(srcTask.task_src, translators));
+
+    // Old way
+    // srcTask.task_html = translator.translate(srcTask.task_src, translators);
 
     srcTask.solutions_html = srcTask.solutions_src;
 
     srcTask.solutions_html.forEach((solution, i) =>
     {
-        srcTask.solutions_html[i].data = translator.translate(
+        // New way
+        srcTask.solutions_html[i].data = mdIt.render(translator.translate(solution.data, translators));
+
+        // Old way
+        /*srcTask.solutions_html[i].data = translator.translate(
             solution.data,
             translators
-        );
+        );*/
     });
 
     if (srcTask.hint_src)
     {
-        srcTask.hint_html = translator.translate(srcTask.hint_src, translators);
+        // New way
+        srcTask.hint_html = mdIt.render(translator.translate(srcTask.hint_src, translators));
+
+        // Old way
+        //srcTask.hint_html = translator.translate(srcTask.hint_src, translators);
     }
 
     if (removeSrc)
@@ -317,6 +335,20 @@ function getTask(taskNumber, removeSrc = true)
 function saveTaskPreview(taskNumber, preview)
 {
     writeFile(p.join('out', 'tasks', taskNumber.toString(), 'preview.json'), JSON.stringify(preview));
+}
+
+function getSrc(filename, taskNumber)
+{
+    let htmlPath =  p.join('tasks', taskNumber.toString(), filename + '.html');
+    let mdPath =    p.join('tasks', taskNumber.toString(), filename + '.md');
+
+    if (fs.existsSync(mdPath))
+        return readFile(mdPath);
+
+    if (fs.existsSync(htmlPath))
+        return readFile(htmlPath);
+
+    return false;
 }
 
 function getPartials()
@@ -417,7 +449,7 @@ function genAll(devMode = false)
         {
             if (typeof DATA.hash[i + 1] === 'undefined') continue;
 
-            let task = getTask(solvedArr[i], false);
+            let task = getTask(i + 1, false);
             let taskNumber = task.meta.task;
 
             saveTaskPreview(task.meta.task, { location: task.meta.location, taskHtml: task.task_html });
@@ -459,6 +491,7 @@ function genAll(devMode = false)
                     }
                 },
 
+                hasRefs: !!task.meta.refs,
                 refs: task.meta.refs,
 
                 nav: DATA.nav[taskNumber]
