@@ -1,0 +1,12 @@
+{
+    "task": 48,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "first-proto-task",
+        "sequence-limits/elementary-limits"
+    ]
+}

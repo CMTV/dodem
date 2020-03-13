@@ -7,4 +7,8 @@
     {{ #tasks}}
     <url><loc>https://www.dodem.ru/tasks/{{ . }}/</loc></url>
     {{ /tasks}}
+
+    {{ #protoTasks }}
+    <url><loc>https://www.dodem.ru/proto/{{{ . }}}/</loc></url>
+    {{ /protoTasks }}
 </urlset> 

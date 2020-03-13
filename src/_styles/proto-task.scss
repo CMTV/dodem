@@ -1,0 +1,38 @@
+@import 'import';
+
+.page-proto-task
+{
+    $protoBorderColor: darken($brand-color, 10%);
+
+    .block-section
+    {
+        &.task
+        {
+            .block-section-header
+            {
+                border-top-color: $protoBorderColor;
+                border-left-color: $protoBorderColor;
+                border-right-color: $protoBorderColor;
+
+                width: 180px;
+                cursor: help;
+
+                i { margin-right: 7px; }
+            }
+
+            .block-section-container
+            {
+                border-color: $protoBorderColor;
+
+                .task-nav
+                {
+                    padding: 10px 15px;
+
+                    font-size: 100%;
+                    font-weight: bold;
+                    white-space: normal;
+                }
+            }
+        }
+    }
+}

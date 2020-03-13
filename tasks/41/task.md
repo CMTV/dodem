@@ -8,4 +8,4 @@ $$ \lim\limits_{n\to\infty} x_n = 1, $$
 $$ |x_n - 1| < \varepsilon \text{, если } n > N. $$
 
 Заполнить следующую таблицу:
-\begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array}
+$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$

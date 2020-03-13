@@ -105,10 +105,13 @@
 
                 backdrop-filter: blur(2px);
 
-                .button-show
+                span + .button-show
                 {
                     margin-top: 20px;
+                }
 
+                .button-show
+                {
                     padding: 7px 15px;
 
                     color: white;
@@ -212,7 +215,16 @@
         }
     }
 
-    &.refs
+    &.protoTasks
+    {
+        .block-section-header
+        {
+            width: 180px;
+        }
+    }
+
+    &.refs,
+    &.protoTasks
     {
         dt
         {
@@ -371,7 +383,9 @@
                 text-align: left;
             }
 
-            & > p:not(:last-of-type)
+            & > p:not(:last-of-type),
+            & > ol,
+            & > ul
             {
                 margin-bottom: 15px;
             }

@@ -6,4 +6,4 @@
 \end{array}
 
 Для каждого из этих случаев заполнить следующую таблицу:
-\begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  \\ \hline  \end{array}
+$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  \\ \hline  \end{array} $$

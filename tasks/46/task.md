@@ -1,0 +1,1 @@
+$$ \lim_{n\to\infty} \frac{10000n}{n^2 + 1} $$

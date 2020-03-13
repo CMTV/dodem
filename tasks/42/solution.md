@@ -7,7 +7,7 @@ $$ |x_n| < \varepsilon $$
 
 $$ \left| x_n = \frac{(-1)^{n+1}}{n} \right| < \varepsilon $$
 
-Воспользуемся следующим свойствам модуля для упрощения выражения выше:
+Воспользуемся следующим свойством модуля для упрощения выражения выше:
 $$ |a\cdot b| = |a||b| $$
 
 $$ \left| \frac{(-1)^{n+1}}{n} \right| = \frac{|(-1)^{n+1}| = |-1||-1|\ldots = 1}{n} = \frac{1}{n} $$
@@ -37,7 +37,7 @@ $$ N(0.0001) = \ceil{\frac{1}{0.0001}} = \ceil{10000} = 10000 $$
 
 Итоговая таблица:
 
-\begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 10 & 1000 & 10000 &  \\ \hline  \end{array}
+$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 10 & 1000 & 10000 &  \\ \hline  \end{array} $$
 
 ---
 
@@ -89,7 +89,7 @@ $$ N(0.0001) = \ceil{\frac{2 - 0.0001}{0.0001}} = \ceil{\frac{1.9999}{0.0001}} =
 
 Итоговая таблица:
 
-\begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 19 & 1999 & 19999 &  \\ \hline  \end{array}
+$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 19 & 1999 & 19999 &  \\ \hline  \end{array} $$
 
 ---
 
@@ -130,7 +130,7 @@ $$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$
 
 $$ \left| x_n = (-1)^n\cdot 0.999^n \right| < \varepsilon $$
 
-Воспользуемся следующим свойствам модуля для упрощения выражения выше:
+Воспользуемся следующим свойством модуля для упрощения выражения выше:
 $$ |a\cdot b| = |a||b| $$
 
 $$ \left| (-1)^n\cdot 0.999^n \right| = |(-1)^n|\cdot 0.999^n $$
@@ -141,35 +141,29 @@ $$ \left| (-1)^n\right|\cdot 0.999^n = 0.999^n $$
 Значит, неравенство в условии превращается в такое:
 $$ 0.999^n < \varepsilon $$
 
-Домножим обе части на $\frac{1}{\varepsilon \cdot 0.999^n}$:
-$$ \frac{1}{\varepsilon} < \frac{1000}{999}^{-n} $$
+Прологарифмируем это неравенство по основанию $0.999$:
+$$ n > \log_{0.999}\varepsilon $$
 
-Прологарифмируем это неравенство по основанию $\frac{1000}{999}$:
-$$ \log_{\frac{1000}{999}}\frac{1}{\varepsilon} < -n $$
-
-Умножаем на $-1$:
-$$ n > -\log_{\frac{1000}{999}}\frac{1}{\varepsilon} = \log_{\frac{1000}{999}}\varepsilon $$
-
-Какое бы $\varepsilon > 0$ мы не взяли, нам достаточно взять любое число, большее $\log_{\frac{1000}{999}}\varepsilon$ и тогда требуемое по условию неравенство выше будет выполняться.
+Какое бы $\varepsilon > 0$ мы не взяли, нам достаточно взять любое число, большее $\log_{0.999}\varepsilon$ и тогда требуемое по условию неравенство выше будет выполняться.
 
 Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:
-$$ N(\varepsilon) = \ceil{\left|\log_{\frac{1000}{999}}\varepsilon\right|} $$
+$$ N(\varepsilon) = \ceil{\left|\log_{0.999}\varepsilon\right|} $$
 
-По этой формуле мы получаем округление сверху ("потолок") числа $\left|\log_{\frac{1000}{999}}\varepsilon\right|$. Из определения "потолка" числа:
-$$ \left|\log_{\frac{1000}{999}}\varepsilon\right| \leq \ceil{\left|\log_{\frac{1000}{999}}\varepsilon\right|} $$
+По этой формуле мы получаем округление сверху ("потолок") числа $\left|\log_{0.999}\varepsilon\right|$. Из определения "потолка" числа:
+$$ \left|\log_{0.999}\varepsilon\right| \leq \ceil{\left|\log_{0.999}\varepsilon\right|} $$
 
 Так как в условии у нас $n > N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:
-$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\left|\log_{\frac{1000}{999}}\varepsilon\right|} \geq \left|\log_{\frac{1000}{999}}\varepsilon\right| \geq \log_{\frac{1000}{999}}\varepsilon  $$
-$$ n > \log_{\frac{1000}{999}}\varepsilon $$
+$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\left|\log_{0.999}\varepsilon\right|} \geq \left|\log_{0.999}\varepsilon\right| \geq \log_{0.999}\varepsilon  $$
+$$ n > \log_{0.999}\varepsilon $$
 
 Итак, мы показали, что любые натуральные $ n > N(\varepsilon) $ удовлетворяют требуемому по условию неравенству выше.
 
 Начнем заполнять таблицу:
 
-$$ N(0.1) = \ceil{\left|\log_{\frac{1000}{999}}0.1\right|} = \ceil{|-2301.43\ldots|} = 2302 $$
-$$ N(0.001) = \ceil{\left|\log_{\frac{1000}{999}}0.001\right|} = \ceil{|-6904.3\ldots|} = 6905 $$
-$$ N(0.0001) = \ceil{\left|\log_{\frac{1000}{999}}0.0001\right|} = \ceil{|-9205.7\ldots|} = 9206 $$
+$$ N(0.1) = \ceil{\left|\log_{0.999}0.1\right|} = \ceil{|2301.43\ldots|} = 2302 $$
+$$ N(0.001) = \ceil{\left|\log_{0.999}0.001\right|} = \ceil{|6904.3\ldots|} = 6905 $$
+$$ N(0.0001) = \ceil{\left|\log_{0.999}0.0001\right|} = \ceil{|9205.7\ldots|} = 9206 $$
 
 Итоговая таблица:
 
-\begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 2302 & 6905 & 9206 &  \\ \hline  \end{array}
+$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 2302 & 6905 & 9206 &  \\ \hline  \end{array} $$

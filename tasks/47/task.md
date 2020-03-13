@@ -1,0 +1,1 @@
+$$ \lim_{n\to\infty} \left( \sqrt{n+1} - \sqrt{n} \right) $$

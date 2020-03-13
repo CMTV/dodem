@@ -38,6 +38,12 @@ task('build_htmls', (done) =>
     done();
 });
 
+task('build_protos', (done) =>
+{
+    require('./proto-tasks-handler').genAll();
+    done();
+});
+
 task('move_files', () =>
 {
     return src(
@@ -55,13 +61,26 @@ task('move_tasks_files', () =>
 {
     return src(
         [
-        'tasks/**/*',
-        '!tasks/**/task.md',
-        '!tasks/**/hint.md',
-        '!tasks/**/solution.md',
-        '!tasks/**/meta.json'
+            'tasks/**/*',
+            '!tasks/**/task.md',
+            '!tasks/**/hint.md',
+            '!tasks/**/solution.md',
+            '!tasks/**/meta.json'
         ])
         .pipe(dest('out/tasks'));
+});
+
+task('move_proto_tasks_files', () =>
+{
+    return src(
+        [
+            'proto-tasks/**/*',
+            '!proto-tasks/**/task.md',
+            '!proto-tasks/**/solution.md',
+            '!proto-tasks/**/meta.json'
+        ])
+        .pipe(dest('out/proto')
+    );
 });
 
 task('clear', done =>
@@ -81,7 +100,7 @@ task('watch', () =>
 
 task('build_look', done =>
 {
-    series('clear', 'build_scss', 'build_js', 'build_htmls', 'move_files', 'move_tasks_files')();
+    series('clear', 'build_scss', 'build_js', 'build_htmls', 'build_protos', 'move_files', 'move_tasks_files', 'move_proto_tasks_files')();
     done();
 });
 

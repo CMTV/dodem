@@ -224,6 +224,23 @@ const _tasks_Iterators =
     }
 }
 
+function getProtoTaskMeta(protoPath)
+{
+    let meta = JSON.parse(readFile(p.normalize(`proto-tasks/${protoPath}/meta.json`)));
+
+    let metaObj = {};
+
+    if (meta.title)
+        metaObj.title = meta.title
+
+    if (meta.description)
+        metaObj.desc = meta.description
+
+    metaObj.link = `/proto/${protoPath}`;
+
+    return metaObj;
+}
+
 function getSrcTask(taskNumber)
 {
     let path = p.join('tasks', taskNumber.toString());
@@ -400,9 +417,11 @@ function genAll(devMode = false)
     {
         let template = readFile(p.join('src', 'sitemap.xml'));
 
+        const protoTH = require('./proto-tasks-handler');
+
         writeFile(
             p.join('out', 'sitemap.xml'),
-            mustache.render(template, { tasks: solvedArr })
+            mustache.render(template, { tasks: solvedArr, protoTasks: protoTH.getProtoPaths() })
         );
     }
 
@@ -467,6 +486,21 @@ function genAll(devMode = false)
 
             let isOneSolution = (solutions.length === 1);
 
+            // Proto tasks
+
+            let hasProtoTasks = !!task.meta.proto;
+            let protoTasks = [];
+
+            if (hasProtoTasks)
+            {
+                task.meta.proto.forEach((protoPath) =>
+                {
+                    protoTasks.push(getProtoTaskMeta(protoPath));
+                });
+            }
+
+            //
+
             let view =
             {
                 title: `${taskNumber} | Демидович. Решения`,
@@ -494,6 +528,9 @@ function genAll(devMode = false)
                 hasRefs: !!task.meta.refs,
                 refs: task.meta.refs,
 
+                hasProtoTasks: hasProtoTasks,
+                protoTasks: protoTasks,
+
                 nav: DATA.nav[taskNumber]
             }
 
@@ -514,5 +551,6 @@ function genAll(devMode = false)
 
 module.exports =
 {
-    genAll: genAll
+    genAll: genAll,
+    genHtml: getHtml
 }

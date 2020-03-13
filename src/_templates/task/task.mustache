@@ -87,7 +87,7 @@
                     </div>
 
                     <div class="reason-overlay">
-                        {{{ reason }}}
+                        {{ #reason }}<span>{{{ . }}}</span>{{ /reason }}
 
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
                     </div>
@@ -121,6 +121,31 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+            {{ #hasProtoTasks }}
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                        {{ #protoTasks }}
+                            <dt>
+                                <a href="{{{ link }}}" title="{{ title }}" target="_blank">
+                                    {{ title }}
+                                </a>
+                            </dt>
+                            <dd>{{ desc }}</dd>
+                        {{ /protoTasks }}
+                    
+                    </dl>
+                </div>
+            </section>
+
+            {{ /hasProtoTasks }}
 
             {{ #hasRefs }}
 
