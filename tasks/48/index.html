@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>12 | Демидович. Решения</title>
-        <meta name="description" content="Сечение $A&#x2F;B$, определяющее число $\sqrt[3]{2}$, строится следующим образом: класс $A$ содержит всерациональные числа $a$ такие, что $a^3 &lt; 2$; класс $B$ содержит все остальные рациональные числа.Доказать, что в классе $A$ нет наибольшего числа, а в классе $B$ — наименьшего.">
+        <title>48 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \frac{\sqrt[3]{n^2} \sin n!}{n+1} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>12</span>
+                    <span>48</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -136,18 +136,15 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Вещественные числа" class="paragraph">
-                            └─ <span class="accent">§1</span>
-                            <span class="title">Вещественные числа</span>
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Сечение $A/B$, определяющее число $\sqrt[3]{2}$, строится следующим образом: класс $A$ содержит все
-рациональные числа $a$ такие, что $a^3 &lt; 2$; класс $B$ содержит все остальные рациональные числа.
-Доказать, что в классе $A$ нет наибольшего числа, а в классе $B$ — наименьшего.</p>
-
+                        <p class="display-math">$$ \lim_{n\to\infty} \frac{\sqrt[3]{n^2} \sin n!}{n+1} $$</p>
                     </div>
                 </div>
             </section>
@@ -185,72 +182,47 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Итак, у нас есть класс $A$, который состоит из рациональных $a$, таких что $a^3 &lt; 2$:</p>
-<p class="display-math">$$ A = \left\{ a \in \mathbb{Q} : a^3 < 2 \right\} $$</p>
-<p>Покажем, что у этого класса нет наибольшего элемента, то есть какое бы $a\in A$ мы не взяли, существует еще более большое $a'\in A$.</p>
-<p>Докажем от противного. Пусть $a$ — наибольший элемент класса $A$. Тогда рассмотрим вот такое $a'$:</p>
-<p class="display-math">$$ a' = a + \frac{1}{n}, $$</p>
-<p>где $n$ — какое-то натуральное число.</p>
-<p>Очевидно, что $a' &gt; a$, так как мы прибавили к $a$ небольшое положительное число $\frac{1}{n}$.</p>
-<p>Теперь покажем, что $a'$ принадлежит классу $A$. Для этого надо показать, что $a'^3 &lt; 2$:</p>
-<p class="display-math">$$ a'^3 = \left(a + \frac{1}{n}\right)^3 = a^3 + \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n^3} < 2 $$</p>
-<p>Перенесем $a^3$ в правую часть неравенства:</p>
-<p class="display-math">$$ \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n^3} < 2 - a^3 $$</p>
-<p>Усилим неравенство, заменив $\frac{1}{n^3}$ на $\frac{1}{n}$:</p>
-<p class="display-math">$$ \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n^3} < \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n} < 2 - a^3 $$</p>
-<p>Другими словами, если мы найдем такие $n$, что выполняется более сильное неравенство в правой части, то, увеличив на $2$ степень в знаменателе, мы еще больше уменьшим (ослабим) это неравенство и для него найденная $n$ тоже будет работать, то есть знак сохранится.</p>
-<p>Итак, имеем</p>
-<p class="display-math">$$ \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n} < 2 - a^3 $$</p>
-<p>Вновь усилим неравенство, заменив $\frac{3a}{n^2}$ на $\frac{3a}{n}$:</p>
-<p class="display-math">$$ \frac{3a^2}{n} + \frac{3a}{n^2} + \frac{1}{n} < \frac{3a^2}{n} + \frac{3a}{n} + \frac{1}{n} < 2 - a^3 $$</p>
-<p>Суть осталась такой же. Найдем $n$, для которого выполняется правая часть, то левая, так как она меньше, тем более будет верна при найденном $n$.</p>
-<p>Имеем</p>
-<p class="display-math">$$ \frac{3a^2}{n} + \frac{3a}{n} + \frac{1}{n} = \frac{3a(a+1) + 1}{n} < 2 - a^3 $$</p>
-<p>Вынесем $n$ из под знаменателя:</p>
-<p class="display-math">$$ n > \frac{3a(a+1) + 1}{2-a^3} $$</p>
-<p>Итак мы показали, что какое $a$ за наибольший элемент класса $A$ не принимай, всегда можно найти натуральное $n$, а через него такое $a'$, что $a' &gt; a$ и $a'^3 &lt; 2$, а значит $a$ уже не наибольший элемент класса $A$. Противоречие.</p>
-<p>Это значит, что наибольшего элемента у класса $A$ нет. $\blacksquare$</p>
+                        <p>Сначала докажем, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{\sqrt{n}} = 0 $$</p>
+<p>Это легко сделать по определению предела:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{\sqrt{n}} \right| = \frac{1}{\sqrt{n}} < \varepsilon, $$</p>
+<p>Разберемся с неравенством в конце.</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n}} < \varepsilon \Leftrightarrow \frac{1}{n} < \varepsilon^2 \Leftrightarrow n > \frac{1}{\varepsilon^2} $$</p>
+<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\varepsilon^2}$ и тогда требуемое по определению предела неравенства будет выполняться.</p>
+<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
+<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon^2}} $$</p>
+<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\varepsilon^2}$. Из определения &quot;потолка&quot; числа:</p>
+<p class="display-math">$$ \ceil{\frac{1}{\varepsilon^2}} \geq \frac{1}{\varepsilon^2} $$</p>
+<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
+<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\varepsilon^2}} \geq \frac{1}{\varepsilon^2}  $$</p>
+<p class="display-math">$$ n > \frac{1}{\varepsilon^2} $$</p>
+<p>Итак, для любого $\varepsilon &gt; 0$ мы теперь можем найти $N$, такое, что для любого $n &gt; N$ будет выполняться неравенство:</p>
+<p class="display-math">$$ \left| \frac{1}{\sqrt{n}} \right| < \varepsilon $$</p>
+<p>Значит, мы по определению доказали, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{\sqrt{n}} = 0 $$</p>
+<p>$\blacksquare$</p>
 <hr>
-<p>Теперь возьмемся за класс $B$. В условии сказано, что &quot;класс $B$ содержит все остальные рациональные числа&quot;.
-С таким определением работать неудобно. Уточним его.</p>
-<p>Раз классе $A$ у рациональные числа $a$, такие что $a^3 &lt; 2$, то для класса $B$ остаются все
-рациональные числа $b$, такие что $b^3 \geq 2$.</p>
-<p>Итак,</p>
-<p class="display-math">$$ B = \left\{ b \in \mathbb{Q} : b^3 \geq 2 \right\} $$</p>
-<p>Покажем, что у этого класса нет наименьшего элемента, то есть какое бы $b\in B$ мы не взяли, существует еще более маленькое $b'\in B$.</p>
-<p>Докажем от противного. Пусть $b$ — наименьший элемент класса $B$. Тогда рассмотрим вот такой $b'$:</p>
-<p class="display-math">$$ b' = b - \frac{1}{n}, $$</p>
-<p>где $n$ — какое-то натуральное число.</p>
-<p>Очевидно, что $b' &lt; b$, так как мы отняли от $b$ небольшое положительное число $\frac{1}{n}$.</p>
-<p>Теперь покажем, что $b'$ принадлежит классу $B$. Для этого надо показать, $b'^3 \geq 2$:</p>
-<p class="display-math">$$ b'^3 = \left(b-\frac{1}{n}\right)^3 = b^3 - \frac{3b^2}{n} + \frac{3b}{n^2} - \frac{1}{n^3} \geq 2 $$</p>
-<p class="display-math">$$ - \frac{3b^2}{n} + \frac{3b}{n^2} - \frac{1}{n^3} \geq 2 - b^3 $$</p>
-<p>Усилим неравенство, убрав из него слагаемое $\frac{3a}{n^2}$:</p>
-<p class="display-math">$$ - \frac{3b^2}{n} + \frac{3b}{n^2} - \frac{1}{n^3} > - \frac{3b^2}{n} - \frac{1}{n^3} \geq 2 - b^3 $$</p>
-<p>Другими словами, если мы найдем такие $n$, что выполняется более сильное правое неравенство, то, добавив к нем еще положительное слагаемое $\frac{1}{n^2}$ (ослабив его) знак неравенства тем более не изменится.</p>
-<p>Итак, имеем</p>
-<p class="display-math">$$ - \frac{3b^2}{n} - \frac{1}{n^3} \geq 2 - b^3 $$</p>
-<p>Теперь выясним, какой знак стоит между следующими дробями:</p>
-<p class="display-math">$$ -\frac{1}{n^3} \ ? \ -\frac{1}{n} $$</p>
-<p>Домножим обе части на положительное $n^3$:</p>
-<p>\begin{gather*}
--1 \ ? \ -n^2 \ n^2 \ ? \ 1
-\end{gather*}</p>
-<p>Но мы знаем, что $n^2 \geq 1$. Значит, знаки вопроса выше можно заменить на найденный знак $\geq$, вплоть до нужного нам неравенства, с которого мы начали:</p>
-<p class="display-math">$$ -\frac{1}{n^3} \geq -\frac{1}{n} $$</p>
-<p>Прибавим к обеим сторонам дробь $-\frac{3b^2}{n}$:</p>
-<p class="display-math">$$ -\frac{3b^2}{n} - \frac{1}{n^3} \geq -\frac{3b^2}{n} - \frac{1}{n} $$</p>
-<p>Только что мы вновь усилили наше неравенство:</p>
-<p class="display-math">$$ -\frac{3b^2}{n} - \frac{1}{n^3} \geq -\frac{3b^2}{n} - \frac{1}{n} \geq 2 - b^3 $$</p>
-<p>Имеем</p>
-<p class="display-math">$$ -\frac{3b^2}{n} - \frac{1}{n} = -\frac{3b^2 + 1}{n} \geq 2 - b^3 $$</p>
-<p>Домножим обе части на $-1$ и вынесем $n$ из знаменателя:</p>
-<p class="display-math">$$ n \geq \frac{3b^2 + 1}{b^3 - 2} $$</p>
-<p>Итак мы показали, что какое $b$ за наименьший элемент класса $B$ не принимай, всегда можно найти натуральное $n$, а через него такое $b'$, что $b' &lt; b$ и $b'^3 \geq 2$, а значит $b$ уже не наименьший элемент класса $B$. Противоречие.</p>
-<p>Это значит, что наименьшего элемента у класса $B$ нет. $\blacksquare$</p>
-<hr>
-<p>Мы доказали, что у класса $A$ нет наибольшего элемента, а у класса $B$ нет наименьшего.</p>
-
+<p>Поработаем над данной в условии последовательностью:</p>
+<p class="display-math">$$ \sqrt{n+1} - \sqrt{n} $$</p>
+<p>Домножим ее на такую дробь, чтобы получить разность квадратов:</p>
+<p class="display-math">$$ (\sqrt{n+1} - \sqrt{n})\cdot\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>При этом сама последовательность не меняется, так как в сущности мы домножили ее на $1$.</p>
+<p class="display-math">$$ (\sqrt{n+1} - \sqrt{n})\cdot\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}} = \frac{1}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>Итак:</p>
+<p class="display-math">$$ \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>Теперь докажем следующее неравенство:</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n+1} + \sqrt{n}} \overset{\text{?}}{<} \frac{1}{\sqrt{n}} $$</p>
+<p>Умножаем обе части на $\sqrt{n+1} + \sqrt{n}$:</p>
+<p class="display-math">$$ 1 \overset{\text{?}}{<} \frac{\sqrt{n+1}}{\sqrt{n}} + 1 $$</p>
+<p>Вычитаем из обеих частей $1$ и получаем очевидное неравенство (так как правая часть всегда положительна):</p>
+<p class="display-math">$$ 0 < \frac{\sqrt{n+1}}{\sqrt{n}} $$</p>
+<p>Итак, мы доказали, что:</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} $$</p>
+<p>Значит, нашу последовательность из условия можно &quot;зажать&quot;:</p>
+<p class="display-math">$$ 0 < \sqrt{n+1}-\sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} $$</p>
+<p>Предел $0$ при $n\to\infty$ равен $0$. Предел $\frac{1}{\sqrt{n}}$ при $n\to\infty$, как мы доказали в начале, тоже равен $0$.</p>
+<p>По теореме о двух милиционерах это означает, что и наша &quot;зажатая&quot; последовательность тоже стремится к $0$:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \sqrt{n+1} - \sqrt{n} = 0 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -284,42 +256,38 @@
             </div>
 
 
-
-            <section class="block-section refs">
+            <section class="block-section protoTasks">
                 <div class="block-section-header">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Ссылки</span>
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
                 </div>
                 <div class="block-section-container">
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="" title="Фихтегольц Г.М. Курс дифференциального и интегрального исчисления. Том I" target="_blank">
-                                    Фихтегольц Г.М. Курс дифференциального и интегрального исчисления. Том I
+                                <a href="/proto/first-proto-task" title="Первая прото-задача" target="_blank">
+                                    Первая прото-задача
                                 </a>
                             </dt>
-                            <dd>Для успешного решения настоятельно рекомендую пройти §2 (Введение иррациональных чисел...), где подробно описывается метод сечений и зачем он нужен, так как в самом задачнике про сечения написано очень поверхностно.</dd>
+                            <dd></dd>
                             <dt>
-                                <a href="/tasks/11/" title="Задача 11" target="_blank">
-                                    Задача 11
+                                <a href="/proto/sequence-limits/elementary-limits" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
                                 </a>
                             </dt>
-                            <dd>Почти аналогичная задача, только попроще. Алгоритм решения абсолютно такой же</dd>
+                            <dd>Лол кек чебурек</dd>
                     
                     </dl>
                 </div>
             </section>
 
 
-            <section class="nav">
-                    <a href="../../tasks/41/" title="Следующая задача" class="next">
-                        <span class="label">41</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/11/" title="Предыдущая задача" class="prev">
+            <section class="nav">
+
+                    <a href="../../tasks/47/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">11</span>
+                        <span class="label">47</span>
                     </a>
             </section>
         </section>

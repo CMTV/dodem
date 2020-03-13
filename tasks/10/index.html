@@ -196,8 +196,8 @@
 <p>Пусть неравенство выполняется для некоторого натурального $k$:</p>
 <p class="display-math">$$ 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{k}} > \sqrt{k} $$</p>
 <p>Прибавим к обеим частям $\frac{1}{\sqrt{k+1}}$:</p>
-<p class="display-math">\begin{equation}\label{induction_step_inequality_1}
-1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} > \sqrt{k} + \frac{1}{\sqrt{k+1}}
+<p>\begin{equation}\label{induction_step_inequality_1}
+1 + \frac{1}{\sqrt{2}} + \ldots + \frac{1}{\sqrt{k}} + \frac{1}{\sqrt{k+1}} &gt; \sqrt{k} + \frac{1}{\sqrt{k+1}}
 \end{equation}</p>
 <p>Теперь надо лишь доказать, что</p>
 <p class="display-math">$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} \overset{\text{?}}{>} \sqrt{k+1} $$</p>
@@ -208,8 +208,8 @@
 <p>Вычитаем из обеих частей $k$ и домножаем их на $k+1$:</p>
 <p class="display-math">$$ 2\sqrt{k(k+1)} + 1 \overset{\text{?}}{>} k + 1 $$</p>
 <p>Вычитаем из обеих частей $1$ и снова возводим в квадрат:</p>
-<p class="display-math">\begin{align*}
-    4k(k+1) &\overset{\text{?}}{>} k \\ 4(k+1) &\overset{\text{?}}{>} 1 \\ k &> \frac{1}{4} - 1
+<p>\begin{align*}
+4k(k+1) &amp;\overset{\text{?}}{&gt;} k \ 4(k+1) &amp;\overset{\text{?}}{&gt;} 1 \ k &amp;&gt; \frac{1}{4} - 1
 \end{align*}</p>
 <p>Последнее выполняется, так как по условию $k \geq 2$. Итак, мы доказали неравенство:</p>
 <p class="display-math">$$ \sqrt{k} + \frac{1}{\sqrt{k+1}} > \sqrt{k+1} $$</p>
@@ -241,10 +241,10 @@ $\blacksquare$</p>
 <p>В левой части вынесем двойку из показателя:</p>
 <p class="display-math">$$ \left( (k+1)^2 \right)^{k+1} \overset{\text{?}}{>} \left( (k+2)k \right)^{k+1} $$</p>
 <p>Из обеих частей возьмем корень $k+1$ степени. Корень можно взять, так как оба выражения положительные:</p>
-<p class="display-math">\begin{align*}
-    (k+1)^2 &\overset{\text{?}}{>} (k+2)k \\
-    k^2 + 2k + 1 &\overset{\text{?}}{>} k^2 + 2k \\
-    1 &> 0
+<p>\begin{align*}
+(k+1)^2 &amp;\overset{\text{?}}{&gt;} (k+2)k \
+k^2 + 2k + 1 &amp;\overset{\text{?}}{&gt;} k^2 + 2k \
+1 &amp;&gt; 0
 \end{align*}</p>
 <p>Итак, мы доказали цепное неравенство:</p>
 <p class="display-math">$$ (k+1)^{k+2} > \frac{(k+2)^{k+1}k^{k+1}}{(k+1)^k} > (k+2)^{k+1} $$</p>
@@ -266,15 +266,15 @@ $\blacksquare$</p>
 <p>Будем работать с левой частью:</p>
 <p class="display-math">$$ \left| \sin{\left(\sum\limits_{k=1}^{m+1} x_k\right)} \right| = \left| \sin{\left(x_{m+1} + \sum\limits_{k=1}^{m} x_k\right)} \right| $$</p>
 <p>Воспольуемся формулой синуса суммы двух углов:</p>
-<p class="display-math">\begin{gather*}
-    \left| \sin{\left(x_{m+1} + \sum\limits_{k=1}^{m} x_k\right)} \right| = \\ = \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
+<p>\begin{gather*}
+\left| \sin{\left(x_{m+1} + \sum\limits_{k=1}^{m} x_k\right)} \right| = \ = \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
 \end{gather*}</p>
 <p>Воспользуемся свойством модуля $|x+y|\leq |x| + |y|$:</p>
-<p class="display-math">\begin{gather*}
-\left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right| \leq \\ \leq \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
+<p>\begin{gather*}
+\left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)} + \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right| \leq \ \leq \left| \sin{(x_{m+1})}\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\cos{(x_{m+1})} \right|
 \end{gather*}</p>
 <p>Применим еще одно свойство модуля $|x\cdot y|=|x|\cdot|y|$:</p>
-<p class="display-math">\begin{gather*}
+<p>\begin{gather*}
 \left| \sin{(x_{m+1})}\right| \cdot \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot \left|\cos{(x_{m+1})} \right|
 \end{gather*}</p>
 <p>Теперь надо избавиться от двух множителей с косинусами:</p>
@@ -282,11 +282,11 @@ $\blacksquare$</p>
 <p>Так как мы берем их модуль, то их значение всегда между $0$ и $1$:</p>
 <p class="display-math">$$ 0\leq\left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right|\leq 1 \qquad 0\leq \left|\cos{(x_{m+1})} \right|\leq 1 $$</p>
 <p>Поэтому, для получения наибольшего значения можно просто вместо них взять $1$:</p>
-<p class="display-math">\begin{gather*}
-\left| \sin{(x_{m+1})}\right| \cdot \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot \left|\cos{(x_{m+1})} \right| \leq \\ \leq \left| \sin{(x_{m+1})}\right| \cdot 1 + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot 1
+<p>\begin{gather*}
+\left| \sin{(x_{m+1})}\right| \cdot \left|\cos{\left( \sum\limits_{k=1}^m x_k \right)}\right| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot \left|\cos{(x_{m+1})} \right| \leq \ \leq \left| \sin{(x_{m+1})}\right| \cdot 1 + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \cdot 1
 \end{gather*}</p>
 <p>Модуль у слагаемого $|\sin{(x_{m+1})}|$ можно убрать, так как по условию $0\leq x_{m+1} \leq \pi$. Ко второму слагаемому можно применить неравенство по предположению индукции:</p>
-<p class="display-math">\begin{gather*}
+<p>\begin{gather*}
 |\sin{(x_{m+1})}| + \left| \sin{\left( \sum\limits_{k=1}^m x_k \right)}\right| \leq \sin{(x_{m+1})} + \sum\limits_{k=1}^m\sin{( x_k)}
 \end{gather*}</p>
 <p>Но</p>
@@ -312,13 +312,13 @@ $\blacksquare$</p>
 <p>Правую часть неравенства, с учетом новой скобки, можно записать так:</p>
 <p class="display-math">$$ 2^{2k}(k!)^2(2k+2)^2 = 2^{2k+2}\left( (k+1)! \right)^2 $$</p>
 <p>Подставим результат обратно в неравенство:</p>
-<p class="display-math">\begin{equation}\label{induction_step_inequality_4} (2k)!(2k+2)^2 < 2^{2k+2}\left( (k+1)! \right)^2
+<p>\begin{equation}\label{induction_step_inequality_4} (2k)!(2k+2)^2 &lt; 2^{2k+2}\left( (k+1)! \right)^2
 \end{equation}</p>
 <p>Докажем, что</p>
-<p class="display-math">\begin{align*}
-    (2k+2)^2 &\overset{\text{?}}{>} (2k+1)(2k+2) \\
-    4k^2 + 8k + 4 &\overset{\text{?}}{>} 4k^2 + 6k + 2 \\
-    2k+2 &> 0
+<p>\begin{align*}
+(2k+2)^2 &amp;\overset{\text{?}}{&gt;} (2k+1)(2k+2) \
+4k^2 + 8k + 4 &amp;\overset{\text{?}}{&gt;} 4k^2 + 6k + 2 \
+2k+2 &amp;&gt; 0
 \end{align*}</p>
 <p>Мы доказали, что</p>
 <p class="display-math">$$ (2k+2)^2 > (2k+1)(2k+2) $$</p>
@@ -363,6 +363,7 @@ $\blacksquare$</p>
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
 
 
             <section class="block-section refs">

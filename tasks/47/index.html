@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>5 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ a^{[n]} &#x3D; a(a-h)\ldots[a - (n-1)h] \text{ и } a^{[0]} &#x3D; 1 $$Доказать, что$$ (a+b)^{[n]} &#x3D; \sum\limits_{m&#x3D;0}^n C^m_n a^{[n-m]}b^{[m]}, $$где $C^m_n$ — число сочетаний из $n$ элементов по $m$. Вывести отсюда формулу &lt;em&gt;бинома Ньютона&lt;&#x2F;em&gt;.">
+        <title>47 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \left( \sqrt{n+1} - \sqrt{n} \right) $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>5</span>
+                    <span>47</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -136,20 +136,15 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Вещественные числа" class="paragraph">
-                            └─ <span class="accent">§1</span>
-                            <span class="title">Вещественные числа</span>
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ a^{[n]} = a(a-h)\ldots[a - (n-1)h] \text{ и } a^{[0]} = 1 $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]}, $$</p>
-<p>где $C^m_n$ — число сочетаний из $n$ элементов по $m$. Вывести отсюда формулу <em>бинома Ньютона</em>.</p>
-
+                        <p class="display-math">$$ \lim_{n\to\infty} \left( \sqrt{n+1} - \sqrt{n} \right) $$</p>
                     </div>
                 </div>
             </section>
@@ -187,67 +182,47 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Сначала разбремся, что вообще такое $a^{[n]}$. Запишем данное в условии определение чуть более понятным образом:</p>
-<p class="display-math">$$ a^{[n]} = (a - 0\cdot h)(a - 1\cdot h)(a-2\cdot h)\cdot\ldots\cdot (a-(n-1)h) $$</p>
-<p>Короче, это просто некоторая операция, похожая на степень. Плюс эта операция зависит от какого-то числа $h$.</p>
-<p>Вот пример выражения $a^{[n]}$ при $h = 3$.</p>
-<p class="display-math">$$ a^{[n]} = a(a - 3)(a-6)\cdot\ldots\cdot (a-(n-1)\cdot 3) $$</p>
-<p>Важный частный случай получаем, когда $h = 0$:</p>
-<p class="display-math">$$ a^{[n]} = a\cdot a\cdot \ldots \cdot a = a^n $$</p>
-<p>То есть, при $h = 0$ выражение $a^{[n]}$ сводится к обычному возведению $a$ в степень $n$.</p>
-<p>Теперь, когда мы разобрались, что из себя представляет $a^{[n]}$ можно приступать к доказательству следующего равенства для всех натуральных $n$:</p>
-<p class="display-math">$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]} $$</p>
-<p>Докажем по методу математической индукции.</p>
-<p><b>База индукции:</b> пусть $ n = 1 $. Тогда:</p>
-<p class="display-math">$$ (a+b)^{[1]} = (a+b) - 0\cdot h = a+b $$</p>
-<p class="display-math">$$ \sum\limits_{m=0}^1 C^m_1 a^{[1-m]}b^{[m]} = C^0_1 a^{[1]}b^{[0]} + C^1_1a^{[0]}b^{[1]} = a + b, $$</p>
-<p>так как $C^0_1 = C^1_1 = 1$ и $a^{[0]} = b^{[0]} = 1$ (по условию). Итак, база индукции выполняется.</p>
-<p><b>Индукционный переход:</b></p>
-<p>Предположим, что равенство выполняется для некоторого натурального $k$:</p>
-<p class="display-math">$$ (a+b)^{[k]} = \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} $$</p>
-<p>Докажем, что тогда равенство выполняется и для $k+1$:</p>
-<p class="display-math">$$ (a+b)^{[k+1]} = \sum\limits_{m = 0}^{k+1} C^m_{k+1} a^{[k+1-m]}b^{[m]} $$</p>
-<p>Рассмотрим левую часть равенства и примем $t = a+b$:</p>
-<p class="display-math">$$ t^{[k+1]} = t(t - h)\cdot \ldots \cdot (t - (k-1)h)(t-kh) $$</p>
-<p>Замечаем, что все множители кроме последнего по определению образуют $t^{[k]}$:</p>
-<p class="display-math">$$ t^{[k+1]} = t^{[k]} \cdot (t-k h) $$</p>
-<p>Возвращаемся от $t$ обратно к $a+b$:</p>
-<p class="display-math">$$ (a+b)^{[k+1]} = (a+b)^{[k]} (a+b - k h) $$</p>
-<p>Исходя из предположения индукционного перехода выше мы можем заменить $(a+b)^{[k]}$ на сумму:</p>
-<p class="display-math">$$ (a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} $$</p>
-<p>Итак, скобка умножается на каждое слагаемое из суммы. Распишем несколько подобных умножений:</p>
-<p>Для первого слагаемого ($m = 0$):</p>
-<p>\begin{gather*}
-(a+b - kh)\cdot \left( C^0_k a^{[k]}b^{[0]} \right) = \[5px] = (a - kh)\cdot \left( C^0_k a^{[k]}b^{[0]} \right) + b\cdot \left( C^0_k a^{[k]}b^{[0]} \right) = \[5px] = C^0_k a^{[k+1]}b^{[0]} + C^0_k a^{[k]}b^{[1]}
-\end{gather*}</p>
-<p>Для второго слагаемого ($m = 1$):</p>
-<p>\begin{gather*}
-(a+b - kh)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) = \[5px] = (a - (k-1)h)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) + (b+h)\cdot \left( C^1_k a^{[k-1]}b^{[1]} \right) = \[5px] = C^1_k a^{[k]}b^{[1]} + C^1_k a^{[k-1]}b^{[2]}
-\end{gather*}</p>
-<p>Для последнего слагаемого ($m = k$):</p>
-<p>\begin{gather*}
-(a+b - kh)\cdot \left( C^k_k a^{[0]}b^{[k]} \right) = \[5px] = a\cdot \left( C^k_k a^{[0]}b^{[k]} \right) + (b-kh)\cdot \left( C^k_k a^{[0]}b^{[k]} \right) = \[5px] = C^k_k a^{[1]}b^{[k]} + C^k_k a^{[0]}b^{[k+1]}
-\end{gather*}</p>
-<p>То есть, для каждого слагаемого мы раскладываем скобку $(a+b-kh)$ так, чтобы увеличить степень $a$ и степень $b$. Соберем все эти слагаемые вместе:</p>
-<p>\begin{gather*}
-(a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k a^{[k-m]}b^{[m]} = \[5px] = C^0_k a^{[k+1]}b^{[0]} + C^0_k a^{[k]}b^{[1]} + C^1_k a^{[k]}b^{[1]} + C^1_k a^{[k-1]}b^{[2]} + \ldots + \[5px] + C^k_k a^{[1]}b^{[k]} + C^k_k a^{[0]}b^{[k+1]} = \[5px] = C^0_ka^{[k+1]}b^{[0]} + a^{[k]}b^{[1]}\left(C^0_k + C^1_k \right) + a^{[k-1]}b^{[2]}\left(C^1_k + C^2_k\right) + \[5px] + \ldots + C^k_k a^{[0]}b^{[k+1]}
-\end{gather*}</p>
-<p>Все слагаемые, кроме первого и последнего, умножаются на скобку с суммой сочетаний. Эти скобки можно схлопнуть с помощью свойства сочетаний:</p>
-<p class="display-math">$$ C^i_k + C^{i+1}_k = C^{i+1}_{k+1} $$</p>
-<p>С множителями $C^0_k$ первого и $C^k_k$ последнего слагаемых можно проделать следующие преобразования:</p>
-<p class="display-math">$$ C^0_k = 1 = C^0_{k+1} \qquad  C^k_k = 1 = C^{k+1}_{k+1} $$</p>
-<p>Получаем итоговую сумму:</p>
-<p>\begin{gather*}
-(a+b)^{[k+1]} = (a+b - k h) \cdot \sum\limits_{m = 0}^k C^m_k = \[5px] = C^0_{k+1}a^{[k+1]}b^{[0]} + C^1_{k+1}a^{[k]}b^{[1]} + \ldots + C^{k+1}<em>{k+1} a^{[0]}b^{[k+1]} = \[5px] = \sum\limits</em>{m=0}^{k+1}C^m_{k+1} a^{[k+1-m]}b^{[m]}
-\end{gather*}</p>
-<p>Индукционный переход доказан.
-$\blacksquare$</p>
-<p>Итак, мы доказали, что для всех натуральных чисел верна формула:</p>
-<p class="display-math">$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]} $$</p>
-<p>В самом начале решения мы установили, что если $h = 0$, то $a^{[n]} = a^n$. Так вот, доказанная формула при $h = 0$ принимает вид:</p>
-<p class="display-math">$$ (a+b)^n = \sum\limits_{m=0}^n C^m_n a^{n-m}b^{m} $$</p>
-<p>А это и есть формула бинома Ньютона.</p>
-
+                        <p>Сначала докажем, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{\sqrt{n}} = 0 $$</p>
+<p>Это легко сделать по определению предела:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{\sqrt{n}} \right| = \frac{1}{\sqrt{n}} < \varepsilon, $$</p>
+<p>Разберемся с неравенством в конце.</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n}} < \varepsilon \Leftrightarrow \frac{1}{n} < \varepsilon^2 \Leftrightarrow n > \frac{1}{\varepsilon^2} $$</p>
+<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\varepsilon^2}$ и тогда требуемое по определению предела неравенства будет выполняться.</p>
+<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
+<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon^2}} $$</p>
+<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\varepsilon^2}$. Из определения &quot;потолка&quot; числа:</p>
+<p class="display-math">$$ \ceil{\frac{1}{\varepsilon^2}} \geq \frac{1}{\varepsilon^2} $$</p>
+<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
+<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\varepsilon^2}} \geq \frac{1}{\varepsilon^2}  $$</p>
+<p class="display-math">$$ n > \frac{1}{\varepsilon^2} $$</p>
+<p>Итак, для любого $\varepsilon &gt; 0$ мы теперь можем найти $N$, такое, что для любого $n &gt; N$ будет выполняться неравенство:</p>
+<p class="display-math">$$ \left| \frac{1}{\sqrt{n}} \right| < \varepsilon $$</p>
+<p>Значит, мы по определению доказали, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{\sqrt{n}} = 0 $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p>Поработаем над данной в условии последовательностью:</p>
+<p class="display-math">$$ \sqrt{n+1} - \sqrt{n} $$</p>
+<p>Домножим ее на такую дробь, чтобы получить разность квадратов:</p>
+<p class="display-math">$$ (\sqrt{n+1} - \sqrt{n})\cdot\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>При этом сама последовательность не меняется, так как в сущности мы домножили ее на $1$.</p>
+<p class="display-math">$$ (\sqrt{n+1} - \sqrt{n})\cdot\frac{\sqrt{n+1} + \sqrt{n}}{\sqrt{n+1} + \sqrt{n}} = \frac{1}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>Итак:</p>
+<p class="display-math">$$ \sqrt{n+1} - \sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} $$</p>
+<p>Теперь докажем следующее неравенство:</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n+1} + \sqrt{n}} \overset{\text{?}}{<} \frac{1}{\sqrt{n}} $$</p>
+<p>Умножаем обе части на $\sqrt{n+1} + \sqrt{n}$:</p>
+<p class="display-math">$$ 1 \overset{\text{?}}{<} \frac{\sqrt{n+1}}{\sqrt{n}} + 1 $$</p>
+<p>Вычитаем из обеих частей $1$ и получаем очевидное неравенство (так как правая часть всегда положительна):</p>
+<p class="display-math">$$ 0 < \frac{\sqrt{n+1}}{\sqrt{n}} $$</p>
+<p>Итак, мы доказали, что:</p>
+<p class="display-math">$$ \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} $$</p>
+<p>Значит, нашу последовательность из условия можно &quot;зажать&quot;:</p>
+<p class="display-math">$$ 0 < \sqrt{n+1}-\sqrt{n} = \frac{1}{\sqrt{n+1} + \sqrt{n}} < \frac{1}{\sqrt{n}} $$</p>
+<p>Предел $0$ при $n\to\infty$ равен $0$. Предел $\frac{1}{\sqrt{n}}$ при $n\to\infty$, как мы доказали в начале, тоже равен $0$.</p>
+<p>По теореме о двух милиционерах это означает, что и наша &quot;зажатая&quot; последовательность тоже стремится к $0$:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \sqrt{n+1} - \sqrt{n} = 0 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -282,35 +257,15 @@ $\blacksquare$</p>
 
 
 
-            <section class="block-section refs">
-                <div class="block-section-header">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Ссылки</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="https://ru.wikipedia.org/wiki/%D0%9C%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F_%D0%B8%D0%BD%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D1%8F" title="Математическая индукция" target="_blank">
-                                    Математическая индукция
-                                </a>
-                            </dt>
-                            <dd>Статья на Википедии</dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
             <section class="nav">
-                    <a href="../../tasks/6/" title="Следующая задача" class="next">
-                        <span class="label">6</span>
+                    <a href="../../tasks/48/" title="Следующая задача" class="next">
+                        <span class="label">48</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/4/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/46/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">4</span>
+                        <span class="label">46</span>
                     </a>
             </section>
         </section>

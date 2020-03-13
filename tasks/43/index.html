@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>42 | Демидович. Решения</title>
-        <meta name="description" content="Доказать, что $x_n \ (n &#x3D; 1,2,\ldots)$ есть *бесконечно малая* (т.е. имеет предел, равный $0$), указав для всякого $\varepsilon &gt; 0$ число $N &#x3D; N(\varepsilon)$, такое, что $|x_n| &lt; \varepsilon$ при $n &gt; N$, если:\begin{array}{ll}    \text{а) } x_n &#x3D; \frac{(-1)^{n+1}}{n}; &amp;&amp;&amp; \text{б) } x_n &#x3D; \frac{2n}{n^3 + 1};    \\    \text{в) } x_n &#x3D; \frac{1}{n!}; &amp;&amp;&amp; \text{г) } x_n &#x3D; (-1)^n\cdot0.999^n.\end{ar">
+        <title>43 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что *последовательности* :$$ \text{а) } x_n &#x3D; (-1)^nn, \qquad \text{б) } x_n &#x3D; 2^{\sqrt{n}}, \qquad \text{в) } x_n &#x3D; \lg(\lg n) \ (n\geq 2) $$имеют бесконечный предел при $n\to\infty$ (т.е. являются *бесконечно большими*), определив для всякого $E &gt; 0$ число $N &#x3D; N(E)$ такое,что $|x_n|&gt;E$ при $n&gt;N$.Для каждого из этих случаев заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline E &amp;">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>42</span>
+                    <span>43</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -144,14 +144,12 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Доказать, что $x_n \ (n = 1,2,\ldots)$ есть <em>бесконечно малая</em> (т.е. имеет предел, равный $0$), указав для всякого $\varepsilon &gt; 0$ число $N = N(\varepsilon)$, такое, что $|x_n| &lt; \varepsilon$ при $n &gt; N$, если:
-\begin{array}{ll}
-\text{а) } x_n = \frac{(-1)^{n+1}}{n}; &amp;&amp;&amp; \text{б) } x_n = \frac{2n}{n^3 + 1};
-\
-\text{в) } x_n = \frac{1}{n!}; &amp;&amp;&amp; \text{г) } x_n = (-1)^n\cdot0.999^n.
-\end{array}</p>
+                        <p>Доказать, что <em>последовательности</em> :</p>
+<p class="display-math">$$ \text{а) } x_n = (-1)^nn, \qquad \text{б) } x_n = 2^{\sqrt{n}}, \qquad \text{в) } x_n = \lg(\lg n) \ (n\geq 2) $$</p>
+<p>имеют бесконечный предел при $n\to\infty$ (т.е. являются <em>бесконечно большими</em>), определив для всякого $E &gt; 0$ число $N = N(E)$ такое,
+что $|x_n|&gt;E$ при $n&gt;N$.</p>
 <p>Для каждого из этих случаев заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  \\ \hline  \end{array} $$</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline E & 10 & 100 & 1000 & 10 000 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
                     </div>
                 </div>
             </section>
@@ -189,111 +187,81 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n| < \varepsilon $$</p>
+                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ E &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
+<p class="display-math">$$ |x_n| > E $$</p>
 <hr>
 <p><strong>а)</strong></p>
-<p class="display-math">$$ \left| x_n = \frac{(-1)^{n+1}}{n} \right| < \varepsilon $$</p>
+<p class="display-math">$$ \left| x_n = (-1)^n n \right| > E $$</p>
 <p>Воспользуемся следующим свойством модуля для упрощения выражения выше:</p>
 <p class="display-math">$$ |a\cdot b| = |a||b| $$</p>
-<p class="display-math">$$ \left| \frac{(-1)^{n+1}}{n} \right| = \frac{|(-1)^{n+1}| = |-1||-1|\ldots = 1}{n} = \frac{1}{n} $$</p>
-<p>Итак, изначальное неравенство сводится к следующему:</p>
-<p class="display-math">$$ \frac{1}{n} < \varepsilon \Leftrightarrow n > \frac{1}{\varepsilon} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\varepsilon}$ и тогда требуемое по условию неравенство выше будет выполняться.</p>
+<p class="display-math">$$ \left| (-1)^n n \right| = \left| (-1)^n \right| n $$</p>
+<p>Левый множитель можно разложить по тому же свойству: $ |(-1)^n| = |-1||-1|\ldots = 1 $:</p>
+<p class="display-math">$$ \left| (-1)^n \right| n = n $$</p>
+<p>Значит, неравенство в условии превращается в элементарное:</p>
+<p class="display-math">$$ n > E $$</p>
+<p>Какое бы $E &gt; 0$ мы не взяли, нам достаточно взять любое число, большее его самого и тогда требуемое по условию неравенство выше будет выполняться.</p>
 <p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\varepsilon}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{1}{\varepsilon} \leq \ceil{\frac{1}{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
-<p>Итак, мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по условию неравенству выше.</p>
+<p class="display-math">$$ N(E) = \ceil{E} $$</p>
+<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $E$. Из определения &quot;потолка&quot; числа:</p>
+<p class="display-math">$$ E \leq \ceil{E} $$</p>
+<p>Так как в условии у нас $n &gt; N(E)$, то следующее натуральное число после $N(E)$ будет $N(E) + 1$:</p>
+<p class="display-math">$$ n \geq N(E) + 1 > N(E) = \ceil{E} \geq E  $$</p>
+<p class="display-math">$$ n > E $$</p>
+<p>Итак, мы показали, что любые натуральные $ n &gt; N(E) $ удовлетворяют требуемому по условию неравенству выше.</p>
 <p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{1}{0.1}} = \ceil{1} = 10 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{1}{0.001}} = \ceil{1000} = 1000 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{1}{0.0001}} = \ceil{10000} = 10000 $$</p>
+<p class="display-math">$$ N(10) = \ceil{10} = 10 $$</p>
+<p class="display-math">$$ N(100) = \ceil{100} = 100 $$</p>
+<p class="display-math">$$ N(1000) = \ceil{1000} = 1000 $$</p>
+<p class="display-math">$$ N(10 000) = \ceil{10 000} = 10 000 $$</p>
 <p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 10 & 1000 & 10000 &  \\ \hline  \end{array} $$</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline E & 10 & 100 & 1000 & 10 000 & \ldots \\ \hline N & 10 & 100 & 1000 & 10 000 &  \\ \hline  \end{array} $$</p>
 <hr>
 <p><strong>б)</strong></p>
-<p class="display-math">$$ \left| x_n = \frac{2n}{n^3 + 1} \right| < \varepsilon $$</p>
-<p>Модуль можно сразу снять, так как под модулем всегда положительное число:</p>
-<p class="display-math">$$ x_n = \frac{2n}{n^3 + 1} < \varepsilon $$</p>
-<p>Докажем следующее неравенство:</p>
-<p class="display-math">$$ \frac{2n}{n^3 + 1} \overset{\text{?}}{\leq} \frac{2n+2}{n^2 + 2n + 1} $$</p>
-<p>Знаменатель левой части представим в виде $n^3 + 1^3$ и по формуле суммы кубов. В числителе правой части вынесем $2$ за скобки и сократим на $n+1$:</p>
-<p class="display-math">$$ \frac{2n}{(n+1)(n^2-n+1)} \overset{\text{?}}{\leq} \frac{2(n+1)}{(n+1)^2} = \frac{2}{n+1} $$</p>
-<p>Сократим на $2$ и домножим на $n+1$:</p>
-<p class="display-math">$$ \frac{n}{n^2 - n + 1} \overset{\text{?}}{\leq} 1 $$</p>
-<p class="display-math">$$ 0 \overset{\text{?}}{\leq} n^2 - 2n + 1 = (n-1)^2 $$</p>
-<p>Очевидно, что для любого натурального $n$:</p>
-<p class="display-math">$$ 0 \leq (n-1)^2 $$</p>
-<p>Итак, мы доказали, что для любого натурального $n$:</p>
-<p class="display-math">$$ \frac{2n}{n^3 + 1} \leq \frac{2n+2}{n^2 + 2n + 1} = \frac{2}{n+1} $$</p>
-<p>Если мы найдем $N$ такое, что для любого $n &gt; N$:</p>
-<p class="display-math">$$ \frac{2}{n+1} < \varepsilon, $$</p>
-то автоматом (по доказанному выше неравенству) будет верно и
-<p class="display-math">$$ \frac{2n}{n^3 + 1} \leq \frac{2}{n+1} < \varepsilon $$</p>
-<p>Итак, выразим $n$ из неравенства:</p>
-<p class="display-math">$$ \frac{2}{n+1} < \varepsilon $$</p>
-<p class="display-math">$$ n > \frac{2 - \varepsilon}{\varepsilon} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{2 - \varepsilon}{\varepsilon}$ и тогда требуемое по условию неравенство выше будет выполняться.</p>
+<p class="display-math">$$ \left| x_n = 2^{\sqrt{n}} \right| > E $$</p>
+<p>От модуля можно избавиться, так как выражение внутри него всегда положительное:</p>
+<p class="display-math">$$ 2^{\sqrt{n}} > E $$</p>
+<p>Прологарифмируем это неравенство по основанию $2$:</p>
+<p class="display-math">$$ \sqrt{n} > \log_{2} E $$</p>
+<p>Возведем обе части в квадрат:</p>
+<p class="display-math">$$ n > \left( \log_{2} E \right)^2 $$</p>
+<p>Какое бы $E &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\left( \log_{2} E \right)^2$ и тогда требуемое по условию неравенство выше будет выполняться.</p>
 <p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{2 - \varepsilon}{\varepsilon}} $$</p>
-<p>Проверка того, что любое натуральное $n &gt; N(\varepsilon)$ действительно будет удовлетворять неравенству в условии выполняется так же, как в пункте <strong>а)</strong>.</p>
+<p class="display-math">$$ N(E) = \ceil{\left( \log_{2} E \right)^2} $$</p>
+<p>Проверка того, что любое натуральное $n &gt; N(E)$ действительно будет удовлетворять неравенству в условии выполняется так же, как в пункте <strong>а)</strong>.</p>
 <p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{2 - 0.1}{0.1}} = \ceil{\frac{1.9}{0.1}} = 19 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{2 - 0.001}{0.001}} = \ceil{\frac{1.999}{0.001}} = 1999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{2 - 0.0001}{0.0001}} = \ceil{\frac{1.9999}{0.0001}} = 19999 $$</p>
+<p class="display-math">$$ N(10) = \ceil{\left( \log_{2} 10 \right)^2} = \ceil{11.03\ldots} = 12 $$</p>
+<p class="display-math">$$ N(100) = \ceil{\left( \log_{2} 100 \right)^2} = \ceil{44.14\ldots} = 45 $$</p>
+<p class="display-math">$$ N(1000) = \ceil{\left( \log_{2} 1000 \right)^2} = \ceil{99.31\ldots} = 100 $$</p>
+<p class="display-math">$$ N(10 000) = \ceil{\left( \log_{2} 10 000 \right)^2} = \ceil{176.56\ldots} = 177 $$</p>
 <p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 19 & 1999 & 19999 &  \\ \hline  \end{array} $$</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline E & 10 & 100 & 1000 & 10 000 & \ldots \\ \hline N & 12 & 45 & 100 & 177 &  \\ \hline  \end{array} $$</p>
 <hr>
 <p><strong>в)</strong></p>
-<p class="display-math">$$ \left| x_n = \frac{1}{n!} \right| < \varepsilon $$</p>
-<p>Докажем следующее неравенство:</p>
-<p class="display-math">$$ \frac{1}{n!} \overset{\text{?}}{\leq} \frac{1}{n} $$</p>
-<p>Обе части умножаем на $n!\cdot n$:</p>
-<p class="display-math">$$ n \overset{\text{?}}{\leq} n! $$</p>
-<p>Если $n=1$, то получаем равенство.</p>
-<p>Делим обе части на $n$:</p>
-<p class="display-math">$$ 1 \overset{\text{?}}{\leq} (n-1)! $$</p>
-<p>Если $n&gt;1$, то при $n=2$ снова получаем равенство, а далее $(n-1)!$ будет строго больше $1$.</p>
-<p>Итак, мы показали, что:</p>
-<p class="display-math">$$ \frac{1}{n!} \leq \frac{1}{n} $$</p>
-<p>Если мы найдем $N$ такое, что для любого $n &gt; N$:</p>
-<p class="display-math">$$ \frac{1}{n} < \varepsilon, $$</p>
-то автоматом (по доказанному выше неравенству) будет верно и
-<p class="display-math">$$ \frac{1}{n!} \leq \frac{1}{n} < \varepsilon $$</p>
-<p>Но случай $\frac{1}{n} &lt; \varepsilon$ уже рассматривался в пункте а).</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$</p>
-<p>Таблица, соответственно, такая же.</p>
-<hr>
-<p><strong>г)</strong></p>
-<p class="display-math">$$ \left| x_n = (-1)^n\cdot 0.999^n \right| < \varepsilon $$</p>
-<p>Воспользуемся следующим свойством модуля для упрощения выражения выше:</p>
-<p class="display-math">$$ |a\cdot b| = |a||b| $$</p>
-<p class="display-math">$$ \left| (-1)^n\cdot 0.999^n \right| = |(-1)^n|\cdot 0.999^n $$</p>
-<p>Левый множитель можно разложить по тому же свойству: $ |(-1)^n| = |-1||-1|\ldots = 1 $:</p>
-<p class="display-math">$$ \left| (-1)^n\right|\cdot 0.999^n = 0.999^n $$</p>
-<p>Значит, неравенство в условии превращается в такое:</p>
-<p class="display-math">$$ 0.999^n < \varepsilon $$</p>
-<p>Прологарифмируем это неравенство по основанию $0.999$:</p>
-<p class="display-math">$$ n > \log_{0.999}\varepsilon $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\log_{0.999}\varepsilon$ и тогда требуемое по условию неравенство выше будет выполняться.</p>
+<p class="display-math">$$ |x_n = \lg(\lg n)| > E $$</p>
+<p>Воспользуемся свойством модуля:</p>
+<p class="display-math">$$ |a| \geq a $$</p>
+<p>Применяем его и получаем следующее цепное неравенство:</p>
+<p class="display-math">$$ |\lg(\lg n)| \geq \lg(\lg n) > E $$</p>
+<p>Если мы сможем найти формулу для $n$, чтобы выполнялось неравенство:</p>
+<p class="display-math">$$ \lg(\lg n) > E, $$</p>
+то тем более (согласно цепному неравенству) будет выполняться и
+<p class="display-math">$$ |\lg(\lg n)| > E $$</p> 
+<p>Итак, работаем с</p>
+<p class="display-math">$$ \lg(\lg n) > E $$</p>
+<p>Преобразуем это неравенство:</p>
+<p class="display-math">$$ \lg(\lg n) > E \Leftrightarrow 10^{\lg(\lg n)} > 10^E \Leftrightarrow \lg n > 10^E $$</p>
+<p class="display-math">$$ \lg n > 10^E \Leftrightarrow 10^{\lg n} > 10^{10^E} \Leftrightarrow n > 10^{10^E} $$</p>
+<p>Какое бы $E &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $10^{10^E}$ и тогда неравенство $ \lg(\lg n) &gt; E $ будет выполняться, а значит будет выполняться и $ |\lg(\lg n)| &gt; E $.</p>
 <p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\left|\log_{0.999}\varepsilon\right|} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\left|\log_{0.999}\varepsilon\right|$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \left|\log_{0.999}\varepsilon\right| \leq \ceil{\left|\log_{0.999}\varepsilon\right|} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\left|\log_{0.999}\varepsilon\right|} \geq \left|\log_{0.999}\varepsilon\right| \geq \log_{0.999}\varepsilon  $$</p>
-<p class="display-math">$$ n > \log_{0.999}\varepsilon $$</p>
-<p>Итак, мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по условию неравенству выше.</p>
+<p class="display-math">$$ N(E) = \ceil{10^{10^E}} $$</p>
+<p>Проверка того, что любое натуральное $n &gt; N(E)$ действительно будет удовлетворять неравенству в условии выполняется так же, как в пункте <strong>а)</strong>.</p>
 <p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\left|\log_{0.999}0.1\right|} = \ceil{|2301.43\ldots|} = 2302 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\left|\log_{0.999}0.001\right|} = \ceil{|6904.3\ldots|} = 6905 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\left|\log_{0.999}0.0001\right|} = \ceil{|9205.7\ldots|} = 9206 $$</p>
+<p class="display-math">$$ N(10) = \ceil{10^{10^{10}}} = 10^{10^{10}} $$</p>
+<p class="display-math">$$ N(100) = \ceil{10^{10^{100}}} = 10^{10^{100}} $$</p>
+<p class="display-math">$$ N(1000) = \ceil{10^{10^{1000}}} = 10^{10^{1000}} $$</p>
+<p class="display-math">$$ N(10 000) = \ceil{10^{10^{10 000}}} = 10^{10^{10 000}} $$</p>
 <p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N & 2302 & 6905 & 9206 &  \\ \hline  \end{array} $$</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline E & 10 & 100 & 1000 & 10 000 & \ldots \\ \hline N & 10^{10^{10}} & 10^{10^{100}} & 10^{10^{1000}} & 10^{10^{10 000}} &  \\ \hline  \end{array} $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -329,14 +297,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/43/" title="Следующая задача" class="next">
-                        <span class="label">43</span>
+                    <a href="../../tasks/44/" title="Следующая задача" class="next">
+                        <span class="label">44</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/41/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/42/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">41</span>
+                        <span class="label">42</span>
                     </a>
             </section>
         </section>
