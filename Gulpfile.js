@@ -93,7 +93,7 @@ task('clear', done =>
 
 task('watch', () =>
 {
-    watch('src/**/*', series('build_look'));
+    watch(['src/**/*', 'tasks/**/*', 'proto-tasks/**/*'], series('build_look'));
 });
 
 // Global tasks

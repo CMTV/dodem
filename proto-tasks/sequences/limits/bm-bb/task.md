@@ -1,0 +1,1 @@
+Если $\alpha_n \to 0$, то $\frac{1}{\alpha_n} \to \infty$, и наоборот, если $A_n\to\infty$, то $\frac{1}{A_n}\to 0$.
