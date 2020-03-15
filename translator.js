@@ -17,7 +17,7 @@ const TRANSLATORS =
     {
         let out = '';
 
-        out = text.replace(/((\$\$[\s\S]*?\$\$)|(^\\begin{.*?}$[\s\S]*?^\\end{.*?}$)|(^\\begin{.*?}[\s\S]*?\\end{.*?}$))/g, (match) =>
+        out = text.replace(/((\$\$[\s\S]*?\$\$)|(^\\begin{.*?}$[\s\S]*?^\\end{.*?}$)|(^\\begin{.*?}[\s\S]*?\\end{.*?}$))/gm, (match) =>
         {
             return `<p class="display-math">${match}</p>`;
         });

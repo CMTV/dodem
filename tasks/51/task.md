@@ -1,0 +1,1 @@
+$$ \lim_{n\to\infty} \left( \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} \right) $$

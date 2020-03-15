@@ -1,0 +1,1 @@
+$$ \lim_{n\to\infty} \frac{1 + a + a^2 + \ldots + a^n}{1 + b + b^2 + \ldots + b^n} \ (|a| < 1, |b| < 1) $$
