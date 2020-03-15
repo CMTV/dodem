@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>41 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ x_n &#x3D; \frac{n}{n+1} \ (n &#x3D; 1, 2, \ldots). $$Доказать, что$$ \lim\limits_{n\to\infty} x_n &#x3D; 1, $$определив для каждого $ \varepsilon &gt; 0 $ число $ N &#x3D; N(\varepsilon) $ такое, что$$ |x_n - 1| &lt; \varepsilon \text{, если } n &gt; N. $$Заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline \varepsilon &amp; 0.1 &amp; 0.01 &amp; 0.001 &amp; 0.0001 &amp; \ldots \\ \hline N &amp;  &amp;  &amp;  &amp;  &amp;  \\ \hline  \end{array} $$">
+        <title>50 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \frac{1 + a + a^2 + \ldots + a^n}{1 + b + b^2 + \ldots + b^n} \ (|a| &lt; 1, |b| &lt; 1) $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>41</span>
+                    <span>50</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -144,14 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
-<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
-<p>Заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        <p class="display-math">$$ \lim_{n\to\infty} \frac{1 + a + a^2 + \ldots + a^n}{1 + b + b^2 + \ldots + b^n} \ (|a| < 1, |b| < 1) $$</p>
                     </div>
                 </div>
             </section>
@@ -189,46 +182,20 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon $$</p>
-<p>Заменим $x_n$ на соответствующую формулу для $n$-го члена последовательности:</p>
-<p class="display-math">$$ \left| \frac{n}{n+1} - 1 \right| < \varepsilon $$</p>
-<p>Разберемся с модулем. Для этого докажем, выражение внутри модуля всегда меньше $0$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 \overset{\text{?}}{<} 0 \qquad n \overset{\text{?}}{<} n + 1 \qquad 0 < 1  $$</p>
-<p>Раз внутри модуля всегда отрицательное число, раскрываем модуль со знаком минус:</p>
-<p class="display-math">\begin{equation}\label{to-prove}
-    -\left(\frac{n}{n+1} - 1\right) < \varepsilon
-\end{equation}</p>
-<p>Домножаем обе части на $-1$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 > -\varepsilon $$</p>
-<p>Прибавляем по единицы с обеих сторон и умножаем обе части на $n+1$:</p>
-<p class="display-math">$$ n > (1 - \varepsilon)(n+1) $$</p>
-<p>Умножаем скобки друг на друга в правой части:</p>
-<p class="display-math">$$ n > n - n\varepsilon + 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $n$:</p>
-<p class="display-math">$$ 0 > -n\varepsilon + 1 - \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Все проводимые нами преобразования были эквивалентными. Это означает, что какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1-\varepsilon}{\varepsilon}$ и тогда требуемое неравенство \eqref{to-prove} будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Покажем, что любое натуральное $ n &gt; N(\varepsilon) $ будет больше $\frac{1-\varepsilon}{\varepsilon}$.</p>
-<p>Если $\varepsilon &gt; 1$, то дробь $\frac{1-\varepsilon}{\varepsilon}$ будет отрицательной, а значит нам подойдет любое натуральное число, в том числе и то, которое мы получим по формуле $N(\varepsilon)$.</p>
-<p>Если $\varepsilon = 1$, то $N(\varepsilon) = 0$, а значит любое натуральное $n &gt; N(\varepsilon)$ нам подойдет.</p>
-<p>Если $\varepsilon &lt; 1$, то мы получим округление сверху (&quot;потолок&quot;) числа $\frac{1-\varepsilon}{\varepsilon}$. По определению &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{|1-\varepsilon|}{\varepsilon} \leq \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} \geq \frac{|1-\varepsilon|}{\varepsilon} \geq \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Итак, мы показали, что при любых $\varepsilon &gt; 0$ мы всегда найдем такое $N(\varepsilon)$, что для любого $n&gt;N(\varepsilon)$ будет выполняться неравенство \eqref{to-prove}.</p>
+                        <p>Рассмотрим формулу суммы $n$ первых членов геометрической прогрессии:</p>
+<p class="display-math">$$ S_n = \frac{b_1\left( q^n - 1 \right)}{q-1} $$</p>
+<p>Найдем предел этой суммы в случае, когда $|q| &lt; 1$:</p>
+<p class="display-math">\begin{gather*}
+    \lim_{n\to\infty} S_n = \frac{b_1}{q-1} \cdot \lim_{n\to\infty} q^n - 1 = \frac{b_1}{q-1} \cdot \left(\left( \lim_{n\to\infty} q^n \right)  - 1\right) = \\
+    = \frac{b_1}{q-1} \cdot \left(0 - 1\right) = \frac{b_1}{1-q}
+\end{gather*}</p>
+<p>Выше использовался факт, что $q^n \to 0$, так как это геометрическая прогрессия, у которой модуль знаменателя меньше $1$. Такие геометрические прогрессии являются бесконечно малыми (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
 <hr>
-<p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{|1-0.1|}{0.1}} = \ceil{\frac{0.9}{0.1}} = 9 $$</p>
-<p class="display-math">$$ N(0.01) = \ceil{\frac{|1-0.01|}{0.01}} = \ceil{\frac{0.99}{0.01}} = 99 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{|1-0.001|}{0.001}} = \ceil{\frac{0.999}{0.001}} = 999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{|1-0.0001|}{0.0001}} = \ceil{\frac{0.9999}{0.0001}} = 9999 $$</p>
-<p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$</p>
+<p>В числителе и знаменателе последовательности из условия имеем как раз сумму геометрической прогрессии с первым членом, равным $1$:</p>
+<p class="display-math">\begin{gather*}
+    \lim_{n\to\infty} \frac{1 + a + a^2 + \ldots + a^n}{1 + b + b^2 + \ldots + b^n} = \frac{\lim\limits_{n\to\infty} 1 + a + a^2 + \ldots + a^n}{\lim\limits_{n\to\infty} 1 + b + b^2 + \ldots + b^n} = \\
+    = \frac{ \frac{1}{1-a} }{ \frac{1}{1-b} } = \frac{1-b}{1-a}
+\end{gather*}</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -262,16 +229,36 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
+                                    Предел геометрической прогрессии
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
-                    <a href="../../tasks/42/" title="Следующая задача" class="next">
-                        <span class="label">42</span>
+                    <a href="../../tasks/51/" title="Следующая задача" class="next">
+                        <span class="label">51</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/12/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/49/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">12</span>
+                        <span class="label">49</span>
                     </a>
             </section>
         </section>

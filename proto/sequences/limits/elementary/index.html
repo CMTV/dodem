@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../favicon.png" type="image/png">
-        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../../favicon.png" type="image/png">
+        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
 
-        <title>41 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ x_n &#x3D; \frac{n}{n+1} \ (n &#x3D; 1, 2, \ldots). $$Доказать, что$$ \lim\limits_{n\to\infty} x_n &#x3D; 1, $$определив для каждого $ \varepsilon &gt; 0 $ число $ N &#x3D; N(\varepsilon) $ такое, что$$ |x_n - 1| &lt; \varepsilon \text{, если } n &gt; N. $$Заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline \varepsilon &amp; 0.1 &amp; 0.01 &amp; 0.001 &amp; 0.0001 &amp; \ldots \\ \hline N &amp;  &amp;  &amp;  &amp;  &amp;  \\ \hline  \end{array} $$">
+        <title>Элементарные пределы последовательностей | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -28,21 +28,21 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../';
+            var SITE_ROOT = '../../../../';
         </script>
 
-        <script src="../../scripts/toc.js"></script>
-        <script src="../../scripts/hash.js"></script>
-        <script src="../../scripts/location.js"></script>
-        <script src="../../scripts/search.js"></script>
+        <script src="../../../../scripts/toc.js"></script>
+        <script src="../../../../scripts/hash.js"></script>
+        <script src="../../../../scripts/location.js"></script>
+        <script src="../../../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -60,16 +60,16 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../scripts/dark-magic.js"></script>
-        <script src="../../scripts/show-hide.js"></script>
+        <script src="../../../../scripts/dark-magic.js"></script>
+        <script src="../../../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-task">
+    <body class="page-proto-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../scripts/progress-bar.js"></script>
+        <script src="../../../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -97,7 +97,7 @@
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -125,37 +125,27 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header">
-                    <i class="fas fa-hashtag"></i>
-                    <span>41</span>
+                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задача</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        <div title="Введение в анализ" class="section">
-                            <span class="accent">I</span>
-                            <span class="title">Введение в анализ</span>
-                        </div>
-
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
-                        </div>
-
-                        <div class="overlay"></div>
+                        Элементарные пределы последовательностей
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
-<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
-<p>Заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        <ol>
+<li>если $a &gt; 0$, то</li>
+</ol>
+<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
+<hr>
+<ol start="2">
+<li></li>
+</ol>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{n+1}{n} = \lim_{n\to\infty} \frac{n-1}{n} = 1 $$</p>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -169,13 +159,12 @@
                 </script>
             </div>
 
-
-            <section class="block-section solution  single  _hidden">
-                <div class="block-section-actions">
+            <section class="block-section solution single">
+                <!--<div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -183,71 +172,41 @@
                 </div>
                 
                 <div class="block-section-container">
-                    
-                    <div class="reason">
-                        
-                    </div>
-
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon $$</p>
-<p>Заменим $x_n$ на соответствующую формулу для $n$-го члена последовательности:</p>
-<p class="display-math">$$ \left| \frac{n}{n+1} - 1 \right| < \varepsilon $$</p>
-<p>Разберемся с модулем. Для этого докажем, выражение внутри модуля всегда меньше $0$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 \overset{\text{?}}{<} 0 \qquad n \overset{\text{?}}{<} n + 1 \qquad 0 < 1  $$</p>
-<p>Раз внутри модуля всегда отрицательное число, раскрываем модуль со знаком минус:</p>
-<p class="display-math">\begin{equation}\label{to-prove}
-    -\left(\frac{n}{n+1} - 1\right) < \varepsilon
-\end{equation}</p>
-<p>Домножаем обе части на $-1$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 > -\varepsilon $$</p>
-<p>Прибавляем по единицы с обеих сторон и умножаем обе части на $n+1$:</p>
-<p class="display-math">$$ n > (1 - \varepsilon)(n+1) $$</p>
-<p>Умножаем скобки друг на друга в правой части:</p>
-<p class="display-math">$$ n > n - n\varepsilon + 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $n$:</p>
-<p class="display-math">$$ 0 > -n\varepsilon + 1 - \varepsilon $$</p>
+                        <p><strong>1)</strong></p>
+<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
+<p>Распишем по определению:</p>
+<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 \Leftrightarrow \forall\varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{n^a} \right| <\varepsilon $$</p>
+<p>В последнем неравенстве можно избавиться от модуля, так как выражение под ним всегда положительное:</p>
+<p class="display-math">$$ \frac{1}{n^a} < \varepsilon $$</p>
 <p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Все проводимые нами преобразования были эквивалентными. Это означает, что какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1-\varepsilon}{\varepsilon}$ и тогда требуемое неравенство \eqref{to-prove} будет выполняться.</p>
+<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
+<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\sqrt[a]{\varepsilon}}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
 <p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Покажем, что любое натуральное $ n &gt; N(\varepsilon) $ будет больше $\frac{1-\varepsilon}{\varepsilon}$.</p>
-<p>Если $\varepsilon &gt; 1$, то дробь $\frac{1-\varepsilon}{\varepsilon}$ будет отрицательной, а значит нам подойдет любое натуральное число, в том числе и то, которое мы получим по формуле $N(\varepsilon)$.</p>
-<p>Если $\varepsilon = 1$, то $N(\varepsilon) = 0$, а значит любое натуральное $n &gt; N(\varepsilon)$ нам подойдет.</p>
-<p>Если $\varepsilon &lt; 1$, то мы получим округление сверху (&quot;потолок&quot;) числа $\frac{1-\varepsilon}{\varepsilon}$. По определению &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{|1-\varepsilon|}{\varepsilon} \leq \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
+<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} $$</p>
+<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\sqrt[a]{\varepsilon}}$. Из определения &quot;потолка&quot; числа:</p>
+<p class="display-math">$$ \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
 <p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} \geq \frac{|1-\varepsilon|}{\varepsilon} \geq \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Итак, мы показали, что при любых $\varepsilon &gt; 0$ мы всегда найдем такое $N(\varepsilon)$, что для любого $n&gt;N(\varepsilon)$ будет выполняться неравенство \eqref{to-prove}.</p>
+<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}}  $$</p>
+<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
+<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению предела неравенству выше.
+Итак, доказали, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
+<p>$\blacksquare$</p>
 <hr>
-<p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{|1-0.1|}{0.1}} = \ceil{\frac{0.9}{0.1}} = 9 $$</p>
-<p class="display-math">$$ N(0.01) = \ceil{\frac{|1-0.01|}{0.01}} = \ceil{\frac{0.99}{0.01}} = 99 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{|1-0.001|}{0.001}} = \ceil{\frac{0.999}{0.001}} = 999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{|1-0.0001|}{0.0001}} = \ceil{\frac{0.9999}{0.0001}} = 9999 $$</p>
-<p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$</p>
+<p><strong>2)</strong></p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{n+1}{n} = \lim_{n\to\infty} 1 + \frac{1}{n} = 1 + \lim_{n\to\infty} \frac{1}{n} = 1 + 0 = 1 $$</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{n-1}{n} = \lim_{n\to\infty} 1 - \frac{1}{n} = 1 - \lim_{n\to\infty} \frac{1}{n} = 1 - 0 = 1 $$</p>
+<p>Последовательность $\frac{1}{n} \to 0$, так как это частный случай последовательности $\frac{1}{n^a}$ при $a = 1$. А последовательность $\frac{1}{n^a}\to 0$, как мы показали в пункте <strong>1</strong>.</p>
+<p>$\blacksquare$</p>
+
                     </div>
 
                     <div class="reason-overlay">
-                        
-
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
-                    </div>
-
-                    <div class="solver">
-                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
-                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
-
-
-                            <span class="solver-name">Петр Радько</span>
-                        </a>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -261,19 +220,6 @@
                 </script>
             </div>
 
-
-
-            <section class="nav">
-                    <a href="../../tasks/42/" title="Следующая задача" class="next">
-                        <span class="label">42</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-                    <a href="../../tasks/12/" title="Предыдущая задача" class="prev">
-                        <i class="fas fa-arrow-left"></i>
-                        <span class="label">12</span>
-                    </a>
-            </section>
         </section>
 
         <footer>
