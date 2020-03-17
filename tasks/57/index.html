@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>55 | Демидович. Решения</title>
-        <meta name="description" content="$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$">
+        <title>57 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \left( \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} \right) $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>55</span>
+                    <span>57</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -144,7 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$</p>
+                        <p class="display-math">$$ \lim_{n\to\infty} \left( \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} \right) $$</p>
                     </div>
                 </div>
             </section>
@@ -182,56 +182,27 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Сначала поработаем с самой суммой:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} $$</p>
-<p>Разложим ее так, чтобы у каждого члена в числителе была $1$ и представим в виде таблицы:</p>
-<p class="display-math">\begin{array}{ccccc}
-    \frac{1}{2} & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 &                 &          &   \vdots
-    \\
-                &                 &                 &          & + \frac{1}{2^n}
-    \\
-    \hline
-    \frac{1}{2} & + \frac{3}{2^2} & + \frac{5}{2^3} & + \ldots & + \frac{2n-1}{2^n}
-\end{array}</p>
-<p>В первой строчке таблицы воспользуемся формулой суммы первых $n$ членов геометрической прогрессии со знаменателем $\frac{1}{2}$ и первым членом, равным $\frac{1}{2}$:</p>
-<p class="display-math">$$ \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^3 + \ldots + \left(\frac{1}{2}\right)^n = \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^n - 1\right)}{\frac{1}{2} - 1} = 1 - \frac{1}{2^n} $$</p>
-<p>Во второй строчке таблицы выносим за скобки $\frac{1}{2}$ и вновь используем формулу суммы первых $n-1$ членой геометрической прогрессии:</p>
+                        <p>Рассмотрим цепочку произведений из условия:</p>
+<p class="display-math">$$ \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} $$</p>
+<p>Представим корни в виде рациональной степени:</p>
+<p class="display-math">$$ 2^{\frac{1}{2}}2^{\frac{1}{4}}2^{\frac{1}{8}}\ldots 2^{\frac{1}{2n}} $$</p>
+<p>Воспользуемся свойством степеней:</p>
+<p class="display-math">$$ a^d\cdot a^t = a^{d + t} $$</p>
+<p class="display-math">$$ 2^{\frac{1}{2}}2^{\frac{1}{4}}2^{\frac{1}{8}}\ldots 2^{\frac{1}{2n}} = 2^{ \frac{1}{2} + \frac{1}{4} +\frac{1}{8} + \ldots + \frac{1}{2n} } $$</p>
+<p>Рассмотрим сумму дробей в показателе:</p>
+<p class="display-math">$$ \frac{1}{2} + \frac{1}{4} +\frac{1}{8} + \ldots + \frac{1}{2n} $$</p>
+<p>Перезапишем эту сумму вот так:</p>
+<p class="display-math">$$ \frac{1}{2} + \frac{1}{2}\cdot\left( \frac{1}{2} \right)^1 + \frac{1}{2}\cdot\left( \frac{1}{2} \right)^2 + \ldots $$</p>
+<p>Воспользуемся формулой суммы первых $n$ членов геометрической прогрессии с первым членом, равным $\frac{1}{2}$ и знаменателем, равным $\frac{1}{2}$:</p>
+<p class="display-math">$$ \frac{1}{2} + \frac{1}{2}\cdot\left( \frac{1}{2} \right)^1 + \frac{1}{2}\cdot\left( \frac{1}{2} \right)^2 + \ldots = \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^n - 1\right)}{\frac{1}{2} - 1} = 1-\frac{1}{2^n} $$</p>
+<p>Мы получили формулу показателя степени $2$:</p>
+<p class="display-math">$$ 2^{1-\frac{1}{2^n}} = 2^1\cdot 2^{-\frac{1}{2^n}} = \frac{2}{2^{\frac{1}{2^n}}} $$</p>
+<p>Теперь находим предел:</p>
 <p class="display-math">\begin{gather*}
-    \frac{1}{2}\left( \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \ldots + \left( \frac{1}{2} \right)^{n-1} \right) = \frac{1}{2}\cdot\frac{\frac{1}{2}\left( \left(\frac{1}{2}\right)^{n-1} - 1 \right)}{\frac{1}{2} - 1} = \\[5px]
-    = \frac{1}{2}\left(1-\frac{1}{2^{n-1}}\right)
+    \lim_{n\to\infty} \left( \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} \right) = \lim_{n\to\infty} \frac{2}{2^{\frac{1}{2^n}}} = \\[5px]
+    = 2\cdot \lim_{n\to\infty} \left(\frac{1}{2}\right)^{\frac{1}{2^n}} = 2\cdot\left(\frac{1}{2}\right)^{\lim\limits_{n\to\infty} \left(\frac{1}{2}\right)^n} = 2 \cdot \left(\frac{1}{2}\right)^0 = 2
 \end{gather*}</p>
-<p>Проделаем эти операции с каждой строчкой таблицы и сложим результаты:</p>
-<p class="display-math">\begin{gather*}
-    \left( 1 - \frac{1}{2^n} \right) + \\[5px] + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \\[5px]
-    + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \ldots + \frac{1}{2^{n}} = \\[5px]
-    = 1 - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \ldots = \\[5px]
-    = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2^{n-1}} - \frac{2n-1}{2^n}
-\end{gather*}</p>
-<p>Из полученного результата можно выделить две суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} $$</p>
-<p>Воспользуемся формулой суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^{n-1} - 1\right)}{\frac{1}{2}-1} = 1 - \left(\frac{1}{2}\right)^{n-1} $$</p>
-<p>Так как таких сумм две, удваиваем результат и подставляем его обратно вместо сумм:</p>
-<p class="display-math">$$ 1 + 2 - 2\cdot\left(\frac{1}{2}\right)^{n-1} - \frac{2n-1}{2^n} $$</p>
-<p>Немного упростим:</p>
-<p class="display-math">$$ 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} $$</p>
-<p>Найдем значение предела:</p>
-<p class="display-math">\begin{gather*}
-    \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \ldots + \frac{2n-1}{2^n} \right) = \lim_{n\to\infty} 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} = \\[5px]
-    = 3 - \lim_{n\to\infty} 4\left(\frac{1}{2}\right)^n - \lim_{n\to\infty} \frac{2n-1}{2^n} = \\[5px] = 3 - 0 - \lim_{n\to\infty}\frac{2n}{2^n} + \lim_{n\to\infty} \left(\frac{1}{2}\right)^n = 3 - \lim_{n\to\infty} \frac{2n}{2^n} = \\[5px]
-    = 3 - 2\cdot\lim_{n\to\infty} \frac{n}{2^n} = 3 - 0 = 3
-\end{gather*}</p>
-<p>Выше мы использовали тот факт, что $\left(\frac{1}{2}\right)^n\to 0$, так как это убывающая геометрическая прогрессия (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;) и $\frac{n}{2^n}\to 0$, так как это частный случай элементарного предела (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;, пункт 3).</p>
+<p>Выше мы использовали предельный переход в показательной функции (см. прото-задачу &quot;<a href="/proto/sequences/limits/exp-log-transition">Предельный переход в показательных и логарифмических функциях</a>&quot;) и тот факт, что $\left(\frac{1}{2}\right)^n\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической последовательности</a>&quot;).</p>
 
                     </div>
 
@@ -275,14 +246,14 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
+                                <a href="/proto/sequences/limits/exp-log-transition" title="Предельный переход в показательных и логарифмических функциях" target="_blank">
+                                    Предельный переход в показательных и логарифмических функциях
                                 </a>
                             </dt>
                             <dd></dd>
                             <dt>
-                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
-                                    Элементарные пределы последовательностей
+                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
+                                    Предел геометрической прогрессии
                                 </a>
                             </dt>
                             <dd></dd>
@@ -294,14 +265,10 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/56/" title="Следующая задача" class="next">
-                        <span class="label">56</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/54/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/56/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">54</span>
+                        <span class="label">56</span>
                     </a>
             </section>
         </section>

@@ -198,7 +198,37 @@
 <p class="display-math">$$ -\frac{n-1}{2} + n = \frac{-n+1+2n}{2} = \frac{n+1}{2} $$</p>
 <p><strong>общая формула)</strong></p>
 <p>Теперь объединим оба результата в одну общую формулу:</p>
-<p class="display-math">$$ (-1)^n \frac{n + \frac{1 + (-1)^{n-1}}{2}}{2} $$</p>
+<p class="display-math">$$ (-1)^{n-1} \frac{n + \frac{1 + (-1)^{n-1}}{2}}{2} $$</p>
+<p>Проверяем при четном $n$:</p>
+<p class="display-math">$$ (-1)^{n-1} = -1 $$</p>
+<p class="display-math">$$ -\frac{n + \frac{1-1}{2}}{2} = -\frac{n}{2} $$</p>
+<p>Проверяем при нечетном $n$:</p>
+<p class="display-math">$$ (-1)^{n-1} = 1 $$</p>
+<p class="display-math">$$ \frac{n + \frac{1+1}{2}}{2} = \frac{n + 1}{2} $$</p>
+<hr>
+<p>Теперь приступим к нахождению значения предела из условия.
+Для начала, объединим все дроби в одну большую:</p>
+<p class="display-math">$$ \left| \frac{1}{n} - \frac{2}{n} + \frac{3}{n} - \ldots + \frac{(-1)^{n-1}n}{n} \right| = \frac{|1-2+3-\ldots + (-1)^{n-1}n|}{n} $$</p>
+<p>Заменим сумму под модулем в числителе на найденное ранее выражение:</p>
+<p class="display-math">$$ \frac{|1-2+3-\ldots + (-1)^{n-1}n|}{n} = \frac{\left| (-1)^{n-1} \frac{n + \frac{1 + (-1)^{n-1}}{2}}{2} \right|}{n} $$</p>
+<p>Воспользуемся свойством модуля:</p>
+<p class="display-math">$$|a\cdot b| = |a||b|$$</p>
+<p>С помощью этого свойства разберемся с $(-1)^{n-1}$:</p>
+<p class="display-math">$$ |(-1)^{n-1}| = |(-1)\cdot(-1)\cdot\ldots| = |-1||-1|\ldots = 1 $$</p>
+<p>Поэтому:</p>
+<p class="display-math">$$ \frac{\left| (-1)^{n-1} \frac{n + \frac{1 + (-1)^{n-1}}{2}}{2} \right|}{n} = \frac{n+\frac{1 + (-1)^{n-1}}{2}}{2n} = \frac{1}{2} + \frac{1+(-1)^{n-1}}{4n} $$</p>
+<p>Уже можно переходить к рассмотрению предела:</p>
+<p class="display-math">\begin{gather*}
+    \lim_{n\to\infty} \frac{1}{2} + \frac{1+(-1)^{n-1}}{4n} = \frac{1}{2} + \lim_{n\to\infty} \frac{1}{4n} + \frac{(-1)^{n-1}}{4n} = \\[5px]
+    = \frac{1}{2} + 0 + \lim_{n\to\infty} \frac{(-1)^{n-1}}{4n}
+\end{gather*}</p>
+<p>Последнюю последовательность можно &quot;зажать&quot;:</p>
+<p class="display-math">$$ \frac{-1}{4n} \leq \frac{(-1)^{n-1}}{4n} \leq \frac{1}{4n} $$</p>
+<p>Но $\frac{-1}{4n}\to 0$ и $\frac{1}{4n}\to 0$, поэтому, по теореме о двух милиционерах, и &quot;зажатая&quot; между ними последовательность тоже стремится к $0$.</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{(-1)^{n-1}}{4n} = 0 $$</p>
+<p>Выше мы использовали тот факт, что последовательность $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+<p>Итак:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \left| \frac{1}{n} - \frac{2}{n} + \frac{3}{n} - \ldots + \frac{(-1)^{n-1}n}{n} \right| = \frac{1}{2} $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -230,6 +260,26 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
 
 

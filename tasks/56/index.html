@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>55 | Демидович. Решения</title>
-        <meta name="description" content="$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$">
+        <title>56 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \left[ \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \ldots + \frac{1}{n(n+1)} \right] $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>55</span>
+                    <span>56</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -144,7 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$</p>
+                        <p class="display-math">$$ \lim_{n\to\infty} \left[ \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \ldots + \frac{1}{n(n+1)} \right] $$</p>
                     </div>
                 </div>
             </section>
@@ -182,56 +182,31 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Сначала поработаем с самой суммой:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} $$</p>
-<p>Разложим ее так, чтобы у каждого члена в числителе была $1$ и представим в виде таблицы:</p>
-<p class="display-math">\begin{array}{ccccc}
-    \frac{1}{2} & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 &                 &          &   \vdots
-    \\
-                &                 &                 &          & + \frac{1}{2^n}
-    \\
-    \hline
-    \frac{1}{2} & + \frac{3}{2^2} & + \frac{5}{2^3} & + \ldots & + \frac{2n-1}{2^n}
-\end{array}</p>
-<p>В первой строчке таблицы воспользуемся формулой суммы первых $n$ членов геометрической прогрессии со знаменателем $\frac{1}{2}$ и первым членом, равным $\frac{1}{2}$:</p>
-<p class="display-math">$$ \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^3 + \ldots + \left(\frac{1}{2}\right)^n = \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^n - 1\right)}{\frac{1}{2} - 1} = 1 - \frac{1}{2^n} $$</p>
-<p>Во второй строчке таблицы выносим за скобки $\frac{1}{2}$ и вновь используем формулу суммы первых $n-1$ членой геометрической прогрессии:</p>
+                        <p>Последовательность в условии это сумма дробей, каждая из которых имеет вид:</p>
+<p class="display-math">$$ \frac{1}{n(n+1)} $$</p>
+<p>Попытаемся представить эту дробь в виде суммы двух дробей с двумя знаменателями, равными множителям знаменателя исходной дроби:</p>
+<p class="display-math">$$ \frac{1}{n(n+1)} = \frac{a}{n} + \frac{b}{n+1} $$</p>
+<p>Приведем к общему знаменателю:</p>
+<p class="display-math">$$ \frac{a}{n} + \frac{b}{n+1} = \frac{a(n+1) + bn}{n(n+1)} $$</p>
+<p>Нам нужно найти такие значения для $a$ и $b$, чтобы числитель равнялся $1$:</p>
+<p class="display-math">$$ a(n+1) + bn = 1 $$</p>
+<p>Этого легко добиться, взяв $a=1$ и $b=-1$:</p>
+<p class="display-math">$$ n+1 - n = 1 $$</p>
+<p>Итак, любая дробь из условия может быть представлена в следующем виде:</p>
+<p class="display-math">$$ \frac{1}{n(n+1)} = \frac{1}{n}-\frac{1}{n+1} $$</p>
+<p>Попробуем перезаписать сумму из условия, заменяя все дроби на сумму двух дробей по найденному свойству:</p>
 <p class="display-math">\begin{gather*}
-    \frac{1}{2}\left( \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \ldots + \left( \frac{1}{2} \right)^{n-1} \right) = \frac{1}{2}\cdot\frac{\frac{1}{2}\left( \left(\frac{1}{2}\right)^{n-1} - 1 \right)}{\frac{1}{2} - 1} = \\[5px]
-    = \frac{1}{2}\left(1-\frac{1}{2^{n-1}}\right)
+    \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \ldots + \frac{1}{n(n+1)} = \\[5px]
+    = \frac{1}{1} - \frac{1}{2} + \frac{1}{2} - \frac{1}{3} + \ldots - \frac{1}{n} + \frac{1}{n} - \frac{1}{n+1} = \\[5px]
+    = \frac{1}{1} + 0 + 0 + \ldots - \frac{1}{n+1} = 1 - \frac{1}{n+1}
 \end{gather*}</p>
-<p>Проделаем эти операции с каждой строчкой таблицы и сложим результаты:</p>
-<p class="display-math">\begin{gather*}
-    \left( 1 - \frac{1}{2^n} \right) + \\[5px] + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \\[5px]
-    + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \ldots + \frac{1}{2^{n}} = \\[5px]
-    = 1 - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \ldots = \\[5px]
-    = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2^{n-1}} - \frac{2n-1}{2^n}
-\end{gather*}</p>
-<p>Из полученного результата можно выделить две суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} $$</p>
-<p>Воспользуемся формулой суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^{n-1} - 1\right)}{\frac{1}{2}-1} = 1 - \left(\frac{1}{2}\right)^{n-1} $$</p>
-<p>Так как таких сумм две, удваиваем результат и подставляем его обратно вместо сумм:</p>
-<p class="display-math">$$ 1 + 2 - 2\cdot\left(\frac{1}{2}\right)^{n-1} - \frac{2n-1}{2^n} $$</p>
-<p>Немного упростим:</p>
-<p class="display-math">$$ 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} $$</p>
-<p>Найдем значение предела:</p>
-<p class="display-math">\begin{gather*}
-    \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \ldots + \frac{2n-1}{2^n} \right) = \lim_{n\to\infty} 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} = \\[5px]
-    = 3 - \lim_{n\to\infty} 4\left(\frac{1}{2}\right)^n - \lim_{n\to\infty} \frac{2n-1}{2^n} = \\[5px] = 3 - 0 - \lim_{n\to\infty}\frac{2n}{2^n} + \lim_{n\to\infty} \left(\frac{1}{2}\right)^n = 3 - \lim_{n\to\infty} \frac{2n}{2^n} = \\[5px]
-    = 3 - 2\cdot\lim_{n\to\infty} \frac{n}{2^n} = 3 - 0 = 3
-\end{gather*}</p>
-<p>Выше мы использовали тот факт, что $\left(\frac{1}{2}\right)^n\to 0$, так как это убывающая геометрическая прогрессия (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;) и $\frac{n}{2^n}\to 0$, так как это частный случай элементарного предела (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;, пункт 3).</p>
+<p>Теперь легко найти предел:</p>
+<p class="display-math">$$ \lim_{n\to\infty} 1 - \frac{1}{n+1} = 1 - \lim_{n\to\infty} \frac{1}{n+1} = 1 - 0 = 1 $$</p>
+<p>Выше мы воспользовались тем, что:</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{n+1} = 0 $$</p>
+<p>Это легко показать, если &quot;зажать&quot; эту последовательность между $0$ и $\frac{1}{n}$:</p>
+<p class="display-math">$$ 0 \leq \frac{1}{n+1} \leq \frac{1}{n} $$</p>
+<p>Последовательность $0\to 0$ и $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>), а значит, по теореме о двух милиционерах, &quot;зажатая&quot; между ними $\frac{1}{n+1}$ тоже стремится к $0$.</p>
 
                     </div>
 
@@ -275,12 +250,6 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
                                 <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
                                     Элементарные пределы последовательностей
                                 </a>
@@ -294,14 +263,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/56/" title="Следующая задача" class="next">
-                        <span class="label">56</span>
+                    <a href="../../tasks/57/" title="Следующая задача" class="next">
+                        <span class="label">57</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/54/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/55/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">54</span>
+                        <span class="label">55</span>
                     </a>
             </section>
         </section>
