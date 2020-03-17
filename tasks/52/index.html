@@ -182,37 +182,23 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Формула суммы первых $n$ членов арифметической прогрессии:</p>
-<p class="display-math">$$ S_n = \frac{n(a_n+a_1)}{2} $$</p>
-<p>В числителе у нас сумма первых $n-1$ членов арифметической прогрессии с разностью, равной $1$:</p>
-<p class="display-math">$$ 1+2+\ldots+(n-1) = \frac{n(n-1)}{2} $$</p> 
-<p>Преобразуем теперь последовательность из условия:</p>
-<p class="display-math">\begin{gather*}
-    \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} = \frac{1+2+\ldots+(n-1)}{n^2} = \\[5px] = \frac{n(n-1)}{2n^2} = \frac{1}{2} \cdot \frac{n-1}{n}
-\end{gather*}</p>
-<p>Докажем по определению, что $\frac{n-1}{n}\to 1$:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n-1}{n} = 1 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left|\frac{n-1}{n} - 1\right| < \varepsilon $$</p>
-<p>Рассмотрим неравенство в конце. Модуль раскрываем со знаком минуса, так как выражение под ним всегда отрицательное:</p>
-<p class="display-math">$$ 1 - \frac{n-1}{n} < \varepsilon $$</p>
-<p>Постепенно изолируем $n$:</p>
-<p class="display-math">$$ 1 - \frac{n-1}{n} < \varepsilon \qquad 1 - 1 + \frac{1}{n} < \varepsilon $$</p>
-<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\varepsilon}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\varepsilon}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
-<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению доказываемого предела неравенству.
-Итак, доказали, что:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n-1}{n} = 1 $$</p>
-<p>Теперь возвращаемся к последовательности в условии:</p>
-<p class="display-math">\begin{gather*}
-    \lim_{n\to\infty} \left( \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} \right) = \lim_{n\to\infty} \frac{1}{2} \cdot \frac{n-1}{n} = \\[5px]
-    = \frac{1}{2} \cdot \lim_{n\to\infty} \frac{n-1}{n} = \frac{1}{2} \cdot 1 = \frac{1}{2}
-\end{gather*}</p>
+                        <p>Разберемся с суммой в числителе:</p>
+<p class="display-math">$$ 1 - 2 + 3 - \ldots + (-1)^{n-1}n $$</p>
+<p><strong>$n$ — четное)</strong></p>
+<p>В случае, когда $n$ — четное, получаем сумму:</p>
+<p class="display-math">$$ 1 - 2 + 3 - \ldots + (n-1) - n $$</p>
+<p>Выделим каждую разность в этой сумме скобками:</p>
+<p class="display-math">$$ (1-2) + (3-4) + (5-6) + \ldots (n-1-n) $$</p>
+<p>В каждой скобке получаем $-1$, а всего таких скобок $\frac{n}{2}$:</p>
+<p class="display-math">$$ -1 -1 -1 -1 - \ldots = -\frac{n}{2} $$</p>
+<p><strong>$n$ — нечетное)</strong></p>
+<p>В случае, когда $n$ — нечетное, получаем сумму:</p>
+<p class="display-math">$$ 1 - 2 + 3 - \ldots - (n-1) + n $$</p>
+<p>Заметим, $(n-1)$ — четное, а результат суммы для четных мы уже нашли выше:</p>
+<p class="display-math">$$ -\frac{n-1}{2} + n = \frac{-n+1+2n}{2} = \frac{n+1}{2} $$</p>
+<p><strong>общая формула)</strong></p>
+<p>Теперь объединим оба результата в одну общую формулу:</p>
+<p class="display-math">$$ (-1)^n \frac{n + \frac{1 + (-1)^{n-1}}{2}}{2} $$</p>
                     </div>
 
                     <div class="reason-overlay">

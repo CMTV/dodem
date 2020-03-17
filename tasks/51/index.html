@@ -190,29 +190,13 @@
 <p class="display-math">\begin{gather*}
     \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} = \frac{1+2+\ldots+(n-1)}{n^2} = \\[5px] = \frac{n(n-1)}{2n^2} = \frac{1}{2} \cdot \frac{n-1}{n}
 \end{gather*}</p>
-<p>Докажем по определению, что $\frac{n-1}{n}\to 1$:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n-1}{n} = 1 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left|\frac{n-1}{n} - 1\right| < \varepsilon $$</p>
-<p>Рассмотрим неравенство в конце. Модуль раскрываем со знаком минуса, так как выражение под ним всегда отрицательное:</p>
-<p class="display-math">$$ 1 - \frac{n-1}{n} < \varepsilon $$</p>
-<p>Постепенно изолируем $n$:</p>
-<p class="display-math">$$ 1 - \frac{n-1}{n} < \varepsilon \qquad 1 - 1 + \frac{1}{n} < \varepsilon $$</p>
-<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\varepsilon}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\varepsilon}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
-<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению доказываемого предела неравенству.
-Итак, доказали, что:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n-1}{n} = 1 $$</p>
-<p>Теперь возвращаемся к последовательности в условии:</p>
+<p>Теперь вычислим предел:</p>
 <p class="display-math">\begin{gather*}
     \lim_{n\to\infty} \left( \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} \right) = \lim_{n\to\infty} \frac{1}{2} \cdot \frac{n-1}{n} = \\[5px]
     = \frac{1}{2} \cdot \lim_{n\to\infty} \frac{n-1}{n} = \frac{1}{2} \cdot 1 = \frac{1}{2}
 \end{gather*}</p>
+<p>Здесь использован факт того, что $\frac{n-1}{n}\to 1$. Это элементарный предел (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -244,6 +228,26 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
 
 
