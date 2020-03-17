@@ -2,5 +2,11 @@
     "task": 55,
     "location": "I.2",
 
-    "solver": "CMTV"
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/geometric-progression",
+        "sequences/limits/elementary"
+    ]
 }

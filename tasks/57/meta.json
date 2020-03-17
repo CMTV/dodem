@@ -1,0 +1,12 @@
+{
+    "task": 57,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/exp-log-transition",
+        "sequences/limits/geometric-progression"
+    ]
+}
