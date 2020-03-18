@@ -1,0 +1,12 @@
+{
+    "task": 61,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/exp-ratio",
+        "sequences/limits/geometric-progression"
+    ]
+}

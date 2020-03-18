@@ -1,0 +1,18 @@
+{
+    "task": 58,
+    "location": "I.2",
+
+    "solvers": 
+    {
+        "CMTV":
+        [
+            "Как следствие из прото-задачи \"<a href=\"/proto/sequences/limits/exp-ratio\">Предел отношения степенной и показательной последовательностей</a>\"",
+            "Полный вывод"
+        ]
+    },
+
+    "proto":
+    [
+        "sequences/limits/exp-ratio"
+    ]
+}
