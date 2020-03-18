@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>55 | Демидович. Решения</title>
-        <meta name="description" content="$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$">
+        <title>62 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} nq^n &#x3D; 0, \ \text{если } |q| &lt; 1 $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -127,7 +127,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>55</span>
+                    <span>62</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -144,7 +144,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$</p>
+                        <p class="display-math">$$ \lim_{n\to\infty} nq^n = 0, \ \text{если } |q| < 1 $$</p>
                     </div>
                 </div>
             </section>
@@ -182,56 +182,86 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Сначала поработаем с самой суммой:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} $$</p>
-<p>Разложим ее так, чтобы у каждого члена в числителе была $1$ и представим в виде таблицы:</p>
-<p class="display-math">\begin{array}{ccccc}
-    \frac{1}{2} & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                & + \frac{1}{2^2} & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 & + \frac{1}{2^3} & + \ldots & + \frac{1}{2^n}
-    \\
-                &                 &                 &          &   \vdots
-    \\
-                &                 &                 &          & + \frac{1}{2^n}
-    \\
-    \hline
-    \frac{1}{2} & + \frac{3}{2^2} & + \frac{5}{2^3} & + \ldots & + \frac{2n-1}{2^n}
-\end{array}</p>
-<p>В первой строчке таблицы воспользуемся формулой суммы первых $n$ членов геометрической прогрессии со знаменателем $\frac{1}{2}$ и первым членом, равным $\frac{1}{2}$:</p>
-<p class="display-math">$$ \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \left(\frac{1}{2}\right)^3 + \ldots + \left(\frac{1}{2}\right)^n = \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^n - 1\right)}{\frac{1}{2} - 1} = 1 - \frac{1}{2^n} $$</p>
-<p>Во второй строчке таблицы выносим за скобки $\frac{1}{2}$ и вновь используем формулу суммы первых $n-1$ членой геометрической прогрессии:</p>
-<p class="display-math">\begin{gather*}
-    \frac{1}{2}\left( \frac{1}{2} + \left(\frac{1}{2}\right)^2 + \ldots + \left( \frac{1}{2} \right)^{n-1} \right) = \frac{1}{2}\cdot\frac{\frac{1}{2}\left( \left(\frac{1}{2}\right)^{n-1} - 1 \right)}{\frac{1}{2} - 1} = \\[5px]
-    = \frac{1}{2}\left(1-\frac{1}{2^{n-1}}\right)
-\end{gather*}</p>
-<p>Проделаем эти операции с каждой строчкой таблицы и сложим результаты:</p>
-<p class="display-math">\begin{gather*}
-    \left( 1 - \frac{1}{2^n} \right) + \\[5px] + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \frac{1}{2}\left( 1 - \frac{1}{2^{n-1}} \right) + \\[5px]
-    + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \frac{1}{4}\left( 1 - \frac{1}{2^{n-2}} \right) + \ldots + \frac{1}{2^{n}} = \\[5px]
-    = 1 - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{2} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \frac{1}{4} - \frac{1}{2^n} + \ldots = \\[5px]
-    = 1 + \frac{1}{2} + \frac{1}{2} + \frac{1}{4} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2^{n-1}} - \frac{2n-1}{2^n}
-\end{gather*}</p>
-<p>Из полученного результата можно выделить две суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} + \frac{1}{2} + \frac{1}{4} + \ldots + \frac{1}{2^{n-1}} $$</p>
-<p>Воспользуемся формулой суммы первых $n-1$ членов геометрической прогрессии:</p>
-<p class="display-math">$$ \frac{\frac{1}{2}\left(\left(\frac{1}{2}\right)^{n-1} - 1\right)}{\frac{1}{2}-1} = 1 - \left(\frac{1}{2}\right)^{n-1} $$</p>
-<p>Так как таких сумм две, удваиваем результат и подставляем его обратно вместо сумм:</p>
-<p class="display-math">$$ 1 + 2 - 2\cdot\left(\frac{1}{2}\right)^{n-1} - \frac{2n-1}{2^n} $$</p>
-<p>Немного упростим:</p>
-<p class="display-math">$$ 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} $$</p>
-<p>Найдем значение предела:</p>
-<p class="display-math">\begin{gather*}
-    \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \ldots + \frac{2n-1}{2^n} \right) = \lim_{n\to\infty} 3 - 4\left(\frac{1}{2}\right)^n - \frac{2n-1}{2^n} = \\[5px]
-    = 3 - \lim_{n\to\infty} 4\left(\frac{1}{2}\right)^n - \lim_{n\to\infty} \frac{2n-1}{2^n} = \\[5px] = 3 - 0 - \lim_{n\to\infty}\frac{2n}{2^n} + \lim_{n\to\infty} \left(\frac{1}{2}\right)^n = 3 - \lim_{n\to\infty} \frac{2n}{2^n} = \\[5px]
-    = 3 - 2\cdot\lim_{n\to\infty} \frac{n}{2^n} = 3 - 0 = 3
-\end{gather*}</p>
-<p>Выше мы использовали тот факт, что $\left(\frac{1}{2}\right)^n\to 0$, так как это убывающая геометрическая прогрессия (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;) и $\frac{n}{2^n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/exp-ratio">Предел отношения степенной и показательной последовательностей</a>&quot;).</p>
+                        <p><span style="color: red;">Эту задачу <b>невозможно</b> решить без детального разбора решения <a href="/tasks/60">60 задачи</a>. Убедитесь, что полностью понимаете путь доказательства в той задаче и только после этого приступайте к решению этой.</span></p>
+<hr>
+<p>Если $q$ = 0, то</p>
+<p class="display-math">$$ \lim_{n\to\infty} n 0^n = \lim_{n\to\infty} 0 = 0 $$</p>
+<hr>
+<p>Воспользуемся свойством модуля:</p>
+<p class="display-math">$$ -|a| \leq a \leq |a| $$</p>
+<p>Применим его для $q^n$ в последовательности из условия:</p>
+<p class="display-math">$$ -|q^n| \leq q^n \leq |q^n| $$</p>
+<p>Воспользуемся еще одним свойством модуля:</p>
+<p class="display-math">$$ |a\cdot b| = |a||b| $$</p>
+<p>С помощью этого свойства можно &quot;вытащить&quot; показатель степени из-под модуля:</p>
+<p class="display-math">$$ |a^n| = |a\cdot a\cdot a\cdot\ldots| = |a||a||a|\ldots = |a|^n $$</p>
+<p>Поэтому полученное для $q^n$ цепное неравенство можно переписать так:</p>
+<p class="display-math">$$ -|q|^n \leq q^n \leq |q|^n $$</p>
+<p>Умножим это неравенство на положительное $n$:</p>
+<p class="display-math">$$ -n|q|^n \leq nq^n \leq n|q|^n $$</p>
+<p>Нам достаточно лишь показать, что</p>
+<p class="display-math">$$ \lim_{n\to\infty} n|q|^n = 0 $$</p>
+<p>Если это так, последовательность из условия будет автоматом &quot;зажата&quot; между двумя последовательностями, стремящимися к $0$, а значит, по теореме о двух милиционерах, сама будет стремиться к $0$.</p>
+<hr>
+<p>Итак, дальше мы будем доказывать, что</p>
+<p class="display-math">$$ \lim_{n\to\infty} n|q|^n = 0 $$</p>
+<p>Путь доказательства <strong>абсолютно такой же</strong>, что и в доказательстве в прото-задаче &quot;<a href="/proto/sequences/limits/exp-ratio">Предел отношения степенной и показательной последовательностей</a>&quot;.
+Внимательно его изучите. Далее будут только основные шаги, некоторые переходы не будут поясняться!</p>
+<hr>
+<p>Представим последовательность $n|q|^n$ в рекуррентом виде:</p>
+<p class="display-math">$$ x_{n+1} = x_n\cdot q_n, $$</p>
+<p>где, $q_n$ — <strong>последовательность приращений</strong>.</p>
+<p>Выясним, чему равен каждый член $q_n$:</p>
+<p class="display-math">$$ q_n = \frac{x_{n+1}}{x_n} = \frac{(n+1)|q|^{n+1}}{n|q|^n} = \frac{(n+1)|q|^n\cdot |q|}{n|q|^n} = |q| \frac{n+1}{n} $$</p>
+<p class="display-math">$$ q_n = |q|\frac{n+1}{n} $$</p>
+<hr>
+<p>Покажем, что последовательность приращений $q_n$ убывает:</p>
+<p class="display-math">$$ q_{n+1} < q_n $$</p>
+<p class="display-math">$$ |q|\frac{n+2}{n+1} < |q|\frac{n+1}{n} $$</p>
+<p>Делим обе части на $|q|$ (смены знаков не будет, так как $|q|&gt;0$):</p>
+<p class="display-math">$$ \frac{n+2}{n+1} < \frac{n+1}{n} $$</p>
+<p>Обе части умножаем на $n(n+1)$:</p>
+<p class="display-math">$$ n^2 + 2n < n^2 + 2n + 1 $$</p>
+<p class="display-math">$$ 0 < 1 $$</p>
+<p>Итак, мы доказали, что $q_n$ убывает.</p>
+<p>$\blacksquare$</p>
+<hr>
+<p>Докажем, что найдется такой номер $t$, что $q_t$ будет строго меньше $1$:</p>
+<p class="display-math">$$ \exists t \ : \ q_t < 1 $$</p>
+<p>Разбираемся с неравенством в конце:</p>
+<p class="display-math">$$ q_t < 1 $$</p>
+<p class="display-math">$$ |q|\frac{t+1}{t} < 1 $$</p>
+<p>Делим обе части на $|q|$ и упрощаем дробь слева:</p>
+<p class="display-math">$$ 1 + \frac{1}{t} < \frac{1}{|q|} $$</p>
+<p>Вычитаем $1$ из обеих частей:</p>
+<p class="display-math">$$ \frac{1}{t} < \frac{1}{|q|} - 1 = \frac{1 - |q|}{|q|} $$</p>
+<p>&quot;Переворачиваем&quot; дроби (знак не поменяется, так как $1-|q|&gt;0$, так как $|q| &lt; 1$ по условию):</p>
+<p class="display-math">$$ t > \frac{|q|}{1-|q|} $$</p>
+<p>$t$ должно быть натуральным (ведь это номер элемента последовательности), поэтому возьмем за $t$ округление сверху (&quot;потолок&quot;) полученного выше выражения, увеличенного на $1$:</p>
+<p class="display-math">$$ t = \ceil{\frac{|q|}{1-|q|}} + 1 > \ceil{\frac{|q|}{1-|q|}} \geq \frac{|q|}{1-|q|} $$</p>
+<p>Итак, мы нашли такой номер $t$, что соответствующий ему член последовательности приращений $q_t$ будет строго меньше $1$.</p>
+<p>$\blacksquare$</p>
+<hr>
+<p>Теперь сразу переходим к готовому неравенству (разъяснение смотрите в прото-задаче, о которой говорилось выше):</p>
+<p class="display-math">$$ x_n \leq \frac{x_t}{q_t^t} \cdot q_t^{n}, \ n > t $$</p>
+<p>Заменим $x_n$ и $x_t$ на соостветствующие выражения:</p>
+<p class="display-math">$$ n|q|^n \leq \frac{t|q|^t}{q_t^t} \cdot q_t^{n}, \ n > t $$</p>
+<p>Теперь &quot;зажмем&quot; эту последовательность между $0$ и правой частью выведенного неравенства:</p>
+<p class="display-math">$$ 0 < n|q|^n \leq \frac{t|q|^t}{q_t^t} \cdot q_t^{n}, \ n > t $$</p>
+<p>На первые $t$ членов последовательности, для которых неравенство в правой части может не выполняться не обращаем внимание.
+На предел эти первые $t$ членов не окажут никакого влияния.</p>
+<p>&quot;Последовательность&quot; в левой части неравенства состоит из одних $0$ и, очевидно, стремится к $0$.</p>
+<p>Выясним предел последовательности в правой части неравенства (принимая во внимание, что дробь является громоздкой константой и не зависит от $n$):</p>
+<p class="display-math">$$ \lim_{n\to\infty} \frac{t|q|^t}{q_t^t} \cdot q_t^n = \frac{t|q|^t}{q_t^t} \lim_{n\to\infty} q_t^n = \frac{t|q|^t}{q_t^t} \cdot 0 = 0 $$</p>
+<p>Тут мы использовали тот факт, геометрическая прогрессия со знаменателем, который меньше $1$ (а $q_t$ у нас по определению меньше $1$) стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
+<p>Итак, наша последовательность $n|q|^n$ зажата с одной строны нулем (который $\to 0$) и, начиная с номера $t$, зажата с другой стороны убывающей геометрической прогрессией (которая тоже $\to 0$), а значит, по теореме о двух
+милиционерах, &quot;зажатая&quot; последовательность тоже стремится к $0$.</p>
+<p class="display-math">$$ \lim_{n\to\infty} n|q|^n = 0 $$</p>
+<p>Это означает, что последовательности слева и справа в выведенном в начале решения неравенстве стремятся к $0$:</p>
+<p class="display-math">$$ -n|q|^n \leq nq^n \leq n|q|^n $$</p>
+<p>И вновь, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже стремится к $0$:</p>
+<p class="display-math">$$ \lim_{n\to\infty} nq^n = 0 $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -275,14 +305,14 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
+                                <a href="/proto/sequences/limits/exp-ratio" title="Предел отношения степенной и показательной последовательностей" target="_blank">
+                                    Предел отношения степенной и показательной последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
                             <dt>
-                                <a href="/proto/sequences/limits/exp-ratio" title="Предел отношения степенной и показательной последовательностей" target="_blank">
-                                    Предел отношения степенной и показательной последовательностей
+                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
+                                    Предел геометрической прогрессии
                                 </a>
                             </dt>
                             <dd></dd>
@@ -294,14 +324,10 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/56/" title="Следующая задача" class="next">
-                        <span class="label">56</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/54/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/61/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">54</span>
+                        <span class="label">61</span>
                     </a>
             </section>
         </section>
