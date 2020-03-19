@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>61 | Демидович. Решения</title>
-        <meta name="description" content="$$ \lim_{n\to\infty} \frac{a^n}{n!} &#x3D; 0 $$">
+        <title>63 | Демидович. Решения</title>
+        <meta name="description" content="$$ \lim_{n\to\infty} \sqrt[n]{a} &#x3D; 1 \ (a &gt; 0) $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -128,7 +128,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>61</span>
+                    <span>63</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -145,7 +145,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \frac{a^n}{n!} = 0 $$</p>
+                        <p class="display-math">$$ \lim_{n\to\infty} \sqrt[n]{a} = 1 \ (a > 0) $$</p>
                     </div>
                 </div>
             </section>
@@ -164,7 +164,7 @@
             </div>
 
 
-            <section class="block-section solution  single  _hidden">
+            <section class="block-section solution  _hidden">
                 <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
@@ -173,101 +173,102 @@
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
-                    <span>Решение</span>
+                    <span>Решение 1 </span>
                 </div>
                 
                 <div class="block-section-container">
                     
                     <div class="reason">
-                        
+                        Как следствие из прото-задачи "<a href="/proto/sequences/limits/exp-log-transition">Предельный переход в показательных и логарифмических функциях</a>"
                     </div>
 
                     <div class="block-section-content">
-                        <p><span style="color: red;">Эту задачу <b>невозможно</b> решить без детального разбора решения <a href="/tasks/60">60 задачи</a>. Убедитесь, что полностью понимаете путь доказательства в той задаче и только после этого приступайте к решению этой.</span></p>
-<hr>
-<p>Если $a=0$, то</p>
-<p class="display-math">$$ \frac{0^n}{n!} = 0 $$</p>
-<p>И тогда</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{0^n}{n!} = \lim_{n\to\infty} 0 = 0 $$</p>
-<hr>
-<p>Воспользуемся свойством модуля:</p>
-<p class="display-math">$$ -|a| \leq a \leq |a| $$</p>
-<p>Применим его для числителя последовательности:</p>
-<p class="display-math">$$ -|a^n| \leq a^n \leq |a^n| $$</p>
-<p>Воспользуемся еще одним свойством модуля:</p>
-<p class="display-math">$$ |a\cdot b| = |a||b| $$</p>
-<p>С помощью этого свойства можно &quot;вытащить&quot; показатель степени из-под модуля:</p>
-<p class="display-math">$$ |a^n| = |a\cdot a\cdot a\cdot\ldots| = |a||a||a|\ldots = |a|^n $$</p>
-<p>Поэтому полученное для числителя цепное неравенство можно переписать так:</p>
-<p class="display-math">$$ -|a|^n \leq a^n \leq |a|^n $$</p>
-<p>Поделим это неравенство на положительное $n!$:</p>
-<p class="display-math">$$ -\frac{|a|^n}{n!} \leq \frac{a^n}{n!} \leq \frac{|a|^n}{n!} $$</p>
-<p>Нам достаточно лишь показать, что</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Если это так, последовательность из условия будет автоматом &quot;зажата&quot; между двумя последовательностями, стремящимися к $0$, а значит, по теореме о двух милиционерах, сама будет стремиться к $0$.</p>
-<hr>
-<p>Итак, дальше мы будем доказывать, что</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Путь доказательства <strong>абсолютно такой же</strong>, что и в доказательстве в прото-задаче &quot;<a href="/proto/sequences/limits/exp-ratio">Предел отношения степенной и показательной последовательностей</a>&quot;.
-Внимательно его изучите. Далее будут только основные шаги, некоторые переходы не будут поясняться!</p>
-<hr>
-<p>Представим последовательность $\frac{|a|^n}{n!}$ в рекуррентом виде:</p>
-<p class="display-math">$$ x_{n+1} = x_n\cdot q_n, $$</p>
-<p>где, $q_n$ — <strong>последовательность приращений</strong>.</p>
-<p>Выясним, чему равен каждый член $q_n$:</p>
-<p class="display-math">$$ q_n = \frac{x_{n+1}}{x_n} = \frac{\frac{|a|^{n+1}}{(n+1)!}}{\frac{|a|^n}{n!}} = \frac{|a|^n\cdot |a|}{n!\cdot(n+1)} \cdot \frac{n!}{|a|^n} = \frac{|a|}{n+1} $$</p>
-<p class="display-math">$$ q_n = \frac{|a|}{n+1} $$</p>
-<hr>
-<p>Покажем, что последовательность приращений $q_n$ убывает:</p>
-<p class="display-math">$$ q_{n+1} < q_n $$</p>
-<p class="display-math">$$ \frac{|a|}{n+2} < \frac{|a|}{n+1} $$</p>
-<p>Делим обе части на $|a|$ (смены знаков не будет, так как $|a|&gt;0$):</p>
-<p class="display-math">$$ \frac{1}{n+2} < \frac{1}{n+1} $$</p>
-<p>&quot;Переворачиваем&quot; дроби:</p>
-<p class="display-math">$$ n+2 > n+1 $$</p>
-<p class="display-math">$$ 2 > 1 $$</p>
-<p>Итак, мы доказали, что $q_n$ убывает.</p>
-<p>$\blacksquare$</p>
-<hr>
-<p>Докажем, что найдется такой номер $t$, что $q_t$ будет строго меньше $1$:</p>
-<p class="display-math">$$ \exists t \ : \ q_t < 1 $$</p>
-<p>Разбираемся с неравенством в конце:</p>
-<p class="display-math">$$ q_t < 1 $$</p>
-<p class="display-math">$$ \frac{|a|}{t + 1} < 1 $$</p>
-<p>Домножаем обе части на $t+1$:</p>
-<p class="display-math">$$ |a| < t +1 $$</p>
-<p>Изолируем $t$:</p>
-<p class="display-math">$$ t > |a| - 1 $$</p>
-<p>Так как $t$ натуральное (ведь это номер элемента последовательности), возьмем за $t$ округление сверху (&quot;потолок&quot;) полученного выше выражения, увеличенного на $1$:</p>
-<p class="display-math">$$ t = \ceil{|a|-1} + 1 > \ceil{|a|-1} \geq |a| - 1 $$</p>
-<p>Итак, мы нашли такой номер $t$, что соответствующий ему член последовательности приращений $q_t$ будет строго меньше $1$.</p>
-<p>$\blacksquare$</p>
-<hr>
-<p>Теперь сразу переходим к готовому неравенству (разъяснение смотрите в прото-задаче, о которой говорилось выше):</p>
-<p class="display-math">$$ x_n \leq \frac{x_t}{q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>Заменим $x_n$ и $x_t$ на соостветствующие выражения:</p>
-<p class="display-math">$$ \frac{|a|^n}{n!} \leq \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>Теперь &quot;зажмем&quot; эту последовательность между $0$ и правой частью выведенного неравенства:</p>
-<p class="display-math">$$ 0 < \frac{|a|^n}{n!} \leq \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>На первые $t$ членов последовательности, для которых неравенство в правой части может не выполняться не обращаем внимание.
-На предел эти первые $t$ членов не окажут никакого влияния.</p>
-<p>&quot;Последовательность&quot; в левой части неравенства состоит из одних $0$ и, очевидно, стремится к $0$.</p>
-<p>Выясним предел последовательности в правой части неравенства (принимая во внимание, что дробь является громоздкой константой и не зависит от $n$):</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^n = \frac{|a|^t}{t!\cdot q_t^t} \lim_{n\to\infty} q_t^n = \frac{|a|^t}{t!\cdot q_t^t} \cdot 0 = 0 $$</p>
-<p>Тут мы использовали тот факт, геометрическая прогрессия со знаменателем, который меньше $1$ (а $q_t$ у нас по определению меньше $1$) стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
-<p>Итак, наша последовательность $\frac{|a|^n}{n!}$ зажата с одной строны нулем (который $\to 0$) и, начиная с номера $t$, зажата с другой стороны убывающей геометрической прогрессией (которая тоже $\to 0$), а значит, по теореме о двух
-милиционерах, &quot;зажатая&quot; последовательность тоже стремится к $0$.</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Это означает, что последовательности слева и справа в выведенном в начале решения неравенстве стремятся к $0$:</p>
-<p class="display-math">$$ -\frac{|a|^n}{n!} \leq \frac{a^n}{n!} \leq \frac{|a|^n}{n!} $$</p>
-<p>И вновь, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже стремится к $0$:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{a^n}{n!} = 0 $$</p>
+                        <p>Благодаря результатам прото-задачи &quot;<a href="/proto/sequences/limits/exp-log-transition">Предельный переход в показательных и логарифмических функциях</a>&quot; мы можем совершить предельный переход к показателю:</p>
+<p class="display-math">$$ \limn \sqrt[n]{a} = a^{\lim\limits_{n\to\infty} \frac{1}{n}} = a^0 = 1 $$</p>
+<p>Мы также воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
 <p>$\blacksquare$</p>
 
                     </div>
 
                     <div class="reason-overlay">
-                        
+                        <span>Как следствие из прото-задачи "<a href="/proto/sequences/limits/exp-log-transition">Предельный переход в показательных и логарифмических функциях</a>"</span>
+
+                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="block-section solution  _hidden">
+                <div class="block-section-actions">
+                    <div title="Скрыть решение" class="action action--hide">
+                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
+                    </div>
+                </div>
+
+                <div class="block-section-header">
+                    <i class="fas fa-check"></i>
+                    <span>Решение 2 </span>
+                </div>
+                
+                <div class="block-section-container">
+                    
+                    <div class="reason">
+                        Полный вывод
+                    </div>
+
+                    <div class="block-section-content">
+                        <p>Если $a = 1$, то</p>
+<p class="display-math">$$ \limn \sqrt[n]{1} = \limn 1 = 1 $$</p>
+<hr>
+<p>Если $a&gt;1$, то докажем по определению предела:</p>
+<p class="display-math">$$ \limn \sqrt[n]{a} = 1 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |\sqrt[n]{a} - 1| < \varepsilon $$</p>
+<p>Займемся неравенством в конце:</p>
+<p class="display-math">$$ |\sqrt[n]{a} - 1| < \varepsilon $$</p>
+<p>Знаки модуля можно убрать, так как выражение под ним всегда больше $1$, так как $a&gt;1$:</p>
+<p class="display-math">\begin{gather*}
+    a^{\frac{1}{n}} - 1 < \varepsilon
+    \\[5px]
+    a^{\frac{1}{n}} < \varepsilon + 1
+\end{gather*}</p>
+<p>Прологарифмируем это неравество по основанию $a$, и, так как $a &gt; $, знак неравенства не поменяется:</p>
+<p class="display-math">$$ \frac{1}{n} < \log_{a} (\varepsilon + 1) $$</p>
+<p>Изолируем $n$:</p>
+<p class="display-math">$$ n > \frac{1}{\log_{a} (\varepsilon + 1)} $$</p>
+<p>Выбирать $N$ из определения предела будем по следующей формуле:</p>
+<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{|\log_a (\varepsilon + 1)|}} $$</p>
+<p>С таким $N$ любое $n &gt; N$ будет натуральным и будет удовлетворять следующему неравенству:</p>
+<p class="display-math">$$ n > N(\varepsilon) = \ceil{\frac{1}{|\log_a (\varepsilon + 1)|}} \geq \frac{1}{|\log_a (\varepsilon + 1)|} \geq \frac{1}{\log_a (\varepsilon + 1)} $$</p>
+<p class="display-math">$$ n > \frac{1}{\log_a (\varepsilon + 1)} $$</p>
+<p>Итак, для любого $\varepsilon &gt; 0$ мы нашли такое $N$, что все дальнешие $n$ будут удовлетворять неравенству</p>
+<p class="display-math">$$ |\sqrt[n]{a} - 1| < \varepsilon $$</p>
+<p>Мы доказали по определению предела, что</p>
+<p class="display-math">$$ \limn \sqrt[n]{a} = 1 $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p>Если $0 &lt; a &lt; 1$, введем новую величину $b$:</p>
+<p class="display-math">$$ b = \left(\frac{1}{a}\right) $$</p>
+<p>Заметим, что $b&gt;1$, так как $a &lt; 1$. Выразим $a$:</p>
+<p class="display-math">$$ a = \frac{1}{b} $$</p>
+<p>Возьмем корень $n$-ой степени из обеих частей равенства:</p>
+<p class="display-math">$$ \sqrt[n]{a} = \frac{\sqrt[n]{1}}{\sqrt[n]{b}} = \frac{1}{\sqrt[n]{b}} $$</p>
+<p>Теперь перейдем к нахождению предела:</p>
+<p class="display-math">$$ \limn \sqrt[n]{a} = \limn \frac{1}{\sqrt[n]{b}} = \frac{1}{\lim\limits_{n\to\infty} \sqrt[n]{b}} = \frac{1}{1} = 1 $$</p>
+<p>$\blacksquare$</p>
+
+                    </div>
+
+                    <div class="reason-overlay">
+                        <span>Полный вывод</span>
 
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
                     </div>
@@ -306,14 +307,14 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/exp-ratio" title="Предел отношения степенной и показательной последовательностей" target="_blank">
-                                    Предел отношения степенной и показательной последовательностей
+                                <a href="/proto/sequences/limits/exp-log-transition" title="Предельный переход в показательных и логарифмических функциях" target="_blank">
+                                    Предельный переход в показательных и логарифмических функциях
                                 </a>
                             </dt>
                             <dd></dd>
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
@@ -325,14 +326,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/62/" title="Следующая задача" class="next">
-                        <span class="label">62</span>
+                    <a href="../../tasks/64/" title="Следующая задача" class="next">
+                        <span class="label">64</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/60/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/62/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">60</span>
+                        <span class="label">62</span>
                     </a>
             </section>
         </section>

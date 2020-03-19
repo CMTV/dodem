@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Какое выражение больше при достаточно больших $n$:</p>\n<p class=\"display-math\">\\begin{align*}\n    &\\text{a) } 100n + 200 \\text{ или } 0.01n^2?; \\quad \\text{б) } 2^n \\text{ или } n^{1000}?;\n    \\\\\n    &\\text{в) } 1000^n \\text{ или } n!?\n\\end{align*}</p>"}

@@ -7,8 +7,8 @@
         <link rel="icon" href="../../../../favicon.png" type="image/png">
         <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
 
-        <title>Предел отношения степенной и показательной последовательностей | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="">
+        <title>Второй замечательный предел (последовательность) | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Подробный и понятный вывод второго замечательного предела для последовательностей.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -132,10 +132,10 @@
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Предел отношения степенной и показательной последовательностей
+                        Второй замечательный предел (последовательность)
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \frac{n^k}{a^n} = 0, \ a > 1 $$</p>
+                        <p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = e $$</p>
                     </div>
                 </div>
             </section>
@@ -166,112 +166,102 @@
                 
                 <div class="block-section-container">
                     <div class="block-section-content">
-                        <p><strong>Идея доказательства</strong></p>
-<p>Исходная последовательность всегда больше $0$, то есть с одной стороны она уже зажата:</p>
-<p class="display-math">$$ 0 < \frac{n^k}{a^n} $$</p>
-<p>Осталось найти такую хитрую убывающую геометрическую прогрессию, которая прижмет нашу последовательность справа:</p>
-<p class="display-math">$$ 0 < \frac{n^k}{a^n} < C\cdot q^n $$</p>
-<p>Левая и правая последовательности стремятся к $0$, а значит, по теореме о двух милиционерах, и наша исходная последовательность тоже стремится к $0$.</p>
-<p>Дальше мы будем заниматься выводом убывающей геометрической прогрессии.</p>
-<hr>
-<p>Рассмотрим последовательность из условия:</p>
-<p class="display-math">$$ x_n = \frac{n^k}{a^n} $$</p>
-<p>Выразим эту последовательность рекуррентно:</p>
-<p class="display-math">$$ x_{n+1} = x_{n} \cdot q_n$$</p>
-<p>Найдем, чем равно $q_n$:</p>
-<p class="display-math">$$ q_n = \frac{x_{n+1}}{x_n} = \frac{\frac{(n+1)^k}{a^{n+1}}}{\frac{n^k}{a^n}} = \frac{(n+1)^k}{a^{n+1}} \cdot \frac{a^n}{n^k} = \frac{1}{a}\cdot\left(\frac{n+1}{n}\right)^k $$</p>
-<p class="display-math">$$ q_n = \frac{1}{a}\left(\frac{n+1}{n}\right)^k $$</p>
-<p>Последовательность $q_n$ будем называть <strong>последовательностью приращений</strong>.</p>
-<hr>
-<p><strong>Лемма 1</strong></p>
-<p>Докажем, что последовательность приращений убывает, то есть:</p>
+                        <p>Докажем по методу математической индукции, что</p>
+<p class="display-math">$$ \frac{1}{n!} < \frac{1}{2^{n-1}}, \ n \geq 3 $$</p>
+<p>База индукции: пусть $n = 3$. Получаем:</p>
+<p class="display-math">$$ \frac{1}{6} < \frac{1}{4} $$</p>
+<p class="display-math">$$ 4 < 6 $$</p>
+<p>Индукционный переход:
+Предположим, что равенство выполняется для какого-то $k$:</p>
+<p class="display-math">$$ \frac{1}{k!} < \frac{1}{2^{k-1}} $$</p>
+<p>Домножим обе части неравенства на $\frac{1}{2}$:</p>
+<p class="display-math">$$ \frac{1}{k!\cdot 2} < \frac{1}{2^k} $$</p>
+<p>Осталось показать, что</p>
 <p class="display-math">\begin{align*}
-    q_{n+1} &< q_n \\[5px]
-    \frac{1}{a}\left(\frac{n+2}{n+1}\right)^k &< \frac{1}{a}\left(\frac{n+1}{n}\right)^k \\[5px]
-    \left(\frac{n+2}{n+1}\right)^k &< \left(\frac{n+1}{n}\right)^k \\[5px]
-    \frac{n+2}{n+1} &< \frac{n+1}{n} \\[5px]
-    n^2 + 2n &< n^2 + 2n + 1 \\[5px]
-    0 &< 1
+    \frac{1}{(k+1)!} &< \frac{1}{k!\cdot 2}
+    \\
+    \frac{1}{k!(k+1)} &< \frac{1}{k!\cdot 2}
+    \\
+    \frac{1}{k+1} &< \frac{1}{2}
+    \\
+    2 &< k+1
 \end{align*}</p>
-<p>Итак, мы доказали, что она действительно убывает.</p>
+<p>Последнее неравенство выполняется, так как по условию $k\geq 3$, а даже при $k=2$ уже имеем, что</p>
+<p class="display-math">$$ 2 < 2 + 1 < k+1 $$</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ \frac{1}{(k+1)!} < \frac{1}{k!\cdot 2} $$</p>
+<p>Но</p>
+<p class="display-math">$$ \frac{1}{(k+1)!} < \frac{1}{k!\cdot 2} < \frac{1}{2^k} $$</p>
+<p class="display-math">$$ \frac{1}{(k+1)!} < \frac{1}{2^k} $$</p>
+<p>Мы показали, что неравенство выполняется и для $k+1$. Индукционный переход доказан.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ \frac{1}{n!} < \frac{1}{2^{n-1}}, \ n \geq 3 $$</p>
+<hr>
+<p>Обозначим нашу последовательность из условия за $x_n$:</p>
+<p class="display-math">$$ x_n = \left(1+\frac{1}{n}\right)^n $$</p>
+<p><strong>Доказательство сходимости $x_n$</strong></p>
+<p>Воспользуемся формулой бинома Ньютона, которую мы вывели в <a href="/tasks/5">задаче 5</a>:</p>
+<p class="display-math">$$ (a+b)^n = \sum\limits_{k = 0}^{n} C_n^k a^{n-k} b^k $$</p>
+<p>Разложим по биному Ньютона $n$-ый член последовательности $x_n$:</p>
+<p class="display-math">\begin{gather*}
+    x_n = \left( 1 + \frac{1}{n} \right)^n = \sum\limits_{k = 0}^{n} C_n^k \frac{1}{n}^k
+\end{gather*}</p>
+<p>Рассмотрим $k$-ый член этой суммы:</p>
+<p class="display-math">$$ s_k = C_n^k \frac{1}{n}^k = \frac{1}{k!}\cdot\frac{n!}{n^k(n-k)!} $$</p>
+<p>Но</p>
+<p class="display-math">$$ \frac{n!}{(n-k)!} = \overbrace{n(n-1)(n-2)\ldots(n-k+1)}^{k\text{ множителей}} $$</p>
+<p>Поэтому перезапишем формулу для $s_k$:</p>
+<p class="display-math">$$ s_k = \frac{1}{k!} \cdot \frac{n(n-1)(n-2)\ldots(n-k+1)}{n^k} $$</p>
+<p>Теперь каждый множитель числителя будем поделим на ровно одно $n$ в знаменателе. $n^k$ хватит на все $k$ множителей в числителе:</p>
+<p class="display-math">$$ s_k = \frac{1}{k!} \cdot \overbrace{\frac{n}{n} \left(1-\frac{1}{n}\right)\left(1-\frac{2}{n}\right)\ldots\left(1 - \frac{k-1}{n}\right)}^{k\text{ множителей}} $$</p>
+<p>Изучим $s_k$. Во-первых, $s_k &gt; 0$, так как $\frac{1}{k!} &gt; 0$ и каждая скобка больше нуля.
+Более того, если вместо $n$ поставить $n+1$, то вычитаемая из $1$ дробь в каждой скобке уменьшится, а значит сама скобка увеличится (кроме $s_0$ и $s_1$, где скобок вообще нет).</p>
+<p>Теперь, с готовой формулой для $s_k$, запишем новую формулу для $x_n$:</p>
+<p class="display-math">\begin{gather*}
+    x_n = \left( 1 + \frac{1}{n} \right)^n = \sum\limits_{k = 0}^{n} s_k = s_0 + s_1 + \ldots + s_n =
+    \\[5px]
+    = 1 + 1 + s_2 + s_3 + \ldots + s_n
+\end{gather*}</p>
+<p>При увеличении $n$ на единицу в конце суммы добавится еще одно слагаемое $s_{n+1}$. Плюс, как мы уже выяснили, каждое из $s_k$ увеличится (за исключением $s_0$ и $s_1$).
+Раз увеличилось число слагаемых и увеличилось каждое слагаемое по отдельности, то и сумма стала больше.</p>
+<p>Поэтому последовательность $x_n$ возрастает.</p>
+<p>Снова рассмотрим $s_k$, начиная со $2$ элемента, когда появляется первая скобка:</p>
+<p class="display-math">$$ s_k = \frac{1}{k!} \cdot \frac{n}{n} \left(1-\frac{1}{n}\right)\left(1-\frac{2}{n}\right)\ldots\left(1 - \frac{k-1}{n}\right) $$</p>
+<p>Каждая скобка меньше $1$. Поэтому, заменив все скобки на $1$, получаем неравенство:</p>
+<p class="display-math">$$ s_k < \frac{1}{k!}, \ k \geq 2 $$</p>
+<p>Сделаем подобную замену для всех $s_k$ в сумме, начиная с $s_2$:</p>
+<p class="display-math">\begin{gather*}
+    x_n = s_0 + s_1 + s_2 + s_3 + \ldots + s_n =
+    \\[5px]
+    = 1 + 1 + s_2 + s_3 + \ldots + s_n < 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!}
+\end{gather*}</p>
+<p>Усилим неравенство заменив все дроби вида $\frac{1}{k!}$ на $\frac{1}{2^k}$, начиная с третьего члена суммы. Усилится оно потому, что в самом начале решения мы доказали, что</p>
+<p class="display-math">$$ \frac{1}{k!} < \frac{1}{2^k}, \ k\geq 3 $$</p>
+<p class="display-math">\begin{gather*}
+    x_n = s_0 + s_1 + s_2 + s_3 + \ldots + s_n <
+    \\[5px]
+    < 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} < 1 + \left(1 + \frac{1}{2^1} + \frac{1}{2^2} + \ldots + \frac{1}{2^{k-1}}\right)
+\end{gather*}</p>
+<p>В скобках у нас получаеся сумма первых $n$ членов геометрической прогрессии с знаменателем $\frac{1}{2}$ и первым членом, равным $1$.
+Воспользуемся формулой суммы членов геометрической прогрессии:</p>
+<p class="display-math">$$ \left(1 + \frac{1}{2^1} + \frac{1}{2^2} + \ldots + \frac{1}{2^{k-1}}\right) = \frac{1\cdot(\frac{1}{2^n} - 1)}{\frac{1}{2} - 1} = 2\cdot\left(1 - \frac{1}{2^n}\right) $$</p>
+<p>Последняя скобка всегда меньше $1$, поэтому заменяем ее на $1$ и получаем, что</p>
+<p class="display-math">$$ \left(1 + \frac{1}{2^1} + \frac{1}{2^2} + \ldots + \frac{1}{2^{k-1}}\right) = 2\cdot\left(1 - \frac{1}{2^n}\right) < 2 $$</p>
+<p>Возвращаемся обратно к нашей большой сумме:</p>
+<p class="display-math">\begin{gather*}
+    x_n = s_0 + s_1 + s_2 + s_3 + \ldots + s_n <
+    \\[5px]
+    < 1 + 1 + \frac{1}{2!} + \ldots + \frac{1}{n!} < 1 + \left(1 + \frac{1}{2^1} + \ldots + \frac{1}{2^{k-1}}\right) =
+    \\[5px]
+    = 1 + 2\cdot\left(1 - \frac{1}{2^n}\right) < 1 + 2 = 3
+\end{gather*}</p>
+<p>Наконец, получили верхнюю границу для $x_n$:</p>
+<p class="display-math">$$ x_n < 3 $$</p>
+<p>Итак, последовательность $x_n$ возрастает и ограничена сверху числом $3$. Любая монотонная и ограниченная последовательность имеет предел, а значит и $x_n$ имеет предел.</p>
 <p>$\blacksquare$</p>
 <hr>
-<p><strong>Лемма 2</strong></p>
-<p>Докажем, что, начиная с какого-то номера $t$, последовательность приращений будет строго меньше $1$:</p>
-<p class="display-math">$$ \exists t \ : \ q_{t} < 1 $$</p>
-<p>Рассмотрим неравенство в правой части:</p>
-<p class="display-math">$$ q_{t} < 1 $$</p>
-<p class="display-math">$$ \frac{1}{a}\left(\frac{t+1}{t}\right)^k < 1 $$</p>
-<p>Домножаем обе части на $a$:</p>
-<p class="display-math">$$ \left(\frac{t+1}{t}\right)^k < a $$</p>
-<p>Берем корень $k$-ой степени из обеих частей неравенства:</p>
-<p class="display-math">$$ \frac{t+1}{t} = 1 + \frac{1}{t} < \sqrt[k]{a} $$</p>
-<p>Вычитаем $1$ из обеих частей:</p>
-<p class="display-math">$$ \frac{1}{t} < \sqrt[k]{a} - 1 $$</p>
-<p>Делим обе части на $\sqrt[k]{a} - 1$ (знаки не меняются, так как $\sqrt[k]{a} - 1 &gt; 0$) и умножаем на $t$:</p>
-<p class="display-math">$$ t > \frac{1}{\sqrt[k]{a} - 1} $$</p>
-<p>Так как $t$ натуральное (ведь это номер элемента последовательности), возьмем за $t$ округление сверху (&quot;потолок&quot;) полученного выше выражения, увеличенного на $1$:</p>
-<p class="display-math">$$ t = \ceil{\frac{1}{\sqrt[k]{a} - 1}} + 1 > \ceil{\frac{1}{\sqrt[k]{a} - 1}} \geq \frac{1}{\sqrt[k]{a} - 1} $$</p>
-<p>Итак, мы нашли такой номер $t$, что соответствующий ему член последовательности приращений $q_t$ будет строго меньше $1$.</p>
-<p>$\blacksquare$</p>
-<hr>
-<p><strong>Следствие</strong></p>
-<p>В лемме 2 мы доказали, что существует такой номер $t$, что</p>
-<p class="display-math">$$ 1 > q_t $$</p>
-<p>В лемме 1 мы доказали, что последовательность $q_n$ убывает. Это значит, что следующие члены после $q_t$ будут строго меньше $1$:</p>
-<p class="display-math">$$ 1 > q_t > q_{t+1} > q_{t+2} > \ldots $$</p>
-<hr>
-<p><strong>Доказательство значения предела</strong></p>
-<p>Рассмотрим члены исходной последовательности $x_n$, начиная с номера $t+1$:</p>
-<p class="display-math">\begin{align*}
-    x_{t+1} &= x_t \cdot q_t 
-    \\
-    x_{t+2} = x_{t+1} \cdot q_{t+1} &= x_t \cdot q_t q_{t+1}
-    \\
-    x_{t+3} = x_{t+2} \cdot q_{t+2} &= x_t \cdot q_t q_{t+1} q_{t+2}
-    \\
-    &\ldots
-\end{align*}</p>
-<p>Пользуясь цепным неравенством в следствии выше, замечаем, что</p>
-<p class="display-math">\begin{align*}
-    q_t^2 &> q_t q_{t+1}
-    \\
-    q_t^3 &> q_t q_{t+1} q_{t+2}
-    \\
-    &\ldots
-\end{align*}</p>
-<p>Поэтому справедливы следующие неравенства:</p>
-<p class="display-math">\begin{align*}
-    x_{t+1} &\leq x_t\cdot q_t
-    \\
-    x_{t+2} &< x_t\cdot q_t^2
-    \\
-    x_{t+3} &< x_t\cdot q_t^3
-    \\
-    &\ldots
-    \\
-    x_{t+k} &< x_t\cdot q_t^{k}
-\end{align*}</p>
-<p>Обозначим $n = t + k$, получаем следующее неравенство $n$-го члена последовательности, <strong>начиная</strong> с $t+1$-го элемента:</p>
-<p class="display-math">$$ x_n \leq x_t\cdot q_t^{n-t}, \ n > t $$</p>
-<p>Преобразуем $q^{n-t}$:</p>
-<p class="display-math">$$ q_t^{n-t} = q_t^n\cdot q_t^{-t} = \frac{q_t^n}{q_t^t} $$</p>
-<p class="display-math">$$ x_n \leq \frac{x_t}{q_t^t}\cdot q_t^n, \ n > t $$</p>
-<p>Заменим теперь $x_n$ и $x_t$ на соостветствующие выражения:</p>
-<p class="display-math">$$ \frac{n^k}{a^n} \leq \frac{t^k}{a^t\cdot q_t^t} \cdot q_t^n, \ n > t $$</p>
-<p>Теперь &quot;зажмем&quot; эту последовательность между $0$ и правой частью выведенного неравенства:</p>
-<p class="display-math">$$ 0 < \frac{n^k}{a^n} \leq \frac{t^k}{a^t\cdot q_t^t} \cdot q_t^n $$</p>
-<p>На первые $t$ членов последовательности, для которых неравенство в правой части может не выполняться не обращаем внимание.
-На предел эти первые $t$ членов не окажут никакого влияния.</p>
-<p>&quot;Последовательность&quot; в левой части неравенства состоит из одних $0$ и, очевидно, стремится к $0$.</p>
-<p>Выясним предел последовательности в правой части неравенства (принимая во внимание, что дробь является громоздкой константой и не зависит от $n$):</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{t^k}{a^t\cdot q_t^t} \cdot q_t^n = \frac{t^k}{a^t\cdot q_t^t} \lim_{n\to\infty} q_t^n = \frac{t^k}{a^t\cdot q_t^t} \cdot 0 = 0 $$</p>
-<p>Тут мы использовали тот факт, геометрическая прогрессия со знаменателем, который меньше $1$ ($q_t$ по лемме 2 действительно меньше $1$) стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
-<p>Итак, наша последовательность из условия зажата с одной строны нулем (который $\to 0$) и, начиная с номера $t$, зажата с другой стороны убывающей геометрической прогрессией (которая тоже $\to 0$), а значит, по теореме о двух
-милиционерах, &quot;зажатая&quot; последовательность тоже стремится к $0$.</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n^k}{a^n} = 0, \ (a>1) $$</p>
-<p>$\blacksquare$</p>
-
+<p>Мы показали, что последовательность $x_n$ имеет предел. Этот предел называют <strong>числом $e$</strong>:</p>
+<p class="display-math">$$ \left( 1 + \frac{1}{n} \right)^n = e \approx 2.71828 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -291,6 +281,26 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section refs">
+                <div class="block-section-header">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Ссылки</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/tasks/69" title="Задача 69" target="_blank">
+                                    Задача 69
+                                </a>
+                            </dt>
+                            <dd>Альтернативный способ вывода второго замечательного предела для последовательностей.</dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
         </section>
 

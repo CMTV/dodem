@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>61 | Демидович. Решения</title>
-        <meta name="description" content="$$ \lim_{n\to\infty} \frac{a^n}{n!} &#x3D; 0 $$">
+        <title>69 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что последовательность$$ x_n &#x3D; \left( 1 + \frac{1}{n} \right)^{n} \ (n &#x3D; 1,2,\ldots) $$монотонно возрастает и ограничена сверху, а последовательность$$ y_n &#x3D; \left( 1 + \frac{1}{n} \right)^{n+1} \ (n &#x3D; 1,2,\ldots) $$монотонно убывает и ограничена снизу. Отсюда вывести, что эти последовательности имеют общий предел$$ \limn \left( 1 + \frac{1}{n} \right)^n &#x3D; \limn \left( 1 + \frac{1}{n} \r">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -128,7 +128,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>61</span>
+                    <span>69</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -145,11 +145,27 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \lim_{n\to\infty} \frac{a^n}{n!} = 0 $$</p>
+                        <p>Доказать, что последовательность</p>
+<p class="display-math">$$ x_n = \left( 1 + \frac{1}{n} \right)^{n} \ (n = 1,2,\ldots) $$</p>
+<p>монотонно возрастает и ограничена сверху, а последовательность</p>
+<p class="display-math">$$ y_n = \left( 1 + \frac{1}{n} \right)^{n+1} \ (n = 1,2,\ldots) $$</p>
+<p>монотонно убывает и ограничена снизу. Отсюда вывести, что эти последовательности имеют общий предел</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = \limn \left( 1 + \frac{1}{n} \right)^{n+1} = e $$</p>
                     </div>
                 </div>
             </section>
 
+            <section class="block-section hint">
+                <div class="block-section-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Указание</span>
+                </div>
+
+                <div class="block-section-container">
+                    <div class="block-section-content"><p>Составить соотношения $\frac{x_{n+1}}{x_n}, \frac{y_n}{y_{n+1}}$ и воспользоваться неравенством <a href="/tasks/7">примера 7</a>.</p>
+</div>
+                </div>
+            </section>
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -183,87 +199,115 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><span style="color: red;">Эту задачу <b>невозможно</b> решить без детального разбора решения <a href="/tasks/60">60 задачи</a>. Убедитесь, что полностью понимаете путь доказательства в той задаче и только после этого приступайте к решению этой.</span></p>
+                        <p><strong>Убывание $y_n$)</strong></p>
+<p class="display-math">$$ y_n = \left(1 + \frac{1}{n}\right)^{n+1} = \left( \frac{n+1}{n} \right)^{n+1} $$</p>
+<p>Покажем, что эта последовательность убывает, то есть</p>
+<p class="display-math">$$ y_n > y_{n+1} $$</p>
+<p class="display-math">$$ \frac{y_n}{y_{n+1}} > 1 $$</p>
+<p class="display-math">\begin{gather*}
+    \frac{ \left( \frac{n+1}{n} \right)^{n+1} }{ \left( \frac{n+2}{n+1} \right)^{n+2} } > 1
+    \\[10px]
+    \frac{ \left( \frac{n+1}{n} \right)^{n+1} }{ \left( \frac{n+2}{n+1} \right)^{n+1} \left(\frac{n+2}{n+1}\right) } > 1
+    \\[10px]
+    \left( \frac{ \frac{n+1}{n} }{ \frac{n+2}{n+1} } \right)^{n+1} > \frac{n+1}{n+2}
+    \\[10px]
+    \left( \frac{(n+1)^2}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
+    \\[10px]
+    \left( \frac{n^2 + 2n + 1}{n^2 + 2n} \right)^{n+1} > \frac{n+1}{n+2}
+    \\[10px]
+    \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
+\end{gather*}</p>
+<p>Для левой части воспользуемся неравенством Бернулли, которое доказывается в <a href="/tasks/7">задаче 7</a>:</p>
+<p class="display-math">$$ \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} \geq 1 + \frac{n+1}{n(n+2)}  $$</p>
+<p>Продолжаем преобразования:</p>
+<p class="display-math">\begin{align*}
+    1 + \frac{n+1}{n(n+2)} &> \frac{n+1}{n+2}
+    \\[5px]
+    \frac{n(n+2) + (n+1)}{n(n+2)} &> \frac{n+1}{n+2}
+    \\[5px]
+    \frac{n(n+2) + (n+1)}{n} &> n+1
+    \\[5px]
+    n^2 + 3n + 1 &> n^2 + n
+    \\[5px]
+    2n + 1 &> 0
+\end{align*}</p>
+<p>Последнее неравенство очевидно выполняется, так как слева строго положительное число.
+Мы доказали, что</p>
+<p class="display-math">$$ y_n > y_{n+1} $$</p>
+<p>Это значит, что последовательность $y_n$ убывает.</p>
+<p><strong>Сходимость $y_n$)</strong></p>
+<p>Все члены последовательности $y_n$ положительные, а значит, она ограничена снизу $0$.</p>
+<p>Итак, $y_n$ убывает, но ограничена снизу. Любая монотонная и ограниченная последовательность имеет предел. Значит и $y_n$ имеет предел.</p>
+<p class="display-math">$$ \limn y_n = Y $$</p>
 <hr>
-<p>Если $a=0$, то</p>
-<p class="display-math">$$ \frac{0^n}{n!} = 0 $$</p>
-<p>И тогда</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{0^n}{n!} = \lim_{n\to\infty} 0 = 0 $$</p>
+<p><strong>Возрастание $x_n$)</strong></p>
+<p class="display-math">$$ x_n = \left(1 + \frac{1}{n}\right)^n = \left( \frac{n+1}{n} \right)^n $$</p>
+<p>Покажем, что эта последовательность возрастает, то есть</p>
+<p class="display-math">$$ x_{n+1} > x_n $$</p>
+<p class="display-math">$$ \frac{x_{n+1}}{x_n} > 1 $$</p>
+<p class="display-math">\begin{gather*}
+    \frac{ \left( \frac{n+2}{n+1} \right)^{n+1} }{ \left( \frac{n+1}{n} \right)^{n} } > 1
+    \\[10px]
+    \frac{ \left( \frac{n+2}{n+1} \right)^n \left( \frac{n+2}{n+1} \right) }{ \left( \frac{n+1}{n} \right)^{n} } > 1
+    \\[10px]
+    \left( \frac{ \frac{n+2}{n+1} }{ \frac{n+1}{n} } \right)^n > \frac{n+1}{n+2}
+    \\[10px]
+    \left( \frac{n(n+2)}{(n+1)^2} \right)^n > \frac{n+1}{n+2}
+    \\[10px]
+    \left( \frac{n^2 + 2n + 1 - 1}{n^2 + 2n + 1} \right)^n > \frac{n+1}{n+2}
+    \\[10px]
+    \left( 1 - \frac{1}{(n+1)^2} \right)^n > \frac{n+1}{n+2}
+\end{gather*}</p>
+<p>Так как</p>
+<p class="display-math">$$ - \frac{1}{(n+1)^2} > -1, $$</p>
+<p>то мы можем воспользоваться неравенством Бернулли:</p>
+<p class="display-math">$$ \left( 1 - \frac{1}{(n+1)^2} \right)^n \geq 1 - \frac{n}{(n+1)^2} $$</p>
+<p>Продолжаем преобразования:</p>
+<p class="display-math">\begin{align*}
+    1 - \frac{n}{(n+1)^2} &> \frac{n+1}{n+2}
+    \\[5px]
+    \frac{(n+1)^2 - n}{(n+1)^2} &> \frac{n+1}{n+2}
+    \\[5px]
+    (n^2 + n + 1)(n+2) &> (n+1)^3
+    \\[5px]
+    n^3 + 3n^2 + 3n + 2 &> n^3 + 3n^2 + 3n + 1
+    \\[5px]
+    2 &> 1
+\end{align*}</p>
+<p>Последнее неравенство очевидно верно.
+Мы доказали, что</p>
+<p class="display-math">$$ x_{n+1} > x_n $$</p>
+<p>Это значит, что последовательность $x_n$ убывает.</p>
+<p><strong>Сходимость $y_n$)</strong></p>
+<p>Докажем, что $x_n &lt; y_n$:</p>
+<p class="display-math">$$ \left(1+\frac{1}{n}\right)^n < \left(1+\frac{1}{n}\right)^{n+1} $$</p>
+<p class="display-math">$$ 1 < 1+\frac{1}{n} $$</p>
+<p class="display-math">$$ 0 < \frac{1}{n} $$</p>
+<p>Итак, любой член $x_n$ ограничен сверху $y_n$.</p>
+<p>В качестве общей границы возьмем $y_1$</p>
+<p class="display-math">$$ y_1 = \left(1 + \frac{1}{1}\right)^{2} = 4 $$</p>
+<p>Получили верхнюю границу для $x_n$:</p>
+<p class="display-math">$$ x_n < 4 $$</p>
+<p>Итак, $x_n$ возрастает, но ограничена сверху числом $4$. Любая монотонная и ограниченная последовательность имеет предел. Значит и $x_n$ имеет предел.</p>
+<p class="display-math">$$ \limn x_n = X $$</p>
 <hr>
-<p>Воспользуемся свойством модуля:</p>
-<p class="display-math">$$ -|a| \leq a \leq |a| $$</p>
-<p>Применим его для числителя последовательности:</p>
-<p class="display-math">$$ -|a^n| \leq a^n \leq |a^n| $$</p>
-<p>Воспользуемся еще одним свойством модуля:</p>
-<p class="display-math">$$ |a\cdot b| = |a||b| $$</p>
-<p>С помощью этого свойства можно &quot;вытащить&quot; показатель степени из-под модуля:</p>
-<p class="display-math">$$ |a^n| = |a\cdot a\cdot a\cdot\ldots| = |a||a||a|\ldots = |a|^n $$</p>
-<p>Поэтому полученное для числителя цепное неравенство можно переписать так:</p>
-<p class="display-math">$$ -|a|^n \leq a^n \leq |a|^n $$</p>
-<p>Поделим это неравенство на положительное $n!$:</p>
-<p class="display-math">$$ -\frac{|a|^n}{n!} \leq \frac{a^n}{n!} \leq \frac{|a|^n}{n!} $$</p>
-<p>Нам достаточно лишь показать, что</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Если это так, последовательность из условия будет автоматом &quot;зажата&quot; между двумя последовательностями, стремящимися к $0$, а значит, по теореме о двух милиционерах, сама будет стремиться к $0$.</p>
-<hr>
-<p>Итак, дальше мы будем доказывать, что</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Путь доказательства <strong>абсолютно такой же</strong>, что и в доказательстве в прото-задаче &quot;<a href="/proto/sequences/limits/exp-ratio">Предел отношения степенной и показательной последовательностей</a>&quot;.
-Внимательно его изучите. Далее будут только основные шаги, некоторые переходы не будут поясняться!</p>
-<hr>
-<p>Представим последовательность $\frac{|a|^n}{n!}$ в рекуррентом виде:</p>
-<p class="display-math">$$ x_{n+1} = x_n\cdot q_n, $$</p>
-<p>где, $q_n$ — <strong>последовательность приращений</strong>.</p>
-<p>Выясним, чему равен каждый член $q_n$:</p>
-<p class="display-math">$$ q_n = \frac{x_{n+1}}{x_n} = \frac{\frac{|a|^{n+1}}{(n+1)!}}{\frac{|a|^n}{n!}} = \frac{|a|^n\cdot |a|}{n!\cdot(n+1)} \cdot \frac{n!}{|a|^n} = \frac{|a|}{n+1} $$</p>
-<p class="display-math">$$ q_n = \frac{|a|}{n+1} $$</p>
-<hr>
-<p>Покажем, что последовательность приращений $q_n$ убывает:</p>
-<p class="display-math">$$ q_{n+1} < q_n $$</p>
-<p class="display-math">$$ \frac{|a|}{n+2} < \frac{|a|}{n+1} $$</p>
-<p>Делим обе части на $|a|$ (смены знаков не будет, так как $|a|&gt;0$):</p>
-<p class="display-math">$$ \frac{1}{n+2} < \frac{1}{n+1} $$</p>
-<p>&quot;Переворачиваем&quot; дроби:</p>
-<p class="display-math">$$ n+2 > n+1 $$</p>
-<p class="display-math">$$ 2 > 1 $$</p>
-<p>Итак, мы доказали, что $q_n$ убывает.</p>
-<p>$\blacksquare$</p>
-<hr>
-<p>Докажем, что найдется такой номер $t$, что $q_t$ будет строго меньше $1$:</p>
-<p class="display-math">$$ \exists t \ : \ q_t < 1 $$</p>
-<p>Разбираемся с неравенством в конце:</p>
-<p class="display-math">$$ q_t < 1 $$</p>
-<p class="display-math">$$ \frac{|a|}{t + 1} < 1 $$</p>
-<p>Домножаем обе части на $t+1$:</p>
-<p class="display-math">$$ |a| < t +1 $$</p>
-<p>Изолируем $t$:</p>
-<p class="display-math">$$ t > |a| - 1 $$</p>
-<p>Так как $t$ натуральное (ведь это номер элемента последовательности), возьмем за $t$ округление сверху (&quot;потолок&quot;) полученного выше выражения, увеличенного на $1$:</p>
-<p class="display-math">$$ t = \ceil{|a|-1} + 1 > \ceil{|a|-1} \geq |a| - 1 $$</p>
-<p>Итак, мы нашли такой номер $t$, что соответствующий ему член последовательности приращений $q_t$ будет строго меньше $1$.</p>
-<p>$\blacksquare$</p>
-<hr>
-<p>Теперь сразу переходим к готовому неравенству (разъяснение смотрите в прото-задаче, о которой говорилось выше):</p>
-<p class="display-math">$$ x_n \leq \frac{x_t}{q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>Заменим $x_n$ и $x_t$ на соостветствующие выражения:</p>
-<p class="display-math">$$ \frac{|a|^n}{n!} \leq \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>Теперь &quot;зажмем&quot; эту последовательность между $0$ и правой частью выведенного неравенства:</p>
-<p class="display-math">$$ 0 < \frac{|a|^n}{n!} \leq \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^{n}, \ n > t $$</p>
-<p>На первые $t$ членов последовательности, для которых неравенство в правой части может не выполняться не обращаем внимание.
-На предел эти первые $t$ членов не окажут никакого влияния.</p>
-<p>&quot;Последовательность&quot; в левой части неравенства состоит из одних $0$ и, очевидно, стремится к $0$.</p>
-<p>Выясним предел последовательности в правой части неравенства (принимая во внимание, что дробь является громоздкой константой и не зависит от $n$):</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^t}{t!\cdot q_t^t} \cdot q_t^n = \frac{|a|^t}{t!\cdot q_t^t} \lim_{n\to\infty} q_t^n = \frac{|a|^t}{t!\cdot q_t^t} \cdot 0 = 0 $$</p>
-<p>Тут мы использовали тот факт, геометрическая прогрессия со знаменателем, который меньше $1$ (а $q_t$ у нас по определению меньше $1$) стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
-<p>Итак, наша последовательность $\frac{|a|^n}{n!}$ зажата с одной строны нулем (который $\to 0$) и, начиная с номера $t$, зажата с другой стороны убывающей геометрической прогрессией (которая тоже $\to 0$), а значит, по теореме о двух
-милиционерах, &quot;зажатая&quot; последовательность тоже стремится к $0$.</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{|a|^n}{n!} = 0 $$</p>
-<p>Это означает, что последовательности слева и справа в выведенном в начале решения неравенстве стремятся к $0$:</p>
-<p class="display-math">$$ -\frac{|a|^n}{n!} \leq \frac{a^n}{n!} \leq \frac{|a|^n}{n!} $$</p>
-<p>И вновь, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже стремится к $0$:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{a^n}{n!} = 0 $$</p>
-<p>$\blacksquare$</p>
-
+<p><strong>Одинаковость пределов $x_n$ и $y_n$)</strong></p>
+<p>Найдем предел отношения $y_n$ и $x_n$:</p>
+<p class="display-math">\begin{gather*}
+    \limn \frac{y_n}{x_n} = \limn \frac{ \left(1 + \frac{1}{n}\right)^{n+1} }{ \left(1 + \frac{1}{n}\right)^n } = \limn 1 + \frac{1}{n} =
+    \\[5px]
+    = 1 + \limn \frac{1}{n} = 1 + 0 = 1
+\end{gather*}</p>
+<p>Мы воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+<p>Итак,</p>
+<p class="display-math">$$ \limn \frac{y_n}{x_n} = 1 $$</p>
+<p>Но $x_n$ и $y_n$ сходятся, причем предел $x_n &gt; 0$, поэтому можно воспользоваться правилом разделения пределов в дробях:</p>
+<p class="display-math">$$ \limn \frac{y_n}{x_n} = \frac{\lim\limits_{n\to\infty} y_n}{\lim\limits_{n\to\infty} x_n} = \frac{Y}{X} = 1 $$</p>
+<p>Получается, что</p>
+<p class="display-math">$$ \frac{Y}{X} = 1 $$</p>
+<p class="display-math">$$ Y = X $$</p>
+<p>Доказали, что пределы $y_n$ и $x_n$ совпадают. Их общий предел и называют <strong>числом $e$</strong>.</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = \limn \left( 1 + \frac{1}{n} \right)^{n+1} = e $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -306,14 +350,8 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/exp-ratio" title="Предел отношения степенной и показательной последовательностей" target="_blank">
-                                    Предел отношения степенной и показательной последовательностей
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
@@ -324,15 +362,31 @@
 
 
 
-            <section class="nav">
-                    <a href="../../tasks/62/" title="Следующая задача" class="next">
-                        <span class="label">62</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
+            <section class="block-section refs">
+                <div class="block-section-header">
+                    <i class="fas fa-external-link-alt"></i>
+                    <span>Ссылки</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
 
-                    <a href="../../tasks/60/" title="Предыдущая задача" class="prev">
+                            <dt>
+                                <a href="/proto/sequences/limits/second-wonderful" title="Второй замечательный предел (последовательность)" target="_blank">
+                                    Второй замечательный предел (последовательность)
+                                </a>
+                            </dt>
+                            <dd>Доказательство сходимости $x_n$ через бином Ньютона</dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
+            <section class="nav">
+
+                    <a href="../../tasks/68/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">60</span>
+                        <span class="label">68</span>
                     </a>
             </section>
         </section>
