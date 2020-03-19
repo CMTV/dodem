@@ -296,7 +296,7 @@ function getSrcTask(taskNumber)
         });
     }
 
-    if (fs.existsSync(p.join(path, 'hint.html') || fs.existsSync(p.join(path, 'hint.md'))))
+    if (fs.existsSync(p.join(path, 'hint.html')) || fs.existsSync(p.join(path, 'hint.md')))
     {
         task.hint_src = getSrc('hint', taskNumber);
     }

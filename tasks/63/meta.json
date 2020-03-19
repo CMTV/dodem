@@ -1,0 +1,19 @@
+{
+    "task": 63,
+    "location": "I.2",
+
+    "solvers": 
+    {
+        "CMTV":
+        [
+            "Как следствие из прото-задачи \"<a href=\"/proto/sequences/limits/exp-log-transition\">Предельный переход в показательных и логарифмических функциях</a>\"",
+            "Полный вывод"
+        ]
+    },
+
+    "proto":
+    [
+        "sequences/limits/exp-log-transition",
+        "sequences/limits/elementary"
+    ]
+}
