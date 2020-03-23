@@ -398,6 +398,30 @@
                 background-color: $border-color;
                 margin-bottom: 15px;
             }
+
+            // Images
+
+            img { width: 100%; height: auto; }
+
+            @for $i from 1 through 9
+            {
+                .w#{$i}
+                {
+                    text-align: center;
+
+                    img { width: 10% * $i; }
+
+                    &:not(.const)
+                    {
+                        @include layout(mini)
+                        {
+                            img { width: 100%; }
+                        }
+                    }
+                }
+            }
+
+            // \\
         }
     }
 }

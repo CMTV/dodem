@@ -9,6 +9,10 @@ const mdIt =        require('markdown-it')({
     superscript: false
 });
 
+mdIt.use(require('markdown-it-attrs'), {
+    leftDelimiter: '{:'
+});
+
 const TASKS_NUM = 4462;
 
 //
