@@ -19,9 +19,10 @@
                     displayMath: [['$$', '$$']],
                     tags: 'ams',
                     macros: {
-                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],
-                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],
-                        limn: ["\\lim_{n\\to\\infty}"]
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                   // Обрамление аргумента в { }
                     }
                 }
             };
@@ -183,23 +184,16 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Разложим $|x|$ на два неравенства (см. прото-задачу &quot;<a href="/proto/abs-expand">Разложение модуля в неравенстве</a>&quot;):</p>
-<p class="display-math">$$ |x| > |x+1| \Leftrightarrow \begin{cases} x > |x+1| \\ x < -|x+1| \end{cases} $$</p>
-<p>Рассмотрим первое неравенство:</p>
-<p class="display-math">$$ x > |x+1| $$</p>
-<p>Вновь используем разложение:</p>
-<p class="display-math">$$ |x+1| < x \Leftrightarrow \begin{cases} x+1 < x \\ x+1 > -x \end{cases} $$</p>
-<p>Из $x+1 &lt; x$, после вычитания $x$ приходим к противоречию: $ 1 &lt; 0 $.
-Из $x+1 &gt; -x$, после прибавления $x$ получаем $2x + 1 &gt; 0$. Делим обе части на $2$ и изолируем $x$:</p>
-<p class="display-math">$$ x > -\frac{1}{2} $$</p> 
-<p>Рассмотрим второе неравенство:</p>
-<p class="display-math">$$ x < -|x+1| $$</p>
-<p>Умножим на $-1$:</p>
-<p class="display-math">$$ |x+1| < -x $$</p>
-<p>Разложим:</p>
-<p class="display-math">$$ |x+1| < -x \Leftrightarrow \begin{cases} x+1 < -x \\ x+2 > x \end{cases} $$</p>
-<p>Из $x+2 &lt; -x$, после прибавления $x$ получаем $2x + 2 &lt; 0$. Делим обе части на $2$</p>
-
+                        <p>Разложим неравенство &quot;на квадраты&quot; (см. пункт 3 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенстве</a>&quot;):</p>
+<p class="display-math">$$ |x| > |x+1| \Leftrightarrow x^2 > (x+1)^2 $$</p>
+<p class="display-math">\begin{align*}
+    x^2 &> (x+1)^2 \\
+    x^2 &> x^2 + 2x + 1 \\
+    0 &> 2x + 1 \\
+    -1 &> 2x
+\end{align*}</p>
+<p>В результате, получаем</p>
+<p class="display-math">$$ x < -\frac{1}{2} $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -255,8 +249,8 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/30/" title="Следующая задача" class="next">
-                        <span class="label">30</span>
+                    <a href="../../tasks/25/" title="Следующая задача" class="next">
+                        <span class="label">25</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 

@@ -1,0 +1,355 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+        <title>13 | Демидович. Решения</title>
+        <meta name="description" content="Построив соответствующие сечения, доказать равенства:$$ \text{а) } \sqrt{2} + \sqrt{8} &#x3D; \sqrt{18}; \quad \text{б) } \sqrt{2}\sqrt{3} &#x3D; \sqrt{6} $$">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                   // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../../';
+        </script>
+
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
+    <body class="page-task">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="block-section task">
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>13</span>
+                </div>
+                <div class="block-section-container">
+                    <div class="task-nav">
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Вещественные числа" class="paragraph">
+                            └─ <span class="accent">§1</span>
+                            <span class="title">Вещественные числа</span>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="block-section-content">
+                        <p>Построив соответствующие сечения, доказать равенства:</p>
+<p class="display-math">$$ \text{а) } \sqrt{2} + \sqrt{8} = \sqrt{18}; \quad \text{б) } \sqrt{2}\sqrt{3} = \sqrt{6} $$</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
+                    <div title="Скрыть решение" class="action action--hide">
+                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
+                    </div>
+                </div>
+
+                <div class="block-section-header">
+                    <i class="fas fa-check"></i>
+                    <span>Решение</span>
+                </div>
+                
+                <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
+                    <div class="block-section-content">
+                        <p><strong>а)</strong></p>
+<p class="display-math">$$ \sqrt{2} + \sqrt{8} = \sqrt{18} $$</p>
+<p>С помощью метода, доказанного в <a href="/tasks/11">11 задаче</a>, построим сечение $A/A'$ для вещественного числа $\sqrt{2}$, верхний класс которого $A'$ состоит из положительных рациональных чисел $a'$ таких, что $a'^2 &gt; 2$.
+Получаем, что:</p>
+<p class="display-math">$$ a < \sqrt{2} < a' $$</p>
+<p>Тем же методом построим сечение $B/B'$ для вещественного числа $\sqrt{8}$, верхний класс которого $B'$ состоит из положительных рациональных чисел $b'$ таких, что $b'^2 &gt; 8$.
+Получаем, что:</p>
+<p class="display-math">$$ b < \sqrt{8} < b' $$</p>
+<p>Суммой вещественных чисел $\sqrt{2}$ и $\sqrt{8}$, по определению, будет такое число $\sqrt{2} + \sqrt{8}$, что лежит между всех сумм вида $a+b$ и $a'+b'$:</p>
+<p class="display-math">$$ \{a + b\} < \sqrt{2} + \sqrt{8} < \{a' + b'\} $$</p>
+<p>Построим сечение $C/C'$ для вещественного числа $\sqrt{18}$, верхний класс $C'$ которого состоит из положительных рациональных чисел $c'$ таких, что $c'^2 &gt; 18$.</p>
+<p>Нам нужно показать, что сечение $C/C'$, порождающее число $\sqrt{18}$, равно сечению $ {a + b} / {a' + b'} $, которое порождает сумму $\sqrt{2} + \sqrt{8}$:</p>
+<p class="display-math">$$ C/C' = \{a + b\}/\{a' + b'\} $$</p>
+<p>Докажем сначала равенство верхних классов:</p>
+<p class="display-math">$$ C' = \{a' + b'\} $$</p>
+<p>По определению равенства множеств это означает, что нам нужно доказать два отношения:</p>
+<p class="display-math">$$ (1) \ C' \subseteq \{a' + b'\} \qquad (2) \ \{a' + b'\} \subseteq C' $$</p>
+<p><strong>Доказательство $(1)$</strong></p>
+<p class="display-math">$$ C' \subseteq \{a' + b'\} \Leftrightarrow \forall c' \in C' \ \exists a', b' \ : \ c' = a' + b' $$</p>
+<p>На словах это означает, что любое рациональное число $c'$ в верхнем классе $C'$ числа $\sqrt{18}$ может быть представлено в виде суммы какого-то $a'$ из верхнего класса $A'$ числа $\sqrt{2}$ и $b'$ из верхнего класса $B'$ числа $\sqrt{8}$.</p>
+<p>Докажем от противного. Пусть выражение выше ложно. Распишем его отрицание:</p>
+<p class="display-math">$$ \exists c' \in C' \ \forall a', b' \ : \ c' \neq a' + b' $$</p>
+<p>То есть, мы предпологаем, что существует такое рациональное число $c'$, которое нельзя вообще никак представить в виде суммы $a' + b'$, какие бы $a'$ и $b'$ мы взяли.
+Возьмем тогда</p>
+<p class="display-math">$$ a' = \frac{c'}{3} \qquad b' = \frac{2c'}{3} $$</p>
+<p>Убедимся, что $a' \in A'$. Для этого надо доказать, что $a'^2 &gt; 2$:</p>
+<p class="display-math">$$ a'^2 = \frac{c'^2}{9} > 2 $$</p>
+<p class="display-math">$$ c'^2 > 18 $$</p>
+<p>Последнее неравенство выполняется, так как $c'^2 &gt; 18$ по определению сечения $C/C'$.</p>
+<p>Убедимся, что $b' \in B'$. Для этого надо доказать, что $b'^2 &gt; 8$:</p>
+<p class="display-math">$$ b'^2 = \frac{4c'^2}{9} > 8 $$</p>
+<p class="display-math">$$ 4c'^2 > 72 $$</p>
+<p class="display-math">$$ c'^2 > 18 $$</p>
+<p>Последнее неравенство выполняется, так как $c'^2 &gt; 18$ по определению сечения $C/C'$.</p>
+<p>Наконец:</p>
+<p class="display-math">$$ a' + b' = \frac{c'}{3} + \frac{2c'}{3} = c' $$</p>
+<p>Итак, мы все же нашли $a'$ и $b'$, хотя, по нашему предположению от противного, найти их было нельзя. Противоречие. Значит верно исходное высказывание.</p>
+<p>Мы доказали, что любое $c' \in C'$ представляется в виде некоторой суммы $a' + b'$.</p>
+<p><strong>Доказательство $(2)$</strong></p>
+<p class="display-math">$$ \{a' + b'\} \subseteq C' \Leftrightarrow \forall (a' + b') \in \{a' + b'\} \Rightarrow (a'+b')\in C' $$</p>
+<p>На словах это означает, что любая возможная сумма $a'+b'$ принадлежит верхнему классу $C'$ числа $\sqrt{18}$.</p>
+<p>По определению классов $A'$ и $B'$:</p>
+<p class="display-math">$$ a'^2 > 2 \qquad b'^2 > 8 $$</p>
+<p>Умножим эти неравенства друг на друга:</p>
+<p class="display-math">$$ a'^2 b'^2 > 16 $$</p>
+<p>Умножим обе части на $4$:</p>
+<p class="display-math">$$ 4a'^2 b'^2 > 64 $$</p>
+<p>Возьмем квадратный корень из обеих частей:</p>
+<p class="display-math">$$ 2a'b' > 8 $$</p>
+<p>Итак, мы имеем</p>
+<p class="display-math">$$ a'^2 > 2 \qquad 2a'b' > 8 \qquad b'^2 > 8 $$</p>
+<p>Сложим все эти неравенства друг с другом:</p>
+<p class="display-math">$$ a'^2 + 2a'b' + b'^2 = (a' + b')^2 > 18 $$</p>
+<p class="display-math">$$ (a' + b')^2 > 18 $$</p>
+<p>Последнее и является условием принадлежности классу $C'$ по определению.</p>
+<p>Мы доказали, что результат любой суммы $a'+b'$ всегда принадлежит классу $C'$.</p>
+<p><strong>Итог</strong></p>
+<p>Итак, выше мы доказали выражения (1) и (2), показав тем самым равенство верхних классов чисел $\sqrt{2} + \sqrt{8}$ и $\sqrt{18}$.
+Из этого автоматически следует равенство их нижних классов, а значит и равенство сечений обоих чисел.</p>
+<p>Мы доказали, что сечение $C/C'$, определяющее число $\sqrt{18}$, полностью совпадает с сечением, определяющим число $\sqrt{2} + \sqrt{8}$, а значит это одни и те же числа:</p>
+<p class="display-math">$$ \sqrt{2} + \sqrt{8} = \sqrt{18} $$</p>
+<hr>
+<p><strong>б)</strong></p>
+<p class="display-math">$$ \sqrt{2}\sqrt{3} = \sqrt{6} $$</p>
+<p>С помощью метода, доказанного в <a href="/tasks/11">11 задаче</a>, построим сечение $A/A'$ для вещественного числа $\sqrt{2}$, верхний класс которого $A'$ состоит из положительных рациональных чисел $a'$ таких, что $a'^2 &gt; 2$.
+Получаем, что:</p>
+<p class="display-math">$$ a < \sqrt{2} < a' $$</p>
+<p>Тем же методом построим сечение $B/B'$ для вещественного числа $\sqrt{3}$, верхний класс которого $B'$ состоит из положительных рациональных чисел $b'$ таких, что $b'^2 &gt; 3$.
+Получаем, что:</p>
+<p class="display-math">$$ b < \sqrt{3} < b' $$</p>
+<p>Произведением вещественных чисел $\sqrt{2}$ и $\sqrt{3}$, по определению, будет такое число $\sqrt{2}\sqrt{3}$, что лежит между всех произведений вида $ab$ и $a'b'$:</p>
+<p class="display-math">$$ \{ab\} < \sqrt{2}\sqrt{3} < \{a'b'\} $$</p>
+<p>Построим сечение $C/C'$ для вещественного числа $\sqrt{6}$, верхний класс $C'$ которого состоит из положительных рациональных чисел $c'$ таких, что $c'^2 &gt; 6$.</p>
+<p>Нам нужно показать, что сечение $C/C'$, порождающее число $\sqrt{6}$, равно сечению $ {ab} / {a'b'} $, которое порождает произведение $\sqrt{2}\sqrt{3}$:</p>
+<p class="display-math">$$ C/C' = \{ab\}/\{a'b'\} $$</p>
+<p>Докажем сначала равенство верхних классов:</p>
+<p class="display-math">$$ C' = \{a'b'\} $$</p>
+<p>По определению равенства множеств это означает, что нам нужно доказать два отношения:</p>
+<p class="display-math">$$ (1) \ C' \subseteq \{a'b'\} \qquad (2) \ \{a'b'\} \subseteq C' $$</p>
+<p><strong>Доказательство (1)</strong></p>
+<p class="display-math">$$ C' \subseteq \{a'b'\} \Leftrightarrow \forall c' \in C' \ \exists a', b' \ : \ c' = a'b' $$</p>
+<p>На словах это означает, что любое рациональное число $c'$ в верхнем классе $C'$ числа $\sqrt{6}$ может быть представлено в виде произведения какого-то $a'$ из верхнего класса $A'$ числа $\sqrt{2}$ на $b'$ из верхнего класса $B'$ числа $\sqrt{3}$.</p>
+<p>Докажем от противного. Пусть выражение выше ложно. Распишем его отрицание:</p>
+<p class="display-math">$$ \exists c' \in C' \ \forall a', b' \ : \ c' \neq a'b' $$</p>
+<p>То есть, мы предпологаем, что существует такое рациональное число $c'$, которое нельзя вообще никак представить в виде произведения $a'b'$, какие бы $a'$ и $b'$ мы взяли.
+Возьмем тогда</p>
+<p class="display-math">$$ a' = \frac{c'}{3} \qquad b' = \frac{2c'}{3} $$</p>
+<p>Убедимся, что $a' \in A'$. Для этого надо доказать, что $a'^2 &gt; 2$:</p>
+<p class="display-math">$$ a'^2 = \frac{c'^2}{9} > 2 $$</p>
+<p class="display-math">$$ c'^2 > 18 $$</p>
+<p>Последнее неравенство выполняется, так как $c'^2 &gt; 18$ по определению сечения $C/C'$.</p>
+<p>Убедимся, что $b' \in B'$. Для этого надо доказать, что $b'^2 &gt; 8$:</p>
+<p class="display-math">$$ b'^2 = \frac{4c'^2}{9} > 8 $$</p>
+<p class="display-math">$$ 4c'^2 > 72 $$</p>
+<p class="display-math">$$ c'^2 > 18 $$</p>
+<p>Последнее неравенство выполняется, так как $c'^2 &gt; 18$ по определению сечения $C/C'$.</p>
+<p>Наконец:</p>
+<p class="display-math">$$ a' + b' = \frac{c'}{3} + \frac{2c'}{3} = c' $$</p>
+<p>Итак, мы все же нашли $a'$ и $b'$, хотя, по нашему предположению от противного, найти их было нельзя. Противоречие. Значит верно исходное высказывание.</p>
+<p>Мы доказали, что любое $c' \in C'$ представляется в виде некоторой суммы $a' + b'$.</p>
+
+                    </div>
+
+                    <div class="reason-overlay">
+                        
+
+                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+
+            <section class="nav">
+                    <a href="../../tasks/15/" title="Следующая задача" class="next">
+                        <span class="label">15</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/12/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">12</span>
+                    </a>
+            </section>
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.info" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>
