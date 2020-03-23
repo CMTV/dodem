@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>64 | Демидович. Решения</title>
-        <meta name="description" content="$$ \limn \frac{\log_a n}{n} &#x3D; 0 \ (a&gt;1) $$">
+        <title>Упрощение модулей в неравенствах | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Несколько очень полезных свойств для упрощения неравенств с модулями.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -64,7 +64,7 @@
         <script src="../../scripts/dark-magic.js"></script>
         <script src="../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-task">
+    <body class="page-proto-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
@@ -126,30 +126,34 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header">
-                    <i class="fas fa-hashtag"></i>
-                    <span>64</span>
+                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задача</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        <div title="Введение в анализ" class="section">
-                            <span class="accent">I</span>
-                            <span class="title">Введение в анализ</span>
-                        </div>
-
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
-                        </div>
-
-                        <div class="overlay"></div>
+                        Упрощение модулей в неравенствах
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \limn \frac{\log_a n}{n} = 0 \ (a>1) $$</p>
+                        <ol>
+<li></li>
+</ol>
+<p class="display-math">$$ |f| < g \Leftrightarrow \begin{cases} f < g \\ f > -g \end{cases} $$</p>
+<p>Или, что тоже самое</p>
+<p class="display-math">$$ |f| < g \Leftrightarrow -g < f < g $$</p>
+<hr>
+<ol start="2">
+<li></li>
+</ol>
+<p class="display-math">$$ |f| > g \Leftrightarrow \left[\begin{array}{ll} f > g \\ f < -g \end{array}\right. $$</p>
+<hr>
+<ol start="3">
+<li></li>
+</ol>
+<p class="display-math">$$ |f| > |g| \Leftrightarrow f^2 > g^2 $$</p>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -163,13 +167,12 @@
                 </script>
             </div>
 
-
-            <section class="block-section solution  single  _hidden">
-                <div class="block-section-actions">
+            <section class="block-section solution single">
+                <!--<div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -177,34 +180,71 @@
                 </div>
                 
                 <div class="block-section-container">
-                    
-                    <div class="reason">
-                        
-                    </div>
-
                     <div class="block-section-content">
-                        <p>Докажем, что:</p>
-<p class="display-math">$$ \log_a n \leq \sqrt{n} $$</p>
+                        <p><strong>Доказательство 1</strong></p>
+<p class="display-math">$$ |f| < g \Leftrightarrow \begin{cases} f < g \\ f > -g \end{cases} $$</p>
+<p>Рассмотрим, каким может быть $f$:</p>
+<p class="display-math">$$ f\geq 0 \text{ или } f < 0 $$</p>
+<p>Если $f\geq 0$, то $|f| = f$ и мы сразу получаем</p>
+<p class="display-math">$$ f < g $$</p>
+<p>Умножим обе части на $-1$:</p>
+<p class="display-math">$$ -g < -f \leq f \ \text{ т.к. } f\geq 0 $$</p>
+<p class="display-math">$$ -g < f $$</p>
+<p>Итак, из $f\geq 0$ получаем цепное неравенство</p>
+<p class="display-math">$$ -g < f < g $$</p>
+<p>Если $f &lt; 0$, то $|f| = -f$ и мы получаем</p>
+<p class="display-math">$$ -f < g $$</p>
+<p>Умножаем обе части на $-1$:</p>
+<p class="display-math">$$ -g < f $$</p>
+<p>Так как $f &lt; 0$, то $-f &gt; 0$, поэтому</p>
+<p class="display-math">$$ -g < f < -f < g $$</p>
+<p class="display-math">$$ - g < f < g $$</p>
+<p>Итак, вне зависимости от $f$ мы получаем цепное неравенство:</p>
+<p class="display-math">$$ - g < f < g $$</p>
+<p>Его можно перезаписать в виде</p>
+<p class="display-math">$$ |f| < g \Leftrightarrow \begin{cases} f < g \\ f > -g \end{cases} $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Доказательство 2</strong></p>
+<p class="display-math">$$ |f| > g \Leftrightarrow \left[\begin{array}{ll} f > g \\ f < -g \end{array}\right. $$</p>
+<p>Рассмотрим, каким может быть $f$:</p>
+<p class="display-math">$$ f\geq 0 \text{ или } f < 0 $$</p>
+<p>Если $f\geq 0$, то $|f| = f$ и мы сразу получаем</p>
+<p class="display-math">$$ f > g $$</p>
+<p>Если $f&lt;0$, то $|f| = -f$ и мы получаем</p>
+<p class="display-math">$$ -f > g $$</p>
+<p>Умножаем обе части на $-1$:</p>
+<p class="display-math">$$ f < -g $$</p>
+<p>Итак, в зависимости от $f$ имеем два возможных варианта:</p>
+<p class="display-math">$$ f > g \quad (f\geq 0) \text{ или } f < -g \quad (f < 0) $$</p>
+<p>Запишем в более привычной форме:</p>
+<p class="display-math">$$ |f| > g \Leftrightarrow \left[\begin{array}{ll} f > g \\ f < -g \end{array}\right. $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Доказательство 3</strong></p>
+<p class="display-math">$$ |f| > |g| \Leftrightarrow f^2 > g^2 $$</p>
+<p>Возводим обе части в квадрат:</p>
+<p class="display-math">$$ |f|^2 > |g|^2 $$</p>
+<p>Докажем, что:</p>
+<p class="display-math">$$ |x|^2 = x^2 $$</p>
+<p>Если $x\geq 0$, то (по определению модуля) $|x| = x$ и тогда</p>
+<p class="display-math">$$ |x|^2 = x^2 $$</p>
+<p>Если $x&lt; 0$, то (по определению модуля) $|x|=-x$ и тогда</p>
+<p class="display-math">$$ |x|^2 = (-x)^2 = (-1)^2\cdot x^2 = x^2 $$</p>
+<p>Воспользуемся доказанным свойством в неравенстве</p>
+<p class="display-math">$$ |f|^2 > |g|^2 $$</p>
+<p class="display-math">$$ f^2 > g^2 $$</p>
+<p>Итак, мы показали, что</p>
+<p class="display-math">$$ |f| > |g| \Leftrightarrow f^2 > g^2 $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
                     <div class="reason-overlay">
-                        
-
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
-                    </div>
-
-                    <div class="solver">
-                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
-                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
-
-
-                            <span class="solver-name">Петр Радько</span>
-                        </a>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -218,19 +258,6 @@
                 </script>
             </div>
 
-
-
-            <section class="nav">
-                    <a href="../../tasks/65/" title="Следующая задача" class="next">
-                        <span class="label">65</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-                    <a href="../../tasks/63/" title="Предыдущая задача" class="prev">
-                        <i class="fas fa-arrow-left"></i>
-                        <span class="label">63</span>
-                    </a>
-            </section>
         </section>
 
         <footer>

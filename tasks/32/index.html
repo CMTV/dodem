@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>64 | Демидович. Решения</title>
-        <meta name="description" content="$$ \limn \frac{\log_a n}{n} &#x3D; 0 \ (a&gt;1) $$">
+        <title>32 | Демидович. Решения</title>
+        <meta name="description" content="Определить, сколько верных знаков содержит число$$ x &#x3D; 2.3752, $$если относительная погрешность этого числа составляет $1\%$.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -128,7 +128,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>64</span>
+                    <span>32</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -137,15 +137,17 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
+                        <div title="Вещественные числа" class="paragraph">
+                            └─ <span class="accent">§1</span>
+                            <span class="title">Вещественные числа</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \limn \frac{\log_a n}{n} = 0 \ (a>1) $$</p>
+                        <p>Определить, сколько верных знаков содержит число</p>
+<p class="display-math">$$ x = 2.3752, $$</p>
+если относительная погрешность этого числа составляет $1\%$.
                     </div>
                 </div>
             </section>
@@ -183,8 +185,17 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Докажем, что:</p>
-<p class="display-math">$$ \log_a n \leq \sqrt{n} $$</p>
+                        <p>Вычислим абсолютную погрешность числа $x$:</p>
+<p class="display-math">$$ 0.01 = \frac{\Delta}{x} $$</p>
+<p class="display-math">$$ \Delta_x = 0.01 \cdot 2.3752 = 0.023752 $$</p>
+<p>Если бы у числа $x$ был $n = 1$ верный знак, то</p>
+<p class="display-math">$$ 0.023752 \leq 0.05 $$</p>
+<p>Это неравенство действительно выполняется. Продолжим увеличивать количество верных знаков:</p>
+<p class="display-math">\begin{align*}
+    n = 2 \qquad 0.023752 &\leq 0.005 \\
+    n = 3 \qquad 0.023752 &\leq 0.0005
+\end{align*}</p>
+<p>Видно, что для $3$ верных знаков неравенство уже не выполняется, значит, в числе $x$ только $2$ верных знака.</p>
 
                     </div>
 
@@ -221,14 +232,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/65/" title="Следующая задача" class="next">
-                        <span class="label">65</span>
+                    <a href="../../tasks/33/" title="Следующая задача" class="next">
+                        <span class="label">33</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/63/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/31/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">63</span>
+                        <span class="label">31</span>
                     </a>
             </section>
         </section>
