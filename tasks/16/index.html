@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>41 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ x_n &#x3D; \frac{n}{n+1} \ (n &#x3D; 1, 2, \ldots). $$Доказать, что$$ \lim\limits_{n\to\infty} x_n &#x3D; 1, $$определив для каждого $ \varepsilon &gt; 0 $ число $ N &#x3D; N(\varepsilon) $ такое, что$$ |x_n - 1| &lt; \varepsilon \text{, если } n &gt; N. $$Заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline \varepsilon &amp; 0.1 &amp; 0.01 &amp; 0.001 &amp; 0.0001 &amp; \ldots \\ \hline N &amp;  &amp;  &amp;  &amp;  &amp;  \\ \hline  \end{array} $$">
+        <title>16 | Демидович. Решения</title>
+        <meta name="description" content="Показать, что множество всех правильных рациональных дробей $\frac{m}{n}$, где $m$ и $n$ — натуральные числа и $0 &lt; m &lt; n$, не имеетнаименьшего и наибольшего элементов. Найти нижнюю и верхнюю грани этого множества.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>41</span>
+                    <span>16</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -138,22 +138,17 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
+                        <div title="Вещественные числа" class="paragraph">
+                            └─ <span class="accent">§1</span>
+                            <span class="title">Вещественные числа</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
-<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
-<p>Заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        <p>Показать, что множество всех правильных рациональных дробей $\frac{m}{n}$, где $m$ и $n$ — натуральные числа и $0 &lt; m &lt; n$, не имеет
+наименьшего и наибольшего элементов. Найти нижнюю и верхнюю грани этого множества.</p>
+
                     </div>
                 </div>
             </section>
@@ -191,46 +186,65 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon $$</p>
-<p>Заменим $x_n$ на соответствующую формулу для $n$-го члена последовательности:</p>
-<p class="display-math">$$ \left| \frac{n}{n+1} - 1 \right| < \varepsilon $$</p>
-<p>Разберемся с модулем. Для этого докажем, выражение внутри модуля всегда меньше $0$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 \overset{\text{?}}{<} 0 \qquad n \overset{\text{?}}{<} n + 1 \qquad 0 < 1  $$</p>
-<p>Раз внутри модуля всегда отрицательное число, раскрываем модуль со знаком минус:</p>
-<p class="display-math">\begin{equation}\label{to-prove}
-    -\left(\frac{n}{n+1} - 1\right) < \varepsilon
-\end{equation}</p>
-<p>Домножаем обе части на $-1$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 > -\varepsilon $$</p>
-<p>Прибавляем по единицы с обеих сторон и умножаем обе части на $n+1$:</p>
-<p class="display-math">$$ n > (1 - \varepsilon)(n+1) $$</p>
-<p>Умножаем скобки друг на друга в правой части:</p>
-<p class="display-math">$$ n > n - n\varepsilon + 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $n$:</p>
-<p class="display-math">$$ 0 > -n\varepsilon + 1 - \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Все проводимые нами преобразования были эквивалентными. Это означает, что какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1-\varepsilon}{\varepsilon}$ и тогда требуемое неравенство \eqref{to-prove} будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Покажем, что любое натуральное $ n &gt; N(\varepsilon) $ будет больше $\frac{1-\varepsilon}{\varepsilon}$.</p>
-<p>Если $\varepsilon &gt; 1$, то дробь $\frac{1-\varepsilon}{\varepsilon}$ будет отрицательной, а значит нам подойдет любое натуральное число, в том числе и то, которое мы получим по формуле $N(\varepsilon)$.</p>
-<p>Если $\varepsilon = 1$, то $N(\varepsilon) = 0$, а значит любое натуральное $n &gt; N(\varepsilon)$ нам подойдет.</p>
-<p>Если $\varepsilon &lt; 1$, то мы получим округление сверху (&quot;потолок&quot;) числа $\frac{1-\varepsilon}{\varepsilon}$. По определению &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{|1-\varepsilon|}{\varepsilon} \leq \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} \geq \frac{|1-\varepsilon|}{\varepsilon} \geq \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Итак, мы показали, что при любых $\varepsilon &gt; 0$ мы всегда найдем такое $N(\varepsilon)$, что для любого $n&gt;N(\varepsilon)$ будет выполняться неравенство \eqref{to-prove}.</p>
+                        <p>Докажем, что нет наибольшего элемента. Докажем от противного. Пусть есть какая-то наибольшая дробь $\frac{m}{n}$. Рассмотрим такую дробь:</p>
+<p class="display-math">$$ \frac{m}{n} + \frac{1}{n+1} $$</p>
+<p>Эта дробь немного больше, чем $\frac{m}{n}$. Докажем, что она правильная, то есть:</p>
+<p class="display-math">$$ \frac{m}{n} + \frac{1}{n+1} < 1 $$</p>
+<p class="display-math">$$ \frac{mn + n + m}{n(n+1)} < 1 $$</p>
+<p class="display-math">$$ mn + n + m < n^2 + n $$</p>
+<p class="display-math">$$ n^2 > mn + m $$</p>
+<p>По условию нам известно, что $n &gt; m$. Так как $n$ и $m$ — натуральные числа, верно неравенство:</p>
+<p class="display-math">$$ n-1 \geq m $$</p>
+<p>Поэтому достаточно показать верность неравенства при $m=n-1$, тогда оно будет выполняться и для всех меньших $m$:</p>
+<p class="display-math">$$ n^2 > (n-1)n + (n-1) \geq mn + m $$</p>
+<p>Итак, докажем, что</p>
+<p class="display-math">\begin{gather*}
+    n^2 > (n-1)n + (n-1)
+    \\[5px]
+    n^2 > n^2 - n + n -1
+    \\[5px]
+    0 > -1
+\end{gather*}</p>
+<p>Мы показали, что</p>
+<p class="display-math">$$ \frac{m}{n} < \frac{m}{n} + \frac{1}{n+1} < 1, $$</p>
+<p>то есть дробь $\frac{m}{n}$ не является наибольшей. Получили противоречие.</p>
+<p>Итак, мы показали, что не существует наибольшей правильной дроби.</p>
+<p>$\blacksquare$</p>
+<p>Доказательство того, что не существует наименьшего элемента, производится аналогично. Для этого надо лишь рассмотреть дробь:</p>
+<p class="display-math">$$ \frac{m}{n} - \frac{1}{n+1} $$</p>
 <hr>
-<p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{|1-0.1|}{0.1}} = \ceil{\frac{0.9}{0.1}} = 9 $$</p>
-<p class="display-math">$$ N(0.01) = \ceil{\frac{|1-0.01|}{0.01}} = \ceil{\frac{0.99}{0.01}} = 99 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{|1-0.001|}{0.001}} = \ceil{\frac{0.999}{0.001}} = 999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{|1-0.0001|}{0.0001}} = \ceil{\frac{0.9999}{0.0001}} = 9999 $$</p>
-<p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$</p>
+<p>Обозначим рассматриваемое множество правильных дробей за $X$:</p>
+<p class="display-math">$$ X = \set{\frac{m}{n}} $$</p>
+<p>Докажем, что $1$ — точная верхняя грань множества $X$:</p>
+<p class="display-math">$$ \sup X = 1 $$</p>
+<p>Для этого надо доказать два пункта:</p>
+<ol>
+<li>$ \forall x \in X \ : \ x \leq 1 $</li>
+<li>$ \forall \varepsilon &gt; 0 \ \exists x' \in X \ : \ x' &gt; 1 - \varepsilon $</li>
+</ol>
+<p><strong>Доказательство п.1</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">$$ \forall x \in X \ : \ x \leq 1 $$</p>
+<p>То есть, какую бы правильную дробь $x$ мы не взяли, она всегда будет строго меньше $1$.</p>
+<p>Рассмотрим произвольный элемент $x\in X$. Это некоторая правильная дробь $\frac{m}{n}$. Докажем, что она меньше $1$:</p>
+<p class="display-math">$$ x = \frac{m}{n} \leq 1 $$</p>
+<p>Домножим обе части на $n$:</p>
+<p class="display-math">$$ m < n $$</p>
+<p>Это верное неравенство, так как это и есть часть определения правильной дроби (это также приведено в условии этой задачи).</p>
+<p>$\blacksquare$</p>
+<p><strong>Доказательство п.2</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in X \ : \ x' > 1 - \varepsilon $$</p>
+<p>То есть, если мы уменьшим на $1$ на какую-то произвольно маленькую величину $\varepsilon$, то найдется такая правильная дробь, которая будет больше $1-\varepsilon$.</p>
+<p>Если $\varepsilon \geq 1$, то $1-\varepsilon \leq 0$. Поэтому любая правильная дробь и будет тем самым $x'$, так как любая правильная дробь — положительное число.</p>
+<p>Теперь рассмотрим случай, когда $\varepsilon &lt; 1$. Тогда:</p>
+<p class="display-math">$$ 0 < 1 - \varepsilon < 1 $$</p>
+<p>Если $1 - \varepsilon$ — рациональное число, то оно является правильной дробью, которую можно представить в виде</p>
+<p class="display-math">$$ 1-\varepsilon = \frac{m_\varepsilon}{n_\varepsilon} $$</p>
+<p>В начале решения мы доказали, что у множества правильных дробей нет наибольшего элемента, поэтому за $x'$ можно взять следующую дробь:</p>
+<p class="display-math">$$ 1 > x' = \frac{m_\varepsilon}{n_\varepsilon} + \frac{1}{n_\varepsilon + 1} > 1 - \varepsilon $$</p>
+<p>Если $1-\varepsilon$ — иррациональное число, то есть какое-то сечение $A/A'$ в рациональных числах, которое и определяет число $1-\varepsilon$.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -266,14 +280,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/42/" title="Следующая задача" class="next">
-                        <span class="label">42</span>
+                    <a href="../../tasks/17/" title="Следующая задача" class="next">
+                        <span class="label">17</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/40/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/15/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">40</span>
+                        <span class="label">15</span>
                     </a>
             </section>
         </section>

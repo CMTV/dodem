@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>41 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ x_n &#x3D; \frac{n}{n+1} \ (n &#x3D; 1, 2, \ldots). $$Доказать, что$$ \lim\limits_{n\to\infty} x_n &#x3D; 1, $$определив для каждого $ \varepsilon &gt; 0 $ число $ N &#x3D; N(\varepsilon) $ такое, что$$ |x_n - 1| &lt; \varepsilon \text{, если } n &gt; N. $$Заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline \varepsilon &amp; 0.1 &amp; 0.01 &amp; 0.001 &amp; 0.0001 &amp; \ldots \\ \hline N &amp;  &amp;  &amp;  &amp;  &amp;  \\ \hline  \end{array} $$">
+        <title>40 | Демидович. Решения</title>
+        <meta name="description" content="Пусть $\delta(x)$ и $\delta(y)$ — относительные погрешности чисел $x$ и $y$, $\delta(xy)$ — относительная погрешность числа $xy$. Доказать, что$$\delta(xy)\leq\delta(x)+\delta(y)+\delta(x)\delta(y)$$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>41</span>
+                    <span>40</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -138,22 +138,16 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
+                        <div title="Вещественные числа" class="paragraph">
+                            └─ <span class="accent">§1</span>
+                            <span class="title">Вещественные числа</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
-<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
-<p>Заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        <p>Пусть $\delta(x)$ и $\delta(y)$ — относительные погрешности чисел $x$ и $y$, $\delta(xy)$ — относительная погрешность числа $xy$. Доказать, что</p>
+<p class="display-math">$$\delta(xy)\leq\delta(x)+\delta(y)+\delta(x)\delta(y)$$</p>
                     </div>
                 </div>
             </section>
@@ -191,46 +185,27 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon $$</p>
-<p>Заменим $x_n$ на соответствующую формулу для $n$-го члена последовательности:</p>
-<p class="display-math">$$ \left| \frac{n}{n+1} - 1 \right| < \varepsilon $$</p>
-<p>Разберемся с модулем. Для этого докажем, выражение внутри модуля всегда меньше $0$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 \overset{\text{?}}{<} 0 \qquad n \overset{\text{?}}{<} n + 1 \qquad 0 < 1  $$</p>
-<p>Раз внутри модуля всегда отрицательное число, раскрываем модуль со знаком минус:</p>
-<p class="display-math">\begin{equation}\label{to-prove}
-    -\left(\frac{n}{n+1} - 1\right) < \varepsilon
-\end{equation}</p>
-<p>Домножаем обе части на $-1$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 > -\varepsilon $$</p>
-<p>Прибавляем по единицы с обеих сторон и умножаем обе части на $n+1$:</p>
-<p class="display-math">$$ n > (1 - \varepsilon)(n+1) $$</p>
-<p>Умножаем скобки друг на друга в правой части:</p>
-<p class="display-math">$$ n > n - n\varepsilon + 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $n$:</p>
-<p class="display-math">$$ 0 > -n\varepsilon + 1 - \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Все проводимые нами преобразования были эквивалентными. Это означает, что какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1-\varepsilon}{\varepsilon}$ и тогда требуемое неравенство \eqref{to-prove} будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Покажем, что любое натуральное $ n &gt; N(\varepsilon) $ будет больше $\frac{1-\varepsilon}{\varepsilon}$.</p>
-<p>Если $\varepsilon &gt; 1$, то дробь $\frac{1-\varepsilon}{\varepsilon}$ будет отрицательной, а значит нам подойдет любое натуральное число, в том числе и то, которое мы получим по формуле $N(\varepsilon)$.</p>
-<p>Если $\varepsilon = 1$, то $N(\varepsilon) = 0$, а значит любое натуральное $n &gt; N(\varepsilon)$ нам подойдет.</p>
-<p>Если $\varepsilon &lt; 1$, то мы получим округление сверху (&quot;потолок&quot;) числа $\frac{1-\varepsilon}{\varepsilon}$. По определению &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{|1-\varepsilon|}{\varepsilon} \leq \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} \geq \frac{|1-\varepsilon|}{\varepsilon} \geq \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Итак, мы показали, что при любых $\varepsilon &gt; 0$ мы всегда найдем такое $N(\varepsilon)$, что для любого $n&gt;N(\varepsilon)$ будет выполняться неравенство \eqref{to-prove}.</p>
-<hr>
-<p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{|1-0.1|}{0.1}} = \ceil{\frac{0.9}{0.1}} = 9 $$</p>
-<p class="display-math">$$ N(0.01) = \ceil{\frac{|1-0.01|}{0.01}} = \ceil{\frac{0.99}{0.01}} = 99 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{|1-0.001|}{0.001}} = \ceil{\frac{0.999}{0.001}} = 999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{|1-0.0001|}{0.0001}} = \ceil{\frac{0.9999}{0.0001}} = 9999 $$</p>
-<p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$</p>
+                        <p>Выполненное измерение величины $x$ с погрешностью $\Delta_x$ будет колебаться в пределах:</p>
+<p class="display-math">$$ x - \Delta_x \leq x \leq x + \Delta_x $$</p>
+<p>Выполненное измерение величины $y$ с погрешностью $\Delta_y$ будет колебаться в пределах:</p>
+<p class="display-math">$$ y - \Delta_y \leq y \leq y + \Delta_y $$</p>
+<p>Перемножим эти неравенства:</p>
+<p class="display-math">$$ xy - (x\Delta_y + y\Delta_x - \Delta_x\Delta_y) \leq xy \leq xy + x\Delta_y + y\Delta_x + \Delta_x\Delta_y $$</p>
+<p>В неравенстве выше видем две возможные оценки для абсолютной погрешности $\Delta_{xy}$:</p>
+<p class="display-math">\begin{align*}
+    \Delta_{xy} &\leq (x\Delta_y + y\Delta_x - \Delta_x\Delta_y) \\[5px]
+    \Delta_{xy} &\leq x\Delta_y + y\Delta_x + \Delta_x\Delta_y
+\end{align*}</p>
+<p>Вторая оценка, очевидно, покрывает первую (потому что она больше), поэтому ей и будем пользоваться:</p>
+<p class="display-math">$$ \Delta_{xy} \leq x\Delta_y + y\Delta_x + \Delta_x\Delta_y $$</p>
+<p>Делим это неравенство на $xy$:</p>
+<p class="display-math">$$ \frac{\Delta_{xy}}{xy} \leq \frac{\Delta_y}{y} + \frac{\Delta_x}{x} + \frac{\Delta_x\Delta_y}{xy} $$</p>
+<p>Каждая дробь представляет собой относительную погрешность, так как ее формула:</p>
+<p class="display-math">$$ \delta_a = \frac{\Delta_a}{|a|} $$</p>
+<p>Поэтому, получаем</p>
+<p class="display-math">$$ \delta_{xy} \leq \delta(x) + \delta(y) + \delta(x)\delta(y) $$</p>
+<p>$\blacksquare$</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -266,14 +241,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/42/" title="Следующая задача" class="next">
-                        <span class="label">42</span>
+                    <a href="../../tasks/41/" title="Следующая задача" class="next">
+                        <span class="label">41</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/40/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/39/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">40</span>
+                        <span class="label">39</span>
                     </a>
             </section>
         </section>

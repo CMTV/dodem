@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>41 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ x_n &#x3D; \frac{n}{n+1} \ (n &#x3D; 1, 2, \ldots). $$Доказать, что$$ \lim\limits_{n\to\infty} x_n &#x3D; 1, $$определив для каждого $ \varepsilon &gt; 0 $ число $ N &#x3D; N(\varepsilon) $ такое, что$$ |x_n - 1| &lt; \varepsilon \text{, если } n &gt; N. $$Заполнить следующую таблицу:$$ \begin{array} {|c|c|}\hline \varepsilon &amp; 0.1 &amp; 0.01 &amp; 0.001 &amp; 0.0001 &amp; \ldots \\ \hline N &amp;  &amp;  &amp;  &amp;  &amp;  \\ \hline  \end{array} $$">
+        <title>36 | Демидович. Решения</title>
+        <meta name="description" content="Радиус круга$$ r &#x3D; 7.2\text{ м} \pm 0.1\text{ м}. $$С какой минимальной относительной погрешностью может быть определена площадь круга, если принять $\pi &#x3D; 3.14$?">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>41</span>
+                    <span>36</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -138,22 +138,18 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
+                        <div title="Вещественные числа" class="paragraph">
+                            └─ <span class="accent">§1</span>
+                            <span class="title">Вещественные числа</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
-<p>Доказать, что</p>
-<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
-<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
-<p>Заполнить следующую таблицу:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        <p>Радиус круга</p>
+<p class="display-math">$$ r = 7.2\text{ м} \pm 0.1\text{ м}. $$</p>
+<p>С какой минимальной относительной погрешностью может быть определена площадь круга, если принять $\pi = 3.14$?</p>
+
                     </div>
                 </div>
             </section>
@@ -191,46 +187,26 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нужный ход действий указан прямо в условии. Нам нужно для произвольного $ \varepsilon &gt; 0 $ подобрать такое натуральное $ N $, чтобы для любого $ n &gt; N $ выполнялось следующее неравенство:</p>
-<p class="display-math">$$ |x_n - 1| < \varepsilon $$</p>
-<p>Заменим $x_n$ на соответствующую формулу для $n$-го члена последовательности:</p>
-<p class="display-math">$$ \left| \frac{n}{n+1} - 1 \right| < \varepsilon $$</p>
-<p>Разберемся с модулем. Для этого докажем, выражение внутри модуля всегда меньше $0$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 \overset{\text{?}}{<} 0 \qquad n \overset{\text{?}}{<} n + 1 \qquad 0 < 1  $$</p>
-<p>Раз внутри модуля всегда отрицательное число, раскрываем модуль со знаком минус:</p>
-<p class="display-math">\begin{equation}\label{to-prove}
-    -\left(\frac{n}{n+1} - 1\right) < \varepsilon
-\end{equation}</p>
-<p>Домножаем обе части на $-1$:</p>
-<p class="display-math">$$ \frac{n}{n+1} - 1 > -\varepsilon $$</p>
-<p>Прибавляем по единицы с обеих сторон и умножаем обе части на $n+1$:</p>
-<p class="display-math">$$ n > (1 - \varepsilon)(n+1) $$</p>
-<p>Умножаем скобки друг на друга в правой части:</p>
-<p class="display-math">$$ n > n - n\varepsilon + 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $n$:</p>
-<p class="display-math">$$ 0 > -n\varepsilon + 1 - \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Все проводимые нами преобразования были эквивалентными. Это означает, что какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1-\varepsilon}{\varepsilon}$ и тогда требуемое неравенство \eqref{to-prove} будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Покажем, что любое натуральное $ n &gt; N(\varepsilon) $ будет больше $\frac{1-\varepsilon}{\varepsilon}$.</p>
-<p>Если $\varepsilon &gt; 1$, то дробь $\frac{1-\varepsilon}{\varepsilon}$ будет отрицательной, а значит нам подойдет любое натуральное число, в том числе и то, которое мы получим по формуле $N(\varepsilon)$.</p>
-<p>Если $\varepsilon = 1$, то $N(\varepsilon) = 0$, а значит любое натуральное $n &gt; N(\varepsilon)$ нам подойдет.</p>
-<p>Если $\varepsilon &lt; 1$, то мы получим округление сверху (&quot;потолок&quot;) числа $\frac{1-\varepsilon}{\varepsilon}$. По определению &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \frac{|1-\varepsilon|}{\varepsilon} \leq \ceil{\frac{|1-\varepsilon|}{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{|1-\varepsilon|}{\varepsilon}} \geq \frac{|1-\varepsilon|}{\varepsilon} \geq \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p class="display-math">$$ n > \frac{1-\varepsilon}{\varepsilon} $$</p>
-<p>Итак, мы показали, что при любых $\varepsilon &gt; 0$ мы всегда найдем такое $N(\varepsilon)$, что для любого $n&gt;N(\varepsilon)$ будет выполняться неравенство \eqref{to-prove}.</p>
-<hr>
-<p>Начнем заполнять таблицу:</p>
-<p class="display-math">$$ N(0.1) = \ceil{\frac{|1-0.1|}{0.1}} = \ceil{\frac{0.9}{0.1}} = 9 $$</p>
-<p class="display-math">$$ N(0.01) = \ceil{\frac{|1-0.01|}{0.01}} = \ceil{\frac{0.99}{0.01}} = 99 $$</p>
-<p class="display-math">$$ N(0.001) = \ceil{\frac{|1-0.001|}{0.001}} = \ceil{\frac{0.999}{0.001}} = 999 $$</p>
-<p class="display-math">$$ N(0.0001) = \ceil{\frac{|1-0.0001|}{0.0001}} = \ceil{\frac{0.9999}{0.0001}} = 9999 $$</p>
-<p>Итоговая таблица:</p>
-<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$</p>
+                        <p>Выясним, в каких границах лежит $r$:</p>
+<p class="display-math">$$ 7.1 \leq r \leq 7.3 $$</p>
+<p>Формула площади круга:</p>
+<p class="display-math">$$ S = \pi \cdot r^2 $$</p>
+<p>Умножим неравенство выше само на себя:</p>
+<p class="display-math">$$ 50.41 \leq r^2 \leq 53.29 $$</p>
+<p>Домножим все части неравенства на $\pi$:</p>
+<p class="display-math">$$ 158.2874 \leq S = \pi\cdot r^2 \leq 167.3306 $$</p>
+<p>Найдем площадь круга, используя средние значение радиуса:</p>
+<p class="display-math">$$ 3.14 \cdot 7.2^2 = 162.7776  $$</p>
+<p>Итак,</p>
+<p class="display-math">$$ 158.2874 \leq 162.7776 \leq 167.3306 $$</p>
+<p>Из неравенства выше мы можем найти верхние границы для абсолютной погрешности:</p>
+<p class="display-math">\begin{align*}
+    \Delta_1 = 162.7776 - 158.2874 &= 4.4902 \\
+    \Delta_2 = 167.3306 - 162.7776 &= 4.553
+\end{align*}</p>
+<p>Видим, что $\Delta_2 &gt; \Delta_1$, поэтому реальная абсолютная погрешность будет не больше $\Delta_2$ (худшего варианта):</p>
+<p class="display-math">$$ \Delta \leq \Delta_2 = 4.553 $$</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -266,14 +242,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/42/" title="Следующая задача" class="next">
-                        <span class="label">42</span>
+                    <a href="../../tasks/37/" title="Следующая задача" class="next">
+                        <span class="label">37</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/40/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/35/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">40</span>
+                        <span class="label">35</span>
                     </a>
             </section>
         </section>
