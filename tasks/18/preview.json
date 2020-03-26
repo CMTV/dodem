@@ -1,1 +1,1 @@
-{"location":"I.1","taskHtml":"<p>Пусть $\\set{-x}$ — множество чисел, противоположных числам $x\\in\\set{x}$. Доказать, что:</p>\n<p class=\"display-math\">$$ \\text{а) } \\inf \\set{-x} = -\\sup\\set{x}; \\qquad \\text{б) } \\sup\\set{-x} = -\\inf\\set{x} $$</p>"}
+{"location":"I.1","taskHtml":"<p>Пусть $\\set{-x}$ — множество чисел, противоположных числам $x\\in\\set{x}$. Доказать, что:</p>\n<p class=\"display-math\">$$ \\text{а) } \\inf \\set{-x} = -\\sup\\set{x}; \\qquad \\text{б) } \\sup\\set{-x} = -\\inf\\set{x}. $$</p>"}

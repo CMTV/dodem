@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>18 | Демидович. Решения</title>
-        <meta name="description" content="Пусть $\set{-x}$ — множество чисел, противоположных числам $x\in\set{x}$. Доказать, что:$$ \text{а) } \inf \set{-x} &#x3D; -\sup\set{x}; \qquad \text{б) } \sup\set{-x} &#x3D; -\inf\set{x}. $$">
+        <title>21 | Демидович. Решения</title>
+        <meta name="description" content="Доказать неравенства:\begin{align*}    &amp;\text{а) } |x-y| \geq ||x|-|y||;    \\    &amp;\text{б) } |x+x_1+\ldots+x_n| \geq |x| - (|x_1| + \ldots + |x_n|).\end{align*}">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>18</span>
+                    <span>21</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,8 +146,12 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть $\set{-x}$ — множество чисел, противоположных числам $x\in\set{x}$. Доказать, что:</p>
-<p class="display-math">$$ \text{а) } \inf \set{-x} = -\sup\set{x}; \qquad \text{б) } \sup\set{-x} = -\inf\set{x}. $$</p>
+                        <p>Доказать неравенства:</p>
+<p class="display-math">\begin{align*}
+    &\text{а) } |x-y| \geq ||x|-|y||;
+    \\
+    &\text{б) } |x+x_1+\ldots+x_n| \geq |x| - (|x_1| + \ldots + |x_n|).
+\end{align*}</p>
                     </div>
                 </div>
             </section>
@@ -186,78 +190,71 @@
 
                     <div class="block-section-content">
                         <p><strong>Доказательство а)</strong></p>
-<p class="display-math">$$ \inf\set{-x} = -\sup\set{x} $$</p>
-<p>Доказывать будем в обратную сторону, то есть</p>
-<p class="display-math">$$ -\sup\set{x} = \inf\set{-x} $$</p>
-<p>Нужно доказать два пункта:</p>
-<ol>
-<li>$-\sup\set{x}$ является нижней границей $\set{-x}$</li>
-<li>$\forall \varepsilon &gt; 0 \ \exists y' \in \set{-x} \ : \ y' &lt; -\sup\set{x} + \varepsilon$</li>
-</ol>
-<p><em>Доказательство 1</em></p>
-<p>Докажем, что $-\sup\set{x}$ является нижней границей $\set{-x}$, то есть</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ -\sup\set{x} \leq y $$</p>
-<p>Будем доказывать от противного:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ -\sup\set{x} > y $$</p>
-<p>Умножим неравенство в конце на $-1$. Получаем, что</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ \sup\set{x} < -y $$</p>
-<p>Так как $y\in\set{-x}$, то $-y\in\set{x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Из определения $\sup\set{x}$:</p>
-<p class="display-math">$$ \forall x \in \set{x} \ : \ x \leq \sup\set{x} $$</p>
-<p>Но $-y$ тоже принадлежит $\set{x}$, поэтому неравенство должно выполняться и для него тоже:</p>
-<p class="display-math">$$ -y \leq \sup\set{x} $$</p>
-<p>Получаем два противоречащих друг другу неравенства:</p>
-<p class="display-math">$$ \sup\set{x} < -y  \qquad -y \leq \sup\set{x} $$</p>
-<p>Получается, что $\sup\set{x}$ одновременно меньше и не меньше числа $-y$. Противоречие.</p>
-<p>Итак, мы показали, что</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ -\sup\set{x} \leq y $$</p>
-<p>То есть, $-\sup\set{x}$ является нижней границей множества $\set{-x}$.</p>
+<p class="display-math">$$ |x-y| \geq ||x|-|y|| $$</p>
+<p>Возведем обе части в квадрат по пункту 3 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ x^2 - 2xy + y^2 \geq x^2 - 2|x||y| + y^2 $$</p>
+<p class="display-math">$$ |x||y| \geq xy $$</p>
+<p>Воспользуемся свойством модуля:</p>
+<p class="display-math">$$ |a||b| = |a\cdot b| $$</p>
+<p class="display-math">$$ |x||y| = |xy| \geq xy $$</p>
+<p>Если $xy \geq 0$, то $|xy| = xy$, поэтому выполняется</p>
+<p class="display-math">$$ xy \geq xy $$</p>
+<p>Если $xy &lt; 0$, то $|xy| = -xy$, поэтому</p>
+<p class="display-math">$$ -xy \geq xy $$</p>
+<p>Моделим обе части на $xy$. Так как $xy &lt; 0$, то знак меняем на противоположный:</p>
+<p class="display-math">$$ -1 \leq 0 $$</p>
+<p>Это тоже верно.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ |x-y| \geq ||x|-|y|| $$</p>
 <p>$\blacksquare$</p>
-<p><em>Доказательство 2</em></p>
-<p>По определению $\sup\set{x}$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ x' > \sup\set{x} - \varepsilon $$</p>
-<p>Неравенство в конце умножим на $-1$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ -x' < -\sup\set{x} + \varepsilon $$</p>
-<p>Но если $x'\in\set{x}$, то $y' = -x'$ принадлежит $\set{-x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Поэтому верно следующее</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists y' \in \set{-x} \ : \ y' < -\sup\set{x} + \varepsilon $$</p>
+<hr>
+<p>Докажем вспомогательное свойство:</p>
+<p class="display-math">$$ |f + g| \geq |f| - |g| $$</p>
+<p>Возводим обе части в квадрат:</p>
+<p class="display-math">\begin{gather*}
+    f^2 + 2fg + g^2 \geq f^2 - 2|f||g| + g^2
+    \\[5px]
+    fg \geq -|f||g|
+    \\[5px]
+    fg \geq -|fg|
+\end{gather*}</p>
+<p>Если $fg \geq 0$, то $|fg| = fg$:</p>
+<p class="display-math">$$ fg \geq -fg $$</p>
+<p>Это неравенство выполняется, так как слева положительное число (или $0$), а справа отрицательное (или тоже $0$).</p>
+<p>Если $f g &lt; 0$, то $|fg| = -fg$:</p>
+<p class="display-math">$$ fg \geq fg $$</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ |f + g| \geq |f| - |g| $$</p>
 <p>$\blacksquare$</p>
 <hr>
 <p><strong>Доказательство б)</strong></p>
-<p class="display-math">$$ \sup\set{-x} = -\inf\set{x} $$</p>
-<p>Доказывать будем в обратную сторону, то есть</p>
-<p class="display-math">$$ -\inf\set{x} = \sup\set{-x} $$</p>
-<p>Нужно доказать два пункта:</p>
-<ol>
-<li>$-\inf\set{x}$ является верхней границей $\set{-x}$</li>
-<li>$\forall \varepsilon &gt; 0 \ \exists y' \in \set{-x} \ : \ y' &gt; -\inf\set{x} - \varepsilon$</li>
-</ol>
-<p><em>Доказательство 1</em></p>
-<p>Докажем, что $-\inf\set{x}$ является верхней границей $\set{-x}$, то есть</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ y \leq -\inf\set{x} $$</p>
-<p>Будем доказывать от противного:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ y > -\inf\set{x} $$</p>
-<p>Умножим неравенство в конце на $-1$:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ -y < \inf\set{x} $$</p>
-<p>Так как $y\in\set{-x}$, то $-y\in\set{x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Из определения $\inf\set{x}$:</p>
-<p class="display-math">$$ \forall x \in \set{x} \ : \ x \geq \inf\set{x} $$</p>
-<p>Но $-y$ тоже принадлежит $\set{x}$, поэтому неравенство должно выполняться и для него тоже:</p>
-<p class="display-math">$$ -y \geq \inf\set{x} $$</p>
-<p>Получаем два противоречащих друг другу неравенства:</p>
-<p class="display-math">$$ \inf\set{x} \leq -y  \qquad -y < \inf\set{x} $$</p>
-<p>Получается, что $\inf\set{x}$ одновременно больше и не больше числа $-y$. Противоречие.</p>
-<p>Итак, мы показали, что</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ y \leq -\inf\set{x} $$</p>
-<p>То есть, $-\inf\set{x}$ является верхней границей множества $\set{-x}$.</p>
-<p><em>Доказательство 2</em></p>
-<p>По определению $\inf\set{x}$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ x' < \inf\set{x} + \varepsilon $$</p>
-<p>Неравенство в конце умножим на $-1$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ -x' < -\inf\set{x} - \varepsilon $$</p>
-<p>Но если $x'\in\set{x}$, то $y' = -x'$ принадлежит $\set{-x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Поэтому верно следующее</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists y' \in \set{-x} \ : \ y' < -\inf\set{x} - \varepsilon $$</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_n| \geq |x| - (|x_1| + \ldots + |x_n|) $$</p>
+<p>Докажем по методу математической индукции.</p>
+<p>База индукции: пусть $n = 1$:</p>
+<p class="display-math">$$ |x + x_1| \geq |x| - |x_1| $$</p>
+<p>Это неравенство выполняется (по вспомогательному свойству выше).</p>
+<p>База индукции доказана.</p>
+<p>Пусть доказываемое неравенство выполняется для какого-то $k$:</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_k| \geq |x| - (|x_1| + \ldots + |x_k|) $$</p>
+<p>Докажем, что неравенство выполняется и для $k+1$:</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_k + x_{k+1}| \geq |x| - (|x_1| + \ldots + |x_k| + |x_{k+1}|) $$</p>
+<p>В левой неравенства возьмем в скобки все слагаемые от $x$ до $x_k$:</p>
+<p class="display-math">$$ |(x+x_1+\ldots+x_k) + x_{k+1}| $$</p>
+<p>Воспольуземся вспомогательным свойством:</p>
+<p class="display-math">$$ |(x+x_1+\ldots+x_k) + x_{k+1}| \geq |x+x_1+\ldots+x_k| - |x_{k+1}| $$</p>
+<p>Но, по для $k$ неравенство выполняется:</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_k| \geq |x| - (|x_1| + \ldots + |x_k|) $$</p>
+<p>Поэтому</p>
+<p class="display-math">\begin{gather*}
+    |(x+x_1+\ldots+x_k) + x_{k+1}| \geq |x+x_1+\ldots+x_k| - |x_{k+1}| \geq
+    \\
+    \geq |x| - (|x_1| + \ldots + |x_k|) - |x_{k+1}|
+\end{gather*}</p>
+<p>Осталось занести $|x_{k+1}|$ под скобку:</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_k + x_{k+1}| \geq |x| - (|x_1| + \ldots + |x_k| + |x_{k+1}|) $$</p>
+<p>Итак, индукционный переход доказан.</p>
+<p>Мы доказали, что</p>
+<p class="display-math">$$ |x+x_1+\ldots+x_n| \geq |x| - (|x_1| + \ldots + |x_n|) $$</p>
 <p>$\blacksquare$</p>
 
                     </div>
@@ -293,16 +290,36 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
+                                    Упрощение модулей в неравенствах
+                                </a>
+                            </dt>
+                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
-                    <a href="../../tasks/19/" title="Следующая задача" class="next">
-                        <span class="label">19</span>
+                    <a href="../../tasks/22/" title="Следующая задача" class="next">
+                        <span class="label">22</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/17/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/20/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">17</span>
+                        <span class="label">20</span>
                     </a>
             </section>
         </section>

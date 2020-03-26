@@ -1,0 +1,1 @@
+{"location":"I.1","taskHtml":"<p>Пусть $\\set{x+y}$ есть множество всех сумм $x+y$, где $x\\in\\set{x}$ и $y\\in\\set{y}$. Доказать равенства:</p>\n<p class=\"display-math\">\\begin{align*}\n    &\\text{а) } \\inf\\set{x+y} = \\inf\\set{x} + \\inf\\set{y};\n    \\\\\n    &\\text{б) } \\sup\\set{x+y} = \\sup\\set{x} + \\sup\\set{y}.\n\\end{align*}</p>"}

@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>18 | Демидович. Решения</title>
-        <meta name="description" content="Пусть $\set{-x}$ — множество чисел, противоположных числам $x\in\set{x}$. Доказать, что:$$ \text{а) } \inf \set{-x} &#x3D; -\sup\set{x}; \qquad \text{б) } \sup\set{-x} &#x3D; -\inf\set{x}. $$">
+        <title>Равенство множеств через универсальное множество | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Альтернативный вариант доказательства равенства двух множеств через универсальное множество.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -65,7 +65,7 @@
         <script src="../../scripts/dark-magic.js"></script>
         <script src="../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-task">
+    <body class="page-proto-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
@@ -127,31 +127,23 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header">
-                    <i class="fas fa-hashtag"></i>
-                    <span>18</span>
+                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задача</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        <div title="Введение в анализ" class="section">
-                            <span class="accent">I</span>
-                            <span class="title">Введение в анализ</span>
-                        </div>
-
-                        <div title="Вещественные числа" class="paragraph">
-                            └─ <span class="accent">§1</span>
-                            <span class="title">Вещественные числа</span>
-                        </div>
-
-                        <div class="overlay"></div>
+                        Равенство множеств через универсальное множество
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть $\set{-x}$ — множество чисел, противоположных числам $x\in\set{x}$. Доказать, что:</p>
-<p class="display-math">$$ \text{а) } \inf \set{-x} = -\sup\set{x}; \qquad \text{б) } \sup\set{-x} = -\inf\set{x}. $$</p>
+                        <p>Пусть $\Omega$ — универсальное множество для множеств $A$ и $B$.</p>
+<p>Тогда:</p>
+<p class="display-math">$$ \left.\begin{array}{rr} A\subseteq B \\ \Omega \setminus A \subseteq \Omega \setminus B \end{array} \ \right\} \Leftrightarrow A = B $$</p>
+<p>Дополнение:</p>
+<p class="display-math">$$ A=B \Leftrightarrow \Omega \setminus A = \Omega \setminus B $$</p>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -165,13 +157,12 @@
                 </script>
             </div>
 
-
-            <section class="block-section solution  single  _hidden">
-                <div class="block-section-actions">
+            <section class="block-section solution single">
+                <!--<div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -179,106 +170,63 @@
                 </div>
                 
                 <div class="block-section-container">
-                    
-                    <div class="reason">
-                        
-                    </div>
-
                     <div class="block-section-content">
-                        <p><strong>Доказательство а)</strong></p>
-<p class="display-math">$$ \inf\set{-x} = -\sup\set{x} $$</p>
-<p>Доказывать будем в обратную сторону, то есть</p>
-<p class="display-math">$$ -\sup\set{x} = \inf\set{-x} $$</p>
-<p>Нужно доказать два пункта:</p>
-<ol>
-<li>$-\sup\set{x}$ является нижней границей $\set{-x}$</li>
-<li>$\forall \varepsilon &gt; 0 \ \exists y' \in \set{-x} \ : \ y' &lt; -\sup\set{x} + \varepsilon$</li>
-</ol>
-<p><em>Доказательство 1</em></p>
-<p>Докажем, что $-\sup\set{x}$ является нижней границей $\set{-x}$, то есть</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ -\sup\set{x} \leq y $$</p>
-<p>Будем доказывать от противного:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ -\sup\set{x} > y $$</p>
-<p>Умножим неравенство в конце на $-1$. Получаем, что</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ \sup\set{x} < -y $$</p>
-<p>Так как $y\in\set{-x}$, то $-y\in\set{x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Из определения $\sup\set{x}$:</p>
-<p class="display-math">$$ \forall x \in \set{x} \ : \ x \leq \sup\set{x} $$</p>
-<p>Но $-y$ тоже принадлежит $\set{x}$, поэтому неравенство должно выполняться и для него тоже:</p>
-<p class="display-math">$$ -y \leq \sup\set{x} $$</p>
-<p>Получаем два противоречащих друг другу неравенства:</p>
-<p class="display-math">$$ \sup\set{x} < -y  \qquad -y \leq \sup\set{x} $$</p>
-<p>Получается, что $\sup\set{x}$ одновременно меньше и не меньше числа $-y$. Противоречие.</p>
-<p>Итак, мы показали, что</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ -\sup\set{x} \leq y $$</p>
-<p>То есть, $-\sup\set{x}$ является нижней границей множества $\set{-x}$.</p>
-<p>$\blacksquare$</p>
-<p><em>Доказательство 2</em></p>
-<p>По определению $\sup\set{x}$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ x' > \sup\set{x} - \varepsilon $$</p>
-<p>Неравенство в конце умножим на $-1$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ -x' < -\sup\set{x} + \varepsilon $$</p>
-<p>Но если $x'\in\set{x}$, то $y' = -x'$ принадлежит $\set{-x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Поэтому верно следующее</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists y' \in \set{-x} \ : \ y' < -\sup\set{x} + \varepsilon $$</p>
+                        <p><strong>Доказательство $\Rightarrow$</strong></p>
+<p class="display-math">$$ \left.\begin{array}{rr} A\subseteq B \\ \Omega \setminus A \subseteq \Omega \setminus B \end{array} \ \right\} \Rightarrow A = B $$</p>
+<p>Распишем равенство $A=B$ по определению:</p>
+<p class="display-math">$$ A = B \Leftrightarrow A\subseteq B \text{ и } B\subseteq A $$</p>
+<p>То, что $A\subseteq B$ напрямую следует из условия. Поэтому нужно лишь доказать, что $B\subseteq A$.</p>
+<p>Докажем от противного. Пусть $B\nsubseteq A$, то есть</p>
+<p class="display-math">$$ \exists b \in B \ : \ b \notin A $$</p>
+<p>Раз $b\notin A$, то $b\in \Omega\setminus A$, так в этом множестве находятся все элементы $\Omega$, которые не находятся в $A$. Раз $b\in\Omega\setminus A$, то, по условию, $b\in\Omega\setminus B$.</p>
+<p>Итак, получается, что</p>
+<p class="display-math">\begin{gather*}
+    b\in B
+    \\[5px]
+    b\in\Omega\setminus B
+\end{gather*}</p>
+<p>Но раз $b\in B$, то $b$ по определению не может быть в $\Omega\setminus B$ и наоборот. Противоречение.</p>
+<p>Значит $ B\subseteq A $.</p>
 <p>$\blacksquare$</p>
 <hr>
-<p><strong>Доказательство б)</strong></p>
-<p class="display-math">$$ \sup\set{-x} = -\inf\set{x} $$</p>
-<p>Доказывать будем в обратную сторону, то есть</p>
-<p class="display-math">$$ -\inf\set{x} = \sup\set{-x} $$</p>
-<p>Нужно доказать два пункта:</p>
-<ol>
-<li>$-\inf\set{x}$ является верхней границей $\set{-x}$</li>
-<li>$\forall \varepsilon &gt; 0 \ \exists y' \in \set{-x} \ : \ y' &gt; -\inf\set{x} - \varepsilon$</li>
-</ol>
-<p><em>Доказательство 1</em></p>
-<p>Докажем, что $-\inf\set{x}$ является верхней границей $\set{-x}$, то есть</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ y \leq -\inf\set{x} $$</p>
-<p>Будем доказывать от противного:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ y > -\inf\set{x} $$</p>
-<p>Умножим неравенство в конце на $-1$:</p>
-<p class="display-math">$$ \exists y \in \set{-x} \ : \ -y < \inf\set{x} $$</p>
-<p>Так как $y\in\set{-x}$, то $-y\in\set{x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Из определения $\inf\set{x}$:</p>
-<p class="display-math">$$ \forall x \in \set{x} \ : \ x \geq \inf\set{x} $$</p>
-<p>Но $-y$ тоже принадлежит $\set{x}$, поэтому неравенство должно выполняться и для него тоже:</p>
-<p class="display-math">$$ -y \geq \inf\set{x} $$</p>
-<p>Получаем два противоречащих друг другу неравенства:</p>
-<p class="display-math">$$ \inf\set{x} \leq -y  \qquad -y < \inf\set{x} $$</p>
-<p>Получается, что $\inf\set{x}$ одновременно больше и не больше числа $-y$. Противоречие.</p>
-<p>Итак, мы показали, что</p>
-<p class="display-math">$$ \forall y \in \set{-x} \ : \ y \leq -\inf\set{x} $$</p>
-<p>То есть, $-\inf\set{x}$ является верхней границей множества $\set{-x}$.</p>
-<p><em>Доказательство 2</em></p>
-<p>По определению $\inf\set{x}$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ x' < \inf\set{x} + \varepsilon $$</p>
-<p>Неравенство в конце умножим на $-1$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x' \in \set{x} \ : \ -x' < -\inf\set{x} - \varepsilon $$</p>
-<p>Но если $x'\in\set{x}$, то $y' = -x'$ принадлежит $\set{-x}$ (по определению множеств $\set{x}$ и $\set{-x}$).</p>
-<p>Поэтому верно следующее</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists y' \in \set{-x} \ : \ y' < -\inf\set{x} - \varepsilon $$</p>
+<p><strong>Доказательство $\Leftarrow$</strong></p>
+<p class="display-math">$$ \left.\begin{array}{rr} A\subseteq B \\ \Omega \setminus A \subseteq \Omega \setminus B \end{array} \ \right\} \Leftarrow A = B $$</p>
+<p>Распишем равенство $A=B$ по определению:</p>
+<p class="display-math">$$ A = B \Leftrightarrow A\subseteq B \text{ и } B\subseteq A $$</p>
+<p>Раз $A\subseteq B$ верно по условию, нужно доказать только, что</p>
+<p class="display-math">$$ \Omega \setminus A \subseteq \Omega \setminus B $$</p>
+<p>Докажем от противного. Пусть</p>
+<p class="display-math">$$ \exists a' \in \Omega \setminus A \ : \ a' \notin \Omega \setminus B $$</p>
+<p>Раз $a' \in \Omega \setminus B$, то, по определению операции разности множеств, $a \in B$. По условию известно, что $B\subseteq A$, а значит $a\in A$.</p>
+<p>Итак, получается, что</p>
+<p class="display-math">\begin{gather*}
+    a \in A
+    \\[5px]
+    a \in \Omega\setminus A
+\end{gather*}</p>
+<p>Но раз $a\in A$, то $a$ по определению операции разности множеств не может быть в $\Omega\setminus A$ и наоборот. Противоречие.</p>
+<p>Значит</p>
+<p class="display-math">$$ \Omega \setminus A \subseteq \Omega \setminus B $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Доказательство дополнения</strong></p>
+<p>Для начала покажем, что:</p>
+<p class="display-math">$$ A = \Omega\setminus \left( \Omega\setminus A \right) $$</p>
+<p>Действительно, $\Omega\setminus A$ означает все элементы из $\Omega$, не принадлежащие $A$. Тогда $\Omega\setminus \left( \Omega\setminus A \right)$ — множество элементов $\Omega$, не не принадлежащие $A$, то есть это и
+есть элементы самого $A$.</p>
+<p>По этому же свойству:</p>
+<p class="display-math">$$ B = \Omega\setminus\left( \Omega\setminus B \right) $$</p>
+<p>Воспользуемся доказанной выше теоремой:</p>
+<p class="display-math">$$ \left.\begin{array}{rr} \Omega \setminus A \subseteq \Omega\setminus B \\ \Omega\setminus (\Omega \setminus A) \subseteq \Omega\setminus (\Omega\setminus B) \end{array} \ \right\} \Leftrightarrow \Omega \setminus A = \Omega \setminus B $$</p>
 <p>$\blacksquare$</p>
 
                     </div>
 
                     <div class="reason-overlay">
-                        
-
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
-                    </div>
-
-                    <div class="solver">
-                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
-                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
-
-
-                            <span class="solver-name">Петр Радько</span>
-                        </a>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -292,19 +240,6 @@
                 </script>
             </div>
 
-
-
-            <section class="nav">
-                    <a href="../../tasks/19/" title="Следующая задача" class="next">
-                        <span class="label">19</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-                    <a href="../../tasks/17/" title="Предыдущая задача" class="prev">
-                        <i class="fas fa-arrow-left"></i>
-                        <span class="label">17</span>
-                    </a>
-            </section>
         </section>
 
         <footer>
