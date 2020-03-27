@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>69 | Демидович. Решения</title>
-        <meta name="description" content="Доказать, что последовательность$$ x_n &#x3D; \left( 1 + \frac{1}{n} \right)^{n} \ (n &#x3D; 1,2,\ldots) $$монотонно возрастает и ограничена сверху, а последовательность$$ y_n &#x3D; \left( 1 + \frac{1}{n} \right)^{n+1} \ (n &#x3D; 1,2,\ldots) $$монотонно убывает и ограничена снизу. Отсюда вывести, что эти последовательности имеют общий предел$$ \limn \left( 1 + \frac{1}{n} \right)^n &#x3D; \limn \left( 1 + \frac{1}{n} \r">
+        <title>71 | Демидович. Решения</title>
+        <meta name="description" content="Пусть $p_n \ (n&#x3D;1,2,\ldots)$ — произвольная последовательность чисел, стремящаяся к $+\infty$ и $q_n \ (n&#x3D;1,2,\ldots)$ — произвольнаяпоследовательность чисел, стремящаяся к $-\infty \ (p_n, q_n \overline{\in} \[-1,0\])$. Доказать, что$$ \limn \left( 1 + \frac{1}{p_n} \right)^{p_n} &#x3D; \limn \left(1 + \frac{1}{q_n} \right)^{q_n} &#x3D; e $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>69</span>
+                    <span>71</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,27 +146,13 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Доказать, что последовательность</p>
-<p class="display-math">$$ x_n = \left( 1 + \frac{1}{n} \right)^{n} \ (n = 1,2,\ldots) $$</p>
-<p>монотонно возрастает и ограничена сверху, а последовательность</p>
-<p class="display-math">$$ y_n = \left( 1 + \frac{1}{n} \right)^{n+1} \ (n = 1,2,\ldots) $$</p>
-<p>монотонно убывает и ограничена снизу. Отсюда вывести, что эти последовательности имеют общий предел</p>
-<p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = \limn \left( 1 + \frac{1}{n} \right)^{n+1} = e $$</p>
+                        <p>Пусть $p_n \ (n=1,2,\ldots)$ — произвольная последовательность чисел, стремящаяся к $+\infty$ и $q_n \ (n=1,2,\ldots)$ — произвольная
+последовательность чисел, стремящаяся к $-\infty \ (p_n, q_n \overline{\in} [-1,0])$. Доказать, что</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{p_n} \right)^{p_n} = \limn \left(1 + \frac{1}{q_n} \right)^{q_n} = e $$</p>
                     </div>
                 </div>
             </section>
 
-            <section class="block-section hint">
-                <div class="block-section-header">
-                    <i class="fas fa-lightbulb"></i>
-                    <span>Указание</span>
-                </div>
-
-                <div class="block-section-container">
-                    <div class="block-section-content"><p>Составить соотношения $\frac{x_{n+1}}{x_n}, \frac{y_n}{y_{n+1}}$ и воспользоваться неравенством <a href="/tasks/7">примера 7</a>.</p>
-</div>
-                </div>
-            </section>
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -200,115 +186,29 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Убывание $y_n$)</strong></p>
-<p class="display-math">$$ y_n = \left(1 + \frac{1}{n}\right)^{n+1} = \left( \frac{n+1}{n} \right)^{n+1} $$</p>
-<p>Покажем, что эта последовательность убывает, то есть</p>
-<p class="display-math">$$ y_n > y_{n+1} $$</p>
-<p class="display-math">$$ \frac{y_n}{y_{n+1}} > 1 $$</p>
-<p class="display-math">\begin{gather*}
-    \frac{ \left( \frac{n+1}{n} \right)^{n+1} }{ \left( \frac{n+2}{n+1} \right)^{n+2} } > 1
-    \\[10px]
-    \frac{ \left( \frac{n+1}{n} \right)^{n+1} }{ \left( \frac{n+2}{n+1} \right)^{n+1} \left(\frac{n+2}{n+1}\right) } > 1
-    \\[10px]
-    \left( \frac{ \frac{n+1}{n} }{ \frac{n+2}{n+1} } \right)^{n+1} > \frac{n+1}{n+2}
-    \\[10px]
-    \left( \frac{(n+1)^2}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
-    \\[10px]
-    \left( \frac{n^2 + 2n + 1}{n^2 + 2n} \right)^{n+1} > \frac{n+1}{n+2}
-    \\[10px]
-    \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
-\end{gather*}</p>
-<p>Для левой части воспользуемся неравенством Бернулли, которое доказывается в <a href="/tasks/7">задаче 7</a>:</p>
-<p class="display-math">$$ \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} \geq 1 + \frac{n+1}{n(n+2)}  $$</p>
-<p>Продолжаем преобразования:</p>
-<p class="display-math">\begin{align*}
-    1 + \frac{n+1}{n(n+2)} &> \frac{n+1}{n+2}
-    \\[5px]
-    \frac{n(n+2) + (n+1)}{n(n+2)} &> \frac{n+1}{n+2}
-    \\[5px]
-    \frac{n(n+2) + (n+1)}{n} &> n+1
-    \\[5px]
-    n^2 + 3n + 1 &> n^2 + n
-    \\[5px]
-    2n + 1 &> 0
-\end{align*}</p>
-<p>Последнее неравенство очевидно выполняется, так как слева строго положительное число.
-Мы доказали, что</p>
-<p class="display-math">$$ y_n > y_{n+1} $$</p>
-<p>Это значит, что последовательность $y_n$ убывает.</p>
-<p><strong>Сходимость $y_n$)</strong></p>
-<p>Все члены последовательности $y_n$ положительные, а значит, она ограничена снизу $0$.</p>
-<p>Итак, $y_n$ убывает, но ограничена снизу. Любая монотонная и ограниченная последовательность имеет предел. Значит и $y_n$ имеет предел.</p>
-<p class="display-math">$$ \limn y_n = Y $$</p>
+                        <p><strong>Доказательство неравенства</strong></p>
 <hr>
-<p><strong>Возрастание $x_n$)</strong></p>
-<p class="display-math">$$ x_n = \left(1 + \frac{1}{n}\right)^n = \left( \frac{n+1}{n} \right)^n $$</p>
-<p>Покажем, что эта последовательность возрастает, то есть</p>
-<p class="display-math">$$ x_{n+1} > x_n $$</p>
-<p class="display-math">$$ \frac{x_{n+1}}{x_n} > 1 $$</p>
-<p class="display-math">\begin{gather*}
-    \frac{ \left( \frac{n+2}{n+1} \right)^{n+1} }{ \left( \frac{n+1}{n} \right)^{n} } > 1
-    \\[10px]
-    \frac{ \left( \frac{n+2}{n+1} \right)^n \left( \frac{n+2}{n+1} \right) }{ \left( \frac{n+1}{n} \right)^{n} } > 1
-    \\[10px]
-    \left( \frac{ \frac{n+2}{n+1} }{ \frac{n+1}{n} } \right)^n > \frac{n+1}{n+2}
-    \\[10px]
-    \left( \frac{n(n+2)}{(n+1)^2} \right)^n > \frac{n+1}{n+2}
-    \\[10px]
-    \left( \frac{n^2 + 2n + 1 - 1}{n^2 + 2n + 1} \right)^n > \frac{n+1}{n+2}
-    \\[10px]
-    \left( 1 - \frac{1}{(n+1)^2} \right)^n > \frac{n+1}{n+2}
-\end{gather*}</p>
-<p>Так как</p>
-<p class="display-math">$$ - \frac{1}{(n+1)^2} > -1, $$</p>
-<p>то мы можем воспользоваться неравенством Бернулли:</p>
-<p class="display-math">$$ \left( 1 - \frac{1}{(n+1)^2} \right)^n \geq 1 - \frac{n}{(n+1)^2} $$</p>
-<p>Продолжаем преобразования:</p>
-<p class="display-math">\begin{align*}
-    1 - \frac{n}{(n+1)^2} &> \frac{n+1}{n+2}
-    \\[5px]
-    \frac{(n+1)^2 - n}{(n+1)^2} &> \frac{n+1}{n+2}
-    \\[5px]
-    (n^2 + n + 1)(n+2) &> (n+1)^3
-    \\[5px]
-    n^3 + 3n^2 + 3n + 2 &> n^3 + 3n^2 + 3n + 1
-    \\[5px]
-    2 &> 1
-\end{align*}</p>
-<p>Последнее неравенство очевидно верно.
-Мы доказали, что</p>
-<p class="display-math">$$ x_{n+1} > x_n $$</p>
-<p>Это значит, что последовательность $x_n$ убывает.</p>
-<p><strong>Сходимость $x_n$)</strong></p>
-<p>Докажем, что $x_n &lt; y_n$:</p>
-<p class="display-math">$$ \left(1+\frac{1}{n}\right)^n < \left(1+\frac{1}{n}\right)^{n+1} $$</p>
-<p class="display-math">$$ 1 < 1+\frac{1}{n} $$</p>
-<p class="display-math">$$ 0 < \frac{1}{n} $$</p>
-<p>Итак, любой член $x_n$ ограничен сверху $y_n$.</p>
-<p>В качестве общей границы возьмем $y_1$</p>
-<p class="display-math">$$ y_1 = \left(1 + \frac{1}{1}\right)^{2} = 4 $$</p>
-<p>Получили верхнюю границу для $x_n$:</p>
-<p class="display-math">$$ x_n < 4 $$</p>
-<p>Итак, $x_n$ возрастает, но ограничена сверху числом $4$. Любая монотонная и ограниченная последовательность имеет предел. Значит и $x_n$ имеет предел.</p>
-<p class="display-math">$$ \limn x_n = X $$</p>
-<hr>
-<p><strong>Одинаковость пределов $x_n$ и $y_n$)</strong></p>
-<p>Найдем предел отношения $y_n$ и $x_n$:</p>
-<p class="display-math">\begin{gather*}
-    \limn \frac{y_n}{x_n} = \limn \frac{ \left(1 + \frac{1}{n}\right)^{n+1} }{ \left(1 + \frac{1}{n}\right)^n } = \limn 1 + \frac{1}{n} =
-    \\[5px]
-    = 1 + \limn \frac{1}{n} = 1 + 0 = 1
-\end{gather*}</p>
-<p>Мы воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
-<p>Итак,</p>
-<p class="display-math">$$ \limn \frac{y_n}{x_n} = 1 $$</p>
-<p>Но $x_n$ и $y_n$ сходятся, причем предел $x_n &gt; 0$, поэтому можно воспользоваться правилом разделения пределов в дробях:</p>
-<p class="display-math">$$ \limn \frac{y_n}{x_n} = \frac{\lim\limits_{n\to\infty} y_n}{\lim\limits_{n\to\infty} x_n} = \frac{Y}{X} = 1 $$</p>
-<p>Получается, что</p>
-<p class="display-math">$$ \frac{Y}{X} = 1 $$</p>
-<p class="display-math">$$ Y = X $$</p>
-<p>Доказали, что пределы $x_n$ и $y_n$ совпадают. Их общий предел и называют <strong>числом $e$</strong>.</p>
-<p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = \limn \left( 1 + \frac{1}{n} \right)^{n+1} = e $$</p>
+<p><strong>Поиск значений $n$</strong></p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ 0 < e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} \ (n=1,2,\ldots) $$</p>
+<p>Предел</p>
+<p class="display-math">$$ \limn \frac{3}{n} = 0 $$</p>
+<p>(см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+<p>Распишем, что значит $\frac{3}{n}\to 0$ по определению предела:</p>
+<p class="display-math">$$ \limn \frac{3}{n} = 0 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left|\frac{3}{n}\right| < \varepsilon $$</p>
+<p>Раз выражение выше выполняется для любого положительного $\varepsilon$, то должно выполняться и для числа $0.001$.</p>
+<p class="display-math">$$ \text{для } 0.001 \ \exists N = N(0.001) \ \forall n > N \ : \ \left|\frac{3}{n}\right| < 0.001 $$</p>
+<p>Рассмотрим последнее неравенство. Модуль можно убрать, так как выражение под ним всегда положительное:</p>
+<p class="display-math">$$ \frac{3}{n} < 0.001 $$</p>
+<p>Откуда</p>
+<p class="display-math">$$ n > \frac{3}{0.001} = 3000 $$</p>
+<p>Итак, начиная с $n=3001$ будет выполняться неравенство:</p>
+<p class="display-math">$$ \frac{3}{n} < 0.001 $$</p>
+<p>Выше мы показали, что</p>
+<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} $$</p>
+<p>Поэтому, начиная с $n=3001$</p>
+<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} < 0.001 $$</p>
+<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < 0.001 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -363,35 +263,15 @@
 
 
 
-            <section class="block-section refs">
-                <div class="block-section-header">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Ссылки</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="/proto/sequences/limits/second-wonderful" title="Второй замечательный предел (последовательность)" target="_blank">
-                                    Второй замечательный предел (последовательность)
-                                </a>
-                            </dt>
-                            <dd>Доказательство сходимости $x_n$ через бином Ньютона.</dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
             <section class="nav">
-                    <a href="../../tasks/70/" title="Следующая задача" class="next">
-                        <span class="label">70</span>
+                    <a href="../../tasks/77/" title="Следующая задача" class="next">
+                        <span class="label">77</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/68/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/70/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">68</span>
+                        <span class="label">70</span>
                     </a>
             </section>
         </section>
