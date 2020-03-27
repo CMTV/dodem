@@ -1,0 +1,12 @@
+{
+    "task": 86,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/elementary",
+        "sequences/limits/harmonic-series"
+    ]
+}
