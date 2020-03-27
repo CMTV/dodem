@@ -1,0 +1,1 @@
+$$ x_n = \frac{10}{1}\cdot\frac{11}{3}\ldots\frac{n+9}{2n-1} $$
