@@ -22,7 +22,7 @@
                         ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
                         floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
                         limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
-                        set: ["\\left\\{ #1 \\right\\}", 1]                   // Обрамление аргумента в { }
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
                     }
                 }
             };
@@ -185,12 +185,24 @@
 
                     <div class="block-section-content">
                         <p><strong>Доказательство монотонности</strong></p>
-<p>Значит, $x_n$ — возрастающая последовательность.</p>
+<p>Выясним, возрастает или убывает $x_n$:</p>
+<p class="display-math">$$ x_{n+1} \ \text{ ? } \ x_n $$</p>
+<p class="display-math">$$ \frac{10\cdot 11\ldots (n+9)(n+10)}{1\cdot 3\ldots (2n-1) (2n+1)} \ \text{ ? } \ \frac{10\cdot 11\cdot\ldots (n+9)}{1\cdot 3\ldots (2n-1)} $$</p>
+<p class="display-math">$$ \frac{n+10}{2n+1} \ \text{ ? } \ 1 $$</p>
+<p class="display-math">$$ n+10 \ \text{ ? } \ 2n+1 $$</p>
+<p class="display-math">$$ 9 \ \text{ ? } n $$</p>
+<p>Итак, для $n\leq 9$ последовательность $x_n$ возрастает (так как в этом случае $9 &gt; n$), а начиная с $n&gt; 9$ $x_n$ убывает.</p>
+<p>Будем рассматривать последовательность $y_n$, которая равна $x_n$, но с отброшенными первыми $9$ членами.</p>
+<p>Значит $y_n$ — убывающая последовательность.</p>
 <hr>
 <p><strong>Ограничение сверху</strong></p>
-<p>Значит, $x_n$ ограничена сверху.</p>
+<p>Последовательность $x_n$, а значит и $y_n$ состоит из строго положительных чисел. Значит:</p>
+<p class="display-math">$$ y_n > 0 $$</p>
+<p>Значит, $y_n$ ограничена снизу.</p>
 <hr>
-<p>Мы показали, что $x_n$ возрастает и ограничена сверху. Значит, $x_n$ сходится.</p>
+<p>Мы показали, что $y_n$ убывает и ограничена снизу. Значит, $y_n$ сходится.</p>
+<p>По протозадаче &quot;<a href="/proto/sequences/limits/first-members-independency">Независимость предела последовательности от ее первых членов</a>&quot; раз $y_n$ сходится, то и $x_n$ сходится, так как $y_n$ получена из $x_n$ путем отбрасывания
+первых $9$ элементов.</p>
 <p>$\blacksquare$</p>
 
                     </div>
@@ -226,8 +238,32 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/first-members-independency" title="Независимость предела последовательности от ее первых членов" target="_blank">
+                                    Независимость предела последовательности от ее первых членов
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
+                    <a href="../../tasks/79/" title="Следующая задача" class="next">
+                        <span class="label">79</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
 
                     <a href="../../tasks/77/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
