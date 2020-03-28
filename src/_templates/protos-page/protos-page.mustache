@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}        
+    </head>
+    <body class="page-protos">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <h2 class="title"><i class="fas fa-sitemap"></i> Прото-задачи</h2>
+
+            {{ #protos }}
+
+                <section class="proto-tasks-category">
+                    <h3>{{ categoryTitle }}</h2>
+                    <section class="block-section refs task-list">
+                        <div class="block-section-container">
+                            <dl class="block-section-content">
+
+                                {{ #protoTasks }}
+                                    <dt>
+                                        <a href="{{{ link }}}" title="{{ title }}" target="_blank">
+                                            {{ title }}
+                                        </a>
+                                    </dt>
+                                    <dd>{{ description }}</dd>
+                                {{ /protoTasks }}
+                            
+                            </dl>
+                        </div>
+                    </section>
+                </section>
+            
+            {{ /protos }}
+
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

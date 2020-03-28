@@ -71,12 +71,76 @@ function getRenderedMd(filename, protoPath)
     return mdIt.render(translator.translate(mdContent, ['isolateMath']));
 }
 
+function getProtoCategory(protoPath)
+{
+    let arr = protoPath.split('/');
+    arr.pop();
+
+    let category = arr.join('/');
+    let categoriesData = JSON.parse(fs.readFileSync('proto-cats.json', { encoding: "utf-8" }));
+
+    return (category in categoriesData) ? categoriesData[category] : categoriesData[""];
+}
+
+function genProtosPage()
+{
+    let protoPaths = getProtoPaths();
+    let protos = {};
+
+    protoPaths.forEach((protoPath) =>
+    {
+        let protoCategory = getProtoCategory(protoPath);
+        
+        if (!(protoCategory in protos)) protos[protoCategory] = [];
+
+        let protoMeta = JSON.parse(fs.readFileSync(p.normalize('proto-tasks/' + protoPath + '/meta.json'), { encoding: 'utf-8' }));
+
+        protos[protoCategory].push(
+            {
+                link:           '/proto/' + protoPath,
+                title:          protoMeta.title,
+                description:    protoMeta.description
+            }
+        );
+    });
+
+    //
+
+    let formattedProtos = [];
+
+    let categoriesData = JSON.parse(fs.readFileSync('proto-cats.json', { encoding: "utf-8" }));
+
+    Object.values(categoriesData).forEach((key) =>
+    {
+        formattedProtos.push(
+            {
+                categoryTitle: key,
+                protoTasks: protos[key]
+            }
+        )
+    });
+
+    let view =
+    {
+        site_root: '../',
+
+        protos: formattedProtos
+    };
+
+    fs.writeFileSync(
+        p.normalize(`out/proto/index.html`),
+        tools.genHtml('protos-page', view)
+    );
+}
+
 // ===============================
 
 function genAll()
 {
     let protoPaths = getProtoPaths();
     protoPaths.forEach(protoPath => genProtoTask(protoPath));
+
+    genProtosPage();
 }
 
 module.exports =

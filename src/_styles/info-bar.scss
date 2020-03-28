@@ -32,8 +32,15 @@
         text-decoration: none;
         color: $fmuted-color;
 
+        margin-top: 15px;
+
+        &:nth-child(1), &:nth-child(2), &:nth-child(3)
+        {
+            margin-top: 0;
+        }
+
         @include layout(mini)
-        {   
+        {
             display: flex;
 
             align-items: center;
@@ -46,6 +53,8 @@
             border-radius: $border-radius;
 
             background: white;
+
+            margin-top: 0;
 
             span
             {
@@ -61,6 +70,17 @@
         &:hover
         {
             color: $fblack-color;
+        }
+
+        &.break
+        {
+            flex-grow: 1; flex-basis: 100%;
+            margin: 0;
+
+            @include layout(mini)
+            {
+                display: none;
+            }
         }
 
         i

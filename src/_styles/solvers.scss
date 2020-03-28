@@ -10,6 +10,12 @@
         font-weight: normal;
         text-align: center;
         font-family: 'Yandex';
+
+        i
+        {
+            color: $fmuted-color;
+            margin-right: 10px;
+        }
     }
 
     .solvers-list
