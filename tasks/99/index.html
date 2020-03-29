@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>87 | Демидович. Решения</title>
-        <meta name="description" content="Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.">
+        <title>99 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; n^2 - 9n - 100 $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>87</span>
+                    <span>99</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,8 +146,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.</p>
-
+                        <p class="display-math">$$ x_n = n^2 - 9n - 100 $$</p>
                     </div>
                 </div>
             </section>
@@ -185,19 +184,15 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Словестная формулировка</strong></p>
-<p>Смысл фундаментальной последовательности состоит в том, что чем дальше мы двигаемся по последовательности, тем ближе
-друг к другу они расположены. Какое бы расстояние $\varepsilon$ мы не придумали, в какой-то момент (с $N$-го элемента) расстояние
-между элементами будет меньше, чем то, которое мы придумали. Раз расстояние между элементами бесконечно уменьшается, то
-сама последовательность постепенно перестает &quot;колебаться&quot; и &quot;выпрямляется&quot; (сходится). В этом и состоит критерий Коши — из фундаментальности последовательности следует ее сходимость и наоброт.</p>
-<p>Если последовательность не фундаментальная, то расстояние между элементами не уменьшается бесконечно. Существует определенное расстояние $\varepsilon'$, такое, что как бы далеко мы не зашли (какое-бы $N$ не взяли)
-всегда найдутся два элемента $x_{n'}$ и $x_{n'+p'}$, расстояние между которыми больше $\varepsilon$.</p>
-<hr>
-<p><strong>Логическая формулировка</strong></p>
-<p>Критерий Коши на языке математической логики:</p>
-<p class="display-math">$$ \exists \limn x_n \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N, p > 0 \ : \ |x_{n+p} - x_n| < \varepsilon $$</p>
-<p>Если Критерий Коши не выполняется:</p>
-<p class="display-math">$$ \nexists \limn x_n \Leftrightarrow \exists \varepsilon' > 0 \ \forall N = N(\varepsilon) \ \exists n' > N, p' > 0 \ : \ |x_{n'+p'} - x_{n'}| \geq \varepsilon' $$</p>
+                        <p>Каждый член последовательности $x_n$ равен значению квадратичной функции</p>
+<p class="display-math">$$ n^2 - 9n - 100 $$</p>
+<p>График этой функции — парабола, ветви которой направлены вверх. Получим вершину этой параболы:</p>
+<p class="display-math">$$ -\frac{b}{2a} = - \frac{-9}{2} = 4.5 $$</p>
+<p>Так как $4.5$ — не натуральное число, ближайшие к этой вершине члены последовательности с номерами $4$ и $5$.
+Из свойств параболы, значения элементов, расположенных на одинаковом расстоянии от вершины, равны, поэтому</p>
+<p class="display-math">$$ x_4 = x_5 $$</p>
+<p>Эти два элемента и являются наименьшими членами последовательности $x_n$, так как они находятся ближе всего к ее вершине ($4.5$).</p>
+<p class="display-math">$$ x_4 = x_5 = 16 - 36 - 100 = -120 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -233,14 +228,10 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/88/" title="Следующая задача" class="next">
-                        <span class="label">88</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/86/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/98/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">86</span>
+                        <span class="label">98</span>
                     </a>
             </section>
         </section>

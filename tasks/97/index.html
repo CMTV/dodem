@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>87 | Демидович. Решения</title>
-        <meta name="description" content="Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.">
+        <title>97 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; \frac{\sqrt{n}}{100 + n} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>87</span>
+                    <span>97</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,8 +146,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.</p>
-
+                        <p class="display-math">$$ x_n = \frac{\sqrt{n}}{100 + n} $$</p>
                     </div>
                 </div>
             </section>
@@ -185,19 +184,39 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Словестная формулировка</strong></p>
-<p>Смысл фундаментальной последовательности состоит в том, что чем дальше мы двигаемся по последовательности, тем ближе
-друг к другу они расположены. Какое бы расстояние $\varepsilon$ мы не придумали, в какой-то момент (с $N$-го элемента) расстояние
-между элементами будет меньше, чем то, которое мы придумали. Раз расстояние между элементами бесконечно уменьшается, то
-сама последовательность постепенно перестает &quot;колебаться&quot; и &quot;выпрямляется&quot; (сходится). В этом и состоит критерий Коши — из фундаментальности последовательности следует ее сходимость и наоброт.</p>
-<p>Если последовательность не фундаментальная, то расстояние между элементами не уменьшается бесконечно. Существует определенное расстояние $\varepsilon'$, такое, что как бы далеко мы не зашли (какое-бы $N$ не взяли)
-всегда найдутся два элемента $x_{n'}$ и $x_{n'+p'}$, расстояние между которыми больше $\varepsilon$.</p>
+                        <p>Докажем вспомогательное свойство:</p>
+<p class="display-math">$$ x + \frac{1}{x} \geq 2, \ x > 0 $$</p>
+<p>В левой части приведем к общему знаменателю:</p>
+<p class="display-math">$$ \frac{x^2+1}{x} \geq 2 $$</p>
+<p>Домножим обе части неравенства на $x$:</p>
+<p class="display-math">$$ x^2+1 \geq 2x $$</p>
+<p class="display-math">$$ x^2-2x+1 \geq 0 $$</p>
+<p class="display-math">$$ (x-1)^2 \geq 0 $$</p>
+<p>Последнее неравенство всегда выполняется, так как слева число в квадрате, а квадрат любого числа $\geq 0$.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ x + \frac{1}{x} \geq 2, \ x > 0 $$</p>
+<p>$\blacksquare$</p>
 <hr>
-<p><strong>Логическая формулировка</strong></p>
-<p>Критерий Коши на языке математической логики:</p>
-<p class="display-math">$$ \exists \limn x_n \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N, p > 0 \ : \ |x_{n+p} - x_n| < \varepsilon $$</p>
-<p>Если Критерий Коши не выполняется:</p>
-<p class="display-math">$$ \nexists \limn x_n \Leftrightarrow \exists \varepsilon' > 0 \ \forall N = N(\varepsilon) \ \exists n' > N, p' > 0 \ : \ |x_{n'+p'} - x_{n'}| \geq \varepsilon' $$</p>
+<p>Итак, рассмотрим произвольный член последовательности $x_n$:</p>
+<p class="display-math">$$ x_n = \frac{\sqrt{n}}{100 + n} $$</p>
+<p>В знаменателе вынесем за скобки $10n$:</p>
+<p class="display-math">$$ \frac{\sqrt{n}}{10n\left( \frac{10}{n} + \frac{1}{10} \right)} $$</p>
+<p>Избавимся от $n$ в числителе:</p>
+<p class="display-math">$$ \frac{1}{10\sqrt{n}\left( \frac{10}{n} + \frac{1}{10} \right)} $$</p>
+<p>Занесем $\sqrt{n}$ в скобки в знаменателе:</p>
+<p class="display-math">$$ \frac{1}{10\left( \frac{10}{\sqrt{n}} + \frac{\sqrt{n}}{10} \right)} $$</p>
+<p>Для скобки в знаменателе воспользуемся доказанным выше вспомогательным свойством:</p>
+<p class="display-math">$$ \left( \frac{10}{\sqrt{n}} + \frac{\sqrt{n}}{10} \right) \geq 2 $$</p>
+<p class="display-math">$$ 10\left( \frac{10}{\sqrt{n}} + \frac{\sqrt{n}}{10} \right) \geq 20 $$</p>
+<p>А значит</p>
+<p class="display-math">$$ x_n = \frac{\sqrt{n}}{100 + n} = \frac{1}{10\left( \frac{10}{\sqrt{n}} + \frac{\sqrt{n}}{10} \right)} \leq \frac{1}{20} $$</p>
+<p class="display-math">$$ x_n \leq \frac{1}{20} $$</p>
+<p>Но при $n=100$ получаем:</p>
+<p class="display-math">$$ x_{100} = \frac{\sqrt{100}}{100 + 100} = \frac{1}{20} $$</p>
+<p>Итак, получается, что</p>
+<p class="display-math">$$ x_{100} \geq x_n $$</p>
+<p>Поэтому $x_{100} = \frac{1}{20}$ является наибольшим членом последовательности $x_n$.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -233,14 +252,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/88/" title="Следующая задача" class="next">
-                        <span class="label">88</span>
+                    <a href="../../tasks/98/" title="Следующая задача" class="next">
+                        <span class="label">98</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/86/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/96/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">86</span>
+                        <span class="label">96</span>
                     </a>
             </section>
         </section>

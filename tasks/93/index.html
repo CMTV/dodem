@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>87 | Демидович. Решения</title>
-        <meta name="description" content="Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.">
+        <title>93 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что сходящаяся числовая последовательность ограничена.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>87</span>
+                    <span>93</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.</p>
+                        <p>Доказать, что сходящаяся числовая последовательность ограничена.</p>
 
                     </div>
                 </div>
@@ -185,19 +185,22 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Словестная формулировка</strong></p>
-<p>Смысл фундаментальной последовательности состоит в том, что чем дальше мы двигаемся по последовательности, тем ближе
-друг к другу они расположены. Какое бы расстояние $\varepsilon$ мы не придумали, в какой-то момент (с $N$-го элемента) расстояние
-между элементами будет меньше, чем то, которое мы придумали. Раз расстояние между элементами бесконечно уменьшается, то
-сама последовательность постепенно перестает &quot;колебаться&quot; и &quot;выпрямляется&quot; (сходится). В этом и состоит критерий Коши — из фундаментальности последовательности следует ее сходимость и наоброт.</p>
-<p>Если последовательность не фундаментальная, то расстояние между элементами не уменьшается бесконечно. Существует определенное расстояние $\varepsilon'$, такое, что как бы далеко мы не зашли (какое-бы $N$ не взяли)
-всегда найдутся два элемента $x_{n'}$ и $x_{n'+p'}$, расстояние между которыми больше $\varepsilon$.</p>
-<hr>
-<p><strong>Логическая формулировка</strong></p>
-<p>Критерий Коши на языке математической логики:</p>
-<p class="display-math">$$ \exists \limn x_n \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N, p > 0 \ : \ |x_{n+p} - x_n| < \varepsilon $$</p>
-<p>Если Критерий Коши не выполняется:</p>
-<p class="display-math">$$ \nexists \limn x_n \Leftrightarrow \exists \varepsilon' > 0 \ \forall N = N(\varepsilon) \ \exists n' > N, p' > 0 \ : \ |x_{n'+p'} - x_{n'}| \geq \varepsilon' $$</p>
+                        <p>Пусть последовательность $x_n$ сходится, то есть имеет какой-то конечный предел $a$. Распишем, что это значит по определению:</p>
+<p class="display-math">$$ \limn x_n = a \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |x_n - a| < \varepsilon $$</p>
+<p>Раз выполняется, для любого $\varepsilon$, то будет выполняться и выберем какое-нибудь положительное $\varepsilon_0$.</p>
+<p>По определению, все элементы последовательности после $N = N(\varepsilon_0)$ удовлетворять неравенству:</p>
+<p class="display-math">$$ |x_n - a| < \varepsilon_0 $$</p>
+<p>Разложим это неравенство по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ a - \varepsilon_0 < x_n < a + \varepsilon_0 $$</p>
+<p>Итак, после $N$ всё бесконечное количество элементов последовательности лежит между четкими границами $a - \varepsilon_0$ и $a + \varepsilon_0$.
+Но у нас есть еще $N$ первых элементов последовательности, которые могут и не входить в обозначенный выше промежуток.</p>
+<p>Поэтому за границу надо взять наибольший член последовательности до $N$-го номера, либо одну из границ  $a - \varepsilon_0$ или $a + \varepsilon_0$:</p>
+<p class="display-math">$$ M = \max\left( |x_1|, |x_2|, \ldots, |x_N|, |a-\varepsilon_0|, |a+\varepsilon_0| \right) $$</p>
+<p>Полученное число $M$ и будет ограничивать последовательность $x_n$:</p>
+<p class="display-math">$$ \forall n \ : \ |x_n| \leq M $$</p>
+<p>Значит, последовательность $x_n$ ограничена.</p>
+<p>$\blacksquare$</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -231,16 +234,36 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
+                                    Упрощение модулей в неравенствах
+                                </a>
+                            </dt>
+                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
-                    <a href="../../tasks/88/" title="Следующая задача" class="next">
-                        <span class="label">88</span>
+                    <a href="../../tasks/94/" title="Следующая задача" class="next">
+                        <span class="label">94</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/86/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/92/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">86</span>
+                        <span class="label">92</span>
                     </a>
             </section>
         </section>
