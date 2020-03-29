@@ -1,0 +1,11 @@
+{
+    "task": 92,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/first-members-independency"
+    ]
+}

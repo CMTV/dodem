@@ -1,0 +1,11 @@
+{
+    "task": 93,
+    "location": "I.2",
+
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "simple-abs"
+    ]
+}
