@@ -1,0 +1,1 @@
+$$ \limn \frac{\log_a n}{n^r} = 0 \ (a> 0, r> 0) $$

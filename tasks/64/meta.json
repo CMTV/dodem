@@ -2,5 +2,10 @@
     "task": 64,
     "location": "I.2",
 
-    "solver": "CMTV"
+    "solver": "CMTV",
+
+    "proto":
+    [
+        "sequences/limits/log-ratio"
+    ]
 }
