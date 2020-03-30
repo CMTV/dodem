@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>Единственность предельной точки | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="">
+        <title>100 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; n + \frac{100}{n} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -30,21 +30,21 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -62,16 +62,16 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>
-        <script src="../../../../scripts/show-hide.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-proto-task">
+    <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -127,22 +127,30 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>100</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Единственность предельной точки
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Если</p>
-<p class="display-math">$$ \limn x_n = a, $$</p>
-<p>то $a$ — единственная предельная точка последовательности $x_n$.</p>
-
+                        <p class="display-math">$$ x_n = n + \frac{100}{n} $$</p>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -156,12 +164,13 @@
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -169,55 +178,54 @@
                 </div>
                 
                 <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
                     <div class="block-section-content">
-                        <p>Докажем, что если $x_n\to a$, то $a$ — предельная точка $x_n$.</p>
-<p>Рассмотрим подпоследовательность $y_n$, которая равна $x_n$:</p>
-<p class="display-math">$$ y_n = x_n $$</p>
-<p>Раз $y_n = x_n$, то</p>
-<p class="display-math">$$ \limn y_n = a $$</p>
-<p>Итак, подпоследовательность $y_n\to a$, а это по определению означает, что $a$ — предельная точка $x_n$.</p>
+                        <p>Докажем вспомогательное свойство:</p>
+<p class="display-math">$$ x + \frac{1}{x} \geq 2, \ x > 0 $$</p>
+<p>В левой части приведем к общему знаменателю:</p>
+<p class="display-math">$$ \frac{x^2+1}{x} \geq 2 $$</p>
+<p>Домножим обе части неравенства на $x$:</p>
+<p class="display-math">$$ x^2+1 \geq 2x $$</p>
+<p class="display-math">$$ x^2-2x+1 \geq 0 $$</p>
+<p class="display-math">$$ (x-1)^2 \geq 0 $$</p>
+<p>Последнее неравенство всегда выполняется, так как слева число в квадрате, а квадрат любого числа $\geq 0$.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ x + \frac{1}{x} \geq 2, \ x > 0 $$</p>
 <p>$\blacksquare$</p>
 <hr>
-<p>Докажем теперь, что других предельных точек кроме $a$ у $x_n$ нет.</p>
-<p>Докажем от противного. Пусть у $x_n$ существует еще одна предельная точка $a'$. Это означает, что существует некоторая подпоследовательность $x_{p_n}$, такая, что</p>
-<p class="display-math">$$ \limn x_{p_n} = a' $$</p>
-<p>Распишем, что это означает по определению:</p>
-<p class="display-math">$$ \limn x_{p_n} = a' \Leftrightarrow \forall \varepsilon > 0 \ \exists N_1 \ \forall n > N_1 \ : \ |x_{p_n} - a'| < \varepsilon $$</p>
-<p>В то же время по условию имеем, что</p>
-<p class="display-math">$$ \limn x_n = a \Leftrightarrow \forall \varepsilon > 0 \ \exists N_2 \ \forall n > N_2 \ : \ |x_n - a| < \varepsilon $$</p>
-<p>Раз оба случая выполняются для любого положительного $\varepsilon$, то они будут выполняться и для вот такого положительного числа</p>
-<p class="display-math">$$ E = \frac{|a' - a|}{2} $$</p>
-<p>Итак, для $E$ существует такое $N_2$, что для любого $n&gt;N_2$ выполняется условие</p>
-<p class="display-math">$$ |x_n - a| < E $$</p>
-<p>После $N_2$ найдется бесконечно много элементов подпоследовательности $x_{p_n}$. Выберем среди них такое $x_{p_t}$, которое удовлетворяет условию из $x_{p_n}\to a'$</p>
-<p class="display-math">$$ |x_{p_t} - a'| < E $$</p>
-<p>Так как $p_t &gt; n &gt; N_2$, то для него также выполняется неравенство</p>
-<p class="display-math">$$ |x_{p_t} - a| < E $$</p>
-<p>Итак, одновременно выполняются два неравенства:</p>
-<p class="display-math">$$ |x_{p_t} - a| < E \qquad |x_{p_t} - a'| < E $$</p>
-<p>Сложим их друг с другом:</p>
-<p class="display-math">$$ |x_{p_t} - a| + |x_{p_t} - a'| < 2E $$</p>
-<p>Воспользуемся свойством модуля:</p>
-<p class="display-math">$$ |f-g| = |g-f| $$</p>
-<p class="display-math">$$ |x_{p_t} - a| + |a' - x_{p_t}| < 2E $$</p>
-<p>Воспользуемся неравенством треугольника:</p>
-<p class="display-math">$$ |f+g| \leq |f| + |g| $$</p>
-<p class="display-math">$$ |x_{p_t} - a + a' - x_{p_t}| \leq |x_{p_t} - a| + |a' - x_{p_t}| < 2E $$</p>
-<p class="display-math">$$ |a' - a| < 2E $$</p>
-<p>Подставляем теперь значение для $E$:</p>
-<p class="display-math">$$ |a' - a| < 2\frac{|a' - a|}{2} $$</p>
-<p class="display-math">$$ |a' - a| < |a'-a| $$</p>
-<p class="display-math">$$ 1 < 1 $$</p>
-<p>Получили противоречие. Значит $a'$ не может быть предельной точкой $x_n$, а значит $a$ — единственная предельная точка $x_n$.</p>
-<p>$\blacksquare$</p>
-
+<p>Итак, рассмотрим произвольный член последовательности $x_n$:</p>
+<p class="display-math">$$ x_n = n + \frac{100}{n} $$</p>
+Вынесем $10$ за скобки:
+<p class="display-math">$$ x_n = 10\left( \frac{n}{10} + \frac{10}{n} \right) $$</p>
+<p>Для скобки воспользуемся доказанным выше вспомогательным свойством:</p>
+<p class="display-math">$$ x_n = 10\left( \frac{n}{10} + \frac{10}{n} \right) \geq 10 \cdot 2 = 20 $$</p>
+<p>Итак,</p>
+<p class="display-math">$$ x_n \geq 20 $$</p>
+<p>Но $x_{10} = 20$, поэтому он и является наименьшим членом последовательности $x_n$:</p>
+<p class="display-math">$$ x_n \geq x_{10} = 20 $$</p>
                     </div>
 
                     <div class="reason-overlay">
+                        
+
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -231,6 +239,19 @@
                 </script>
             </div>
 
+
+
+            <section class="nav">
+                    <a href="../../tasks/101/" title="Следующая задача" class="next">
+                        <span class="label">101</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/99/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">99</span>
+                    </a>
+            </section>
         </section>
 
         <footer>

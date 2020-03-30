@@ -7,7 +7,7 @@
         <link rel="icon" href="../../../../favicon.png" type="image/png">
         <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
 
-        <title>Единственность предельной точки | Прото-задача | Демидович. Решения</title>
+        <title>Предел отношения логарифмической и степенной последовательностей | Прото-задача | Демидович. Решения</title>
         <meta name="description" content="">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
@@ -133,13 +133,10 @@
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Единственность предельной точки
+                        Предел отношения логарифмической и степенной последовательностей
                     </div>
                     <div class="block-section-content">
-                        <p>Если</p>
-<p class="display-math">$$ \limn x_n = a, $$</p>
-<p>то $a$ — единственная предельная точка последовательности $x_n$.</p>
-
+                        <p class="display-math">$$ \limn \frac{\log_a n}{n^r} = 0 \ (a> 0, r> 0) $$</p>
                     </div>
                 </div>
             </section>
@@ -170,45 +167,110 @@
                 
                 <div class="block-section-container">
                     <div class="block-section-content">
-                        <p>Докажем, что если $x_n\to a$, то $a$ — предельная точка $x_n$.</p>
-<p>Рассмотрим подпоследовательность $y_n$, которая равна $x_n$:</p>
-<p class="display-math">$$ y_n = x_n $$</p>
-<p>Раз $y_n = x_n$, то</p>
-<p class="display-math">$$ \limn y_n = a $$</p>
-<p>Итак, подпоследовательность $y_n\to a$, а это по определению означает, что $a$ — предельная точка $x_n$.</p>
+                        <p><strong>Лемма 1</strong></p>
+<p class="display-math">$$ \ceil{a} - 1 \leq \floor{a} $$</p>
+<p><em>Доказательство</em></p>
+<p>Исходя из определения функций потолка и пола числа:</p>
+<p class="display-math">$$ \ceil{a} - \floor{a} = \begin{cases} 0, \ \text{если } a \text{ — целое число} \\ 1, \ \text{если } a \text{ — не целое число} \end{cases} $$</p>
+<p>Получается, что в общем случае:</p>
+<p class="display-math">$$ \ceil{a} - \floor{a} \leq 1 $$</p>
+<p>А отсюда сразу получаем, что</p>
+<p class="display-math">$$ \ceil{a} - 1 \leq \floor{a} $$</p>
 <p>$\blacksquare$</p>
 <hr>
-<p>Докажем теперь, что других предельных точек кроме $a$ у $x_n$ нет.</p>
-<p>Докажем от противного. Пусть у $x_n$ существует еще одна предельная точка $a'$. Это означает, что существует некоторая подпоследовательность $x_{p_n}$, такая, что</p>
-<p class="display-math">$$ \limn x_{p_n} = a' $$</p>
-<p>Распишем, что это означает по определению:</p>
-<p class="display-math">$$ \limn x_{p_n} = a' \Leftrightarrow \forall \varepsilon > 0 \ \exists N_1 \ \forall n > N_1 \ : \ |x_{p_n} - a'| < \varepsilon $$</p>
-<p>В то же время по условию имеем, что</p>
-<p class="display-math">$$ \limn x_n = a \Leftrightarrow \forall \varepsilon > 0 \ \exists N_2 \ \forall n > N_2 \ : \ |x_n - a| < \varepsilon $$</p>
-<p>Раз оба случая выполняются для любого положительного $\varepsilon$, то они будут выполняться и для вот такого положительного числа</p>
-<p class="display-math">$$ E = \frac{|a' - a|}{2} $$</p>
-<p>Итак, для $E$ существует такое $N_2$, что для любого $n&gt;N_2$ выполняется условие</p>
-<p class="display-math">$$ |x_n - a| < E $$</p>
-<p>После $N_2$ найдется бесконечно много элементов подпоследовательности $x_{p_n}$. Выберем среди них такое $x_{p_t}$, которое удовлетворяет условию из $x_{p_n}\to a'$</p>
-<p class="display-math">$$ |x_{p_t} - a'| < E $$</p>
-<p>Так как $p_t &gt; n &gt; N_2$, то для него также выполняется неравенство</p>
-<p class="display-math">$$ |x_{p_t} - a| < E $$</p>
-<p>Итак, одновременно выполняются два неравенства:</p>
-<p class="display-math">$$ |x_{p_t} - a| < E \qquad |x_{p_t} - a'| < E $$</p>
-<p>Сложим их друг с другом:</p>
-<p class="display-math">$$ |x_{p_t} - a| + |x_{p_t} - a'| < 2E $$</p>
-<p>Воспользуемся свойством модуля:</p>
-<p class="display-math">$$ |f-g| = |g-f| $$</p>
-<p class="display-math">$$ |x_{p_t} - a| + |a' - x_{p_t}| < 2E $$</p>
-<p>Воспользуемся неравенством треугольника:</p>
-<p class="display-math">$$ |f+g| \leq |f| + |g| $$</p>
-<p class="display-math">$$ |x_{p_t} - a + a' - x_{p_t}| \leq |x_{p_t} - a| + |a' - x_{p_t}| < 2E $$</p>
-<p class="display-math">$$ |a' - a| < 2E $$</p>
-<p>Подставляем теперь значение для $E$:</p>
-<p class="display-math">$$ |a' - a| < 2\frac{|a' - a|}{2} $$</p>
-<p class="display-math">$$ |a' - a| < |a'-a| $$</p>
-<p class="display-math">$$ 1 < 1 $$</p>
-<p>Получили противоречие. Значит $a'$ не может быть предельной точкой $x_n$, а значит $a$ — единственная предельная точка $x_n$.</p>
+<p><strong>Лемма 2</strong></p>
+<p class="display-math">$$ \forall k \ \exists N = N(k) \ \forall n > N \ : \ n^{\frac{1}{k}} < a^{n^{\frac{1}{k}}} $$</p>
+<p><em>Доказательство</em></p>
+<p>Из <a href="/tasks/60">задачи 60</a> (или протозадачи &quot;<a href="/proto/sequences/limits/exp-ratio">Предел отношения степенной и показательной последовательностей</a>&quot;) мы знаем, что</p>
+<p class="display-math">$$ \limn \frac{n}{a^n} = 0, $$</p>
+<p>так как это частный случай упомянутых задач при $k=1$.</p>
+<p>Распишем по определению:</p>
+<p class="display-math">$$ \limn \frac{n}{a^n} = 0 \Leftrightarrow \forall \varepsilon > 0 \ \exists N \ \forall n > N \ : \ \left|\frac{n}{a^n}\right| < \varepsilon $$</p>
+<p>Раз выполняется для любого положительного $\varepsilon$, то выполняется и для $\frac{1}{a}$:</p>
+<p class="display-math">$$ \text{для } \frac{1}{a} \ \exists N_1 \ \forall n > N_1 \ : \ \left|\frac{n}{a^n}\right| < \frac{1}{a} $$</p>
+<p>Рассмотрим последнее неравенство:</p>
+<p class="display-math">$$ \left|\frac{n}{a^n}\right| < \frac{1}{a} $$</p>
+<p>От модуля можно избавиться, так как выражение под ним больше нуля:</p>
+<p class="display-math">$$ \frac{n}{a^n} < \frac{1}{a} $$</p>
+<p class="display-math">$$ n < \frac{a^n}{a} $$</p>
+<p>Итак:</p>
+<p class="display-math">$$ \text{для } \frac{1}{a} \ \exists N_1 \ \forall n > N_1 \ : \ n < \frac{a^n}{a} $$</p>
+<p>Из прото-задачи &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot; известно</p>
+<p class="display-math">$$ \limn \frac{1}{n^a} = 0 \ (a > 0) $$</p>
+<p>Значит и для $\frac{1}{k} &gt; 0$:</p>
+<p class="display-math">$$ \limn \frac{1}{n^{\frac{1}{k}}} = 0 $$</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limits/bm-bb">Связь бесконечно малой и бесконечно большой последовательностей</a>&quot; получаем, что раз $\frac{1}{n^{\frac{1}{k}}}$ — бесконечно малая, то $n^{\frac{1}{k}}$ — бесконечно большая.</p>
+<p class="display-math">$$ \limn n^{\frac{1}{k}} = \infty \Leftrightarrow \forall E > 0 \ \exists N_2 \ \forall n > N_2 \ : \ \left| n^{\frac{1}{k}} \right| > E $$</p>
+<p>Раз выполняется для любой положительной границы $E$, то выполняется и для числа $N_1$:</p>
+<p class="display-math">$$ \text{для } N_1 \ \exists N_2 \ \forall n > N_2 \ : \ \left| n^{\frac{1}{k}} \right| > N_1 $$</p>
+<p>Рассмотрим неравенство в конце:</p>
+<p class="display-math">$$ \left| n^{\frac{1}{k}} \right| > N_1 $$</p>
+<p>От модуля можно избавиться, так как выражение под ним больше нуля:</p>
+<p class="display-math">$$ n^{\frac{1}{k}} > N_1 $$</p>
+<p>По определению округления сверху (&quot;потолка&quot;) числа:</p>
+<p class="display-math">$$ \ceil{n^{\frac{1}{k}}} \geq n^{\frac{1}{k}} > N_1 $$</p>
+<p class="display-math">$$ \ceil{n^{\frac{1}{k}}} > N_1 $$</p>
+<p>Итак</p>
+<p class="display-math">$$ \text{для } \frac{1}{a} \ \exists N_1 \ \forall n > N_1 \ : \ n < \frac{a^n}{a} $$</p>
+<p class="display-math">$$ \text{для } N_1 \ \exists N_2 \ \forall n > N_2 \ : \ \ceil{n^{\frac{1}{k}}} > N_1 $$</p>
+<p>Заметим, что любое $\ceil{n^{\frac{1}{k}}}$ — натуральное число, причем, из второй записи получается, что оно больше $N_1$.
+Но раз любое $\ceil{n^{\frac{1}{k}}}$ (при $n&gt;N_2$) больше $N_1$ то все такие числа подходят для первой записи, то есть</p>
+<p class="display-math">$$ \ceil{n^{\frac{1}{k}}} < \frac{a^{\ceil{n^{\frac{1}{k}}}}}{a} = a^{\ceil{n^{\frac{1}{k}}}- 1} $$</p>
+<p>Теперь воспользуемся доказанной выше леммой 1:</p>
+<p class="display-math">$$ \ceil{n^{\frac{1}{k}}} < a^{\ceil{n^{\frac{1}{k}}}- 1} \leq a^{\floor{n^{\frac{1}{k}}}} $$</p>
+<p>По определению округления снизу (&quot;пола&quot;) и &quot;потолка&quot; числа</p>
+<p class="display-math">$$ \floor{n^{\frac{1}{k}}} \leq n^{\frac{1}{k}} $$</p>
+<p class="display-math">$$ n^{\frac{1}{k}} \leq \ceil{n^{\frac{1}{k}}} $$</p>
+<p>Поэтому</p>
+<p class="display-math">$$ n^{\frac{1}{k}} \leq \ceil{n^{\frac{1}{k}}} < a^{\ceil{n^{\frac{1}{k}}}- 1} \leq a^{\floor{n^{\frac{1}{k}}}} \leq a^{n^{\frac{1}{k}}} $$</p>
+<p class="display-math">$$ n^{\frac{1}{k}} < a^{n^{\frac{1}{k}}} $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Лемма 3</strong></p>
+<p class="display-math">$$ \forall k \ \exists N \ \forall n > N \ : \ \log_a n < n^{\frac{1}{k}} $$</p>
+<p><em>Доказательство при $a &gt; 1$</em></p>
+<p>Пусть $b = \sqrt[k]{a}$. Тогда, по лемме 2</p>
+<p class="display-math">$$ \exists N \ \forall n > N \ : \ n^{\frac{1}{k}} < b^{n^{\frac{1}{k}}} $$</p>
+<p>Возводим обе части неравенства в коцне в степень $k$:</p>
+<p class="display-math">$$ n < \left(b^k\right)^{n^{\frac{1}{k}}} = a^{n^{\frac{1}{k}}} $$</p>
+<p>Прологарифмируем обе части неравенства по основанию $a$. Так как $a&gt;1$, то знак неравенства не изменится:</p>
+<p class="display-math">$$ \log_a n < n^{\frac{1}{k}} $$</p>
+<p>$\blacksquare$</p>
+<p><em>Доказательство при $a &lt; 1$</em></p>
+<p>Раз $a&lt;1$, то $\log_a n &lt; 0$ (так как $n\geq 1$), поэтому для всех $n$ выполняется неравенство</p>
+<p class="display-math">$$ \log_a n < 0 < n^{\frac{1}{k}} $$</p>
+<p class="display-math">$$ \log_a n < n^{\frac{1}{k}} $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p>Докажем теперь, что</p>
+<p class="display-math">$$ \limn \frac{\log_a n}{n^r} = 0, \ (a>0,r>0) $$</p>
+<p><em>Доказательство при $a&gt;1$</em></p>
+<p>Раз $a&gt;1$, то</p>
+<p class="display-math">$$ 0 < \log_a n $$</p>
+<p>Пусть</p>
+<p class="display-math">$$ k = \ceil{\frac{1}{r}} + 1 $$</p>
+<p>По лемме 3 получаем, что</p>
+<p class="display-math">$$ \log_a n < n^{\frac{1}{k}} $$</p>
+<p>Поделим обе части неравенства на положительное число $n^r$:</p>
+<p class="display-math">$$ \frac{\log_a n}{n^r} < \frac{n^{\frac{1}{k}}}{n^r} = n^{\frac{1}{k} - r} = \frac{1}{n^{r-\frac{1}{k}}} $$</p>
+<p class="display-math">$$ \frac{\log_a n}{n^r} < \frac{1}{n^{r-\frac{1}{k}}} $$</p>
+<p>По определению потолка числа:</p>
+<p class="display-math">$$ k = \ceil{\frac{1}{r}} + 1 > \ceil{\frac{1}{r}} \geq \frac{1}{r} $$</p>
+<p class="display-math">$$ k > \frac{1}{r} $$</p>
+<p>Откуда</p>
+<p class="display-math">$$ r > \frac{1}{k} $$</p>
+<p class="display-math">$$ r - \frac{1}{k} > 0 $$</p>
+<p>Запишем итоговое цепное неравенство:</p>
+<p class="display-math">$$ 0 < \frac{\log_a n}{n^r} < \frac{1}{n^{r-\frac{1}{k}}} $$</p>
+<p>&quot;Последовательность&quot; из $0$ слева стремится к $0$. Последовательность справа тоже стремится к $0$, как частный случай $\frac{1}{n^{\alpha}}$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;). Значит, по теореме о двух милиционерах,
+&quot;зажатая&quot; между ними последовательность $\frac{\log_a n}{n^r}$ тоже стремится к $0$:</p>
+<p class="display-math">$$ \limn \frac{\log_a n}{n^r} = 0 $$</p>
+<p>$\blacksquare$</p>
+<p><em>Доказательство при $a&lt;1$</em></p>
+<p>Воспользуемся одним из свойств логарифмов:</p>
+<p class="display-math">$$ \log_a n = \log_{\frac{1}{a^{-1}}} n = \log_{\left(\frac{1}{a}\right)^{-1}} n = - \log_{\frac{1}{a}} n $$</p>
+<p>Раз, $a&lt;1$, то $\frac{1}{a} &gt; 1$, поэтому</p>
+<p class="display-math">$$ \limn \log_a n = \limn \left(-\log_{\frac{1}{a}} n\right) = -\limn \log_{\frac{1}{a}} n = -0 = 0 $$</p>
 <p>$\blacksquare$</p>
 
                     </div>
