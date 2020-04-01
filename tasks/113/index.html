@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>101 | Демидович. Решения</title>
-        <meta name="description" content="$$ \text{а) } x_n &#x3D; 1 - \frac{1}{n}; \qquad \text{б) } x_n &#x3D; (-1)^{n-1} \left( 2 + \frac{3}{n} \right) $$">
+        <title>113 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; \frac{n}{n+1}\sin^2\frac{n\pi}{4} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>101</span>
+                    <span>113</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ \text{а) } x_n = 1 - \frac{1}{n}; \qquad \text{б) } x_n = (-1)^{n-1} \left( 2 + \frac{3}{n} \right) $$</p>
+                        <p class="display-math">$$ x_n = \frac{n}{n+1}\sin^2\frac{n\pi}{4} $$</p>
                     </div>
                 </div>
             </section>
@@ -184,107 +184,54 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>а)</strong></p>
-<p class="display-math">$$ x_n = 1-\frac{1}{n} $$</p>
-<p><em>Нахождение $\inf x_n$</em></p>
-<p>Так как $n$ — натуральное число, то</p>
-<p class="display-math">$$ n \geq 1 $$</p>
-<p>Поделим обе части на $n$</p>
-<p class="display-math">$$ \frac{1}{n} \leq 1 $$</p>
-<p>Умножим обе части на $-1$ и добавим к обеим сторонам $1$:</p>
-<p class="display-math">$$ x_n = 1 - \frac{1}{n} \geq 0 $$</p>
-<p class="display-math">$$ x_n \geq 0 $$</p>
-<p>Но $x_1 = 0$, поэтому $x_1$ — наименьший элемент последовательности $x_n$, а значит</p>
-<p class="display-math">$$ \inf x_n = x_1 = 0 $$</p>
-<p><em>Нахождение $\sup x_n$</em></p>
-<p>Докажем, что</p>
-<p class="display-math">$$ \sup x_n = 1 $$</p>
-<p>Для этого надо доказать два пункта:</p>
-<ol>
-<li>$1$ — верхняя граница $x_n$</li>
-<li>$1$ — точная верхняя грань $x_n$</li>
-</ol>
-<p>Первый пункт доказывается элементарно. Так как в каждом член последовательности $x_n$ мы вычитаем положительную дробь $\frac{1}{n}$ из $1$, поэтому любой член
-последовательности строго меьше $1$. То есть, $1$ — верхняя грань $x_n$.</p>
-<p>Для доказательства второго пункта нужно доказать</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists x_n' \ : \ x_n' > 1 - \varepsilon $$</p>
-<p>То есть, нужно показать, что всегда найдется такой член последовательности $x_n'$, который будет больше $1-\varepsilon$.</p>
-<p>Рассмотрим неравенство в конце:</p>
-<p class="display-math">$$ x_n' > 1 - \varepsilon $$</p>
-<p class="display-math">$$ 1 - \frac{1}{n'} > 1 - \varepsilon $$</p>
-<p>Вычитаем из обеих частей $1$ и умножаем неравенство на $-1$:</p>
-<p class="display-math">$$ \frac{1}{n'} < \varepsilon $$</p>
-<p>Откуда</p>
-<p class="display-math">$$ n' > \frac{1}{\varepsilon} $$</p>
-<p>Итак, нам достаточно взять $n'$ по следующей формуле</p>
-<p class="display-math">$$ n' = \ceil{\frac{1}{\varepsilon}} + 1 $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ n' = \ceil{\frac{1}{\varepsilon}} + 1 > \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon}  $$</p>
-<p class="display-math">$$ n' > \frac{1}{\varepsilon} $$</p>
-<p>То есть $x_n'$ будет больше $1-\varepsilon$.</p>
-<p>Итак, мы показали, что $1$ — точная верхняя грань $x_n$.</p>
-<p><em>Наибольший и наименьший частичные пределы</em></p>
-<p>Найдем предел последовательности $x_n$:</p>
-<p class="display-math">$$ \limn 1-\frac{1}{n} = 1 - \limn \frac{1}{n} = 1 - 0 = 1 $$</p>
-<p>Выше использовался факт того, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
-<p>Если последовательность $x_n$ сходится к какому-то числу $a$, то это $a$ — единственная предельная точка этой последовательности (см. прото-задачу &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot;).</p>
-<p>Это означает, что наибольший и наименьший частичные пределы равны пределу исходной последовательности:</p>
-<p class="display-math">$$ \limn x_n = \overline{\limn} x_n = \underline{\limn} x_n = 1 $$</p>
+                        <p>Из определения $\sin$:</p>
+<p class="display-math">$$ \left| \sin\frac{n\pi}{4} \right| \leq 1 $$</p>
+<p>Возведем это неравенство в квадрат по пункту 3 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ \sin^2\frac{n\pi}{4} \leq 1 $$</p>
+<p>Домножим обе части неравенства на положительное число $\frac{n}{n+1}$:</p>
+<p class="display-math">$$ \frac{n}{n+1}\sin^2\frac{n\pi}{4} \leq \frac{n}{n+1} $$</p>
+<p>Но $\frac{n}{n+1}$ — правильная дробь, поэтому</p>
+<p class="display-math">$$ \frac{n}{n+1}\sin^2\frac{n\pi}{4} \leq \frac{n}{n+1} < 1 $$</p>
+<p class="display-math">$$ \frac{n}{n+1}\sin^2\frac{n\pi}{4} < 1 $$</p>
+<p>Итак, мы показали, что $1$ — верхняя граница последовательности $x_n$.</p>
+<p>Рассмотрим предел подпоследовательности</p>
+<p class="display-math">\begin{gather*}
+    \limn x_{8n-2} = \limn \frac{8n-2}{8n-1}\sin^2\frac{(8n-2)\pi}{4} =
+    \\[5px]
+    = \limn \frac{8n-1 - 1}{8n-1} \limn \sin^2\frac{(8n-2)\pi}{4} =
+    \\[5px]
+    = \limn\left( 1 - \frac{1}{8n-1} \right)\limn \sin^2\left( 2\pi n - \frac{2\pi}{4} \right) =
+    \\[5px]
+    = \left(1 - \limn\frac{1}{8n-1}\right)\limn\sin^2-\frac{2\pi}{4} = (1-0)(-1)^2 = 1
+\end{gather*}</p>
+<p>Выше мы использовали то, что $\frac{1}{8n-1}\to 0$. Это легко показать по теореме о двух милиционерах, зажав эту последовательность между $0\to 0$ и $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;):</p>
+<p class="display-math">$$ 0 \leq \frac{1}{8n-1} \leq \frac{1}{n} $$</p>
+<p>Итак, мы показали что $1$ — верхняя граница последовательности $x_n$, а также</p>
+<p class="display-math">$$ \limn x_{8n-2} = 1 $$</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limit-point-bounds">Точные грани и предельные точки</a>&quot; это означает, что</p>
+<p class="display-math">$$ \overline{\limn} x_n = 1 $$</p>
 <hr>
-<p><strong>б)</strong></p>
-<p class="display-math">$$ x_n = (-1)^{n-1}\left( 2 + \frac{3}{n} \right) $$</p>
-<p><em>Нахождение $\sup x_n$</em></p>
-<p>При четных $n$ любой член $x_n$ будет отрицательным, поэтому искать $\sup$ надо только среди нечетных $n$:</p>
-<p class="display-math">$$ x_n = 2 + \frac{3}{n}, \ n \text{ — нечетное} $$</p>
-<p>Так как $n$ — натуральное число, то</p>
-<p class="display-math">$$ n \geq 1 $$</p>
-<p>Разделим обе части на $n$ и умножим на $3$:</p>
-<p class="display-math">$$ \frac{3}{n} \leq 3 $$</p>
-<p>Прибавим к обеим частям $2$:</p>
-<p class="display-math">$$ x_n = 2 + \frac{3}{n} \leq 5 $$</p>
-<p>Но $x_1 = 5$, поэтому $x_1$ — наибольший член последовательности $x_n$, а значит</p>
-<p class="display-math">$$ \sup x_n = x_1 = 5 $$</p>
-<p><em>Нахождение $\inf x_n$</em></p>
-<p>При нечетных $n$ любой член последовательности $x_n$ будет положительным, поэтому искать $\inf$ надо только среди четных $n$:</p>
-<p class="display-math">$$ x_n = -2-\frac{3}{n}, \ n \text{ — четное} $$</p>
-<p>Так как $n$ — натуральное четное число, то</p>
-<p class="display-math">$$ n \geq 2 $$</p>
-<p>Разделим обе части на $2n$:</p>
-<p class="display-math">$$ \frac{1}{n} \leq \frac{1}{2} $$</p>
-<p>Умножим обе части на $-3$:</p>
-<p class="display-math">$$ -\frac{3}{n} \geq -\frac{3}{2} $$</p>
-<p>Прибавим к обеим частям $-2$:</p>
-<p class="display-math">$$ x_n = -2 - \frac{3}{n} \geq -2-\frac{3}{2} = -3.5 $$</p>
-<p>Но $x_2 = -3.5$, поэтому $x_2$ — наименьший член последовательности $x_n$, а значит</p>
-<p class="display-math">$$ \inf x_n = x_2 = -3.5 $$</p>
-<p><em>Нахождение наибольшего и наименьшего частичных пределов</em></p>
-<p>Рассмотрим подпоследовательность, которая состоит только из нечетных $n$:</p>
-<p class="display-math">$$ x_{2n-1} = (-1)^{2n-2}\left( 2 + \frac{3}{2n-1} \right) = \left((-1)^2\right)^{n-1}\left( 2 + \frac{3}{2n-1} \right) $$</p>
-<p class="display-math">$$ x_{2n-1} = 2 + \frac{3}{2n-1} $$</p>
-<p>Найдем предел этой подпоследовательности</p>
-<p class="display-math">$$ \limn x_{2n-1} = \limn \left(2 + \frac{3}{2n-1}\right) = 2 + 3\limn \frac{1}{2n-1} $$</p>
-<p>Последовательность $\frac{1}{2n-1}$ можно &quot;зажать&quot; между $0$ и $\frac{1}{n}$.</p>
-<p class="display-math">$$ 0 \leq \frac{1}{2n-1} \leq \frac{1}{n} $$</p>
-<p>&quot;Последовательность&quot; из $0$ стремится к $0$. Последовательность $\frac{1}{n}$ тоже стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;). А значит,
-по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность $\frac{1}{2n-1}$ тоже стремится к $0$.</p>
-<p class="display-math">$$ \limn x_{2n-1} = 2 + 3\limn \frac{1}{2n-1} = 2 + 3 \cdot 0 = 2 $$</p>
-<p>Итак, мы нашли один из частичных пределов:</p>
-<p class="display-math">$$ \limn x_{2n-1} = 2 $$</p>
-<p>Рассмотрим подпоследовательность, которая состоит только из четных $n$:</p>
-<p class="display-math">$$ x_{2n} = (-1)^{2n - 1}\left(2 + \frac{3}{2n}\right) = \frac{\left((-1)^2\right)^n}{(-1)}\left(2 + \frac{3}{2n}\right) $$</p>
-<p class="display-math">$$ x_{2n} = -\left(2 + \frac{3}{2n}\right) $$</p>
-<p>Найдем предел этой подпоследовательности</p>
-<p class="display-math">$$ \limn x_{2n} = \limn -\left(2 + \frac{3}{2n}\right) = -2 -\frac{3}{2}\limn\frac{1}{n} = -2-\frac{3}{2}\cdot 0 $$</p>
-<p class="display-math">$$ \limn x_{2n} = -2 $$</p>
-<p>Выше мы вновь воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;Элементарные пределы последовательностей&quot;).</p>
-<p>Итак, у нас есть две предельные точки:</p>
-<p class="display-math">$$ \limn x_{2n-1} = 2 $$</p>
-<p class="display-math">$$ \limn x_{2n} = -2 $$</p>
-<p>Так как любой элемент исходной последовательности $x_n$ находится в одной из двух подпоследовательностях выше, то, по прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;
-у последовательности $x_n$ больше нет других предельных точек, кроме $2$ и $-2$.</p>
-<p>Значит</p>
-<p class="display-math">$$ \overline{\limn} x_n = 2 $$</p>
-<p class="display-math">$$ \underline{\limn} x_n = -2 $$</p>
+<p>Квадрат любого числа не может быть отрицательным числом, поэтому</p>
+<p class="display-math">$$ 0 \leq \sin^2\frac{\pi n}{4} $$</p>
+<p>Обе части умножим на положительное число $\frac{n}{n+1}$:</p>
+<p class="display-math">$$ 0 \leq \frac{n}{n+1}\sin^2\frac{\pi n}{4} $$</p>
+<p>Итак $0$ — нижняя граница последовательности $x_n$.</p>
+<p>Рассмотрим предел подпоследовательности</p>
+<p class="display-math">\begin{gather*}
+    \limn x_{8n-4} = \limn \frac{8n-4}{8n-3}\sin^2\frac{(8n-4)\pi}{4} =
+    \\[5px]
+    = \limn \frac{8n-3 - 1}{8n-3} \limn \sin^2\frac{(8n-4)\pi}{4} =
+    \\[5px]
+    = \limn\left( 1 - \frac{1}{8n-3} \right)\limn \sin^2\left( 2\pi n - \pi\right) =
+    \\[5px]
+    = \left(1 - \limn\frac{1}{8n-3}\right)\limn\sin^2-\pi = (1-0)(0)^2 = 0
+\end{gather*}</p>
+<p>Выше мы использовали то, что $\frac{1}{8n-3}\to 0$. Это легко показать по теореме о двух милиционерах, зажав эту последовательность между $0\to 0$ и $\frac{1}{n}\to 0$:</p>
+<p class="display-math">$$ 0 \leq \frac{1}{8n-3} \leq \frac{1}{n} $$</p>
+<p>Итак, мы показали что $0$ — нижняя граница последовательности $x_n$, а также</p>
+<p class="display-math">$$ \limn x_{8n-4} = 0 $$</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limit-point-bounds">Точные грани и предельные точки</a>&quot; это означает, что</p>
+<p class="display-math">$$ \underline{\limn} x_n = 0 $$</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -327,23 +274,23 @@
                     <dl class="block-section-content">
 
                             <dt>
+                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
+                                    Упрощение модулей в неравенствах
+                                </a>
+                            </dt>
+                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
+                            <dt>
                                 <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
                                     Элементарные пределы последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
                             <dt>
-                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
-                                    Единственность предельной точки
+                                <a href="/proto/sequences/limits/limit-point-bounds" title="Точные грани и предельные точки" target="_blank">
+                                    Точные грани и предельные точки
                                 </a>
                             </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
-                                </a>
-                            </dt>
-                            <dd></dd>
+                            <dd>Связь точной верхней (нижней) грани с предельными точками последовательности.</dd>
                     
                     </dl>
                 </div>
@@ -352,14 +299,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/102/" title="Следующая задача" class="next">
-                        <span class="label">102</span>
+                    <a href="../../tasks/114/" title="Следующая задача" class="next">
+                        <span class="label">114</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/100/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/112/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">100</span>
+                        <span class="label">112</span>
                     </a>
             </section>
         </section>

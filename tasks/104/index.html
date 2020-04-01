@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>Элементарные пределы последовательностей | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="">
+        <title>104 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; 1 + 2 (-1)^{n+1} + 3\cdot (-1)^{\frac{n(n-1)}{2}} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -30,21 +30,21 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -62,16 +62,16 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>
-        <script src="../../../../scripts/show-hide.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-proto-task">
+    <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -127,27 +127,30 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>104</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Элементарные пределы последовательностей
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <ol>
-<li>если $a &gt; 0$, то</li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<hr>
-<ol start="2">
-<li></li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \limn\frac{n}{n\pm 1} = 1 $$</p>
+                        <p class="display-math">$$ x_n = 1 + 2 (-1)^{n+1} + 3\cdot (-1)^{\frac{n(n-1)}{2}} $$</p>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -161,12 +164,13 @@
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -174,44 +178,62 @@
                 </div>
                 
                 <div class="block-section-container">
-                    <div class="block-section-content">
-                        <p><strong>1)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<p>Распишем по определению:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 \Leftrightarrow \forall\varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{n^a} \right| <\varepsilon $$</p>
-<p>В последнем неравенстве можно избавиться от модуля, так как выражение под ним всегда положительное:</p>
-<p class="display-math">$$ \frac{1}{n^a} < \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\sqrt[a]{\varepsilon}}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\sqrt[a]{\varepsilon}}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению предела неравенству выше.
-Итак, доказали, что:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<p>$\blacksquare$</p>
-<hr>
-<p><strong>2)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \lim_{n\to\infty} \left(1 \pm \frac{1}{n}\right) = 1 \pm \lim_{n\to\infty} \frac{1}{n} = 1 \pm 0 = 1 $$</p>
-<p>Последовательность $\frac{1}{n} \to 0$, так как это частный случай последовательности $\frac{1}{n^a}$ при $a = 1$. А последовательность $\frac{1}{n^a}\to 0$, как мы показали в пункте <strong>1</strong>.</p>
-<p>Теперь разберемся с $\frac{n}{n\pm 1}$. Ее можно представить в следующем виде:</p>
-<p class="display-math">$$ \frac{n}{n\pm 1} = \frac{1}{\frac{n\pm 1}{n}} $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ \limn \frac{n}{n\pm 1} = \limn \frac{1}{\frac{n\pm 1}{n}} = \frac{\lim\limits_{n\to\infty} 1}{\lim\limits_{n\to\infty} \frac{n\pm 1}{n}} = \frac{1}{1} = 1 $$</p>
-<p>$\blacksquare$</p>
+                    
+                    <div class="reason">
+                        
+                    </div>
 
+                    <div class="block-section-content">
+                        <p>Рассмотрим последнее слагаемое:</p>
+<p class="display-math">$$ 3 \cdot (-1)^{\frac{n(n-1)}{2}} $$</p>
+<p>Произведение $n(n-1)$ всегда является четным числом (так как произведение четного числа и нечетного есть четное число), поэтому</p>
+<p class="display-math">$$ 3\cdot \left((-1)^{n(n-1)}\right)^{\frac{1}{2}} = 3 \cdot \sqrt{1} = 3 $$</p>
+<p>Значит</p>
+<p class="display-math">$$ x_n = 1 + 2 (-1)^{n+1} + 3\cdot (-1)^{\frac{n(n-1)}{2}} = 1 + 2(-1)^{n+1} + 3 $$</p>
+<p class="display-math">$$ x_n = 4 + 2(-1)^{n+1} $$</p>
+<p>Рассмотрим подпоследовательность для четных $n$:</p>
+<p class="display-math">$$ x_{2n} = 4 + 2 (-1)^{2n + 1} = 4-2 = 2 $$</p>
+<p class="display-math">$$ x_{2n} = 2 $$</p>
+<p>Найдем предел этой подпоследовательности:</p>
+<p class="display-math">$$ \limn x_{2n} = 2 $$</p>
+<p>Рассмотрим подпоследовательность для нечетных $n$:</p>
+<p class="display-math">$$ x_{2n-1} = 4 + 2 (-1)^{2n} = 6 $$</p>
+<p class="display-math">$$ x_{2n-1} = 6 $$</p>
+<p>Предел этой подпоследовательности:</p>
+<p class="display-math">$$ \limn x_{2n-1} = 6 $$</p>
+<p>Так как любой член последовательности $x_n$ лежит либо в $x_{2n}$, либо в $x_{2n-1}$, то, по прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot; других предельных точек у $x_n$ нет.</p>
+<p>А значит</p>
+<p class="display-math">$$ \overline{\limn} x_n = 6 $$</p>
+<p class="display-math">$$ \underline{\limn} x_n = 2 $$</p>
+<hr>
+<p>Выше мы показали, что</p>
+<p class="display-math">$$ \limn x_{2n-1} = 6 $$</p>
+<p>Докажем, что $6$ — верхняя граница последовательности $x_n$. Она точно больше любого элемента подпоследовательности $x_{2n}$, потому что любой член этой подпоследовательности равен $2$.
+Также, $6$ не меньше любого элемента подпоследовательности $x_{2n-1}$, каждый член которой равен $6$.
+Любой член исходной последовательности $x_n$ лежит либо в $x_{2n}$, либо в $x_{2n-1}$, поэтому $6$ не меньше любого члена $x_n$.</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limits/limit-point-bounds">Точные грани и предельные точки</a>&quot; это означает, что $6$ — точная верхняя грань:</p>
+<p class="display-math">$$ \sup x_n = 6 $$</p>
+<p>Аналагично показывается, что $2$, как предел $x_{2n}$, является точной нижней гранью:</p>
+<p class="display-math">$$ \inf x_n = 2 $$</p>
                     </div>
 
                     <div class="reason-overlay">
+                        
+
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -225,6 +247,45 @@
                 </script>
             </div>
 
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
+                                    Количество предельных точек
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/limit-point-bounds" title="Точные грани и предельные точки" target="_blank">
+                                    Точные грани и предельные точки
+                                </a>
+                            </dt>
+                            <dd>Связь точной верхней (нижней) грани с предельными точками последовательности.</dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
+
+            <section class="nav">
+                    <a href="../../tasks/105/" title="Следующая задача" class="next">
+                        <span class="label">105</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/103/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">103</span>
+                    </a>
+            </section>
         </section>
 
         <footer>

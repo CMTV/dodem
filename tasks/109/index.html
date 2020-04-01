@@ -4,11 +4,11 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>Элементарные пределы последовательностей | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="">
+        <title>109 | Демидович. Решения</title>
+        <meta name="description" content="$$ x_n &#x3D; 1 + n\sin\frac{n\pi}{2} $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -30,21 +30,21 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -62,16 +62,16 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>
-        <script src="../../../../scripts/show-hide.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/show-hide.js"></script>
     </head>
-    <body class="page-proto-task">
+    <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -99,7 +99,7 @@
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -127,27 +127,30 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>109</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Элементарные пределы последовательностей
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <ol>
-<li>если $a &gt; 0$, то</li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<hr>
-<ol start="2">
-<li></li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \limn\frac{n}{n\pm 1} = 1 $$</p>
+                        <p class="display-math">$$ x_n = 1 + n\sin\frac{n\pi}{2} $$</p>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -161,12 +164,13 @@
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -174,44 +178,83 @@
                 </div>
                 
                 <div class="block-section-container">
-                    <div class="block-section-content">
-                        <p><strong>1)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<p>Распишем по определению:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 \Leftrightarrow \forall\varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{n^a} \right| <\varepsilon $$</p>
-<p>В последнем неравенстве можно избавиться от модуля, так как выражение под ним всегда положительное:</p>
-<p class="display-math">$$ \frac{1}{n^a} < \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\sqrt[a]{\varepsilon}}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\sqrt[a]{\varepsilon}}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению предела неравенству выше.
-Итак, доказали, что:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<p>$\blacksquare$</p>
-<hr>
-<p><strong>2)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \lim_{n\to\infty} \left(1 \pm \frac{1}{n}\right) = 1 \pm \lim_{n\to\infty} \frac{1}{n} = 1 \pm 0 = 1 $$</p>
-<p>Последовательность $\frac{1}{n} \to 0$, так как это частный случай последовательности $\frac{1}{n^a}$ при $a = 1$. А последовательность $\frac{1}{n^a}\to 0$, как мы показали в пункте <strong>1</strong>.</p>
-<p>Теперь разберемся с $\frac{n}{n\pm 1}$. Ее можно представить в следующем виде:</p>
-<p class="display-math">$$ \frac{n}{n\pm 1} = \frac{1}{\frac{n\pm 1}{n}} $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ \limn \frac{n}{n\pm 1} = \limn \frac{1}{\frac{n\pm 1}{n}} = \frac{\lim\limits_{n\to\infty} 1}{\lim\limits_{n\to\infty} \frac{n\pm 1}{n}} = \frac{1}{1} = 1 $$</p>
-<p>$\blacksquare$</p>
+                    
+                    <div class="reason">
+                        
+                    </div>
 
+                    <div class="block-section-content">
+                        <p>Выясним, какие значения может принимать</p>
+<p class="display-math">$$ \sin \frac{n\pi}{2} $$</p>
+<p>Любое натуральное число $n$ при делении на $4$ дает один из четырех остатков: $0, 1, 2$ или $3$, то есть его можно представить в одном из следующих видов:</p>
+<p class="display-math">$$ 4k, \quad 4k-1, \quad 4k-2, \quad 4k-3 $$</p>
+<p>Рассмотрим значение синуса выше при каждом из этих видов:</p>
+<p class="display-math">$$ \sin \frac{4k\pi}{2} = \sin 2\pi k = 0 $$</p>
+<p class="display-math">$$ \sin \frac{(4k-1)\pi}{2} = \sin\left( 2\pi k - \frac{\pi}{2} \right) = \sin -\frac{\pi}{2} = -1 $$</p>
+<p class="display-math">$$ \sin \frac{(4k-2)\pi}{2} = \sin\left( 2\pi k - \pi \right) = \sin - \pi = 0 $$</p>
+<p class="display-math">$$ \sin \frac{(4k-3)\pi}{2} = \sin\left( 2\pi k - \frac{3\pi}{2} \right) = \sin -\frac{3\pi}{2} = 1 $$</p>
+<hr>
+<p>Получим формулы для четырех подпоследователностей:</p>
+<p class="display-math">$$ x_{4n} = 1 + 4n\cdot 0 = 1 $$</p>
+<p class="display-math">$$ x_{4n-1} = 1 + (4n-1)(-1) = 2 - 4n $$</p>
+<p class="display-math">$$ x_{4n-2} = 1 + (4n-2)\cdot 0 = 1 $$</p>
+<p class="display-math">$$ x_{4n-3} = 1 + (4n-3) \cdot 1 = 4n - 2 $$</p>
+<hr>
+<p>Покажем, что последовательность $x_n$ неограничена сверху.</p>
+<p>Пусть это не так и существует некоторая верхняя граница $M$. Если $M\leq 0$, то достаточно взять</p>
+<p class="display-math">$$ x_{4\cdot 1 - 3} = x_1 = 4\cdot 1 - 2 = 2 $$</p>
+<p>Получается, что $x_1 &gt; M$, а значит $M$ не может быть отрицательным числом или $0$. Пусть $M &gt; 0$, тогда рассмотрим</p>
+<p class="display-math">$$ x_{4 (\ceil{M}+1) - 3} = x_{4 \ceil{M} + 1} = 4(\ceil{M}+ 1) - 2 = 4\ceil{M} + 2 $$</p>
+<p class="display-math">$$ x_{4 \ceil{M} + 1} = 4\ceil{M} + 2 > \ceil{M} \geq M $$</p>
+<p class="display-math">$$ x_{4\ceil{M} + 1} > M $$</p>
+<p>Итак, при любом положительном $M$ найдется такой элемент последовательности $x_n$, который будет строго больше $M$.
+Получается, что верхней границы у последовательности нет, а значит она неограничена сверху, то есть</p>
+<p class="display-math">$$ \sup x_n = +\infty $$</p>
+<p>Аналогично доказывается, что</p>
+<p class="display-math">$$ \inf x_n = -\infty $$</p>
+<hr>
+<p>Покажем, что</p>
+<p class="display-math">$$ \limn x_{4n-3} = +\infty $$</p>
+<p>По определению (см. <a href="/tasks/45">задачу 45</a>) это означает, что</p>
+<p class="display-math">$$ \forall E > 0 \ \exists N = N(E) \ \forall n > N \ : \ x_{4n-3} > E $$</p>
+<p>Рассмотрим последнее неравенство</p>
+<p class="display-math">$$ x_{4n-3} > E $$</p>
+<p class="display-math">$$ 4n - 2 > E $$</p>
+<p class="display-math">$$ n > \frac{E+2}{4} $$</p>
+<p>Итак, нам достаточно взять взять $N$ по следующей формуле:</p>
+<p class="display-math">$$ N(E) = \ceil{\frac{E+2}{4}} $$</p>
+<p>Тогда любое натуральное $n &gt; N$:</p>
+<p class="display-math">$$ n \geq N(E) + 1 > N(E) = \ceil{\frac{E+2}{4}} \geq \frac{E+2}{4} $$</p>
+<p class="display-math">$$ n > \frac{E+2}{4} $$</p>
+<p>Итак, мы показали, что для любого положительного $E$ можно выбрать такое число $N$, что любое $n$ после него будет удовлетворять неравенству</p>
+<p class="display-math">$$ x_{4n-3} > E $$</p>
+<p>Доказали, что</p>
+<p class="display-math">$$ \limn x_{4n-3} = +\infty $$</p>
+<p>А значит</p>
+<p class="display-math">$$ \overline{\limn} x_n = +\infty $$</p>
+<p>Аналогично можно показать, что</p>
+<p class="display-math">$$ \limn x_{4n-1} = -\infty $$</p>
+<p>А значит</p>
+<p class="display-math">$$ \underline{\limn} x_n = -\infty $$</p>
                     </div>
 
                     <div class="reason-overlay">
+                        
+
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
                     </div>
                 </div>
             </section>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -225,6 +268,19 @@
                 </script>
             </div>
 
+
+
+            <section class="nav">
+                    <a href="../../tasks/110/" title="Следующая задача" class="next">
+                        <span class="label">110</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/106/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">106</span>
+                    </a>
+            </section>
         </section>
 
         <footer>

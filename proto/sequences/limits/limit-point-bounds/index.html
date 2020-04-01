@@ -7,8 +7,8 @@
         <link rel="icon" href="../../../../favicon.png" type="image/png">
         <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
 
-        <title>Элементарные пределы последовательностей | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="">
+        <title>Точные грани и предельные точки | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Связь точной верхней (нижней) грани с предельными точками последовательности.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -133,18 +133,16 @@
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Элементарные пределы последовательностей
+                        Точные грани и предельные точки
                     </div>
                     <div class="block-section-content">
-                        <ol>
-<li>если $a &gt; 0$, то</li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
+                        <p>Пусть нам дана последовательность $x_n$, у которой есть некоторая предельная точка $A$.
+Если $A$ — верхняя граница последовательности $x_n$, то</p>
+<p class="display-math">$$ \sup x_n = \overline{\limn} x_n = A $$</p>
 <hr>
-<ol start="2">
-<li></li>
-</ol>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \limn\frac{n}{n\pm 1} = 1 $$</p>
+<p>Пусть нам дана последовательность $x_n$, у которой есть некоторая предельная точка $B$.
+Если $B$ — нижняя граница последовательности $x_n$, то</p>
+<p class="display-math">$$ \inf x_n = \underline{\limn} x_n = B $$</p>
                     </div>
                 </div>
             </section>
@@ -175,34 +173,52 @@
                 
                 <div class="block-section-container">
                     <div class="block-section-content">
-                        <p><strong>1)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
-<p>Распишем по определению:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 \Leftrightarrow \forall\varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{1}{n^a} \right| <\varepsilon $$</p>
-<p>В последнем неравенстве можно избавиться от модуля, так как выражение под ним всегда положительное:</p>
-<p class="display-math">$$ \frac{1}{n^a} < \varepsilon $$</p>
-<p>Изолируем $n$:</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Какое бы $\varepsilon &gt; 0$ мы не взяли, нам достаточно взять любое число, большее $\frac{1}{\sqrt[a]{\varepsilon}}$ и тогда требуемое по определению предела неравенство выше будет выполняться.</p>
-<p>Но нам нужно не любое число, а натуральное, поэтому выбирать $N$ будем по следующей формуле:</p>
-<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} $$</p>
-<p>По этой формуле мы получаем округление сверху (&quot;потолок&quot;) числа $\frac{1}{\sqrt[a]{\varepsilon}}$. Из определения &quot;потолка&quot; числа:</p>
-<p class="display-math">$$ \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Так как в условии у нас $n &gt; N(\varepsilon)$, то следующее натуральное число после $N(\varepsilon)$ будет $N(\varepsilon) + 1$:</p>
-<p class="display-math">$$ n \geq N(\varepsilon) + 1 > N(\varepsilon) = \ceil{\frac{1}{\sqrt[a]{\varepsilon}}} \geq \frac{1}{\sqrt[a]{\varepsilon}}  $$</p>
-<p class="display-math">$$ n > \frac{1}{\sqrt[a]{\varepsilon}} $$</p>
-<p>Мы показали, что любые натуральные $ n &gt; N(\varepsilon) $ удовлетворяют требуемому по определению предела неравенству выше.
-Итак, доказали, что:</p>
-<p class="display-math">$$ \lim_{n\to\infty}\frac{1}{n^a} = 0 $$</p>
+                        <p>Доказывать будем для точной верхней грани и наибольшего частичного предела. Доказательство для точной нижней грани и наименьшего частичного предела аналогичное.</p>
+<hr>
+<p>Докажем, что</p>
+<p class="display-math">$$ \sup x_n = A $$</p>
+<p>Докажем от противного. Пусть $A$ — не точная верхняя грань последовательности $x_n$. Значит
+существует более маленькая точная верхняя грань $A'$:</p>
+<p class="display-math">$$ A' < A $$</p>
+<p>Обозначим за $E$ расстояние между $A'$ и $A$:</p>
+<p class="display-math">$$ E = A - A' $$</p>
+<p>Так как $A$ — предельная точка $x_n$, то существует некоторая подпоследовательность $x_{p_n}$, у которой есть предел, равный $A$:</p>
+<p class="display-math">$$ \limn x_{p_n} = A $$</p>
+<p>Распишем по определению, что это означает:</p>
+<p class="display-math">$$ \limn x_{p_n} = A \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |x_{p_n} - A| < \varepsilon $$</p>
+<p>Раз выражение верно для любого положительного $\varepsilon$, а значит выполняется и для $E$:</p>
+<p class="display-math">$$ \text{для } E \quad \exists N = N(E) \ \forall n > N \ : \ |x_{p_n} - A| < E $$</p>
+<p>Итак, для $n&gt;N$ выполняется неравенство</p>
+<p class="display-math">$$ |x_{p_n} - A| < A - A' $$</p>
+<p>Раскроем это неравенство с модулем по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ |x_{p_n} - A| < A - A' \Leftrightarrow \begin{cases} x_{p_n} - A < A - A' \\ x_{p_n} - A > A' - A \end{cases} $$</p>
+<p>Рассмотрим подробнее второе неравенство:</p>
+<p class="display-math">$$ x_{p_n} - A > A' - A $$</p>
+<p>Прибавим к обеим частям $A$:</p>
+<p class="display-math">$$ x_{p_n} > A' $$</p>
+<p>Итак, мы предположили, что $A'$ точная верхняя грань. Но получается, что все элементы $x_{p_n}$ при $n&gt;N$ будут строго больше этой якобы точной верхней грани $A'$.
+Получили противоречие.</p>
+<p>Это означает, что нет других верхних граней, которые меньше $A$, а значит $A$ — точная верхняя грань последовательности $x_n$.</p>
+<p class="display-math">$$ \sup x_n = A $$</p>
 <p>$\blacksquare$</p>
 <hr>
-<p><strong>2)</strong></p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \lim_{n\to\infty} \left(1 \pm \frac{1}{n}\right) = 1 \pm \lim_{n\to\infty} \frac{1}{n} = 1 \pm 0 = 1 $$</p>
-<p>Последовательность $\frac{1}{n} \to 0$, так как это частный случай последовательности $\frac{1}{n^a}$ при $a = 1$. А последовательность $\frac{1}{n^a}\to 0$, как мы показали в пункте <strong>1</strong>.</p>
-<p>Теперь разберемся с $\frac{n}{n\pm 1}$. Ее можно представить в следующем виде:</p>
-<p class="display-math">$$ \frac{n}{n\pm 1} = \frac{1}{\frac{n\pm 1}{n}} $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ \limn \frac{n}{n\pm 1} = \limn \frac{1}{\frac{n\pm 1}{n}} = \frac{\lim\limits_{n\to\infty} 1}{\lim\limits_{n\to\infty} \frac{n\pm 1}{n}} = \frac{1}{1} = 1 $$</p>
+<p>Докажем, что</p>
+<p class="display-math">$$ \overline{\limn} x_n = A $$</p>
+<p>Пусть это не так и существует какая-то предельная точка $A' &gt; A$, а значит</p>
+<p class="display-math">$$ \overline{\limn} x_n = A' $$</p>
+<p>По определению наибольшего частичного предела это означает, что существует некоторая подпоследовательность $x_{g_n}$, которая имеет предел $A'$</p>
+<p class="display-math">$$ \limn x_{g_n} = A' \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |x_{g_n} - A'| < \varepsilon $$</p>
+<p>Раз выражение из определения выполняется для любого положительного числа, то оно будет выполняться и для числа $A' - A$. Итак, для $A'-A$ существует такое $N$, что все члены подпоследовательности после этого $N$ будут удовлетворять неравенству</p>
+<p class="display-math">$$ |x_{g_n} - A'| < A' - A $$</p>
+<p>Разложим неравенство с модулем по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ |x_{g_n} - A'| < A' - A \Leftrightarrow \begin{cases} x_{g_n} - A' < A' - A \\ x_{g_n} - A' > A - A' \end{cases} $$</p>
+<p>Рассмотрим второе неравенство подробнее:</p>
+<p class="display-math">$$ x_{g_n} - A' > A - A' $$</p>
+<p>Прибавляем к обеим частям $A'$:</p>
+<p class="display-math">$$ x_{g_n} > A $$</p>
+<p>Итак, начиная с $N$ все члены подпоследовательности $x_{g_n}$, а значит и некоторые члены исходной последовательности $x_n$ оказываются строго большими числа $A$. Но по условию известно, что $A$ — верхняя граница последовательности $x_n$. Получили противоречие, а значит не существует другой предельной точки $A' &gt; A$.</p>
+<p>Итак,</p>
+<p class="display-math">$$ \overline{\limn} x_n = A $$</p>
 <p>$\blacksquare$</p>
 
                     </div>
