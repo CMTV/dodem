@@ -1,13 +1,12 @@
 {
-    "task": 101,
+    "task": 112,
     "location": "I.2",
 
     "solver": "CMTV",
 
     "proto":
     [
-        "sequences/limits/elementary",
         "sequences/limits/limit-point",
-        "sequences/limits/max-limit-points"
+        "sequences/limits/limit-point-bounds"
     ]
 }

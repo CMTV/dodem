@@ -32,10 +32,16 @@ $\blacksquare$
 
 **2)**
 
-$$ \lim_{n\to\infty} \frac{n+1}{n} = \lim_{n\to\infty} 1 + \frac{1}{n} = 1 + \lim_{n\to\infty} \frac{1}{n} = 1 + 0 = 1 $$
-
-$$ \lim_{n\to\infty} \frac{n-1}{n} = \lim_{n\to\infty} 1 - \frac{1}{n} = 1 - \lim_{n\to\infty} \frac{1}{n} = 1 - 0 = 1 $$
+$$ \lim_{n\to\infty} \frac{n\pm 1}{n} = \lim_{n\to\infty} \left(1 \pm \frac{1}{n}\right) = 1 \pm \lim_{n\to\infty} \frac{1}{n} = 1 \pm 0 = 1 $$
 
 Последовательность $\frac{1}{n} \to 0$, так как это частный случай последовательности $\frac{1}{n^a}$ при $a = 1$. А последовательность $\frac{1}{n^a}\to 0$, как мы показали в пункте **1**.
+
+Теперь разберемся с $\frac{n}{n\pm 1}$. Ее можно представить в следующем виде:
+
+$$ \frac{n}{n\pm 1} = \frac{1}{\frac{n\pm 1}{n}} $$
+
+Тогда
+
+$$ \limn \frac{n}{n\pm 1} = \limn \frac{1}{\frac{n\pm 1}{n}} = \frac{\lim\limits_{n\to\infty} 1}{\lim\limits_{n\to\infty} \frac{n\pm 1}{n}} = \frac{1}{1} = 1 $$
 
 $\blacksquare$

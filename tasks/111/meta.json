@@ -1,5 +1,5 @@
 {
-    "task": 101,
+    "task": 111,
     "location": "I.2",
 
     "solver": "CMTV",
@@ -7,7 +7,6 @@
     "proto":
     [
         "sequences/limits/elementary",
-        "sequences/limits/limit-point",
         "sequences/limits/max-limit-points"
     ]
 }

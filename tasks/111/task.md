@@ -1,0 +1,1 @@
+$$ x_n = \frac{n^2}{1 + n^2}\cos\frac{2n\pi}{3} $$

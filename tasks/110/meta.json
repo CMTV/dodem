@@ -1,13 +1,13 @@
 {
-    "task": 101,
+    "task": 110,
     "location": "I.2",
 
     "solver": "CMTV",
 
     "proto":
     [
+        "sequences/limits/first-members-independency",
         "sequences/limits/elementary",
-        "sequences/limits/limit-point",
-        "sequences/limits/max-limit-points"
+        "sequences/limits/limit-point"
     ]
 }
