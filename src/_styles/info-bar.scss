@@ -2,42 +2,48 @@
 
 .info-bar
 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+
+    padding: 1.5em 3em;
+    padding-bottom: 60px;
+
     opacity: .6;
-
-    display: flex;
-    flex-wrap: wrap;
-
-    align-items: center;
-    justify-content: center;
-
-    padding: 20px 0;
-    padding-bottom: 50px;
-
     transition: opacity $anim-speed;
+
+    @include layout(stretch)
+    {
+        gap: 0.15em;
+        row-gap: 1em;
+        padding: 1.5em 0;
+    }
 
     @include layout(mini)
     {
-        opacity: .8;
-        padding-bottom: 0;
+        justify-content: center;
+        grid-template-columns: 40px 40px 40px;
+        gap: 1em;
     }
 
     &:hover
     {
         opacity: 1;
+
+        .info-item.donate { color: rgb(252, 86, 26); }
     }
 
     .info-item
     {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
         font-size: 95%;
         text-decoration: none;
         color: $fmuted-color;
 
-        margin-top: 15px;
-
-        &:nth-child(1), &:nth-child(2), &:nth-child(3)
-        {
-            margin-top: 0;
-        }
+        transition: color $anim-speed;
 
         @include layout(mini)
         {
@@ -62,30 +68,14 @@
             }
         }
 
-        &:not(:last-of-type)
-        {
-            margin-right: 20px;
-        }
-
         &:hover
         {
             color: $fblack-color;
         }
 
-        &.break
-        {
-            flex-grow: 1; flex-basis: 100%;
-            margin: 0;
-
-            @include layout(mini)
-            {
-                display: none;
-            }
-        }
-
         i
         {
-            margin-right: 3px;
+            margin-right: 10px;
 
             @include layout(mini)
             {

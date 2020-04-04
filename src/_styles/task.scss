@@ -490,4 +490,64 @@
             }
         }
     }
+
+    .help-me
+    {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        margin-top: 30px;
+
+        @include layout(mini)
+        {
+            flex-direction: column;
+        }
+
+        .message
+        {
+            color: $fmuted-color;
+            margin-right: 20px;
+
+            @include layout(mini)
+            {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+        }
+
+        .help-button
+        {
+            width: 125px;
+            padding: 7px 15px;
+
+            font-size: 95%;
+            color: $fmuted-color;
+            text-shadow: none;
+            text-decoration: none;
+            background: white;
+
+            border: 2px solid $border-color;
+            border-radius: $border-radius;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            transition: border-color $anim-speed, color $anim-speed;
+
+            &:hover
+            {
+                cursor: pointer;
+
+                border-color: $border-strong-color;
+                color: $fblack-color;
+            }
+
+            i
+            {
+                margin-right: 10px;
+            }
+        }
+    }
 }

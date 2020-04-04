@@ -23,6 +23,16 @@ const TRANSLATORS =
         });
 
         return out;
+    },
+
+    protoScaner: (text) =>
+    {
+        let out = '';
+
+        // <p:[sequences/limits/max-limit-points]>
+        //out = text.replace()
+
+        return out;
     }
 }
 
