@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>115 | Демидович. Решения</title>
-        <meta name="description" content="$$ x_n &#x3D; \cos^n\frac{2n\pi}{3} $$">
+        <title>123 | Демидович. Решения</title>
+        <meta name="description" content="Построить пример последовательности:а) не имеющей конечных частичных пределов;&lt;br&gt;б) имеющей единственный конечный частичный предел, но не являющейся сходящейся;&lt;br&gt;в) имеющей бесконечное множество частичных пределов;&lt;br&gt;г) имеющей в качестве своего частичного предела каждое вещественное число.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>115</span>
+                    <span>123</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,12 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ x_n = \cos^n\frac{2n\pi}{3} $$</p>
+                        <p>Построить пример последовательности:</p>
+<p>а) не имеющей конечных частичных пределов;<br>
+б) имеющей единственный конечный частичный предел, но не являющейся сходящейся;<br>
+в) имеющей бесконечное множество частичных пределов;<br>
+г) имеющей в качестве своего частичного предела каждое вещественное число.</p>
+
                     </div>
                 </div>
             </section>
@@ -184,30 +189,48 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Выясним, какие значения может принимать</p>
-<p class="display-math">$$ \cos\frac{2n\pi}{3} $$</p>
-<p>Любое натуральное число $n$ при делении на $3$ дает один из трех остатков: $0, 1$ или $2$, то есть его можно представить в одном из следующих видов:</p>
-<p class="display-math">$$ 3k, \quad 3k-1, \quad 3k-2 $$</p>
-<p>Рассмотрим значение синуса выше при каждом из этих видов:</p>
-<p class="display-math">$$ \cos\frac{(3k)2\pi}{3} = \cos 2\pi = 1 $$</p>
-<p class="display-math">$$ \cos\frac{(3k-1)2\pi}{3} = \cos\left( 2\pi k - \frac{2\pi}{3} \right) = \cos -\frac{2\pi}{3} = -\frac{1}{2} $$</p>
-<p class="display-math">$$ \cos\frac{(3k-2)2\pi}{3} = \cos\left( 2\pi k - \frac{4\pi}{3} \right) = \cos - \frac{4\pi}{3} = -\frac{1}{2} $$</p>
+                        <p><strong>а)</strong></p>
+<p class="display-math">$$ x_n = n $$</p>
+<p>Это просто последовательность натуральных чисел.</p>
+<p>Докажем, что у этой последовательности не существует конечных частичных пределов.</p>
+<p>Докажем от противного. Пусть существует некоторая подпоследовательность $x_{p_n}$, которая сходится к некоторому конечному числу. Если $x_{p_n}$ сходится, то, по критерию Коши, она фундаментальная, то есть</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N, m > 0 \ : \ |x_{p_{n+m}} - x_{p_{n}}| < \varepsilon $$</p>
+<p>Возьмем тогда $\varepsilon = 1$. Должно существовать такое $N$, чтобы выполнялось неравенство:</p>
+<p class="display-math">$$ |x_{p_{n+m}} - x_{p_{n}}| < 1 $$</p>
+<p>$x_{p_{n+m}}$ есть какое-то натуральное число, причем оно больше, чем $x_{p_n}$, так как последовательность натуральных чисел строго возрастает.
+Но результатом вычитания из большего натурального числа меньшего всегда будет натуральное число, то есть</p>
+<p class="display-math">$$ x_{p_{n+m}} - x_{p_n} \geq 1 $$</p>
+<p>Можно &quot;обернуть&quot; в модуль левую часть неравенства, так как там все-равно стоит положительное число:</p>
+<p class="display-math">$$ x_{p_{n+m}} - x_{p_n} = |x_{p_{n+m}} - x_{p_n}| \geq 1 $$</p>
+<p>Итак, получили противоречие:</p>
+<p class="display-math">$$ |x_{p_{n+m}} - x_{p_{n}}| < 1 \qquad |x_{p_{n+m}} - x_{p_n}| \geq 1 $$</p>
+<p>Это значит, что подпоследовательность $x_{p_n}$ не фундаментальная, а значит не сходится к конечному числу.</p>
+<p>Мы доказали, что конечных частичных пределов у $x_n$ нет.</p>
+<p>$\blacksquare$</p>
 <hr>
-<p>Получим формулы для трех подпоследовательностей:</p>
-<p class="display-math">$$ x_{3n} = (1)^{3n} = 1 $$</p>
-<p class="display-math">$$ x_{3n-1} = \left( -\frac{1}{2} \right)^{3n-1} = -2\left(-\frac{1}{8}\right)^n $$</p>
-<p class="display-math">$$ x_{3n-2} = \left( -\frac{1}{2} \right)^{3n-2} = 4\left(-\frac{1}{8}\right)^n $$</p>
-<p>Найдем пределы этих подпоследовательностей:</p>
-<p class="display-math">$$ \limn x_{3n} = \limn 1 = 1 $$</p>
-<p class="display-math">$$ \limn x_{3n-1} = \limn -2\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p class="display-math">$$ \limn x_{3n-2} = \limn 4\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p>В последних двух пределах мы воспользовались тем, что предел геометрической прогрессии, у которой модуль знаменателя меньше $1$, равен $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
+<p><strong>б)</strong></p>
+<p class="display-math">$$ x_n = n\left(\frac{1 + (-1)^n}{2}\right) $$</p>
+<p>Запишем первые несколько ее членов:</p>
+<p class="display-math">$$ 0, 1, 0, 2, 0, 3, \ldots $$</p>
+<p>Если $x_n$ сходится, то, согласно <a href="/tasks/93">задаче 93</a> она ограничена. Но внутри нее на четных номерах содержится последовательность всех натуральных чисел, которая не ограничена.
+Получили противоречие. Значит, $x_n$ не сходится.</p>
+<p>Из этой последовательности можно выделить подпоследовательность с нечетными номерами:</p>
+<p class="display-math">$$ x_{2n+1} = (2n+1)\left( \frac{1-1}{2} \right) = (2n+1)\cdot 0 = 0 $$</p>
+<p>Соответственно</p>
+<p class="display-math">$$ \limn x_{2n+1} = \limn 0 = 0 $$</p>
+<p>Итак, у $x_n$ есть как минимум один конечный частичный предел.</p>
+<p>Докажем, что других конечных частичных пределов быть не может. Докажем от противного. Пусть существует некоторая подпоследовательность $x_{p_n}$, которая сходится к отличному от $0$ числу.
+Тогда, какой бы номер $p_n$ мы не взяли, после него в этой подпоследовательности должны встречаться четные номера из $x_n$. В противном случае $x_{p_n}$ стремилась бы к $0$. Итак, в подпоследовательности
+$x_{p_n}$ можно всегда выделить подпоследовательность натуральных чисел.</p>
+<p>Итак, $x_{p_n}$ сходится, а значит, по <a href="/tasks/93">задаче 93</a>, она ограничена. Но, как мы только что сказали, в $x_{p_n}$ обязательно встретится подпоследовательность натуральных чисел, которая, естественно, не ограничена.
+Значит, $x_{p_n}$ не может быть ограниченной. Получили противоречие. Значит $x_{p_n}$ не сходится к конечному числу.</p>
+<p>Мы построили расходящуюся последовательность $x_n$, у который есть только один конечный частичный предел.</p>
 <hr>
-<p>Итак, мы нашли два частичных предела последовательности $x_n$: $1$ и $0$.
-По прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;, других предельных точек у $x_n$ нет.</p>
-<p>А значит:</p>
-<p class="display-math">$$ \overline{\limn} x_n = 1 $$</p>
-<p class="display-math">$$ \underline{\limn} x_n = 0 $$</p>
+<p><strong>в)</strong></p>
+<p>Такую последовательность мы построили в <a href="/tasks/122">задаче 122</a>. Также в <a href="/tasks/118">задаче 118</a> приведен реальный пример такой последовательности.</p>
+<hr>
+<p><strong>г)</strong></p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -249,42 +272,16 @@
             </div>
 
 
-            <section class="block-section protoTasks">
-                <div class="block-section-header">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задачи</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
-                                </a>
-                            </dt>
-                            <dd></dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
 
             <section class="nav">
-                    <a href="../../tasks/116/" title="Следующая задача" class="next">
-                        <span class="label">116</span>
+                    <a href="../../tasks/124/" title="Следующая задача" class="next">
+                        <span class="label">124</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/114/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/122/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">114</span>
+                        <span class="label">122</span>
                     </a>
             </section>
         </section>

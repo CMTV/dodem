@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>115 | Демидович. Решения</title>
-        <meta name="description" content="$$ x_n &#x3D; \cos^n\frac{2n\pi}{3} $$">
+        <title>118 | Демидович. Решения</title>
+        <meta name="description" content="$$ \frac{1}{2},\frac{1}{3},\frac{2}{3},\frac{1}{4},\frac{2}{4},\frac{3}{4},\frac{1}{5},\frac{2}{5},\frac{3}{5},\frac{4}{5}, \ldots $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>115</span>
+                    <span>118</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ x_n = \cos^n\frac{2n\pi}{3} $$</p>
+                        <p class="display-math">$$ \frac{1}{2},\frac{1}{3},\frac{2}{3},\frac{1}{4},\frac{2}{4},\frac{3}{4},\frac{1}{5},\frac{2}{5},\frac{3}{5},\frac{4}{5}, \ldots $$</p>
                     </div>
                 </div>
             </section>
@@ -184,30 +184,37 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Выясним, какие значения может принимать</p>
-<p class="display-math">$$ \cos\frac{2n\pi}{3} $$</p>
-<p>Любое натуральное число $n$ при делении на $3$ дает один из трех остатков: $0, 1$ или $2$, то есть его можно представить в одном из следующих видов:</p>
-<p class="display-math">$$ 3k, \quad 3k-1, \quad 3k-2 $$</p>
-<p>Рассмотрим значение синуса выше при каждом из этих видов:</p>
-<p class="display-math">$$ \cos\frac{(3k)2\pi}{3} = \cos 2\pi = 1 $$</p>
-<p class="display-math">$$ \cos\frac{(3k-1)2\pi}{3} = \cos\left( 2\pi k - \frac{2\pi}{3} \right) = \cos -\frac{2\pi}{3} = -\frac{1}{2} $$</p>
-<p class="display-math">$$ \cos\frac{(3k-2)2\pi}{3} = \cos\left( 2\pi k - \frac{4\pi}{3} \right) = \cos - \frac{4\pi}{3} = -\frac{1}{2} $$</p>
+                        <p><strong>Установление границ</strong></p>
+<p>Так как все члены последовательности — правильные дроби, то как показывалось в <a href="/tasks/16">задаче 16</a>, ее точной верхней границей является $1$, а точной нижней — $0$.</p>
+<p class="display-math">$$ 0 < \frac{1}{2}, \frac{1}{3}, \frac{2}{3}, \ldots < 1 $$</p>
+<p>Рассмотрим подпоследовательность вида:</p>
+<p class="display-math">$$ \frac{1}{2}, \frac{2}{3}, \frac{3}{4}, \ldots, \frac{n}{n+1} $$</p>
+<p>Предел этой подпоследовательности (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;):</p>
+<p class="display-math">$$ \limn \frac{n-1}{n} = 1 $$</p>
+<p>Итак, $1$ — верхняя граница исходной последовательности, а также предельная точка. По прото-задаче &quot;<a href="/proto/sequences/limits/limit-point-bounds">Точные грани и предельные точки</a>&quot; это означает, что $1$ — наибольший частичный предел, а это по определению
+означает, что никаких частичных пределов больше $1$ у последовательности быть не может.</p>
+<p>Рассмотрим подпоследовательность вида:</p>
+<p class="display-math">$$ \frac{1}{2}, \frac{1}{3}, \frac{1}{4}, \ldots, \frac{1}{n} $$</p>
+<p class="display-math">$$ \limn \frac{1}{n} = 0 $$</p>
+<p>По уже озвученной выше причине это означает, что $0$ — наименьший частичный предел, а это по определению означает, что у последовательности не может быть частичных пределов, которые меньше $0$.</p>
+<p>Итак, любые частичные пределы лежат между $0$ и $1$.</p>
 <hr>
-<p>Получим формулы для трех подпоследовательностей:</p>
-<p class="display-math">$$ x_{3n} = (1)^{3n} = 1 $$</p>
-<p class="display-math">$$ x_{3n-1} = \left( -\frac{1}{2} \right)^{3n-1} = -2\left(-\frac{1}{8}\right)^n $$</p>
-<p class="display-math">$$ x_{3n-2} = \left( -\frac{1}{2} \right)^{3n-2} = 4\left(-\frac{1}{8}\right)^n $$</p>
-<p>Найдем пределы этих подпоследовательностей:</p>
-<p class="display-math">$$ \limn x_{3n} = \limn 1 = 1 $$</p>
-<p class="display-math">$$ \limn x_{3n-1} = \limn -2\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p class="display-math">$$ \limn x_{3n-2} = \limn 4\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p>В последних двух пределах мы воспользовались тем, что предел геометрической прогрессии, у которой модуль знаменателя меньше $1$, равен $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
+<p><strong>Рациональные предельные точки</strong></p>
+<p>Возьмем произвольное рациональное число $r$ от $0$ до $1$.
+По определению рационального числа это означает, что</p>
+<p class="display-math">$$ r = \frac{d}{t}, \ 0 < d < t $$</p>
+<p>Эта правильная дробь есть в исходной последовательности. Построим теперь следующую подпоследовательность:</p>
+<p class="display-math">$$ \frac{d}{t}, \frac{2d}{2t}, \frac{3d}{3t}, \ldots, \frac{nd}{nt} $$</p>
+<p>Заметьте, что это действительно подпоследовательность, так как каждый ее член в исходной последовательности лежит друг за другом:</p>
+<p class="display-math">$$ \ldots, \frac{d-1}{t}, \frac{d}{t}, \frac{d+1}{t}, \ldots, \frac{1}{2t} \ldots, \frac{2d}{2t}, \ldots $$</p>
+<p>Итак, найдем предел этой подпоследовательности:</p>
+<p class="display-math">$$ \limn \frac{nd}{nt} = \frac{d}{t} $$</p>
+<p>Но $r=\frac{d}{t}$ — произвольное рациональное число от $0$ до $1$. Это означает, что любое рациональное число в этом промежутке будет являться частичным пределом.</p>
 <hr>
-<p>Итак, мы нашли два частичных предела последовательности $x_n$: $1$ и $0$.
-По прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;, других предельных точек у $x_n$ нет.</p>
-<p>А значит:</p>
-<p class="display-math">$$ \overline{\limn} x_n = 1 $$</p>
-<p class="display-math">$$ \underline{\limn} x_n = 0 $$</p>
+<p><strong>Вещественные предельные точки</strong></p>
+<p>Рассмотрим произвольное иррациональное число $\alpha$ от $0$ до $1$.
+По определению это означает, что существует сечение, которое это число определяет.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -258,17 +265,17 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
                             <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
+                                <a href="/proto/sequences/limits/limit-point-bounds" title="Точные грани и предельные точки" target="_blank">
+                                    Точные грани и предельные точки
                                 </a>
                             </dt>
-                            <dd></dd>
+                            <dd>Связь точной верхней (нижней) грани с предельными точками последовательности.</dd>
                     
                     </dl>
                 </div>
@@ -277,14 +284,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/116/" title="Следующая задача" class="next">
-                        <span class="label">116</span>
+                    <a href="../../tasks/119/" title="Следующая задача" class="next">
+                        <span class="label">119</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/114/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/117/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">114</span>
+                        <span class="label">117</span>
                     </a>
             </section>
         </section>

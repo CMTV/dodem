@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>115 | Демидович. Решения</title>
-        <meta name="description" content="$$ x_n &#x3D; \cos^n\frac{2n\pi}{3} $$">
+        <title>121 | Демидович. Решения</title>
+        <meta name="description" content="Построить пример числовой последовательности, имеющей в качестве своих частичных пределов числа$$ a_1, a_2, \ldots, a_p $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>115</span>
+                    <span>121</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,8 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ x_n = \cos^n\frac{2n\pi}{3} $$</p>
+                        <p>Построить пример числовой последовательности, имеющей в качестве своих частичных пределов числа</p>
+<p class="display-math">$$ a_1, a_2, \ldots, a_p $$</p>
                     </div>
                 </div>
             </section>
@@ -184,30 +185,21 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Выясним, какие значения может принимать</p>
-<p class="display-math">$$ \cos\frac{2n\pi}{3} $$</p>
-<p>Любое натуральное число $n$ при делении на $3$ дает один из трех остатков: $0, 1$ или $2$, то есть его можно представить в одном из следующих видов:</p>
-<p class="display-math">$$ 3k, \quad 3k-1, \quad 3k-2 $$</p>
-<p>Рассмотрим значение синуса выше при каждом из этих видов:</p>
-<p class="display-math">$$ \cos\frac{(3k)2\pi}{3} = \cos 2\pi = 1 $$</p>
-<p class="display-math">$$ \cos\frac{(3k-1)2\pi}{3} = \cos\left( 2\pi k - \frac{2\pi}{3} \right) = \cos -\frac{2\pi}{3} = -\frac{1}{2} $$</p>
-<p class="display-math">$$ \cos\frac{(3k-2)2\pi}{3} = \cos\left( 2\pi k - \frac{4\pi}{3} \right) = \cos - \frac{4\pi}{3} = -\frac{1}{2} $$</p>
-<hr>
-<p>Получим формулы для трех подпоследовательностей:</p>
-<p class="display-math">$$ x_{3n} = (1)^{3n} = 1 $$</p>
-<p class="display-math">$$ x_{3n-1} = \left( -\frac{1}{2} \right)^{3n-1} = -2\left(-\frac{1}{8}\right)^n $$</p>
-<p class="display-math">$$ x_{3n-2} = \left( -\frac{1}{2} \right)^{3n-2} = 4\left(-\frac{1}{8}\right)^n $$</p>
-<p>Найдем пределы этих подпоследовательностей:</p>
-<p class="display-math">$$ \limn x_{3n} = \limn 1 = 1 $$</p>
-<p class="display-math">$$ \limn x_{3n-1} = \limn -2\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p class="display-math">$$ \limn x_{3n-2} = \limn 4\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p>В последних двух пределах мы воспользовались тем, что предел геометрической прогрессии, у которой модуль знаменателя меньше $1$, равен $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
-<hr>
-<p>Итак, мы нашли два частичных предела последовательности $x_n$: $1$ и $0$.
-По прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;, других предельных точек у $x_n$ нет.</p>
-<p>А значит:</p>
-<p class="display-math">$$ \overline{\limn} x_n = 1 $$</p>
-<p class="display-math">$$ \underline{\limn} x_n = 0 $$</p>
+                        <p>Будем просто повторять заданные в условии числа, то есть построенная последовательность $x_n$ будет иметь следующий вид:</p>
+<p class="display-math">$$ a_1, a_2,\ldots,a_p,a_1,a_2,\ldots,a_p,a_1, \ldots $$</p>
+<p>Замечаем, что $a_1$ в построенной последовательности находится на $1$, $p+1$, $2p+1$ и так далее номерах. Аналогично, число $a_2$ находится на $2$, $p+2$, $2p+2$ и так далее номерах.</p>
+<p>Итак, можно выделить $p$ подпоследовательностей, каждая из которых сходится к какому-то $a_i$ из условия:</p>
+<p class="display-math">\begin{gather*}
+    \limn x_{pn+1} = \limn a_1 = a_1
+    \\[5px]
+    \limn x_{pn+2} = \limn a_2 = a_2
+    \\[5px]
+    \ldots
+    \\[5px]
+    \limn x_{pn + (p-1)} = \limn a_p = a_p
+\end{gather*}</p>
+<p>Итак, мы построили последовательность, которая имеет в качестве своих частичных пределов заданные в условии числа.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -249,42 +241,16 @@
             </div>
 
 
-            <section class="block-section protoTasks">
-                <div class="block-section-header">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задачи</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
-                                </a>
-                            </dt>
-                            <dd></dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
 
             <section class="nav">
-                    <a href="../../tasks/116/" title="Следующая задача" class="next">
-                        <span class="label">116</span>
+                    <a href="../../tasks/122/" title="Следующая задача" class="next">
+                        <span class="label">122</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/114/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/120/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">114</span>
+                        <span class="label">120</span>
                     </a>
             </section>
         </section>

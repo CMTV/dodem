@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>115 | Демидович. Решения</title>
-        <meta name="description" content="$$ x_n &#x3D; \cos^n\frac{2n\pi}{3} $$">
+        <title>124 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что последовательности $x_n$ и $y_n &#x3D; x_n \sqrt[n]{n} \ (n&#x3D;1,2,\ldots)$ имеют одни и те же частичные пределы.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>115</span>
+                    <span>124</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,7 +146,8 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ x_n = \cos^n\frac{2n\pi}{3} $$</p>
+                        <p>Доказать, что последовательности $x_n$ и $y_n = x_n \sqrt[n]{n} \ (n=1,2,\ldots)$ имеют одни и те же частичные пределы.</p>
+
                     </div>
                 </div>
             </section>
@@ -184,30 +185,31 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Выясним, какие значения может принимать</p>
-<p class="display-math">$$ \cos\frac{2n\pi}{3} $$</p>
-<p>Любое натуральное число $n$ при делении на $3$ дает один из трех остатков: $0, 1$ или $2$, то есть его можно представить в одном из следующих видов:</p>
-<p class="display-math">$$ 3k, \quad 3k-1, \quad 3k-2 $$</p>
-<p>Рассмотрим значение синуса выше при каждом из этих видов:</p>
-<p class="display-math">$$ \cos\frac{(3k)2\pi}{3} = \cos 2\pi = 1 $$</p>
-<p class="display-math">$$ \cos\frac{(3k-1)2\pi}{3} = \cos\left( 2\pi k - \frac{2\pi}{3} \right) = \cos -\frac{2\pi}{3} = -\frac{1}{2} $$</p>
-<p class="display-math">$$ \cos\frac{(3k-2)2\pi}{3} = \cos\left( 2\pi k - \frac{4\pi}{3} \right) = \cos - \frac{4\pi}{3} = -\frac{1}{2} $$</p>
+                        <p>В <a href="/tasks/65">задаче 65</a> доказывалось, что</p>
+<p class="display-math">$$ \limn \sqrt[n]{n} = 1 $$</p>
+<p>По следствию из прото-задачи &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; получаем, что любая подпоследовательность этой последовательности тоже стремится к $1$.</p>
 <hr>
-<p>Получим формулы для трех подпоследовательностей:</p>
-<p class="display-math">$$ x_{3n} = (1)^{3n} = 1 $$</p>
-<p class="display-math">$$ x_{3n-1} = \left( -\frac{1}{2} \right)^{3n-1} = -2\left(-\frac{1}{8}\right)^n $$</p>
-<p class="display-math">$$ x_{3n-2} = \left( -\frac{1}{2} \right)^{3n-2} = 4\left(-\frac{1}{8}\right)^n $$</p>
-<p>Найдем пределы этих подпоследовательностей:</p>
-<p class="display-math">$$ \limn x_{3n} = \limn 1 = 1 $$</p>
-<p class="display-math">$$ \limn x_{3n-1} = \limn -2\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p class="display-math">$$ \limn x_{3n-2} = \limn 4\left(-\frac{1}{8}\right)^n = 0 $$</p>
-<p>В последних двух пределах мы воспользовались тем, что предел геометрической прогрессии, у которой модуль знаменателя меньше $1$, равен $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/geometric-progression">Предел геометрической прогрессии</a>&quot;).</p>
+<p>Рассмотрим произвольный частичный предел $A$ последовательности $x_n$. Это означает, что существует некоторая подпоследовательность $x_{p_n}$, которая сходится к $A$:</p>
+<p class="display-math">$$ \limn x_{p_n} = A $$</p>
+<p>Тогда последовательность</p>
+<p class="display-math">$$ x_{p_n} \sqrt[p_n]{p_n} $$</p>
+<p>является подпоследовательностью $y_n$. Найдем ее предел:</p>
+<p class="display-math">$$ \limn y_{p_n} = x_{p_n} \sqrt[p_n]{p_n} = \limn x_{p_n} \limn \sqrt[p_n]{p_n} = A\cdot 1 = A $$</p>
+<p class="display-math">$$ \limn y_{p_n} = A $$</p>
+<p>Итак, любой частичный предел $x_n$ является частичным пределом $y_n$.</p>
 <hr>
-<p>Итак, мы нашли два частичных предела последовательности $x_n$: $1$ и $0$.
-По прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;, других предельных точек у $x_n$ нет.</p>
-<p>А значит:</p>
-<p class="display-math">$$ \overline{\limn} x_n = 1 $$</p>
-<p class="display-math">$$ \underline{\limn} x_n = 0 $$</p>
+<p>Рассмотрим произвольный частичный предел $B$ последовательности $y_n$. Это означает, что существует некоторая подпоследовательность $y_{q_n}$, которая сходится к $B$:</p>
+<p class="display-math">$$ y_{q_n} = x_{q_n} \sqrt[q_n]{q_n} $$</p>
+<p>Поделим обе части на строго положительное $\sqrt[q_n]{q_n}$:</p>
+<p class="display-math">$$ x_{q_n} = \frac{y_{q_n}}{\sqrt[q_n]{q_n}} $$</p>
+<p>Найдем предел подпоследовательности $x_{q_n}$:</p>
+<p class="display-math">$$ \limn x_{q_n} = \limn\frac{y_{q_n}}{\sqrt[q_n]{q_n}} = \frac{\lim\limits_{n\to\infty} y_{q_n}}{\lim\limits_{n\to\infty} \sqrt[q_n]{q_n}} = \frac{B}{1} = B $$</p>
+<p class="display-math">$$ \limn x_{q_n} = B $$</p>
+<p>Итак, любой частичный предел $y_n$ является частичным пределом $x_n$.</p>
+<hr>
+<p>Мы показали, что любой частичный предел $x_n$ является частичным пределом $y_n$ и наоборот, а значит обе эти последовательности имеют одни и те же частичные пределы.</p>
+<p>$\blacksquare$</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -258,14 +260,8 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/geometric-progression" title="Предел геометрической прогрессии" target="_blank">
-                                    Предел геометрической прогрессии
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
+                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
+                                    Единственность предельной точки
                                 </a>
                             </dt>
                             <dd></dd>
@@ -277,14 +273,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/116/" title="Следующая задача" class="next">
-                        <span class="label">116</span>
+                    <a href="../../tasks/125/" title="Следующая задача" class="next">
+                        <span class="label">125</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/114/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/123/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">114</span>
+                        <span class="label">123</span>
                     </a>
             </section>
         </section>
