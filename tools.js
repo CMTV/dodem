@@ -3,15 +3,7 @@ const p =           require('path');
 const translator =  require('./translator');
 const mustache =    require('mustache');
 
-const mdIt =        require('markdown-it')({
-    html: true,
-    subscript: false,
-    superscript: false
-});
-
-mdIt.use(require('markdown-it-attrs'), {
-    leftDelimiter: '{:'
-});
+const mdIt =    require('./markdown-config');
 
 const TASKS_NUM = 4462;
 
@@ -312,7 +304,7 @@ function getTask(taskNumber, removeSrc = true)
 {
     let srcTask = getSrcTask(taskNumber);
 
-    let translators = ['isolateMath'];
+    let translators = ['isolateMath', 'protoScaner'];
 
     // New way
     srcTask.task_html = mdIt.render(translator.translate(srcTask.task_src, translators));
@@ -320,18 +312,13 @@ function getTask(taskNumber, removeSrc = true)
     // Old way
     // srcTask.task_html = translator.translate(srcTask.task_src, translators);
 
-    srcTask.solutions_html = srcTask.solutions_src;
+    srcTask.solutions_html = (srcTask.solutions_src).slice();
+    srcTask.solutions_html = [];
 
-    srcTask.solutions_html.forEach((solution, i) =>
+    srcTask.solutions_src.forEach((solution, i) =>
     {
-        // New way
+        srcTask.solutions_html.push(JSON.parse(JSON.stringify(solution)));
         srcTask.solutions_html[i].data = mdIt.render(translator.translate(solution.data, translators));
-
-        // Old way
-        /*srcTask.solutions_html[i].data = translator.translate(
-            solution.data,
-            translators
-        );*/
     });
 
     if (srcTask.hint_src)
@@ -495,6 +482,25 @@ function genAll(devMode = false)
             let hasProtoTasks = !!task.meta.proto;
             let protoTasks = [];
 
+            task.solutions_src.forEach(solution =>
+            {
+                // Looking for proto-tasks inside solutions
+
+                let matches = solution.data.matchAll(/<p:\[(.+)\]>/gm);
+                for (const match of matches)
+                {
+                    if (!protoTasks.includes(match[1]))
+                    {
+                        hasProtoTasks = true;
+
+                        if (!task.meta.proto)
+                            task.meta.proto = [];
+
+                        task.meta.proto.push(match[1]);
+                    }
+                }
+            });
+    
             if (hasProtoTasks)
             {
                 task.meta.proto.forEach((protoPath) =>

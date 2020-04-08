@@ -17,6 +17,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-uglify": "^3.0.2",
     "markdown-it-attrs": "^3.0.2",
+    "markdown-it-container": "^2.0.0",
     "mustache": "^3.2.1"
   },
   "dependencies": {

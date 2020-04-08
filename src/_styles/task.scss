@@ -383,9 +383,9 @@
                 text-align: left;
             }
 
-            & > p:not(:last-of-type),
-            & > ol,
-            & > ul
+            p:not(:last-of-type),
+            ol,
+            ul
             {
                 margin-bottom: 15px;
             }
@@ -397,6 +397,61 @@
                 height: 1px;
                 background-color: $border-color;
                 margin-bottom: 15px;
+            }
+
+            // Spoiler
+
+            details
+            {
+                font-size: 95%;
+                margin-bottom: 15px;
+
+                border-radius: $border-radius;
+                border: 1px solid lighten($brand-color, 30%); // #6688b4
+
+                &[open] { summary .toggle-button i:nth-of-type(1) { display: none; } }
+                &:not([open]) { summary .toggle-button i:nth-of-type(2) { display: none; } }
+
+                summary
+                {
+                    outline: none;
+                    margin: 3px;
+                    padding: 12px;
+
+                    border-radius: $border-radius;
+                    background-color: mix($brand-color, white, 7%);
+
+                    display: flex;
+                    align-items: center;
+
+                    .header-inner { flex: 1; }
+
+                    .toggle-button
+                    {
+                        i
+                        {
+                            color: $fmuted-color;
+                            font-size: 17px;
+
+                            transition: color $anim-speed;
+                        }
+                    }
+
+                    &::-webkit-details-marker { display: none; }
+                    &::-moz-list-bullet { list-style-type: none; }
+
+                    &:hover
+                    {
+                        cursor: pointer;
+
+                        .toggle-button i { color: $fblack-color; }
+                    }
+                }
+
+                .body
+                {
+                    padding: 15px;
+                }
             }
 
             // Images

@@ -6,12 +6,14 @@
     .page-proto-task
     {
         .search-container,
+        .block-section.protoTasks,
         .block-section.refs,
         .nav,
         .no-dark-magic,
-        .dark-magic-container
+        .dark-magic-container,
+        .help-me
         {
-            display: none;
+            display: none !important;
         }
 
         .block-section.solution

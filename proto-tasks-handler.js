@@ -4,11 +4,7 @@ const glob =    require('glob');
 const fs =      require('fs');
 const p =       require('path');
 
-const mdIt =    require('markdown-it')({
-    html: true,
-    subscript: false,
-    superscript: false
-});
+const mdIt =    require('./markdown-config');
 
 const translator = require('./translator');
 
@@ -68,7 +64,7 @@ function genProtoTask(protoPath)
 function getRenderedMd(filename, protoPath)
 {
     let mdContent = fs.readFileSync(p.normalize(`proto-tasks/${protoPath}/${filename}.md`), { encoding: 'utf-8' });
-    return mdIt.render(translator.translate(mdContent, ['isolateMath']));
+    return mdIt.render(translator.translate(mdContent, ['isolateMath', 'protoScaner']));
 }
 
 function getProtoCategory(protoPath)

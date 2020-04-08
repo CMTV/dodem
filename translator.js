@@ -1,3 +1,6 @@
+const fs = require('fs');
+const p =  require('path');
+
 const TRANSLATORS =
 {
     paragraph: (text) =>
@@ -29,8 +32,11 @@ const TRANSLATORS =
     {
         let out = '';
 
-        // <p:[sequences/limits/max-limit-points]>
-        //out = text.replace()
+        out = text.replace(/<p:\[(.+)\]>/gm, (match, g1) =>
+        {
+            let protoMeta = JSON.parse(fs.readFileSync(p.normalize('proto-tasks/' + g1 + '/meta.json'), { encoding: 'utf-8' }));
+            return `"[${protoMeta.title}](/proto/${g1})"`;
+        });
 
         return out;
     }
