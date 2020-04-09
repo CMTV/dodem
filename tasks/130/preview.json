@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Пусть</p>\n<p class=\"display-math\">$$ \\limn x_n y_n = 0. $$</p>\n<p>Следует ли отсюда, что либо $\\lim\\limits_{n\\to\\infty} x_n = 0$, либо $\\lim\\limits_{n\\to\\infty} y_n = 0$?</p>\n<p>Рассмотреть пример: $x_n = \\frac{1+(-1)^n}{2}$, $y_n = \\frac{1-(-1)^n}{2} \\ (n=1,2,\\ldots)$.</p>\n"}

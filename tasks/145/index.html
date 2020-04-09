@@ -7,8 +7,8 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>126 | Демидович. Решения</title>
-        <meta name="description" content="Доказать, что если последовательность $x_n \ (n&#x3D;1,2,\ldots)$ не ограничена, то существует подпоследовательность $x_{p_n}$ такая, что$$ \limn x_{p_n} &#x3D; \infty $$">
+        <title>145 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что если $p$ — натуральное число, то:\begin{gather*}    \text{а) } \limn\frac{1^p + 2^p + \ldots + n^p}{n^{p+1}} &#x3D; \frac{1}{p+1};    \\[5px]    \text{б) } \limn\left( \frac{1^p + 2^p + \ldots + n^p}{n^p} - \frac{n}{p+1} \right) &#x3D; \frac{1}{2};    \\[5px]    \text{в) } \limn\frac{1^p + 3^p + \ldots + (2n-1)^p}{n^{p+1}} &#x3D; \frac{2^p}{p+1}\end{gather*}">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
         <script>
@@ -129,7 +129,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>126</span>
+                    <span>145</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,8 +146,14 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Доказать, что если последовательность $x_n \ (n=1,2,\ldots)$ не ограничена, то существует подпоследовательность $x_{p_n}$ такая, что</p>
-<p class="display-math">$$ \limn x_{p_n} = \infty $$</p>
+                        <p>Доказать, что если $p$ — натуральное число, то:</p>
+<p class="display-math">\begin{gather*}
+    \text{а) } \limn\frac{1^p + 2^p + \ldots + n^p}{n^{p+1}} = \frac{1}{p+1};
+    \\[5px]
+    \text{б) } \limn\left( \frac{1^p + 2^p + \ldots + n^p}{n^p} - \frac{n}{p+1} \right) = \frac{1}{2};
+    \\[5px]
+    \text{в) } \limn\frac{1^p + 3^p + \ldots + (2n-1)^p}{n^{p+1}} = \frac{2^p}{p+1}
+\end{gather*}</p>
                     </div>
                 </div>
             </section>
@@ -185,59 +191,93 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Построение подпоследовательности</strong></p>
-<p>Распишем по определению, что значит, что последовательность $x_n$ не ограничена</p>
-<p class="display-math">$$ \forall M > 0 \ \exists n \ : \ |x_n| > M $$</p>
-<p>Начем строить подпоследовательность. Пусть $M_1 = 1$. Так как $x_n$ не ограничена, то существует некоторый ее номер, который мы обозначим за $p_1$, такой, что</p>
-<p class="display-math">$$ |x_{p_1}| > M_1 $$</p>
-<p>Итак, $x_{p_1}$ — первый член нашей подпоследовательности.</p>
-<p>Теперь пусть $M_2 = \ceil{|x_{p_1}|}$. Докажем, что найдется такое $p_2 &gt; p_1$, что $|x_{p_2}| &gt; M_2$. Пусть это не так, то есть</p>
-<p class="display-math">$$ \forall n > p_1 \ : \ |x_n| \leq M_2 $$</p>
-<p>Это означает, что все члены последовательности $x_n$ после $x_{p_1}$ ограничены числом $M_2$. А до $x_{p_1}$ есть всего конечное число элементов последовательности. Получается, что $x_n$ ограничена либо $M_2$, либо каким-то
-наибольшим членом с номером от $0$ до $p_1$. Получили противоречие. Это значит, что все же можно найти такой номер $p_2 &gt; p_1$, чтобы выполнялось неравенство $|x_{p_2}| &gt; M_2$. Итак, $x_{p_2}$ — второй элемент нашей подпоследовательности.</p>
-<p>Вновь принимаем $M_3 = \ceil{|x_{p_2}|}$ и получаем третий элемент $x_{p_3}$.</p>
-<p>По подобному алгоритму получаем подпоследовательность:</p>
-<p class="display-math">$$ x_{p_1}, x_{p_2}, \ldots, x_{p_n} $$</p>
-<hr>
-<p><strong>Ключевое неравенство</strong></p>
-<p>Заметим, что</p>
-<p class="display-math">$$ |x_{p_1}| > M_1 \qquad |x_{p_2}| > M_2 \qquad \ldots \qquad |x_{p_n}| > M_n $$</p>
-<p>Но</p>
+                        <p><strong>а)</strong></p>
+<p class="display-math">$$ \limn\frac{1^p + 2^p + \ldots + n^p}{n^{p+1}} = \frac{1}{p+1} $$</p>
+<details><summary><div class="header-inner">Строгое возрастание $n^{p+1}$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что</p>
+<p class="display-math">$$ n^{p+2} > n^{p+1} $$</p>
+<p class="display-math">$$ n > 1 $$</p>
+<p>Последнее очевидно выполняется, так как $n$ — натуральное число.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ n^{p+2} > n^{p+1} $$</p>
+<p>$\blacksquare$</p>
+</div></details>
+<details><summary><div class="header-inner">$n^{p+1}\to +\infty$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что</p>
+<p class="display-math">$$ \forall M > 0 \ \exists N = N(M) \ \forall n > N \ : \ n^{p+1} > M $$</p>
+<p>Рассмотрим последнее неравенство:</p>
+<p class="display-math">$$ n^{p+1} > M $$</p>
+<p>Возьмем из обеих частей неравенства корень степени $p+1$:</p>
+<p class="display-math">$$ \sqrt[p+1]{n^{p+1}} > \sqrt[p+1]{M} $$</p>
+<p class="display-math">$$ n > \sqrt[p+1]{M} $$</p>
+<p>Итак, для любого $M&gt;0$ достаточно взять за $N$ число $\ceil{\sqrt[p+1]{M}}$. Тогда, для любого натурального числа $n&gt;N$ будет выполняться неравенство:</p>
+<p class="display-math">$$ n > N = \ceil{\sqrt[p+1]{M}} \geq \sqrt[p+1]{M} $$</p>
+<p class="display-math">$$ n > \sqrt[p+1]{M} $$</p>
+<p>А значит и</p>
+<p class="display-math">$$ n^{p+1} > M $$</p>
+<p>Мы по определению доказали, что  $n^{p+1}\to +\infty$.</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p>Найдем следующий предел:</p>
 <p class="display-math">\begin{gather*}
-    M_1 = 1
+    \limn\frac{1^p + 2^p + \ldots + n^{p+1} - (1^p + 2^p + \ldots n^p)}{n^{p+2} - n^{p+1}} =
     \\[5px]
-    M_2 = \ceil{|x_{p_1}|} \geq |x_{p_1}| > M_1
-    \\[5px]
-    M_3 = \ceil{|x_{p_2}|} \geq |x_{p_2}| > M_2
-    \\[5px]
-    \ldots
-    \\[5px]
-    M_n = \ceil{|x_{p_{n-1}}|} \geq |x_{p_{n-1}}| > M_{n-1}
+    = \limn \frac{(n+1)^p}{(n+1)^{p+1} - n^{p+1}}
 \end{gather*}</p>
-<p>Итак, получаем ключевое неравенство:</p>
-<p class="display-math">$$ M_1 < |x_{p_1}| \leq M_2 < |x_{p_2}| \leq M_3 < |x_{p_3}| \leq \ldots $$</p>
-<p>Откуда получаем два важных следствия:</p>
-<p class="display-math">$$ |x_{p_1}| < |x_{p_2}| < |x_{p_3}| < \ldots $$</p>
-<p class="display-math">$$ M_1 < M_2 < M_3 < \ldots $$</p>
-<p>Насчет последнего неравенства заметим, что каждое из чисел $M$ является натуральным числом (так как мы берем &quot;потолок&quot; положительного числа).
-Получается, при создании подпоследовательности $x_{p_n}$ мы связали ее с возрастающей подпоследовательностью последовательности натуральных чисел.</p>
+<p>В знаменателе вынесем за скобки число $n^{p+1}$:</p>
+<p class="display-math">$$ \frac{(n+1)^p}{(n+1)^{p+1} - n^{p+1}} = \frac{(n+1)^p}{n^{p+1} \left( \left(\frac{n+1}{n}\right)^{p+1} - 1 \right)} $$</p>
+<p>Скобку в знаменателе правой части можно разложить на сумму членой геометрической прогрессии:</p>
+<details><summary><div class="header-inner">Пояснение про геометрическую прогрессию</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Рассмотрим сумму $p+1$ членов геометрической прогрессии:</p>
+<p class="display-math">$$ 1 + \left(\frac{n+1}{n}\right) + \left(\frac{n+1}{n}\right)^2 + \ldots = \frac{1\cdot\left( \left(\frac{n+1}{n}\right)^{p+1} - 1 \right)}{\left(\frac{n+1}{n}\right) - 1} $$</p>
+<p>Доможим обе части равенства на $\left(\frac{n+1}{n}\right) -1$:</p>
+<p class="display-math">$$\left( \frac{n+1}{n} - 1 \right)\left( 1 + \left(\frac{n+1}{n}\right) + \left(\frac{n+1}{n}\right)^2 + \ldots \right) = \left(\frac{n+1}{n}\right)^{p+1} - 1 $$</p>
+</div></details>
+<p class="display-math">\begin{gather*}
+    \frac{(n+1)^p}{(n+1)^{p+1} - n^{p+1}} = \frac{(n+1)^p}{n^{p+1} \left( \left(\frac{n+1}{n}\right)^{p+1} - 1 \right)} =
+    \\[5px]
+    = \frac{(n+1)^p}{n^{p+1} \left( \frac{n+1}{n} - 1 \right) \left( 1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots \right)} =
+    \\[5px]
+    = \left(\frac{n+1}{n}\right)^p\frac{1}{(n+1-n)\left( 1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots \right)} =
+    \\[5px]
+    = \left(\frac{n+1}{n}\right)^p\frac{1}{1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots}
+\end{gather*}</p>
+<p>Найдем предел:</p>
+<p class="display-math">\begin{gather*}
+    \limn \left(\frac{n+1}{n}\right)^p\frac{1}{1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots} = 
+    \\[5px]
+    = \limn \left(\frac{n+1}{n}\right)^p \limn \frac{1}{1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots} =
+    \\[5px]
+    = 1\cdot \limn \frac{1}{1 + \left(\frac{n+1}{n}\right) + \left( \frac{n+1}{n} \right)^2 + \ldots} =
+    \\[5px]
+    = \frac{1}{1 + \lim\limits_{n\to\infty}\left(\frac{n+1}{n}\right) + \lim\limits_{n\to\infty}\left(\frac{n+1}{n}\right)^2 + \ldots} =
+    \\[5px]
+    = \frac{1}{\underbrace{1 + 1 + 1^2 + \ldots}_{\Large p+1 \text{ слагаемых}}} = \frac{1}{p+1}
+\end{gather*}</p>
+<p>Мы воспользовались тем, что $\frac{n+1}{n}\to 1$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ \limn \frac{(n+1)^p}{(n+1)^{p+1} - n^{p+1}} = \frac{1}{p+1} $$</p>
+<p>По теореме Штольца:</p>
+<p class="display-math">$$ \limn \frac{1^p+2^p+\ldots+n^p}{n^{p+1}} = \limn \frac{(n+1)^p}{(n+1)^{p+1} - n^{p+1}} = \frac{1}{p+1} $$</p>
+<p class="display-math">$$ \limn \frac{1^p+2^p+\ldots+n^p}{n^{p+1}} = \frac{1}{p+1} $$</p>
+<p>$\blacksquare$</p>
 <hr>
-<p><strong>Доказательство расходимости</strong></p>
-<p>Пусть $E$ — любое положительное вещественное число. Так как $E$ не обязательно натуральное число, возьмем его &quot;потолок&quot;, который по определению будет натуральным числом и притом</p>
-<p class="display-math">$$ \ceil{E} \geq E $$</p>
-<p>Выше мы уже упоминали строго возрастающую подпоследовательность последовательности натуральных чисел: $M_1, M_2, \ldots$. Рано или поздно найдется такое $M_t$, что</p>
-<p class="display-math">$$ M_t > \ceil{E} \geq E $$</p>
-<p>Вместе с этим $M_t$ будет идти и член $x_{p_t}$ нашей подпоследовательности, такой, что</p>
-<p class="display-math">$$ |x_{p_t}| > M_t > \ceil{E} \geq E $$</p>
-<p>Итак, какое бы $E&gt;0$ мы не взяли, всегда найдется такое $M_t$, а вместе с ним и $x_{p_t}$, такие, что</p>
-<p class="display-math">$$ |x_{p_t}| > M_t > \ceil{E} \geq E $$</p>
-<p class="display-math">$$ |x_{p_t}| > E $$</p>
-<p>Причем модули всех остальных членов подпоследовательности $|x_{p_{t+1}}|, |x_{p_{t+2}}|, \ldots$ тоже будут больше $E$, так как выше мы показали, что</p>
-<p class="display-math">$$ |x_{p_n}| > |x_{p_m}|, \ n > m $$</p>
-<p>Итак:</p>
-<p class="display-math">$$ \forall E > 0 \ \exists \underbrace{N = N(E)}_{\large \text{через } M} \ \forall p_n > N \ : \ |x_{p_n}| > E $$</p>
-<p>А это по определению и означает, что</p>
-<p class="display-math">$$ \limn x_{p_n} = \infty $$</p>
+<p><strong>б)</strong></p>
+<p class="display-math">$$ \limn\left( \frac{1^p + 2^p + \ldots + n^p}{n^p} - \frac{n}{p+1} \right) = \frac{1}{2} $$</p>
+<hr>
+<p><strong>в)</strong></p>
+<p>Дозательство <em>полностью такое же</em>, что и доказательство для пункта а).</p>
+<p>Мы придем к следующему пределу:</p>
+<p class="display-math">\begin{gather*}
+    \limn \frac{1^p+3^p+\ldots+(2n-1)^p}{n^{p+1}} = \limn\frac{(2n+1)^p}{(n+1)^{p+1} - n^{p+1}} = 
+    \\[5px]
+    = \limn \frac{\left(2 + \frac{1}{n}\right)^p}{p+1} = \frac{ \left(2 + \lim\limits_{n\to\infty}\frac{1}{n} \right)\left(2 + \lim\limits_{n\to\infty}\frac{1}{n} \right)\ldots }{p+1} =
+    \\[5px]
+    = \frac{(2+0)(2+0)\ldots}{p+1} = \frac{2^p}{p+1}
+\end{gather*}</p>
+<p>Мы воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
+<p>Итак,</p>
+<p class="display-math">$$ \limn \frac{1^p+3^p+\ldots+(2n-1)^p}{n^{p+1}} = \frac{2^p}{p+1} $$</p>
 <p>$\blacksquare$</p>
 
                     </div>
@@ -281,16 +321,32 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
+                                    Элементарные пределы последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
-                    <a href="../../tasks/127/" title="Следующая задача" class="next">
-                        <span class="label">127</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
 
-                    <a href="../../tasks/125/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/144/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">125</span>
+                        <span class="label">144</span>
                     </a>
             </section>
         </section>
