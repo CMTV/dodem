@@ -314,11 +314,13 @@ function getTask(taskNumber, removeSrc = true)
 
     srcTask.solutions_html = (srcTask.solutions_src).slice();
     srcTask.solutions_html = [];
-
+    
     srcTask.solutions_src.forEach((solution, i) =>
     {
-        srcTask.solutions_html.push(JSON.parse(JSON.stringify(solution)));
-        srcTask.solutions_html[i].data = mdIt.render(translator.translate(solution.data, translators));
+        let toPush = JSON.parse(JSON.stringify(solution));
+        toPush.data = mdIt.render(translator.translate(solution.data, translators));
+
+        srcTask.solutions_html.push(toPush);
     });
 
     if (srcTask.hint_src)
@@ -482,6 +484,9 @@ function genAll(devMode = false)
             let hasProtoTasks = !!task.meta.proto;
             let protoTasks = [];
 
+            if (!task.meta.proto)
+                task.meta.proto = [];
+
             task.solutions_src.forEach(solution =>
             {
                 // Looking for proto-tasks inside solutions
@@ -489,13 +494,9 @@ function genAll(devMode = false)
                 let matches = solution.data.matchAll(/<p:\[(.+)\]>/gm);
                 for (const match of matches)
                 {
-                    if (!protoTasks.includes(match[1]))
+                    if (!task.meta.proto.includes(match[1]))
                     {
                         hasProtoTasks = true;
-
-                        if (!task.meta.proto)
-                            task.meta.proto = [];
-
                         task.meta.proto.push(match[1]);
                     }
                 }
