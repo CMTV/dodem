@@ -4,7 +4,7 @@ const glob =    require('glob');
 const fs =      require('fs');
 const p =       require('path');
 
-const mdIt =    require('./markdown-config');
+const mdIt =    require('./markdown');
 
 const translator = require('./translator');
 

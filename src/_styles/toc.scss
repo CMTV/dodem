@@ -1,0 +1,116 @@
+@import 'import';
+
+h2.title
+{
+    margin-top: 30px;
+
+    font-size: 30px;
+    font-weight: normal;
+    text-align: center;
+    font-family: 'Yandex';
+
+    i
+    {
+        color: $fmuted-color;
+        margin-right: 10px;
+    }
+}
+
+h3
+{
+    @include layout(mini)
+    {
+        margin: 0 15px;
+    }
+}
+
+h2.title + .chapter { margin-top: 30px !important; }
+
+.chapter
+{
+    margin-top: 60px;
+
+    .paragraph-list
+    {
+        margin: 20px 0;
+
+        .paragraph
+        {
+            margin: 30px 0;
+
+            border: 2px solid $border-color;
+            border-radius: $border-radius;
+            background-color: white;
+            
+            @include layout(mini)
+            {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .paragraph-header
+            {
+                display: flex;
+                align-items: center;
+
+                text-decoration: none;
+                padding: 15px;
+
+                &:hover
+                {
+                    i
+                    {
+                        color: $fblack-color;
+                        transform: translateX(2px);
+                    }
+                }
+
+                .paragraph-title
+                {
+                    flex: 1;
+                    text-decoration: none;
+                }
+
+                i
+                {
+                    margin-left: 15px;
+
+                    font-size: 20px;
+                    color: $fmuted-color;
+
+                    transition: color $anim-speed, transform $anim-speed;
+                }
+            }
+
+            .custom-toc
+            {
+                padding: 15px;
+
+                border-top: 1px solid $border-color;
+                color: $fmuted-color;
+
+                li
+                {
+                    padding: 5px 0;
+
+                    &:first-of-type { padding-top: 0; }
+                    &:last-of-type  { padding-bottom: 0; }
+                }
+
+                a
+                {
+                    text-decoration: none;
+                    transition: color $anim-speed;
+
+                    padding: 5px 0;
+
+                    &:hover
+                    {
+                        color: $brand-color;
+                    }
+                }
+            }
+        }
+    }
+}

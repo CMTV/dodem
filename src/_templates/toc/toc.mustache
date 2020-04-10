@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}        
+    </head>
+    <body class="page-toc">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <h2 class="title"><i class="fas fa-list-ol"></i> Оглавление</h2>
+
+            {{ #chapters }}
+
+                <section class="chapter">
+                    <h3>{{ title }}</h3>
+
+                    <div class="paragraph-list">
+                        {{ #paragraphs }}
+
+                            <div class="paragraph">
+                                <a href="{{{ link }}}" class="paragraph-header">
+                                    <span class="paragraph-title">{{ title }}</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                                {{ #hasCustom }}
+
+                                    <ul class="custom-toc">
+                                        
+                                        {{ #custom }}
+                                            <li><a href="{{{ link }}}">{{ title }}</a></li>
+                                        {{ /custom }}
+
+                                    </ul>
+
+                                {{ /hasCustom }}
+                            </div>
+
+                        {{ /paragraphs }}
+                    </div>
+                </section>
+
+            {{ /chapters }}
+
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

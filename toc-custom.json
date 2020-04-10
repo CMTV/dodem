@@ -1,0 +1,29 @@
+{
+    "toc-item-id":
+    {
+        "location": "I.1",
+        "title": "Метод математической индукции",
+        "tasks": [1, 10, 100]
+    },
+
+    "toc-item-id-2":
+    {
+        "location": "I.1",
+        "title": "Сечения Дедекинда",
+        "tasks": [2, 3, 4]
+    },
+
+    "toc-item-id-3":
+    {
+        "location": "I.2",
+        "title": "Предельные точки",
+        "tasks": [124]
+    },
+
+    "toc-item-id-4":
+    {
+        "location": "I.2",
+        "title": "Теорема Штольца",
+        "tasks": [124]
+    }
+}

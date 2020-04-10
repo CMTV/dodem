@@ -9,7 +9,7 @@ const clean_css =   require('gulp-clean-css')
 const concat =      require('gulp-concat');
 const uglify_js =   require('gulp-uglify');
 const babel =       require('gulp-babel');
-const tools =       require('./tools');
+const tools =       require('./engine/tools');
 const rimraf =      require('rimraf');
 
 // ===
@@ -31,6 +31,8 @@ task('build_js', () =>
         .pipe(dest('out/scripts'));
 });
 
+//
+
 task('build_htmls', (done) =>
 {
     tools.genAll(DEVMODE);
@@ -40,9 +42,22 @@ task('build_htmls', (done) =>
 
 task('build_protos', (done) =>
 {
-    require('./proto-tasks-handler').genAll();
+    require('./engine/proto-tasks-handler').genAll();
     done();
 });
+
+task('build_toc_pages', (done) =>
+{
+    let tocGen = require('./engine/toc-generator');
+
+    tocGen.createTocTasksPages();
+    tocGen.createCustomTocTasksPages();
+    tocGen.createTocPage();
+
+    done();
+});
+
+//
 
 task('move_files', () =>
 {
@@ -93,26 +108,39 @@ task('clear', done =>
 
 task('watch', () =>
 {
-    watch(['src/**/*', 'tasks/**/*', 'proto-tasks/**/*'], series('build_look'));
+    watch(['src/**/*', 'tasks/**/*', 'proto-tasks/**/*'], series('build_watch'));
 });
 
 // Global tasks
 
-task('build_look', done =>
+task('build_watch', (done) =>
 {
-    series('clear', 'build_scss', 'build_js', 'build_htmls', 'build_protos', 'move_files', 'move_tasks_files', 'move_proto_tasks_files')();
+    series(
+        'clear',
+        'build_scss',
+        'build_js',
+        'build_htmls',
+        'build_protos',
+        'build_toc_pages',
+        'move_files',
+        'move_tasks_files',
+        'move_proto_tasks_files'
+        )();
     done();
 });
 
-//
-//
-//
-
-task('test', done =>
+task('build', (done) =>
 {
-    let tools = require('./tools');
-
-    tools.genImg();
-
+    series(
+        'clear',
+        'build_scss',
+        'build_js',
+        'build_htmls',
+        'build_protos',
+        'build_toc_pages',
+        'move_files',
+        'move_tasks_files',
+        'move_proto_tasks_files'
+        )();
     done();
 });

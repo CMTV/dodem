@@ -3,7 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>https://www.dodem.ru/index.html</loc></url>
     <url><loc>https://www.dodem.ru/solvers.html</loc></url>
-    <url><loc>https://www.dodem.ru/proto/index.html</loc></url>
+    <url><loc>https://www.dodem.ru/proto/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/</loc></url>
 
     {{ #tasks}}
     <url><loc>https://www.dodem.ru/tasks/{{ . }}/</loc></url>
@@ -12,4 +13,8 @@
     {{ #protoTasks }}
     <url><loc>https://www.dodem.ru/proto/{{{ . }}}/</loc></url>
     {{ /protoTasks }}
+
+    {{ #tocTasks }}
+    <url><loc>https://www.dodem.ru/toc/{{{ . }}}/</loc></url>
+    {{ /tocTasks }}
 </urlset> 

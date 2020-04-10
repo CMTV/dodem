@@ -3,7 +3,7 @@ const p =           require('path');
 const translator =  require('./translator');
 const mustache =    require('mustache');
 
-const mdIt =    require('./markdown-config');
+const mdIt =    require('./markdown');
 
 const TASKS_NUM = 4462;
 
@@ -411,10 +411,18 @@ function genAll(devMode = false)
         let template = readFile(p.join('src', 'sitemap.xml'));
 
         const protoTH = require('./proto-tasks-handler');
+        const tocGen = require('./toc-generator');
 
         writeFile(
             p.join('out', 'sitemap.xml'),
-            mustache.render(template, { tasks: solvedArr, protoTasks: protoTH.getProtoPaths() })
+            mustache.render(
+                template,
+                { 
+                    tasks: solvedArr,
+                    protoTasks: protoTH.getProtoPaths(),
+                    tocTasks: tocGen.getSitemapTocs()
+                }
+            )
         );
     }
 

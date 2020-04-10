@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}
+
+        <script src="{{{ site_root }}}scripts/toc-tasks.js"></script>
+    </head>
+    <body class="page-toc-tasks">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <a class="back-button" href="{{{ site_root }}}toc" title="Перейти к оглавлению">
+                <i class="fas fa-arrow-left"></i>
+                <span>Оглавление</span>
+            </a>
+
+            <h2 class="title">{{ pageTitle }}</h2>
+
+            {{ #hasTasks }}
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            {{ /hasTasks }}
+
+            {{ #tasks }}
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/{{ number }}" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>{{ number }}</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            {{{ task }}}
+                        </div>
+
+                        {{ #hint }}
+                                <div class="hint block-section-content _hidden">
+                                    {{{ hint }}}
+                                </div>
+                        {{ /hint }}
+
+                        <div class="actions-container">
+
+                            {{ #hint }}
+                                <div class="action action--hint">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Указание</span>
+                                </div>
+                            {{ /hint }}
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/{{ number }}" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+            {{ /tasks }}
+
+            {{ ^tasks }}
+                <div class="no-tasks">
+                    Задачи для этой катеории еще не решены!
+                </div>
+            {{ /tasks }}
+
+            {{ #hasTasks }}
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+            {{ /hasTasks }}
+
+        </section>
+
+        {{> footer }}
+    </body>
+</html>
