@@ -1,0 +1,969 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../favicon.png" type="image/png">
+        <link rel="icon" href="../favicon.ico" type="image/x-icon">
+
+        <title>Оглавление | Демидович. Решения</title>
+        <meta name="description" content="Лол, кек, чебурек.">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../';
+        </script>
+
+        <script src="../scripts/toc.js"></script>
+        <script src="../scripts/hash.js"></script>
+        <script src="../scripts/location.js"></script>
+        <script src="../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../scripts/dark-magic.js"></script>    </head>
+    <body class="page-toc">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <h2 class="title"><i class="fas fa-list-ol"></i> Оглавление</h2>
+
+
+                <section class="chapter">
+                    <h3>I. Введение в анализ</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="I.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Вещественные числа</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+
+                                    <ul class="custom-toc">
+                                        
+                                            <li><a href="I.1/toc-item-id">Метод математической индукции</a></li>
+                                            <li><a href="I.1/toc-item-id-2">Сечения Дедекинда</a></li>
+
+                                    </ul>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Теория последовательностей</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+
+                                    <ul class="custom-toc">
+                                        
+                                            <li><a href="I.2/toc-item-id-3">Предельные точки</a></li>
+                                            <li><a href="I.2/toc-item-id-4">Теорема Штольца</a></li>
+
+                                    </ul>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Понятие функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Графическое изображение функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Предел функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. $O$-символика</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Непрерывность функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.8" class="paragraph-header">
+                                    <span class="paragraph-title">§8. Обратная функция. Функции, заданные параметрически</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.9" class="paragraph-header">
+                                    <span class="paragraph-title">§9. Равномерная непрерывность функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="I.10" class="paragraph-header">
+                                    <span class="paragraph-title">§10. Функциональные уравнения</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>II. Дифференциальное исчисление функций одной переменной</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="II.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Производная явной функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Производные обратной функции, функции, заданной параметрически, и функции, заданной в неявном виде</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Геометрический смысл производной</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Дифференциал функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Производные и дифференциалы высших порядков</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Теоремы Ролля, Лагранжа и Коши</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Возрастание и убывание функции. Неравенства</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.8" class="paragraph-header">
+                                    <span class="paragraph-title">§8. Направление вогнутости. Точки перегиба</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.9" class="paragraph-header">
+                                    <span class="paragraph-title">§9. Раскрытие неопределенностей</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.10" class="paragraph-header">
+                                    <span class="paragraph-title">§10. Формула Тейлора</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.11" class="paragraph-header">
+                                    <span class="paragraph-title">§11. Экстремум функции. Наибольшее и наименьшее значения функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.12" class="paragraph-header">
+                                    <span class="paragraph-title">§12. Построение графиков функций по характерным точкам</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.13" class="paragraph-header">
+                                    <span class="paragraph-title">§13. Задачи на максимум и минимум функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.14" class="paragraph-header">
+                                    <span class="paragraph-title">§14. Касание кривых. Круг кривизны. Эволюта</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="II.15" class="paragraph-header">
+                                    <span class="paragraph-title">§15. Приближенное решение уравнений</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>III. Неопределенный интеграл</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="III.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Простейшие неопределнные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="III.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Интегрирование рациональных функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="III.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Интегрирование иррациональных функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="III.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Интегрирование тригонометрических функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="III.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Интегрирование различных трансцендентных функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="III.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Примеры на интегрирование функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>IV. Определенный интеграл</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="IV.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Определенный интеграл как предел суммы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Вычисление определенных интегралов с помощью неопределенных</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Теоремы о среднем</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Несобственные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Вычисление площадей</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Вычисление длин дуг</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Вычисление объемов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.8" class="paragraph-header">
+                                    <span class="paragraph-title">§8. Вычисление площадей поверхности вращения</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.9" class="paragraph-header">
+                                    <span class="paragraph-title">§9. Вычисление моментов. Координаты центра масс</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.10" class="paragraph-header">
+                                    <span class="paragraph-title">§10. Задачи из механики и физики</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="IV.11" class="paragraph-header">
+                                    <span class="paragraph-title">§11. Приближенное вычисление определенных интегралов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>V. Ряды</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="V.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Числовые ряды. Признаки сходимости знакопостоянных рядов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Признаки сходимости знакопеременных рядов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Действия над рядами</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Функциональные ряды</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Степенные ряды</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Ряды Фурье</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Суммирование рядов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.8" class="paragraph-header">
+                                    <span class="paragraph-title">§8. Нахождение определенных интегралов с помощью рядов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.9" class="paragraph-header">
+                                    <span class="paragraph-title">§9. Бесконечные произведения</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.10" class="paragraph-header">
+                                    <span class="paragraph-title">§10. Формула Стирлинга</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="V.11" class="paragraph-header">
+                                    <span class="paragraph-title">§11. Приближение непрерывных функций многочленами</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>VI. Дифференциальное исчисление функций нескольких переменных</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="VI.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Предел функции. Непрерывность</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Частные проивзодные. Дифференциал функции</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Дифференцирование неявных функций</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Замена переменных</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Геометрические приложения</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Формула Тейлора</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VI.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Экстремум функции нескольких переменных</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>VII. Интегралы, зависящие от параметра</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="VII.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Собственные интегралы, зависящие от параметра</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VII.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Несобственные интегралы, зависящие от параметра. Равномерная сходимость интегралов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VII.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Дифференцирование и интегрирование несобственных интегралов под знаком интеграла</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VII.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Эйлеровы интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VII.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Интегральная формула Фурье</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+                <section class="chapter">
+                    <h3>VIII. Кратные и криволинейные интегралы</h3>
+
+                    <div class="paragraph-list">
+
+                            <div class="paragraph">
+                                <a href="VIII.1" class="paragraph-header">
+                                    <span class="paragraph-title">§1. Двойные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.2" class="paragraph-header">
+                                    <span class="paragraph-title">§2. Вычисление площадей</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.3" class="paragraph-header">
+                                    <span class="paragraph-title">§3. Вычисление объемов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.4" class="paragraph-header">
+                                    <span class="paragraph-title">§4. Вычисление площадей поверхностей</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.5" class="paragraph-header">
+                                    <span class="paragraph-title">§5. Приложения двойных интегралов к механике</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.6" class="paragraph-header">
+                                    <span class="paragraph-title">§6. Тройные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.7" class="paragraph-header">
+                                    <span class="paragraph-title">§7. Вычисление объемов с помощью тройных интегралов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.8" class="paragraph-header">
+                                    <span class="paragraph-title">§8. Приложения тройных интегралов к механике</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.9" class="paragraph-header">
+                                    <span class="paragraph-title">§9. Несобственные двойные и тройные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.10" class="paragraph-header">
+                                    <span class="paragraph-title">§10. Многократные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.11" class="paragraph-header">
+                                    <span class="paragraph-title">§11. Криволинейные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.12" class="paragraph-header">
+                                    <span class="paragraph-title">§12. Формула Грина</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.13" class="paragraph-header">
+                                    <span class="paragraph-title">§13. Физические приложения криволинейных интегралов</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.14" class="paragraph-header">
+                                    <span class="paragraph-title">§14. Поверхностные интегралы</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.15" class="paragraph-header">
+                                    <span class="paragraph-title">§15. Формула Стокса</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.16" class="paragraph-header">
+                                    <span class="paragraph-title">§16. Формула Остроградского</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+
+                            <div class="paragraph">
+                                <a href="VIII.17" class="paragraph-header">
+                                    <span class="paragraph-title">§17. Элементы теории поля</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </a>
+
+                            </div>
+
+                    </div>
+                </section>
+
+
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.ru" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>

@@ -3,7 +3,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url><loc>https://www.dodem.ru/index.html</loc></url>
     <url><loc>https://www.dodem.ru/solvers.html</loc></url>
-    <url><loc>https://www.dodem.ru/proto/index.html</loc></url>
+    <url><loc>https://www.dodem.ru/proto/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/</loc></url>
 
     <url><loc>https://www.dodem.ru/tasks/1/</loc></url>
     <url><loc>https://www.dodem.ru/tasks/2/</loc></url>
@@ -147,4 +148,91 @@
     <url><loc>https://www.dodem.ru/proto/sequences/limits/to-real/</loc></url>
     <url><loc>https://www.dodem.ru/proto/set-equality-universal/</loc></url>
     <url><loc>https://www.dodem.ru/proto/simple-abs/</loc></url>
+
+    <url><loc>https://www.dodem.ru/toc/I.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.8/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.9/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.10/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.8/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.9/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.10/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.11/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.12/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.13/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.14/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/II.15/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/III.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.8/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.9/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.10/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/IV.11/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.8/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.9/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.10/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/V.11/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VI.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VII.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VII.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VII.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VII.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VII.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.1/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.4/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.5/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.6/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.7/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.8/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.9/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.10/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.11/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.12/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.13/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.14/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.15/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.16/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/VIII.17/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.1/toc-item-id/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.1/toc-item-id-2/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.2/toc-item-id-3/</loc></url>
+    <url><loc>https://www.dodem.ru/toc/I.2/toc-item-id-4/</loc></url>
 </urlset> 

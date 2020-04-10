@@ -1,0 +1,2431 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+        <title>Теория последовательностей | Демидович. Решения</title>
+        <meta name="description" content="Все задачи по теме &quot;Теория последовательностей&quot; из задачника Демидовича с подробными решениями.">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../../';
+        </script>
+
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>
+        <script src="../../scripts/toc-tasks.js"></script>
+    </head>
+    <body class="page-toc-tasks">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <a class="back-button" href="../../toc" title="Перейти к оглавлению">
+                <i class="fas fa-arrow-left"></i>
+                <span>Оглавление</span>
+            </a>
+
+            <h2 class="title">Теория последовательностей</h2>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/41" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>41</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть</p>
+<p class="display-math">$$ x_n = \frac{n}{n+1} \ (n = 1, 2, \ldots). $$</p>
+<p>Доказать, что</p>
+<p class="display-math">$$ \lim\limits_{n\to\infty} x_n = 1, $$</p>
+<p>определив для каждого $ \varepsilon &gt; 0 $ число $ N = N(\varepsilon) $ такое, что</p>
+<p class="display-math">$$ |x_n - 1| < \varepsilon \text{, если } n > N. $$</p>
+<p>Заполнить следующую таблицу:</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/41" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/42" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>42</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что $x_n \ (n = 1,2,\ldots)$ есть <em>бесконечно малая</em> (т.е. имеет предел, равный $0$), указав для всякого $\varepsilon &gt; 0$ число $N = N(\varepsilon)$, такое, что $|x_n| &lt; \varepsilon$ при $n &gt; N$, если:</p>
+<p class="display-math">\begin{array}{ll}
+    \text{а) } x_n = \frac{(-1)^{n+1}}{n}; &&& \text{б) } x_n = \frac{2n}{n^3 + 1};
+    \\
+    \text{в) } x_n = \frac{1}{n!}; &&& \text{г) } x_n = (-1)^n\cdot0.999^n.
+\end{array}</p>
+<p>Для каждого из этих случаев заполнить следующую таблицу:</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline \varepsilon & 0.1 & 0.001 & 0.0001 & \ldots \\ \hline N &  &  &  &  \\ \hline  \end{array} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/42" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/43" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>43</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что <em>последовательности</em> :</p>
+<p class="display-math">$$ \text{а) } x_n = (-1)^nn, \qquad \text{б) } x_n = 2^{\sqrt{n}}, \qquad \text{в) } x_n = \lg(\lg n) \ (n\geq 2) $$</p>
+<p>имеют бесконечный предел при $n\to\infty$ (т.е. являются <em>бесконечно большими</em>), определив для всякого $E &gt; 0$ число $N = N(E)$ такое,
+что $|x_n|&gt;E$ при $n&gt;N$.</p>
+<p>Для каждого из этих случаев заполнить следующую таблицу:</p>
+<p class="display-math">$$ \begin{array} {|c|c|}\hline E & 10 & 100 & 1000 & 10 000 & \ldots \\ \hline N &  &  &  &  &  \\ \hline  \end{array} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/43" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/44" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>44</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Показать, что</p>
+<p class="display-math">$$ x_n = n^{(-1)^n} \ (n=1,2,\ldots) $$</p>
+не ограничена, однако не является бесконечно большой при $n\to\infty$.
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/44" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/45" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>45</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Сформулировать с помощью неравенств следующие утверждения:</p>
+<p class="display-math">$$ \text{а) } \lim_{n\to\infty} x_n = \infty; \qquad \text{б) } \lim_{n\to\infty} x_n = -\infty; \qquad \text{в) } \lim_{n\to\infty} x_n = +\infty. $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/45" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/46" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>46</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{10000n}{n^2 + 1} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/46" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/47" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>47</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left( \sqrt{n+1} - \sqrt{n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/47" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/48" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>48</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{\sqrt[3]{n^2} \sin n!}{n+1} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/48" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/49" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>49</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{(-2)^n + 3^n}{(-2^{n+1} + 3^{n+1})} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/49" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/50" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>50</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{1 + a + a^2 + \ldots + a^n}{1 + b + b^2 + \ldots + b^n} \ (|a| < 1, |b| < 1) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/50" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/51" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>51</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left( \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/51" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/52" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>52</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left| \frac{1}{n} - \frac{2}{n} + \frac{3}{n} - \ldots + \frac{(-1)^{n-1}n}{n} \right| $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/52" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/53" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>53</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left[ \frac{1^2}{n^3} + \frac{2^2}{n^3} + \ldots + \frac{(n-1)^2}{n^3} \right] $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/53" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/54" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>54</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left[ \frac{1^2}{n^3} + \frac{3^2}{n^3} + \ldots + \frac{(2n-1)^2}{n^3} \right] $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/54" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/55" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>55</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left( \frac{1}{2} + \frac{3}{2^2} + \frac{5}{2^3} + \ldots + \frac{2n-1}{2^n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/55" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/56" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>56</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left[ \frac{1}{1\cdot 2} + \frac{1}{2\cdot 3} + \ldots + \frac{1}{n(n+1)} \right] $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/56" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/57" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>57</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \left( \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/57" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/58" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>58</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{n}{2^n} = 0 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/58" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/59" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>59</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{2n}{n!} = 0 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/59" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/60" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>60</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{n^k}{a^n} = 0 \ (a>1) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/60" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/61" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>61</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \frac{a^n}{n!} = 0 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/61" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/62" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>62</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} nq^n = 0, \ \text{если } |q| < 1 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/62" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/63" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>63</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \lim_{n\to\infty} \sqrt[n]{a} = 1 \ (a > 0) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/63" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/64" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>64</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \limn \frac{\log_a n}{n} = 0 \ (a>1) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/64" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/65" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>65</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \limn \sqrt[n]{n} = 1 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/65" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/66" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>66</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \limn \frac{1}{\sqrt[n]{n!}} = 0 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/66" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/67" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>67</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Какое выражение больше при достаточно больших $n$:</p>
+<p class="display-math">\begin{align*}
+    &\text{a) } 100n + 200 \text{ или } 0.01n^2?; \quad \text{б) } 2^n \text{ или } n^{1000}?;
+    \\
+    &\text{в) } 1000^n \text{ или } n!?
+\end{align*}</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/67" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/68" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>68</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что</p>
+<p class="display-math">$$ \limn \left( \frac{1}{2} \cdot \frac{3}{4} \ldots \frac{2n-1}{2n} \right) = 0 $$</p>
+                        </div>
+
+                                <div class="hint block-section-content _hidden">
+                                    <p>См. <a href="/tasks/9">пример 9</a> б).</p>
+
+                                </div>
+
+                        <div class="actions-container">
+
+                                <div class="action action--hint">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Указание</span>
+                                </div>
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/68" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/69" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>69</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что последовательность</p>
+<p class="display-math">$$ x_n = \left( 1 + \frac{1}{n} \right)^{n} \ (n = 1,2,\ldots) $$</p>
+<p>монотонно возрастает и ограничена сверху, а последовательность</p>
+<p class="display-math">$$ y_n = \left( 1 + \frac{1}{n} \right)^{n+1} \ (n = 1,2,\ldots) $$</p>
+<p>монотонно убывает и ограничена снизу. Отсюда вывести, что эти последовательности имеют общий предел</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{n} \right)^n = \limn \left( 1 + \frac{1}{n} \right)^{n+1} = e $$</p>
+                        </div>
+
+                                <div class="hint block-section-content _hidden">
+                                    <p>Составить соотношения $\frac{x_{n+1}}{x_n}, \frac{y_n}{y_{n+1}}$ и воспользоваться неравенством <a href="/tasks/7">примера 7</a>.</p>
+
+                                </div>
+
+                        <div class="actions-container">
+
+                                <div class="action action--hint">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Указание</span>
+                                </div>
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/69" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/70" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>70</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что</p>
+<p class="display-math">$$ 0 < e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} \ (n=1,2,\ldots). $$</p>
+<p>При каких значениях показателя $n$ выражение $\left( 1 + \frac{1}{n} \right)^n$ будет отличаться от числа $e$ меньше чем на $0.001$?</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/70" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/71" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>71</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть $p_n \ (n=1,2,\ldots)$ — произвольная последовательность чисел, стремящаяся к $+\infty$ и $q_n \ (n=1,2,\ldots)$ — произвольная
+последовательность чисел, стремящаяся к $-\infty \ (p_n, q_n \overline{\in} [-1,0])$. Доказать, что</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{p_n} \right)^{p_n} = \limn \left(1 + \frac{1}{q_n} \right)^{q_n} = e $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/71" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/77" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>77</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>$x_n = p_0 + \frac{p_1}{10} + \ldots + \frac{p_n}{10^n} \ (n=1,2,\ldots)$, где $p_i (i=0,1,2,\ldots)$ —
+целые неотрицательные числа, не превышающие $9$, начиная с $p_1$.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/77" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/78" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>78</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{10}{1}\cdot\frac{11}{3}\ldots\frac{n+9}{2n-1} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/78" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/79" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>79</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \left(1-\frac{1}{2}\right)\left( 1 - \frac{1}{4} \right)\ldots\left( 1 - \frac{1}{2^n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/79" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/80" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>80</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \left( 1 + \frac{1}{2} \right)\left( 1 + \frac{1}{4} \right)\ldots \left( 1 + \frac{1}{2^n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/80" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/81" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>81</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_1 = \sqrt{2}, x_2 = \sqrt{2+\sqrt{2}}, \ldots, x_n = \sqrt{2 + \sqrt{2 + \ldots + \sqrt{2}}}, \ldots $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/81" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/82" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>82</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>$ x_n = a_0 + a_1q + \ldots + a_nq^n $, где</p>
+<p class="display-math">$$ |a_k| < M \ (k = 0,1,2, \ldots) \text{ и } |q| < 1 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/82" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/83" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>83</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{\sin 1}{2} + \frac{\sin 2}{2^2} + \ldots + \frac{\sin n}{2^n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/83" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/84" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>84</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{\cos 1!}{1\cdot 2} + \frac{\cos 2!}{2\cdot 3} + \ldots + \frac{\cos n!}{n(n+1)} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/84" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/85" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>85</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = 1 + \frac{1}{2^2} + \frac{1}{3^2} + \ldots + \frac{1}{n^2} $$</p>
+                        </div>
+
+                                <div class="hint block-section-content _hidden">
+                                    <p>Воспользоваться неравенством</p>
+<p class="display-math">$$ \frac{1}{n^2} < \frac{1}{n-1} - \frac{1}{n} \ (n=2,3,\ldots) $$</p>
+                                </div>
+
+                        <div class="actions-container">
+
+                                <div class="action action--hint">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Указание</span>
+                                </div>
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/85" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/86" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>86</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Говорят, что последовательность $x_n \ (n=1,2,\ldots)$ имеет <em>ограниченное изменение</em>, если существует число $C$ такое, что</p>
+<p class="display-math">$$ |x_2-x_1| + |x_3-x_2| + \ldots + |x_n - x_{n-1}| < C \ (n=2,3,\ldots) $$</p>
+<p>Доказать, что последовательность с ограниченным изменением сходится.</p>
+<p>Построить пример сходящейся последовательности, не имеющей ограниченного изменения.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/86" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/87" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>87</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Сформулировать, что значит, что для данной последовательности не выполнен критерий Коши.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/87" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/88" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>88</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пользуясь критерием Коши, доказать расходимость последовательности</p>
+<p class="display-math">$$ x_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/88" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/89" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>89</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что если последовательность $x_n \ (n=1,2,\ldots)$ сходится, то любая ее подпоследовательность $x_{p_n}$ также сходится
+и имеет тот же самый предел:</p>
+<p class="display-math">$$ \limn x_{p_n} = \limn x_n $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/89" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/91" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>91</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что если</p>
+<p class="display-math">$$ \limn x_n = a, $$</p>
+<p>то</p>
+<p class="display-math">$$ \limn |x_n| = |a| $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/91" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/92" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>92</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Если $x_n\to a$, то что можно сказать о пределе $\lim\limits_{n\to\infty} \frac{x_{n+1}}{x_n}$?</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/92" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/93" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>93</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что сходящаяся числовая последовательность ограничена.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/93" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/94" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>94</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что сходящаяся числовая последовательность достигает любо своей верхней грани, либо своей нижней грани, либо той и другой.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/94" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/95" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>95</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/95" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/96" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>96</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{n^2}{2^n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/96" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/97" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>97</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{\sqrt{n}}{100 + n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/97" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/98" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>98</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{1000^n}{n!} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/98" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/99" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>99</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = n^2 - 9n - 100 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/99" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/100" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>100</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = n + \frac{100}{n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/100" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/101" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>101</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \text{а) } x_n = 1 - \frac{1}{n}; \qquad \text{б) } x_n = (-1)^{n-1} \left( 2 + \frac{3}{n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/101" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/102" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>102</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{(-1)^n}{n} + \frac{1 + (-1)^n}{2} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/102" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/103" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>103</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = 1 + \frac{n}{n+1}\cos \frac{n\pi}{2} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/103" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/104" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>104</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = 1 + 2 (-1)^{n+1} + 3\cdot (-1)^{\frac{n(n-1)}{2}} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/104" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/105" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>105</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{n-1}{n+1}\cos \frac{2\pi n}{3} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/105" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/106" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>106</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = (-1)^nn $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/106" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/109" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>109</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = 1 + n\sin\frac{n\pi}{2} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/109" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/110" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>110</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{1}{n-10.2} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/110" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/111" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>111</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{n^2}{1 + n^2}\cos\frac{2n\pi}{3} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/111" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/112" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>112</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \left( 1 + \frac{1}{n} \right)^n\cdot(-1)^n+\sin\frac{n\pi}{4} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/112" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/113" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>113</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{n}{n+1}\sin^2\frac{n\pi}{4} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/113" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/114" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>114</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \sqrt[n]{1 + 2^{n(-1)^n}} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/114" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/115" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>115</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \cos^n\frac{2n\pi}{3} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/115" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/116" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>116</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \frac{1}{2}, \frac{1}{2}, \frac{1}{4}, \frac{3}{4}, \frac{1}{8}, \frac{7}{8} , \ldots, \frac{1}{2^n}, \frac{2^n - 1}{2^n}, \ldots $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/116" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/117" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>117</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">\begin{gather*}
+    1, \frac{1}{2}, 1 + \frac{1}{2}, \frac{1}{3}, 1 + \frac{1}{3}, \frac{1}{2}+\frac{1}{3}, \frac{1}{4}, 1 + \frac{1}{4}, \frac{1}{2} + \frac{1}{4}, \frac{1}{3} + \frac{1}{4},
+    \\[5px]
+    \frac{1}{5}, \ldots, \frac{1}{n}, 1 + \frac{1}{n}, \frac{1}{2} + \frac{1}{n}, \ldots, \frac{1}{n-1} + \frac{1}{n}, \frac{1}{n+1}, \ldots
+\end{gather*}</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/117" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/118" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>118</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ \frac{1}{2},\frac{1}{3},\frac{2}{3},\frac{1}{4},\frac{2}{4},\frac{3}{4},\frac{1}{5},\frac{2}{5},\frac{3}{5},\frac{4}{5}, \ldots $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/118" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/119" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>119</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = 3\left( 1 - \frac{1}{n} \right) + 2(-1)^n $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/119" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/120" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>120</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{1}{2}[(a+b)+(-1)^n(a-b)] $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/120" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/121" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>121</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Построить пример числовой последовательности, имеющей в качестве своих частичных пределов числа</p>
+<p class="display-math">$$ a_1, a_2, \ldots, a_p $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/121" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/122" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>122</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Построить пример числовой последовательности, для которой все члены данной числовой последовательности</p>
+<p class="display-math">$$ a_1,a_2,\ldots,a_n,\ldots $$</p>
+<p>являются ее частичными пределами. Какие еще частичные пределы обязательно имеет построенная последовательность?</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/122" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/123" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>123</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Построить пример последовательности:</p>
+<p>а) не имеющей конечных частичных пределов;<br>
+б) имеющей единственный конечный частичный предел, но не являющейся сходящейся;<br>
+в) имеющей бесконечное множество частичных пределов;<br>
+г) имеющей в качестве своего частичного предела каждое вещественное число.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/123" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/124" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>124</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что последовательности $x_n$ и $y_n = x_n \sqrt[n]{n} \ (n=1,2,\ldots)$ имеют одни и те же частичные пределы.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/124" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/125" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>125</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что из ограниченной последовательности $x_n \ (n=1,2,\ldots)$ всегда можно выделить сходящуюся подпоследовательность $x_{p_n} \ (n=1,2,\ldots)$.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/125" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/126" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>126</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что если последовательность $x_n \ (n=1,2,\ldots)$ не ограничена, то существует подпоследовательность $x_{p_n}$ такая, что</p>
+<p class="display-math">$$ \limn x_{p_n} = \infty $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/126" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/127" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>127</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть последовательность $x_n \ (n=1,2,\ldots)$ сходится, а последовательность $y_n \ (n=1,2,\ldots)$ расходится.
+Что можно утверждать о сходимости последовательностей:</p>
+<p class="display-math">$$ \text{а) } x_n + y_n; \qquad\qquad \text{б) } x_n y_n $$</p>
+<p>Привести соответствующие примеры.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/127" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/128" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>128</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть последовательности $x_n$ и $y_n \ (n=1,2,\ldots)$ расходятся. Можно ли утверждать, что последовательности:</p>
+<p class="display-math">$$ \text{а) } x_n + y_n; \qquad\qquad \text{б) } x_n y_n $$</p>
+<p>также расходятся?</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/128" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/129" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>129</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть $\lim\limits_{n\to\infty} x_n = 0$, и $y_n \ (n=1,2,\ldots)$ — произвольная последовательность.
+Можно ли утверждать, что $\lim\limits_{n\to\infty} x_n y_n = 0$?
+Привести соответствующие примеры.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/129" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/130" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>130</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Пусть</p>
+<p class="display-math">$$ \limn x_n y_n = 0. $$</p>
+<p>Следует ли отсюда, что либо $\lim\limits_{n\to\infty} x_n = 0$, либо $\lim\limits_{n\to\infty} y_n = 0$?</p>
+<p>Рассмотреть пример: $x_n = \frac{1+(-1)^n}{2}$, $y_n = \frac{1-(-1)^n}{2} \ (n=1,2,\ldots)$.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/130" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/131" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>131</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что:</p>
+<p class="display-math">$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$</p>
+<p class="display-math">$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/131" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/144" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>144</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Найти:</p>
+<p class="display-math">$$ \text{а) } \lim\limits_{n\to +\infty} \frac{n^2}{a^n} \quad (a>1); \qquad \text{б) } \lim\limits_{n\to +\infty} \frac{\lg n}{n} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/144" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/145" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>145</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>Доказать, что если $p$ — натуральное число, то:</p>
+<p class="display-math">\begin{gather*}
+    \text{а) } \limn\frac{1^p + 2^p + \ldots + n^p}{n^{p+1}} = \frac{1}{p+1};
+    \\[5px]
+    \text{б) } \limn\left( \frac{1^p + 2^p + \ldots + n^p}{n^p} - \frac{n}{p+1} \right) = \frac{1}{2};
+    \\[5px]
+    \text{в) } \limn\frac{1^p + 3^p + \ldots + (2n-1)^p}{n^{p+1}} = \frac{2^p}{p+1}
+\end{gather*}</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/145" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.ru" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>
