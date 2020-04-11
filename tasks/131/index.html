@@ -8,13 +8,13 @@
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
         <title>131 | Демидович. Решения</title>
-        <meta name="description" content="Доказать, что:$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$">
+        <meta name="description" content="Доказать, что:$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$Построить примеры, когда в этих соотношениях имеют место неравенства.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
         <meta property="og:title" content="131 | Демидович. Решения">
-        <meta property="og:description" content="Доказать, что:$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$">
+        <meta property="og:description" content="Доказать, что:$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$Построить примеры, когда в этих соотношениях имеют место неравенства.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
         <link rel="canonical" href="https://dodem.ru/tasks/131">
@@ -29,7 +29,7 @@
                     macros: {
                         ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
                         floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
-                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
                         set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
                     }
                 }
@@ -157,6 +157,8 @@
                         <p>Доказать, что:</p>
 <p class="display-math">$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$</p>
 <p class="display-math">$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$</p>
+<p>Построить примеры, когда в этих соотношениях имеют место неравенства.</p>
+
                     </div>
                 </div>
             </section>
@@ -194,24 +196,80 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Доказательство а)</strong></p>
-<p>Итак, по условию у последовательности $x_n$ имеется наименьший частичный предел, то есть существует некоторая подпоследовательность $x_{p_n}$, такая, что</p>
-<p class="display-math">$$ \limn x_{p_n} = A $$</p>
-<p>Аналогичным образом, существует некоторая подпоследовательность $y_{q_n}$, такая, что</p>
+                        <p><strong>Замечание</strong></p>
+<p>По определению частичного предела он может быть как конечным, так и бесконечным.
+В этой задаче все частичные пределы в неравенствах в условии предполагаются <em>конечными</em>.</p>
+<p>В противном случае можно рассмотреть последовательности $x_n = y_n = n$. Эти последовательности, а значит и любые их подпоследовательности стремятся к $+\infty$.
+Это приводит к вот такому бессмысленному неравенству, так как бесконечности не являются в полной мере числами и их &quot;нельзя&quot; складывать и сравнивать в обычном смысле:</p>
+<p class="display-math">$$ +\infty +\infty \leq +\infty \leq +\infty +\infty $$</p>
+<p>Поэтому далее мы считаем, что речь в задании идет о конечных наибольших/наименьших частичных пределах.</p>
+<hr>
+<p><strong>Лемма</strong></p>
+<p>В этой задаче мы будем пользоваться следующим равенством:</p>
+<p class="display-math">$$ \overline{\limn} x_n = -\underline{\limn} -x_n $$</p>
+<p>У нас есть множество $X$ частичных пределов последовательности $x_n$.</p>
+<p>При этом</p>
+<p class="display-math">$$ \overline{\limn} x_n = \sup X \qquad \underline{\limn} x_n = \inf X $$</p>
+<p>потому что, например, наибольший частичный предел больше любого другого частичного предела, но принадлежит $X$, поэтому он — точная верхняя грань $X$.</p>
+<p>В <a href="/tasks/18">задаче 18</a> доказывались два равенства:</p>
+<p class="display-math">$$ \text{а) } \inf -X = -\sup X; \qquad \text{б) } \sup -X = -\inf X $$</p>
+<hr>
+<p><strong>Доказательство а)</strong></p>
+<p><em>Доказательство первой части неравенства</em></p>
+<p class="display-math">$$ \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) $$</p>
+<p>По условию</p>
+<p class="display-math">$$ \underline{\limn} (x_n + y_n) = A $$</p>
+<p>Это означает, что существует некоторая подпоследовательность $x_{p_n} + y_{p_n}$ такая, что</p>
+<p class="display-math">$$ \limn (x_{p_n} + y_{p_n}) = A $$</p>
+<p>В неравенстве из условия фигурируют наибольший и наименьший частичные пределы $y_n$. Это означает, что $y_n$ ограничена, потому что если она не ограничена, то, согласно <a href="/tasks/126">задаче 126</a>, в ней можно выделить
+подпоследовательность $y_{t_n}\to\infty$, а это значит, что $\overline{\lim\limits_{n\to\infty}} y_n = \underline{\lim\limits_{n\to\infty}} y_n = \infty$. Тут получаем противоречие с замечанием выше, согласно которому мы считаем, что приведенные в условии
+частичные пределы конечные. Раз $y_n$ ограничена, то и $y_{p_n}$ ограничена.</p>
+<p>Раз $x_{p_n} + y_{p_n}$ сходится, то, согласно <a href="/tasks/93">задаче 93</a>, она ограничена. Итак, $y_{p_n}$ ограничена и $x_{p_n} + y_{p_n}$ ограничена, а значит и $(x_{p_n} + y_{p_n}) - (y_{p_n}) = x_{p_n}$ ограничена (см. прото-задачу &quot;<a href="/proto/sequences/bounds-operations">Ограниченность в арифметических операциях</a>&quot;).</p>
+<p>Итак, последовательности $x_{p_n}$ и $y_{p_n}$ ограничены.</p>
+<p>Раз $y_{p_n}$ ограничена, то, по <a href="/tasks/125">задаче 125</a> в ней можно выделить сходящуюся подпоследовательность $y_{q_n}$, в которой номера $q_n$ берутся из номеров $p_n$.</p>
 <p class="display-math">$$ \limn y_{q_n} = B $$</p>
-<p>Теперь рассмотрим последовательность</p>
-<p class="display-math">$$ x_{p_n} + y_{q_n} $$</p>
-<p>Эта последовательность является подпоследовательностью последовательности</p>
-<p class="display-math">$$ x_n + y_n $$</p>
-<p>Найдем предел подпоследовательности $x_{p_n} + y_{q_n}$:</p>
-<p class="display-math">$$ \limn (x_{p_n} + y_{q_n}) = \limn x_{p_n} + \limn y_{q_n} = A + B $$</p>
-<p class="display-math">$$ \limn (x_{p_n} + y_{q_n}) = A + B $$</p>
-<p>Итак, $A+B$ — один из частичных пределов последовательности $x_n + y_n$. Но любой частичный предел последовательности не может быть меньше, чем ее наименьший частичный предел:</p>
-<p class="display-math">$$ \underline{\limn} (x_n + y_n) \leq A + B $$</p>
-<p class="display-math">$$ \underline{\limn} (x_n + y_n) \leq \limn x_{p_n} + \limn y_{q_n} $$</p>
-<p class="display-math">$$ \underline{\limn} (x_n + y_n) \leq  $$</p>
+<p>Из этих же номеров $q_n$ рассмотрим последовательность $x_{q_n}$. Это подпоследовательность $x_{p_n}$, а значит и $x_{q_n}$ ограничена. Раз $x_{q_n}$ ограничена, то по задаче 125 в ней можно выделить сходящуюся
+подпоследовательность $x_{r_n}$, в которой номера $r_n$ берутся из номеров $q_n$.</p>
+<p class="display-math">$$ \limn x_{r_n} = C $$</p>
+<p>Из этих же номеров $r_n$ рассмотрим последовательность $y_{r_n}$. Это подпоследовательность $y_{q_n}$, а значит, по следствию из прото-задачи &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; $y_{r_n}$ имеет такой же предел, что и $y_{q_n}$:</p>
+<p class="display-math">$$ \limn y_{r_n} = \limn y_{q_n} = B $$</p>
+<p>Итак, получили две сходящиеся последовательности $x_{r_n}$ и $y_{r_n}$, состоящие из одинаковых номеров. Раз номера одинаковые, то последовательность $x_{r_n} + y_{r_n}$ является подпоследовательностью сходящейся
+последовательности $x_{p_n} + y_{p_n}$, а значит</p>
+<p class="display-math">$$ \limn (x_{r_n} + y_{r_n}) = \limn (x_{p_n} + y_{p_n}) = \underline{\limn} (x_n + y_n) = A $$</p>
+<p>$x_{r_n}$ — сходящаяся подпоследовательность $x_n$, а значит, по определению наименьшего частичного предела:</p>
+<p class="display-math">$$ \underline{\limn} x_n \leq \limn x_{r_n} $$</p>
+<p>Аналогично для $y_{r_n}$:</p>
+<p class="display-math">$$ \underline{\limn} y_n \leq \limn y_{r_n} $$</p>
+<p>Сложим эти неравенства:</p>
+<p class="display-math">$$ \underline{\limn} x_n + \underline{\limn} y_n \leq \limn x_{r_n} + \limn y_{r_n} = \underbrace{\limn (x_{r_n} + y_{r_n})}_{\large = \underline{\limn} (x_n + y_n)} $$</p>
+<p class="display-math">$$ \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) $$</p>
+<p>Мы доказали первую половину неравенства.</p>
+<p><em>Доказательство второй части неравенства</em></p>
+<p class="display-math">$$ \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n $$</p>
+<p>По доказанной выше лемме:</p>
+<p class="display-math">$$ \overline{\limn} y_n = -\underline{\limn} (-y_n) $$</p>
+<p>Тогда, согласно уже доказанной первой части неравенства выполняется</p>
+<p class="display-math">$$ \underline{\limn} (x_n+y_n) + \underline{\limn} (-y_n) \leq \underline{\limn} (x_n + y_n - y_n) $$</p>
+<p class="display-math">$$ \underline{\limn} (x_n+y_n) + \underline{\limn} (-y_n) \leq \underline{\limn} x_n $$</p>
+<p>Вычтем из обеих частей $\underline{\limn} (-y_n)$:</p>
+<p class="display-math">$$ \underline{\limn} (x_n+y_n) \leq \underline{\limn} x_n \underbrace{- \underline{\limn} (-y_n)}_{\large = \overline{\limn} y_n} $$</p>
+<p class="display-math">$$ \underline{\limn} (x_n+y_n) \leq \underline{\limn} x_n + \overline{\limn} y_n $$</p>
+<p>Мы доказали вторую половину неравенства.</p>
+<p>Итак, доказали, что</p>
+<p class="display-math">$$ \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n $$</p>
+<p>$\blacksquare$</p>
 <hr>
 <p><strong>Доказательство б)</strong></p>
+<p>Снова воспользуемся леммой:</p>
+<p class="display-math">$$ \overline{\limn} (x_n + y_n) = -\underline{\limn} (-x_n - y_n) = -\underline{\limn} (-y_n -x_n) $$</p>
+<p>Воспользуемся уже доказанным неравенством в пункте а):</p>
+<p class="display-math">$$\small \underline{\limn} (-x_n) + \underline{\limn} (-y_n) \leq \underline{\limn} (-y_n -x_n) \leq \underline{\limn} (-y_n) + \overline{\limn} (-x_n) $$</p>
+<p>Умножим все части неравенства на $-1$:</p>
+<p class="display-math">$$\small -\underline{\limn} (-x_n) - \underline{\limn} (-y_n) \geq -\underline{\limn} (-y_n -x_n) \geq -\underline{\limn} (-y_n) - \overline{\limn} (-x_n) $$</p>
+<p>Применяем лемму для каждого слагаемого:</p>
+<p class="display-math">$$ \overline{\limn} (x_n) + \overline{\limn} (y_n) \geq \overline{\limn} (y_n + x_n) \geq \overline{\limn} (y_n) + \underline{\limn} (x_n) $$</p>
+<p class="display-math">$$ \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -252,6 +310,32 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/bounds-operations" title="Ограниченность в арифметических операциях" target="_blank">
+                                    Ограниченность в арифметических операциях
+                                </a>
+                            </dt>
+                            <dd>Сохранение ограниченности при сумме, разности и произведении последовательностей.</dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
+                                    Единственность предельной точки
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
 
 

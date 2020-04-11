@@ -4,21 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../favicon.png" type="image/png">
-        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.png" type="image/png">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
 
-        <title>119 | Демидович. Решения</title>
-        <meta name="description" content="$$ x_n &#x3D; 3\left( 1 - \frac{1}{n} \right) + 2(-1)^n $$">
+        <title>Ограниченность в арифметических операциях | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Сохранение ограниченности при сумме, разности и произведении последовательностей.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="119 | Демидович. Решения">
-        <meta property="og:description" content="$$ x_n &#x3D; 3\left( 1 - \frac{1}{n} \right) + 2(-1)^n $$">
+        <meta property="og:title" content="Ограниченность в арифметических операциях | Прото-задача | Демидович. Решения">
+        <meta property="og:description" content="Сохранение ограниченности при сумме, разности и произведении последовательностей.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/tasks/119">
-        <meta property="og:url" content="https://dodem.ru/tasks/119">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/proto/sequences/bounds-operations">
+        <meta property="og:url" content="https://dodem.ru/proto/sequences/bounds-operations">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -38,21 +38,21 @@
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../';
+            var SITE_ROOT = '../../../';
         </script>
 
-        <script src="../../scripts/toc.js"></script>
-        <script src="../../scripts/hash.js"></script>
-        <script src="../../scripts/location.js"></script>
-        <script src="../../scripts/search.js"></script>
+        <script src="../../../scripts/toc.js"></script>
+        <script src="../../../scripts/hash.js"></script>
+        <script src="../../../scripts/location.js"></script>
+        <script src="../../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -70,16 +70,14 @@
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../scripts/dark-magic.js"></script>        
-        <script src="../../scripts/show-hide.js"></script>
-    </head>
-    <body class="page-task">
+        <script src="../../../scripts/dark-magic.js"></script>    </head>
+    <body class="page-proto-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../scripts/progress-bar.js"></script>
+        <script src="../../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -107,7 +105,7 @@
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -135,30 +133,21 @@
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header">
-                    <i class="fas fa-hashtag"></i>
-                    <span>119</span>
+                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задача</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        <div title="Введение в анализ" class="section">
-                            <span class="accent">I</span>
-                            <span class="title">Введение в анализ</span>
-                        </div>
-
-                        <div title="Теория последовательностей" class="paragraph">
-                            └─ <span class="accent">§2</span>
-                            <span class="title">Теория последовательностей</span>
-                        </div>
-
-                        <div class="overlay"></div>
+                        Ограниченность в арифметических операциях
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ x_n = 3\left( 1 - \frac{1}{n} \right) + 2(-1)^n $$</p>
+                        <p>Пусть даны две ограниченные последовательности $x_n$ и $y_n$.</p>
+<p>Тогда ограниченными являются следующие последовательности:</p>
+<p class="display-math">$$ x_n + y_n \qquad x_n - y_n \qquad x_n\cdot y_n $$</p>
                     </div>
                 </div>
             </section>
-
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -172,13 +161,12 @@
                 </script>
             </div>
 
-
-            <section class="block-section solution  single  _hidden">
-                <div class="block-section-actions">
+            <section class="block-section solution single">
+                <!--<div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>
+                </div>-->
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -186,72 +174,44 @@
                 </div>
                 
                 <div class="block-section-container">
-                    
-                    <div class="reason">
-                        
-                    </div>
-
                     <div class="block-section-content">
-                        <p>Разделим исходную последовательность на две подпоследовательности с четными и нечетными номерами.</p>
-<p class="display-math">$$ x_{2n} = 3\left(1 - \frac{1}{2n}\right) + 2 $$</p>
-<p class="display-math">$$ x_{2n - 1} = 3\left(1-\frac{1}{2n-1}\right) - 2 $$</p>
-<p>Найдем предел первой подпоследовательности:</p>
-<p class="display-math">$$ \limn x_{2n} = \limn 3\left(1 - \frac{1}{2n}\right) + 2 = 3\left(1-\limn\frac{1}{2n}\right) + 2 $$</p>
-<p>Докажем, что</p>
-<p class="display-math">$$ \frac{1}{2n} < \frac{1}{n} $$</p>
-<p class="display-math">$$ n < 2n $$</p>
-<p class="display-math">$$ 1 < 2 $$</p>
-<p>Последнее, очевидно, выполняется. Поэтому, можно &quot;зажать&quot; последовательность $\frac{1}{2n}$:</p>
-<p class="display-math">$$ 0 < \frac{1}{2n} \leq \frac{1}{n} $$</p>
-<p>&quot;Последовательность&quot; из $0$ стремится к $0$. Последовательность $\frac{1}{n}$ тоже стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;). А значит,
-по теореме о двух милиционерах, последовательность $\frac{1}{2n}$ тоже стремится к $0$.</p>
-<p>Поэтому</p>
-<p class="display-math">$$ \limn x_{2n} = = 3\left(1-\limn\frac{1}{2n}\right) + 2 = 3 (1 - 0) + 2 = 5 $$</p>
-<p class="display-math">$$ \limn x_{2n} = 5 $$</p>
-<p>Найдем предел второй подпоследовательности:</p>
-<p class="display-math">$$ \limn x_{2n - 1} = \limn 3\left(1-\frac{1}{2n-1}\right) - 2 = 3\left( 1 - \limn\frac{1}{2n-1} \right) - 2 $$</p>
-<p>Докажем, что</p>
-<p class="display-math">$$ \frac{1}{2n-1} \leq \frac{1}{n} $$</p>
-<p class="display-math">$$ n \leq 2n - 1 $$</p>
-<p class="display-math">$$ 0 \leq n-1 $$</p>
-<p>Последнее, очевидно, выполняется. Поэтому, можно &quot;зажать&quot; последовательность $\frac{1}{2n-1}$:</p>
-<p class="display-math">$$ 0 < \frac{1}{2n-1} \leq \frac{1}{n} $$</p>
-<p>&quot;Последовательность&quot; из $0$ стремится к $0$. Последовательность $\frac{1}{n}$ тоже стремится к $0$. А значит,
-по теореме о двух милиционерах, последовательность $\frac{1}{2n-1}$ тоже стремится к $0$.</p>
-<p>Поэтому</p>
-<p class="display-math">$$ \limn x_{2n-1} = = 3\left(1-\limn\frac{1}{2n-1}\right) + 2 = 3 (1 - 0) - 2 = 1 $$</p>
-<p class="display-math">$$ \limn x_{2n-1} = 1 $$</p>
+                        <p><strong>Доказательство для $x_n \pm y_n$</strong></p>
+<p>По определению ограниченной последовательности, для $x_n$ и $y_n$ существуют такие положительные $M_x$ и $M_y$, что</p>
+<p class="display-math">$$ |x_n| \leq M_x \qquad |y_n| \leq M_y $$</p>
+<p>Сложим оба этих неравенства:</p>
+<p class="display-math">$$ |x_n| + |y_n| \leq M_x + M_y $$</p>
+<p>По 6 свойству модулей (см. прото-задачу &quot;<a href="/proto/abs-properties">Свойства модуля</a>&quot;):</p>
+<p class="display-math">$$ |x_n \pm y_n| \leq |x_n| + |y_n| \leq M_x + M_y $$</p>
+<p class="display-math">$$ |x_n \pm y_n| \leq M_x + M_y $$</p>
+<p>Последнее по определению означает, что последовательность $x_n \pm y_n$ ограничена.</p>
 <hr>
-<p>Итак, у последовательности $x_n$ есть две предельные точки: $5$ и $1$. Так как любой член последовательности находится в одной из рассмотренных
-выше двух подпоследовательностей, то, по прото-задаче &quot;<a href="/proto/sequences/limits/max-limit-points">Количество предельных точек</a>&quot;, других предельных точек у $x_n$ нет.</p>
+<p><strong>Доказательство для $x_n\cdot y_n$</strong></p>
+<p>По определению ограниченной последовательности, для $x_n$ и $y_n$ существуют такие положительные $M_x$ и $M_y$, что</p>
+<p class="display-math">$$ |x_n| \leq M_x \qquad |y_n| \leq M_y $$</p>
+<p>Уножим эти неравенства друг на друга (умножить можно, так как они состоят из положительных чисел):</p>
+<p class="display-math">$$ |x_n||y_n| \leq M_x \cdot M_y $$</p>
+<p>По 4 свойству модулей (см. прото-задачу &quot;<a href="/proto/abs-properties">Свойства модуля</a>&quot;):</p>
+<p class="display-math">$$ |x_n\cdot y_n| \leq |x_n||y_n| \leq M_x\cdot M_y $$</p>
+<p class="display-math">$$ |x_n \cdot y_n| \leq M_x\cdot M_y $$</p>
+<p>Последнее по определению означает, что последовательность $x_n \cdot y_n$ ограничена.</p>
+<hr>
+<p><strong>Насчет $\frac{x_n}{y_n}$</strong></p>
+<p>Важно заметить, что из ограниченности $x_n$ и $y_n$ не следует ограниченность $\frac{x_n}{y_n}$.
+Это легко показать на примере.</p>
+<p>Пусть $x_n = 1$ и $y_n = \frac{1}{n}$. Первая очевидно ограничена, а $y_n$ ограничена сверху $1$, а снизу $0$.</p>
+<p>Найдем их частное</p>
+<p class="display-math">$$ \frac{x_n}{y_n} = \frac{1}{\frac{1}{n}} = n $$</p>
+<p class="display-math">$$ \frac{x_n}{y_n} = n $$</p>
+<p>Эта последовательность натуральных чисел. Она не ограничена сверху, так как для любого положительного числа $E$ всегда найдется большее его натуральное число.</p>
+<p>Итак, $x_n$ и $y_n$ ограничены, но $\frac{x_n}{y_n}$ нет.</p>
 
                     </div>
 
                     <div class="reason-overlay">
-                        
-
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
-                    </div>
-
-                    <div class="solver">
-                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
-                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
-
-
-                            <span class="solver-name">Петр Радько</span>
-                        </a>
                     </div>
                 </div>
             </section>
-
-
-            <div class="help-me">
-                <span class="message">Не разобрались в решении?</span>
-                <a class="help-button" href="https://mathit.ru" title="Задать вопрос на форуме">
-                    <i class="fas fa-question"></i>
-                    <span>Спросить</span>
-                </a>
-            </div>
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -265,45 +225,6 @@
                 </script>
             </div>
 
-
-            <section class="block-section protoTasks">
-                <div class="block-section-header">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задачи</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
-                                    Элементарные пределы последовательностей
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
-                                <a href="/proto/sequences/limits/max-limit-points" title="Количество предельных точек" target="_blank">
-                                    Количество предельных точек
-                                </a>
-                            </dt>
-                            <dd></dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
-
-            <section class="nav">
-                    <a href="../../tasks/120/" title="Следующая задача" class="next">
-                        <span class="label">120</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-
-                    <a href="../../tasks/118/" title="Предыдущая задача" class="prev">
-                        <i class="fas fa-arrow-left"></i>
-                        <span class="label">118</span>
-                    </a>
-            </section>
         </section>
 
         <footer>

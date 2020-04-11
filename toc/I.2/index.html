@@ -29,7 +29,7 @@
                     macros: {
                         ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
                         floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
-                        limn: ["\\lim_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
                         set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
                     }
                 }
@@ -2325,6 +2325,8 @@
                             <p>Доказать, что:</p>
 <p class="display-math">$$ \text{а) } \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n; $$</p>
 <p class="display-math">$$ \text{б) } \underline{\limn} x_n + \overline{\limn} y_n \leq \overline{\limn} (x_n + y_n) \leq \overline{\limn} x_n + \overline{\limn} y_n $$</p>
+<p>Построить примеры, когда в этих соотношениях имеют место неравенства.</p>
+
                         </div>
 
 
