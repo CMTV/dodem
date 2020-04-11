@@ -44,6 +44,7 @@ function genProtoTask(protoPath)
 
         title: `${meta.title} | Прото-задача | Демидович. Решения`,
         description: meta.description,
+        canonical_url: 'proto/' + protoPath,
 
         protoTitle: meta.title,
 

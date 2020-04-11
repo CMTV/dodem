@@ -43,6 +43,7 @@ function createTocTasksPage(pageId, pageData, tasks)
         site_root: pageData.siteRoot,
         title: pageData.title + ' | Демидович. Решения',
         description: `Все задачи по теме "${pageData.title}" из задачника Демидовича с подробными решениями.`,
+        canonical_url: 'toc/' + pageId,
 
         preTitle: pageData.preTitle,
         pageTitle: pageData.title,

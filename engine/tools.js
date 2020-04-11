@@ -458,7 +458,7 @@ function genAll(devMode = false)
         }
 
         writeFile(
-            p.join('out', 'solvers.html'),
+            p.join('out', 'solvers', 'index.html'),
             getHtml('solvers', view, partials)
         );
     }
@@ -524,6 +524,8 @@ function genAll(devMode = false)
             {
                 title: `${taskNumber} | Демидович. Решения`,
                 description: (task.task_src).replace(/(\r\n|\n|\r)/gm, "").replace('"', '').substring(0, 400),
+                canonical_url: 'tasks/' + taskNumber,
+                
                 task: taskNumber,
 
                 taskHtml: task.task_html,
@@ -566,7 +568,7 @@ function genAll(devMode = false)
     }
 }
 
-
+//
 
 module.exports =
 {
