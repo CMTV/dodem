@@ -121,7 +121,6 @@ task('build_watch', (done) =>
         'build_js',
         'build_htmls',
         'build_protos',
-        'build_toc_pages',
         'move_files',
         'move_tasks_files',
         'move_proto_tasks_files'
