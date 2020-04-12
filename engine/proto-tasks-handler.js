@@ -34,6 +34,7 @@ function genProtoTask(protoPath)
     let meta = JSON.parse(fs.readFileSync(p.normalize('proto-tasks/' + protoPath + '/meta.json'), { encoding: 'utf-8' }));
 
     // Rendered Mds
+    let taskSrc = fs.readFileSync(p.normalize(`proto-tasks/${protoPath}/task.md`), { encoding: 'utf-8' });
     let task = getRenderedMd('task', protoPath);
     let solution = getRenderedMd('solution', protoPath);
 
@@ -43,7 +44,7 @@ function genProtoTask(protoPath)
         site_root: '../'.repeat(protoPath.split('/').length + 1),
 
         title: `${meta.title} | Прото-задача | Демидович. Решения`,
-        description: meta.description,
+        description: meta.description || taskSrc,
         canonical_url: 'proto/' + protoPath,
 
         protoTitle: meta.title,

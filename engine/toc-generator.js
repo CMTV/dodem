@@ -54,19 +54,23 @@ function createTocTasksPage(pageId, pageData, tasks)
     util.fWrite(`out/toc/${pageId}/index.html`, tools.genHtml('toc-tasks', view));
 }
 
+let paragraphsTasks = {};
+
 function getTasksByLocation(location)
 {
     let tasks = [];
 
     for (let i = 1; i <= G.TASKS_NUM; i++)
     {
-        if (!util.fExists(`tasks/${i}`)) continue;
+        if (!util.fExists(`tasks/${i}`)) { continue; }
 
         let meta = JSON.parse(util.fRead(`tasks/${i}/meta.json`));
 
         if (meta.location === location)
             tasks.push(i);
     }
+
+    paragraphsTasks[location] = { start: tasks[0], end: tasks[tasks.length - 1] };
 
     return tasks;
 }
@@ -79,10 +83,13 @@ function getCustomTocs(location)
 
     let customToc = JSON.parse(util.fRead('toc-custom.json'));
 
-    Object.keys(customToc).forEach((tocItem) =>
+    Object.keys(customToc).forEach((_location) =>
     {
-        if (location === customToc[tocItem].location)
-            customTocs.push(Object.assign({ id: tocItem, link: location + "/" + tocItem }, customToc[tocItem]));
+        Object.keys(customToc[_location]).forEach((tocItem) =>
+        {
+            if (location === _location)
+                customTocs.push(Object.assign({ id: tocItem, link: location + "/" + tocItem }, customToc[_location][tocItem]));
+        });
     });
 
     //
@@ -110,9 +117,12 @@ function getSitemapTocs()
 
     let customToc = JSON.parse(util.fRead('toc-custom.json'));
 
-    Object.keys(customToc).forEach((id) =>
+    Object.keys(customToc).forEach((location) =>
     {
-        tocs.push(customToc[id].location + "/" + id);
+        Object.keys(customToc[location]).forEach((id) =>
+        {
+            tocs.push(location + "/" + id);
+        });
     });
 
     //
@@ -133,7 +143,7 @@ function createTocTasksPages()
         tocJSON[chapter].paragraphs.forEach((paragraph, i) =>
         {
             let title = paragraph;
-            let tasks = getTasksByLocation(`${chapter}.${i + 1}`);
+            let tasks = getTasksByLocation(`${chapter}.${i + 1}`);;
 
             createTocTasksPage(`${chapter}.${i + 1}`, { siteRoot: '../../', title: title }, tasks);
         });
@@ -144,14 +154,33 @@ function createCustomTocTasksPages()
 {
     let tocJSON = JSON.parse(util.fRead('toc-custom.json'));
 
-    Object.keys(tocJSON).forEach((tocId) =>
+    Object.keys(tocJSON).forEach((location) =>
     {
-        let tocObj = tocJSON[tocId];
+        Object.keys(tocJSON[location]).forEach((id) =>
+        {
+            let obj = tocJSON[location][id];
 
-        let title = tocObj.title;
-        let tasks = tocObj.tasks;
+            let title = obj.title;
+            let tasks = [];
 
-        createTocTasksPage(`${tocObj.location}/${tocId}`, { siteRoot: '../../../', title: title }, tasks);
+            obj.tasks.forEach((task) =>
+            {
+                if (typeof task === 'number') { tasks.push(task); return; }
+
+                let tStart = parseInt(task.split('-')[0]);
+                let tEnd = parseInt(task.split('-')[1]);
+
+                for (let i = tStart; i <= tEnd; i++) tasks.push(i);
+            });
+
+            let _tasks = [];
+            for (let i = 0; i < tasks.length; i++)
+            {
+                if (util.fExists(`tasks/${tasks[i]}`)) _tasks.push(tasks[i]);
+            }
+
+            createTocTasksPage(`${location}/${id}`, { siteRoot: '../../../', title: title }, _tasks);
+        });
     });
 }
 
@@ -163,20 +192,24 @@ function createTocPage()
 
     let chapters = [];
 
-    Object.keys(toc).forEach((chapter, i) =>
+    Object.keys(toc).forEach((chapter, cI) =>
     {
         let paragraphs = [];
 
         toc[chapter].paragraphs.forEach((paragraph, i) =>
         {
-            let customTocs = getCustomTocs(chapter + "." + (i+1));
+            let location = chapter + "." + (i+1);
+            let customTocs = getCustomTocs(location);
 
             paragraphs.push(
                 {
                     title: "§" + (i+1) + ". " + paragraph,
-                    link: chapter + "." + (i+1),
+                    link: location,
                     hasCustom: !!customTocs.length,
-                    custom: customTocs
+                    custom: customTocs,
+                    
+                    tStart: paragraphsTasks[location].start,
+                    tEnd: paragraphsTasks[location].end
                 }
             );
         });

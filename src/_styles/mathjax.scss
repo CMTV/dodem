@@ -4,24 +4,24 @@
 
     &[display=true]
     {
-        padding: 5px 0;
+        padding: 7px 0;
 
         overflow-y: visible !important;
         overflow-x: auto !important;
 
         &::-webkit-scrollbar
         {
-            height: 7px;
+            height: 3px;
         }
 
         &::-webkit-scrollbar-thumb
         {
-            background: #c8c8c8;
+            background: #dfdfdf;
             border-radius: 5px;
 
             &:hover
             {
-                background-color: darken(#c8c8c8, 10%);
+                background-color: darken(#dfdfdf, 10%);
             }
         }
     }

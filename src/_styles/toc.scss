@@ -70,6 +70,22 @@ h2.title + .chapter { margin-top: 30px !important; }
                 {
                     flex: 1;
                     text-decoration: none;
+
+                    .tasks-diff
+                    {
+                        cursor: help;
+
+                        margin-left: 10px;
+                        padding: 3px 5px;
+
+                        border: 1px solid $border-faint-color;
+                        border-radius: $border-radius;
+
+                        font-size: 80%;
+                        color: $fmuted-color;
+
+                        background: mix(white, black, 97.5%);
+                    }
                 }
 
                 i
@@ -88,6 +104,8 @@ h2.title + .chapter { margin-top: 30px !important; }
                 padding: 15px;
 
                 border-top: 1px solid $border-color;
+
+                font-size: 94%;
                 color: $fmuted-color;
 
                 li

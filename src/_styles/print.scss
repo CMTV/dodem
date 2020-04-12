@@ -35,4 +35,15 @@
             }
         }
     }
+
+    .page-toc-tasks
+    {
+        .no-dark-magic,
+        .dark-magic-container
+        {
+            display: none !important;
+        }
+
+        .task .hint { display: block !important; .hint-title { display: block !important; } }
+    }
 }

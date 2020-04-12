@@ -39,6 +39,11 @@
         margin-top: 10px;
 
         text-align: center;
+
+        @include layout(mini)
+        {
+            font-size: 150%;
+        }
     }
 
     .task 
@@ -55,6 +60,8 @@
             {
                 display: none;
             }
+
+            .hint-title { display: none; }
         }
 
         .actions-container
