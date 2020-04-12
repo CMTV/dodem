@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../../../favicon.png" type="image/png">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
+
+        <title>Метод математической индукции | Демидович. Решения</title>
+        <meta name="description" content="Все задачи по теме &quot;Метод математической индукции&quot; из задачника Демидовича с подробными решениями.">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+
+        <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
+
+        <meta property="og:title" content="Метод математической индукции | Демидович. Решения">
+        <meta property="og:description" content="Все задачи по теме &quot;Метод математической индукции&quot; из задачника Демидовича с подробными решениями.">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">
+
+        <link rel="canonical" href="https://dodem.ru/toc/I.1/math-induction">
+        <meta property="og:url" content="https://dodem.ru/toc/I.1/math-induction">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../../../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../../../';
+        </script>
+
+        <script src="../../../scripts/toc.js"></script>
+        <script src="../../../scripts/hash.js"></script>
+        <script src="../../../scripts/location.js"></script>
+        <script src="../../../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../../../scripts/dark-magic.js"></script>
+        <script src="../../../scripts/toc-tasks.js"></script>
+    </head>
+    <body class="page-toc-tasks">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../../../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../../../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <a class="back-button" href="../../../toc" title="Перейти к оглавлению">
+                <i class="fas fa-arrow-left"></i>
+                <span>Оглавление</span>
+            </a>
+
+            <h2 class="title">Метод математической индукции</h2>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/1" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>1</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ 1+2+\ldots+n = \frac{n(n+1)}{2} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/1" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/2" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>2</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ 1^2 + 2^2 + \ldots + n^2 = \frac{n(n+1)(2n+1)}{6} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/2" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/3" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>3</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ 1^3+2^3+\ldots+n^3 = (1+2+3+\ldots+n)^2 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/3" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/4" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>4</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ 1 + 2 + 2^2 + \ldots + 2^{n-1} = 2^{n} - 1 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/4" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/5" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>5</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Пусть
+<p class="display-math">$$ a^{[n]} = a(a-h)\ldots[a - (n-1)h] \text{ и } a^{[0]} = 1 $$</p>
+
+Доказать, что
+<p class="display-math">$$ (a+b)^{[n]} = \sum\limits_{m=0}^n C^m_n a^{[n-m]}b^{[m]}, $$</p>
+
+где $C^m_n$ — число сочетаний из $n$ элементов по $m$. Вывести отсюда формулу <em>бинома Ньютона</em>.
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/5" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/6" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>6</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Доказать <em>неравенство Бернулли</em>:
+
+<p class="display-math">$$ (1+x_1)(1+x_2)\ldots(1+x_n) \geqslant 1 + x_1 + x_2 + \ldots + x_n, $$</p>
+
+где $x_1, x_2, \ldots, x_n$ — числа одного и того же знака, большие $-1$.
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/6" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/7" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>7</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Доказать, что если $x>-1$, то справедливо неравенство
+
+<p class="display-math">$$ (1+x)^n \geqslant 1 + nx \ (n>1), $$</p>
+
+причем знак равенства имеет место лишь при $x = 0$.
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/7" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/8" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>8</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Доказать неравенство
+
+<p class="display-math">$$ n! < \left(\frac{n+1}{2}\right)^n \text { при } n > 1 $$</p>
+                        </div>
+
+                                <div class="hint block-section-content _hidden">
+                                    <h3 class="hint-title">Указание</h3>
+                                    Использовать неравенство
+
+<p class="display-math">$$ \left( \frac{n+2}{n+1} \right)^{n+1} = \left( 1 + \frac{1}{n+1} \right)^{n+1} > 2 \quad (n = 1,2,\ldots) $$</p>
+                                </div>
+
+                        <div class="actions-container">
+
+                                <div class="action action--hint">
+                                    <i class="fas fa-lightbulb"></i>
+                                    <span>Указание</span>
+                                </div>
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/8" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/9" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>9</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Доказать неравенства:
+
+<p class="display-math">$$ \text{а) } 2!\cdot 4! \ldots (2n)! > [(n+1)!]^n \text{ при } n>1 $$</p>
+<p class="display-math">$$ \text{б) } \frac{1}{2}\cdot\frac{3}{4}\ldots\frac{2n-1}{2n} < \frac{1}{\sqrt{2n+1}} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/9" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/10" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>10</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            Доказать неравенства:
+
+<p class="display-math">$$ \text{а) } 1 + \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} + \ldots + \frac{1}{\sqrt{n}} > \sqrt{n} \quad (n \geqslant 2) $$</p>
+<p class="display-math">$$ \text{б) } n^{n+1} > (n+1)^n \quad (n\geqslant 3) $$</p>
+<p class="display-math">$$ \text{в) } \left| \sin{\left(\sum\limits_{k=1}^n x_k\right)} \right| \leqslant \sum\limits_{k=1}^n \sin{x_k} \quad (0\leqslant x_k \leqslant \pi; \ k = 1, 2, \ldots n) $$</p>
+<p class="display-math">$$ \text{г) } (2n)! < 2^{2n}(n!)^2 $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/10" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.ru" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>

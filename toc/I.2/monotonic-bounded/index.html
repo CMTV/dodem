@@ -4,33 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../../favicon.png" type="image/png">
+        <link rel="icon" href="../../../favicon.ico" type="image/x-icon">
 
-        <title>Сходимость к вещественному числу | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="Пусть дано произвольное вещественное число $\alpha$ и две последовательности $x_n$ и $y_n$, где $x_n$ — убывает и не меньше $\alpha$, а $y_n$ — возрастает и не больше $\alpha$ и
-
-$$ \limn x_n - y_n &#x3D; 0 $$
-
-Тогда
-
-$$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
+        <title>Признак Вейерштрасса | Демидович. Решения</title>
+        <meta name="description" content="Все задачи по теме &quot;Признак Вейерштрасса&quot; из задачника Демидовича с подробными решениями.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="Сходимость к вещественному числу | Прото-задача | Демидович. Решения">
-        <meta property="og:description" content="Пусть дано произвольное вещественное число $\alpha$ и две последовательности $x_n$ и $y_n$, где $x_n$ — убывает и не меньше $\alpha$, а $y_n$ — возрастает и не больше $\alpha$ и
-
-$$ \limn x_n - y_n &#x3D; 0 $$
-
-Тогда
-
-$$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
+        <meta property="og:title" content="Признак Вейерштрасса | Демидович. Решения">
+        <meta property="og:description" content="Все задачи по теме &quot;Признак Вейерштрасса&quot; из задачника Демидовича с подробными решениями.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/proto/sequences/limits/to-real">
-        <meta property="og:url" content="https://dodem.ru/proto/sequences/limits/to-real">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/toc/I.2/monotonic-bounded">
+        <meta property="og:url" content="https://dodem.ru/toc/I.2/monotonic-bounded">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -50,21 +38,21 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../../scripts/toc.js"></script>
+        <script src="../../../scripts/hash.js"></script>
+        <script src="../../../scripts/location.js"></script>
+        <script src="../../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -82,14 +70,16 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>    </head>
-    <body class="page-proto-task">
+        <script src="../../../scripts/dark-magic.js"></script>
+        <script src="../../../scripts/toc-tasks.js"></script>
+    </head>
+    <body class="page-toc-tasks">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -117,7 +107,7 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -144,23 +134,13 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
                     </div>
                 </section>
             </section>
-            <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
-                </div>
-                <div class="block-section-container">
-                    <div class="task-nav">
-                        Сходимость к вещественному числу
-                    </div>
-                    <div class="block-section-content">
-                        <p>Пусть дано произвольное вещественное число $\alpha$ и две последовательности $x_n$ и $y_n$, где $x_n$ — убывает и не меньше $\alpha$, а $y_n$ — возрастает и не больше $\alpha$ и</p>
-<p class="display-math">$$ \limn x_n - y_n = 0 $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ \limn x_n = \limn y_n = \alpha $$</p>
-                    </div>
-                </div>
-            </section>
+            <a class="back-button" href="../../../toc" title="Перейти к оглавлению">
+                <i class="fas fa-arrow-left"></i>
+                <span>Оглавление</span>
+            </a>
+
+            <h2 class="title">Признак Вейерштрасса</h2>
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
@@ -174,48 +154,136 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
-                    <div title="Скрыть решение" class="action action--hide">
-                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
-                    </div>
-                </div>-->
 
-                <div class="block-section-header">
-                    <i class="fas fa-check"></i>
-                    <span>Решение</span>
-                </div>
-                
-                <div class="block-section-container">
-                    <div class="block-section-content">
-                        <p>По условию дано, что $x_n$ убывает и не меньше $\alpha$. По признаку Вейерштрасса это означает, что $x_n$ сходится к некоторому числу $X$:</p>
-<p class="display-math">$$ \limn x_n = X $$</p>
-<p>По этому же признаку</p>
-<p class="display-math">$$ \limn y_n = Y $$</p>
-<p>По условию известно, что</p>
-<p class="display-math">$$ \limn x_n - y_n = 0 $$</p>
-<p>Так как $x_n$ и $y_n$ сходятся, то можно воспользоваться одним из свойств пределов:</p>
-<p class="display-math">$$ \limn x_n - y_n = \limn x_n - \limn y_n = X - Y = 0 $$</p>
-<p class="display-math">$$ X - Y = 0 $$</p>
-<p class="display-math">$$ X = Y $$</p>
-<p>По условию дано, что</p>
-<p class="display-math">$$ x_n \geq \alpha $$</p>
-<p>Тогда, воспользовавшись прото-задачей &quot;<a href="/proto/sequences/limits/limits-inequality">Предельный переход в неравенстве</a>&quot;</p>
-<p class="display-math">$$ \limn x_n = X \geq \limn \alpha = \alpha $$</p>
-<p class="display-math">$$ X \geq \alpha $$</p>
-<p>Аналогичным образом получаем, что</p>
-<p class="display-math">$$ Y \leq \alpha $$</p>
-<p>Итак, имеем</p>
-<p class="display-math">$$ X = Y \qquad X\geq\alpha \qquad Y\leq \alpha $$</p>
-<p>Это возможно только в одном случае:</p>
-<p class="display-math">$$ X = Y = \alpha $$</p>
-                    </div>
 
-                    <div class="reason-overlay">
-                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/77" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>77</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p>$x_n = p_0 + \frac{p_1}{10} + \ldots + \frac{p_n}{10^n} \ (n=1,2,\ldots)$, где $p_i (i=0,1,2,\ldots)$ —
+целые неотрицательные числа, не превышающие $9$, начиная с $p_1$.</p>
+
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/77" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
-                </div>
-            </section>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/78" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>78</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \frac{10}{1}\cdot\frac{11}{3}\ldots\frac{n+9}{2n-1} $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/78" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/79" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>79</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \left(1-\frac{1}{2}\right)\left( 1 - \frac{1}{4} \right)\ldots\left( 1 - \frac{1}{2^n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/79" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/80" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>80</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_n = \left( 1 + \frac{1}{2} \right)\left( 1 + \frac{1}{4} \right)\ldots \left( 1 + \frac{1}{2^n} \right) $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/80" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+                <section class="block-section task">
+                    <a class="block-section-header" href="/tasks/81" target="_blank">
+                        <i class="fas fa-hashtag"></i>
+                        <span>81</span>
+                    </a>
+                    <div class="block-section-container">
+                        <div class="block-section-content">
+                            <p class="display-math">$$ x_1 = \sqrt{2}, x_2 = \sqrt{2+\sqrt{2}}, \ldots, x_n = \sqrt{2 + \sqrt{2 + \ldots + \sqrt{2}}}, \ldots $$</p>
+                        </div>
+
+
+                        <div class="actions-container">
+
+
+                            <div class="flex-sep"></div>
+
+                            <a class="action action--solution" href="/tasks/81" title="Перейти к решению" target="_blank">
+                                <span>Решение</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </section>
+
+
+
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -228,6 +296,7 @@ $$ \limn x_n &#x3D; \limn y_n &#x3D; \alpha $$">
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
 
         </section>
 
