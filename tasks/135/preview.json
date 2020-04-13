@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Доказать, что если $x_n &gt; 0 \\ (n=1,2,\\ldots)$ и</p>\n<p class=\"display-math\">$$ \\overline{\\limn} x_n \\cdot \\overline{\\limn}\\frac{1}{x_n} = 1, $$</p>\n<p>то последовательность $x_n$ — сходящаяся.</p>\n"}

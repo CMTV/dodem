@@ -194,24 +194,7 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Последовательность $x_n$ называется <em>гармоническим рядом</em>. Покажем, что эта последовательность не является фундаментальной, то есть для нее не выполняется критерий Коши:</p>
-<p class="display-math">$$ \exists \varepsilon' > 0 \ \forall N = N(\varepsilon) \ \exists n' > N, p' > 0 \ : \ |x_{n'+p'} - x_{n'}| \geq \varepsilon' $$</p> 
-<p>Возьмем какое-нибудь $n'&gt;N$. Возьмем $p' = n'$.</p>
-<p>Рассмотрим модуль разности этих элементов:</p>
-<p class="display-math">\begin{gather*}
-    \left| x_{n' + p'} - x_{n'} \right| = \left| x_{2n'} - x_{n'} \right| = \left| \frac{1}{n'+1} + \frac{1}{n'+2} + \ldots + \frac{1}{2n'} \right|
-\end{gather*}</p>
-<p>От модуля можно избавиться, так как внутри всегда положительное число:</p>
-<p class="display-math">$$ \left| x_{n' + p'} - x_{n'} \right| = \frac{1}{n'+1} + \frac{1}{n'+2} + \ldots + \frac{1}{2n'} $$</p>
-<p>Замечаем, что $\frac{1}{2n'}$ не меньше любого слагаемого:</p>
-<p class="display-math">$$ \left| x_{n' + p'} - x_{n'} \right| = \overbrace{\frac{1}{n'+1}}^{\Large > \frac{1}{2n'}} + \overbrace{\frac{1}{n'+2}}^{\Large > \frac{1}{2n'}} + \ldots + \frac{1}{2n'} $$</p>
-<p>Заменим каждое слагаемое на $\frac{1}{2n'}$:</p>
-<p class="display-math">$$ | x_{n'+p'} - x_{n'}| > \frac{1}{2n'} + \frac{1}{2n'} + \ldots = \frac{n'}{2n'} = \frac{1}{2} $$</p>
-<p class="display-math">$$ | x_{n'+p'} - x_{n'}| > \frac{1}{2} $$</p>
-<p>Итак, мы можем взять $\varepsilon' = \frac{1}{2}$ и тогда для любого $N$ берем любое $n'&gt;N$ и $p'=n'$ и расстояние между этими двумя элементами будет больше $\varepsilon'$.
-Поэтому последовательность $x_n$ не является фундаментальной, а значит для нее не выполняется критерий Коши.</p>
-<p>Раз для последовательности $x_n$ не выполняется критерий Коши, то она расходится (не имеет конечного предела).</p>
-<p>$\blacksquare$</p>
+                        <p>Смотрите следствие прото-задачи &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot;.</p>
 
                     </div>
 
@@ -254,25 +237,25 @@
             </div>
 
 
-
-            <section class="block-section refs">
+            <section class="block-section protoTasks">
                 <div class="block-section-header">
-                    <i class="fas fa-external-link-alt"></i>
-                    <span>Ссылки</span>
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
                 </div>
                 <div class="block-section-container">
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/harmonic-series" title="Расходимость гармонического ряда" target="_blank">
-                                    Расходимость гармонического ряда
+                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
+                                    Единственность предельной точки
                                 </a>
                             </dt>
-                            <dd>Доказательство расходимости гармонического ряда с помощью второго замечательного предела.</dd>
+                            <dd></dd>
                     
                     </dl>
                 </div>
             </section>
+
 
 
             <section class="nav">

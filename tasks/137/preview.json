@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Пусть числовая последовательность $x_1,x_2,\\ldots,x_n,\\ldots$ удовлетворяет условию</p>\n<p class=\"display-math\">$$ 0 \\leq x_{m+n} \\leq x_m + x_n \\ (m,n = 1,2,\\ldots) $$</p>\n<p>Доказать, что $\\limn \\frac{x_n}{n}$ существует.</p>\n"}
