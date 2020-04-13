@@ -34,5 +34,62 @@
                 }
             }
         }
+
+        &.usage
+        {
+            .block-section-header
+            {
+                width: 180px;
+                cursor: help;
+                i { margin-right: 7px; }
+            }
+
+            .task-list
+            {    
+                overflow: hidden;
+                overflow-x: auto;
+    
+                .wrapper
+                {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    padding: 15px;
+                    padding-top: 5px;
+
+                    a
+                    {
+                        flex-shrink: 0;
+                        padding: 3px;
+    
+                        width: 45px;
+    
+                        font-size: 85%;
+                        color: $fmuted-color;
+                        text-align: center;
+                        text-decoration: none;
+    
+                        background: mix(black, white, 2.5%);
+    
+                        border: 1px solid $border-color;
+                        border-radius: $border-radius;
+    
+                        transition: color $anim-speed, border-color $anim-speed;
+    
+                        margin-top: 10px;
+                        &:not(:last-of-type)
+                        {
+                            margin-right: 10px;
+                        }
+    
+                        &:hover
+                        {
+                            color: $fblack-color;
+                            border-color: $border-strong-color;
+                        }
+                    }
+                }
+            }
+        }
     }
 }

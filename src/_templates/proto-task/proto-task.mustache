@@ -25,6 +25,24 @@
                 </div>
             </section>
 
+            {{ #hasUsage }}
+
+                <section class="block-section usage">
+                    <div class="block-section-header" title="Задачи, в решении которых используется эта прото-задача">
+                        <i class="fas fa-reply-all fa-flip-horizontal"></i>
+                        <span>Использование</span>
+                    </div>
+                    <div class="block-section-container task-list">
+                        <div class="wrapper">
+                            {{ #usage }}
+                                <a title="К задаче {{ . }}" href="{{{ site_root }}}tasks/{{ . }}/">{{ . }}</a>
+                            {{ /usage }}
+                        </div>
+                    </div>
+                </section>
+
+            {{ /hasUsage }}
+
             <div class="dark-magic-container">
                 <!-- [Демидович] Перед решением -->
                 <ins class="adsbygoogle ads ads--before-solution"

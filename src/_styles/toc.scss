@@ -26,6 +26,22 @@ h3
 
 h2.title + .chapter { margin-top: 30px !important; }
 
+.tasks-diff
+{
+    cursor: help;
+
+    margin-left: 10px;
+    padding: 3px 5px;
+
+    border: 1px solid $border-faint-color;
+    border-radius: $border-radius;
+
+    font-size: 80%;
+    color: $fmuted-color;
+
+    background: mix(white, black, 97.5%);
+}
+
 .chapter
 {
     margin-top: 60px;
@@ -70,22 +86,6 @@ h2.title + .chapter { margin-top: 30px !important; }
                 {
                     flex: 1;
                     text-decoration: none;
-
-                    .tasks-diff
-                    {
-                        cursor: help;
-
-                        margin-left: 10px;
-                        padding: 3px 5px;
-
-                        border: 1px solid $border-faint-color;
-                        border-radius: $border-radius;
-
-                        font-size: 80%;
-                        color: $fmuted-color;
-
-                        background: mix(white, black, 97.5%);
-                    }
                 }
 
                 i
@@ -110,10 +110,20 @@ h2.title + .chapter { margin-top: 30px !important; }
 
                 li
                 {
+                    display: flex;
+                    align-items: center;
+
+                    a { flex: 1; }
                     padding: 5px 0;
 
                     &:first-of-type { padding-top: 0; }
                     &:last-of-type  { padding-bottom: 0; }
+
+                    .tasks-diff
+                    {
+                        border: none;
+                        background: transparent;
+                    }
                 }
 
                 a

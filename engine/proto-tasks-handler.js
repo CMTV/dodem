@@ -1,3 +1,6 @@
+const G =       require('./global');
+
+const util =    require('./util');
 const tools =   require('./tools');
 
 const glob =    require('glob');
@@ -51,6 +54,10 @@ function genProtoTask(protoPath)
 
         task: task,
         solution: solution,
+
+        // Usage
+        hasUsage: !!(protoPath in tools.protoRefs),
+        usage: (protoPath in tools.protoRefs) ? tools.protoRefs[protoPath] : [],
 
         // Refs
         hasRefs: !!meta.refs,

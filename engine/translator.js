@@ -1,6 +1,11 @@
 const fs = require('fs');
 const p =  require('path');
 
+const REGEXPS =
+{
+    protoRef: /<p:\[(.+)\]>/gm
+}
+
 const TRANSLATORS =
 {
     paragraph: (text) =>
@@ -56,4 +61,8 @@ function translate(text, translators)
     return text;
 }
 
-module.exports.translate = translate;
+module.exports =
+{
+    translate: translate,
+    REGEXPS: REGEXPS
+}

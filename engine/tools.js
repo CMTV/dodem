@@ -391,6 +391,8 @@ function getHtml(templateName, view, partials = null)
     return mustache.render(template, view, partials);
 }
 
+let protoRefs = {};
+
 function genAll(devMode = false)
 {
     let DATA = getIterateTasksData(devMode);
@@ -518,6 +520,17 @@ function genAll(devMode = false)
                 });
             }
 
+            task.meta.proto.forEach((protoPath) =>
+            {
+                if (!(protoPath in protoRefs))
+                {
+                    protoRefs[protoPath] = [];
+                }
+
+                if (!protoRefs[protoPath].includes(taskNumber))
+                    protoRefs[protoPath].push(taskNumber);
+            });
+
             //
 
             let view =
@@ -573,5 +586,6 @@ function genAll(devMode = false)
 module.exports =
 {
     genAll: genAll,
-    genHtml: getHtml
+    genHtml: getHtml,
+    protoRefs: protoRefs
 }

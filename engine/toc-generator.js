@@ -88,7 +88,18 @@ function getCustomTocs(location)
         Object.keys(customToc[_location]).forEach((tocItem) =>
         {
             if (location === _location)
-                customTocs.push(Object.assign({ id: tocItem, link: location + "/" + tocItem }, customToc[_location][tocItem]));
+            {
+                let tStart;
+                let tEnd;
+
+                tStart = customToc[_location][tocItem].tasks[0];
+                if (typeof tStart === 'string') tStart = parseInt(tStart.split('-')[0]);
+
+                tEnd = customToc[_location][tocItem].tasks[customToc[_location][tocItem].tasks.length - 1];
+                if (typeof tEnd === 'string') tEnd = parseInt(tEnd.split('-')[1]);
+
+                customTocs.push(Object.assign({ id: tocItem, link: location + "/" + tocItem, tStart: tStart, tEnd: tEnd }, customToc[_location][tocItem]));
+            }
         });
     });
 
