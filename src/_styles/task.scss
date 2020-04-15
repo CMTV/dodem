@@ -424,7 +424,15 @@
                     display: flex;
                     align-items: center;
 
-                    .header-inner { flex: 1; }
+                    .header-inner 
+                    {
+                        flex: 1;
+
+                        .display-math > .MathJax
+                        {
+                            margin: 0;
+                        }
+                    }
 
                     .toggle-button
                     {

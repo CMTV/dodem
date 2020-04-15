@@ -12,26 +12,6 @@ $$ +\infty +\infty \leq +\infty \leq +\infty +\infty $$
 
 ---
 
-**Лемма**
-
-В этой задаче мы будем пользоваться следующим равенством:
-
-$$ \overline{\limn} x_n = -\underline{\limn} -x_n $$
-
-У нас есть множество $X$ частичных пределов последовательности $x_n$.
-
-При этом
-
-$$ \overline{\limn} x_n = \sup X \qquad \underline{\limn} x_n = \inf X $$
-
-потому что, например, наибольший частичный предел больше любого другого частичного предела, но принадлежит $X$, поэтому он — точная верхняя грань $X$.
-
-В [задаче 18](/tasks/18) доказывались два равенства:
-
-$$ \text{а) } \inf -X = -\sup X; \qquad \text{б) } \sup -X = -\inf X $$
-
----
-
 **Доказательство а)**
 
 *Доказательство первой части неравенства*
@@ -63,7 +43,7 @@ $$ \limn y_{q_n} = B $$
 
 $$ \limn x_{r_n} = C $$
 
-Из этих же номеров $r_n$ рассмотрим последовательность $y_{r_n}$. Это подпоследовательность $y_{q_n}$, а значит, по следствию из прото-задачи <p:[sequences/limits/limit-point]> $y_{r_n}$ имеет такой же предел, что и $y_{q_n}$:
+Из этих же номеров $r_n$ рассмотрим последовательность $y_{r_n}$. Это подпоследовательность $y_{q_n}$, а значит, по прото-задаче <p:[sequences/limits/limit-point]> $y_{r_n}$ имеет такой же предел, что и $y_{q_n}$:
 
 $$ \limn y_{r_n} = \limn y_{q_n} = B $$
 
@@ -92,7 +72,7 @@ $$ \underline{\limn} x_n + \underline{\limn} y_n \leq \underline{\limn} (x_n + y
 
 $$ \underline{\limn} (x_n + y_n) \leq \underline{\limn}x_n + \overline{\limn} y_n $$
 
-По доказанной выше лемме:
+По прото-задаче <p:[sequences/limits/max-min-limit-points]>:
 
 $$ \overline{\limn} y_n = -\underline{\limn} (-y_n) $$
 
@@ -120,7 +100,7 @@ $\blacksquare$
 
 **Доказательство б)**
 
-Снова воспользуемся леммой:
+Снова воспользуемся прото-задачей прото-задаче <p:[sequences/limits/max-min-limit-points]>:
 
 $$ \overline{\limn} (x_n + y_n) = -\underline{\limn} (-x_n - y_n) = -\underline{\limn} (-y_n -x_n) $$
 
@@ -132,7 +112,7 @@ $$\small \underline{\limn} (-x_n) + \underline{\limn} (-y_n) \leq \underline{\li
 
 $$\small -\underline{\limn} (-x_n) - \underline{\limn} (-y_n) \geq -\underline{\limn} (-y_n -x_n) \geq -\underline{\limn} (-y_n) - \overline{\limn} (-x_n) $$
 
-Применяем лемму для каждого слагаемого:
+Применяем прото-задачу <p:[sequences/limits/max-min-limit-points]> для каждого слагаемого:
 
 $$ \overline{\limn} (x_n) + \overline{\limn} (y_n) \geq \overline{\limn} (y_n + x_n) \geq \overline{\limn} (y_n) + \underline{\limn} (x_n) $$
 

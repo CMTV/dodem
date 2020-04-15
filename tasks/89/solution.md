@@ -1,1 +1,1 @@
-Смотрите следствие прото-задачи <p:[sequences/limits/limit-point]>.
+Смотрите прото-задачу <p:[sequences/limits/limit-point]>.
