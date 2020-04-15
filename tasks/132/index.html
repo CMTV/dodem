@@ -7,18 +7,18 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>130 | Демидович. Решения</title>
-        <meta name="description" content="Пусть$$ \limn x_n y_n &#x3D; 0. $$Следует ли отсюда, что либо $\lim\limits_{n\to\infty} x_n &#x3D; 0$, либо $\lim\limits_{n\to\infty} y_n &#x3D; 0$?Рассмотреть пример: $x_n &#x3D; \frac{1+(-1)^n}{2}$, $y_n &#x3D; \frac{1-(-1)^n}{2} \ (n&#x3D;1,2,\ldots)$.">
+        <title>132 | Демидович. Решения</title>
+        <meta name="description" content="Пусть $x_n\geq 0$ и $y_n \geq 0 \ (n&#x3D;1,2,\ldots)$. Доказать, что:$$ \text{а) } \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) \leq \underline{\limn}x_n \cdot \overline{\limn} y_n; $$$$ \text{б) } \underline\limn x_n \cdot \overline\limn y_n \leq \overline{\limn} (x_n y_n) \leq \overline\limn x_n \cdot \overline\limn y_n $$Построить примеры, когда в этих соотноше">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="130 | Демидович. Решения">
-        <meta property="og:description" content="Пусть$$ \limn x_n y_n &#x3D; 0. $$Следует ли отсюда, что либо $\lim\limits_{n\to\infty} x_n &#x3D; 0$, либо $\lim\limits_{n\to\infty} y_n &#x3D; 0$?Рассмотреть пример: $x_n &#x3D; \frac{1+(-1)^n}{2}$, $y_n &#x3D; \frac{1-(-1)^n}{2} \ (n&#x3D;1,2,\ldots)$.">
+        <meta property="og:title" content="132 | Демидович. Решения">
+        <meta property="og:description" content="Пусть $x_n\geq 0$ и $y_n \geq 0 \ (n&#x3D;1,2,\ldots)$. Доказать, что:$$ \text{а) } \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) \leq \underline{\limn}x_n \cdot \overline{\limn} y_n; $$$$ \text{б) } \underline\limn x_n \cdot \overline\limn y_n \leq \overline{\limn} (x_n y_n) \leq \overline\limn x_n \cdot \overline\limn y_n $$Построить примеры, когда в этих соотноше">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/tasks/130">
-        <meta property="og:url" content="https://dodem.ru/tasks/130">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/132">
+        <meta property="og:url" content="https://dodem.ru/tasks/132">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -137,7 +137,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>130</span>
+                    <span>132</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -154,10 +154,10 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть</p>
-<p class="display-math">$$ \limn x_n y_n = 0. $$</p>
-<p>Следует ли отсюда, что либо $\lim\limits_{n\to\infty} x_n = 0$, либо $\lim\limits_{n\to\infty} y_n = 0$?</p>
-<p>Рассмотреть пример: $x_n = \frac{1+(-1)^n}{2}$, $y_n = \frac{1-(-1)^n}{2} \ (n=1,2,\ldots)$.</p>
+                        <p>Пусть $x_n\geq 0$ и $y_n \geq 0 \ (n=1,2,\ldots)$. Доказать, что:</p>
+<p class="display-math">$$ \text{а) } \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) \leq \underline{\limn}x_n \cdot \overline{\limn} y_n; $$</p>
+<p class="display-math">$$ \text{б) } \underline\limn x_n \cdot \overline\limn y_n \leq \overline{\limn} (x_n y_n) \leq \overline\limn x_n \cdot \overline\limn y_n $$</p>
+<p>Построить примеры, когда в этих соотношениях имеют место строгие неравенства.</p>
 
                     </div>
                 </div>
@@ -196,37 +196,67 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Нет, не следует. Для доказательства этого нужно рассмотреть указанный в условии пример.</p>
+                        <p><strong>Замечание</strong></p>
+<p>По определению частичного предела он может быть как конечным, так и бесконечным.
+В этой задаче все частичные пределы в неравенствах в условии предполагаются <em>конечными</em>.</p>
+<p>В противном случае можно рассмотреть последовательности $x_n = y_n = n$. Эти последовательности, а значит и любые их подпоследовательности стремятся к $+\infty$.
+Это приводит к вот такому бессмысленному неравенству, так как бесконечности не являются в полной мере числами и их &quot;нельзя&quot; складывать и сравнивать в обычном смысле:</p>
+<p class="display-math">$$ +\infty +\infty \leq +\infty \leq +\infty +\infty $$</p>
+<p>Поэтому далее мы считаем, что речь в задании идет о конечных наибольших/наименьших частичных пределах.</p>
 <hr>
-<p><strong>Расходимость $x_n$ и $y_n$</strong></p>
-<p>Итак, нам дано, что</p>
-<p class="display-math">$$ x_n = \frac{1+(-1)^n}{2} = 0, 1, 0, 1, \ldots $$</p>
-<p>Из этой последовательности можно выделить две подпоследовательности с четными и нечетными номерами, которые сходятся к двум разным пределам:</p>
-<p class="display-math">\begin{gather*}
-    x_{2n} = \frac{1+\left((-1)^2\right)^n}{2} = \frac{1 + 1^n}{2} = \frac{2}{2} = 1
-    \\[5px]
-    \limn x_{2n} = \limn 1 = 1
-    \\[5px]
-    \\[5px]
-    x_{2n + 1} = \frac{1+(-1)\left((-1)^2\right)^n}{2} = \frac{1-1}{2} = \frac{0}{2} = 0
-    \\[5px]
-    \limn x_{2n+1} = \limn 0 = 0
-\end{gather*}</p>
-<p>Итак, последовательность $x_n$ имеет две разные предельные точки. Это значит, что она расходится, так как если бы она сходилась, то по прото-задаче &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; имела бы только одну предельную точку. А мы показали, что их две.</p>
-<p>Аналогично показывается, что</p>
-<p class="display-math">$$ y_n = \frac{1-(-1)^n}{2} $$</p>
-<p>тоже расходится.</p>
+<p><strong>Доказательство а)</strong></p>
+<p><em>Доказательство первой части неравенства</em></p>
+<p class="display-math">$$ \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) $$</p>
+<p>По условию</p>
+<p class="display-math">$$ \underline{\limn} (x_n y_n) = A $$</p>
+<p>Это означает, что существует некоторая подпоследовательность $x_{p_n} y_{p_n}$ такая, что</p>
+<p class="display-math">$$ \limn (x_{p_n} y_{p_n}) = A $$</p>
+<p>В условии фигурируют наибольший и наименьший частичные пределы $x_n$. Это означает, что $x_n$ ограничена, потому что если она не ограничена, то, согласно <a href="/tasks/126">задаче 126</a>, в ней можно выделить
+подпоследовательность $x_{t_n}\to\infty$, а это значит, что $\overline{\lim\limits_{n\to\infty}} x_n = \underline{\lim\limits_{n\to\infty}} x_n = \infty$. Тут получаем противоречие с замечанием выше, согласно которому мы считаем, что приведенные в условии частичные пределы конечные. Раз $x_n$ ограничена, то и $x_{p_n}$ ограничена.</p>
+<p>Аналогично рассуждая, получаем, что $y_n$, как и $y_{p_n}$ ограничена.</p>
+<p>Итак, последовательности $x_{p_n}$ и $y_{p_n}$ ограничены.</p>
+<p>Раз $y_{p_n}$ ограничена, то, по <a href="/tasks/125">задаче 125</a> в ней можно выделить сходящуюся подпоследовательность $y_{q_n}$, в которой номера $q_n$ берутся из номеров $p_n$.</p>
+<p class="display-math">$$ \limn y_{q_n} = B $$</p>
+<p>Из этих же номеров $q_n$ рассмотрим последовательность $x_{q_n}$. Это подпоследовательность $x_{p_n}$, а значит и $x_{q_n}$ ограничена. Раз $x_{q_n}$ ограничена, то по задаче 125 в ней можно выделить сходящуюся
+подпоследовательность $x_{r_n}$, в которой номера $r_n$ берутся из номеров $q_n$.</p>
+<p class="display-math">$$ \limn x_{r_n} = C $$</p>
+<p>Из этих же номеров $r_n$ рассмотрим последовательность $y_{r_n}$. Это подпоследовательность $y_{q_n}$, а значит, по прото-задаче &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; $y_{r_n}$ имеет такой же предел, что и $y_{q_n}$:</p>
+<p class="display-math">$$ \limn y_{r_n} = \limn y_{q_n} = B $$</p>
+<p>Итак, получили две сходящиеся последовательности $x_{r_n}$ и $y_{r_n}$, состоящие из одинаковых номеров. Раз номера одинаковые, то последовательность $x_{r_n} y_{r_n}$ является подпоследовательностью сходящейся
+последовательности $x_{p_n} y_{p_n}$, а значит</p>
+<p class="display-math">$$ \limn (x_{r_n} y_{r_n}) = \limn (x_{p_n} y_{p_n}) = \underline{\limn} (x_n y_n) = A $$</p>
+<p>$x_{r_n}$ — сходящаяся подпоследовательность $x_n$, а значит, по определению наименьшего частичного предела:</p>
+<p class="display-math">$$ \underline{\limn} x_n \leq \limn x_{r_n} $$</p>
+<p>Аналогично для $y_{r_n}$:</p>
+<p class="display-math">$$ \underline{\limn} y_n \leq \limn y_{r_n} $$</p>
+<p>Умножим друг на друга эти неравенства:</p>
+<p class="display-math">$$ \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \limn x_{r_n} \cdot \limn y_{r_n} = \underbrace{\limn (x_{r_n} y_{r_n})}_{\large = \underline{\limn} (x_n y_n)} $$</p>
+<p class="display-math">$$ \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) $$</p>
+<p>Мы доказали первую половину неравенства.</p>
+<p><em>Доказательство второй части неравенства</em></p>
+<p class="display-math">$$ \underline{\limn} (x_n y_n) \leq \underline{\limn}x_n \cdot \overline{\limn} y_n $$</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limits/max-min-limit-points">Связь наибольшего и наименьшего частичных пределов</a>&quot;:</p>
+<p class="display-math">$$ \underline\limn \frac{1}{y_n} = \frac{1}{\overline\limn y_n} $$</p>
+<p>Тогда, согласно уже доказанной первой части неравенства выполняется</p>
+<p class="display-math">$$ \underline{\limn} (x_n y_n) \cdot \underline{\limn} \frac{1}{y_n} \leq \underline\limn \left(x_n y_n \cdot \frac{1}{y_n}\right) $$</p>
+<p class="display-math">$$ \underline{\limn} (x_n y_n) \cdot \underline{\limn} \frac{1}{y_n} \leq \underline{\limn} x_n $$</p>
+<p>Поделим обе части на $\underline{\limn} \frac{1}{y_n}$:</p>
+<p class="display-math">$$ \underline{\limn} (x_n y_n) \leq \underline{\limn} x_n \cdot \underbrace{\frac{1}{\underline{\limn} \frac{1}{y_n}}}_{\large = \overline{\limn} y_n} $$</p>
+<p class="display-math">$$ \underline{\limn} (x_n+y_n) \leq \underline{\limn} x_n \cdot \overline{\limn} y_n $$</p>
+<p>Мы доказали вторую половину неравенства.</p>
+<p>Итак, доказали, что</p>
+<p class="display-math">$$ \underline{\limn} x_n \cdot \underline{\limn} y_n \leq \underline{\limn} (x_n y_n) \leq \underline{\limn}x_n \cdot \overline{\limn} y_n $$</p>
+<p>$\blacksquare$</p>
 <hr>
-<p><strong>Сходимость $x_n y_n$</strong></p>
-<p>Найдем предел произведения $x_n$ и $y_n$:</p>
-<p class="display-math">\begin{gather*}
-    \limn x_n y_n = \limn \frac{(1+(-1)^n)(1-(-1)^n)}{4} =
-    \\[5px]
-    = \limn \frac{1^2 - \left((-1)^2\right)^n}{4} = \limn \frac{1^2 - 1^n}{4} = \limn \frac{0}{4} = \limn 0 = 0
-\end{gather*}</p>
-<p class="display-math">$$ \limn x_n y_n = 0 $$</p>
-<hr>
-<p>Итак, на конкретном примере мы показали, что может быть так, что $\lim\limits_{n\to\infty} x_n y_n = 0$, но при этом $x_n$ и $y_n$ расходятся.</p>
+<p><strong>Доказательство б)</strong></p>
+<p>Воспользуемся уже доказанным неравенством в пункте а):</p>
+<p class="display-math">$$ \underline\limn \frac{1}{x_n} \cdot \underline\limn \frac{1}{y_n} \leq \underline\limn \frac{1}{x_n y_n} \leq \underline\limn \frac{1}{y_n} \cdot \overline\limn \frac{1}{x_n} $$</p>
+<p>&quot;Перевернем&quot; все части неравенства:</p>
+<p class="display-math">$$ \frac{1}{\underline\limn \frac{1}{x_n}} \cdot \frac{1}{\underline\limn \frac{1}{y_n}} \geq \frac{1}{\underline\limn \frac{1}{x_n y_n}} \geq \frac{1}{\underline\limn \frac{1}{y_n}} \cdot \frac{1}{\overline\limn \frac{1}{x_n}} $$</p>
+<p>Применяем прото-задачу &quot;<a href="/proto/sequences/limits/max-min-limit-points">Связь наибольшего и наименьшего частичных пределов</a>&quot; для каждого множителя:</p>
+<p class="display-math">$$ \overline\limn x_n \cdot \overline\limn y_n \geq \overline\limn (x_n y_n) \geq \overline\limn y_n \cdot \underline\limn x_n $$</p>
+<p class="display-math">$$ \overline\limn y_n \cdot \underline\limn x_n \leq \overline\limn (x_n y_n) \leq \overline\limn x_n \cdot \overline\limn y_n $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -283,6 +313,12 @@
                                 </a>
                             </dt>
                             <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/max-min-limit-points" title="Связь наибольшего и наименьшего частичных пределов" target="_blank">
+                                    Связь наибольшего и наименьшего частичных пределов
+                                </a>
+                            </dt>
+                            <dd></dd>
                     
                     </dl>
                 </div>
@@ -291,14 +327,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/131/" title="Следующая задача" class="next">
-                        <span class="label">131</span>
+                    <a href="../../tasks/133/" title="Следующая задача" class="next">
+                        <span class="label">133</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/129/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/131/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">129</span>
+                        <span class="label">131</span>
                     </a>
             </section>
         </section>

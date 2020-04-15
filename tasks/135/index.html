@@ -195,18 +195,12 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>В пункте б) <a href="/tasks/134">задачи 134</a> мы доказали, что для $x_n\geq 0$ и любой $y_n$ выполняется равенство</p>
-<p class="display-math">$$ \overline{\limn} x_n y_n = \overline{\limn} x_n \cdot \overline{\limn} y_n, $$</p>
-<p>то $x_n$ сходится.</p>
-<hr>
-<p>Возьмем теперь за $y_n = \frac{1}{x_n}$.</p>
-<p class="display-math">$$ \overline{\limn} x_n \frac{1}{x_n} = \overline{\limn} 1 = 1 $$</p>
-<p>В то же время, по условию нам дано, что</p>
-<p class="display-math">$$ \overline{\limn} x_n \cdot \overline{\limn} \frac{1}{x_n} = 1 $$</p>
-<p>Поэтому</p>
-<p class="display-math">$$ \overline{\limn} x_n \frac{1}{x_n} = 1 = \overline{\limn} x_n \cdot \overline{\limn} \frac{1}{x_n} $$</p>
-<p class="display-math">$$ \overline{\limn} x_n \frac{1}{x_n} = \overline{\limn} x_n \cdot \overline{\limn} $$</p>
-<p>Как мы показали в начале решения, это означает, что $x_n$ — сходящаяся последовательность.</p>
+                        <p>Делим обе части равенства на $\overline\limn \frac{1}{x_n}$:</p>
+<p class="display-math">$$ \overline\limn x_n = \frac{1}{\overline\limn \frac{1}{x_n}} $$</p>
+<p>По прото-задаче &quot;<a href="/proto/sequences/limits/max-min-limit-points">Связь наибольшего и наименьшего частичных пределов</a>&quot;</p>
+<p class="display-math">$$ \overline\limn x_n = \underbrace{\frac{1}{\overline\limn \frac{1}{x_n}}}_{\large = \underline\limn x_n} $$</p>
+<p class="display-math">$$ \overline\limn x_n = \underline\limn x_n $$</p>
+<p>Мы показали, что у $x_n$ есть только одна предельная точка, а это, по прото-задаче &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; означает, что $x_n$ сходится.</p>
 
                     </div>
 
@@ -249,16 +243,42 @@
             </div>
 
 
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/max-min-limit-points" title="Связь наибольшего и наименьшего частичных пределов" target="_blank">
+                                    Связь наибольшего и наименьшего частичных пределов
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
+                                    Единственность предельной точки
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
 
             <section class="nav">
-                    <a href="../../tasks/137/" title="Следующая задача" class="next">
-                        <span class="label">137</span>
+                    <a href="../../tasks/136/" title="Следующая задача" class="next">
+                        <span class="label">136</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/131/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/134/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">131</span>
+                        <span class="label">134</span>
                     </a>
             </section>
         </section>
