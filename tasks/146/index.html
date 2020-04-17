@@ -7,18 +7,18 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>26 | Демидович. Решения</title>
-        <meta name="description" content="$$ |x+2| + |x-2| \leq 12 $$">
+        <title>146 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что последовательность$$ x_n &#x3D; 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} - \ln n \ (n&#x3D;1,2,\ldots) $$сходится.Таким образом, имеет место формула$$ 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} &#x3D; C + \ln n + \varepsilon_n, $$где $C &#x3D; 0.577216\ldots$ — так называемая *постоянная Эйлера* и $\varepsilon_n \to 0$ при $n\to\infty$.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="26 | Демидович. Решения">
-        <meta property="og:description" content="$$ |x+2| + |x-2| \leq 12 $$">
+        <meta property="og:title" content="146 | Демидович. Решения">
+        <meta property="og:description" content="Доказать, что последовательность$$ x_n &#x3D; 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} - \ln n \ (n&#x3D;1,2,\ldots) $$сходится.Таким образом, имеет место формула$$ 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} &#x3D; C + \ln n + \varepsilon_n, $$где $C &#x3D; 0.577216\ldots$ — так называемая *постоянная Эйлера* и $\varepsilon_n \to 0$ при $n\to\infty$.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/tasks/26">
-        <meta property="og:url" content="https://dodem.ru/tasks/26">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/146">
+        <meta property="og:url" content="https://dodem.ru/tasks/146">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -137,7 +137,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>26</span>
+                    <span>146</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -146,15 +146,21 @@
                             <span class="title">Введение в анализ</span>
                         </div>
 
-                        <div title="Вещественные числа" class="paragraph">
-                            └─ <span class="accent">§1</span>
-                            <span class="title">Вещественные числа</span>
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
                         </div>
 
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p class="display-math">$$ |x+2| + |x-2| \leq 12 $$</p>
+                        <p>Доказать, что последовательность</p>
+<p class="display-math">$$ x_n = 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} - \ln n \ (n=1,2,\ldots) $$</p>
+<p>сходится.</p>
+<p>Таким образом, имеет место формула</p>
+<p class="display-math">$$ 1 + \frac{1}{2} + \frac{1}{3} + \ldots + \frac{1}{n} = C + \ln n + \varepsilon_n, $$</p>
+<p>где $C = 0.577216\ldots$ — так называемая <em>постоянная Эйлера</em> и $\varepsilon_n \to 0$ при $n\to\infty$.</p>
+
                     </div>
                 </div>
             </section>
@@ -192,42 +198,59 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Воведем обе части в квадрат (см. пункт 3 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенстве</a>&quot;):</p>
+                        <p><strong>Доказательство сходимости</strong></p>
+<p>Докажем, что последовательность $x_n$ фундаментальная, то есть</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N, p > 0 \ : \ |x_{n+p} - x_{n}| < \varepsilon $$</p>
+<p>Рассмотрим неравенство в конце:</p>
+<p class="display-math">$$ |x_{n+p} - x_{n}| < \varepsilon $$</p>
+<p class="display-math">$$ \left| 1 + \ldots + \frac{1}{n + p} - \ln (n+p) - \left( 1 + \ldots + \frac{1}{n} - \ln n \right) \right| < \varepsilon $$</p>
+<p class="display-math">$$ \left| \frac{1}{n+p} -\left( \ln (n+p) - \ln n \right) \right| < \varepsilon $$</p>
+<p>Воспользуемся свойством модулей и усилим неравенство (см. прото-задачу &quot;<a href="/proto/abs-properties">Свойства модуля</a>&quot;):</p>
+<p class="display-math">$$ \left| \frac{1}{n+p} -\left( \ln (n+p) - \ln n \right) \right| \leq \left| \frac{1}{n+p} \right| + \left| \ln(n+p) - \ln n \right| < \varepsilon $$</p>
+<p class="display-math">$$ \frac{1}{n+p} + \left| \ln(n+p) - \ln n \right| < \varepsilon $$</p>
+<p>В прото-задаче &quot;<a href="/proto/sequences/limits/harmonic-series">Расходимость гармонического ряда</a>&quot; мы доказали, что</p>
+<p class="display-math">$$ \ln (n+1) - \ln n < \frac{1}{n} $$</p>
+<p>Поэтому запишем так:</p>
 <p class="display-math">\begin{gather*}
-    |x+2| + |x-2| \leq 12 \Leftrightarrow \\ \Leftrightarrow (x+2)^2 + 2|x+2||x-2| + (x-2)^2 \leq 144
-\end{gather*}</p>
-<p>Воспользуемся свойством модулей</p>
-<p class="display-math">$$ |a||b| = |a\cdot b| $$</p>
-и объединим модули $|x+2|$ и $|x-2|$ в середине левой части неравенства.
-<p class="display-math">\begin{gather*}
-    (x+2)^2 + 2|x^2-4| + (x-2)^2 \leq 144
+    \ln (n+p) - \ln n =
     \\[5px]
-    2x^2 + 8 + 2|x^2-4| \leq 144
-    \\[5px]
-    x^2 + 4 + |x^2-4| \leq 72
-    \\[5px]
-    |x^2 - 4| \leq 68 - x^2
+    \small \underbrace{\ln(n+1) - \ln n}_{\Large < \frac{1}{n}} + \underbrace{\ln(n+2) - \ln(n+1)} _{\Large < \frac{1}{n+1}} + \ldots + \underbrace{\ln(n+p) - \ln(n+p-1)} _{\Large < \frac{1}{n+p -1}}
 \end{gather*}</p>
-<p>Теперь разложим это неравенство (пункт 1 прото-задачи &quot;Упрощение модулей в неравенстве&quot;):</p>
-<p class="display-math">$$ |x^2 - 4| \leq 68 - x^2 \Leftrightarrow \begin{cases} x^2-4 \leq 68 - x^2 \\ x^2-4 \geq x^2 - 68 \end{cases} $$</p>
-<p>Из второго неравенства ничего полезного не получаем:</p>
-<p class="display-math">\begin{gather*}
-    x^2 - 4 \geq x^2 - 68
-    \\
-    -4 \geq -68
-\end{gather*}</p>
-<p>Теперь разберем первое неравенство:</p>
-<p class="display-math">$$ x^2 - 4 \leq 68 - x^2 $$</p>
-<p>Прибавим к обеим сторонам $x^2$:</p>
-<p class="display-math">\begin{gather*}
-    2x^2 - 4 \leq 68
-    \\
-    2x^2 \leq 72
-    \\
-    x^2 \leq 36
-\end{gather*}</p>
-<p>Заметим, что по пункту 3 прото-задачи &quot;Упрощение модулей в неравенстве&quot; неравенство $x^2 \leq 36$ можно представить в виде</p>
-<p class="display-math">$$ |x| \leq 6 $$</p>
+<p>Итак:</p>
+<p class="display-math">$$ \ln (n+p) - \ln < \underbrace{\frac{1}{n} + \frac{1}{n+1} + \ldots + \frac{1}{n+p-1}}_{\large p \text{ слагаемых}} $$</p>
+<p>Мы можем увеличить кажду дробь справа, уменьшив ее знаменатель до $n$:</p>
+<p class="display-math">$$ \ln (n+p) - \ln < \frac{1}{n} + \ldots \frac{1}{n+p-1} \leq \frac{1}{n} + \frac{1}{n} + \ldots $$</p>
+<p class="display-math">$$ \ln (n+p) - \ln < \underbrace{\frac{1}{n} + \frac{1}{n} + \ldots}_{\large p \text{ слагаемых}} $$</p>
+<p class="display-math">$$ \ln (n+p) - \ln < \frac{p}{n} $$</p>
+<p>Возвращаемся к нашему неравенству с $\varepsilon$:</p>
+<p class="display-math">$$ \frac{1}{n+p} + \underbrace{\left| \ln(n+p) - \ln n \right|}_{\large < \frac{p}{n}} < \varepsilon $$</p>
+<p class="display-math">$$ \frac{1}{n+p} + \left| \ln(n+p) - \ln n \right| \leq \frac{1}{n+p} + \frac{p}{n} < \varepsilon $$</p>
+<p class="display-math">$$ \frac{1}{n+p} + \frac{p}{n} = \frac{n+p}{(n+p)n} = \frac{1}{n} < \varepsilon $$</p>
+<p class="display-math">$$ \frac{1}{n} < \varepsilon $$</p>
+<p>Откуда</p>
+<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
+<p>Итак по определению фундаментальной последовательности, для любого $\varepsilon &gt; 0$ нам достаточно взять $N$ по следующей формуле:</p>
+<p class="display-math">$$ N(\varepsilon) = \ceil{\frac{1}{\varepsilon}} $$</p>
+<p>Тогда, для любого $n &gt; N$ и $p&gt;0$ будет выполняться</p>
+<p class="display-math">$$ n\geq N+1 > N = \ceil{\frac{1}{\varepsilon}} \geq \frac{1}{\varepsilon} $$</p>
+<p class="display-math">$$ n > \frac{1}{\varepsilon} $$</p>
+<p>А значит и</p>
+<p class="display-math">$$ |x_{n+p} - x_n| < \varepsilon $$</p>
+<p>Итак, мы доказали, что $x_n$ — фундаментальная последовательность. Согласно критерию Коши любая фундаментальная последовательность сходится. Значит и $x_n$ тоже сходится:</p>
+<p class="display-math">$$ \limn x_n = C $$</p>
+<hr>
+<p><strong>Вывод формулы</strong></p>
+<p>Рассмотрим последовательность $\varepsilon_n = x_n - C$. Найдем ее предел:</p>
+<p class="display-math">$$ \limn \varepsilon_n = \limn (x_n - C) = \limn x_n - \limn C = C - C = 0 $$</p>
+<p class="display-math">$$ \limn \varepsilon_n = 0 $$</p>
+<p>Рассмотрим теперь произвольный член $n$ последовательности $\varepsilon_n$:</p>
+<p class="display-math">$$ \varepsilon_n = x_n - C $$</p>
+<p class="display-math">$$ x_n = C + \varepsilon_n $$</p>
+<p>Распишем $x_n$:</p>
+<p class="display-math">$$ 1 + \frac{1}{2} + \ldots + \frac{1}{n} - \ln n = C + \varepsilon_n $$</p>
+<p class="display-math">$$ 1 + \frac{1}{2} + \ldots + \frac{1}{n} = C + \ln n + \varepsilon_n $$</p>
+<p>Итак, мы получили формулу из условия. Причем $\varepsilon_n \to 0$ при $n\to\infty$, как мы показали выше.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -278,11 +301,17 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
-                                    Упрощение модулей в неравенствах
+                                <a href="/proto/abs-properties" title="Свойства модуля" target="_blank">
+                                    Свойства модуля
                                 </a>
                             </dt>
-                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
+                            <dd>Самые полезные и часто требующиеся свойства модуля с подробными и понятными доказательствами.</dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/harmonic-series" title="Расходимость гармонического ряда" target="_blank">
+                                    Расходимость гармонического ряда
+                                </a>
+                            </dt>
+                            <dd>Доказательство расходимости гармонического ряда с помощью второго замечательного предела.</dd>
                     
                     </dl>
                 </div>
@@ -291,14 +320,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/27/" title="Следующая задача" class="next">
-                        <span class="label">27</span>
+                    <a href="../../tasks/147/" title="Следующая задача" class="next">
+                        <span class="label">147</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/25/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/145/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">25</span>
+                        <span class="label">145</span>
                     </a>
             </section>
         </section>

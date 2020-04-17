@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Пусть $x_n \\ (n=1,2,\\ldots)$ — последовательность чисел, определяемая следующей формулой:</p>\n<p class=\"display-math\">$$ x_0 > 0, \\ x_{n+1} = \\frac{1}{2}\\left( x_n + \\frac{1}{x_n} \\right) \\quad (n=0,1,2,\\ldots). $$</p>\n<p>Доказать, что $\\limn x_n = 1$.</p>\n"}
