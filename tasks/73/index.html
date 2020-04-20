@@ -4,39 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>Предельный переход в показательных и логарифмических функциях | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="Пусть:
-$$ y_n &#x3D; a^{x_n}, \ a\neq 1, \ a &gt; 0 $$
-
-Тогда выполняется:
-
-$$ \exists \lim_{n\to\infty} x_n &#x3D; B \Leftrightarrow \exists \lim_{n\to\infty} y_n &#x3D; a^B $$
-
----
-
-$$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
+        <title>73 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что число $e$ иррационально.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="Предельный переход в показательных и логарифмических функциях | Прото-задача | Демидович. Решения">
-        <meta property="og:description" content="Пусть:
-$$ y_n &#x3D; a^{x_n}, \ a\neq 1, \ a &gt; 0 $$
-
-Тогда выполняется:
-
-$$ \exists \lim_{n\to\infty} x_n &#x3D; B \Leftrightarrow \exists \lim_{n\to\infty} y_n &#x3D; a^B $$
-
----
-
-$$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
+        <meta property="og:title" content="73 | Демидович. Решения">
+        <meta property="og:description" content="Доказать, что число $e$ иррационально.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/proto/sequences/limits/exp-log-transition">
-        <meta property="og:url" content="https://dodem.ru/proto/sequences/limits/exp-log-transition">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/73">
+        <meta property="og:url" content="https://dodem.ru/tasks/73">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -56,21 +38,21 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -88,14 +70,16 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>    </head>
-    <body class="page-proto-task">
+        <script src="../../scripts/dark-magic.js"></script>        
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
+    <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -123,7 +107,7 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -151,40 +135,30 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>73</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Предельный переход в показательных и логарифмических функциях
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть:</p>
-<p class="display-math">$$ y_n = a^{x_n}, \ a\neq 1, \ a > 0 $$</p>
-<p>Тогда выполняется:</p>
-<p class="display-math">$$ \exists \lim_{n\to\infty} x_n = B \Leftrightarrow \exists \lim_{n\to\infty} y_n = a^B $$</p>
-<hr>
-<p class="display-math">$$ \limn x_n = a \Rightarrow \limn \ln x_n = \ln a $$</p>
+                        <p>Доказать, что число $e$ иррационально.</p>
+
                     </div>
                 </div>
             </section>
-
-
-                <section class="block-section usage">
-                    <div class="block-section-header" title="Задачи, в решении которых используется эта прото-задача">
-                        <i class="fas fa-reply-all fa-flip-horizontal"></i>
-                        <span>Использование</span>
-                    </div>
-                    <div class="block-section-container task-list">
-                        <div class="wrapper">
-                                <a title="К задаче 57" href="../../../../tasks/57/">57</a>
-                                <a title="К задаче 63" href="../../../../tasks/63/">63</a>
-                                <a title="К задаче 65" href="../../../../tasks/65/">65</a>
-                                <a title="К задаче 140" href="../../../../tasks/140/">140</a>
-                        </div>
-                    </div>
-                </section>
 
 
             <div class="dark-magic-container">
@@ -199,12 +173,13 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -212,16 +187,51 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </div>
                 
                 <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
                     <div class="block-section-content">
-                        <p>TODO</p>
+                        <p>Докажем от противного. Пусть $e$ — рациональное число, то есть его можно представить в виде следующей дроби:</p>
+<p class="display-math">$$ e = \frac{p}{q}, \quad (p\in\mathbb{Z}, q\in\mathbb{N}) $$</p>
+<p>В <a href="/tasks/72">задаче 72</a> мы доказали, что</p>
+<p class="display-math">$$ e = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n} $$</p>
+<p>То есть</p>
+<p class="display-math">$$ \frac{p}{q} = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n} $$</p>
+<p class="display-math">$$ pn!n = qn!n + qn!n + 3\cdot 4\cdot n!nq + \ldots + nq + \Theta_n $$</p>
+<p>Число $pn!n$ — целое. Все слагаемые справа, кроме $\Theta_n$ — тоже целые числа. Выходит, и $\Theta_n$ должны быть целым числом (иначе не получится в результате суммы получить целое $pn!n$).</p>
+<p>Но мы знаем, что $0 &lt; \Theta_n &lt; 1$. Получили противоречие.</p>
+<p>Значит $e$ — иррациональное число.</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
                     <div class="reason-overlay">
+                        
+
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
                     </div>
                 </div>
             </section>
+
+
+            <div class="help-me">
+                <span class="message">Не разобрались в решении?</span>
+                <a class="help-button" href="https://mathit.ru" title="Задать вопрос на форуме">
+                    <i class="fas fa-question"></i>
+                    <span>Спросить</span>
+                </a>
+            </div>
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -235,6 +245,19 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </script>
             </div>
 
+
+
+            <section class="nav">
+                    <a href="../../tasks/74/" title="Следующая задача" class="next">
+                        <span class="label">74</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/72/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">72</span>
+                    </a>
+            </section>
         </section>
 
         <footer>

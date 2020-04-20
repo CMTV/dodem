@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+        <title>72 | Демидович. Решения</title>
+        <meta name="description" content="Зная, что$$ \limn \left(1 + \frac{1}{n}\right)^n &#x3D; e, $$доказать, что$$ \limn \left( 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \right) &#x3D; e. $$Вывести отсюда формулу$$ e &#x3D; 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n}, $$где $0 &lt; \Theta &lt; 1$, и вычислить число $e$ с точностью до $10^{-5}$. ">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+
+        <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
+
+        <meta property="og:title" content="72 | Демидович. Решения">
+        <meta property="og:description" content="Зная, что$$ \limn \left(1 + \frac{1}{n}\right)^n &#x3D; e, $$доказать, что$$ \limn \left( 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \right) &#x3D; e. $$Вывести отсюда формулу$$ e &#x3D; 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n}, $$где $0 &lt; \Theta &lt; 1$, и вычислить число $e$ с точностью до $10^{-5}$. ">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">
+
+        <link rel="canonical" href="https://dodem.ru/tasks/72">
+        <meta property="og:url" content="https://dodem.ru/tasks/72">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../../';
+        </script>
+
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>        
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
+    <body class="page-task">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="block-section task">
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>72</span>
+                </div>
+                <div class="block-section-container">
+                    <div class="task-nav">
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="block-section-content">
+                        <p>Зная, что</p>
+<p class="display-math">$$ \limn \left(1 + \frac{1}{n}\right)^n = e, $$</p>
+<p>доказать, что</p>
+<p class="display-math">$$ \limn \left( 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \right) = e. $$</p>
+<p>Вывести отсюда формулу</p>
+<p class="display-math">$$ e = 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n}, $$</p>
+<p>где $0 &lt; \Theta &lt; 1$, и вычислить число $e$ с точностью до $10^{-5}$.</p>
+
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
+                    <div title="Скрыть решение" class="action action--hide">
+                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
+                    </div>
+                </div>
+
+                <div class="block-section-header">
+                    <i class="fas fa-check"></i>
+                    <span>Решение</span>
+                </div>
+                
+                <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
+                    <div class="block-section-content">
+                        <p>Введем обозначение:</p>
+<p class="display-math">$$ x_n = \left(1 + \frac{1}{n}\right)^n $$</p>
+<hr>
+<p><strong>Лемма</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">$$ e > 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<p>В прото-задаче &quot;<a href="/proto/sequences/limits/second-wonderful">Второй замечательный предел (последовательность)</a>&quot; в процессе рассуждений мы получили следующее равенство:</p>
+<p class="display-math">$$ x_n = 2 + s_2 + s_3 + \ldots + s_k + \ldots + s_n, $$</p>
+<p>где</p>
+<p class="display-math">$$ s_k = \frac{1}{k!}\left( 1 - \frac{1}{n} \right)\left( 1-\frac{2}{n} \right)\ldots\left( 1-\frac{k-1}{n} \right) $$</p>
+<p>Составим неравенство, убрав из $x_n$ все слагаемые после $s_k$:</p>
+<p class="display-math">$$ x_n > 2 + s_2 + s_3 + \ldots + s_k $$</p>
+<p>Заметим, что количество слагаемых справа конечно.</p>
+<p>Возьмем предел обеих частей по прото-задаче &quot;<a href="/proto/sequences/limits/limits-inequality">Предельный переход в неравенстве</a>&quot;:</p>
+<p class="display-math">$$ \limn x_n \geq \limn (2 + s_2 + \ldots + s_k) $$</p>
+<p class="display-math">$$ e \geq 2 + \limn s_2 + \ldots + \limn s_k $$</p>
+<p>Найдем теперь предел</p>
+<p class="display-math">\begin{gather*}
+    \limn s_k = \frac{1}{k!}\left(1-\limn\frac{1}{n}\right)\ldots\left(1-(k-1)\limn\frac{1}{n}\right) =
+    \\[5px]
+    = \frac{1}{k!}(1-0)(1-0)\ldots(1-0) = \frac{1}{k!}
+\end{gather*}</p>
+<p class="display-math">$$ \limn s_k = \frac{1}{k!} $$</p>
+<p>Тогда</p>
+<p class="display-math">$$ e \geq 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{k!} $$</p>
+<p>Важно отметить, что мы зафиксировали $k$. Но можно фиксировать и $k+1$, $k+2$ и так далее, отодвигая при необходимости $n$ в $x_n$.
+Другими словами, для любого $n$ выполняется неравенство:</p>
+<p class="display-math">$$ e \geq 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<p>На самом деле, выполняется и более строгий вариант:</p>
+<p class="display-math">$$ e > 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<p>Действительно, справа стоит последовательность. Ее следующей член получается добавлением нового слагаемого $\frac{1}{(n+1)!}$, поэтому общая сумма только увеличится, то есть это строго возрастающая последовательность.
+Если бы какой-то член этой последовательности оказался бы равен $e$, то уже со следующего члена последовательность будет уже строго больше $e$. Получили противоречие. Значит, выполняется строгое неравенство.</p>
+<p>Итак,</p>
+<p class="display-math">$$ e > 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<hr>
+<p><strong>Доказательство сходимости</strong></p>
+<p>В прото-задачи &quot;<a href="/proto/sequences/limits/second-wonderful">Второй замечательный предел (последовательность)</a>&quot; в процессе рассуждений мы получили следующее неравенство:</p>
+<p class="display-math">$$ x_n < 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<p>Но в лемме выше мы показали, что</p>
+<p class="display-math">$$ 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \leq e $$</p>
+<p>Объединяем в одно цепное неравенство:</p>
+<p class="display-math">$$ x_n < 2 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \leq e $$</p>
+<p>Последовательность $x_n$ слева по определению сходится к $e$. &quot;Последовательность&quot; из $e$ справа тоже сходится к $e$.
+А значит, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже сходится к $e$:</p>
+<p class="display-math">$$ \limn \left( 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} \right) = e  $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Вывод формулы</strong></p>
+<p>Введем обозначение:</p>
+<p class="display-math">$$ y_n = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} $$</p>
+<p>Рассмотрим разницу:</p>
+<p class="display-math">$$ y_{n+p} - y_{n}, \quad (p>0) $$</p>
+<p class="display-math">\begin{gather*}
+    y_{n+p} - y_n = 2 + \frac{1}{2!} + \ldots + {1}{(n+p)!} - 2 - \frac{1}{2!} - \ldots - \frac{1}{n!} =
+    \\[5px]
+    = \frac{1}{(n+1)!} + \frac{1}{(n+2)!} + \ldots + \frac{1}{(n+p)!}
+\end{gather*}</p>
+<p class="display-math">$$ y_{n+p} - y_n = \frac{1}{(n+1)!} + \ldots + \frac{1}{(n+p)!} $$</p>
+<p>Отсюда очевидно, что $y_{n+p}-y_n &gt; 0$.</p>
+<p>Вынесем за скобки дробь $\frac{1}{(n+1)!}$:</p>
+<p class="display-math">$$ y_{n+p} - y_n = \frac{1}{(n+1)!}\left( 1 + \frac{1}{n+2} + \frac{1}{(n+2)(n+3)} + \ldots \right) $$</p>
+<p>В больших скобках справа в знаменателях можно заменить все скобки $(n+i)$ на $(n+2)$:</p>
+<p class="display-math">$$ y_{n+p} - y_n \leq \frac{1}{(n+1)!}\left( 1 + \frac{1}{n+2} + \frac{1}{(n+2)^2} + \ldots \right) $$</p>
+<p>В скобках имеем сумму $p$ членов геометрической прогрессии. Воспользуемся свойством, что если знаменатель $0 &lt; q &lt; 1$, то</p>
+<p class="display-math">$$ 1 + q + q^2 + \ldots + q^n < \frac{1}{1-q} \ (q < 1) $$</p>
+<details><summary><div class="header-inner">Доказательство</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Пусть $0 &lt; q &lt; 1$. Докажем, что</p>
+<p class="display-math">$$ 1 + q + q^2 + \ldots + q^n < \frac{1}{1-q} \ (q < 1) $$</p>
+<p>Для суммы слева воспользуемся суммой $n$ членой геометрической прогрессии:</p>
+<p class="display-math">$$ 1 + q + q^2 + \ldots + q^n = \frac{1(1 - q^n)}{1-q} $$</p>
+<p>Получим неравенство, заменив $1-q^n$ на $1$:</p>
+<p class="display-math">$$ 1 + q + q^2 + \ldots + q^n = \frac{1-q^n}{1-q} < \frac{1}{1-q} $$</p>
+<p class="display-math">$$ 1 + q + q^2 + \ldots + q^n < \frac{1}{1-q} $$</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p>Применяем это свойство:</p>
+<p class="display-math">$$ y_{n+p} - y_n < \frac{1}{(n+1)!}\frac{1}{1-\frac{1}{n+2}} $$</p>
+<p class="display-math">$$ y_{n+p} - y_n < \frac{1}{(n+1)!}\frac{1}{1-\frac{1}{n+2}}\frac{n+2}{n+2} $$</p>
+<p class="display-math">$$ y_{n+p} - y_n < \frac{1}{(n+1)!}\frac{n+2}{n+1} $$</p>
+<p class="display-math">$$ y_{n+p} - y_n < \frac{1}{n!}\frac{n+2}{(n+1)^2} $$</p>
+<p>Итак, имеем следующее цепное неравенство:</p>
+<p class="display-math">$$ 0 < y_{n+p} - y_n < \frac{1}{n!}\frac{n+2}{(n+1)^2} $$</p>
+<p>Считаем, что $n$ — фиксированное число и по прото-задаче &quot;<a href="/proto/sequences/limits/limits-inequality">Предельный переход в неравенстве</a>&quot; находим предел при $p\to \infty$ всех частей неравенства:</p>
+<p class="display-math">$$ 0 \leq \lim\limits_{p\to\infty} (y_{n+p}-y_n) \leq \lim\limits_{p\to\infty} \frac{1}{n!}\frac{n+2}{(n+1)^2} $$</p>
+<p class="display-math">$$ 0 \leq \underbrace{\lim\limits_{p\to\infty} (y_{n+p})}_{\Large = e} -y_n \leq \frac{1}{n!}\frac{n+2}{(n+1)^2} $$</p>
+<p>Здесь мы воспользовались тем, что $y_{n+p}\to e$, так как $y_{n+p}$ — подпоследовательность последовательности $y_p$ (помним, что $n$ — фиксированное число), а значит, по прото-задаче &quot;<a href="/proto/sequences/limits/limit-point">Единственность предельной точки</a>&quot; раз $y_p\to e$, то и
+любая ее подпоследовательность тоже стремится к $e$, то есть $y_{n+p}\to e$.</p>
+<p>Итак:</p>
+<p class="display-math">$$ 0 \leq e - y_n \leq \frac{1}{n!}\frac{n+2}{(n+1)^2} $$</p>
+<details><summary><div class="header-inner"><p class="display-math">$$ \frac{n+2}{(n+1)^2} < \frac{1}{n} $$</p></div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что</p>
+<p class="display-math">$$ \frac{n+2}{(n+1)^2} < \frac{1}{n} $$</p>
+<p class="display-math">$$ n(n+2) < (n+1)^2 $$</p>
+<p class="display-math">$$ n^2 + 2n < n^2 + 2n + 1 $$</p>
+<p class="display-math">$$ 0 < 1 $$</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p class="display-math">$$ 0 \leq e - y_n \leq \frac{1}{n!}\frac{n+2}{(n+1)^2} < \frac{1}{n!}\frac{1}{n} $$</p>
+<p class="display-math">$$ 0 \leq e - y_n < \frac{1}{n!n} $$</p>
+<p>В лемме мы показали, что $e &gt; y_n$, поэтому $e-y_n &gt; 0$:</p>
+<p class="display-math">$$ 0 < e-y_n < \frac{1}{n!n} $$</p>
+<p class="display-math">$$ 0 < (e-y_n)n!n < 1 $$</p>
+<p>Число по середине будем называть $\Theta_n$:</p>
+<p class="display-math">$$ 0 < \Theta_n = (e-y_n)n!n < 1 $$</p>
+<p class="display-math">$$ 0 < \Theta_n < 1 $$</p>
+<p>Так как</p>
+<p class="display-math">$$ \Theta_n = (e-y_n)n!n $$</p>
+<p>Тогда</p>
+<p class="display-math">$$ e-y_n = \frac{\Theta_n}{n!n} $$</p>
+<p>Откуда</p>
+<p class="display-math">$$ e = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{n!} + \frac{\Theta_n}{n!n} $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Расчет $e$ с точностью до $10^{-5}$</strong></p>
+<p>Мы знаем, что $y_n\to e$. С этой позиции расчет $n$-го члена последовательности $y_n$ можно принимать за &quot;измерение&quot; числа $e$.</p>
+<p>Найдем абсолютную погрешность нашего &quot;измерения&quot;:</p>
+<p class="display-math">$$ \Delta = |y_n - e| $$</p>
+<p>Воспользуемся свойством модуля (см. прото-задачу &quot;<a href="/proto/abs-properties">Свойства модуля</a>&quot;):</p>
+<p class="display-math">$$ \Delta = |y_n - e| = |e-y_n| $$</p>
+<p>Но $e-y_n$, как мы уже показали выше, всегда строго больше $0$ поэтому можно убрать знак модуля:</p>
+<p class="display-math">$$ \Delta = e-y_n $$</p>
+<p>Но по выведенной выше формуле имеем</p>
+<p class="display-math">$$ \Delta = e-y_n = \frac{\Theta_n}{n!n} $$</p>
+<p class="display-math">$$ \Delta = \frac{\Theta_n}{n!n} $$</p>
+<p>Нам нужно рассчитать число $e$ с точностью до $10^{-5}$, это значит, что наша абсолютная погрешность должна быть не больше этого числа.</p>
+<p class="display-math">$$ \Delta = \frac{\Theta_n}{n!n} \leq 10^{-5} $$</p>
+<p class="display-math">$$ \frac{\Theta_n}{n!n} \leq 10^{-5} $$</p>
+<p>Мы доказали, что $0 &lt; \Theta_n &lt; 1$, поэтому можно усилить неравенство:</p>
+<p class="display-math">$$ \frac{\Theta_n}{n!n} < \frac{1}{n!n} \leq 10^{-5} $$</p>
+<p class="display-math">$$ \frac{1}{n!n} \leq 10^{-5} $$</p>
+<p class="display-math">$$ n!n \geq 10^5 $$</p>
+<p>Методом подбора получаем, что уже при $n = 8$</p>
+<p class="display-math">$$ 8!8 = 322 560 > 10^5 $$</p>
+<p>Рассчитаем тогда $y_8$:</p>
+<p class="display-math">$$ y_8 = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \ldots + \frac{1}{8!} = \frac{109601}{40320} $$</p>
+<p>Итак, число</p>
+<p class="display-math">$$ \frac{109601}{40320} = 2.71827\ldots $$</p>
+<p>является числом $e$ с точностью до $10^{-5}$.</p>
+
+                    </div>
+
+                    <div class="reason-overlay">
+                        
+
+                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="help-me">
+                <span class="message">Не разобрались в решении?</span>
+                <a class="help-button" href="https://mathit.ru" title="Задать вопрос на форуме">
+                    <i class="fas fa-question"></i>
+                    <span>Спросить</span>
+                </a>
+            </div>
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/second-wonderful" title="Второй замечательный предел (последовательность)" target="_blank">
+                                    Второй замечательный предел (последовательность)
+                                </a>
+                            </dt>
+                            <dd>Подробный и понятный вывод второго замечательного предела для последовательностей.</dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/limits-inequality" title="Предельный переход в неравенстве" target="_blank">
+                                    Предельный переход в неравенстве
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/limit-point" title="Единственность предельной точки" target="_blank">
+                                    Единственность предельной точки
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/abs-properties" title="Свойства модуля" target="_blank">
+                                    Свойства модуля
+                                </a>
+                            </dt>
+                            <dd>Самые полезные и часто требующиеся свойства модуля с подробными и понятными доказательствами.</dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
+
+            <section class="nav">
+                    <a href="../../tasks/73/" title="Следующая задача" class="next">
+                        <span class="label">73</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/71/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">71</span>
+                    </a>
+            </section>
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.ru" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>

@@ -194,29 +194,25 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Доказательство неравенства</strong></p>
-<hr>
-<p><strong>Поиск значений $n$</strong></p>
-<p>Итак, мы доказали, что</p>
-<p class="display-math">$$ 0 < e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} \ (n=1,2,\ldots) $$</p>
-<p>Предел</p>
-<p class="display-math">$$ \limn \frac{3}{n} = 0 $$</p>
-<p>(см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
-<p>Распишем, что значит $\frac{3}{n}\to 0$ по определению предела:</p>
-<p class="display-math">$$ \limn \frac{3}{n} = 0 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left|\frac{3}{n}\right| < \varepsilon $$</p>
-<p>Раз выражение выше выполняется для любого положительного $\varepsilon$, то должно выполняться и для числа $0.001$.</p>
-<p class="display-math">$$ \text{для } 0.001 \ \exists N = N(0.001) \ \forall n > N \ : \ \left|\frac{3}{n}\right| < 0.001 $$</p>
-<p>Рассмотрим последнее неравенство. Модуль можно убрать, так как выражение под ним всегда положительное:</p>
-<p class="display-math">$$ \frac{3}{n} < 0.001 $$</p>
-<p>Откуда</p>
-<p class="display-math">$$ n > \frac{3}{0.001} = 3000 $$</p>
-<p>Итак, начиная с $n=3001$ будет выполняться неравенство:</p>
-<p class="display-math">$$ \frac{3}{n} < 0.001 $$</p>
-<p>Выше мы показали, что</p>
-<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} $$</p>
-<p>Поэтому, начиная с $n=3001$</p>
-<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < \frac{3}{n} < 0.001 $$</p>
-<p class="display-math">$$ e - \left( 1 + \frac{1}{n} \right)^n < 0.001 $$</p>
+                        <p><strong>Построение подпоследовательности</strong></p>
+<p>Рассмотрим последовательность &quot;потолков&quot; (округлений сверху) последовательности $p_n$. По определению потолка числа</p>
+<p class="display-math">$$ \ceil{p_n} \geq p_n $$</p>
+<p>Распишем, что по определению значит $p_n\to +\infty$:</p>
+<p class="display-math">$$ \forall E > 0 \ \exists N = N(E) \ \forall n > N \ : \ p_n > E $$</p>
+<p>Рассмотрим неравенство в конце:</p>
+<p class="display-math">$$ p_n > E $$</p>
+<p>Воспользуемся неравенством про &quot;потолок&quot;:</p>
+<p class="display-math">$$ \ceil{p_n} > E $$</p>
+<p>Итак, для любого $E&gt;0$ всегда можно найти такое $N$ (берем $N$ от $p_n$), что для любого $n&gt;N$ выполняется неравенство:</p>
+<p class="display-math">$$ \ceil{p_n} > E $$</p>
+<p>Это по определению означает, что $\ceil{p_n}\to +\infty$.</p>
+<p>Начем теперь строить следующую последовательность $t_n$. $t_1 = \ceil{p_1}$. Так как $\ceil{p_n}\to +\infty$, то можно найти такое $\ceil{p_k} &gt; t_1$. Тогда $t_2 = \ceil{p_k}$.
+Продолжаем этот процесс до бесконечности.</p>
+<p>Получаем последовательность</p>
+<p class="display-math">$$ t_1, t_2, t_3, \ldots, t_n, \ldots $$</p>
+<p>Причем каждый эта последовательность строго возрастает и каждый ее член — натуральное число.</p>
+<p>Это означит, что $t_n$ является подпоследовательностью последовательности натуральных чисел.</p>
+
                     </div>
 
                     <div class="reason-overlay">
@@ -258,30 +254,10 @@
             </div>
 
 
-            <section class="block-section protoTasks">
-                <div class="block-section-header">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задачи</span>
-                </div>
-                <div class="block-section-container">
-                    <dl class="block-section-content">
-
-                            <dt>
-                                <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
-                                    Элементарные пределы последовательностей
-                                </a>
-                            </dt>
-                            <dd></dd>
-                    
-                    </dl>
-                </div>
-            </section>
-
-
 
             <section class="nav">
-                    <a href="../../tasks/77/" title="Следующая задача" class="next">
-                        <span class="label">77</span>
+                    <a href="../../tasks/72/" title="Следующая задача" class="next">
+                        <span class="label">72</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 

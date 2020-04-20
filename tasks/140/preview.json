@@ -1,0 +1,1 @@
+{"location":"I.2","taskHtml":"<p>Доказать, что если последовательность $x_n \\ (n=1,2,\\ldots)$ сходится и $x_n &gt; 0$, то</p>\n<p class=\"display-math\">$$ \\limn \\sqrt[n]{x_1 x_2 \\ldots x_n} = \\limn x_n $$</p>"}

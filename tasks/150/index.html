@@ -4,39 +4,21 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="icon" href="../../../../favicon.png" type="image/png">
-        <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>Предельный переход в показательных и логарифмических функциях | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="Пусть:
-$$ y_n &#x3D; a^{x_n}, \ a\neq 1, \ a &gt; 0 $$
-
-Тогда выполняется:
-
-$$ \exists \lim_{n\to\infty} x_n &#x3D; B \Leftrightarrow \exists \lim_{n\to\infty} y_n &#x3D; a^B $$
-
----
-
-$$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
+        <title>150 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что последовательности $x_n$ и $y_n \ (n&#x3D;1,2,\ldots)$, определяемые следующими формулами:$$ x_1 &#x3D; a, \ y_1 &#x3D; b, \ x_{n+1} &#x3D; \sqrt{x_n y_n}, \ y_{n+1} &#x3D; \frac{x_n + y_n}{2}, $$имеют общий предел$$ \mu (a,b) &#x3D; \limn x_n &#x3D; \limn y_n $$(*арифметико-геометрическое средее* чисел $a$ и $b$).">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="Предельный переход в показательных и логарифмических функциях | Прото-задача | Демидович. Решения">
-        <meta property="og:description" content="Пусть:
-$$ y_n &#x3D; a^{x_n}, \ a\neq 1, \ a &gt; 0 $$
-
-Тогда выполняется:
-
-$$ \exists \lim_{n\to\infty} x_n &#x3D; B \Leftrightarrow \exists \lim_{n\to\infty} y_n &#x3D; a^B $$
-
----
-
-$$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
+        <meta property="og:title" content="150 | Демидович. Решения">
+        <meta property="og:description" content="Доказать, что последовательности $x_n$ и $y_n \ (n&#x3D;1,2,\ldots)$, определяемые следующими формулами:$$ x_1 &#x3D; a, \ y_1 &#x3D; b, \ x_{n+1} &#x3D; \sqrt{x_n y_n}, \ y_{n+1} &#x3D; \frac{x_n + y_n}{2}, $$имеют общий предел$$ \mu (a,b) &#x3D; \limn x_n &#x3D; \limn y_n $$(*арифметико-геометрическое средее* чисел $a$ и $b$).">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/proto/sequences/limits/exp-log-transition">
-        <meta property="og:url" content="https://dodem.ru/proto/sequences/limits/exp-log-transition">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/150">
+        <meta property="og:url" content="https://dodem.ru/tasks/150">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -56,21 +38,21 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
         <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
 
         <!-- jQuery -->
-        <script src="../../../../libs/jquery-3.4.1.min.js"></script>
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
 
         <!-- Font Awesome -->
-        <link rel="stylesheet" href="../../../../libs/font-awesome/css/all.min.css">
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
 
         <script>
-            var SITE_ROOT = '../../../../';
+            var SITE_ROOT = '../../';
         </script>
 
-        <script src="../../../../scripts/toc.js"></script>
-        <script src="../../../../scripts/hash.js"></script>
-        <script src="../../../../scripts/location.js"></script>
-        <script src="../../../../scripts/search.js"></script>
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
 
-        <link rel="stylesheet" type="text/css" href="../../../../style.min.css" />        <!-- Extra -->
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
 
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
@@ -88,14 +70,16 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
 
         <!-- Google Ads -->
         <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="../../../../scripts/dark-magic.js"></script>    </head>
-    <body class="page-proto-task">
+        <script src="../../scripts/dark-magic.js"></script>        
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
+    <body class="page-task">
         <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
             <div class="progress-bar">
                 <div></div>
             </div>
         </section>
-        <script src="../../../../scripts/progress-bar.js"></script>
+        <script src="../../scripts/progress-bar.js"></script>
         <section class="content">
             <header>
                 <a href="/">Демидович</a>
@@ -123,7 +107,7 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                         </div>
 
                         <div class="task-loading">
-                            <img class="spinner" src="../../../../graphics/spinner.svg" />
+                            <img class="spinner" src="../../graphics/spinner.svg" />
                         </div>
 
                         <a class="goto-solution-button">
@@ -151,40 +135,34 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </section>
             </section>
             <section class="block-section task">
-                <div class="block-section-header" title="Важные факты, которые пригодятся для решения других задач">
-                    <i class="fas fa-sitemap"></i>
-                    <span>Прото-задача</span>
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>150</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Предельный переход в показательных и логарифмических функциях
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Пусть:</p>
-<p class="display-math">$$ y_n = a^{x_n}, \ a\neq 1, \ a > 0 $$</p>
-<p>Тогда выполняется:</p>
-<p class="display-math">$$ \exists \lim_{n\to\infty} x_n = B \Leftrightarrow \exists \lim_{n\to\infty} y_n = a^B $$</p>
-<hr>
-<p class="display-math">$$ \limn x_n = a \Rightarrow \limn \ln x_n = \ln a $$</p>
+                        <p>Доказать, что последовательности $x_n$ и $y_n \ (n=1,2,\ldots)$, определяемые следующими формулами:</p>
+<p class="display-math">$$ x_1 = a, \ y_1 = b, \ x_{n+1} = \sqrt{x_n y_n}, \ y_{n+1} = \frac{x_n + y_n}{2}, $$</p>
+<p>имеют общий предел</p>
+<p class="display-math">$$ \mu (a,b) = \limn x_n = \limn y_n $$</p>
+<p>(<em>арифметико-геометрическое средее</em> чисел $a$ и $b$).</p>
+
                     </div>
                 </div>
             </section>
-
-
-                <section class="block-section usage">
-                    <div class="block-section-header" title="Задачи, в решении которых используется эта прото-задача">
-                        <i class="fas fa-reply-all fa-flip-horizontal"></i>
-                        <span>Использование</span>
-                    </div>
-                    <div class="block-section-container task-list">
-                        <div class="wrapper">
-                                <a title="К задаче 57" href="../../../../tasks/57/">57</a>
-                                <a title="К задаче 63" href="../../../../tasks/63/">63</a>
-                                <a title="К задаче 65" href="../../../../tasks/65/">65</a>
-                                <a title="К задаче 140" href="../../../../tasks/140/">140</a>
-                        </div>
-                    </div>
-                </section>
 
 
             <div class="dark-magic-container">
@@ -199,12 +177,13 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </script>
             </div>
 
-            <section class="block-section solution single">
-                <!--<div class="block-section-actions">
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
                     <div title="Скрыть решение" class="action action--hide">
                         <i class="fas fa-eye-slash"></i><span>Скрыть</span>
                     </div>
-                </div>-->
+                </div>
 
                 <div class="block-section-header">
                     <i class="fas fa-check"></i>
@@ -212,16 +191,67 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </div>
                 
                 <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
                     <div class="block-section-content">
-                        <p>TODO</p>
+                        <p><strong>Монотонное возрастание $x_n$</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">$$ x_{n+1} \geq x_n $$</p>
+<p class="display-math">$$ \sqrt{x_n y_n} \geq \sqrt{x_{n-1} y_{n-1}} $$</p>
+<p>Возведем обе части в квадрат:</p>
+<p class="display-math">\begin{gather*}
+    x_n y_n \geq x_{n-1} y_{n-1}
+    \\[5px]
+    \sqrt{x_{n-1}y_{n-1}} y_n \geq x_{n-1} y_{n-1}
+    \\[5px]
+    y_n \geq \sqrt{x_{n-1} y_{n-1}}
+    \\[5px]
+    \frac{x_{n-1} + y_{n-1}}{2} \geq \sqrt{x_{n-1} y_{n-1}}
+    \\[5px]
+    x_{n-1} - 2\sqrt{x_{n-1}y_{n-1}} + y_{n-1} \geq 0
+    \\[5px]
+    (\sqrt{x_{n-1}} - \sqrt{y_{n-1}})^2 \geq 0
+\end{gather*}</p>
+<p>Последнее неравенство очевидно выполняется, так как любое число в квадрате будет больше или равно $0$.</p>
+<p>Итак, мы показали, что $x_n$ монотонно возрастает.</p>
+<hr>
+<p><strong>Монотонное убывание $y_n$</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">\begin{gather*}
+<p>\end{gather*}</p></p>
+<p class="display-math">$$ y_{n+1} \leq y_n $$</p>
+<p class="display-math">$$ \frac{y_n + x_n}{2} \leq y_n $$</p>
 
                     </div>
 
                     <div class="reason-overlay">
+                        
+
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
                     </div>
                 </div>
             </section>
+
+
+            <div class="help-me">
+                <span class="message">Не разобрались в решении?</span>
+                <a class="help-button" href="https://mathit.ru" title="Задать вопрос на форуме">
+                    <i class="fas fa-question"></i>
+                    <span>Спросить</span>
+                </a>
+            </div>
 
             <div class="dark-magic-container">
                 <!-- [Демидович] После решения -->
@@ -235,6 +265,15 @@ $$ \limn x_n &#x3D; a \Rightarrow \limn \ln x_n &#x3D; \ln a $$">
                 </script>
             </div>
 
+
+
+            <section class="nav">
+
+                    <a href="../../tasks/149/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">149</span>
+                    </a>
+            </section>
         </section>
 
         <footer>

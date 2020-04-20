@@ -7,18 +7,18 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>144 | Демидович. Решения</title>
-        <meta name="description" content="Найти:$$ \text{а) } \lim\limits_{n\to +\infty} \frac{n^2}{a^n} \quad (a&gt;1); \qquad \text{б) } \lim\limits_{n\to +\infty} \frac{\lg n}{n} $$">
+        <title>141 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что если $x_n &gt; 0 \ (n&#x3D;1,2,\ldots)$, то$$ \limn \sqrt[n]{x_n} &#x3D; \limn \frac{x_{n+1}}{x_n}, $$предполагая, что предел, стоящий в правой части последнего равенства, существует.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="144 | Демидович. Решения">
-        <meta property="og:description" content="Найти:$$ \text{а) } \lim\limits_{n\to +\infty} \frac{n^2}{a^n} \quad (a&gt;1); \qquad \text{б) } \lim\limits_{n\to +\infty} \frac{\lg n}{n} $$">
+        <meta property="og:title" content="141 | Демидович. Решения">
+        <meta property="og:description" content="Доказать, что если $x_n &gt; 0 \ (n&#x3D;1,2,\ldots)$, то$$ \limn \sqrt[n]{x_n} &#x3D; \limn \frac{x_{n+1}}{x_n}, $$предполагая, что предел, стоящий в правой части последнего равенства, существует.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/tasks/144">
-        <meta property="og:url" content="https://dodem.ru/tasks/144">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/141">
+        <meta property="og:url" content="https://dodem.ru/tasks/141">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -137,7 +137,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>144</span>
+                    <span>141</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -154,8 +154,10 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Найти:</p>
-<p class="display-math">$$ \text{а) } \lim\limits_{n\to +\infty} \frac{n^2}{a^n} \quad (a>1); \qquad \text{б) } \lim\limits_{n\to +\infty} \frac{\lg n}{n} $$</p>
+                        <p>Доказать, что если $x_n &gt; 0 \ (n=1,2,\ldots)$, то</p>
+<p class="display-math">$$ \limn \sqrt[n]{x_n} = \limn \frac{x_{n+1}}{x_n}, $$</p>
+<p>предполагая, что предел, стоящий в правой части последнего равенства, существует.</p>
+
                     </div>
                 </div>
             </section>
@@ -189,25 +191,19 @@
                 <div class="block-section-container">
                     
                     <div class="reason">
-                        Частные случаи из предыдущих задач
+                        Замена индексов
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>а)</strong></p>
-<p>В <a href="/tasks/60">задаче 60</a> мы доказали, что</p>
-<p class="display-math">$$ \limn \frac{n^k}{a^n} = 0 \quad (a>1) $$</p>
-<p>Предел, который нам надо найти, является частным случаем при $k=2$, поэтому</p>
-<p class="display-math">$$ \limn \frac{n^2}{a^n} = 0 $$</p>
-<hr>
-<p><strong>б)</strong></p>
-<p>В <a href="/tasks/64">задаче 64</a> мы доказали, что</p>
-<p class="display-math">$$ \limn \frac{\log_a n}{n} = 0 \quad (a>1) $$</p>
-<p>Предел, который нам надо найти, является частным случаем при $a=10$, поэтому</p>
-<p class="display-math">$$ \limn \frac{\lg n}{n} = 0 $$</p>
+                        <p>По условию известно, что</p>
+<p class="display-math">$$ \limn \frac{x_{n+1}}{x_n} = A $$</p>
+<p>Значит, по <a href="/tasks/140">задаче 140</a> к тому же пределу сходится и последовательность средних геометрических:</p>
+<p class="display-math">$$ \limn \frac{x_{n+1}}{x_n} = \limn \sqrt[n]{\frac{x_2}{x_1}\frac{x_3}{x_2}\ldots\frac{x_{n+1}}{x_n}} = \limn \sqrt[n]{\frac{x_{n+1}}{x_1}} = A $$</p>
+<p class="display-math">$$  $$</p>
                     </div>
 
                     <div class="reason-overlay">
-                        <span>Частные случаи из предыдущих задач</span>
+                        <span>Замена индексов</span>
 
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
                     </div>
@@ -239,102 +235,47 @@
                 <div class="block-section-container">
                     
                     <div class="reason">
-                        С помощью теоремы Штольца
+                        Прямое решение
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>а)</strong></p>
-<details><summary><div class="header-inner">Строгое возрастание $a^n$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
-<p>Докажем, что</p>
-<p class="display-math">$$ a^{n+1} > a^n $$</p>
-<p class="display-math">$$ a^n \cdot a > a^n $$</p>
-<p class="display-math">$$ a > 1 $$</p>
-<p>Последнее неравенство выполняется по условию.</p>
-<p>Итак, мы доказали, что</p>
-<p class="display-math">$$ a^{n+1} > a^n $$</p>
-<p>$\blacksquare$</p>
-</div></details>
-<details><summary><div class="header-inner">$a^n\to +\infty$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
-<p>Докажем, что</p>
-<p class="display-math">$$ \forall M > 0 \ \exists N = N(M) \ \forall n > N \ : \ a^n > M $$</p>
-<p>Рассмотрим последнее неравенство:</p>
-<p class="display-math">$$ a^n > M $$</p>
-<p>Прологарифмируем обе части неравенства по основанию $a$ (знак неравенства не изменится, так как $a&gt;1$):</p>
-<p class="display-math">$$ \log_a a^n > \log_a M $$</p>
-<p class="display-math">$$ n > \log_a M $$</p>
-<p>Итак, для любого $M&gt;0$ достаточно взять $N$ по следующей формуле:</p>
-<p class="display-math">$$ N = \ceil{\log_a M} $$</p>
-<p>Тогда любое натуральное $n$ после $N$ будет удовлетворять неравенству:</p>
-<p class="display-math">$$ n > N = \ceil{\log_a M} \geq \log_a M $$</p>
-<p class="display-math">$$ n > \log_a M $$</p>
-<p>А значит</p>
-<p class="display-math">$$ a^n > M $$</p>
-<p>Итак, мы показали по определению, что $a^n\to +\infty$.</p>
-<p>$\blacksquare$</p>
-</div></details>
-<p>Найдем следующий предел</p>
-<p class="display-math">$$ \limn \frac{(n+1)^2 - n^2}{a^{n+1} - a^n} = \limn \frac{2n+1}{a^n(a-1)} = \frac{1}{a-1}\limn\frac{2n+1}{a^n} $$</p>
-<p>Найдем теперь предел:</p>
-<p class="display-math">$$ \limn\frac{2(n+1) + 1 - 2n - 1}{a^{n+1} - a^n} = \frac{1}{a-1}\limn\frac{2}{a^n} = \frac{1}{a-1}\cdot 0 = 0 $$</p>
-<p>Здесь мы воспользовались тем, что раз $a^n$ — бесконечно большая, то $\frac{1}{a^n}$ — бесконечно малая (см. прото-задачу &quot;<a href="/proto/sequences/limits/bm-bb">Связь бесконечно малой и бесконечно большой последовательностей</a>&quot;).</p>
-<p>По теореме Штольца:</p>
-<p class="display-math">$$ \limn \frac{2n+1}{a^n} = \limn\frac{2(n+1) + 1 - 2n - 1}{a^{n+1} - a^n} = 0 $$</p>
-<p>Возвращаемся к изначальному пределу. По теореме Штольца:</p>
-<p class="display-math">$$ \limn \frac{n^2}{a^n} = \limn \frac{(n+1)^2 - n^2}{a^{n+1} - a^n} = \frac{1}{a-1}\limn\frac{2n+1}{a^n} = 0 $$</p>
-<p class="display-math">$$ \limn \frac{n^2}{a^n} = 0 $$</p>
+                        <p>По условию известно, что</p>
+<p class="display-math">$$ \limn \frac{x_{n+1}}{x_n} = A $$</p>
+<p>Значит, по <a href="/tasks/140">задаче 140</a> к тому же пределу сходится и последовательность средних геометрических:</p>
+<p class="display-math">$$ \limn \frac{x_{n+1}}{x_n} = \limn \sqrt[n]{\frac{x_2}{x_1}\frac{x_3}{x_2}\ldots\frac{x_{n+1}}{x_n}} = \limn \sqrt[n]{\frac{x_{n+1}}{x_1}} = A $$</p>
+<p class="display-math">$$ \limn \sqrt[n]{\frac{x_{n+1}}{x_1}} = \frac{\limn \sqrt[n]{x_{n+1}}}{x_1^{\limn \frac{1}{n}}} = \frac{\limn \sqrt[n]{x_{n+1}}}{x_1^0} = \limn \sqrt[n]{x_{n+1}} = A $$</p>
+<p class="display-math">$$ \limn \sqrt[n]{x_{n+1}} = A $$</p>
+<p>Здесь мы воспользовались тем, что $\frac{1}{n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;).</p>
 <hr>
-<p><strong>б)</strong></p>
-<details><summary><div class="header-inner">Строгое возрастание $n$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
-<p>Докажем, что</p>
-<p class="display-math">$$ n+1 > n $$</p>
-<p class="display-math">$$ 1 > 0 $$</p>
-<p>Последнее неравенство, очевидно, выполняется.</p>
-<p>Итак, мы доказали, что</p>
-<p class="display-math">$$ n+1 > n $$</p>
-<p>$\blacksquare$</p>
-</div></details>
-<details><summary><div class="header-inner">$n\to +\infty$</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
-<p>Докажем, что</p>
-<p class="display-math">$$ \forall M > 0 \ \exists N = N(M) \ \forall n > N \ : \ n > M $$</p>
-<p>Рассмотрим последнее неравенство:</p>
-<p class="display-math">$$ n > M $$</p>
-<p>Действительно, для любого $M$ мы всегда можем найти натуральное число, которое больше $M$.</p>
-<p>Поэтому, для любого $M&gt;0$ всегда можно найти большее его натуральное число и все остальные натуральные числа после этого тоже будут больше $M$.</p>
-<p>Итак, мы показали по определению, что $a^n\to +\infty$.</p>
-<p>$\blacksquare$</p>
-</div></details>
-<p>Найдем следующий предел</p>
-<p class="display-math">$$ \limn \frac{\lg (n+1) - \lg n}{n+1 - n} = \limn \lg\left( \frac{n+1}{n} \right) $$</p>
-<p>Докажем, что</p>
-<p class="display-math">$$ \lg \left( \frac{n+1}{n} \right) < \frac{1}{n} $$</p>
-<p>Представим обе части неравенства в виде показателей степени с основанием $10$ (так как $10&gt; 0$, то знак неравенства не изменится):</p>
-<p class="display-math">$$ 10^{\lg\left( \frac{n+1}{n} \right)} < 10^{\frac{1}{n}} $$</p>
-<p class="display-math">$$ \frac{n+1}{n} < 10^{\frac{1}{n}} $$</p>
-<p class="display-math">$$ 1 + \frac{1}{n} < 10^{\frac{1}{n}} $$</p>
-<p>Возведем обе части неравенства в степень $n$:</p>
-<p class="display-math">$$ \left( 1 + \frac{1}{n} \right)^n < 10 $$</p>
-<p>В <a href="/tasks/69">задаче 69</a> мы показали, что</p>
-<p class="display-math">$$ \left( 1 + \frac{1}{n} \right)^n $$</p>
-<p>возрастает и ограничена сверху числом $e$, к которому она и сходится.
-Поэтому</p>
-<p class="display-math">$$ \left( 1 + \frac{1}{n} \right)^n < e < 10 $$</p>
-<p>Итак, мы докаазли, что</p>
-<p class="display-math">$$ \lg \left( \frac{n+1}{n} \right) < \frac{1}{n} $$</p>
-<p>Теперь можно &quot;зажать&quot; эту последовательность:</p>
-<p class="display-math">$$ 0 \leq \lg \left( \frac{n+1}{n} \right) < \frac{1}{n} $$</p>
-<p>&quot;Последовательность&quot; из $0$ стремится к $0$. Последовательность $\frac{1}{n}$ тоже стремится к $0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/elementary">Элементарные пределы последовательностей</a>&quot;). А значит, по теореме о двух милиционерах, &quot;зажатая&quot;
-между ними последовательность тоже стремится к $0$:</p>
-<p class="display-math">$$ \limn \lg\left( \frac{n+1}{n} \right) = 0 $$</p>
-<p>Итак, возвращаясь к пределу, который мы пытаемся найти:</p>
-<p class="display-math">$$ \limn \frac{\lg (n+1) - \lg n}{n+1 - n} = \limn \lg\left( \frac{n+1}{n} \right) = 0 $$</p>
-<p class="display-math">$$ \limn \frac{\lg (n+1) - \lg n}{n+1 - n} = 0 $$</p>
-<p>По теореме Штольца:</p>
-<p class="display-math">$$ \limn \frac{\lg n}{n} = \limn \frac{\lg (n+1) - \lg n}{n+1 - n} = 0 $$</p>
-<p class="display-math">$$ \limn \frac{\lg n}{n} = 0 $$</p>
+<p>Вновь рассмотрим исходную последовательность</p>
+<p class="display-math">$$ \limn \frac{x_{n+1}}{x_n} = A $$</p>
+<p>Число $A\geq 0$, если бы оно было отрицательным, то с какого-то номера $N$ все элементы последовательности $\frac{x_{n+1}}{x_n}$ должны были быть отрицательными, но этого не может быть, так как по условию $x_n &gt; 0$.</p>
+<hr>
+<p><strong>$A$ положительное</strong></p>
+<p>Распишем по определению, что означает $\frac{x_{n+1}}{x_n}\to A$:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{x_{n+1}}{x_n} - A \right| < \varepsilon $$</p>
+<p>Раз выполняется для любого положительного $\varepsilon$, то и для положительного $\frac{A}{2}$ существует какое-то $N$, что для любого $n&gt;N$ выполняется неравенство:</p>
+<p class="display-math">$$ \left| \frac{x_{n+1}}{x_n} - A \right| < \frac{A}{2} $$</p>
+<p>Распишем это неравенство в цепное с помощью пункта 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ -\frac{A}{2} < \frac{x_{n+1}}{x_n} - A < \frac{A}{2} $$</p>
+<p>Прибавим ко всем частям $A$:</p>
+<p class="display-math">$$ \frac{A}{2} < \frac{x_{n+1}}{x_n} < \frac{3A}{2} $$</p>
+<p>&quot;Перевернем&quot; дроби:</p>
+<p class="display-math">$$ \frac{2}{3A} < \frac{x_n}{x_{n+1}} < \frac{2}{A} $$</p>
+<p>Умножим все части на положительное $x_{n+1}$:</p>
+<p class="display-math">$$ \frac{2}{3A}x_{n+1} < x_n < \frac{2}{A}x_{n+1} $$</p>
+<p>Возьмем корень $n$-степени из каждой части неравенства:</p>
+<p class="display-math">$$ \sqrt[n]{\frac{2}{3A}}\sqrt[n]{x_{n+1}} < \sqrt[n]{x_n} < \sqrt[n]{\frac{2}{A}}\sqrt[n]{x_{n+1}} $$</p>
+<p>Предел левой части неравенства:</p>
+<p class="display-math">$$ \limn \sqrt[n]{\frac{2}{3A}}\sqrt[n]{x_{n+1}} = \left(\frac{2}{3A}\right)^{\limn \frac{1}{n}}\limn\sqrt[n]{x_{n+1}} = 1 \cdot A = A $$</p>
+<p>Предел правой части неравенства:</p>
+<p class="display-math">$$ \limn \sqrt[n]{\frac{2}{A}}\sqrt[n]{x_{n+1}} = \left(\frac{2}{A}\right)^{\limn \frac{1}{n}}\limn\sqrt[n]{x_{n+1}} = 1\cdot A = A $$</p>
+<p>Итак, обе части неравенства стремятся к $A$, а значит, по теореме о двух милиционерах, &quot;зажатая&quot; между ними $\sqrt[n]{x_n}$ тоже стремится к $A$:</p>
+<p class="display-math">$$ \limn \sqrt[n]{x_n} = A $$</p>
                     </div>
 
                     <div class="reason-overlay">
-                        <span>С помощью теоремы Штольца</span>
+                        <span>Прямое решение</span>
 
                         <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
                     </div>
@@ -381,17 +322,17 @@
                     <dl class="block-section-content">
 
                             <dt>
-                                <a href="/proto/sequences/limits/bm-bb" title="Связь бесконечно малой и бесконечно большой последовательностей" target="_blank">
-                                    Связь бесконечно малой и бесконечно большой последовательностей
-                                </a>
-                            </dt>
-                            <dd></dd>
-                            <dt>
                                 <a href="/proto/sequences/limits/elementary" title="Элементарные пределы последовательностей" target="_blank">
                                     Элементарные пределы последовательностей
                                 </a>
                             </dt>
                             <dd></dd>
+                            <dt>
+                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
+                                    Упрощение модулей в неравенствах
+                                </a>
+                            </dt>
+                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
                     
                     </dl>
                 </div>
@@ -400,14 +341,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/145/" title="Следующая задача" class="next">
-                        <span class="label">145</span>
+                    <a href="../../tasks/142/" title="Следующая задача" class="next">
+                        <span class="label">142</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/142/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/140/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">142</span>
+                        <span class="label">140</span>
                     </a>
             </section>
         </section>
