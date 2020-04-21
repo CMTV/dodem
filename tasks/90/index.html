@@ -7,18 +7,18 @@
         <link rel="icon" href="../../favicon.png" type="image/png">
         <link rel="icon" href="../../favicon.ico" type="image/x-icon">
 
-        <title>94 | Демидович. Решения</title>
-        <meta name="description" content="Доказать, что сходящаяся числовая последовательность достигает любо своей верхней грани, либо своей нижней грани, либо той и другой.">
+        <title>90 | Демидович. Решения</title>
+        <meta name="description" content="Доказать, что монотонная последовательность будет сходящейся, если сходится некоторая ее подпоследовательность.">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="94 | Демидович. Решения">
-        <meta property="og:description" content="Доказать, что сходящаяся числовая последовательность достигает любо своей верхней грани, либо своей нижней грани, либо той и другой.">
+        <meta property="og:title" content="90 | Демидович. Решения">
+        <meta property="og:description" content="Доказать, что монотонная последовательность будет сходящейся, если сходится некоторая ее подпоследовательность.">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/tasks/94">
-        <meta property="og:url" content="https://dodem.ru/tasks/94">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/tasks/90">
+        <meta property="og:url" content="https://dodem.ru/tasks/90">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -137,7 +137,7 @@
             <section class="block-section task">
                 <div class="block-section-header">
                     <i class="fas fa-hashtag"></i>
-                    <span>94</span>
+                    <span>90</span>
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
@@ -154,7 +154,7 @@
                         <div class="overlay"></div>
                     </div>
                     <div class="block-section-content">
-                        <p>Доказать, что сходящаяся числовая последовательность достигает любо своей верхней грани, либо своей нижней грани, либо той и другой.</p>
+                        <p>Доказать, что монотонная последовательность будет сходящейся, если сходится некоторая ее подпоследовательность.</p>
 
                     </div>
                 </div>
@@ -193,51 +193,32 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p>Обозначим последовательность в условии за $x_n$. Известно, что она сходится к какому-то числу $A$.</p>
-<p>Предположим, что</p>
-<p class="display-math">$$ \forall n \ : \ x_n = A $$</p>
-<p>То есть, каждый член $x_n$ равен $A$. В этом случае, очевидно, что</p>
-<p class="display-math">$$ x_n = \sup x_n = \inf x_n = A $$</p>
-<p>Рассмотрим теперь отрицание утверждения выше:</p>
-<p class="display-math">$$ \exists n' \ : \ x_{n'} \neq A $$</p>
-<p>Обозначим $x_{n'}$ за $B$. Будем считать, что $A&gt;B$ (для $B&gt;A$ доказательство аналогичное).</p>
-<p>Распишем по определению, что значит $x_n\to A$:</p>
-<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |x_n - A| < \varepsilon $$</p>
-<p>Раз выполняется для любого положительного $\varepsilon$, то и для числа $\frac{A-B}{2}$ найдется такое $N$, что для любого $n&gt;N$ выполняется неравенство:</p>
-<p class="display-math">$$ |x_n - A| < \frac{A-B}{2} $$</p>
-<p>Важно отметить, что $N \geq 1$. Пусть это не так и $N=0$. Тогда для абсолютно всех членов последовательности $x_n$ выполняется неравенство</p>
-<p class="display-math">$$ |x_n - A| < \frac{A-B}{2} $$</p>
-<p>В том числе оно выполняется и для $x_{n'}$, то есть</p>
-<p class="display-math">$$ |x_{n'} - A| < \frac{A-B}{2} $$</p>
-<p>Но $x_{n'} = B$, поэтому</p>
-<p class="display-math">$$ |x_{n'} - A| < \frac{A-B}{2} $$</p>
-<p>Так как $A&gt;B$, то $B-A &lt; 0$, поэтому</p>
-<p class="display-math">$$ |x_{n'} - A| = |B-A| = -(B-A) = A-B $$</p>
-<p class="display-math">$$ A-B < \frac{A-B}{2} $$</p>
-<p class="display-math">$$ 1 < \frac{1}{2} $$</p>
-<p>Получили противоречие. Значит $N$ не может быть равно $0$, поэтому $N\geq 1$. Но $N$ — конечное число и мы имеем $N$ первых элементов последовательности $x_n$:</p>
-<p class="display-math">$$ x_1, x_2, \ldots, x_N $$</p>
-<p>Среди этого конечного числа членов есть хотя бы один, а в общем случае некоторое конечное множество элементов $\set{x_t}$, для которых не выполняется неравенство из определения предела, то есть</p>
-<p class="display-math">$$ |x_t - A| \geq \frac{A-B}{2} $$</p>
-<p>Распишем это неравенство по пункту 2 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
-<p class="display-math">$$ |x_t - A| \geq \frac{A-B}{2} \Leftrightarrow \left[\begin{array}{ll} x_t - A \geq \frac{A-B}{2} \\ x_t - A \leq -\frac{A-B}{2} \end{array}\right. $$</p>
-<p>Пусть верно первое неравенства справа (случай, когда верно второе доказывается аналогично):</p>
-<p class="display-math">$$ x_t - A \geq \frac{A-B}{2} $$</p>
-<p class="display-math">$$ x_t \geq A + \frac{A-B}{2} $$</p>
-<p>Мы знаем, что для любого $n&gt;N$ выполняется неравенство</p>
-<p class="display-math">$$ |x_n - A| < \frac{A-B}{2} $$</p>
-<p>Распишем это неравенство по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
-<p class="display-math">$$ |x_n - A| < \frac{A-B}{2} \Leftrightarrow \begin{cases} x_n - A < \frac{A-B}{2} \\ x_n - A > -\frac{A-B}{2} \end{cases} $$</p>
-<p>Рассмотрим первое неравенство справа:</p>
-<p class="display-math">$$ x_n - A < \frac{A-B}{2} $$</p>
-<p class="display-math">$$ A + \frac{A-B}{2} > x_n $$</p>
-<p>Теперь воспользуемся неравенством для $x_t$ выше:</p>
-<p class="display-math">$$ x_t > A + \frac{A-B}{2} > x_n $$</p>
-<p class="display-math">$$ x_t > x_n $$</p>
-<p>Итак, полученный член $x_t$ больше всех членов последовательности, начиная с $n&gt;N$. Если есть и другие элементы из $\set{x_t}$, для которых тоже выходит неравенство выше, то берем максимальный из них.</p>
-<p>Итак, получили некоторый элемент $\overline{x}$, который больше любого $x_n$ при $n&gt;N$ и одновременно больше любого из конечного числа элементов $x_1\ldots x_N$. Значит $\overline{x}$ больше вообще любого члена последовательности $x_n$. Но так как  $\overline{x}$ является членом последовательности $x_n$, значит</p>
-<p class="display-math">$$ \overline{x} = \sup x_n $$</p>
-<p>То есть последовательность $x_n$ достигает своей точной верхней грани.</p>
+                        <p>Обозначим исходную монотонную последовательность за $x_n$. Будем считать, что она монотонно возрастает (для убывания доказательство аналогичное).</p>
+<p>Есть два варианта: $x_n$ может быть ограничена, а может и нет. Если она ограничена, то по признаку Вейерштрасса (любая монотонная и ограниченная последовательность сходится) это сразу означает, что $x_n$ сходится.</p>
+<hr>
+<p>Предположим, что $x_n$ не ограничена. По определению это означает, что</p>
+<p class="display-math">$$ \forall M > 0 \ \exists N \ : \ x_N > M $$</p>
+<p>Но так как $x_n$ монотонно возрастает, то и все остальные остальные члены последовательности тоже больше $M$:</p>
+<p class="display-math">$$ M < x_N \leq x_{N+1} \leq x_{N+2} \leq \ldots $$</p>
+<p>Итак, для любого $M &gt; 0$ найдется такое $N$, что для любого $n&gt;N$ будет выполняться неравенство $x_n &gt; M$. По определению это означает, что</p>
+<p class="display-math">$$ \limn x_n = +\infty $$</p>
+<p>Из условия нам известно, у $x_n$ есть некоторая сходящаяся подпоследовательность $x_{p_n}\to A$. Распишем, что это значит по определению:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |x_{p_n} - A| < \varepsilon $$</p>
+<p>Неравенство в конце раскроем по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ |x_{p_n} - A| < \varepsilon \Leftrightarrow \begin{cases} x_{p_n} - A < \varepsilon \\ x_{p_n} - A > -\varepsilon \end{cases} $$</p>
+<p>Рассмотрим верхнее первое неравенство справа:</p>
+<p class="display-math">$$ x_{p_n} - A < \varepsilon $$</p>
+<p class="display-math">$$ x_{p_n} < \varepsilon + A $$</p>
+<p>Итак, для любого $n&gt;N$ будет выполняться неравенство $ x_{p_n} &lt; \varepsilon + A $. В тоже время, для числа $|\varepsilon + A|$ найдется такое $N'$, что для любого $n&gt;N'$
+будет выполняться неравенство</p>
+<p class="display-math">$$ x_n > |\varepsilon + A| \geq \varepsilon + A $$</p>
+<p class="display-math">$$ x_n > \varepsilon + A $$</p>
+<p>Так как $p_n$ (последовательность индексов у $x_{p_n}$) по определению является возрастающей подпоследовательностью натуральных чисел, то, рано или поздно, найдется такое $p_t$, что одновременно и $p_t &gt; N'$, и $p_t &gt; N$.</p>
+<p>Получаем два противоречащих друг другу неравенства:</p>
+<p class="display-math">$$ \underbrace{x_{p_t} > \varepsilon + A}_{\large\text{т.к. } x_n\to +\infty} \quad \text{ и } \quad \underbrace{x_{p_t} < \varepsilon + A}_ {\large\text{т.к. } x_{p_n}\to A} $$</p>
+<p>Раз получили противоречие, значит наше предположение о том, что $x_n$ не ограничена было неверным.</p>
+<p>Итак, монотонная $x_n$ в которой есть сходящаяся подпоследовательность всегда ограничена. Но любая монотонная и ограниченная последовательность сходится. Значит, $x_n$ сходится.</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -302,14 +283,14 @@
 
 
             <section class="nav">
-                    <a href="../../tasks/95/" title="Следующая задача" class="next">
-                        <span class="label">95</span>
+                    <a href="../../tasks/91/" title="Следующая задача" class="next">
+                        <span class="label">91</span>
                         <i class="fas fa-arrow-right"></i>
                     </a>
 
-                    <a href="../../tasks/93/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/89/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">93</span>
+                        <span class="label">89</span>
                     </a>
             </section>
         </section>

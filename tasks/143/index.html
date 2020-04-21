@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" href="../../favicon.png" type="image/png">
+        <link rel="icon" href="../../favicon.ico" type="image/x-icon">
+
+        <title>143 | Демидович. Решения</title>
+        <meta name="description" content="Доказать теорему Штольца, если\begin{align*}    &amp;\text{а) } y_{n+1} &gt; y_n \ (n &#x3D;1,2,\ldots); \qquad \text{б) } \limn y_n &#x3D; +\infty,    \\[5px]    &amp;\text{в) существует } \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n},\end{align*}то$$ \limn \frac{x_n}{y_n} &#x3D; \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n} $$">
+        <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
+
+        <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
+
+        <meta property="og:title" content="143 | Демидович. Решения">
+        <meta property="og:description" content="Доказать теорему Штольца, если\begin{align*}    &amp;\text{а) } y_{n+1} &gt; y_n \ (n &#x3D;1,2,\ldots); \qquad \text{б) } \limn y_n &#x3D; +\infty,    \\[5px]    &amp;\text{в) существует } \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n},\end{align*}то$$ \limn \frac{x_n}{y_n} &#x3D; \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n} $$">
+        <meta property="og:image" content="https://dodem.ru/graphics/og.png">
+
+        <link rel="canonical" href="https://dodem.ru/tasks/143">
+        <meta property="og:url" content="https://dodem.ru/tasks/143">        <!-- MathJax -->
+        <script>
+            MathJax =
+            {
+                tex: {
+                    inlineMath: [['$', '$']],
+                    displayMath: [['$$', '$$']],
+                    tags: 'ams',
+                    macros: {
+                        ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
+                        floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                    }
+                }
+            };
+        </script>
+        <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+
+        <!-- jQuery -->
+        <script src="../../libs/jquery-3.4.1.min.js"></script>
+
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="../../libs/font-awesome/css/all.min.css">
+
+        <script>
+            var SITE_ROOT = '../../';
+        </script>
+
+        <script src="../../scripts/toc.js"></script>
+        <script src="../../scripts/hash.js"></script>
+        <script src="../../scripts/location.js"></script>
+        <script src="../../scripts/search.js"></script>
+
+        <link rel="stylesheet" type="text/css" href="../../style.min.css" />        <!-- Extra -->
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155361802-1"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-155361802-1');
+        </script>
+        <!-- /Global site tag (gtag.js) - Google Analytics -->
+
+        <!-- Yandex WebMaster Verification Code -->
+        <meta name="yandex-verification" content="7ff246512ec9d0f4" />
+
+        <!-- Google Ads -->
+        <script data-ad-client="ca-pub-8094912170389944" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script src="../../scripts/dark-magic.js"></script>        
+        <script src="../../scripts/show-hide.js"></script>
+    </head>
+    <body class="page-task">
+        <section title="Решено x из 4462 задач (x%)" class="progress-bar-container">
+            <div class="progress-bar">
+                <div></div>
+            </div>
+        </section>
+        <script src="../../scripts/progress-bar.js"></script>
+        <section class="content">
+            <header>
+                <a href="/">Демидович</a>
+            </header>            <section class="search-container state--normal">
+                <div class="search-bar">
+                    <input id="search-input" autocomplete="off" placeholder="Введите номер задачи (от 1 до 4462)" autofocus />
+                    <a class="search-bar--button goto-solution-button">
+                        <i class="search-icon--normal fas fa-search"></i>
+                        <i class="search-icon--success fas fa-arrow-right"></i>
+                        <i class="search-icon--error fas fa-times"></i>
+                        <i class="search-icon--wtf fas fa-question"></i>
+                    </a>
+                </div>
+                
+                <section class="search-results">
+                    <div class="search-results-pane search-results-pane--success _loading">
+                        <div class="task-view">
+                            <div class="task-nav">
+                                <div title="Название раздела" class="section"><span class="accent">IV</span> <span class="title">Название раздела</span></div>
+                                <div title="Название параграфа" class="paragraph">└─ <span class="accent">§15</span> <span class="title">Название параграфа</span></div>
+                                <div class="overlay"></div>
+                            </div>
+
+                            <div class="task-preview"></div>
+                        </div>
+
+                        <div class="task-loading">
+                            <img class="spinner" src="../../graphics/spinner.svg" />
+                        </div>
+
+                        <a class="goto-solution-button">
+                            <span>К РЕШЕНИЮ</span> <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--error">
+                        <div class="emoji"><i class="far fa-tired"></i></div>
+                        <div class="info">
+                            Эта задача еще не добавлена!<br>
+                            Но вы можете <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F">добавить</a> свое решение!<br>
+                            Еще можно <a target="_blank" href="https://github.com/CMTV/dodem/wiki/%D0%9F%D0%BE%D1%87%D0%B5%D0%BC%D1%83-%D0%BD%D0%B5%D1%82-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%3F">узнать</a t>, почему решения нет.
+                        </div>
+                    </div>
+
+                    <div class="search-results-pane search-results-pane--wtf">
+                        <div class="emoji"><i class="far fa-flushed"></i></div>
+                        <div class="info">
+                            Введен некорректный запрос!<br>
+                            Можно вводить только числа от 1 до 4462.<br>
+                            Буквы и другие символы не допускаются!
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="block-section task">
+                <div class="block-section-header">
+                    <i class="fas fa-hashtag"></i>
+                    <span>143</span>
+                </div>
+                <div class="block-section-container">
+                    <div class="task-nav">
+                        <div title="Введение в анализ" class="section">
+                            <span class="accent">I</span>
+                            <span class="title">Введение в анализ</span>
+                        </div>
+
+                        <div title="Теория последовательностей" class="paragraph">
+                            └─ <span class="accent">§2</span>
+                            <span class="title">Теория последовательностей</span>
+                        </div>
+
+                        <div class="overlay"></div>
+                    </div>
+                    <div class="block-section-content">
+                        <p>Доказать теорему Штольца, если</p>
+<p class="display-math">\begin{align*}
+    &\text{а) } y_{n+1} > y_n \ (n =1,2,\ldots); \qquad \text{б) } \limn y_n = +\infty,
+    \\[5px]
+    &\text{в) существует } \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n},
+\end{align*}</p>
+<p>то</p>
+<p class="display-math">$$ \limn \frac{x_n}{y_n} = \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n} $$</p>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] Перед решением -->
+                <ins class="adsbygoogle ads ads--before-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="9148242804"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            <section class="block-section solution  single  _hidden">
+                <div class="block-section-actions">
+                    <div title="Скрыть решение" class="action action--hide">
+                        <i class="fas fa-eye-slash"></i><span>Скрыть</span>
+                    </div>
+                </div>
+
+                <div class="block-section-header">
+                    <i class="fas fa-check"></i>
+                    <span>Решение</span>
+                </div>
+                
+                <div class="block-section-container">
+                    
+                    <div class="reason">
+                        
+                    </div>
+
+                    <div class="block-section-content">
+                        <p><strong>Лемма о медианных дробях</strong></p>
+<p>Пусть даны две дроби</p>
+<p class="display-math">$$ \frac{a}{b} \leq \frac{c}{d}, \quad (b,d > 0) $$</p>
+<p>Тогда</p>
+<p class="display-math">$$ \frac{a}{b} \leq \frac{a+c}{b+d} \leq \frac{c}{d} $$</p>
+<details><summary><div class="header-inner">Доказательство</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Нам дано, что</p>
+<p class="display-math">$$ \frac{a}{b} \leq \frac{c}{d} $$</p>
+<p>Умножим обе части неравенства на $bd$:</p>
+<p class="display-math">$$ ad \leq cb $$</p>
+<p>Теперь докажем требуемое неравенство:</p>
+<p class="display-math">$$ \frac{a}{b} \leq \frac{a+c}{b+d} \leq \frac{c}{d} $$</p>
+<p><strong>Доказательство левой части</strong></p>
+<p class="display-math">$$ \frac{a}{b} \leq \frac{a+c}{b+d} $$</p>
+<p>Умножим обе части неравенства на $b(b+d)$:</p>
+<p class="display-math">$$ ab + ad \leq ab + bc $$</p>
+<p>Вычтем из обеих частей $ab$:</p>
+<p class="display-math">$$ ad \leq cb $$</p>
+<p>Как мы показали выше, это неравенство выполняется.</p>
+<p>$\blacksquare$</p>
+<p><strong>Доказательство правой части</strong></p>
+<p class="display-math">$$ \frac{a+c}{b+d} \leq \frac{c}{d} $$</p>
+<p>Умножим обе части неравенства на $(b+d)d$:</p>
+<p class="display-math">$$ ad + cd \leq cb + cd $$</p>
+<p>Вычтем из обеих частей $cd$:</p>
+<p class="display-math">$$ ad \leq cb $$</p>
+<p>Как мы показали выше, это неравенство выполняется.</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p>Имеется также важное следствие. Если</p>
+<p class="display-math">$$ \frac{a_1}{b_1} \leq \frac{a_2}{b_2} \leq \ldots \leq \frac{a_n}{b_n} $$</p>
+<p>при $b_i &gt; 0$, то</p>
+<p class="display-math">$$ \frac{a_1}{b_1} \leq \frac{a_1 + a_2 + \ldots + a_n}{b_1 + b_2 + \ldots + b_n} \leq \frac{a_n}{b_n} $$</p>
+<p>Доказывается оно элементарно поочередным применением самой леммы.</p>
+<hr>
+<p><strong>Вспомогательное неравенство</strong></p>
+<p>Из условия известно, что</p>
+<p class="display-math">$$ \limn \frac{x_{n+1} - x_n}{y_{n+1} - y_n} = A $$</p>
+<p>Распишем это по определению:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{x_{n+1} - x_n}{y_{n+1} - y_n} - A \right| < \varepsilon $$</p>
+<p>Возьмем какое-нибудь произвольное $\varepsilon' &gt; 0$. Раз определение выше выполняется для любого положительного числа, то и для положительного $\frac{\varepsilon'}{2}$ существует такое $N$, что для любого $n &gt; N$ выполняется
+неравенство</p>
+<p class="display-math">$$ \left| \frac{x_{n+1} - x_n}{y_{n+1} - y_n} - A \right| < \frac{\varepsilon'}{2} $$</p>
+<p>Раскроем это неравенство в цепоное по пункту 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot;:</p>
+<p class="display-math">$$ -\frac{\varepsilon'}{2} < \frac{x_{n+1} - x_n}{y_{n+1} - y_n} - A < \frac{\varepsilon'}{2} $$</p>
+<p>Прибавим ко всем частям неравенства $A$:</p>
+<p class="display-math">$$ A - \frac{\varepsilon'}{2} < \frac{x_{n+1} - x_n}{y_{n+1} - y_n} < A + \frac{\varepsilon'}{2} $$</p>
+<p>Примем теперь за $N = N + 1$, чтобы мы неравенство выше выполнялось для любых $n\geq N$. Итак, неравенство выше выполняется для следующих дробей:</p>
+<p class="display-math">\begin{gather*}
+    \frac{x_{N+1} - x_N}{y_{N+1} - y_N}
+    \\[5px]
+    \frac{x_{N+2} - x_{N+1}}{y_{N+2} - y_{N+1}}
+    \\[5px]
+    \ldots
+    \\[5px]
+    \frac{x_n - x_{n-1}}{y_n - y_{n-1}}
+\end{gather*}</p>
+<p>Расположим все эти дроби в порядке возрастания и применим к ним следствие из доказанной выше леммы о медианных дробях:</p>
+<p class="display-math">$$ A-\frac{\varepsilon'}{2} < \frac{x_{N+1} - x_N + x_{N+2} - x_{N+1} + \ldots + x_n - x_{n-1}}{y_{N+1} - y_N + y_{N+2} - y_{N+1} + \ldots + y_n - y_{n-1}} < A + \frac{\varepsilon'}{2} $$</p>
+<p class="display-math">$$ A-\frac{\varepsilon'}{2} < \frac{x_n - x_{N}}{y_n - y_N} < A + \frac{\varepsilon'}{2} $$</p>
+<p>Вычтем из всех частей неравенства $A$:</p>
+<p class="display-math">$$ -\frac{\varepsilon'}{2} < \frac{x_n - x_{N}}{y_n - y_N} - A < \frac{\varepsilon'}{2} $$</p>
+<p>Воспользуемся пунктом 1 прото-задачи &quot;<a href="/proto/simple-abs">Упрощение модулей в неравенствах</a>&quot; в обратную сторону и получаем важное вспомогательное неравенство, которое потребуется далее:</p>
+<p class="display-math">$$ \left| \frac{x_n - x_N}{y_n - y_N} - A \right| < \frac{\varepsilon'}{2} $$</p>
+<hr>
+<p><strong>Сходимость $\frac{x_n}{y_n}$</strong></p>
+<p>Теперь попробуем представить само выражение внутри модуля неравенства выше в другом виде:</p>
+<p class="display-math">\begin{gather*}
+    \frac{x_n - x_N}{y_n - y_N} - A = \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left( \frac{y_n - y_N}{y_n - y_N} \right) =
+    \\[5px]
+    = \frac{ x_n - x_N - Ay_n + Ay_N }{ y_n - y_N } = \frac{y_n}{y_n - y_N}\left( \frac{x_n}{y_n} - A + \frac{Ay_N - x_N}{y_n} \right)
+\end{gather*}</p>
+<p>Итак,</p>
+<p class="display-math">$$ \frac{x_n - x_N}{y_n - y_N} - A = \frac{y_n}{y_n - y_N}\left( \frac{x_n}{y_n} - A + \frac{Ay_N - x_N}{y_n} \right) $$</p>
+<p>Начем изолировать выражение $\frac{x_n}{y_n} - A$ справа:</p>
+<p class="display-math">$$ \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left(\frac{y_n - y_N}{y_n}\right) = \frac{x_n}{y_n} - A + \frac{Ay_N - x_N}{y_n} $$</p>
+<p class="display-math">$$ \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left(1 - \frac{y_N}{y_n}\right) = \frac{x_n}{y_n} - A + \frac{Ay_N - x_N}{y_n} $$</p>
+<p class="display-math">$$ \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left(1 - \frac{y_N}{y_n}\right) - \frac{Ay_N - x_N}{y_n} = \frac{x_n}{y_n} - A $$</p>
+<p>Рассмотрим теперь следующее выражение:</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| = \left| \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left(1 - \frac{y_N}{y_n}\right) - \frac{Ay_N - x_N}{y_n} \right| $$</p>
+<p>Воспользуемся свойством модуля (см. прото-задачу &quot;<a href="/proto/abs-properties">Свойства модуля</a>&quot;):</p>
+<p class="display-math">\begin{gather*}
+    \left| \frac{x_n}{y_n} - A \right| = \left| \left( \frac{x_n - x_N}{y_n - y_N} - A \right)\left(1 - \frac{y_N}{y_n}\right) - \frac{Ay_N - x_N}{y_n} \right| \leq
+    \\[5px]
+    \leq \left| \frac{x_n - x_N}{y_n - y_N} - A \right|\underbrace{\left| 1 - \frac{y_N}{y_n} \right|}_{\Large \leq \ 1} + \left| \frac{Ay_N - x_N}{y_n} \right| \leq
+    \\[5px]
+    \leq \left| \frac{x_n - x_N}{y_n - y_N} - A \right| + \left| \frac{Ay_N - x_N}{y_n} \right|
+\end{gather*}</p>
+<p>Итак,</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \underbrace{\left| \frac{x_n - x_N}{y_n - y_N} - A \right|}_{\Large \leq \frac{\varepsilon'}{2}} + \left| \frac{Ay_N - x_N}{y_n} \right| $$</p>
+<p>Поэтому</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \frac{\varepsilon'}{2} + \left| \frac{Ay_N - x_N}{y_n} \right| $$</p>
+<p>Осталось только разобраться с</p>
+<p class="display-math">$$ \left| \frac{Ay_N - x_N}{y_n} \right| $$</p>
+<p>Внутри модуля находится последовательность</p>
+<p class="display-math">$$ \frac{Ay_N - x_N}{y_n}, $$</p>
+<p>которая стремится к $0$ с учетом того, что в числителе находится константа:</p>
+<p class="display-math">$$ \limn \frac{Ay_N - x_N}{y_n} = (Ay_N - x_N)\limn \frac{1}{y_n} = 0 $$</p>
+<p>Мы воспользовались тем фактом, что если $y_n\to +\infty$, то $\frac{1}{y_n}\to 0$ (см. прото-задачу &quot;<a href="/proto/sequences/limits/bm-bb">Связь бесконечно малой и бесконечно большой последовательностей</a>&quot;).</p>
+<p>Распишем по определению, что значит стремление к $0$ у последовательности выше:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ \left| \frac{Ay_N - x_N}{y_n} \right| < \varepsilon $$</p>
+<p>Раз выполняется для любого положительного $\varepsilon$, то и для положительного $\frac{\varepsilon'}{2}$ найдется такое $N'$, что для любого $n&gt;N'$ будет выполняться неравенство</p>
+<p class="display-math">$$ \left| \frac{Ay_N - x_N}{y_n} \right| < \frac{\varepsilon'}{2} $$</p>
+<p>Возвращаемся к $\left|\frac{x_n}{y_n} - A\right|$:</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \frac{\varepsilon'}{2} + \underbrace{\left| \frac{Ay_N - x_N}{y_n} \right|}_{\Large < \frac{\varepsilon'}{2}} $$</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \frac{\varepsilon'}{2} + \frac{\varepsilon'}{2} $$</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \varepsilon' $$</p>
+<p>Стоит отметить, что здесь речь идет уже о $n&gt;\max(N, N')$, чтобы одновременно выполнялись выведенное выше вспомогательное неравенство и неравенство из $\frac{Ay_N - x_N}{y_n}\to 0$.</p>
+<p>Мы показали, что какое $\varepsilon&gt;0$ ни возьми, всегда найдется такие $N$ и $N'$, что для любого $n&gt; \max(N, N')$ будет выполняться неравенство</p>
+<p class="display-math">$$ \left| \frac{x_n}{y_n} - A \right| \leq \varepsilon' $$</p>
+<p>Это по определению означает, что</p>
+<p class="display-math">$$ \limn \frac{x_n}{y_n} = A = \limn \frac{x_{n+1}-x_n}{y_{n+1}-y_n} $$</p>
+<p class="display-math">$$ \limn \frac{x_n}{y_n} = \limn \frac{x_{n+1}-x_n}{y_{n+1}-y_n} $$</p>
+<p>$\blacksquare$</p>
+
+                    </div>
+
+                    <div class="reason-overlay">
+                        
+
+                        <div class="button-show"><i class="fas fa-eye"></i> Смотреть</div>
+                    </div>
+
+                    <div class="solver">
+                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                                <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
+
+
+                            <span class="solver-name">Петр Радько</span>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+
+            <div class="help-me">
+                <span class="message">Не разобрались в решении?</span>
+                <a class="help-button" href="https://mathit.ru" title="Задать вопрос на форуме">
+                    <i class="fas fa-question"></i>
+                    <span>Спросить</span>
+                </a>
+            </div>
+
+            <div class="dark-magic-container">
+                <!-- [Демидович] После решения -->
+                <ins class="adsbygoogle ads ads--after-solution"
+                style="display:block"
+                data-ad-client="ca-pub-8094912170389944"
+                data-ad-slot="4277939948"
+                data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+            </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/simple-abs" title="Упрощение модулей в неравенствах" target="_blank">
+                                    Упрощение модулей в неравенствах
+                                </a>
+                            </dt>
+                            <dd>Несколько очень полезных свойств для упрощения неравенств с модулями.</dd>
+                            <dt>
+                                <a href="/proto/abs-properties" title="Свойства модуля" target="_blank">
+                                    Свойства модуля
+                                </a>
+                            </dt>
+                            <dd>Самые полезные и часто требующиеся свойства модуля с подробными и понятными доказательствами.</dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/bm-bb" title="Связь бесконечно малой и бесконечно большой последовательностей" target="_blank">
+                                    Связь бесконечно малой и бесконечно большой последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
+
+
+
+            <section class="nav">
+                    <a href="../../tasks/144/" title="Следующая задача" class="next">
+                        <span class="label">144</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+
+                    <a href="../../tasks/142/" title="Предыдущая задача" class="prev">
+                        <i class="fas fa-arrow-left"></i>
+                        <span class="label">142</span>
+                    </a>
+            </section>
+        </section>
+
+        <footer>
+            <a title="Главный Анти-Демидович" href="https://radkopeter.ru" target="_blank">Петр Радько</a>
+        </footer>
+
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript" >
+            (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+            m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+            (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+         
+            ym(56922817, "init", {
+                 clickmap:true,
+                 trackLinks:true,
+                 accurateTrackBounce:true,
+                 webvisor:true
+            });
+         </script>
+         <noscript><div><img src="https://mc.yandex.ru/watch/56922817" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+         <!-- /Yandex.Metrika counter -->    </body>
+</html>

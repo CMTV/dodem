@@ -7,18 +7,34 @@
         <link rel="icon" href="../../../../favicon.png" type="image/png">
         <link rel="icon" href="../../../../favicon.ico" type="image/x-icon">
 
-        <title>Связь бесконечно малой и бесконечно большой последовательностей | Прото-задача | Демидович. Решения</title>
-        <meta name="description" content="Если $\alpha_n \to 0$, то $\frac{1}{\alpha_n} \to \infty$, и наоборот, если $A_n\to\infty$, то $\frac{1}{A_n}\to 0$.">
+        <title>Сходимость по расширенным индексам | Прото-задача | Демидович. Решения</title>
+        <meta name="description" content="Пусть последовательность $x_n\to A$, $z_n\to +\infty$ и $z_n$ состоит только из натуральных чисел.
+
+Тогда последовательность
+
+$$ y_n &#x3D; x_{z_n} $$
+
+сходится к числу $A$:
+
+$$ \limn y_n &#x3D; A $$">
         <meta name="keywords" content="демидович,демидович решебник,антидемидович,демидович задачник,демидович решения,демидович ответы,математика,решение,гдз">
 
         <meta name="generator" content="Static Site Generator &quot;Dodem&quot;">
 
-        <meta property="og:title" content="Связь бесконечно малой и бесконечно большой последовательностей | Прото-задача | Демидович. Решения">
-        <meta property="og:description" content="Если $\alpha_n \to 0$, то $\frac{1}{\alpha_n} \to \infty$, и наоборот, если $A_n\to\infty$, то $\frac{1}{A_n}\to 0$.">
+        <meta property="og:title" content="Сходимость по расширенным индексам | Прото-задача | Демидович. Решения">
+        <meta property="og:description" content="Пусть последовательность $x_n\to A$, $z_n\to +\infty$ и $z_n$ состоит только из натуральных чисел.
+
+Тогда последовательность
+
+$$ y_n &#x3D; x_{z_n} $$
+
+сходится к числу $A$:
+
+$$ \limn y_n &#x3D; A $$">
         <meta property="og:image" content="https://dodem.ru/graphics/og.png">
 
-        <link rel="canonical" href="https://dodem.ru/proto/sequences/limits/bm-bb">
-        <meta property="og:url" content="https://dodem.ru/proto/sequences/limits/bm-bb">        <!-- MathJax -->
+        <link rel="canonical" href="https://dodem.ru/proto/sequences/limits/expand">
+        <meta property="og:url" content="https://dodem.ru/proto/sequences/limits/expand">        <!-- MathJax -->
         <script>
             MathJax =
             {
@@ -139,11 +155,14 @@
                 </div>
                 <div class="block-section-container">
                     <div class="task-nav">
-                        Связь бесконечно малой и бесконечно большой последовательностей
+                        Сходимость по расширенным индексам
                     </div>
                     <div class="block-section-content">
-                        <p>Если $\alpha_n \to 0$, то $\frac{1}{\alpha_n} \to \infty$, и наоборот, если $A_n\to\infty$, то $\frac{1}{A_n}\to 0$.</p>
-
+                        <p>Пусть последовательность $x_n\to A$, $z_n\to +\infty$ и $z_n$ состоит только из натуральных чисел.</p>
+<p>Тогда последовательность</p>
+<p class="display-math">$$ y_n = x_{z_n} $$</p>
+<p>сходится к числу $A$:</p>
+<p class="display-math">$$ \limn y_n = A $$</p>
                     </div>
                 </div>
             </section>
@@ -157,9 +176,6 @@
                     <div class="block-section-container task-list">
                         <div class="wrapper">
                                 <a title="К задаче 71" href="../../../../tasks/71/">71</a>
-                                <a title="К задаче 76" href="../../../../tasks/76/">76</a>
-                                <a title="К задаче 143" href="../../../../tasks/143/">143</a>
-                                <a title="К задаче 144" href="../../../../tasks/144/">144</a>
                         </div>
                     </div>
                 </section>
@@ -191,29 +207,19 @@
                 
                 <div class="block-section-container">
                     <div class="block-section-content">
-                        <p>Докажем в одну сторону: если $\alpha_n \to 0$, то $\frac{1}{\alpha_n} \to \infty$. Запишем развернуто:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \alpha_n = 0 \Rightarrow \lim_{n\to\infty} \frac{1}{\alpha_n} = \infty $$</p>
-<p>Сначала выразим словами, как это будет доказываться. Мы из известного определения левого предела строим определение для правого.</p>
-<p>Распишем по определению левый предел:</p>
-<p class="display-math">\begin{equation}\label{bydef}
-    \lim_{n\to\infty} \alpha_n = 0 \Leftrightarrow \forall \varepsilon > 0 \ \exists N = N(\varepsilon) \ \forall n > N \ : \ |\alpha_n| < \varepsilon
-\end{equation}</p>
-<p>Раз выражение выше работает для любого $\varepsilon &gt; 0$, то оно будет работать и для положительного числа $\frac{1}{E}$, то есть:</p>
-<p class="display-math">$$ \forall E > 0 \text{ берем } \varepsilon' = \frac{1}{E} $$</p>
-<p>Теперь, это $\varepsilon'$ мы подставляем в определение \eqref{bydef}, так как оно справедливо для всех положительных чисел.
-Из него мы и получаем следующее:</p>
-<p class="display-math">$$ \exists N = N(\varepsilon') \ \forall n > N \ : \ |\alpha_n| < \varepsilon' $$</p>
-<p>Разберемся с последним неравенством:</p>
-<p class="display-math">$$ |\alpha_n| < \varepsilon' = \frac{1}{E} \quad \Leftrightarrow \quad \left|\frac{1}{\alpha_n}\right| > E $$</p>
-<p>Объединим все вместе &quot;на словах&quot;. Из любого $E&gt;0$ мы берем $\frac{1}{E}&gt;0$ и подставляем его в \eqref{bydef}. Оттуда получаем $N$, такое, что для любого $n &gt; N$ будет выполнятся неравенство:</p>
-<p class="display-math">$$ \left|\frac{1}{\alpha_n}\right| > E $$</p>
-<p>Теперь запишем это же формально:</p>
-<p class="display-math">$$ \forall E > 0 \ \exists N = N\left(\frac{1}{E}\right) \ \forall n > N \ : \ \left|\frac{1}{\alpha_n}\right| > E $$</p>
-<p>А это и есть определение бесконечно большой последовательности $\frac{1}{\alpha_n}$:</p>
-<p class="display-math">$$ \lim_{n\to\infty} \frac{1}{\alpha_n} = \infty $$</p>
-<p>$\blacksquare$</p>
-<p>Наоборот, из $A_n\to\infty$ следует, что $\frac{1}{A_n}\to 0$ доказывается точно так же.</p>
-
+                        <p>По условию имеем, что $x_n\to A$. Распишем по определению:</p>
+<p class="display-math">$$ \forall \varepsilon > 0 \ \exists N_x = N_x(\varepsilon) \ \forall n > N_x \ : \ |x_n - A| < \varepsilon $$</p>
+<p>Также по условию $z_n\to +\infty$. Распишем по определению:</p>
+<p class="display-math">$$ \forall E > 0 \ \exists N_z = N_z(E) \ \forall n > N_z \ : \ z_n > E $$</p>
+<p>Рассмотрим теперь произвольное положительное число $\varepsilon'$. Для него с помощью первого определения найдется такое $N_x'$, что для любого $n&gt;N_x'$
+выполняется неравенство $|x_n - A| &lt; \varepsilon'$.</p>
+<p>Но для числа $N_x'$ с помощью второго определения можно найти такое $N_z'$, что для любого $n&gt;N_z'$ выполняется неравенство
+$z_n &gt; N_x'$.</p>
+<p>Но $z_n$ по условию состоит из натуральных чисел, поэтому все такие $z_n$ могут использоваться в качестве индексов для $x_n$, а значит для всех $z_n$ будет выполняться неравенство</p>
+<p class="display-math">$$ |\underbrace{x_{z_n}}_{\large = \ y_n} - A| < \varepsilon' $$</p>
+<p>Итак, для любого $\varepsilon &gt; 0$ найдется такое $N$, что для любого $n&gt;N$ будет выполняться неравенство $|y_n - A| &lt; \varepsilon$.</p>
+<p>Это по определению означает, что</p>
+<p class="display-math">$$ \limn y_n = A $$</p>
                     </div>
 
                     <div class="reason-overlay">

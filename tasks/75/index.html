@@ -224,6 +224,66 @@
 <hr>
 <p><strong>Доказательство б)</strong></p>
 <p class="display-math">$$ 1 + \alpha < e^{\alpha} $$</p>
+<p><em>Доказательство для рационального $\alpha$</em></p>
+<p>Пусть $\alpha$ — рациональное число:</p>
+<p class="display-math">$$ \alpha = \frac{p}{q} \quad (p\in\mathbb{Z}, q\in\mathbb{N}) $$</p>
+<p>Рассмотрим три варианта:</p>
+<ol>
+<li>$p,q &gt; 0$</li>
+</ol>
+<p>Из <a href="/tasks/69">задачи 69</a> известно, что</p>
+<p class="display-math">$$ \left(1+\frac{1}{n}\right)^n < e $$</p>
+<p>а значит и</p>
+<p class="display-math">$$ \left(1 + \frac{1}{q}\right)^q < e $$</p>
+<p>Возьмем корень $q$-ой степени из обеих частей:</p>
+<p class="display-math">$$ 1 + \frac{1}{q} < e^{\frac{1}{q}} $$</p>
+<p>Возведем обе части в степень $p$:</p>
+<p class="display-math">$$ \left(1+\frac{1}{q}\right)^p < e^{\frac{p}{q}} $$</p>
+<p>Для выражения слева от знака неравенства воспользуемся неравенством Бернулли (см. <a href="/tasks/7/">задачу 7</a>):</p>
+<p class="display-math">$$ 1 + \frac{p}{q} \leq \left(1 + \frac{1}{q}\right)^p < e^{\frac{p}{q}} $$</p>
+<p class="display-math">$$ 1 + \frac{p}{q} < e^{\frac{p}{q}} $$</p>
+<p class="display-math">$$ 1 + \alpha < e^{\alpha} $$</p>
+<ol start="2">
+<li>$q=1, p &lt; 0$</li>
+</ol>
+<p>Раз $q=1$, то</p>
+<p class="display-math">$$ \alpha = p $$</p>
+<p>Так как $p = \alpha$ — целое число меньше $0$, то</p>
+<p class="display-math">$$ \alpha \leq -1 $$</p>
+<p>Прибавим к обеим частям неравенства $1$:</p>
+<p class="display-math">$$ 1 + \alpha \leq 0 $$</p>
+<p>В то же время мы знаем, что $e^{\alpha}$ даже при отрицательном $\alpha$ будет строго больше нуля, так как $e^{\alpha} = \frac{1}{e^{-\alpha}} &gt; 0$, где $-\alpha &gt; 0$.</p>
+<p>Поэтому</p>
+<p class="display-math">$$ 1 + \alpha \leq 0 < e^{\alpha} $$</p>
+<p class="display-math">$$ 1 + \alpha < e^{\alpha} $$</p>
+<ol start="3">
+<li>$q\neq 1, p &lt; 0$</li>
+</ol>
+<p class="display-math">$$ \frac{}{} $$</p>
+<p><em>Доказательство для иррационального $\alpha$</em></p>
+<p>Нам нужно доказать, что</p>
+<p class="display-math">$$ 1 + \alpha < e^{\alpha} $$</p>
+<p>Вычтем из обеих частей $\alpha$ и далее будем рассматривать именно полученное неравенство:</p>
+<p class="display-math">$$ e^{\alpha} - \alpha > 1 $$</p>
+<p>Так как $\alpha$ — иррациональное число, то его порождает сечение $A/A'$ на множестве рациональных чисел.</p>
+<p>Так как у нижнего класса $A$ не наибольшего рационального числа, то в этом классе можно выделить возрастающую последовательность рациональных чисел $p_n$. В классе $A'$ можно выделить убывающую последовательность рациональных чисел $q_n$.
+Итак,</p>
+<p class="display-math">$$ p_n < \alpha < q_n $$</p>
+<p>Причем</p>
+<p class="display-math">$$ \limn q_n - p_n = 0 $$</p>
+<p>Рассмотрим левую часть неравенства $p_n &lt; \alpha &lt; q_n$:</p>
+<p class="display-math">$$ p_n < \alpha $$</p>
+<p>Представим обе части неравенства в виде показателей степени с основанием $e$:</p>
+<p class="display-math">$$ e^{p_n} < e^{\alpha} $$</p>
+<p>Теперь рассмотрим вторую часть неравенства $p_n &lt; \alpha &lt; q_n$:</p>
+<p class="display-math">$$ \alpha < q_n $$</p>
+<p>Умножим обе части неравенства на $-1$:</p>
+<p class="display-math">$$ -\alpha > -q_n $$</p>
+<p>Прибавим к обеим сторонам число $e^{p_n}$:</p>
+<p class="display-math">$$ e^{p_n} - \alpha > e^{p_n} - q_n $$</p>
+<p>Но выше мы уже показали, что $e^{\alpha} &gt; e^{p_n}$, поэтому</p>
+<p class="display-math">$$ e^{\alpha} - \alpha > e^{p_n} - \alpha > e^{p_n} - q_n $$</p>
+<p class="display-math">$$ e^{\alpha} - \alpha > e^{p_n} - q_n $$</p>
                     </div>
 
                     <div class="reason-overlay">

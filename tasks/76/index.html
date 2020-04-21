@@ -195,35 +195,65 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Доказательство а)</strong></p>
-<p class="display-math">$$ \frac{1}{n+1} < \ln \left( 1 + \frac{1}{n} \right) < \frac{1}{n} $$</p>
-<p><em>Доказательство правой части</em></p>
-<p class="display-math">$$ \ln \left( 1 + \frac{1}{n} \right) < \frac{1}{n} $$</p>
-<p>Умножим обе части на $n$:</p>
-<p class="display-math">$$ n \ln \left(1 + \frac{1}{n}\right) < 1 $$</p>
-<p class="display-math">$$ \ln \left( 1 + \frac{1}{n} \right)^n < 1 $$</p>
-<p>Представим обе части неравенства как показатели степени с основанием $e$ (знак неравенства не изменится, так как $e&gt;1$):</p>
-<p class="display-math">$$ e^{\ln \left( 1+\frac{1}{n} \right)^n} < e^1 $$</p>
-<p class="display-math">$$ \left( 1+\frac{1}{n} \right)^n < e $$</p>
-<p>Последнее неравенство выполняется (см. <a href="/tasks/69">задачу 69</a>).</p>
-<p>Итак, мы доказали, что</p>
-<p class="display-math">$$ \ln \left( 1 + \frac{1}{n} \right) < \frac{1}{n} $$</p>
+                        <p>Пусть $a&gt;1$.</p>
+<p>Введем обозначение $x_n$:</p>
+<p class="display-math">\begin{gather*}
+    x_n = a^{\frac{1}{n}} - 1
+    \\[5px]
+    a^{\frac{1}{n}} = x_n + 1
+    \\[5px]
+    \frac{\ln a}{n} = \ln (1 + x_n)
+    \\[5px]
+    n = \frac{\ln a}{\ln (1+x_n)}
+\end{gather*}</p>
+<p>Теперь рассмотрим последовательность из условия, предел которой нам нужно найти:</p>
+<p class="display-math">$$ n (a^{\frac{1}{n}}-1) = n x_n $$</p>
+<p>Заменим $n$ справа найденным выше значением:</p>
+<p class="display-math">$$ n (a^{\frac{1}{n}}-1) = \frac{x_n \ln a}{\ln (1+x_n)} $$</p>
+<p>Теперь введем еще одну последовательность $k_n$:</p>
+<p class="display-math">$$ k_n = \floor{\frac{1}{x_n}} $$</p>
+<p>Тогда, по определению &quot;пола&quot; и &quot;потолка числа&quot;:</p>
+<p class="display-math">$$ \floor{\frac{1}{x_n}} \leq \frac{1}{x_n} \leq \ceil{\frac{1}{x_n}} $$</p>
+<p>Воспользуемся неравенством:</p>
+<p class="display-math">$$ \ceil{\frac{1}{x_n}} \leq \floor{\frac{1}{x_n}} + 1 $$</p>
+<details><summary><div class="header-inner">Доказательство</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что для любого $x$ выполняется неравенство:</p>
+<p class="display-math">$$ \ceil{x} \leq \floor{x} + 1 $$</p>
+<p>Рассмотрим, чему может быть равна разница:</p>
+<p class="display-math">$$ \ceil{x} - \floor{x} $$</p>
+<p>Если $x$ — целое число, то эта разница равна $0$. Если нет, то разница равна $1$. То есть, справедливо следующее неравенство:</p>
+<p class="display-math">$$ \ceil{x} - \floor{x} \leq 1 $$</p>
+<p class="display-math">$$ \ceil{x} \leq \floor{x} + 1 $$</p>
 <p>$\blacksquare$</p>
-<p><em>Доказательство левой части</em></p>
-<p class="display-math">$$ \frac{1}{n+1} < \ln\left( 1+\frac{1}{n} \right) $$</p>
-<p>Умножим обе части на $n+1$:</p>
-<p class="display-math">$$ 1 < (n+1)\ln\left( 1 + \frac{1}{n} \right) $$</p>
-<p class="display-math">$$ 1 < \ln\left( 1+\frac{1}{n} \right)^{n+1} $$</p>
-<p>Представим обе части неравенства как показатели степени с основанием $e$ (знак неравенства не поменяется, так как $e&gt;1$):</p>
-<p class="display-math">$$ e^1 < e^{\ln\left( 1 + \frac{1}{n} \right)^{n+1}} $$</p>
-<p class="display-math">$$ e < \left( 1+\frac{1}{n} \right)^{n+1} $$</p>
-<p>Последнее неравенство выполняется (см. <a href="/tasks/69">задачу 69</a>).</p>
-<p>Итак, мы доказали, что</p>
-<p class="display-math">$$ \frac{1}{n+1} < \ln\left( 1+\frac{1}{n} \right) $$</p>
-<p>$\blacksquare$</p>
+</div></details>
+<p class="display-math">$$ \floor{\frac{1}{x_n}} \leq \frac{1}{x_n} \leq \floor{\frac{1}{x_n}} + 1 $$</p>
+<p>Введем обозначение</p>
+<p class="display-math">$$ k_n = \floor{\frac{1}{x_n}} $$</p>
+<p class="display-math">$$ k_n \leq \frac{1}{x_n} \leq k_n+1 $$</p>
+<p>&quot;Перевернем&quot; дроби:</p>
+<p class="display-math">$$ \frac{1}{k_n+1} \leq x_n \leq \frac{1}{k_n} $$</p>
+<p>По пункту а) <a href="/tasks/75">задачи 75</a>:</p>
+<p class="display-math">$$ \frac{1}{k_n + 2} < \ln\left( 1 +\frac{1}{k_n + 1} \right) \leq \ln(1+x_n) \leq \ln\left(1+\frac{1}{k_n}\right) < \frac{1}{k_n} $$</p>
+<p class="display-math">$$ \frac{1}{k_n + 2} < \ln(1+x_n) < \frac{1}{k_n} $$</p>
+<p class="display-math">$$ k_n < \frac{1}{\ln(1+x_n)} < k_n + 2 $$</p>
+<p>Теперь вернемся к равенству, полученному выше:</p>
+<p class="display-math">$$ n (a^{\frac{1}{n}}-1) = \frac{x_n \ln a}{\ln (1+x_n)} $$</p>
+<p class="display-math">$$ \frac{k_n}{k_n + 1}\ln a < n(a^{\frac{1}{n}} - 1) < \frac{k_n + 2}{k_n} \ln a $$</p>
+<p class="display-math">$$ \left(1 - \frac{1}{k_n + 1}\right) \ln a < n(a^{\frac{1}{n}} - 1) < \left( 1 + \frac{2}{k_n} \right)\ln a $$</p>
+<p>Найдем предел $x_n$:</p>
+<p class="display-math">$$ \limn x_n = a^{\limn \frac{1}{n}} - 1 = a^0 - 1 = 0 $$</p>
+<p>Раз $x_n\to 0$, то $\frac{1}{x_n}$, по прото-задаче &quot;<a href="/proto/sequences/limits/bm-bb">Связь бесконечно малой и бесконечно большой последовательностей</a>&quot; $\frac{1}{x_n}\to +\infty$. Но тогда и $k_n = \floor{\frac{1}{x_n}}\to +\infty$, так как $k_n \geq \frac{1}{x_n}$. Наконец, по все той же прото-задаче
+последовательности $\frac{1}{k_n + 1}$ и $\frac{2}{k_n}$ стремятся к $0$, то есть в неравенстве</p>
+<p class="display-math">$$ \left(1 - \frac{1}{k_n + 1}\right) \ln a < n(a^{\frac{1}{n}} - 1) < \left( 1 + \frac{2}{k_n} \right)\ln a $$</p>
+<p>последовательности слева и справа стремятся к $\ln a$, а значит, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже стремится к $\ln a$:</p>
+<p class="display-math">$$ \limn n(a^{\frac{1}{n}} - 1) = \ln a $$</p>
 <hr>
-<p><strong>Доказательство б)</strong></p>
-<p class="display-math">$$ 1 + \alpha < e^{\alpha} $$</p>
+<p>Теперь рассмотрим вариант, когда $0 &lt; a &lt; 1$. Тогда $\frac{1}{a} &gt; 1$, а искомый предел можно записать в следующем виде:</p>
+<p class="display-math">\begin{gather*}
+    \limn n(a^{\frac{1}{n}} - 1) = \limn (-a^{\frac{1}{n}})\cdot n\left(\left(\frac{1}{a}\right)^{\frac{1}{n}} - 1\right) =
+    \\[5px]
+    = -\limn a^{\frac{1}{n}}\limn n\left(\left(\frac{1}{a}\right)^{\frac{1}{n}} - 1\right) = -\ln\frac{1}{a} = \ln a
+\end{gather*}</p>
                     </div>
 
                     <div class="reason-overlay">
@@ -263,6 +293,26 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/bm-bb" title="Связь бесконечно малой и бесконечно большой последовательностей" target="_blank">
+                                    Связь бесконечно малой и бесконечно большой последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
 
 

@@ -194,24 +194,102 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>Построение подпоследовательности</strong></p>
-<p>Рассмотрим последовательность &quot;потолков&quot; (округлений сверху) последовательности $p_n$. По определению потолка числа</p>
-<p class="display-math">$$ \ceil{p_n} \geq p_n $$</p>
-<p>Распишем, что по определению значит $p_n\to +\infty$:</p>
-<p class="display-math">$$ \forall E > 0 \ \exists N = N(E) \ \forall n > N \ : \ p_n > E $$</p>
-<p>Рассмотрим неравенство в конце:</p>
-<p class="display-math">$$ p_n > E $$</p>
-<p>Воспользуемся неравенством про &quot;потолок&quot;:</p>
-<p class="display-math">$$ \ceil{p_n} > E $$</p>
-<p>Итак, для любого $E&gt;0$ всегда можно найти такое $N$ (берем $N$ от $p_n$), что для любого $n&gt;N$ выполняется неравенство:</p>
-<p class="display-math">$$ \ceil{p_n} > E $$</p>
-<p>Это по определению означает, что $\ceil{p_n}\to +\infty$.</p>
-<p>Начем теперь строить следующую последовательность $t_n$. $t_1 = \ceil{p_1}$. Так как $\ceil{p_n}\to +\infty$, то можно найти такое $\ceil{p_k} &gt; t_1$. Тогда $t_2 = \ceil{p_k}$.
-Продолжаем этот процесс до бесконечности.</p>
-<p>Получаем последовательность</p>
-<p class="display-math">$$ t_1, t_2, t_3, \ldots, t_n, \ldots $$</p>
-<p>Причем каждый эта последовательность строго возрастает и каждый ее член — натуральное число.</p>
-<p>Это означит, что $t_n$ является подпоследовательностью последовательности натуральных чисел.</p>
+                        <p><strong>Доказательство для $p_n$</strong></p>
+<p>Раз $p_n\to +\infty$ то отбросим конечное число первых членов этой последовательности, которые меньше $1$. По прото-задаче &quot;<a href="/proto/sequences/limits/first-members-independency/">Независимость предела последовательности от ее первых членов</a>&quot; при рассмотрении только тех членов $p_n$, которые больше $1$ искомый предел не изменится.</p>
+<p>Итак, дальше исходим из того, что $p_n &gt; 1$.</p>
+<p>Докажем, что</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{p_n} \right)^{p_n} = e $$</p>
+<p>Рассмотрим следующую последовательность $k_n$:</p>
+<p class="display-math">$$ k_n = \floor{p_n} $$</p>
+<p>Раз $p_n\to +\infty$, то и $k_n\to +\infty$.</p>
+<p>Воспользуемся неравенством</p>
+<p class="display-math">$$ \floor{p_n} \leq p_n \leq \floor{p_n} + 1 $$</p>
+<details><summary><div class="header-inner">Доказательство неравенства</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что для любого $x$ выполняется неравенство</p>
+<p class="display-math">$$ \floor{x} \leq x \leq \floor{x} + 1 $$</p>
+<p>Рассмотрим, какие значения может принимать разница</p>
+<p class="display-math">$$ \ceil{x} - \floor{x} $$</p>
+<p>Эта разница равна $0$, когда $x$ — целое число и $1$ в остальных случаях.</p>
+<p>В любом случае, выполняется неравенство</p>
+<p class="display-math">$$ \ceil{x} - \floor{x} \leq 1 $$</p>
+<p>Тогда</p>
+<p class="display-math">$$ \ceil{x} \leq 1 + \floor{x} $$</p>
+<p>Отсюда</p>
+<p class="display-math">$$ \floor{x} \leq x \leq \ceil{x} \leq \floor{x} + 1 $$</p>
+<p class="display-math">$$ \floor{x} \leq x \leq \floor{x} + 1 $$</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p class="display-math">$$ k_n \leq p_n \leq k_n + 1 $$</p>
+<p>&quot;Перевернем&quot; дроби:</p>
+<p class="display-math">$$ \frac{1}{k_n + 1} \leq \frac{1}{p_n} \leq \frac{1}{k_n} $$</p>
+<p>Прибавим ко всем частям неравенства по $1$:</p>
+<p class="display-math">$$ 1+\frac{1}{k_n + 1} \leq 1 + \frac{1}{p_n} \leq 1 + \frac{1}{k_n} $$</p>
+<p>Тогда</p>
+<p class="display-math">$$ \left( 1+\frac{1}{k_n + 1} \right)^{k_n} \leq \left( 1+\frac{1}{p_n} \right)^{p_n} \leq \left(1+\frac{1}{k_n}\right)^{k_n + 1} $$</p>
+<details><summary><div class="header-inner">Пояснение с возведением в степень</div><div class="toggle-button"><i class="fas fa-eye"></i><i class="fas fa-eye-slash"></i></div></summary><div class="body">
+<p>Докажем, что если</p>
+<p class="display-math">$$ a \leq b \leq c \quad (a,b,c > 1) $$</p>
+<p>и</p>
+<p class="display-math">$$ x \leq y \leq z \quad (x,y,z > 0) $$</p>
+<p>то</p>
+<p class="display-math">$$ a^x \leq b^y \leq c^z $$</p>
+<p>Прологарифмируем первое неравенство сверху:</p>
+<p class="display-math">$$ \ln a \leq \ln b \leq \ln c $$</p>
+<p>Умножим это неравенство на второе сверху:</p>
+<p class="display-math">$$ x\ln a \leq y\ln b \leq z\ln c $$</p>
+<p>Представим каждую часть неравенства как показатель степени с основанием $e$ (знак неравенств не изменится, так как $e&gt;1$):</p>
+<p class="display-math">$$ e^{x\ln a} \leq e^{y\ln b} \leq e^{z\ln c} $$</p>
+<p class="display-math">$$ a^x \leq b^y \leq c^z $$</p>
+<p>$\blacksquare$</p>
+</div></details>
+<p class="display-math">$$ \frac{\left( 1 + \frac{1}{k_n + 1} \right)^{k_n + 1}}{\left( 1 + \frac{1}{k_n + 1} \right)} \leq \left( 1+\frac{1}{p_n} \right) \leq \left(1 + \frac{1}{k_n}\right)^{k_n + 1} $$</p>
+<p>Рассмотрим отдельно пределы последовательностей в правой и левой частях этого неравенства.</p>
+<p><em>Предел правой части</em></p>
+<p>Из <a href="/tasks/69">задачи 69</a> известно</p>
+<p class="display-math">$$ \limn \left(1 + \frac{1}{n}\right)^{n+1} = e $$</p>
+<p>Последовательность $k_n$ состоит только из натуральных чисел и стремится к $+\infty$, а значит, по прото-задаче &quot;<a href="/proto/sequences/limits/expand">Сходимость по расширенным индексам</a>&quot;</p>
+<p class="display-math">$$ \limn \left(1+\frac{1}{k_n}\right)^{k_n + 1} = e $$</p>
+<p><em>Предел левой части</em></p>
+<p>Известно, что</p>
+<p class="display-math">$$ \limn \left(1 + \frac{1}{n}\right)^{n} $$</p>
+<p>Последовательность $k_n + 1$ состоит только из натуральных чисел и стремится к $+\infty$ (так как этим условиям удовлетворяет $k_n$), а значит, по прото-задаче &quot;<a href="/proto/sequences/limits/expand">Сходимость по расширенным индексам</a>&quot;</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{k_n + 1} \right)^{k_n + 1} = e $$</p>
+<p>Раз последовательность $k_n + 1\to +\infty$, то, по прото-задаче &quot;<a href="/proto/sequences/limits/bm-bb">Связь бесконечно малой и бесконечно большой последовательностей</a>&quot; последовательность $\frac{1}{k_n + 1}\to 0$:</p>
+<p class="display-math">$$ \limn \left( 1 + \frac{1}{k_n + 1} \right) = 1 + \limn \frac{1}{k_n + 1} = 1 + 0 = 1 $$</p>
+<p>Теперь мы можем найти предел левой части неравенства:</p>
+<p class="display-math">$$ \limn \frac{\left( 1 + \frac{1}{k_n + 1} \right)^{k_n + 1}}{\left( 1 + \frac{1}{k_n + 1} \right)} = \frac{\limn \left( 1 + \frac{1}{k_n + 1} \right)^{k_n + 1}}{\limn \left( 1 + \frac{1}{k_n + 1} \right)} = \frac{e}{1} = e $$</p>
+<p><em>К неравенству</em></p>
+<p>Итак, в неравенстве</p>
+<p class="display-math">$$ \frac{\left( 1 + \frac{1}{k_n + 1} \right)^{k_n + 1}}{\left( 1 + \frac{1}{k_n + 1} \right)} \leq \left( 1+\frac{1}{p_n} \right) \leq \left(1 + \frac{1}{k_n}\right)^{k_n + 1} $$</p>
+<p>последовательности слева и справа стремятся к $e$, значит, по теореме о двух милиционерах, &quot;зажатая&quot; между ними последовательность тоже стремится к $e$:</p>
+<p class="display-math">$$ \limn \left( 1+\frac{1}{p_n} \right)^{p_n} = e $$</p>
+<p>$\blacksquare$</p>
+<hr>
+<p><strong>Доказательство для $q_n$</strong></p>
+<p>Из условия $q_n\to -\infty$. Тогда введем новую последовательность</p>
+<p class="display-math">$$ q_n' = -q_n $$</p>
+<p>Тогда $q_n'\to +\infty$.</p>
+<p class="display-math">$$ q_n = -q_n' $$</p>
+<p>Рассмотрим последовательность, предел которой надо найти:</p>
+<p class="display-math">\begin{gather*}
+    \left( 1+\frac{1}{q_n} \right)^{q_n} = \left( 1-\frac{1}{q_n'} \right)^{-q_n'} = \left(\frac{ 1 }{ 1 - \frac{1}{q_n'} }\right)^{q_n'} = \left( \frac{q_n'}{q_n' - 1} \right)^{q_n'} =
+    \\[5px]
+    = \left( \frac{q_n'-1 + 1}{q_n' -1} \right)^{q_n'} = \left( 1 + \frac{1}{(q_n'-1)} \right)^{(q_n' - 1) + 1} = 
+    \\[5px]
+    = \left( 1 + \frac{1}{q_n'-1} \right)^{q_n' - 1}\left(1+\frac{1}{q_n'-1}\right)
+\end{gather*}</p>
+<p>Найдем предел</p>
+<p class="display-math">\begin{gather*}
+    \limn \left( 1+\frac{1}{q_n} \right)^{q_n} = \limn \left( 1 + \frac{1}{q_n'-1} \right)^{q_n' - 1}\left(1+\frac{1}{q_n'-1}\right) =
+    \\[5px]
+    = \limn \left( 1 + \frac{1}{q_n'-1} \right)^{q_n' - 1} \underbrace{\limn \left(1+\frac{1}{q_n'-1}\right)}_{\large = 1} =
+    \\[5px]
+    = \limn \left( 1 + \frac{1}{q_n'-1} \right)^{q_n' - 1} = e
+\end{gather*}</p>
+<p>с учетом того, что последовательность $q_n' - 1\to +\infty$, так как $q_n'\to +\infty$, а сходимость к $e$ для бесконечно больших последовательностей мы уже доказали выше.</p>
+<p>Итак, мы доказали, что</p>
+<p class="display-math">$$ \limn \left( 1+\frac{1}{q_n} \right)^{q_n} = e $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -252,6 +330,38 @@
                     (adsbygoogle = window.adsbygoogle || []).push({});
                 </script>
             </div>
+
+
+            <section class="block-section protoTasks">
+                <div class="block-section-header">
+                    <i class="fas fa-sitemap"></i>
+                    <span>Прото-задачи</span>
+                </div>
+                <div class="block-section-container">
+                    <dl class="block-section-content">
+
+                            <dt>
+                                <a href="/proto/sequences/limits/first-members-independency/" title="Независимость предела последовательности от ее первых членов" target="_blank">
+                                    Независимость предела последовательности от ее первых членов
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/expand" title="Сходимость по расширенным индексам" target="_blank">
+                                    Сходимость по расширенным индексам
+                                </a>
+                            </dt>
+                            <dd></dd>
+                            <dt>
+                                <a href="/proto/sequences/limits/bm-bb" title="Связь бесконечно малой и бесконечно большой последовательностей" target="_blank">
+                                    Связь бесконечно малой и бесконечно большой последовательностей
+                                </a>
+                            </dt>
+                            <dd></dd>
+                    
+                    </dl>
+                </div>
+            </section>
 
 
 
