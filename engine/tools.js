@@ -536,7 +536,8 @@ function genAll(devMode = false)
             let view =
             {
                 title: `${taskNumber} | Демидович. Решения`,
-                description: (task.task_src).replace(/(\r\n|\n|\r)/gm, "").replace('"', '').substring(0, 400),
+                description: `Подробное и понятное решение задачи ${taskNumber} из задачника Демидовича.`, // (task.task_src).replace(/(\r\n|\n|\r)/gm, "").replace('"', '').substring(0, 400),
+                customKw: `демидович ${taskNumber},`,
                 canonical_url: 'tasks/' + taskNumber,
                 
                 task: taskNumber,
