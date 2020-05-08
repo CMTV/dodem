@@ -49,8 +49,10 @@ $$ \limn x_n &#x3D; a $$">
                     macros: {
                         ceil: ["\\left\\lceil #1 \\right\\rceil", 1],       // "Потолок" числа
                         floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
-                        limn: ["\\lim\\limits_{n\\to\\infty}"],                     // Краткая запись предела последовательности
-                        set: ["\\left\\{ #1 \\right\\}", 1]                 // Обрамление аргумента в { }
+                        limn: ["\\lim\\limits_{n\\to\\infty}"],             // Краткая запись предела последовательности
+                        set: ["\\left\\{ #1 \\right\\}", 1],                // Обрамление аргумента в { }
+                        tg: ["\\mathop{\\rm tg}\\nolimits"],                // Тангенс
+                        ctg: ["\\mathop{\\rm ctg}\\nolimits"],              // Котангенс
                     }
                 }
             };
