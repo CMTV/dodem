@@ -1,0 +1,1 @@
+$$ y = \frac{\sqrt{x}}{\sin \pi x} $$
