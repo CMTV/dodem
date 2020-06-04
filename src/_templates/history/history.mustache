@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+    <head>
+        {{> head }}        
+    </head>
+    <body class="page-history">
+        {{> progress-bar }}
+
+        <section class="content">
+            {{> header }}
+            {{> search }}
+
+            <h2 class="title"><i class="fas fa-history"></i> Хронология</h2>
+
+            <div class="history-item-list">
+                {{ #hItems }}
+                <div class="anchor" id="{{ date }}"></div>
+                <section class="block-section history-item">
+                    <h3 class="block-section-header date"><a href="#{{ date }}">{{ date }}</a></h3>
+                    <div class="block-section-container">
+                        <div class="block-section-content">{{{ content }}}</div>
+                        
+                        {{ #meta.diff }}
+                            <div class="diff">
+                                
+                                {{ #hasAdd }}
+                                    <div class="add {{ #hasEdit }}margin{{ /hasEdit }}">
+                                        <i class="fas fa-plus" title="Добавленные задачи"></i>
+                                        <div>
+                                            {{ #add }}
+                                                <a href="/tasks/{{ . }}">{{ . }}</a>
+                                            {{ /add }}
+                                        </div>
+                                    </div>
+                                {{ /hasAdd }}
+
+                                {{ #hasEdit }}
+                                    <div class="edit">
+                                        <i class="fas fa-edit" title="Измененные задачи"></i>
+                                        <div>
+                                            {{ #edit }}
+                                                <a href="/tasks/{{ . }}">{{ . }}</a>
+                                            {{ /edit }}
+                                        </div>
+                                    </div>
+                                {{ /hasEdit }}
+                                
+                            </div>
+                        {{ /meta.diff }}
+                    </div>
+                </section>
+                {{ /hItems }}
+            </div>
+
+        </section>
+
+        {{> footer }}
+    </body>
+</html>

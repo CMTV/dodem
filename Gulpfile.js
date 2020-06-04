@@ -57,6 +57,12 @@ task('build_toc_pages', (done) =>
     done();
 });
 
+task('build_history', (done) =>
+{
+    require('./engine/history').genHistory();
+    done();
+});
+
 //
 
 task('move_files', () =>
@@ -121,6 +127,7 @@ task('build_watch', (done) =>
         'build_js',
         'build_htmls',
         'build_protos',
+        'build_history',
         'move_files',
         'move_tasks_files',
         'move_proto_tasks_files'
@@ -136,6 +143,7 @@ task('build', (done) =>
         'build_js',
         'build_htmls',
         'build_protos',
+        'build_history',
         'build_toc_pages',
         'move_files',
         'move_tasks_files',

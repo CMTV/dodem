@@ -1,3 +1,7 @@
 Функция $y=\sgn x$ определяется следующим образом:
 
-$$ \sgn x = \begin{cases}  \end{cases} $$
+$$ \sgn x = \left\{ \begin{aligned} -&1\text{, если } x < 0; \\ &0\text{, если } x = 0; \\ &1\text{, если } x > 0. \end{aligned} \right. $$
+
+Построить график этой функции. Показать, что
+
+$$ |x| = x\sgn x $$

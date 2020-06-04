@@ -17,10 +17,30 @@ function fRead(p)
     return fs.readFileSync(p, { encoding: 'utf-8' });
 }
 
+// Some Markdown functions
+
+function getMdMeta(content)
+{
+    let match = /^---$([\s\S]+?)^---$/gm.exec(content);
+
+    if (match)
+    {
+        return JSON.parse(match[1]);
+    }
+    else return {};
+}
+
+function getMdContent(content)
+{
+    return content.replace(new RegExp(/^---$([\s\S]+?)^---$/gm, 'gm'), '');
+}
+
 //
 
 module.exports = {
     fExists: fExists,
     fWrite: fWrite,
-    fRead: fRead
+    fRead: fRead,
+    getMdMeta: getMdMeta,
+    getMdContent: getMdContent
 }

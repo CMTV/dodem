@@ -5,6 +5,7 @@
     <url><loc>https://dodem.ru/solvers/</loc></url>
     <url><loc>https://dodem.ru/proto/</loc></url>
     <url><loc>https://dodem.ru/toc/</loc></url>
+    <url><loc>https://dodem.ru/history/</loc><changefreq>daily</changefreq></url>
 
     {{ #tasks}}
     <url><loc>https://dodem.ru/tasks/{{ . }}/</loc></url>
