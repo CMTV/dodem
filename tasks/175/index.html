@@ -31,8 +31,10 @@
                         floor: ["\\left\\lfloor #1 \\right\\rfloor", 1],    // "Пол" числа
                         limn: ["\\lim\\limits_{n\\to\\infty}"],             // Краткая запись предела последовательности
                         set: ["\\left\\{ #1 \\right\\}", 1],                // Обрамление аргумента в { }
+
                         tg: ["\\mathop{\\rm tg}\\nolimits"],                // Тангенс
                         ctg: ["\\mathop{\\rm ctg}\\nolimits"],              // Котангенс
+                        sgn: ["\\mathop{\\rm sgn}\\nolimits"],              // Сигнум
                     }
                 }
             };
@@ -157,7 +159,9 @@
                     </div>
                     <div class="block-section-content">
                         <p>Функция $y=\sgn x$ определяется следующим образом:</p>
-<p class="display-math">$$ \sgn x = \begin{cases}  \end{cases} $$</p>
+<p class="display-math">$$ \sgn x = \left\{ \begin{aligned} -&1\text{, если } x < 0; \\ &0\text{, если } x = 0; \\ &1\text{, если } x > 0. \end{aligned} \right. $$</p>
+<p>Построить график этой функции. Показать, что</p>
+<p class="display-math">$$ |x| = x\sgn x $$</p>
                     </div>
                 </div>
             </section>
@@ -195,42 +199,20 @@
                     </div>
 
                     <div class="block-section-content">
-                        <p><strong>а)</strong></p>
-<p class="display-math">$$ y = (2x)! $$</p>
-<p>Факториал определяется для натруальных чисел. То есть $2x$ должно быть натуральным числом:</p>
-<p class="display-math">$$ 2x = n, \quad n \in \mathbb{N} $$</p>
-<p>Тогда</p>
-<p class="display-math">$$ x = \frac{n}{2}, \quad n \in \mathbb{N} $$</p>
-<p>Итак, область определения функции $y$:</p>
-<p class="display-math">$$ \frac{1}{2}, 1, \frac{3}{2}, 2, \ldots, \frac{n}{2} $$</p>
+                        <p>График функции:</p>
+<p class="w8"><a href="images/sgn.svg"><img src="images/sgn.svg" alt="График функции &quot;сигнум&quot;"></a></p>
 <hr>
-<p><strong>б)</strong></p>
-<p class="display-math">$$ y = \log_2\log_3\log_4 x $$</p>
-<p>По определению логарифма должно выполняться неравенство:</p>
-<p class="display-math">$$ \log_3\log_4 x > 0 $$</p>
-<p>Представим обе части неравенства в виде показателей степени с основанием $3$:</p>
-<p class="display-math">$$ 3^{\log_3\log_4 x} > 3^0 $$</p>
-<p class="display-math">$$ \log_4 x > 1 $$</p>
-<p>Представим обе части неравенства в виде показателей степени с основанием $4$:</p>
-<p class="display-math">$$ 4^{\log_4 x} > 4^1 $$</p>
-<p class="display-math">$$ x > 4 $$</p>
-<p>Это и есть область определения функции $y$.</p>
-<hr>
-<p><strong>в)</strong></p>
-<p class="display-math">$$ y = \sqrt[4]{\lg\tg x} $$</p>
-<p>Корень $4$ степени можно брать только из неотрицательных вещественных чисел, поэтому</p>
-<p class="display-math">$$ \lg\tg x \geq 0 $$</p>
-<p>Представим обе части неравенства в виде показателей степени с основанием $10$:</p>
-<p class="display-math">$$ 10^{\lg\tg x} \geq 10^0 $$</p>
-<p class="display-math">$$ \tg x \geq 1 $$</p>
-<p>Беря во внимание тот факт, что $\tg\frac{\pi}{4} = 1$, то</p>
-<p class="display-math">$$ \frac{\pi}{4} \leq x < \frac{\pi}{2} $$</p>
-<p>По формулам приведения имеем:</p>
-<p class="display-math">$$ \tg(\pi + x) = \frac{\sin(\pi + x)}{\cos(\pi + x)} = \frac{-\sin x}{-\cos x} = \frac{\sin x}{\cos x} = \tg(x) $$</p>
-<p>Поэтому выполняется выполняется неравенство:</p>
-<p class="display-math">$$ \frac{\pi}{4} + \pi k \leq x < \frac{\pi}{2} + \pi k, \quad k\in\mathbb{Z} $$</p>
-<hr>
-<p><strong>г)</strong></p>
+<p>Докажем, что</p>
+<p class="display-math">$$ |x| = x\sgn x $$</p>
+<p>Пусть $x&gt;0$, тогда $|x|=x$ и $\sgn x = 1$:</p>
+<p class="display-math">$$ x = x\cdot 1 $$</p>
+<p class="display-math">$$ x = x $$</p>
+<p>Пусть $x = 0$, тогда $|x| = 0$ и $\sgn x = 0$:</p>
+<p class="display-math">$$ 0 = 0 \cdot 0 $$</p>
+<p>Пусть $x &lt; 0$, тогда $|x| = -x$ и $\sgn x = -1$:</p>
+<p class="display-math">$$ -x = x \cdot (-1) $$</p>
+<p class="display-math">$$ -x = -x $$</p>
+<p>$\blacksquare$</p>
 
                     </div>
 
@@ -241,7 +223,7 @@
                     </div>
 
                     <div class="solver">
-                        <a href="../../solvers.html#CMTV" title="Узнать больше о решателе">
+                        <a href="../../solvers#CMTV" title="Узнать больше о решателе">
                                 <img class="solver-avatar" src="../../graphics/solvers/CMTV.png">
 
 
@@ -275,10 +257,14 @@
 
 
             <section class="nav">
+                    <a href="../../tasks/176/" title="Следующая задача" class="next">
+                        <span class="label">176</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
 
-                    <a href="../../tasks/165/" title="Предыдущая задача" class="prev">
+                    <a href="../../tasks/174/" title="Предыдущая задача" class="prev">
                         <i class="fas fa-arrow-left"></i>
-                        <span class="label">165</span>
+                        <span class="label">174</span>
                     </a>
             </section>
         </section>

@@ -5,6 +5,7 @@
     <url><loc>https://dodem.ru/solvers/</loc></url>
     <url><loc>https://dodem.ru/proto/</loc></url>
     <url><loc>https://dodem.ru/toc/</loc></url>
+    <url><loc>https://dodem.ru/history/</loc><changefreq>daily</changefreq></url>
 
     <url><loc>https://dodem.ru/tasks/1/</loc></url>
     <url><loc>https://dodem.ru/tasks/2/</loc></url>
@@ -168,7 +169,10 @@
     <url><loc>https://dodem.ru/tasks/163/</loc></url>
     <url><loc>https://dodem.ru/tasks/164/</loc></url>
     <url><loc>https://dodem.ru/tasks/165/</loc></url>
+    <url><loc>https://dodem.ru/tasks/174/</loc></url>
     <url><loc>https://dodem.ru/tasks/175/</loc></url>
+    <url><loc>https://dodem.ru/tasks/176/</loc></url>
+    <url><loc>https://dodem.ru/tasks/177/</loc></url>
 
     <url><loc>https://dodem.ru/proto/abs-properties/</loc></url>
     <url><loc>https://dodem.ru/proto/sequences/bounds-operations/</loc></url>
