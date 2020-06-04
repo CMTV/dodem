@@ -30,7 +30,14 @@ function genHistory()
     hItems.forEach((hItem) =>
     {
         let date = new Date((hItem.split('/').pop()).slice(0, -3));
-        date = date.toLocaleString("ru", { day: "numeric", month: "numeric", year: "numeric" });
+
+        {
+            let year =  new Intl.DateTimeFormat('en', { year: 'numeric' }).format(date);
+            let month = new Intl.DateTimeFormat('en', { month: '2-digit' }).format(date);
+            let day =   new Intl.DateTimeFormat('en', { day: '2-digit' }).format(date);
+
+            date = `${day}.${month}.${year}`;
+        }
 
         let md = util.fRead(hItem);
 
