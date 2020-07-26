@@ -1,1 +1,0 @@
-{"location":"I.3","taskHtml":"<p>Функция $y=\\sgn x$ определяется следующим образом:</p>\n<p class=\"display-math\">$$ \\sgn x = \\left\\{ \\begin{aligned} -&1\\text{, если } x < 0; \\\\ &0\\text{, если } x = 0; \\\\ &1\\text{, если } x > 0. \\end{aligned} \\right. $$</p>\n<p>Построить график этой функции. Показать, что</p>\n<p class=\"display-math\">$$ |x| = x\\sgn x $$</p>"}

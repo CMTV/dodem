@@ -1,299 +1,212 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url><loc>https://dodem.ru/</loc></url>
-    <url><loc>https://dodem.ru/solvers/</loc></url>
-    <url><loc>https://dodem.ru/proto/</loc></url>
-    <url><loc>https://dodem.ru/toc/</loc></url>
-    <url><loc>https://dodem.ru/history/</loc><changefreq>daily</changefreq></url>
-
-    <url><loc>https://dodem.ru/tasks/1/</loc></url>
-    <url><loc>https://dodem.ru/tasks/2/</loc></url>
-    <url><loc>https://dodem.ru/tasks/3/</loc></url>
-    <url><loc>https://dodem.ru/tasks/4/</loc></url>
-    <url><loc>https://dodem.ru/tasks/5/</loc></url>
-    <url><loc>https://dodem.ru/tasks/6/</loc></url>
-    <url><loc>https://dodem.ru/tasks/7/</loc></url>
-    <url><loc>https://dodem.ru/tasks/8/</loc></url>
-    <url><loc>https://dodem.ru/tasks/9/</loc></url>
-    <url><loc>https://dodem.ru/tasks/10/</loc></url>
-    <url><loc>https://dodem.ru/tasks/11/</loc></url>
-    <url><loc>https://dodem.ru/tasks/12/</loc></url>
-    <url><loc>https://dodem.ru/tasks/13/</loc></url>
-    <url><loc>https://dodem.ru/tasks/14/</loc></url>
-    <url><loc>https://dodem.ru/tasks/15/</loc></url>
-    <url><loc>https://dodem.ru/tasks/16/</loc></url>
-    <url><loc>https://dodem.ru/tasks/17/</loc></url>
-    <url><loc>https://dodem.ru/tasks/18/</loc></url>
-    <url><loc>https://dodem.ru/tasks/19/</loc></url>
-    <url><loc>https://dodem.ru/tasks/20/</loc></url>
-    <url><loc>https://dodem.ru/tasks/21/</loc></url>
-    <url><loc>https://dodem.ru/tasks/22/</loc></url>
-    <url><loc>https://dodem.ru/tasks/23/</loc></url>
-    <url><loc>https://dodem.ru/tasks/24/</loc></url>
-    <url><loc>https://dodem.ru/tasks/25/</loc></url>
-    <url><loc>https://dodem.ru/tasks/26/</loc></url>
-    <url><loc>https://dodem.ru/tasks/27/</loc></url>
-    <url><loc>https://dodem.ru/tasks/28/</loc></url>
-    <url><loc>https://dodem.ru/tasks/29/</loc></url>
-    <url><loc>https://dodem.ru/tasks/30/</loc></url>
-    <url><loc>https://dodem.ru/tasks/31/</loc></url>
-    <url><loc>https://dodem.ru/tasks/32/</loc></url>
-    <url><loc>https://dodem.ru/tasks/33/</loc></url>
-    <url><loc>https://dodem.ru/tasks/34/</loc></url>
-    <url><loc>https://dodem.ru/tasks/35/</loc></url>
-    <url><loc>https://dodem.ru/tasks/36/</loc></url>
-    <url><loc>https://dodem.ru/tasks/37/</loc></url>
-    <url><loc>https://dodem.ru/tasks/38/</loc></url>
-    <url><loc>https://dodem.ru/tasks/39/</loc></url>
-    <url><loc>https://dodem.ru/tasks/40/</loc></url>
-    <url><loc>https://dodem.ru/tasks/41/</loc></url>
-    <url><loc>https://dodem.ru/tasks/42/</loc></url>
-    <url><loc>https://dodem.ru/tasks/43/</loc></url>
-    <url><loc>https://dodem.ru/tasks/44/</loc></url>
-    <url><loc>https://dodem.ru/tasks/45/</loc></url>
-    <url><loc>https://dodem.ru/tasks/46/</loc></url>
-    <url><loc>https://dodem.ru/tasks/47/</loc></url>
-    <url><loc>https://dodem.ru/tasks/48/</loc></url>
-    <url><loc>https://dodem.ru/tasks/49/</loc></url>
-    <url><loc>https://dodem.ru/tasks/50/</loc></url>
-    <url><loc>https://dodem.ru/tasks/51/</loc></url>
-    <url><loc>https://dodem.ru/tasks/52/</loc></url>
-    <url><loc>https://dodem.ru/tasks/53/</loc></url>
-    <url><loc>https://dodem.ru/tasks/54/</loc></url>
-    <url><loc>https://dodem.ru/tasks/55/</loc></url>
-    <url><loc>https://dodem.ru/tasks/56/</loc></url>
-    <url><loc>https://dodem.ru/tasks/57/</loc></url>
-    <url><loc>https://dodem.ru/tasks/58/</loc></url>
-    <url><loc>https://dodem.ru/tasks/59/</loc></url>
-    <url><loc>https://dodem.ru/tasks/60/</loc></url>
-    <url><loc>https://dodem.ru/tasks/61/</loc></url>
-    <url><loc>https://dodem.ru/tasks/62/</loc></url>
-    <url><loc>https://dodem.ru/tasks/63/</loc></url>
-    <url><loc>https://dodem.ru/tasks/64/</loc></url>
-    <url><loc>https://dodem.ru/tasks/65/</loc></url>
-    <url><loc>https://dodem.ru/tasks/66/</loc></url>
-    <url><loc>https://dodem.ru/tasks/67/</loc></url>
-    <url><loc>https://dodem.ru/tasks/68/</loc></url>
-    <url><loc>https://dodem.ru/tasks/69/</loc></url>
-    <url><loc>https://dodem.ru/tasks/70/</loc></url>
-    <url><loc>https://dodem.ru/tasks/71/</loc></url>
-    <url><loc>https://dodem.ru/tasks/72/</loc></url>
-    <url><loc>https://dodem.ru/tasks/73/</loc></url>
-    <url><loc>https://dodem.ru/tasks/74/</loc></url>
-    <url><loc>https://dodem.ru/tasks/75/</loc></url>
-    <url><loc>https://dodem.ru/tasks/76/</loc></url>
-    <url><loc>https://dodem.ru/tasks/77/</loc></url>
-    <url><loc>https://dodem.ru/tasks/78/</loc></url>
-    <url><loc>https://dodem.ru/tasks/79/</loc></url>
-    <url><loc>https://dodem.ru/tasks/80/</loc></url>
-    <url><loc>https://dodem.ru/tasks/81/</loc></url>
-    <url><loc>https://dodem.ru/tasks/82/</loc></url>
-    <url><loc>https://dodem.ru/tasks/83/</loc></url>
-    <url><loc>https://dodem.ru/tasks/84/</loc></url>
-    <url><loc>https://dodem.ru/tasks/85/</loc></url>
-    <url><loc>https://dodem.ru/tasks/86/</loc></url>
-    <url><loc>https://dodem.ru/tasks/87/</loc></url>
-    <url><loc>https://dodem.ru/tasks/88/</loc></url>
-    <url><loc>https://dodem.ru/tasks/89/</loc></url>
-    <url><loc>https://dodem.ru/tasks/90/</loc></url>
-    <url><loc>https://dodem.ru/tasks/91/</loc></url>
-    <url><loc>https://dodem.ru/tasks/92/</loc></url>
-    <url><loc>https://dodem.ru/tasks/93/</loc></url>
-    <url><loc>https://dodem.ru/tasks/94/</loc></url>
-    <url><loc>https://dodem.ru/tasks/95/</loc></url>
-    <url><loc>https://dodem.ru/tasks/96/</loc></url>
-    <url><loc>https://dodem.ru/tasks/97/</loc></url>
-    <url><loc>https://dodem.ru/tasks/98/</loc></url>
-    <url><loc>https://dodem.ru/tasks/99/</loc></url>
-    <url><loc>https://dodem.ru/tasks/100/</loc></url>
-    <url><loc>https://dodem.ru/tasks/101/</loc></url>
-    <url><loc>https://dodem.ru/tasks/102/</loc></url>
-    <url><loc>https://dodem.ru/tasks/103/</loc></url>
-    <url><loc>https://dodem.ru/tasks/104/</loc></url>
-    <url><loc>https://dodem.ru/tasks/105/</loc></url>
-    <url><loc>https://dodem.ru/tasks/106/</loc></url>
-    <url><loc>https://dodem.ru/tasks/109/</loc></url>
-    <url><loc>https://dodem.ru/tasks/110/</loc></url>
-    <url><loc>https://dodem.ru/tasks/111/</loc></url>
-    <url><loc>https://dodem.ru/tasks/112/</loc></url>
-    <url><loc>https://dodem.ru/tasks/113/</loc></url>
-    <url><loc>https://dodem.ru/tasks/114/</loc></url>
-    <url><loc>https://dodem.ru/tasks/115/</loc></url>
-    <url><loc>https://dodem.ru/tasks/116/</loc></url>
-    <url><loc>https://dodem.ru/tasks/117/</loc></url>
-    <url><loc>https://dodem.ru/tasks/118/</loc></url>
-    <url><loc>https://dodem.ru/tasks/119/</loc></url>
-    <url><loc>https://dodem.ru/tasks/120/</loc></url>
-    <url><loc>https://dodem.ru/tasks/121/</loc></url>
-    <url><loc>https://dodem.ru/tasks/122/</loc></url>
-    <url><loc>https://dodem.ru/tasks/123/</loc></url>
-    <url><loc>https://dodem.ru/tasks/124/</loc></url>
-    <url><loc>https://dodem.ru/tasks/125/</loc></url>
-    <url><loc>https://dodem.ru/tasks/126/</loc></url>
-    <url><loc>https://dodem.ru/tasks/127/</loc></url>
-    <url><loc>https://dodem.ru/tasks/128/</loc></url>
-    <url><loc>https://dodem.ru/tasks/129/</loc></url>
-    <url><loc>https://dodem.ru/tasks/130/</loc></url>
-    <url><loc>https://dodem.ru/tasks/131/</loc></url>
-    <url><loc>https://dodem.ru/tasks/132/</loc></url>
-    <url><loc>https://dodem.ru/tasks/133/</loc></url>
-    <url><loc>https://dodem.ru/tasks/134/</loc></url>
-    <url><loc>https://dodem.ru/tasks/135/</loc></url>
-    <url><loc>https://dodem.ru/tasks/136/</loc></url>
-    <url><loc>https://dodem.ru/tasks/137/</loc></url>
-    <url><loc>https://dodem.ru/tasks/138/</loc></url>
-    <url><loc>https://dodem.ru/tasks/139/</loc></url>
-    <url><loc>https://dodem.ru/tasks/140/</loc></url>
-    <url><loc>https://dodem.ru/tasks/141/</loc></url>
-    <url><loc>https://dodem.ru/tasks/142/</loc></url>
-    <url><loc>https://dodem.ru/tasks/143/</loc></url>
-    <url><loc>https://dodem.ru/tasks/144/</loc></url>
-    <url><loc>https://dodem.ru/tasks/145/</loc></url>
-    <url><loc>https://dodem.ru/tasks/146/</loc></url>
-    <url><loc>https://dodem.ru/tasks/147/</loc></url>
-    <url><loc>https://dodem.ru/tasks/148/</loc></url>
-    <url><loc>https://dodem.ru/tasks/149/</loc></url>
-    <url><loc>https://dodem.ru/tasks/150/</loc></url>
-    <url><loc>https://dodem.ru/tasks/151/</loc></url>
-    <url><loc>https://dodem.ru/tasks/152/</loc></url>
-    <url><loc>https://dodem.ru/tasks/153/</loc></url>
-    <url><loc>https://dodem.ru/tasks/154/</loc></url>
-    <url><loc>https://dodem.ru/tasks/155/</loc></url>
-    <url><loc>https://dodem.ru/tasks/156/</loc></url>
-    <url><loc>https://dodem.ru/tasks/158/</loc></url>
-    <url><loc>https://dodem.ru/tasks/159/</loc></url>
-    <url><loc>https://dodem.ru/tasks/160/</loc></url>
-    <url><loc>https://dodem.ru/tasks/161/</loc></url>
-    <url><loc>https://dodem.ru/tasks/162/</loc></url>
-    <url><loc>https://dodem.ru/tasks/163/</loc></url>
-    <url><loc>https://dodem.ru/tasks/164/</loc></url>
-    <url><loc>https://dodem.ru/tasks/165/</loc></url>
-    <url><loc>https://dodem.ru/tasks/174/</loc></url>
-    <url><loc>https://dodem.ru/tasks/175/</loc></url>
-    <url><loc>https://dodem.ru/tasks/176/</loc></url>
-    <url><loc>https://dodem.ru/tasks/177/</loc></url>
-
-    <url><loc>https://dodem.ru/proto/abs-properties/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/bounds-operations/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/bm-bb/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/elementary/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/exp-log-transition/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/exp-ratio/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/expand/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/first-members-independency/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/geometric-progression/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/harmonic-series/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/limit-point-bounds/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/limit-point/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/limits-inequality/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/log-ratio/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/max-limit-points/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/max-min-limit-points/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/second-wonderful/</loc></url>
-    <url><loc>https://dodem.ru/proto/sequences/limits/to-real/</loc></url>
-    <url><loc>https://dodem.ru/proto/set-equality-universal/</loc></url>
-    <url><loc>https://dodem.ru/proto/simple-abs/</loc></url>
-
-    <url><loc>https://dodem.ru/toc/I.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.8/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.9/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.10/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.8/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.9/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.10/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.11/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.12/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.13/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.14/</loc></url>
-    <url><loc>https://dodem.ru/toc/II.15/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/III.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.8/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.9/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.10/</loc></url>
-    <url><loc>https://dodem.ru/toc/IV.11/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.8/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.9/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.10/</loc></url>
-    <url><loc>https://dodem.ru/toc/V.11/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/VI.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/VII.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/VII.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/VII.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/VII.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/VII.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.1/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.2/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.3/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.4/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.5/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.6/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.7/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.8/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.9/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.10/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.11/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.12/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.13/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.14/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.15/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.16/</loc></url>
-    <url><loc>https://dodem.ru/toc/VIII.17/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.1/math-induction/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.1/dedekind-cuts/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.1/set-bounds/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.1/abs/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.1/error/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/by-definition/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/infinity/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/limits-practice/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/e/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/monotonic-bounded/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/cauchy-seq/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/lim-properties/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/min-max/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/subseq-lim/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/subseq-properties/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/a-g-mean/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/stolz-theorem/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/harmonic-series/</loc></url>
-    <url><loc>https://dodem.ru/toc/I.2/recurrent/</loc></url>
-</urlset> 
+<url><loc>https://dodem.ru/tasks/1</loc></url>
+<url><loc>https://dodem.ru/tasks/2</loc></url>
+<url><loc>https://dodem.ru/tasks/3</loc></url>
+<url><loc>https://dodem.ru/tasks/4</loc></url>
+<url><loc>https://dodem.ru/tasks/5</loc></url>
+<url><loc>https://dodem.ru/tasks/6</loc></url>
+<url><loc>https://dodem.ru/tasks/7</loc></url>
+<url><loc>https://dodem.ru/tasks/8</loc></url>
+<url><loc>https://dodem.ru/tasks/9</loc></url>
+<url><loc>https://dodem.ru/tasks/10</loc></url>
+<url><loc>https://dodem.ru/tasks/11</loc></url>
+<url><loc>https://dodem.ru/tasks/12</loc></url>
+<url><loc>https://dodem.ru/tasks/13</loc></url>
+<url><loc>https://dodem.ru/tasks/14</loc></url>
+<url><loc>https://dodem.ru/tasks/15</loc></url>
+<url><loc>https://dodem.ru/tasks/16</loc></url>
+<url><loc>https://dodem.ru/tasks/17</loc></url>
+<url><loc>https://dodem.ru/tasks/18</loc></url>
+<url><loc>https://dodem.ru/tasks/19</loc></url>
+<url><loc>https://dodem.ru/tasks/20</loc></url>
+<url><loc>https://dodem.ru/tasks/21</loc></url>
+<url><loc>https://dodem.ru/tasks/22</loc></url>
+<url><loc>https://dodem.ru/tasks/23</loc></url>
+<url><loc>https://dodem.ru/tasks/24</loc></url>
+<url><loc>https://dodem.ru/tasks/25</loc></url>
+<url><loc>https://dodem.ru/tasks/26</loc></url>
+<url><loc>https://dodem.ru/tasks/27</loc></url>
+<url><loc>https://dodem.ru/tasks/28</loc></url>
+<url><loc>https://dodem.ru/tasks/29</loc></url>
+<url><loc>https://dodem.ru/tasks/30</loc></url>
+<url><loc>https://dodem.ru/tasks/31</loc></url>
+<url><loc>https://dodem.ru/tasks/32</loc></url>
+<url><loc>https://dodem.ru/tasks/33</loc></url>
+<url><loc>https://dodem.ru/tasks/34</loc></url>
+<url><loc>https://dodem.ru/tasks/35</loc></url>
+<url><loc>https://dodem.ru/tasks/36</loc></url>
+<url><loc>https://dodem.ru/tasks/37</loc></url>
+<url><loc>https://dodem.ru/tasks/38</loc></url>
+<url><loc>https://dodem.ru/tasks/39</loc></url>
+<url><loc>https://dodem.ru/tasks/40</loc></url>
+<url><loc>https://dodem.ru/tasks/41</loc></url>
+<url><loc>https://dodem.ru/tasks/42</loc></url>
+<url><loc>https://dodem.ru/tasks/43</loc></url>
+<url><loc>https://dodem.ru/tasks/44</loc></url>
+<url><loc>https://dodem.ru/tasks/45</loc></url>
+<url><loc>https://dodem.ru/tasks/46</loc></url>
+<url><loc>https://dodem.ru/tasks/47</loc></url>
+<url><loc>https://dodem.ru/tasks/48</loc></url>
+<url><loc>https://dodem.ru/tasks/49</loc></url>
+<url><loc>https://dodem.ru/tasks/50</loc></url>
+<url><loc>https://dodem.ru/tasks/51</loc></url>
+<url><loc>https://dodem.ru/tasks/52</loc></url>
+<url><loc>https://dodem.ru/tasks/53</loc></url>
+<url><loc>https://dodem.ru/tasks/54</loc></url>
+<url><loc>https://dodem.ru/tasks/55</loc></url>
+<url><loc>https://dodem.ru/tasks/56</loc></url>
+<url><loc>https://dodem.ru/tasks/57</loc></url>
+<url><loc>https://dodem.ru/tasks/58</loc></url>
+<url><loc>https://dodem.ru/tasks/59</loc></url>
+<url><loc>https://dodem.ru/tasks/60</loc></url>
+<url><loc>https://dodem.ru/tasks/61</loc></url>
+<url><loc>https://dodem.ru/tasks/62</loc></url>
+<url><loc>https://dodem.ru/tasks/63</loc></url>
+<url><loc>https://dodem.ru/tasks/64</loc></url>
+<url><loc>https://dodem.ru/tasks/65</loc></url>
+<url><loc>https://dodem.ru/tasks/66</loc></url>
+<url><loc>https://dodem.ru/tasks/67</loc></url>
+<url><loc>https://dodem.ru/tasks/68</loc></url>
+<url><loc>https://dodem.ru/tasks/69</loc></url>
+<url><loc>https://dodem.ru/tasks/70</loc></url>
+<url><loc>https://dodem.ru/tasks/71</loc></url>
+<url><loc>https://dodem.ru/tasks/72</loc></url>
+<url><loc>https://dodem.ru/tasks/73</loc></url>
+<url><loc>https://dodem.ru/tasks/74</loc></url>
+<url><loc>https://dodem.ru/tasks/75</loc></url>
+<url><loc>https://dodem.ru/tasks/76</loc></url>
+<url><loc>https://dodem.ru/tasks/77</loc></url>
+<url><loc>https://dodem.ru/tasks/78</loc></url>
+<url><loc>https://dodem.ru/tasks/79</loc></url>
+<url><loc>https://dodem.ru/tasks/80</loc></url>
+<url><loc>https://dodem.ru/tasks/81</loc></url>
+<url><loc>https://dodem.ru/tasks/82</loc></url>
+<url><loc>https://dodem.ru/tasks/83</loc></url>
+<url><loc>https://dodem.ru/tasks/84</loc></url>
+<url><loc>https://dodem.ru/tasks/85</loc></url>
+<url><loc>https://dodem.ru/tasks/86</loc></url>
+<url><loc>https://dodem.ru/tasks/87</loc></url>
+<url><loc>https://dodem.ru/tasks/88</loc></url>
+<url><loc>https://dodem.ru/tasks/89</loc></url>
+<url><loc>https://dodem.ru/tasks/90</loc></url>
+<url><loc>https://dodem.ru/tasks/91</loc></url>
+<url><loc>https://dodem.ru/tasks/92</loc></url>
+<url><loc>https://dodem.ru/tasks/93</loc></url>
+<url><loc>https://dodem.ru/tasks/94</loc></url>
+<url><loc>https://dodem.ru/tasks/95</loc></url>
+<url><loc>https://dodem.ru/tasks/96</loc></url>
+<url><loc>https://dodem.ru/tasks/97</loc></url>
+<url><loc>https://dodem.ru/tasks/98</loc></url>
+<url><loc>https://dodem.ru/tasks/99</loc></url>
+<url><loc>https://dodem.ru/tasks/100</loc></url>
+<url><loc>https://dodem.ru/tasks/101</loc></url>
+<url><loc>https://dodem.ru/tasks/102</loc></url>
+<url><loc>https://dodem.ru/tasks/103</loc></url>
+<url><loc>https://dodem.ru/tasks/104</loc></url>
+<url><loc>https://dodem.ru/tasks/105</loc></url>
+<url><loc>https://dodem.ru/tasks/106</loc></url>
+<url><loc>https://dodem.ru/tasks/109</loc></url>
+<url><loc>https://dodem.ru/tasks/110</loc></url>
+<url><loc>https://dodem.ru/tasks/111</loc></url>
+<url><loc>https://dodem.ru/tasks/112</loc></url>
+<url><loc>https://dodem.ru/tasks/113</loc></url>
+<url><loc>https://dodem.ru/tasks/114</loc></url>
+<url><loc>https://dodem.ru/tasks/115</loc></url>
+<url><loc>https://dodem.ru/tasks/116</loc></url>
+<url><loc>https://dodem.ru/tasks/117</loc></url>
+<url><loc>https://dodem.ru/tasks/118</loc></url>
+<url><loc>https://dodem.ru/tasks/119</loc></url>
+<url><loc>https://dodem.ru/tasks/120</loc></url>
+<url><loc>https://dodem.ru/tasks/121</loc></url>
+<url><loc>https://dodem.ru/tasks/122</loc></url>
+<url><loc>https://dodem.ru/tasks/123</loc></url>
+<url><loc>https://dodem.ru/tasks/124</loc></url>
+<url><loc>https://dodem.ru/tasks/125</loc></url>
+<url><loc>https://dodem.ru/tasks/126</loc></url>
+<url><loc>https://dodem.ru/tasks/127</loc></url>
+<url><loc>https://dodem.ru/tasks/128</loc></url>
+<url><loc>https://dodem.ru/tasks/129</loc></url>
+<url><loc>https://dodem.ru/tasks/130</loc></url>
+<url><loc>https://dodem.ru/tasks/131</loc></url>
+<url><loc>https://dodem.ru/tasks/132</loc></url>
+<url><loc>https://dodem.ru/tasks/133</loc></url>
+<url><loc>https://dodem.ru/tasks/134</loc></url>
+<url><loc>https://dodem.ru/tasks/135</loc></url>
+<url><loc>https://dodem.ru/tasks/136</loc></url>
+<url><loc>https://dodem.ru/tasks/137</loc></url>
+<url><loc>https://dodem.ru/tasks/138</loc></url>
+<url><loc>https://dodem.ru/tasks/139</loc></url>
+<url><loc>https://dodem.ru/tasks/140</loc></url>
+<url><loc>https://dodem.ru/tasks/141</loc></url>
+<url><loc>https://dodem.ru/tasks/142</loc></url>
+<url><loc>https://dodem.ru/tasks/143</loc></url>
+<url><loc>https://dodem.ru/tasks/144</loc></url>
+<url><loc>https://dodem.ru/tasks/145</loc></url>
+<url><loc>https://dodem.ru/tasks/146</loc></url>
+<url><loc>https://dodem.ru/tasks/147</loc></url>
+<url><loc>https://dodem.ru/tasks/148</loc></url>
+<url><loc>https://dodem.ru/tasks/149</loc></url>
+<url><loc>https://dodem.ru/tasks/150</loc></url>
+<url><loc>https://dodem.ru/tasks/151</loc></url>
+<url><loc>https://dodem.ru/tasks/152</loc></url>
+<url><loc>https://dodem.ru/tasks/153</loc></url>
+<url><loc>https://dodem.ru/tasks/154</loc></url>
+<url><loc>https://dodem.ru/tasks/155</loc></url>
+<url><loc>https://dodem.ru/tasks/156</loc></url>
+<url><loc>https://dodem.ru/tasks/158</loc></url>
+<url><loc>https://dodem.ru/tasks/159</loc></url>
+<url><loc>https://dodem.ru/tasks/160</loc></url>
+<url><loc>https://dodem.ru/tasks/161</loc></url>
+<url><loc>https://dodem.ru/tasks/162</loc></url>
+<url><loc>https://dodem.ru/tasks/163</loc></url>
+<url><loc>https://dodem.ru/tasks/164</loc></url>
+<url><loc>https://dodem.ru/tasks/165</loc></url>
+<url><loc>https://dodem.ru/proto/abs</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/bounds-operations</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/bm-bb</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/elementary</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/exp-log-transition</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/exp-ratio</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/expand</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/geometric-progression</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/harmonic-series</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/independency</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/limit-point-bounds</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/limit-point</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/limits-inequality</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/log-ratio</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/max-limit-points</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/max-min-limit-points</loc></url>
+<url><loc>https://dodem.ru/proto/sequences/limits/second-wonderful</loc></url>
+<url><loc>https://dodem.ru/proto/simple-abs</loc></url>
+<url><loc>https://dodem.ru/proto</loc></url>
+<url><loc>https://dodem.ru/</loc></url>
+<url><loc>https://dodem.ru/toc/I.1</loc></url>
+<url><loc>https://dodem.ru/toc/I.1/math-induction</loc></url>
+<url><loc>https://dodem.ru/toc/I.1/dedekind-cuts</loc></url>
+<url><loc>https://dodem.ru/toc/I.1/set-bounds</loc></url>
+<url><loc>https://dodem.ru/toc/I.1/abs</loc></url>
+<url><loc>https://dodem.ru/toc/I.1/error</loc></url>
+<url><loc>https://dodem.ru/toc/I.2</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/by-definition</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/infinity</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/limits-practice</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/e</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/monotonic-bounded</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/cauchy-seq</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/lim-properties</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/min-max</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/subseq-lim</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/subseq-properties</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/a-g-mean</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/stolz-theorem</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/harmonic-series</loc></url>
+<url><loc>https://dodem.ru/toc/I.2/recurrent</loc></url>
+<url><loc>https://dodem.ru/toc/I.3</loc></url>
+<url><loc>https://dodem.ru/toc</loc></url>
+<url><loc>https://dodem.ru/solvers</loc></url>
+<url><loc>https://dodem.ru/donate</loc></url>
+<url><loc>https://dodem.ru/history</loc></url>
+</urlset>

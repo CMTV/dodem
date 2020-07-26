@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){var t=SOLVED/4462*100,c=$(".progress-bar-container");c.prop("title","Решено ".concat(SOLVED," из 4462 задач (").concat(t.toFixed(3),"%)")),c.find(".progress-bar div").css("width","".concat(Math.ceil(t),"%"))});

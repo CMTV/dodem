@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){$(".action--hint").click(function(){$(this).toggleClass("_active"),$(this).closest(".task").find(".hint").toggleClass("_hidden")})});

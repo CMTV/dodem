@@ -1,1 +1,0 @@
-"use strict";$(document).ready(function(){var t;$(".info-bar").find(".info-item.luck").prop("href","".concat(SITE_ROOT,"tasks/")+(t=Object.keys(HASH))[t.length*Math.random()<<0])});

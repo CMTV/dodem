@@ -1,1 +1,0 @@
-"use strict";function get_location(t){var i=t.split(".");return{section:{id:i[0],title:TOC[i[0]].title},paragraph:{id:i[1],title:TOC[i[0]].paragraphs[i[1]-1]}}}
