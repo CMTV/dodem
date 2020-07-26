@@ -1,1 +1,0 @@
-$$ \limn \left( 1 + \frac{1}{n} \right)^n = e $$

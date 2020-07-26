@@ -1,0 +1,20 @@
+$layouts: (
+    stretch:    650px,
+    mini:       450px
+);
+
+@mixin layout($layout)
+{
+    @media (max-width: map-get($layouts, $layout))
+    {
+        @content;
+    }
+}
+
+@mixin layout-full
+{
+    @media (min-width: map-get($layouts, stretch))
+    {
+        @content;
+    }
+}

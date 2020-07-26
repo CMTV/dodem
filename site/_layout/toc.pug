@@ -1,0 +1,34 @@
+extends templates/default
+
+include /includes/mixins
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/toc.min.css")
+
+block content
+    .contentArea
+
+        +pageTitle('fas fa-list-ol', 'Оглавление')
+
+        each chapter in toc
+
+            .chapter
+                h3.title= chapter.id + '. ' + chapter.title
+
+                each paragraph in chapter.paragraphs
+
+                    .contentBlock.paragraph
+                        .body
+                            a.head(href=paragraph.link)
+                                .title!= '§' + paragraph.id + '. ' + paragraph.title
+                                .range(title="Номера задач в параграфе")= paragraph.range
+                                i.goto.fas.fa-arrow-right
+                            
+                            if paragraph.sections.length != 0
+                                .sections
+
+                                    each section in paragraph.sections
+                                        
+                                        .section
+                                            a.title(href=section.link)!= section.title
+                                            .range(title="Номера задач в теме")= section.range

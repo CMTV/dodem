@@ -1,1 +1,0 @@
-$$ \limn \frac{\log_a n}{n} = 0 \ (a>1) $$

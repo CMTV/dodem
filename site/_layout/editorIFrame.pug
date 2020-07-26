@@ -1,0 +1,56 @@
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1.0")
+
+        //- KaTeX style
+        link(rel="stylesheet", href="/site/libs/katex/katex.min.css")
+
+        //- Font Awesome
+        link(rel="stylesheet", href="/site/libs/font-awesome/css/all.min.css")
+
+        //- Global style
+        link(rel="stylesheet", href="/site/styles/global.min.css")
+
+        //- Components
+        script(src="/site/scripts/components.min.js")
+
+        //-
+
+        link(rel="stylesheet", href="/site/styles/editorIFrame.min.css")
+
+    body
+        .bgContainer
+            .bgSlider
+        
+        .siteContainer
+            .mainContent
+                .contentArea
+                    
+                    .contentBlock#task
+                        .head
+                            .tab
+                                i.fas.fa-hashtag
+                                span Задача
+                        .body
+                            .content
+                                p TEXT
+
+                    .contentBlock#hint
+                        .head
+                            .tab
+                                i.fas.fa-lightbulb
+                                span Указание
+                        .body
+                            .content
+                                p TEXT
+
+                    .contentBlock#explanation
+                        .head
+                            .tab
+                                i.fas.fa-file-alt
+                                span Решение
+                        .body
+                            .content
+                                p TEXT

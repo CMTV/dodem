@@ -1,0 +1,30 @@
+doctype html
+html(lang="ru")
+
+    include /includes/head
+
+    body(class=type)
+        .bgContainer
+            .bgSlider
+
+        .siteContainer
+
+            .progressContainer(title=`Решено ${progress.solved} из 4462 задач (${progress.percent}%)`)
+                .progress
+                    div(style=`width: ${progress.percent}%`)
+
+            .mainContent
+
+                include /includes/header
+                include /includes/search
+
+                block content
+
+            footer
+                .contentArea
+                    .left
+                        a(href="http://radkopeter.ru/", title="Главный Анти-Демидович") Петр Радько
+                    .center
+                        a(href="/", title="На главную") Д
+                    .right
+                        a(href="https://vk.com/nagibin2509", title="Наставник главного Анти-Демидовича") Николай Нагибин

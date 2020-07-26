@@ -1,0 +1,74 @@
+extends templates/default
+
+include /includes/mixins
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/protoTask.min.css")
+
+block content
+    .contentArea
+    
+        //- Proto-task
+        .contentBlock.protoTask
+            .head
+                .tab(title="Прото-задачи — полезные теоремы и формулы, на которые опираются решения многих задач")
+                    i.fas.fa-sitemap
+                    span= 'П.' + pTask.info.num
+            .body
+                a.category(href=`/proto#${pTask.category.getOutID()}`, title="Перейти к категории прото-задач")= pTask.category.title
+                .info= pTask.info.title
+                .content!= pTask.task
+
+        //- Dependents
+        if pTask.dependents.length != 0
+            .contentBlock.dependents
+                .head
+                    .tab(title="Задачи и прото-задачи, опирающиеся на эту прото-задачу")
+                        i.fas.fa-reply-all.fa-flip-horizontal
+                        span Использование
+                .body.taskBlockContainer
+                    each dependent in pTask.dependents
+                        a.taskBlock(class=(dependent.isProto ? 'proto' : ''),href=dependent.link, title=dependent.title)= dependent.content
+
+        +adBefore
+
+        //- Solution
+        .contentBlock.solution
+            .head
+                .tab
+                    i.fas.fa-file-alt
+                    span Решение
+            .body
+                .content.vue!= pTask.solution
+        
+        +adAfter
+
+        //- Proto-tasks
+        if pTask.protos.length != 0
+            .contentBlock.simpleList.protos
+                .head
+                    .tab
+                        i.fas.fa-sitemap
+                        span Прото-задачи
+                .body
+                    each proto in pTask.protos
+                        .li.protoTask
+                            a.title(href=`/proto/${proto.id}`, target="_blank")= proto.title
+
+                            if proto.description
+                                .desc!= proto.description
+
+        //- Links     
+        if pTask.links.length != 0
+            .contentBlock.simpleList.links
+                .head
+                    .tab
+                        i.fas.fa-external-link-alt
+                        span Ссылки
+                .body
+                    each link in pTask.links
+                        .li.link
+                            a.title(href=link.href, target="_blank")= link.title
+                            
+                            if link.desc
+                                .desc!= link.desc

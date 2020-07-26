@@ -1,2 +1,5 @@
-/node_modules
+/_engine
 /out
+
+# Node JS
+/node_modules

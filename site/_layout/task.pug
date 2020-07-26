@@ -1,0 +1,189 @@
+extends templates/default
+
+include /includes/mixins
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/task.min.css")
+    script(src="/site/scripts/task.min.js")
+
+block content
+    .contentArea
+        //- Task
+        .contentBlock.task(class=(!task.hint && !task.answer ? 'noActions' : ''))
+            .head
+                .tab.taskNum
+                    i.fas.fa-hashtag
+                    span= task.id
+                
+                .tab.actions
+                    if task.hint
+                        .action.hint(title="Указание")
+                                i.fas.fa-lightbulb
+                    
+                    if task.answer
+                        .action.answer(title="Ответ")
+                            i.fas.fa-check
+
+            .body
+                .location
+                    .locPart.chapter(title=task.location.chapter.title)
+                        span.num=   task.location.chapter.id
+                        span.title= task.location.chapter.title
+                    
+                    a.locPart.paragraph(title=task.location.paragraph.title, href=`/toc/${task.location.chapter.id}.${task.location.paragraph.num}`)
+                        span.num=   '§' + task.location.paragraph.num
+                        span.title= task.location.paragraph.title
+                    
+                    if task.location.section
+                        a.locPart.section(title=task.location.section.title, href=`/toc/${task.location.chapter.id}.${task.location.paragraph.num}/${task.location.section.id}`)
+                            span.title= task.location.section.title
+                                            
+                    .overlay
+
+                    i.fas.expand(title="Раскрыть")
+
+                if task.groupTask
+                    .groupTask(title=`Пояснение к задачам ${task.groupTask.range}`)
+                        .content!= task.groupTask.task
+
+                .content!= task.task
+
+                if task.hint
+                    .hint
+                        .title
+                            i.fas.fa-lightbulb
+                            span Указание
+
+                        .content!= task.hint
+                
+                if task.answer
+                    .answer
+                        .title
+                            i.fas.fa-check
+                            span Ответ
+
+                        .content!= task.answer         
+
+        +adBefore
+
+        //- Solutions
+        .solutions
+            each solution in task.solutions
+                .solution
+                    .header
+                        +avatar(solution.solver.avatar, `/solvers#${solution.solver.id}`)
+
+                        .info
+                            .topLine
+                                .num Разбор #{solution.num}
+                                
+                                if (solution.tags)
+                                    .tags
+                                        each tag in solution.tags
+                                            i.tag(class=tag.icon + ' ' + tag.name, title=tag.text)
+                        
+                            a.niceUnderline.name(href=`/solvers#${solution.solver.id}`)= solution.solver.name
+                        
+                        .actions
+                            if (solution.hint)
+                                .action.hint(title="Указание")
+                                    i.fas.fa-lightbulb
+                            
+                            .action.explanation(title="Решение")
+                                i.fas.fa-file-alt
+                    
+                    if (solution.hint)
+                        .block.hint
+                            .title Указание
+                            .content!= solution.hint
+
+                    .block.explanation
+                        .title Решение
+                        .content!= solution.explanation
+
+        //- Actions
+        .actions
+            .action.ask
+                .label Не разобрались?
+                a.button(href="https://mathit.ru")
+                    i.fas.fa-question
+                    span Спросить
+            .action.donate
+                .label Все поняли?
+                a.button(href="/donate")
+                    i.fas.fa-hand-holding-usd
+                    span Поддержать
+
+        +adAfter
+
+        //- FAQ
+        if (task.faq)
+            .contentBlock.faq
+                .head
+                    .tab
+                        i.fas.fa-question
+                        span Вопросы
+                
+                .body
+                    .faqContainer
+                        each faq in task.faq
+                            .faqItem
+                                .header
+                                    .title= faq.title
+                                    i.fas.fa-chevron-down(title="Раскрыть")
+                                .body
+                                    .details
+                                        
+                                        if faq.author
+                                            .author(title="Автор")
+                                                i.fas.fa-user
+                                                span= faq.author
+                                        
+                                        if faq.src
+                                            a.src(href=faq.src, title="Источник", target="_blank")
+                                                i.fas.fa-link
+                                            
+                                    .content!= faq.content
+
+        //- Proto-tasks
+        if (task.protos.length != 0)
+            .contentBlock.simpleList.protos
+                .head
+                    .tab
+                        i.fas.fa-sitemap
+                        span Прото-задачи
+                
+                .body
+                    each proto in task.protos
+                        .li.protoTask
+                            a.title(href=`/proto/${proto.id}`)= proto.title
+
+                            if proto.description
+                                .desc!= proto.description
+
+        //- Links
+        if (task.links.length != 0)
+            .contentBlock.simpleList.links
+                .head
+                    .tab
+                        i.fas.fa-external-link-alt
+                        span Ссылки
+                .body
+                    each link in task.links
+                        .li.link
+                            a.title(href=link.href, target="_blank")= link.title
+                            
+                            if link.desc
+                                .desc!= link.desc
+
+        //- Previous and next buttons
+        .nav
+            if (task.nav.prev)
+                a.prev(href=`/tasks/${task.nav.prev}`, title="Предыдущая задача")
+                    i.fas.fa-arrow-left
+                    span= task.nav.prev
+
+            if (task.nav.next)
+                a.next(href=`/tasks/${task.nav.next}`, title="Следующая задача")
+                    span= task.nav.next
+                    i.fas.fa-arrow-right

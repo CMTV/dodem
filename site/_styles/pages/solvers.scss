@@ -1,0 +1,156 @@
+@import '../import';
+
+.solvers
+{
+    .contentBlock.solver
+    {
+        margin-top: $gapStruct;
+
+        .anchor:target + .body { border-color: $c_BrandDark; }
+
+        .body
+        {
+            .solverInfo
+            {
+                padding: $gap;
+
+                display: flex;
+                align-items: center;
+
+                border-bottom: 1px solid $c_BorderLigth;
+
+                .avatarContainer
+                {
+                    .avatar
+                    {
+                        width: 55px;
+                        height: 55px;
+                    }
+                }
+
+                .nameSlogan
+                {
+                    flex: 1;
+                    margin: 0 $gap;
+
+                    .name
+                    {
+                        font-size: 105%;
+                    }
+
+                    .slogan
+                    {
+                        font-size: 95%;
+                        color: $c_TextMuted;
+                    }
+                }
+
+                .stats
+                {
+                    @include flexCC;
+                    flex-direction: column;
+                    
+                    .solutions, .tasks { cursor: help; }
+
+                    .solutions
+                    {
+                        font-size: 22px;
+                    }
+
+                    .tasks
+                    {
+                        font-size: 90%;
+                        color: $c_TextMuted;
+                    }
+                }
+
+                @include layout(mini)
+                {
+                    flex-direction: column;
+
+                    .nameSlogan
+                    {
+                        margin: $gap 0 5px;
+                        text-align: center;
+                    }
+
+                    .stats
+                    {
+                        flex-direction: row;
+                        font-size: 107%;
+
+                        .tasks
+                        {
+                            margin-left: 7px;
+
+                            &::before
+                            {
+                                content: "(";
+                                color: $c_TextMMuted;
+                            }
+
+                            &::after
+                            {
+                                content: ")";
+                                color: $c_TextMMuted;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .solvedContainer
+            {
+                background: $c_BgMuted;
+                border-bottom-left-radius: $borderRadius;
+                border-bottom-right-radius: $borderRadius;
+
+                padding: $gap;
+
+                display: flex;
+
+                overflow: hidden;
+                overflow-x: auto;
+
+                &::-webkit-scrollbar { height: 7px; }
+
+                &::-webkit-scrollbar-thumb
+                {
+                    background: $c_Border;
+                    &:hover { background-color: $c_BorderDark; }
+                }
+
+                .task
+                {
+                    flex-shrink: 0;
+
+                    background: white;
+                    padding: 4px 0;
+
+                    width: 50px;
+
+                    font-size: 90%;
+                    color: $c_TextMuted;
+                    text-align: center;
+                    text-decoration: none;
+
+                    border: 1px solid $c_Border;
+                    border-radius: $borderRadius;
+
+                    transition: color $animSpeed, border-color $animSpeed;
+
+                    &:hover
+                    {
+                        color: $c_Text;
+                        border-color: $c_BorderDark;
+                    }
+
+                    &:not(:last-of-type)
+                    {
+                        margin-right: $gapSmall;
+                    }
+                }
+            }
+        }
+    }
+}

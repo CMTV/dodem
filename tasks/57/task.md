@@ -1,1 +1,0 @@
-$$ \lim_{n\to\infty} \left( \sqrt{2} \sqrt[4]{2} \sqrt[8]{2} \ldots \sqrt[2n]{2} \right) $$

@@ -1,153 +1,168 @@
-const DEVMODE = false;
-
-const { src, dest, series, task, watch  } = require('gulp');
+const { src, dest, series, task, watch } = require('gulp');
 
 // Plugins
 
-const scss =        require('gulp-sass');
-const clean_css =   require('gulp-clean-css')
-const concat =      require('gulp-concat');
-const uglify_js =   require('gulp-uglify');
-const babel =       require('gulp-babel');
-const tools =       require('./engine/tools');
-const rimraf =      require('rimraf');
+const css_scss =        require('gulp-sass');
+const css_clean =       require('gulp-clean-css');
+const css_ap =          require('gulp-autoprefixer');
 
-// ===
+const js_uglify =       require('gulp-uglify');
+const js_babel =        require('gulp-babel');
 
-task('build_scss', () =>
+const rename =          require('gulp-rename');
+const rimraf =          require('rimraf');
+const { glob } = require('glob');
+
+//
+// Styles
+//
+
+task('styles-global', () =>
 {
-    return src(['src/_styles/**/*.scss', '!src/styles/**/_*.scss'])
-        .pipe(concat('style.min.css'))
-        .pipe(scss())
-        .pipe(clean_css())
-        .pipe(dest('out'));
+    return src('site/_styles/global.scss')
+        .pipe(css_scss())
+        .pipe(css_clean())
+        .pipe(css_ap())
+        .pipe(rename('global.min.css'))
+        .pipe(dest('out/site/styles'));
 });
 
-task('build_js', () =>
+task('styles-pages', () =>
 {
-    return src('src/_scripts/**/*.js')
-        .pipe(babel( { presets: ['@babel/preset-env'] }))
-        .pipe(uglify_js())
-        .pipe(dest('out/scripts'));
+    return src('site/_styles/pages/**/*.scss')
+        .pipe(css_scss())
+        .pipe(css_clean())
+        .pipe(css_ap())
+        .pipe(rename( (path) => { path.extname = '.min.css'; } ))
+        .pipe(dest('out/site/styles'));
 });
 
 //
+// Scripts
+//
 
-task('build_htmls', (done) =>
+task('scripts', () =>
 {
-    tools.genAll(DEVMODE);
+    return src('site/_scripts/**/*.js')
+        .pipe(js_babel( { presets: ['@babel/preset-env'], plugins: ['@babel/plugin-proposal-class-properties'] } ))
+        .pipe(js_uglify())
+        .pipe(rename( (path) => { path.extname = '.min.js'; } ))
+        .pipe(dest('out/site/scripts'));
+});
 
+//
+// Files
+//
+
+task('move-files', () =>
+{
+    return src(
+        [
+            'site/**/*',
+            '!site/**/_*/',
+            '!site/**/_*/**/*',
+            '!site/**/_*'
+        ], { nodir: true }
+    ).pipe(dest('out/site'));
+});
+
+//
+// Engine
+//
+
+task('engine-build', (done) =>
+{
+    let engine = require('./_engine/build');
+    engine.build();
     done();
 });
 
-task('build_protos', (done) =>
+task('engine-build-write', (done) =>
 {
-    require('./engine/proto-tasks-handler').genAll();
+    let engine = require('./_engine/build');
+    engine.buildWriteMode();
     done();
 });
 
-task('build_toc_pages', (done) =>
+task('engine-build-editor', (done) =>
 {
-    let tocGen = require('./engine/toc-generator');
-
-    tocGen.createTocTasksPages();
-    tocGen.createCustomTocTasksPages();
-    tocGen.createTocPage();
-
-    done();
-});
-
-task('build_history', (done) =>
-{
-    require('./engine/history').genHistory();
+    let engine = require('./_engine/build');
+    engine.buildEditorOnly();
     done();
 });
 
 //
+// Misc
+//
 
-task('move_files', () =>
-{
-    return src(
-        [
-            'src/**/*',
-            '!src/**/_*/',
-            '!src/**/_*/**/*',
-            '!src/**/_*',
-            '!src/sitemap.xml'
-        ], { nodir: true })
-        .pipe(dest('out'));
-});
-
-task('move_tasks_files', () =>
-{
-    return src(
-        [
-            'tasks/**/*',
-            '!tasks/**/task.md',
-            '!tasks/**/hint.md',
-            '!tasks/**/solution.md',
-            '!tasks/**/meta.json'
-        ])
-        .pipe(dest('out/tasks'));
-});
-
-task('move_proto_tasks_files', () =>
-{
-    return src(
-        [
-            'proto-tasks/**/*',
-            '!proto-tasks/**/task.md',
-            '!proto-tasks/**/solution.md',
-            '!proto-tasks/**/meta.json'
-        ])
-        .pipe(dest('out/proto')
-    );
-});
-
-task('clear', done =>
+task('clear', (done) =>
 {
     rimraf.sync('out/*');
     done();
 });
 
-//
-
-task('watch', () =>
+task('move-favicon', (done) =>
 {
-    watch(['src/**/*', 'tasks/**/*', 'proto-tasks/**/*'], series('build_watch'));
-});
+    src('site/graphics/favicons/favicon.ico').pipe(dest('out'));
 
-// Global tasks
-
-task('build_watch', (done) =>
-{
-    series(
-        'clear',
-        'build_scss',
-        'build_js',
-        'build_htmls',
-        'build_protos',
-        'build_history',
-        'move_files',
-        'move_tasks_files',
-        'move_proto_tasks_files'
-        )();
+    rimraf.sync('out/site/graphics/favicons/favicon.ico');
     done();
 });
+
+//
+// Build
+//
 
 task('build', (done) =>
 {
     series(
         'clear',
-        'build_scss',
-        'build_js',
-        'build_htmls',
-        'build_protos',
-        'build_history',
-        'build_toc_pages',
-        'move_files',
-        'move_tasks_files',
-        'move_proto_tasks_files'
-        )();
+        'styles-global',
+        'styles-pages',
+        'scripts',
+        'engine-build',
+        'move-files',
+        'move-favicon'
+    )();
+
     done();
+});
+
+task('build-editor', (done) =>
+{
+    series(
+        'clear',
+        'styles-global',
+        'styles-pages',
+        'scripts',
+        'engine-build-editor',
+        'move-files',
+        'move-favicon'
+    )();
+
+    done();
+});
+
+task('build-out', (done) =>
+{
+    global.out = true;
+
+    series('build')();
+    done();
+});
+
+task('watch', () =>
+{
+    watch([
+        'site/**/*',
+        'data/**/*'
+    ], series('build'));
+});
+
+task('watch-editor', () =>
+{
+    watch([
+        'site/**/*',
+        'data/**/*'
+    ], series('build-editor'));
 });

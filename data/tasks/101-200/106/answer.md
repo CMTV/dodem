@@ -1,0 +1,1 @@
+$$ \sup x_n = 1 \\ \inf x_n = -\frac{1}{2} \\ \overline{\limn} x_n = 1 \\ \underline{\limn} x_n = -\frac{1}{2} $$

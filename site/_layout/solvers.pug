@@ -1,0 +1,39 @@
+extends templates/default
+
+include /includes/mixins
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/solvers.min.css")
+
+block content
+    .contentArea
+        +pageTitle('fas fa-users', 'Решатели')
+
+        .solvers
+
+            each solver in solvers
+                
+                .contentBlock.solver
+                    .anchor(id=solver.id)
+                    .body
+                        .solverInfo
+                            +avatar(solver.avatar, solver.link)
+                            .nameSlogan
+                                a.niceUnderline.name(href=solver.link, title=(solver.link ? "Ссылка решателя" : null))= solver.name
+
+                                if solver.slogan
+                                    .slogan= solver.slogan
+                            .stats
+                                .solutions(title="Решений добавлено")= solver.solvedArr.length
+
+                                if (solver.solvedTasks != solver.solvedArr.length)
+                                    .tasks(title="Решенные задачи")= solver.solvedTasks
+
+                        .solvedContainer
+                            each task in solver.solvedArr
+
+                                if (typeof task === 'number')
+                                    a.task(href=`/tasks/${task}`, title=`К задаче ${task}`)= task
+                                else
+                                    - taskArr = task.split('.');
+                                    a.task(href=`/tasks/${taskArr[0]}`, title=`К задаче ${taskArr[0]}`)= `${taskArr[0]}.${taskArr[1]}`

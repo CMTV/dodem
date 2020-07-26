@@ -1,0 +1,78 @@
+@import '../import';
+
+.historyList
+{
+    .anchor
+    {
+        &:target + .historyItem
+        {
+            @include cbBorderColor($c_BrandDark);
+        }
+    }
+
+    .historyItem
+    {
+        .head .tab a
+        {
+            color: $c_BrandDark;
+            font-family: monospace;
+            font-weight: bold;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+        &:not(:last-of-type)
+        {
+            margin-bottom: $gapBig * 1.5;
+        }
+
+        .diff
+        {
+            border-top: 1px solid $c_BorderLigth;
+            padding: $gap;
+
+            .add, .edit
+            {
+                display: flex;
+                align-items: center;
+
+                i
+                {
+                    width: 20px;
+                    margin-right: $gapSmall;
+
+                    cursor: help;
+                    
+                    font-size: 18px;
+                    color: $c_TextMuted;
+                }
+
+                div
+                {
+                    flex: 1;
+                    flex-wrap: wrap;
+
+                    a
+                    {
+                        color: $c_TextMuted;
+                        font-size: 15px;
+                        text-decoration: none;
+                        transition: color $animSpeed;
+
+                        &:hover { color: $c_Text; }
+
+                        &::after
+                        {
+                            content: ", ";
+                            color: $c_TextMuted;
+                        }
+
+                        &:last-of-type::after { content: ""; }
+                    }
+                }
+            }
+
+            .add + .edit { margin-top: $gapSmall; }
+        }
+    }
+}

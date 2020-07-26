@@ -1,0 +1,144 @@
+@import '../import';
+
+.pageTitle + .chapter { margin-top: 0; }
+
+.chapter
+{
+    margin-top: $gapStruct * 2;
+
+    h3.title + .paragraph
+    {
+        margin-top: $gapBig;
+    }
+
+    .paragraph
+    {
+        margin-top: $gapStruct;
+
+        .head
+        {
+            display: flex;
+            align-items: center;
+
+            text-decoration: none;
+
+            .title
+            {
+                padding: $gap;
+                padding-right: $gapSmall;
+            }
+
+            .range
+            {
+                white-space: nowrap;
+
+                font-size: 80%;
+                color: $c_TextMuted;
+
+                padding: 2px 5px;
+
+                border: 1px solid $c_BorderLigth;
+                border-radius: $borderRadius;
+
+                background: $c_BgMuted;
+
+                cursor: help;
+            }
+
+            .goto
+            {
+                flex: 1;
+
+                padding: $gap;
+                padding-left: $gapSmall;
+
+                text-align: right;
+                font-size: 18px;
+                color: $c_TextMuted;
+
+                transition: color $animSpeed, transform $animSpeed;
+            }
+
+            &:hover .goto
+            {
+                color: $c_Text;
+                transform: translateX(2px);
+            }
+
+            //
+
+            @include layout(mini)
+            {
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .title
+                {
+                    flex-basis: 100%;
+                    padding: $gapSmall $gap;
+                    text-align: center;
+                }
+
+                .range, .goto
+                {
+                    flex: initial;
+
+                    padding: $gapSmall;
+                    padding-top: 0;
+                    padding-left: 5px;
+                }
+
+                .range
+                {
+                    border: none;
+                    background: transparent;
+
+                    &::before
+                    {
+                        content: "Задачи: ";
+                        color: $c_TextMMuted;
+                    }
+                }
+            }
+        }
+
+        .sections
+        {
+            padding: $gap;
+            border-top: 1px solid $c_BorderLigth;
+
+            .section
+            {
+                display: flex;
+                align-items: center;
+
+                padding: $gapSmall/2 0;
+
+                &:first-of-type { padding-top: 0; }
+                &:last-of-type  { padding-bottom: 0; }
+
+                .title
+                {
+                    flex: 1;
+
+                    font-size: 96%;
+                    color: $c_TextMuted;
+                    text-decoration: none;
+
+                    transition: color $animSpeed;
+
+                    padding-right: 5px;
+
+                    &:hover { color: $c_Text; }
+                }
+
+                .range
+                {
+                    cursor: help;
+                    color: $c_TextMMuted;
+                    font-size: 80%;
+                }
+            }
+        }
+    }
+}

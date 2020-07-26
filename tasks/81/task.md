@@ -1,1 +1,0 @@
-$$ x_1 = \sqrt{2}, x_2 = \sqrt{2+\sqrt{2}}, \ldots, x_n = \sqrt{2 + \sqrt{2 + \ldots + \sqrt{2}}}, \ldots $$

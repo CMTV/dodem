@@ -1,0 +1,22 @@
+header
+{
+    margin-top: 40px;
+    text-align: center;
+
+    .logotype
+    {
+        font-family: Yandex;
+        font-size: 60px;
+        text-decoration: none;
+
+        @include layout(mini)
+        {
+            font-size: 45px;
+        }
+    }
+
+    &::first-letter
+    {
+        color: $c_Brand;
+    }
+}

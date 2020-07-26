@@ -1,0 +1,33 @@
+section.search
+    .contentArea.tabbed
+
+        .searchBar
+            input(
+                inputmode="numeric",
+                pattern="[0-9]*",
+                placeholder="Введите номер задачи (от 1 до 4462)",
+                autofocus
+            )
+            
+            a.stateButton
+                i.fas
+
+            .result
+
+                .resultPane.wtf
+                    i.far.fa-flushed
+                    .desc Введен некорректный запрос!<br>Можно вводить только числа от <b>1</b> до <b>4462</b>.<br>Буквы и другие символы не допускаются!
+
+                .resultPane.notSolved
+                    i.far.fa-tired
+                    .desc Эта задача еще не добавлена!<br>Но вы можете <a target="_blank" href="https">добавить</a> свое решение!<br>Еще можно <a target="_blank" href="https">узнать</a t>, почему решения нет.
+
+                .resultPane.success
+                    .loading
+                        img.spinner(src="/site/graphics/spinner.svg")
+                    
+                    .task.content
+
+                    a.goto
+                        .text К РЕШЕНИЮ
+                        i.fas.fa-arrow-right

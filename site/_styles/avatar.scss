@@ -1,0 +1,10 @@
+.avatarContainer
+{
+    @include flexCC;
+
+    .avatar
+    {
+        display: block;
+        border-radius: 50%;
+    }
+}

@@ -1,1 +1,0 @@
-$$ y = \ctg \pi x + \arccos(2^x) $$

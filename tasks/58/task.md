@@ -1,1 +1,0 @@
-$$ \lim_{n\to\infty} \frac{n}{2^n} = 0 $$

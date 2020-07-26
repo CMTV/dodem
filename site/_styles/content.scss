@@ -1,0 +1,76 @@
+.content
+{
+    text-align: justify;
+
+    > *
+    {
+        margin-bottom: $gapBig;
+
+        &:last-child
+        {
+            margin-bottom: 0;
+        }
+    }
+
+    // H2
+    h2
+    {
+        font-size: 1em;
+        padding-bottom: 5px;
+        border-bottom: 1px dashed $c_BorderLigth;
+    }
+
+    // Link
+    a
+    {
+        color: $c_BrandDark;
+        text-decoration-color: white;
+        transition: text-decoration-color $animSpeed;
+
+        &:hover { text-decoration-color: inherit; }
+    }
+
+    // Katex
+
+    .katex-display
+    {
+        margin: 0;
+        .base { margin: $gap/2.2 0; }
+    }
+
+    .katex > .katex-html
+    {
+        white-space: normal;
+    }
+
+    // Hr
+
+    hr
+    {
+        height: 0;
+        border: none;
+        border-bottom: 1px solid $c_BorderLigth;
+    }
+
+    // Long math formulas FIX
+    /*.katex-display
+    {
+        //overflow-x: auto;
+
+        &::-webkit-scrollbar
+        {
+            
+
+            height: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            background-color: $c_BorderLigth;
+            border-radius: $borderRadius;
+            transition: background-color 5s;
+
+            &:hover { background-color: $c_Border; }
+        }
+    }*/
+}

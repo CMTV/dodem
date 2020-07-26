@@ -1,1 +1,0 @@
-$$ \frac{1}{2}, \frac{1}{2}, \frac{1}{4}, \frac{3}{4}, \frac{1}{8}, \frac{7}{8} , \ldots, \frac{1}{2^n}, \frac{2^n - 1}{2^n}, \ldots $$

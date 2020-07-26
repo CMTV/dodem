@@ -1,0 +1,35 @@
+//
+// Brand
+//
+
+$c_Brand: #009FF4;
+$c_BrandDark: darken($c_Brand, 15%);
+
+//
+// Background
+//
+
+$c_Bg: #F1F3F4;
+$c_BgMuted: mix(white, black, 98%);
+
+//
+// Border
+//
+
+$c_Border: #c8c8c8;
+$c_BorderLigth: lighten($c_Border, 10%);
+$c_BorderDark: darken($c_Border, 15%);
+
+//
+// Text
+//
+
+$c_Text: #282828;
+$c_TextMuted: lighten($c_Text, 35%);
+$c_TextMMuted: lighten($c_TextMuted, 20%);
+
+//
+// Misc
+//
+
+$c_Donate: #FC723F;

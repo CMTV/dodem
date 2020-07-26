@@ -1,0 +1,20 @@
+extends templates/default
+
+mixin navItem(name, icon, title, href, desc)
+    a.nav-item(class=name, href=href, title=desc)
+        i(class=icon)
+        .title #{title}
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/index.min.css")
+    script(src="/site/scripts/luck.min.js")
+
+block content
+    nav
+        .contentArea
+            +navItem('toc', 'fas fa-list-ol', 'Оглавление', '/toc')
+            +navItem('proto', 'fas fa-sitemap', 'Прото-задачи', '/proto', 'Полезные теоремы, свойства и формулы')
+            +navItem('history', 'fas fa-history', 'Хронология', '/history', 'Новости о решенных задачах и других важных событиях')
+            +navItem('blog', 'fab fa-vk', 'Блог', 'https://vk.com/do_dem', 'Блог с последними новостями')
+            +navItem('luck', 'fas fa-dice', 'Мне повезет!', '', 'Телепортироваться к случайной задаче!')
+            +navItem('donate', 'fas fa-hand-holding-usd', 'Поддержать!', '/donate')

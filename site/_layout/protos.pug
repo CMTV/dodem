@@ -1,0 +1,23 @@
+extends templates/default
+
+include /includes/mixins
+
+block stylesLibs
+    link(rel="stylesheet", href="/site/styles/protos.min.css")
+
+block content
+    .contentArea
+        +pageTitle('fas fa-sitemap', 'Прото-задачи')
+
+        each dataItem in data
+            .category
+                .anchor(id=dataItem.id)
+                h3.title= dataItem.title
+                .contentBlock.simpleList.protoTasks
+                    .body
+                        each pTask in dataItem.protos
+                            .li.proto
+                                a.title(href=`/proto/${pTask.id}`)= pTask.title
+
+                                if pTask.description
+                                    .desc!= pTask.description

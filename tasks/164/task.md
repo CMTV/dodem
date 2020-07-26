@@ -1,1 +1,0 @@
-$$ y = \arcsin (1 - x) + \lg(\lg x) $$

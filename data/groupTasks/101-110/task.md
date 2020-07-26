@@ -1,0 +1,1 @@
+Для последовательности $x_n \ (n=1,2,\ldots)$ найти $\inf{x_n}$, $\sup{x_n}$, $\underline{\limn} x_n$ и $\overline{\limn} x_n$, если:

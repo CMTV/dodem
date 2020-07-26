@@ -1,0 +1,334 @@
+$searchBarHeight: 45px;
+
+.search
+{
+    margin-top: $gapBig;
+    width: 100%;
+
+    .searchBar
+    {
+        position: relative;
+
+        display: flex;
+        height: $searchBarHeight;
+
+        input
+        {
+            flex: 1;
+
+            border: 2px solid $c_Border;
+            border-right: none;
+
+            border-top-left-radius: $borderRadius;
+            border-bottom-left-radius: $borderRadius;
+        
+            padding: 0;
+            padding-left: $gap;
+
+            outline: none;
+
+            font-family: 'Open Sans';
+            font-size: 107%;
+
+            transition: border-color $animSpeed, background-color $animSpeed;
+        }
+
+        .stateButton
+        {
+            width: $searchBarHeight;
+
+            background: white;
+            border: 2px solid $c_Border;
+            
+            text-decoration: none;
+
+            border-top-right-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition: border-color $animSpeed, background-color $animSpeed;
+
+            i
+            {
+                color: $c_TextMuted;
+                font-size: 110%;
+                
+                transition: color $animSpeed;
+
+                &::before { content: '\f002'; }
+            }
+        }
+
+        //
+        // Result
+        //
+
+        .result
+        {
+            display: none; // _
+
+            position: absolute;
+            z-index: 1;
+
+            top: $searchBarHeight;
+            left: 0;
+            right: $searchBarHeight - 2px;
+
+            background: white;
+
+            border: 2px solid $c_Border;
+            border-top: none;
+
+            border-bottom-left-radius: $borderRadius;
+            border-bottom-right-radius: $borderRadius;
+
+            box-shadow: 0px 3px 4px -1px lighten($c_Border, 5%);
+
+            transition: border-color $animSpeed, background-color $animSpeed, box-shadow $animSpeed;
+
+            @include layout(stretch)
+            {
+                right: 0;
+            }
+        }
+    }
+}
+
+//
+// General not default rules
+//
+
+.search .searchBar._paneShowing
+{
+    .result { display: block; }
+
+    input { border-bottom-left-radius: 0; }
+
+    @include layout(stretch)
+    {
+        .stateButton { border-bottom-right-radius: 0; }
+    }
+}
+
+//
+// Search states
+//
+
+$states: 'success', 'notSolved', 'wtf';
+
+$paneColors: (
+    'success':      $c_Brand,
+    'notSolved':    rgb(228, 0, 0),
+    'wtf':          rgb(255, 166, 0)
+);
+
+.search .searchBar._state
+{
+    @each $state in $states
+    {
+        $color: map-get($paneColors, $state);
+        $textColor: darken($color, 10%);
+        $bgColor: mix(white, $color, 97%);
+
+        &--#{$state}
+        {
+            input
+            {
+                border-color: $color;
+                background: $bgColor;
+            }
+
+            .stateButton
+            {
+                border-color: $color;
+                background: $bgColor;
+
+                i
+                {
+                    color: $textColor;
+
+                    &::before
+                    {
+                        @if ($state == 'wtf')       { content: '\f128'; }
+                        @if ($state == 'notSolved') { content: '\f00d'; }
+                        @if ($state == 'success')   { content: '\f061'; }
+                    }
+                }
+            }
+
+            .result
+            {
+                border-color: $color;
+                background: $bgColor; 
+
+                box-shadow: 0px 2px 3px -1px lighten($color, 5%);
+
+                .resultPane.#{$state} 
+                {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+
+            @include layout(mini)
+            {
+                input   { padding-left: $gapSmall; }
+            }
+        }
+    }
+}
+
+//
+// State rules
+//
+
+.search .searchBar .result .resultPane
+{
+    display: none;
+
+    //
+    // Success
+    //
+
+    &.wtf,
+    &.notSolved
+    {
+        padding: $gapBig;
+
+        align-items: center;
+        justify-content: center;
+
+        i
+        {
+            font-size: 100px;
+        }
+
+        .desc
+        {
+            margin-left: $gapBig;
+            width: 320px;
+            font-size: 97%;
+        }
+
+        @include layout(stretch)
+        {
+            flex-direction: column;
+
+            .desc
+            {
+                margin-left: 0;
+                margin-top: $gapBig;
+
+                text-align: center;
+            }
+        }
+        
+        @include layout(mini)
+        {
+            padding: $gapSmall;
+
+            i { display: none; }
+            
+            .desc
+            {
+                margin: 0;
+                font-size: 90%;
+                width: 100%;
+            }
+        }
+    }
+
+    &.wtf       { color: darken(map-get($paneColors, 'wtf'), 7%); }
+    &.notSolved { color: darken(map-get($paneColors, 'notSolved'), 7%); }
+
+    &.success
+    {
+        flex-direction: column;
+
+        &._loaded .loading      { display: none; }
+        &:not(._loaded) .task   { display: none; }
+
+        .loading
+        {
+            .spinner
+            {
+                display: block;
+                width: 200px;
+                margin: 30px auto;
+
+                @include layout(mini)
+                {
+                    width: 120px;
+                }
+            }
+        }
+
+        .task
+        {
+            width: 100%;
+
+            max-height: 170px;
+            overflow: hidden;
+            overflow-y: auto;
+
+            font-size: 95%;
+
+            padding: $gap;
+
+            &::-webkit-scrollbar
+            {
+                width: 10px;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background: $c_Border;
+
+                &:hover { background: darken($c_Border, 10%); }
+            }
+
+            @include layout(mini)
+            {
+                padding: $gapSmall;
+                font-size: 93%;
+                max-height: 100px;
+            }
+        }
+
+        .goto
+        {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            width: 100%;
+            height: $searchBarHeight;
+            
+            font-size: 120%;
+            color: white;
+            text-decoration: none;
+
+            background: mix(white, $c_Brand, 20%);
+
+            border-top: 2px solid $c_Brand;
+
+            transition: background-color $animSpeed;
+
+            &:hover
+            {
+                background: $c_Brand;
+                i { transform: translateX(4px); }
+            }
+
+            i
+            {
+                margin-left: $gapSmall;
+                transition: transform $animSpeed;
+            }
+        }
+    }
+}

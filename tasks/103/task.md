@@ -1,1 +1,0 @@
-$$ x_n = 1 + \frac{n}{n+1}\cos \frac{n\pi}{2} $$

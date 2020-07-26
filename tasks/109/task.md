@@ -1,1 +1,0 @@
-$$ x_n = 1 + n\sin\frac{n\pi}{2} $$

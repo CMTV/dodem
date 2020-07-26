@@ -1,0 +1,204 @@
+@import '../import.scss';
+
+.donate
+{
+    float: right;
+    padding: $gapSmall $gap;
+    
+    position: relative;
+    top: -5px;
+
+    //font-size: 95%;
+    text-decoration: none;
+    color: darken($c_Donate, 5%);
+
+    background: mix(white, $c_Donate, 97%);
+
+    border: 2px solid $c_Donate;
+    border-radius: $borderRadius;
+
+    transition: border-color $animSpeed;
+
+    @include layout(stretch)
+    {
+        margin-right: $gap;
+    }
+
+    i
+    {
+        margin-right: 7px;
+        transition: transform $animSpeed;
+    }
+
+    &:hover
+    {
+        border-color: darken($c_Donate, 15%);
+
+        i { transform: scale(1.1); }
+    }
+}
+
+.pageTitle
+{
+    justify-content: start;
+    text-align: left;
+}
+
+.tier1
+{
+    margin-top: $gapStruct * 2;
+
+    .donater
+    {
+        &:not(:first-of-type)
+        {
+            margin-top: $gapStruct;
+        }
+
+        .body
+        {
+            display: flex;
+            align-items: center;
+
+            padding: $gap;
+
+            .avatarContainer .avatar
+            {
+                width: 55px;
+                height: 55px;
+            }
+
+            .nameMessage
+            {
+                flex: 1;
+                margin: 0 $gap;
+
+                .name
+                {
+                    font-size: 105%;
+                }
+
+                .message
+                {
+                    font-size: 95%;
+                    color: $c_TextMuted;
+                }
+            }
+
+            .link
+            {
+                font-size: 20px;
+                color: $c_TextMuted;
+                transition: color $animSpeed;
+
+                &:hover { color: $c_Text; }
+            }
+
+            @include layout(mini)
+            {
+                flex-direction: column;
+
+                .nameMessage
+                {
+                    text-align: center;
+                    margin: $gapSmall 0;
+                }
+            }
+        }
+    }
+}
+
+.tier2, .tier3
+{
+    margin-top: $gapStruct;
+
+    .donaters .body
+    {
+        display: flex;
+        flex-wrap: wrap;
+        
+        padding: $gap;
+        padding-top: 0;
+        padding-right: $gap - $gapSmall;
+
+        .donater
+        {
+            @include flexCC;
+            margin-right: $gapSmall;
+            margin-top: $gap;
+        }
+
+        .donater:not(:last-of-type)
+        {
+            &::after
+            {
+                content: ",";
+                color: $c_TextMuted;
+            }
+        }
+    }
+}
+
+.tier2
+{
+    .body
+    {
+        @include layout(mini)
+        {
+            justify-content: center;
+        }
+    }
+
+    .donater
+    {
+        .avatarContainer .avatar
+        {
+            width: 30px;
+            height: 30px;
+        }
+
+        .name
+        {
+            margin-left: 5px;
+            white-space: nowrap;
+        }
+    }
+}
+
+.noDonaters
+{
+    margin-top: $gapStruct * 1.5;
+    .body
+    {
+        @include flexCC;
+        padding: $gap;
+
+        i
+        {
+            font-size: 100px;
+            color: $c_TextMuted;
+        }
+
+        .message
+        {
+            width: 300px;
+            margin-left: 30px;
+            font-size: 105%;
+
+            a
+            {
+                //font-weight: bold;
+            }
+        }
+
+        @include layout(mini)
+        {
+            i { font-size: 60px; }
+
+            .message
+            {
+                margin-left: $gap;
+            }
+        }
+    }
+}

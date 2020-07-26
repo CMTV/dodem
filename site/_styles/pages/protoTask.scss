@@ -1,0 +1,63 @@
+@import '../import';
+
+.contentBlock.protoTask
+{
+    margin-top: $gapStruct;
+
+    //@include cbBorderColor(lighten($c_BrandDark, 7%));
+    @include cbBorderColor(mix($c_Border, $c_BrandDark, 75%));
+
+    .head
+    {
+        .tab
+        {
+            width: 110px;
+            cursor: help;
+        }
+    }
+
+    .body
+    {
+        .category
+        {
+            display: block;
+
+            padding: $gapSmall $gap 0;
+            font-size: 87%;
+            color: $c_TextMuted;
+            text-decoration: none;
+
+            transition: color $animSpeed;
+
+            &:hover { color: $c_Text; }
+        }
+
+        .info
+        {
+            color: $c_BrandDark;
+            padding: 2px $gap $gapSmall;
+            border-bottom: 1px solid $c_BorderLigth;
+        }
+    }
+}
+
+.contentBlock.dependents
+{
+    margin-top: $gapStruct;
+
+    .head
+    {
+        .tab
+        {
+            width: 180px;
+            cursor: help;
+        }
+    }
+}
+
+.contentBlock.solution,
+.contentBlock.protos,
+.contentBlock.links
+{
+    margin-top: $gapStruct;
+}

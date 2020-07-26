@@ -1,0 +1,118 @@
+mixin editorHeader(icon, title, hasActions = true)
+    header(data-resizer)
+        .main
+            i(class=icon)
+            span.title= title
+        .actions
+            if hasActions
+                .action.toggable.visibility(title="Показать/Скрыть блок")
+                    i.fas
+
+doctype html
+html(lang="ru")
+    head
+        meta(charset="UTF-8")
+        link(rel="stylesheet", href="/site/styles/editor.min.css")
+
+        //- Font Awesome
+        link(rel="stylesheet", href="/site/libs/font-awesome/css/all.min.css")
+        
+        //- ===   CODE MIRROR   ===
+
+        - let cmPath = "/site/libs/codemirror/";
+
+        script(src= cmPath + "codemirror.js")
+        link(rel="stylesheet", href= cmPath + "codemirror.css")
+        link(rel="stylesheet", href= cmPath + "theme/base16-dark.css")
+        
+        //- Addons
+        //-script(src= cmPath + "addon/mode/simple.js")
+        //-script(src= cmPath + "addon/mode/overlay.js")
+
+        //- Modes
+        script(src= cmPath + "mode/markdown/markdown.js")
+
+        //- === / CODE MIRROR   ===
+
+        //- Markdown-it
+        script(src="/site/libs/markdownit/markdownit.min.js")
+
+        //- KaTeX
+        script(src="/site/libs/katex/katex.min.js")
+
+        //- jszip
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.5.0/jszip.min.js")
+
+        //- FileSaver
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.2/FileSaver.min.js")
+
+        //-
+        script(src="/site/scripts/editor.min.js")
+
+    body
+        .editor
+            header
+                .main
+                    .taskNum
+                        i.fas.fa-hashtag
+                        input(placeholder="Номер")
+                    .solver
+                        i.fas.fa-user
+                        input(placeholder="ID решателя")
+                .actions
+                    .action.download
+                        i.fas.fa-check
+                        span Готово
+
+
+            .editors(data-resizable)
+
+                section#settings
+                    +editorHeader("fas fa-cog", "Настройки", false)
+                    .content
+                        .plain
+                            label SEO описание
+                            input(placeholder="Человеко-читаемое условие задачи")
+                        .tags
+                            label.tag.past
+                                i.fas.fa-backward
+                                input(type="checkbox")
+                            label.tag.future
+                                i.fas.fa-forward
+                                input(type="checkbox")
+                            label.tag.partial
+                                i.fas.fa-adjust
+                                input(type="checkbox")
+                            label.tag.unChecked
+                                i.fas.fa-exclamation-triangle
+                                input(type="checkbox")
+                            label.tag.unDone
+                                i.fas.fa-cog
+                                input(type="checkbox")
+
+                        .miniEditor.hint
+                            .title Указание Демидовича
+                            .editorHolder
+                        
+                        .miniEditor.answer
+                            .title Ответ
+                            .editorHolder
+
+                section#task
+                    +editorHeader("fas fa-question", "Задача")
+                    .content
+
+                section#hint
+                    +editorHeader("fas fa-lightbulb", "Указание")
+                    .content
+
+                section#explanation
+                    +editorHeader("fas fa-file-alt", "Решение")
+                    .content
+
+        #resizerMain
+            i.fas.fa-grip-vertical
+
+        .view
+            .resizerOverlay
+            iframe(src="iframe.html")

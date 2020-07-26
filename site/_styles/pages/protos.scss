@@ -1,0 +1,24 @@
+@import '../import';
+
+.pageTitle + .category { margin-top: 0; }
+
+.category
+{
+    margin-top: $gapStruct * 2;
+
+    .anchor
+    {
+        &:target
+        {
+            & + h3.title
+            {
+                color: $c_BrandDark;
+            }
+            
+            & ~ .protoTasks .body
+            {
+                border-color: $c_BrandDark;
+            }
+        }
+    }
+}

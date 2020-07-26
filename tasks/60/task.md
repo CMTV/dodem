@@ -1,1 +1,0 @@
-$$ \lim_{n\to\infty} \frac{n^k}{a^n} = 0 \ (a>1) $$

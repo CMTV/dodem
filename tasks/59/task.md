@@ -1,1 +1,0 @@
-$$ \lim_{n\to\infty} \frac{2n}{n!} = 0 $$

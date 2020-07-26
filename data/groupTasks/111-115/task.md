@@ -1,0 +1,1 @@
+Найти $\underline{\limn} x_n$ и $\overline{\limn} x_n$, если:

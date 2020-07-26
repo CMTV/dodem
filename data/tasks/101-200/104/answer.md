@@ -1,0 +1,1 @@
+$$ \sup x_n = 6 \\ \inf x_n = 2 \\ \overline{\limn} x_n = 6 \\ \underline{\limn} x_n = 2 $$

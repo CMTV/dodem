@@ -1,0 +1,111 @@
+.contentBlock
+{
+    & > .head
+    {
+        display: flex;
+
+        .tab
+        {
+            width: 140px;
+            height: 45px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: white;
+
+            border: 2px solid $c_Border;
+            border-bottom-color: $c_BorderLigth;
+            border-top-left-radius: $borderRadius;
+            border-top-right-radius: $borderRadius;
+
+            position: relative;
+            top: 2px;
+
+            color: $c_BrandDark;
+
+            i { margin-right: 7px; }
+        }
+
+        & + .body
+        {
+            border-top-left-radius: 0;
+        }
+    }
+
+    & > .body
+    {
+        background: white;
+        border: 2px solid $c_Border;
+        border-radius: $borderRadius;
+
+        .content
+        {
+            padding: $gap;
+        }
+    }
+
+    @include layout(stretch)
+    {
+        padding: 0 $gap;
+    }
+
+    @include layout(mini)
+    {
+        padding: 0;
+
+        .head
+        {
+            justify-content: center;
+        }
+
+        .body
+        {
+            border-radius: 0;
+            border-left: none;
+            border-right: none;
+        }
+    }
+
+    //
+    // Specific rules
+    //
+
+    // Wider tab for "Proto-tasks" block
+    &.protos .head .tab { width: 180px; }
+
+    // Simple title-desc list
+    &.simpleList
+    {
+        .body
+        {
+            padding: $gap;
+
+            .li
+            {
+                &:not(:last-of-type)
+                {
+                    padding-bottom: $gap;
+                    border-bottom: 1px solid $c_BorderLigth;
+                    margin-bottom: $gap;
+                }
+
+                .title
+                {
+                    text-decoration-color: white;
+                    transition: text-decoration-color $animSpeed;
+
+                    &:hover { text-decoration-color: $c_Text; }
+                }
+
+                .desc
+                {
+                    margin-top: 3px;
+                    color: $c_TextMuted;
+                    font-size: 95%;
+                }
+            }
+        }
+    }
+}

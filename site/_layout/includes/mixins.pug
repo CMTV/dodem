@@ -1,0 +1,48 @@
+mixin pageTitle(icon, title)
+    .pageTitle
+        if icon != null
+            i(class=icon)
+        h2 #{title}
+
+mixin contentBlock
+    .contentBlock
+        block
+
+mixin avatar(src, link)
+    .avatarContainer(href=link)
+        a(href=link)
+            img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
+
+mixin ad
+    .darkMagicContainer
+        .noDarkMagic
+            .contentBlock
+                .body
+                    i.fas.fa-handshake
+                    .message <strong>Да, да... Реклама всех бесит!</strong>Все решения пишутся на добровольной основе. Нет рекламы, нет дохода — нет мотивации поддерживать сайт. Если решение вам помогло, помогите и нам — добавьте сайт в исключения блокировщика!
+        .yesDarkMagic
+            block
+
+mixin adBefore
+    +ad.
+        <!-- [Демидович] Перед решением -->
+        <ins class="adsbygoogle ads ads--before-solution"
+        style="display:block"
+        data-ad-client="ca-pub-8094912170389944"
+        data-ad-slot="9148242804"
+        data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+
+mixin adAfter
+    +ad.
+        <!-- [Демидович] После решения -->
+        <ins class="adsbygoogle ads ads--after-solution"
+        style="display:block"
+        data-ad-client="ca-pub-8094912170389944"
+        data-ad-slot="4277939948"
+        data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>

@@ -1,1 +1,0 @@
-$$ \text{а) } x_n = 1 - \frac{1}{n}; \qquad \text{б) } x_n = (-1)^{n-1} \left( 2 + \frac{3}{n} \right) $$

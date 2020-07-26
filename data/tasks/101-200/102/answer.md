@@ -1,0 +1,1 @@
+$$ \sup x_n = x_2 = 1\frac{1}{2} \\ \inf x_{n} = x_1 = -1 \\ \overline{\limn} x_n = 1 \\ \underline{\limn} x_n = 0 $$

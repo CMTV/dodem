@@ -14,9 +14,8 @@ jobs:
       - name: Building site
         run: |
           npm install
-          mkdir out
-          gulp build
-
+          tsc
+          gulp build-out
       - name: Deploy site to gh-pages branch
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
