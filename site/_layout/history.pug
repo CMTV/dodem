@@ -17,8 +17,7 @@ block content
                     .tab
                         a(href=`#${hItem.date}`)= hItem.date
                 .body
-                    .content
-                        p!= hItem.content
+                    .content!= hItem.content
 
                     if hItem.meta.diff
                         .diff

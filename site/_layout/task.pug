@@ -26,17 +26,17 @@ block content
 
             .body
                 .location
-                    .locPart.chapter(title=task.location.chapter.title)
+                    .locPart.chapter(title=task.location.chapter.title.replace(/<(.|\n)*?>/g, ''))
                         span.num=   task.location.chapter.id
-                        span.title= task.location.chapter.title
+                        span.title!= task.location.chapter.title
                     
-                    a.locPart.paragraph(title=task.location.paragraph.title, href=`/toc/${task.location.chapter.id}.${task.location.paragraph.num}`)
-                        span.num=   '§' + task.location.paragraph.num
-                        span.title= task.location.paragraph.title
+                    a.locPart.paragraph(title=task.location.paragraph.title.replace(/<(.|\n)*?>/g, ''), href=`/toc/${task.location.chapter.id}.${task.location.paragraph.id}`)
+                        span.num=   '§' + task.location.paragraph.id
+                        span.title!= task.location.paragraph.title
                     
                     if task.location.section
-                        a.locPart.section(title=task.location.section.title, href=`/toc/${task.location.chapter.id}.${task.location.paragraph.num}/${task.location.section.id}`)
-                            span.title= task.location.section.title
+                        a.locPart.section(title=task.location.section.title.replace(/<(.|\n)*?>/g, ''), href=`/toc/${task.location.chapter.id}.${task.location.paragraph.id}/${task.location.section.id}`)
+                            span.title!= task.location.section.title
                                             
                     .overlay
 

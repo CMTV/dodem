@@ -3,27 +3,17 @@ import { UtilIO } from "./Util";
 import { Chalk } from "./Chalk";
 import { Translator } from "./Translator";
 
+interface ILocationData
+{
+    id: string;
+    title: string;
+}
+
 export interface ITOCLocation
 {
-    chapter:
-    {
-        /** I, II, III and so on... */
-        id: string,
-        title: string
-    },
-
-    paragraph:
-    {
-        num: number,
-        title: string
-    },
-
-    /** Info from toc-custom.json! */
-    section:
-    {
-        id: string,
-        title: string
-    }
+    chapter: ILocationData,
+    paragraph: ILocationData,
+    section: ILocationData       // Info from toc-custom.json!
 }
 
 export class TOC
@@ -41,6 +31,14 @@ export class TOC
         this.ctoc = JSON.parse(UtilIO.fRead('data/toc/toc-custom.json'));
     }
 
+    getLocationData(id: string, title: string): ILocationData
+    {
+        return {
+            id: id,
+            title: Translator.renderMath(title)
+        }
+    }
+
     getLocation(task: number): ITOCLocation
     {
         if (task < 1 || task > Const.TASKS_NUM) { Chalk.error(`Incorrect '${task}' task number! Must be within 1-4462 interval!`); }
@@ -56,7 +54,7 @@ export class TOC
 
             if (task <= this.toc[chId].paragraphs[this.toc[chId].paragraphs.length - 1][1][1])
             {
-                location.chapter = { id: chId, title: chTitle };
+                location.chapter = this.getLocationData(chId, chTitle);
                 break;
             }
         }
@@ -69,14 +67,14 @@ export class TOC
 
             if (task <= paragraph[1][1])
             {
-                location.paragraph = { num: i+1, title: paragraph[0] };
+                location.paragraph = this.getLocationData((i+1).toString(), paragraph[0]);
                 break;
             }
         }
 
         // Finding section (custom toc)
 
-        let secParentId = location.chapter.id + '.' + location.paragraph.num;
+        let secParentId = location.chapter.id + '.' + location.paragraph.id;
 
         if (secParentId in this.ctoc)
         {
@@ -87,7 +85,7 @@ export class TOC
 
                 if (task <= section[1][1])
                 {
-                    location.section = { id: secId, title: section[0] };
+                    location.section = this.getLocationData(secId, section[0]);
                     break;
                 }
             }
@@ -99,6 +97,8 @@ export class TOC
 
         return location;
     }
+
+
 
     //
     // Iterate Methods

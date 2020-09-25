@@ -92,10 +92,12 @@ function renderTOCTasks(link: string, title: string, range: Range)
         data.tasksGroups[data.tasksGroups.length - 1].tasks.push({ num: taskNum, task: tasks[+taskNum] });
     });
 
+    let SEOTitle = title.replace(/<(.|\n)*?>/g, '');
+
     let SEO =
     {
-        title: title,
-        desc: `Все задачи по теме "${title}" из задачника Демидовича с подробными решениями.`,
+        title: SEOTitle,
+        desc: `Все задачи по теме "${SEOTitle}" из задачника Демидовича с подробными решениями.`,
         canonical: link.substr(1),
         ogImg: 'site/graphics/og/toc.png'
     }

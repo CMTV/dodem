@@ -36,6 +36,8 @@ export function getHistoryItem(historyItemPath: string): IHistoryItem
         let meta = UtilMd.getMeta(rawContent);
         let content = Translator.renderAll(UtilMd.getContent(rawContent));
 
+        console.log(content);
+
         historyItem.content = content;
         historyItem.meta = meta;
     }

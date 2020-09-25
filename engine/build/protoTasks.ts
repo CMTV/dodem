@@ -93,7 +93,6 @@ function getDependents(protoId: string): Dependent[]
             dependent.isProto = true;
             dependent.content = `П.${dependentNum+1}`;
             dependent.title = `К прото-задаче ${dependentNum+1}`;
-            //console.log(protoManager.getStrId(dependentNum));
             dependent.link = `/proto/${protoManager.getStrId(dependentNum)}`;
 
             dependents.push(dependent);

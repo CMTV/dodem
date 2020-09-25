@@ -147,16 +147,21 @@ export class ProtoManager
     {
         let digRec = (cursor: any, path: string = ''): string =>
         {
-            let result: string;
+            let result = null;
 
             for (let i = 0; i < Object.keys(cursor).length; i++)
             {
                 let key = Object.keys(cursor)[i];
 
                 if (cursor[key] === numId)
-                    return path + key;
-                else
-                    result = digRec(cursor[key], path + key + '/');
+                    result = path + key;
+                else if (typeof cursor[key] !== "number")
+                {
+                    let digFurtherResult = digRec(cursor[key], path + key + '/');
+
+                    if (digFurtherResult !== null)
+                        result = digFurtherResult;
+                }
             }
             
             return result;
