@@ -74,7 +74,8 @@ export class ProtoManager
         let numId = 0;
 
         // DEV MODE ONLY
-        rawPaths = rawPaths.slice(0, 2);
+        if ('isDev' in global)
+            rawPaths = rawPaths.slice(0, 2);
         //
 
         rawPaths.forEach(path =>
