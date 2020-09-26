@@ -16,7 +16,6 @@ export function buildTasks()
 {
     hash.getSolved().forEach((taskNum, i) =>
     {
-        //console.log(i);
         let task = new Task();
 
         task.id = taskNum;

@@ -52,11 +52,11 @@ nav
 
         &:hover
         {
-            i { color: $c_Text; }
-            .title { opacity: 1; }
+            > i { color: $c_Text; }
+            > .title { opacity: 1; }
         }
 
-        i
+        > i
         {
             font-size: 27px;
             color: $c_TextMuted;
@@ -64,7 +64,7 @@ nav
             transition: color $animSpeed;
         }
 
-        .title
+        > .title
         {
             pointer-events: none;
 
@@ -87,8 +87,8 @@ nav
 
             margin-right: 20px;
 
-            i { font-size: 23px; }
-            .title { font-size: 90%; }
+            > i { font-size: 23px; }
+            > .title { font-size: 90%; }
         }
 
         @include layout(mini)
@@ -98,8 +98,127 @@ nav
 
             margin-right: 15px;
 
-            i { font-size: 20px; }
-            .title { font-size: 87%; } 
+            > i { font-size: 20px; }
+            > .title { font-size: 87%; } 
         }
+    }
+}
+
+.subNav
+{
+    position: relative;
+    margin-right: 30px !important;
+
+    &:hover
+    {
+        cursor: pointer;
+
+        .itemsContainer
+        {
+            pointer-events: initial;
+            opacity: 1;
+        }
+    }
+
+    .itemsContainer
+    {
+        cursor: initial;
+        pointer-events: none;
+        opacity: 0;
+
+        position: absolute;
+
+        padding-top: $gap;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+
+        width: 150px;
+
+        transition: opacity $animSpeed;
+
+        .arrow, .arrow::before
+        {
+            width: 0;
+            height: 0;
+            border-style: solid;
+        }
+
+        .arrow
+        {
+            position: absolute;
+            
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+
+            border-width: 0 13px 15px 13px;
+            border-color: transparent transparent $c_Border transparent;
+
+            &::before
+            {
+                content: "";
+
+                position: absolute;
+                top: 2px;
+                left: -12px;
+
+                border-width: 0 12px 14px 12px;
+                border-color: transparent transparent white transparent;
+            }
+        }
+    }
+
+    .itemsContainer .items
+    {
+        display: flex;
+        flex-direction: column;
+
+        width: 100%;
+        padding: $gapSmall/2 0;
+
+        background: white;
+
+        border: 1px solid $c_Border;
+        border-radius: $borderRadius;
+
+        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
+
+        .sep
+        {
+            width: calc(100% - 2 * #{$gapSmall});
+            margin: $gapSmall/2 $gapSmall;
+            border-bottom: 1px solid $c_Border;
+        }
+    }
+}
+
+.subNav-item
+{
+    display: flex;
+    align-items: center;
+    padding: $gapSmall/2 $gapSmall;
+    
+    color: $c_TextMuted;
+    text-decoration: none;
+
+    transition: color $animSpeed;
+
+    &:hover
+    {
+        color: $c_Text;
+    }
+
+    i
+    {
+        width: 20px;
+        text-align: center;
+    }
+
+    .title
+    {
+        flex: 1;
+        margin-left: $gapSmall;
+        font-size: 93%;
     }
 }

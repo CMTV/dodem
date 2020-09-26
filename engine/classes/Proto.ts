@@ -73,6 +73,10 @@ export class ProtoManager
         let rawPaths = glob.sync('data/proto/**/*/task.md');
         let numId = 0;
 
+        // DEV MODE ONLY
+        rawPaths = rawPaths.slice(0, 2);
+        //
+
         rawPaths.forEach(path =>
         {
             path = path.replace('data/proto/', '').replace('/task.md', '');

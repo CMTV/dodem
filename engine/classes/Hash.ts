@@ -18,6 +18,11 @@ class Hash
 
         for (let i = 1; i <= Const.TASKS_NUM; i++)
         {
+            // DEV MODE ONLY
+            if (global.isDev && i >= 3)
+                break;
+            //
+
             if (UtilIO.fExists(Task.getDirPath(i)))
                 this.hash[i] = null;
         }

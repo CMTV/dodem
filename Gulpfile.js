@@ -113,6 +113,21 @@ task('move-favicon', (done) =>
 // Build
 //
 
+task('build-dev', (done) =>
+{
+    global.isDev = true;
+    series('build')();
+    done();
+});
+
+task('watch-dev', () =>
+{
+    watch([
+        'site/**/*',
+        'data/**/*'
+    ], series('build-dev'));
+});
+
 task('build', (done) =>
 {
     series(
