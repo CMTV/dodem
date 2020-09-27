@@ -8,6 +8,7 @@ header
 nav
 {
     margin-top: $gapBig;
+    margin-bottom: 90px;
 
     .contentArea
     {
@@ -48,13 +49,13 @@ nav
 
         text-decoration: none;
 
-        &:last-of-type { margin-right: 0; }
-
         &:hover
         {
             > i { color: $c_Text; }
             > .title { opacity: 1; }
         }
+
+        &:last-child { margin-right: 0; }
 
         > i
         {
@@ -107,7 +108,6 @@ nav
 .subNav
 {
     position: relative;
-    margin-right: 30px !important;
 
     &:hover
     {
@@ -117,6 +117,7 @@ nav
         {
             pointer-events: initial;
             opacity: 1;
+            transform: translateX(-50%) translateY(0px);
         }
     }
 
@@ -131,11 +132,11 @@ nav
         padding-top: $gap;
         top: 100%;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) translateY(3px);
 
         width: 150px;
 
-        transition: opacity $animSpeed;
+        transition: opacity $animSpeed, transform $animSpeed;
 
         .arrow, .arrow::before
         {
