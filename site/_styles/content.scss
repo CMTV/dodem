@@ -36,6 +36,31 @@
     {
         margin: 0;
         .base { margin: $gap/2.2 0; }
+
+        overflow: hidden;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar
+        {
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-track
+        {
+            background: $c_Bg;
+            border-radius: $borderRadius;
+        }
+
+        &::-webkit-scrollbar-thumb
+        {
+            background: $c_BorderLigth;
+            border-radius: $borderRadius;
+
+            &:hover
+            {
+                background: $c_Brand;
+            }
+        }
     }
 
     .katex > .katex-html
