@@ -1,0 +1,82 @@
+@import '../import';
+
+.todoList
+{
+    .todoItem
+    {
+        margin-top: $gapStruct;
+
+        .head
+        {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            height: 55px;
+
+            .id
+            {
+                @include flexCC;
+
+                width: 100px;
+                border-right: 1px solid $c_Border;
+
+                height: 100%;
+
+                color: $c_BrandDark;
+
+                i { margin-right: 7px; }
+            }
+
+            .solver
+            {
+                display: flex;
+                align-items: center;
+
+                padding: 0 $gap;
+
+                .avatarContainer
+                {
+                    margin-right: $gapSmall;
+
+                    .avatar
+                    {
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+
+            .goto
+            {
+                flex: 1;
+                text-align: right;
+
+                padding: 0 $gap;
+
+                font-size: 18px;
+                color: $c_TextMuted;
+
+                transition: color $animSpeed, transform $animSpeed;
+            }
+
+            &:hover .goto
+            {
+                color: $c_Text;
+                transform: translateX(2px);
+            }
+        }
+
+        .desc
+        {
+            color: $c_TextMuted;
+            border-top: 1px solid $c_Border;
+            padding: $gap;
+        }
+    }
+
+    .todoItem.isProto
+    {
+        @include cbBorderColor(mix($c_Border, $c_BrandDark, 75%));
+    }
+}

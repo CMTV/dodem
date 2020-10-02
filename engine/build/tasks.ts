@@ -2,7 +2,7 @@ import { hash } from "../classes/Hash";
 import { Task, ITaskNav, IFAQItem } from "../classes/Task";
 import { toc } from "../classes/TOC";
 import { UtilIO, UtilMd, Range } from "../classes/Util";
-import { ILink, Link } from "../classes/Link";
+import { Link } from "../classes/Link";
 import { Chalk } from "../classes/Chalk";
 import { Renderer } from "../classes/Renderer";
 import { Translator } from "../classes/Translator";
@@ -11,6 +11,8 @@ import { Solver, solverHash } from "../classes/Solver";
 import { Tag } from "../classes/Tag";
 import { ProtoManager, protoManager } from "../classes/Proto";
 import { groupTasks } from "../classes/GroupTasks";
+import { todoList } from "./todo";
+import { TodoItem } from "../classes/TodoItem";
 
 export function buildTasks()
 {
@@ -107,10 +109,14 @@ function handleSolution(taskNum: number, solver: Solver, i: number, path: string
         let explanationRaw = UtilIO.fRead(path + 'explanation.md');
 
         solution.explanation = Translator.renderAll(UtilMd.getContent(explanationRaw), renderOptions);
-
-        // Tags
         
         let expMeta = UtilMd.getMeta(explanationRaw);
+
+        // Todo
+
+        todoListAnalize(taskNum, solver.id, expMeta);
+
+        // Tags
 
         if (expMeta.tags)
         {
@@ -138,6 +144,28 @@ function handleSolution(taskNum: number, solver: Solver, i: number, path: string
     //
 
     return { solution: solution, usedProtos: usedProtos };
+}
+
+function todoListAnalize(taskNum: number, solverId: string, meta: any)
+{
+    if (meta.tags)
+    {
+        for (let i = 0; i < meta.tags.length; i++)
+        {
+            let tag = meta.tags[i];
+
+            if (tag === 'unDone' || tag.name === 'unDone')
+            {
+                todoList.push(new TodoItem({
+                    id: taskNum.toString(),
+                    title: taskNum.toString(),
+                    solverId: solverId,
+                    desc: tag.name ? tag.text : null
+                }));
+                break;
+            }
+        }
+    }
 }
 
 function getFAQ(taskNum: number): IFAQItem[]

@@ -13,6 +13,7 @@ import { solverHash } from "./classes/Solver";
 import { buildDonaters } from "./build/donaters";
 import { paint } from "./taskPaint";
 import { protoManager } from "./classes/Proto";
+import { buildTodo } from "./build/todo";
 
 const CONFIG = require('../data/config');
 
@@ -39,6 +40,12 @@ export function build()
     //
 
     buildProtoTasks();
+
+    //
+    // Todo
+    //
+
+    buildTodo();
 
     //
     // Index
@@ -117,7 +124,7 @@ function buildIndex()
 
 function restartFix()
 {
-    // Очистка накаплеваемых переменных при повторной пересборки проекта
+    // Очистка накаплеваемых переменных при повторной пересборке проекта
 
     solverHash.hash = {};
     solverHash.hashUnique = {};

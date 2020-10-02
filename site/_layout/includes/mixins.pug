@@ -10,8 +10,14 @@ mixin contentBlock
 
 mixin avatar(src, link)
     .avatarContainer(href=link)
-        a(href=link)
-            img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
+
+        if (link)
+            a(href=link)
+                img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
+
+        else
+            div
+                img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
 
 mixin ad
     .darkMagicContainer

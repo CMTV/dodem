@@ -5,6 +5,8 @@ import { UtilIO, UtilMd } from "../classes/Util";
 import { Chalk } from "../classes/Chalk";
 import { Link } from "../classes/Link";
 import { ProtoCategory } from "../classes/ProtoCategory";
+import { todoList } from "./todo";
+import { TodoItem } from "../classes/TodoItem";
 
 const getCatName = require('../../data/proto/category-names');
 
@@ -32,6 +34,8 @@ export function buildProtoTasks()
 
         pTask.seo = getSEO(protoId);
 
+        todoListAnalize(protoId);
+
         pTask.task = Translator.renderAll(UtilMd.getContent(UtilIO.fRead(ProtoTask.getRelPath(protoId, 'task.md'))));
         
         let handleResult = handleSolution(protoId);
@@ -46,6 +50,21 @@ export function buildProtoTasks()
     });
 
     buildProtosPage(categoriesData);
+}
+
+function todoListAnalize(protoId: string)
+{
+    let meta: any = UtilMd.getMeta(UtilIO.fRead(ProtoManager.getDirPath(protoId) + '/task.md'));
+
+    if ('unDone' in meta)
+    {
+        todoList.push(new TodoItem({
+            isProto: true,
+            id: protoId,
+            title: 'П.' + (protoManager.getNumId(protoId) + 1),
+            desc: meta.unDone ?? null
+        }));
+    }
 }
 
 function getSEO(protoId: string): { title: string; desc: string; }
