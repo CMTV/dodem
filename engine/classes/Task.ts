@@ -7,6 +7,14 @@ import { Solver } from "./Solver";
 import { UtilIO } from "./Util";
 import { IProtoTaskInfo } from "./Proto";
 
+export const RESERVED_FILENAMES = {
+    TASK:   'task.md',
+    HINT:   'hint.md',
+    ANSWER: 'answer.md',
+    FAQ:    'faq.md',
+    LINKS:  'links.json'
+};
+
 export interface ITaskNav
 {
     next: number|null;
