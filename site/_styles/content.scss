@@ -30,30 +30,6 @@
         &:hover { text-decoration-color: inherit; }
     }
 
-    // Images
-    img
-    {
-        display: block;
-        margin: auto;
-
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-
-        @for $i from 1 through 9
-        {
-            &.w#{$i}
-            { 
-                width: 10% * $i;
-
-                @include layout(mini)
-                {
-                    width: 100%;
-                }
-            }
-        }
-    }
-
     // Katex
 
     .katex-display

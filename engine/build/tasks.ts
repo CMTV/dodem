@@ -1,5 +1,5 @@
 import { hash } from "../classes/Hash";
-import { Task, ITaskNav, IFAQItem, RESERVED_FILENAMES } from "../classes/Task";
+import { Task, ITaskNav, IFAQItem } from "../classes/Task";
 import { toc } from "../classes/TOC";
 import { UtilIO, UtilMd, Range } from "../classes/Util";
 import { Link } from "../classes/Link";
@@ -13,7 +13,6 @@ import { ProtoManager, protoManager } from "../classes/Proto";
 import { groupTasks } from "../classes/GroupTasks";
 import { todoList } from "./todo";
 import { TodoItem } from "../classes/TodoItem";
-import { dir } from "console";
 
 export function buildTasks()
 {
@@ -33,8 +32,6 @@ export function buildTasks()
         let solOut = handleSolutions(taskNum);
         task.solutions = solOut.solutions;
         task.protos = solOut.usedProtos.map((protoId: string) => ProtoManager.getProtoTaskInfo(protoId)).sort((a:any,b:any) => a.num - b.num);
-
-        moveTaskFiles(taskNum)
 
         // FILLING PROTO DEPENDENTS
         solOut.usedProtos.forEach((protoId: string) => protoManager.addTaskDependent(protoId, taskNum));
@@ -171,15 +168,6 @@ function todoListAnalize(taskNum: number, solverId: string, meta: any)
     }
 }
 
-function moveTaskFiles(taskNum: number)
-{
-    // Scanning for special files and moving them to `out` task location
-    UtilIO.dirScanExp(Task.getDirPath(taskNum)).filter(dirent => { return !(Object.values(RESERVED_FILENAMES).includes(dirent.name) || dirent.isDirectory()) }).forEach(dirent =>
-    {
-        UtilIO.copy(Task.getRelPath(taskNum, dirent.name), `out/tasks/${taskNum}/${dirent.name}`);
-    });
-}
-
 function getFAQ(taskNum: number): IFAQItem[]
 {
     let path = Task.getRelPath(taskNum, 'faq.md');
@@ -237,13 +225,7 @@ function getRenderMdContent(taskNum: number, relPath: string): string
     if (!UtilIO.fExists(path))
         return null;
 
-    let renderOptions = {
-        mustaches: {
-            task: `/tasks/${taskNum}`
-        }
-    };
-
-    return Translator.renderAll(UtilMd.getContent(UtilIO.fRead(path)), renderOptions);
+    return Translator.renderAll(UtilMd.getContent(UtilIO.fRead(path)));
 }
 
 function getNav(i: number): ITaskNav
