@@ -2,7 +2,7 @@
 // UtilIO
 //
 
-import fs   from 'fs';
+import fs, { Dirent }   from 'fs';
 import p    from 'path';
 
 const fsE = require('fs-extra');
@@ -45,6 +45,12 @@ export class UtilIO
     {
         path = p.normalize(path);
         return fs.readdirSync(path);
+    }
+
+    static dirScanExp(path: string): Dirent[]
+    {
+        path = p.normalize(path);
+        return fs.readdirSync(path, { withFileTypes: true });
     }
 
     static copy(from: string, to: string, exclude: string[] = []): void
