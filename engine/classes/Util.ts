@@ -58,9 +58,6 @@ export class UtilIO
         from = p.normalize(from);
         to = p.normalize(to);
 
-        if (from[from.length - 1] !== '/')
-            from += '/';
-
         exclude = exclude.map((eItem) => from + p.normalize(eItem));
 
         fsE.copySync(from, to, { filter: (src: any, dest: any) => { return !exclude.includes(src); }});
