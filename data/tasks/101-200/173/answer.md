@@ -7,3 +7,5 @@ S(x) = \begin{cases}
         -\frac{h}{a-b}(a-x)^2 + hb + \frac{h(a-b)}{2}, & \frac{a+b}{2} \leq x \leq a
 	\end{cases}
 $$
+
+График функции есть в конце "Разбора 1".
