@@ -1,0 +1,1 @@
+$$ y = x^2, \qquad E_x = \set{-1 \leqslant x \leqslant 2} $$

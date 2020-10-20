@@ -1,0 +1,1 @@
+$$ y = \ctg \frac{\pi x}{4}, \qquad E_x = \set{0 < |x| \leqslant 1} $$

@@ -1,0 +1,1 @@
+$$ E_y = \set{0 \leq y \leq 4} $$

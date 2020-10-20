@@ -1,0 +1,1 @@
+$$ y = |x|, \qquad E_x = \set{1 \leqslant |x| \leqslant 2} $$
