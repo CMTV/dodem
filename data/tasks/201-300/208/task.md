@@ -1,0 +1,1 @@
+$$ \phi(x) = \begin{cases} 0 \text{ при } x \leqslant 0, \\ x \text{ при } x > 0 \end{cases} \ \text{  и  } \ \psi(x) = \begin{cases} 0 \text{ при } x \leqslant 0, \\ -x^2 \text{ при } x > 0 \end{cases} $$

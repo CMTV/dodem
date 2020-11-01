@@ -1,0 +1,1 @@
+$$ \phi(x) = \sgn x \ \text{  и  } \ \psi(x) = \frac{1}{x} $$

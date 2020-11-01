@@ -1,0 +1,1 @@
+Найти $\phi[\phi(x)]$, $\psi[\psi(x)]$, $\phi[\psi(x)]$, $\psi[\phi(x)]$, если:

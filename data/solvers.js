@@ -2,7 +2,7 @@ const SOLVERS = {
     CMTV:
     {
         "name": "Петр Радько",
-        "link": "google.com",
+        "link": "https://vk.com/math.head",
         "slogan": "Гениями не рождаются - ими становятся!"
     },
 
