@@ -12,6 +12,11 @@ export function buildSolvers()
         );
     });
 
+    solvers.sort((a: any, b: any) =>
+    {
+        return b.solvedArr.length - a.solvedArr.length;
+    });
+
     renderSolvers(solvers);
 }
 
