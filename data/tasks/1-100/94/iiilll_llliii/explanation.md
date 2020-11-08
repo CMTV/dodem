@@ -26,7 +26,7 @@ $$ x_n = \sup x_n = \inf x_n = \limn x_n = A $$
 
 ||| spoiler Доказательство существования такой окрестности
 
-По определению число $\sup$ является предельной точкой, когда
+По определению (см. прото-задачу <p:[sequences/limits/limit-point-def]>) число $\sup$ является предельной точкой, когда
 
 $$ \forall \varepsilon > 0 \ \forall N \ \exists n > N \ : \ |x_n - \sup| < \varepsilon $$
 

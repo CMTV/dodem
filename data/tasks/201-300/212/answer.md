@@ -1,1 +1,1 @@
-$$ f(x) = x^2 - 2 $$
+$$ f(x) = x^2 - 2 \quad \left( |x| \geq \frac{5}{2} \right) $$
