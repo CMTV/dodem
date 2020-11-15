@@ -1,0 +1,1 @@
+$$ f(x) = 2x + \sin x \quad (-\infty < x < +\infty) $$

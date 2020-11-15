@@ -1,0 +1,1 @@
+$$ f(x) = x^2 \quad (0 \leqslant x < +\infty) $$

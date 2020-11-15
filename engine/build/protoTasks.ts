@@ -46,10 +46,21 @@ export function buildProtoTasks()
 
         pTask.links = Link.getLinks(ProtoManager.getDirPath(protoId), `Handling links for proto-task '${protoId}'.`);
 
+        moveProtoTaskFiles(protoId);
+
         renderTask(pTask);
     });
 
     buildProtosPage(categoriesData);
+}
+
+function moveProtoTaskFiles(protoId: string)
+{
+    // Scanning for special files and moving them to `out` task location
+    UtilIO.dirScanExp(`data/proto/${protoId}`).filter(dirent => { return !(Object.values(['task.md', 'solution.md', 'links.json']).includes(dirent.name) || dirent.isDirectory()) }).forEach(dirent =>
+    {
+        UtilIO.copy(ProtoTask.getRelPath(protoId, dirent.name), `out/proto/${protoId}/${dirent.name}`);
+    });
 }
 
 function todoListAnalize(protoId: string)

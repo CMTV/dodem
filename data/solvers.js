@@ -17,6 +17,12 @@ const SOLVERS = {
         "name": "Семён Вдовыкин",
         "link": "https://vk.com/iiilll_llliii",
         "forum": "https://bydef.ru/members/semjon.12/"
+    },
+
+    kesha:
+    {
+        "name": "Кеша",
+        "forum": "https://bydef.ru/members/kesha.13/"
     }
 }
 

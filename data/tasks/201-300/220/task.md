@@ -1,0 +1,1 @@
+$$ f(x) = \ctg x \quad (0 < x < \pi) $$

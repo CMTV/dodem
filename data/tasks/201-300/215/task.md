@@ -1,0 +1,1 @@
+$$ f(x) = \sin x \quad \left( -\frac{\pi}{2} \leqslant x \leqslant \frac{\pi}{2} \right) $$

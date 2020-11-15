@@ -1,0 +1,1 @@
+$$ f(x) = \cos x \quad (0 \leqslant x \leqslant \pi) $$
