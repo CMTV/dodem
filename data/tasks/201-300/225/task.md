@@ -1,0 +1,1 @@
+$$ y = x^2; \ \text{а) } -\infty < x \leqslant 0; \ \text{ б) } 0 \leqslant x < +\infty $$

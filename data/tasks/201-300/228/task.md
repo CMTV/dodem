@@ -1,0 +1,1 @@
+$$ y = \sh x, \text{ где } \sh x = \frac{1}{2}(e^x - e^{-x}) \quad (-\infty < x < +\infty) $$

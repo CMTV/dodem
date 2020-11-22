@@ -1,0 +1,1 @@
+$$ y = \sqrt{1-x^2}; \ \text{ а) } -1 \leqslant x \leqslant 0; \ \text{ б) } 0 \leqslant x \leqslant 1 $$

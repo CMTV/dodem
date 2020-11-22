@@ -1,0 +1,1 @@
+$$ y = \frac{1-x}{1+x} \quad (x\neq -1) $$

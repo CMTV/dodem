@@ -1,0 +1,1 @@
+$$ y = \andcases{ x, &\text{если } -\infty < x < 1; \\ x^2 , &\text{если } 1 \leqslant x \leqslant 4; \\ 2^x, &\text{если } 4 < x < +\infty } $$

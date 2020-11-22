@@ -1,0 +1,1 @@
+$$ y = 2x + 3 \quad (-\infty < x < +\infty) $$

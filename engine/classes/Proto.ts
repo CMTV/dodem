@@ -4,6 +4,7 @@ import { ILink } from './Link';
 
 import glob from 'glob';
 import { ProtoCategory } from './ProtoCategory';
+import { Translator } from './Translator';
 
 export class Dependent
 {
@@ -78,11 +79,38 @@ export class ProtoManager
             rawPaths = rawPaths.slice(0, 2);
         //
 
-        rawPaths.forEach(path =>
+        let paths = rawPaths.map(rawPath =>
         {
-            path = path.replace('data/proto/', '').replace('/task.md', '');
+            rawPath = rawPath.replace('data/proto/', '').replace('/task.md', '');
+
+            let path = {
+                category: 'uncategorised',
+                name: ''
+            };
+
+            let rawPathArr = rawPath.split('/');
             
-            let pathArr = path.split('/');
+            if (rawPathArr.length === 1)
+                path.name = rawPathArr[0];
+            else
+            {
+                path.name = rawPathArr.pop();
+                path.category = rawPathArr.join('/');
+            }
+
+            return path;
+        });
+
+        const categories = Object.keys(require('../../data/proto/category-names'));
+
+        paths.sort((a, b) =>
+        {
+            return categories.indexOf(b.category) <= categories.indexOf(a.category) ? 1 : -1;
+        });
+
+        paths.forEach(path =>
+        {
+            let pathArr = ((path.category !== 'uncategorised' ? path.category + '/' : '') + path.name).split('/');
             let cursor = this.protoHash;
 
             for(let i = 0; i < pathArr.length; i++)
@@ -226,7 +254,7 @@ export class ProtoManager
             num: protoManager.getNumId(path) + 1,
             id: path,
             title: meta.title,
-            description: meta.description
+            description: Translator.renderMath(meta.description)
         };
     }
 

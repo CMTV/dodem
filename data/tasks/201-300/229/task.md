@@ -1,0 +1,1 @@
+$$ y = \th x, \text{ где } \th x = \frac{e^x - e^{-x}}{e^x + e^{-x}} \quad (-\infty < x < +\infty) $$

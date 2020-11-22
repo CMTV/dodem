@@ -9,15 +9,20 @@ block content
     .contentArea
         +pageTitle('fas fa-sitemap', 'Прото-задачи')
 
-        each dataItem in data
-            .category
+        each dataItem, i in data
+            .contentBlock.category
                 .anchor(id=dataItem.id)
-                h3.title= dataItem.title
-                .contentBlock.simpleList.protoTasks
-                    .body
-                        each pTask in dataItem.protos
-                            .li.proto
-                                a.title(href=`/proto/${pTask.id}`)= pTask.title
+                .body
+                    .head
+                        .title!= dataItem.title
 
-                                if pTask.description
-                                    .desc!= pTask.description
+                        -
+                            let start = +dataItem.protos[0].num;
+                            let end = +dataItem.protos[dataItem.protos.length - 1].num;
+                            let range = (start === end ? start : start + ' - ' + end);
+                        .range(title="Номера прото-задач")= range
+                    
+                    .protoTasks
+                        each pTask in dataItem.protos
+                            .protoTask
+                                a.title(href=`/proto/${pTask.id}`)= pTask.num + '. ' + pTask.title

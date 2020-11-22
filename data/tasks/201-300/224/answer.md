@@ -1,0 +1,1 @@
+$$ x = \phi(y) = \frac{y - 3}{2} \quad (-\infty < y < +\infty) $$

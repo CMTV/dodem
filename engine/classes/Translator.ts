@@ -48,6 +48,8 @@ export class Translator
 
     static renderMath(content: string): string
     {
+        if (typeof content === 'undefined') return content;
+
         let katexOptions = (isDisplay = true) =>
         {
             let out: any = {};
