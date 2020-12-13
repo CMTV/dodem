@@ -229,6 +229,10 @@
 <url><loc>https://dodem.ru/tasks/234</loc></url>
 <url><loc>https://dodem.ru/tasks/235</loc></url>
 <url><loc>https://dodem.ru/tasks/236</loc></url>
+<url><loc>https://dodem.ru/tasks/381</loc></url>
+<url><loc>https://dodem.ru/tasks/382</loc></url>
+<url><loc>https://dodem.ru/tasks/383</loc></url>
+<url><loc>https://dodem.ru/tasks/384</loc></url>
 <url><loc>https://dodem.ru/tasks/4342</loc></url>
 <url><loc>https://dodem.ru/proto/abs</loc></url>
 <url><loc>https://dodem.ru/proto/exp-monotonic</loc></url>
@@ -253,6 +257,7 @@
 <url><loc>https://dodem.ru/proto/sequences/limits/max-limit-points</loc></url>
 <url><loc>https://dodem.ru/proto/sequences/limits/max-min-limit-points</loc></url>
 <url><loc>https://dodem.ru/proto/sequences/limits/second-wonderful</loc></url>
+<url><loc>https://dodem.ru/proto/f/limits/limit</loc></url>
 <url><loc>https://dodem.ru/proto</loc></url>
 <url><loc>https://dodem.ru/todo</loc></url>
 <url><loc>https://dodem.ru/</loc></url>
@@ -289,6 +294,8 @@
 <url><loc>https://dodem.ru/toc/I.3/inverse-f</loc></url>
 <url><loc>https://dodem.ru/toc/I.3/even-odd-f</loc></url>
 <url><loc>https://dodem.ru/toc/I.3/periodic-f</loc></url>
+<url><loc>https://dodem.ru/toc/I.5</loc></url>
+<url><loc>https://dodem.ru/toc/I.5/f-bounds</loc></url>
 <url><loc>https://dodem.ru/toc/VIII.14</loc></url>
 <url><loc>https://dodem.ru/toc</loc></url>
 <url><loc>https://dodem.ru/solvers</loc></url>
