@@ -1,0 +1,1 @@
+$$ f(x) = \sin x \ \text{ на } (0,+\infty) $$

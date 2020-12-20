@@ -1,0 +1,1 @@
+$$ f(x) = \sin x + \cos x \ \text{ на } \ [0, 2\pi] $$

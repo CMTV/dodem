@@ -1,0 +1,1 @@
+$$ f(x) = \frac{1}{1+x^2} \ \text{ на } \ (-\infty, +\infty) $$
