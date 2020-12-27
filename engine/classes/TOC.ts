@@ -98,8 +98,6 @@ export class TOC
         return location;
     }
 
-
-
     //
     // Iterate Methods
     //
@@ -156,6 +154,20 @@ export class TOC
     }
 
     // TODO: Methods to get numeric ranges for chapters, paragraphs and sections (for toc site page)
+
+    //
+    // STATIC
+    //
+
+    static toStringLocation(location: ITOCLocation): string
+    {
+        let strLoc = `${location.chapter.id}.${location.paragraph.id}`;
+
+        if (location.section)
+            strLoc += `/${location.section.id}`;
+
+        return strLoc;
+    }
 }
 
 export let toc = new TOC();

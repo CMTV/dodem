@@ -5,6 +5,21 @@ import { ILink } from './Link';
 import glob from 'glob';
 import { ProtoCategory } from './ProtoCategory';
 import { Translator } from './Translator';
+import { BookRef } from './BookRef';
+
+interface ProtoTaskMeta
+{
+    title: string;
+    description?: string;
+
+    seo?:
+    {
+        title?: string;
+        desc?: string;
+    }
+
+    bookRefs?: string[];
+}
 
 export class Dependent
 {
@@ -16,6 +31,9 @@ export class Dependent
 
 export class ProtoTask
 {
+    id: string;
+    taskMeta: ProtoTaskMeta;
+
     info: IProtoTaskInfo;
     category: ProtoCategory;
 
@@ -29,9 +47,29 @@ export class ProtoTask
     protos: IProtoTaskInfo[];
     links: ILink[];
 
+    bookRefs: BookRef[] = [];
+
+    constructor(id: string)
+    {
+        this.id = id;
+        this.taskMeta = UtilMd.getMeta(UtilIO.fRead(ProtoManager.getDirPath(id) + '/task.md'));
+        
+        this._fillBookRefs();
+    }
+
     getCategoryID(): string
     {
         return this.info.id.split('/').filter((val, i, self) => i !== self.length - 1).join('/');
+    }
+
+    _fillBookRefs()
+    {
+        let refIds: string[] = [];
+
+        if ('bookRefs' in this.taskMeta)
+            refIds = this.taskMeta.bookRefs;
+
+        this.bookRefs = BookRef.getBookRefs(refIds, `Constructing book refs for proto task with '${this.id}' ID.`);
     }
 
     //

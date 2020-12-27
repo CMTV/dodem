@@ -3,6 +3,7 @@ import { toc } from "../classes/TOC";
 import { Range, UtilIO } from "../classes/Util";
 import { hash } from "../classes/Hash";
 import { groupTasks } from "../classes/GroupTasks";
+import { BookRef } from "../classes/BookRef";
 
 export function buildToc(devMode: boolean)
 {
@@ -42,6 +43,8 @@ export function buildToc(devMode: boolean)
 
 function renderTOCTasks(link: string, title: string, range: Range)
 {
+    let bookRefs = BookRef.getTocBookRefs(link.replace('/toc/', ''), `Building '${link}' TOC tasks page.`);
+
     if (range.start > hash.getSolved()[hash.getSolved().length - 1])
         return;
 
@@ -64,6 +67,7 @@ function renderTOCTasks(link: string, title: string, range: Range)
     let data: any =
     {
         title: title,
+        bookRefs: bookRefs,
         tasksGroups: []
     };
 

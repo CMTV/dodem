@@ -176,6 +176,10 @@ block content
                             if link.desc
                                 .desc!= link.desc
 
+        //- Book refs
+        if (task.bookRefs.length !== 0)
+            +bookRefs(task.bookRefs, 'task')
+
         //- Previous and next buttons
         .nav
             if (task.nav.prev)

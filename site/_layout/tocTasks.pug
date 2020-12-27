@@ -27,6 +27,9 @@ block content
 
         +pageTitle(null, data.title)
 
+        if (data.bookRefs.length !== 0)
+            +bookRefs(data.bookRefs, 'tasks')
+
         each taskGroup in data.tasksGroups
 
             if taskGroup.isGroup

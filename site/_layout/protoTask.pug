@@ -30,6 +30,10 @@ block content
                     each dependent in pTask.dependents
                         a.taskBlock(class=(dependent.isProto ? 'proto' : ''),href=dependent.link, title=dependent.title)= dependent.content
 
+        //- Book refs
+        if (pTask.bookRefs.length !== 0)
+            +bookRefs(pTask.bookRefs, 'protoTask')
+
         +adBefore
 
         //- Solution

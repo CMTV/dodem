@@ -115,7 +115,7 @@ task('move-favicon', (done) =>
 
 task('build-dev', (done) =>
 {
-    global.isDev = true; // LOOK FOR "DEV MOD ONLY" comments
+    global.isDev = true; // LOOK FOR "DEV MODE ONLY" comments
     series('build')();
     done();
 });

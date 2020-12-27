@@ -22,7 +22,7 @@ export function buildProtoTasks()
 
     protoManager.iterateProtos((protoId) =>
     {
-        let pTask = new ProtoTask();
+        let pTask = new ProtoTask(protoId);
 
         pTask.info = ProtoManager.getProtoTaskInfo(protoId);
 

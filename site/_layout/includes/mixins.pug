@@ -4,6 +4,35 @@ mixin pageTitle(icon, title)
             i(class=icon)
         h2 !{title}
 
+mixin bookRefs(refs, type)
+    -
+        let single = (refs.length === 1);
+        let article = (single ? 'статье' : 'статьях');
+        let text = '';
+
+        switch (type)
+        {
+            case 'tasks':
+                text = `Вся необходимая теория для решения этих задач понятно и подробно расписана в ${article}:`;
+                break;
+            case 'task':
+                text = `Вся необходимая теория для решения этой задачи понятно и подробно расписана в ${article}:`;
+                break;
+            case 'protoTask':
+                text = `Эта прото-задача является отрывком теории, которая понятно и подробно расписана в ${article}:`;
+                break;
+        }
+
+    .contentBlock.bookRefs(class=`type--${type}`)
+        .body
+            .content
+                i.fas.fa-book
+                .inner
+                    p=text
+                    ul
+                        each ref in refs
+                            li
+                                a(href=`https://omath.ru/${ref.url}`, target="_blank")= ref.title
 mixin contentBlock
     .contentBlock
         block

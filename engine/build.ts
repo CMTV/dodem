@@ -81,7 +81,8 @@ export function build()
     // History
     //
 
-    buildHistory();
+    if (!('isDev' in global))
+        buildHistory();
 
     //
     // CNAME

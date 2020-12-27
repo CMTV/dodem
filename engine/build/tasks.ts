@@ -13,17 +13,16 @@ import { ProtoManager, protoManager } from "../classes/Proto";
 import { groupTasks } from "../classes/GroupTasks";
 import { todoList } from "./todo";
 import { TodoItem } from "../classes/TodoItem";
-import { dir } from "console";
 
 export function buildTasks()
 {
     hash.getSolved().forEach((taskNum, i) =>
     {
-        let task = new Task();
+        //
+        // TODO: Move most of this shit in Task constructor!
+        //
 
-        task.id = taskNum;
-
-        task.plainDesc = getPlainDesc(taskNum);
+        let task = new Task(taskNum);
 
         task.groupTask = groupTasks.getAll(taskNum);
         task.task = getRenderMdContent(taskNum, 'task.md');
@@ -44,6 +43,8 @@ export function buildTasks()
         task.location = toc.getLocation(task.id);
         task.nav = getNav(i);
         task.links = Link.getLinks(Task.getDirPath(taskNum), `Handling links for task ${taskNum}.`);
+
+        task._fillBookRefs();
 
         renderPreview(task);
         renderTask(task);
@@ -259,13 +260,6 @@ function getNav(i: number): ITaskNav
     return nav;
 }
 
-function getPlainDesc(taskNum: number): string
-{
-    let taskMeta = UtilMd.getMeta(UtilIO.fRead(Task.getRelPath(taskNum, 'task.md')));
-    
-    return taskMeta.plain ? taskMeta.plain : null;
-}
-
 function renderPreview(task: Task)
 {
     let out: any = {};
@@ -280,7 +274,7 @@ function renderTask(task: Task)
     let SEO =
     {
         title: task.id.toString(),
-        desc: task.plainDesc ? task.plainDesc : `Подробное и понятное решение задачи ${task.id} из задачника Демидовича.`,
+        desc: ('plain' in task.taskMeta ? task.taskMeta.plain : `Подробное и понятное решение задачи ${task.id} из задачника Демидовича.`),
         canonical: 'tasks/' + task.id,
         ogImg: 'site/graphics/tasks/' + task.id + '.png'
     }

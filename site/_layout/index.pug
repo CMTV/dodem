@@ -19,7 +19,7 @@ block content
         .contentArea
             +navItem('toc', 'fas fa-list-ol', 'Оглавление', '/toc')
             +navItem('proto', 'fas fa-sitemap', 'Прото-задачи', '/proto', 'Полезные теоремы, свойства и формулы')
-            +navItem('history', 'fas fa-history', 'Хронология', '/history', 'Новости о решенных задачах и других важных событиях')
+            +navItem('book', 'fas fa-book', 'Учебник', 'https://omath.ru', 'Понятная и подробная теория с доказательствами теорем')
             +navItem('luck', 'fas fa-dice', 'Мне повезет!', '', 'Телепортироваться к случайной задаче!')
 
             .nav-item.subNav
@@ -27,12 +27,14 @@ block content
                 .itemsContainer
                     .arrow
                     .items
+                        +subNavItem('history', 'fas fa-history', 'Хронология', '/history', 'Новости о решенных задачах и других важных событиях')
                         +subNavItem('solvers', 'fas fa-users', 'Решатели', '/solvers', 'Люди, которые предложили свои решения для задач из задачника')
                         +subNavItem('todo', 'fas fa-bug', 'Проблемы', '/todo', 'Список задач с отсутствующим/неполным решением')
                         +subNavItem('editor', 'fas fa-edit', 'Редактор', '/editor', 'Удобный редактор для создания и редактирования решений')
                         .sep
-                        +subNavItem('forum', 'fas fa-comments', 'Форум', 'https://bydef.ru', 'Задавайте вопросы и общайтесь!', true)
-                        +subNavItem('blog', 'fab fa-vk', 'Блог', 'https://vk.com/do_dem', 'Блог с последними новостями', true)
-                        +subNavItem('github', 'fab fa-github', 'GitHub', 'https://github.com/CMTV/dodem', 'Исходный код движка сайта', true)
+                        .outLinks
+                            +subNavItem('forum', 'fas fa-comments', 'Форум', 'https://bydef.ru', 'Задавайте вопросы и общайтесь!', true)
+                            +subNavItem('blog', 'fab fa-vk', 'Блог', 'https://vk.com/do_dem', 'Блог с последними новостями', true)
+                            +subNavItem('github', 'fab fa-github', 'GitHub', 'https://github.com/CMTV/dodem', 'Исходный код движка сайта', true)
 
             +navItem('donate', 'fas fa-hand-holding-usd', 'Поддержать!', '/donate')

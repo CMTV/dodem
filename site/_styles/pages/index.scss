@@ -191,6 +191,18 @@ nav
             margin: $gapSmall/2 $gapSmall;
             border-bottom: 1px solid $c_Border;
         }
+
+        .outLinks
+        {
+            @include flexCC;
+
+            .subNav-item
+            {
+                padding: $gapSmall;
+                font-size: 110%;
+                .title { display: none; }
+            }
+        }
     }
 }
 

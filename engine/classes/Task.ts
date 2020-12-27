@@ -1,11 +1,12 @@
 import { Const } from "./Const";
 import { Chalk } from "./Chalk";
-import { ITOCLocation } from "./TOC";
+import { ITOCLocation, TOC } from "./TOC";
 import { ILink } from "./Link";
 import { Solution } from "./Solution";
 import { Solver } from "./Solver";
-import { UtilIO } from "./Util";
+import { UtilIO, UtilMd } from "./Util";
 import { IProtoTaskInfo } from "./Proto";
+import { BookRef } from "./BookRef";
 
 export const RESERVED_FILENAMES = {
     TASK:   'task.md',
@@ -29,11 +30,17 @@ export interface IFAQItem
     content: string;
 }
 
+interface TaskMeta
+{
+    plain?: string;
+    bookRefs?: string[];
+}
+
 export class Task
 {
     id: number;
 
-    plainDesc?: string;
+    taskMeta: TaskMeta;
     
     groupTask: { range: string, task: string };
     task: string;
@@ -48,6 +55,26 @@ export class Task
     nav: ITaskNav;
     links: ILink[];
     protos: IProtoTaskInfo[];
+
+    bookRefs: BookRef[] = [];
+
+    constructor(taskNum: number)
+    {
+        this.id = taskNum;
+        this.taskMeta = UtilMd.getMeta(UtilIO.fRead(Task.getRelPath(this.id, 'task.md')));
+    }
+
+    _fillBookRefs()
+    {
+        let refIds: string[] = [];
+
+        if ('bookRefs' in this.taskMeta)
+            refIds = this.taskMeta.bookRefs;
+
+        refIds = refIds.concat(BookRef.getTocBookRefIds(TOC.toStringLocation(this.location)));
+
+        this.bookRefs = BookRef.getBookRefs(refIds, `Constructing book refs for task #${this.id}.`);
+    }
 
     // STATIC
 
