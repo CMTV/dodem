@@ -16,10 +16,14 @@
         height: 5px;
         background: lighten($c_Brand, 45%);
 
+        display: flex;
+
         div
         {
             height: 100%;
             background: $c_Brand;
+
+            &:nth-of-type(even) { background: transparent; }
         }
     }
 }

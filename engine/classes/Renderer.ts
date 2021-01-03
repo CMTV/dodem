@@ -50,7 +50,7 @@ export class Renderer
     static renderComponent(cName: string, view: any): string
     {
         // FIX PROBLEMS WITH "PRETTY: FALSE"!!!
-        return pug.renderFile(`site/_layout/components/${cName}.pug`, { ...{ pretty: true } ,...view});
+        return pug.renderFile(`site/_layout/components/${cName}.pug`, {...{ pretty: true }, ...view});
     }
 
     static getGlobalView()
@@ -58,7 +58,8 @@ export class Renderer
         let progress =
         {
             solved: hash.getSolved().length,
-            percent: ((hash.getSolved().length / Const.TASKS_NUM) * 100).toFixed(3)
+            percent: ((hash.getSolved().length / Const.TASKS_NUM) * 100).toFixed(3),
+            fractions: hash.getSolvedFractions()
         }
 
         return {

@@ -1,7 +1,8 @@
 doctype html
 html(lang="ru")
 
-    include /includes/head
+    head
+        include /includes/head
 
     body(class=type)
         .bgContainer
@@ -11,7 +12,8 @@ html(lang="ru")
 
             .progressContainer(title=`Решено ${progress.solved} из 4462 задач (${progress.percent}%)`)
                 .progress
-                    div(style=`width: ${progress.percent}%`)
+                    each fraction in progress.fractions
+                        div(style=`flex: ${Math.abs(fraction)} 0;`)
 
             .mainContent
 

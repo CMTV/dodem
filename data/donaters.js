@@ -10,8 +10,9 @@ const DONATERS =
 
     tier3:
     [
-        { "id": "voorhs", "name": "voorhs" },
-        { "id": "twishi", "name": "twishi" }
+        { "id": "voorhs",   "name": "voorhs" },
+        { "id": "twishi",   "name": "twishi" },
+        { "id": "nuya",     "name": "Nu Ya" }
     ]
 }
 
