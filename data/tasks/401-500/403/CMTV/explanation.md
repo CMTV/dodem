@@ -2,8 +2,6 @@
 
 $$ \lim_{x \to a} f(x) = b \Leftrightarrow \\ \Leftrightarrow \forall \varepsilon > 0 \ \exists \delta = \delta(\varepsilon) > 0 \ : \ \left( 0 < |x-a| < \delta \Rightarrow |f(x) - b| < \varepsilon \right) $$
 
-Если словами, то какое $\varepsilon > 0$ ни возьми, всегда найдется такое $\delta > 0$, что для всех $x$ из проколотой $\delta$-окрестности точки $a$ соответствующие значения функции $f(x)$ попадают в $\varepsilon$-окрестность точки $b$.
-
 Задача <t:[401]> как раз является примером такого предела:
 
 $$ \lim_{x \to 2} x^2 = 4 $$

@@ -1,0 +1,1 @@
+$$ \text{а) } \lim_{x \to \infty} f(x) = b; \quad \text{б) } \lim_{x \to -\infty} f(x) = b; \quad \text{в) } \lim_{x \to +\infty} f(x) = b $$

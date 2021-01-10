@@ -5,7 +5,7 @@ const NAMES =
     "sequences":        "Последовательности",
     "sequences/limits": "Предел последовательности",
     
-    "f/limits": "Предел функции"
+    "f/limits":         "Предел функции"
 }
 
 module.exports = NAMES;
