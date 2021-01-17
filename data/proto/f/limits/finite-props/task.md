@@ -13,6 +13,12 @@ $$ \lim_{x \to a} f(x) = b \quad (a\in\mathbb{\overline{R}}, \ b\in\mathbb{R}) $
 
 ## Ограниченность $f(x)$
 
-Существует какая-то проколотая окрестность $\mathring{Y}(a)$, в которая функция ограничена, то есть
+Существует проколотая окрестность $\mathring{Y}(a)$, в которой функция ограничена, то есть
 
 $$ \exists C > 0 \ \forall x \in \mathring{Y}(a) \ : \ |f(x)| \leq C $$
+
+## Знакопостоянность $f(x)$
+
+Если предел $b \neq 0$, то существует проколотая окрестность $\mathring{Y}(a)$, в которой значения функции сохраняют знак предела $b$.
+
+$$ b \neq 0 \Rightarrow \exists \mathring{Y}(a) \ : \ \left( \forall x \in \mathring{Y}(a) \ : \ f(x)\cdot b > 0 \right) $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{\infty} \frac{(x+1)(x^2 + 1)\ldots(x^n + 1)}{\left[ (nx)^n + 1 \right]^{\frac{n+1}{2}}} $$

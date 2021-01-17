@@ -1,0 +1,1 @@
+$$ \text{а) } \limf{x}{0} \frac{x^2 - 1}{2x^2 - x - 1}; \quad \text{б) } \limf{x}{1} \frac{x^2 - 1}{2x^2 - x - 1}; \quad \text{в) } \limf{x}{\infty} \frac{x^2 - 1}{2x^2 - x - 1} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{(1+mx)^n - (1+nx)^m}{x^2} \quad (m \text{ и } n \text{ — натуральные числа }) $$

@@ -1,0 +1,1 @@
+$$ \text{а) } \limf{x}{1} \frac{x+x^2+\ldots+x^n-n}{x-1}; \qquad \text{б) } \limf{x}{1} \frac{x^{100}-2x+1}{x^{50}-2x+1} $$

@@ -362,15 +362,24 @@ class Translator
             // Сокращения
             //
 
+            // Расширенная числовая прямая
+            "\\RR":     "\\overline{\\mathbb{R}}",
+
             // Предел при n -> oo
             "\\limn":   "\\lim\\limits_{n\\to\\infty}",
+
+            // Предел функции
+            "\\limf":   "\\lim\\limits_{ #1 \\to #2 }",
 
             // Множество
             "\\set":    "\\left\\{#1\\right\\}",
 
             // И/ИЛИ скобки
             "\\andcases": "\\begin{cases}#1\\end{cases}",
-            "\\orcases": "\\left[\\begin{array}{ll} #1 \\end{array}\\right."
+            "\\orcases": "\\left[\\begin{array}{ll} #1 \\end{array}\\right.",
+
+            // Произвольная группа действий
+            "\\scope":  "\\left| \\ \\begin{gathered} #1 \\end{gathered} \\ \\right|"
         }
 
         let katexOptions = (isDisplay = true) =>
