@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \frac{\sqrt{x} + \sqrt[3]{x} + \sqrt[4]{x}}{\sqrt{2x+1}} $$

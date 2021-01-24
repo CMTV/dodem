@@ -1,0 +1,1 @@
+$$ \limf{x}{1} \left( \frac{m}{1-x^m} - \frac{n}{1-x^n} \right) \ \ (m \text{ и } n \text{ — натуральные числа})  $$

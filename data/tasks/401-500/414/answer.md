@@ -1,1 +1,1 @@
-$$ \sgn(n-m)\frac{nm|n-m|}{2} $$
+$$ \frac{nm(n-m)}{2} $$

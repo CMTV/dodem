@@ -1,0 +1,1 @@
+$$ \limn \frac{1}{n}\left[ \left(x+\frac{a}{n}\right) + \left(x+\frac{2a}{n}\right) + \ldots + \left(x+\frac{(n-1)a}{n}\right) \right] $$

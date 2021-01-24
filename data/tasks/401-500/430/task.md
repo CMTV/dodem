@@ -1,0 +1,1 @@
+$$ \limn \frac{1}{n}\left[ \left( x + \frac{a}{n} \right)^2 + \left( x + \frac{2a}{n} \right)^2 + \ldots + \left( x + \frac{(n-1)a}{n} \right)^2 \right] $$

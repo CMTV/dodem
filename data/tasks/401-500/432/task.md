@@ -1,0 +1,1 @@
+$$ \limn \left( \frac{1^3 + 2^3 + \ldots + n^3}{n^3} - \frac{n}{4} \right) $$

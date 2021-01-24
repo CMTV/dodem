@@ -15,7 +15,7 @@ $$ \lim\limits_{x\to a}f(x) = b \ \Leftrightarrow \ \forall V(b) \ \exists \math
 
 ## По Гейне
 
-Пусть $\mathring{D}(a)$ — произвольная проколотая окрестность точки $a$, в каждой точке которой функция $f(x)$ определена.
+Пусть $\mathring{D}(a)$ — проколотая окрестность точки $a$, в каждой точке которой функция $f(x)$ определена.
 
 $$ \lim\limits_{x\to a}f(x) = b \ \Leftrightarrow \\[5px] \Leftrightarrow \ \forall \set{x_n} \ : \ \begin{rcases} \set{x_n} \subset \mathring{D}(a) \\[5px] \set{x_n} \to a \end{rcases} \ \exists \limn \set{f(x_n)} = b $$
 

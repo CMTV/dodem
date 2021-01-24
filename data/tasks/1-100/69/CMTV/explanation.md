@@ -13,13 +13,13 @@ $$
     \\[5px]
     \frac{ \left( \frac{n+1}{n} \right)^{n+1} }{ \left( \frac{n+2}{n+1} \right)^{n+1} \left(\frac{n+2}{n+1}\right) } > 1
     \\[5px]
-    \left( \frac{ \frac{n+1}{n} }{ \frac{n+2}{n+1} } \right)^{n+1} > \frac{n+1}{n+2}
+    \left( \frac{ \frac{n+1}{n} }{ \frac{n+2}{n+1} } \right)^{n+1} > \frac{n+2}{n+1}
     \\[5px]
-    \left( \frac{(n+1)^2}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
+    \left( \frac{(n+1)^2}{n(n+2)} \right)^{n+1} > \frac{n+2}{n+1}
     \\[5px]
-    \left( \frac{n^2 + 2n + 1}{n^2 + 2n} \right)^{n+1} > \frac{n+1}{n+2}
+    \left( \frac{n^2 + 2n + 1}{n^2 + 2n} \right)^{n+1} > \frac{n+2}{n+1}
     \\[5px]
-    \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} > \frac{n+1}{n+2}
+    \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} > \frac{n+2}{n+1}
 $$
 
 Для левой части воспользуемся неравенством Бернулли, которое доказывается в задаче <t:[7]>:
@@ -30,19 +30,21 @@ $$ \left( 1 + \frac{1}{n(n+2)} \right)^{n+1} \geq 1 + \frac{n+1}{n(n+2)}  $$
 
 $$
 \begin{aligned}
-    1 + \frac{n+1}{n(n+2)} &> \frac{n+1}{n+2}
-    \\[5px]
-    \frac{n(n+2) + (n+1)}{n(n+2)} &> \frac{n+1}{n+2}
-    \\[5px]
-    \frac{n(n+2) + (n+1)}{n} &> n+1
-    \\[5px]
-    n^2 + 3n + 1 &> n^2 + n
-    \\[5px]
-    2n + 1 &> 0
+    1 + \frac{n+1}{n(n+2)} &> \frac{n+2}{n+1}
+    \\[15px]
+    \frac{n(n+2) + (n+1)}{n(n+2)} &> \frac{n+2}{n+1}
+    \\[15px]
+    n(n+1)(n+2) + (n+1)^2 &> n(n+2)^2
+    \\[15px]
+    n(n^2+3n+2) + (n^2+2n+1) &> n(n^2+4n+4)
+    \\[15px]
+    n^3+4n^2+4n+1 &> n^3 + 4n^2 + 4n
+    \\[15px]
+    1 > 0
 \end{aligned}
 $$
 
-Последнее неравенство очевидно выполняется, так как слева строго положительное число.
+Последнее неравенство очевидно выполняется.
 Мы доказали, что
 
 $$ y_n > y_{n+1} $$
@@ -94,13 +96,13 @@ $$ \left( 1 - \frac{1}{(n+1)^2} \right)^n \geq 1 - \frac{n}{(n+1)^2} $$
 $$
 \begin{aligned}
     1 - \frac{n}{(n+1)^2} &> \frac{n+1}{n+2}
-    \\[5px]
+    \\[15px]
     \frac{(n+1)^2 - n}{(n+1)^2} &> \frac{n+1}{n+2}
-    \\[5px]
+    \\[15px]
     (n^2 + n + 1)(n+2) &> (n+1)^3
-    \\[5px]
+    \\[15px]
     n^3 + 3n^2 + 3n + 2 &> n^3 + 3n^2 + 3n + 1
-    \\[5px]
+    \\[15px]
     2 &> 1
 \end{aligned}
 $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \frac{\sqrt{x+\sqrt{x + \sqrt{x}}}}{\sqrt{x+1}} $$
