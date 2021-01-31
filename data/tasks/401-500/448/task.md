@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt{1+x}-\sqrt{1-x}}{\sqrt[3]{1+x} - \sqrt[3]{1-x}} $$

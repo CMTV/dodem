@@ -1,0 +1,1 @@
+$$ \limf{x}{16} \frac{\sqrt[4]{x}-2}{\sqrt{x}-4} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{7} \frac{\sqrt{x+2} - \sqrt[3]{x+20}}{\sqrt[4]{x+9} - 2} $$

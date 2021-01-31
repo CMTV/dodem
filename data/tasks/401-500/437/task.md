@@ -1,0 +1,1 @@
+$$ \limf{x}{4} \frac{\sqrt{1+2x} - 3}{\sqrt{x}-2} $$

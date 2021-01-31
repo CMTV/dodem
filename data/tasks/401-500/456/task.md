@@ -1,0 +1,1 @@
+$$ \limf{x}{1} \frac{(1-\sqrt{x})(1-\sqrt[3]{x})\ldots(1-\sqrt[n]{x})}{(1-x)^{n-1}} $$

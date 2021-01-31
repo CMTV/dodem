@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \left( \sqrt{x+\sqrt{x+\sqrt{x}}} - \sqrt{x} \right) $$

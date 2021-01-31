@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \left[ \sqrt{(x+a)(x+b)} - x \right] $$

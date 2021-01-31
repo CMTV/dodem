@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt[3]{27+x} - \sqrt[3]{27-x}}{x+2\sqrt[3]{x^4}} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{3} \frac{\sqrt{x+13} - 2\sqrt{x+1}}{x^2-9} $$

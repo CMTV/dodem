@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\sqrt{x}-\sqrt{a} + \sqrt{x-a}}{\sqrt{x^2-a^2}} \quad (a>0) $$

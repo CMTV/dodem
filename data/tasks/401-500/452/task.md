@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt[m]{1+\alpha x} - \sqrt[n]{1+\beta x}}{x} \ \ (m \text{ и } n \text{ — целые числа}) $$
