@@ -1,0 +1,1 @@
+$$ x_1 = -\frac{c}{b} \qquad \qquad x_2 = \infty $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} x(\sqrt{x^2+2x} - 2\sqrt{x^2+x} + x) $$

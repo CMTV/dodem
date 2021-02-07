@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \left( \sqrt[3]{x^3+3x^2} - \sqrt{x^2-2x} \right) $$

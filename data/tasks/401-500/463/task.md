@@ -1,0 +1,1 @@
+$$ \limf{x}{\infty} x^{\frac{1}{3}}\left[ (x+1)^{\frac{2}{3}} - (x-1)^{\frac{2}{3}} \right] $$

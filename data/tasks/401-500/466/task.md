@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \frac{\left(x-\sqrt{x^2-1}\right)^n + \left(x + \sqrt{x^2 - 1}\right)^n}{x^n} \ \ (n\text{ — натуральное число}) $$

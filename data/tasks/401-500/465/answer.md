@@ -1,0 +1,1 @@
+$$ \frac{a_1+\ldots+a_n}{n} $$

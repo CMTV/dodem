@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} x^{\frac{3}{2}}\left( \sqrt{x+2} - 2\sqrt{x+1} + \sqrt{x} \right) $$

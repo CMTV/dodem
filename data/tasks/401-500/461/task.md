@@ -1,0 +1,1 @@
+$$ \limf{x}{\infty} \left( \sqrt[3]{x^3 + x^2 + 1} - \sqrt[3]{x^3-x^2+1} \right) $$

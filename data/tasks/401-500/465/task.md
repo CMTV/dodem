@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} \left[ \sqrt[n]{(x+a_1)\ldots(x+a_n)} - x \right] $$
