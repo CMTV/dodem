@@ -1,7 +1,10 @@
 const BOOK_REFS =
 {
     // Модуль
-    "abs": { title: "Модуль", url: "algebra/abs" }
+    "abs": { title: "Модуль", url: "algebra/abs" },
+
+    // Монотонная функция
+    "f-monotonic": { title: "Монотонная функция", url: "algebra/f-properties/monotonic" }
 }
 
 //
@@ -10,7 +13,8 @@ const BOOK_REFS =
 
 const TOC_REFS =
 {
-    "I.1/abs": ["abs"]
+    "I.1/abs": ["abs"],
+    "I.3/monotonic-f": ["f-monotonic"]
 }
 
 //

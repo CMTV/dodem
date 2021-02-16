@@ -6,6 +6,6 @@ $$ |\sin x_2 - \sin x_1| $$
 
 $$ \sin\alpha - \sin\beta = 2\cos\frac{x_2 + x_1}{2}\sin\frac{x_2 - x_1}{2} $$
 
-Воспользуйтесь следующим неравенством из прото-задачи <p:[sin-arg-inequality]>:
+Воспользуйтесь следующим неравенством из прото-задачи <p:[sin-arg-tg-inequality]>:
 
 $$ |\sin x| \leq |x| $$

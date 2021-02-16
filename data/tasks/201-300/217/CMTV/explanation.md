@@ -6,7 +6,7 @@ $$ f(x_2) > f(x_1) \\ 2x_2 + \sin x_2 > 2x_1 + \sin x_1 \\ 2(x_2 - x_1) + (\sin 
 
 $$ |\sin x_2 - \sin x_1| = 2\underbrace{\left|\cos\frac{x_2 + x_1}{2}\right|}_{\normalsize \leq 1}\left|\sin\frac{x_2 - x_1}{2}\right| \leq \\ \leq 2 \left| \sin \frac{x_2 - x_1}{2} \right| $$
 
-Теперь воспользуемся неравенством $|\sin\alpha| \leq |\alpha|$ из прото-задачи <p:[sin-arg-inequality]>:
+Теперь воспользуемся неравенством $|\sin\alpha| \leq |\alpha|$ из прото-задачи <p:[sin-arg-tg-inequality]>:
 
 $$ |\sin x_2 - \sin x_1| \leq \left| \sin \frac{x_2 - x_1}{2} \right| \leq \frac{2}{2}|x_2 - x_1| $$
 
