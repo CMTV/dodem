@@ -325,7 +325,7 @@
 <url><loc>https://dodem.ru/proto/irr-inequality</loc></url>
 <url><loc>https://dodem.ru/proto/power-diff</loc></url>
 <url><loc>https://dodem.ru/proto/simple-abs</loc></url>
-<url><loc>https://dodem.ru/proto/sin-arg-inequality</loc></url>
+<url><loc>https://dodem.ru/proto/sin-arg-tg-inequality</loc></url>
 <url><loc>https://dodem.ru/proto/trig-period</loc></url>
 <url><loc>https://dodem.ru/proto/sequences/bounds-operations</loc></url>
 <url><loc>https://dodem.ru/proto/sequences/limits/bm-bb</loc></url>
@@ -350,6 +350,7 @@
 <url><loc>https://dodem.ru/proto/f/limits/elementary</loc></url>
 <url><loc>https://dodem.ru/proto/f/limits/f-power</loc></url>
 <url><loc>https://dodem.ru/proto/f/limits/finite-props</loc></url>
+<url><loc>https://dodem.ru/proto/f/limits/first-wonderful</loc></url>
 <url><loc>https://dodem.ru/proto/f/limits/infty-relations</loc></url>
 <url><loc>https://dodem.ru/proto/f/limits/limit</loc></url>
 <url><loc>https://dodem.ru/proto</loc></url>
