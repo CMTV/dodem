@@ -1,0 +1,1 @@
+$$ \limf{x}{\pi} \frac{\sin mx}{\sin nx} \ \ (m \text{ и } n \text{ — целые числа}) $$

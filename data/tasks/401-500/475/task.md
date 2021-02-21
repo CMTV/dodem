@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\tg x - \sin x}{\sin^3 x} $$

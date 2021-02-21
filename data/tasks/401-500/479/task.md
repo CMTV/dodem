@@ -1,0 +1,1 @@
+$$ \limf{x}{\frac{\pi}{4}} \tg 2x \tg\left( \frac{\pi}{4} - x \right) $$

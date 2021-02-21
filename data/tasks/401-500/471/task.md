@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sin 5x}{x} $$

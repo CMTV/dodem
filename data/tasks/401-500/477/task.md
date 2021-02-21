@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\cos x - \cos 3x}{x^2} $$

@@ -1,0 +1,1 @@
+$$ \text{а) } \limf{x}{0} \frac{1-\cos x}{x^2} \quad \text{б) } \limf{x}{0} \frac{\tg x}{x} \quad \text{в) } \limf{x}{0} x\ctg 3x$$

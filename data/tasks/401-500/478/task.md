@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{1+\sin x-\cos x}{1+\sin px - \cos px} $$
