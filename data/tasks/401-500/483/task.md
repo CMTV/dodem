@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\cos x - \cos a}{x-a} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\sec x - \sec a}{x-a} $$

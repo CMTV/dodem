@@ -63,6 +63,18 @@ block content
                                 each t3Donater in donaters.tier3
                                     .li.donater
                                         a.niceUnderline.name(href=t3Donater.link, target="_blank")= t3Donater.name
+
+                if donaters.archive.length != 0
+                    .archive
+                        .contentBlock.donaters
+                            .head 
+                                .tab
+                                    span(title="Бывшие спонсоры") Память
+                            .body
+                                each donater in donaters.archive 
+                                    .li.donater
+                                        span= donater.name
+                                        span.tier(title=donater.tier)= '(' + donater.tier[0] + ')'
         else
             .contentBlock.noDonaters
                 .body

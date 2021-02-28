@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{ \cos(a+2x) - 2\cos(a+x) + \cos a }{x^2} $$

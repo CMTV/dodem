@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sin(a+x)\sin(a+2x) - \sin^2 a}{x} $$

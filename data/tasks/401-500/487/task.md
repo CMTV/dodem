@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\cosec x - \cosec a}{x-a} $$

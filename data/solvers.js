@@ -23,6 +23,13 @@ const SOLVERS = {
     {
         "name": "Кеша",
         "forum": "https://bydef.ru/members/kesha.13/"
+    },
+
+    merej_duzelbaev:
+    {
+        "name": "Мерей Дузелбаев",
+        "link": "https://www.facebook.com/profile.php?id=100063630226766",
+        "forum": "https://bydef.ru/members/merej-duzelbaev.21/"
     }
 }
 

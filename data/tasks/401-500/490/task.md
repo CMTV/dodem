@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\tg(a+2x) - 2\tg(a+x) + \tg a}{x^2} $$

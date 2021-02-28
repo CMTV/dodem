@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\tg x - \tg a}{x-a} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{a} \frac{\sin x - \sin a}{x - a} $$

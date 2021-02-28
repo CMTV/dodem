@@ -1,6 +1,20 @@
 import { Renderer } from "../classes/Renderer"
 import { UtilIO } from "../classes/Util";
 
+class Tier
+{
+    static MAP: {[key: number]: string} = {
+        1: "Меценаты",
+        2: "Соратники",
+        3: "Помощники"
+    };
+
+    static getNameByCode(tierCode: number): string
+    {
+        return this.MAP[tierCode];
+    }
+}
+
 interface IDonaterT3
 {
     id: string;
@@ -16,6 +30,11 @@ interface IDonaterT2 extends IDonaterT3
 interface IDonaterT1 extends IDonaterT2
 {
     message: string;
+}
+
+interface IDonaterArchive extends IDonaterT3
+{
+    tier: number;
 }
 
 export function buildDonaters()
@@ -46,7 +65,16 @@ export function buildDonaters()
         });
     });
 
-    renderDonaters({ tier1: tier1, tier2: tier2, tier3: tier3 });
+    let archive: any[] = [];
+    donatersList.archive.forEach((donater: IDonaterArchive) =>
+    {
+        archive.push({
+            ...donater,
+            tier: Tier.getNameByCode(donater.tier)
+        });
+    });
+
+    renderDonaters({ tier1: tier1, tier2: tier2, tier3: tier3, archive: archive });
 }
 
 function renderDonaters(donaters: any)

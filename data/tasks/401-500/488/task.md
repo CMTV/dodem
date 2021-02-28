@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{ \sin(a+2x) - 2\sin(a+x) + \sin a }{x^2} $$

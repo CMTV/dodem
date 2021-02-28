@@ -108,7 +108,7 @@
     }
 }
 
-.tier2, .tier3
+.tier2, .tier3, .archive
 {
     margin-top: $gapStruct;
 
@@ -161,6 +161,27 @@
         {
             margin-left: 5px;
             white-space: nowrap;
+        }
+    }
+}
+
+.archive
+{
+    .head .tab
+    {
+        cursor: help;
+        color: $c_Text;
+    }
+
+    .donater
+    {
+        color: $c_TextMuted;
+
+        .tier
+        {
+            cursor: help;
+            margin-left: 5px;
+            color: $c_TextMMuted;
         }
     }
 }

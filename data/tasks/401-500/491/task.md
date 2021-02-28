@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\ctg(a+2x) - 2\ctg(a+x) + \ctg a}{x^2} $$

@@ -1,0 +1,3 @@
+В числителе воспользуемся формулой разности косинусов (см. указание), а также теоремой о пределе сложной функции (<p:[f/limits/composition]>), первым замечательным пределом (<p:[f/limits/first-wonderful]>) и непрерывностью синуса (<p:[f/limits/continuity/trigonom]>).
+
+$$ \limf{x}{a} \frac{\cos x - \cos a}{x - a} = \limf{x}{a} -\frac{\sin\left( \dfrac{x+a}{2} \right)\sin\left( \dfrac{x-a}{2} \right)}{\dfrac{x-a}{2}} = \\[10px] = \scope{ y = \frac{x-a}{2} \\[10px] \limf{x}{a} y(x) = \limf{x}{a} \frac{x-a}{2} = \frac{a-a}{2} = 0 \\[10px] y \to 0 } = \\[10px] = \limf{x}{a} -\sin\left(\frac{x+a}{2}\right) \limf{y}{0} \frac{\sin y}{y} = \sin\left( a \right) $$
