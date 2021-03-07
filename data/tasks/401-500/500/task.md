@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{x^2}{\sqrt{1+x\sin x} - \sqrt{\cos x}} $$

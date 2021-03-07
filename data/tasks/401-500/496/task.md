@@ -1,0 +1,1 @@
+$$ \limf{x}{\frac{\pi}{3}} \frac{\tg^3 x - 3\tg x}{\cos\left(x + \frac{\pi}{6}\right)} $$

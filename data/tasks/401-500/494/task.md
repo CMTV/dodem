@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{1 - \cos x \cos 2x \cos 3x}{1 - \cos x} $$

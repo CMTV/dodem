@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt{1+\tg x} - \sqrt{1+\sin x}}{x^3} $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{\frac{\pi}{3}} \frac{\sin\left( x - \dfrac{\pi}{3} \right)}{1 - 2\cos x} $$

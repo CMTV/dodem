@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\tg(a+x)\tg(a-x) - \tg^2 a}{x^2} $$

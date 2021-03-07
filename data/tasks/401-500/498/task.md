@@ -1,0 +1,1 @@
+$$ \limf{x}{\frac{\pi}{4}} \frac{1-\ctg^3x}{2-\ctg x - \ctg^3 x} $$
