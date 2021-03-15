@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{1-\sqrt{\cos x}}{1-\cos(\sqrt{x})} $$

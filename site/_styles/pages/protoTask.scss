@@ -53,6 +53,21 @@
             cursor: help;
         }
     }
+
+    .body
+    {
+        max-height: 212px;
+        overflow: auto;
+        padding: $gap;
+
+        &::-webkit-scrollbar { width: 7px; }
+
+        &::-webkit-scrollbar-thumb
+        {
+            background: $c_Border;
+            &:hover { background-color: $c_BorderDark; }
+        }
+    }
 }
 
 .contentBlock.solution,

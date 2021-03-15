@@ -26,9 +26,10 @@ block content
                     .tab(title="Задачи и прото-задачи, опирающиеся на эту прото-задачу")
                         i.fas.fa-reply-all.fa-flip-horizontal
                         span Использование
-                .body.taskBlockContainer
-                    each dependent in pTask.dependents
-                        a.taskBlock(class=(dependent.isProto ? 'proto' : ''),href=dependent.link, title=dependent.title)= dependent.content
+                .body
+                    .taskBlockContainer
+                        each dependent in pTask.dependents
+                            a.taskBlock(class=(dependent.isProto ? 'proto' : ''),href=dependent.link, title=dependent.title)= dependent.content
 
         //- Book refs
         if (pTask.bookRefs.length !== 0)

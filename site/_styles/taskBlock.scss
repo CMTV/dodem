@@ -1,11 +1,14 @@
 .taskBlockContainer
 {
     display: grid;
-    grid-template-columns: repeat(auto-fill, 50px);
+    grid-template-columns: repeat(auto-fill, minmax(50px, max-content));
     gap: $gapSmall;
-
-    padding: $gap;
-
+    
+    @include layout('mini')
+    {
+        justify-content: center;
+    }
+    
     .taskBlock
     {
         @include flexCC;

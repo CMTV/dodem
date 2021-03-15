@@ -1,0 +1,1 @@
+$$ \limf{x}{+\infty} (\sin \sqrt{x+1} - \sin\sqrt{x}) $$

@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt{\cos x} - \sqrt[3]{\cos x}}{\sin^2 x} $$

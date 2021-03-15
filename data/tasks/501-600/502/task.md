@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{\sqrt{1-\cos x^2}}{1-\cos x} $$

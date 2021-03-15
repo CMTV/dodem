@@ -1,0 +1,1 @@
+$$ \limf{x}{0} \frac{1 - \cos x \sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2} $$
