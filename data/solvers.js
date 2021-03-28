@@ -35,6 +35,7 @@ const SOLVERS = {
     ruslan_oganov:
     {
         "name": "Руслан Оганов",
+        "slogan": "Решим всего Демидовича!",
         "forum": "https://bydef.ru/members/ruslan-oganov.24/"
     }
 }
