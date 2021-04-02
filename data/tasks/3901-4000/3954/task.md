@@ -1,0 +1,1 @@
+$$ \iint\limits_{x^2 + y^2 \leq a^2} \sqrt{x^2 + y^2} dxdy $$

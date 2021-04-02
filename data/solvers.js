@@ -7,6 +7,13 @@ const SOLVERS = {
         "forum": "https://bydef.ru/members/cmtv.1/"
     },
 
+    nnagibin:
+    {
+        "name": "Николай Нагибин",
+        "link": "https://vk.com/nagibin2509",
+        "slogan": "Тебе уже двадцать? На старт."
+    },
+
     nidjat:
     {
         "name": "Ниджат Джафаргулиев"
