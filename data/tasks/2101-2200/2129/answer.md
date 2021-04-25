@@ -1,0 +1,1 @@
+$$ 2\sqrt{x} - 3\sqrt[3]{x} + 6\sqrt[6]{x} - 6\ln(\sqrt[6]{x} + 1) + C $$

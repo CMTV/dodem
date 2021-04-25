@@ -1,0 +1,1 @@
+$$ \int \frac{dx}{\sqrt{x} + \sqrt[3]{x}} $$
