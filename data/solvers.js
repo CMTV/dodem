@@ -44,6 +44,13 @@ const SOLVERS = {
         "name": "Руслан Оганов",
         "slogan": "Решим всего Демидовича!",
         "forum": "https://bydef.ru/members/ruslan-oganov.24/"
+    },
+
+    zeppelin:
+    {
+        "name": "Дирижабль Кораблич",
+        "slogan": "Я дал клятву, что останусь в изгнании, пока эти земли не будут очищены от скверны!",
+        "forum": "https://bydef.ru/members/dirizhabl-korablich.32/"
     }
 }
 
