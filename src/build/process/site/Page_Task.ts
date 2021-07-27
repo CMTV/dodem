@@ -1,7 +1,7 @@
 import { Process } from "@cmtv/processes";
 
 import { DB } from "src/db/Db";
-import { Task } from "src/view/pages/task";
+import { Task } from "src/view/pages/Task";
 import { Task as DbTask } from "src/db/Entity";
 import { Task as PartialTask, Difficulty, GroupTask, TaskAttr } from "src/view/partials/task";
 import { LocationPart } from "src/view/partials/location";
