@@ -1,0 +1,1 @@
+$$ x = \phi(y) = \ln\left( y + \sqrt{y^2 + 1} \right) \quad (-\infty < y < +\infty) $$

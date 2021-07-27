@@ -1,0 +1,1 @@
+$$ f(0) = 1 \\ f(-x) = \frac{1+x}{1-x} \\ f(x+1) = \frac{-x}{2+x} \\ f(x) + 1 = \frac{2}{1+x} \\ f\left(\frac{1}{x}\right) = \frac{x-1}{x+1} \\ \frac{1}{f(x)} = \frac{1+x}{1-x} $$

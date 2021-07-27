@@ -1,0 +1,1 @@
+$$ \overline{\limn} x_n = e + 1 \\[5px] \underline{\limn} x_n = -e- \frac{\sqrt{2}}{2} $$

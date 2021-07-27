@@ -1,0 +1,1 @@
+$$ \def\arraystretch{1.5}\begin{array} {|c|c|c|c|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline \delta & 2.4\cdot 10^{-2} & 2.4\cdot 10^{-3} & 2.4\cdot 10^{-4} & 2.4\cdot 10^{-5} & \ldots \\ \hline  \end{array} $$

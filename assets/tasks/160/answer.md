@@ -1,0 +1,1 @@
+$$ -\frac{\pi}{6} + \pi k \leq x \leq \frac{\pi}{6} + \pi k, \quad k \in \mathbb{Z} $$

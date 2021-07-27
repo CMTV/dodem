@@ -1,0 +1,1 @@
+$$ \def\arraystretch{1.5}\begin{array} {|c|c|c|c|c|c|}\hline E & 10 & 100 & 1000 & 10 \ 000 & \ldots \\ \hline \delta & 3.16 \cdot 10^{-1} & 0.1 & 3.16\cdot 10^{-2} & 0.01 & \ldots \\ \hline  \end{array} $$
