@@ -1,33 +1,41 @@
-section.search
-    .contentArea.tabbed
+.searchContainer
+    .inputContainer
+        input(type="text", placeholder="Запрос или номер задачи...", autocomplete="off")
+        .resultSwitcher
+            .taskResults
+                i.fas.fa-hashtag
+            .bookResults
+                i.fas.fa-book
 
-        .searchBar
-            input(
-                inputmode="numeric",
-                pattern="[0-9]*",
-                placeholder="Введите номер задачи (от 1 до 4462)",
-                autofocus
-            )
-            
-            a.stateButton
-                i.fas
+    .resultPanes
 
-            .result
+        .pane.pane--loading
+            img(src="/site/graphics/loading.svg")
 
-                .resultPane.wtf
-                    i.far.fa-flushed
-                    .desc Введен некорректный запрос!<br>Можно вводить только числа от <b>1</b> до <b>4462</b>.<br>Буквы и другие символы не допускаются!
+        .pane.pane--error
+            i.far.fa-sad-cry
+            .message
+                .title Ничего не нашлось!
+                div Попробуйте переформулировать запрос.
+                div Вы можете <a href="https://bydef.ru" target="_blank">предложить</a> добавить решение/материал.
 
-                .resultPane.notSolved
-                    i.far.fa-tired
-                    .desc Эта задача еще не добавлена!<br><a target="_blank" href="https://bydef.ru/">Предложите</a> свое решение!<br>Можете финансово <a target="_blank" href="https://boosty.to/dodem">поддержать</a t> проект.
+        .pane.pane--task
+            .scrollContainer
+                .location
+                    i.fas.fa-map-signs
+                    span Свойства подпоследовательностей
+                .taskContent
+                    p Содержимое задачи.
 
-                .resultPane.success
-                    .loading
-                        img.spinner(src="/site/graphics/spinner.svg")
-                    
-                    .task.content
+            a.goto(href="")
+                span К решению
+                i.fas.fa-arrow-right
 
-                    a.goto
-                        .text К РЕШЕНИЮ
-                        i.fas.fa-arrow-right
+        .pane.pane--results
+            .bookResults
+                //- Результаты поиска по справочнику
+
+            .sep
+            .taskResults
+                .scrollContainer
+                    //- Результаты поиска по задачам

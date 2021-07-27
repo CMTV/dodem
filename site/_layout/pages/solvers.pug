@@ -1,0 +1,37 @@
+extends /templates/default
+
+include /includes/block
+
+block body
+    each solver in solvers
+        .solver(id=solver.id)
+            header
+                .typeCircle(class= solver.hasAvatar ? 'hasAvatar' : '')
+                    if (solver.hasAvatar)
+                        img(src=solver.avatar())
+                    else
+                        i.fas.fa-user
+                
+                .info
+                    .name= solver.name
+
+                    if (solver.slogan)
+                        .slogan= solver.slogan
+                
+                .actions
+                    if (solver.bio.content)
+                        +blockActionBtn(solver.bio)
+                    if (solver.link)
+                        +blockActionLink('solverLink', solver.link, 'fas fa-external-link-alt', 'Ссылка решателя', true)
+
+            if (solver.bio.content)
+                +blockActionPane(solver.bio)
+
+            .tasks
+                .total(title="Добавлено решений")
+                    i.fas.fa-check
+                    span= solver.tasks.length
+                .listContainer
+                    .list
+                        each task in solver.getOutTasks()
+                            a.task(href="/tasks/" + task.taskNum, title='К задаче ' + task.taskNum)= task.label

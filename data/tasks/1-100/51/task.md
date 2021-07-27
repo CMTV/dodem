@@ -1,5 +1,0 @@
----
-{ "plain": "Найти предел 1/n^2 + 2/n^2 + ... + (n-1)/n^2" }
----
-
-$$ \lim_{n\to\infty} \left( \frac{1}{n^2} + \frac{2}{n^2} + \ldots + \frac{n-1}{n^2} \right) $$

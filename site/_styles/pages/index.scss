@@ -1,237 +1,198 @@
-@import '../import';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
 
-header
+@use 'partials/block';
+@use 'partials/util';
+@use 'partials/hover';
+
+.progress
 {
-    margin-top: 25vh;
-}
+    @extend %block, %blockSection;
 
-nav
-{
-    margin-top: $gapBig;
-    margin-bottom: 90px;
+    display: flex;
+    flex-direction: column;
+    gap: size.$gap;
 
-    .contentArea
+    header
     {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: center;
+        line-height: 1;
 
-        padding-bottom: 70px;
-
-        opacity: .7;
-        transition: opacity $animSpeed;
-
-        &:hover
+        h2
         {
-            opacity: 1;
+            font-size: 120%;
+        }
 
-            .nav-item.donate
-            {
-                color: $c_Donate;
-                i { color: $c_Donate; }
-            }
+        .lastUpdate
+        {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+
+            font-size: 90%;
+            color: var(--c_text-shade-1);
+            @include hover.colorAccent(var(--c_text));
+        }
+
+        @include bp.max(mini)
+        {
+            flex-direction: column;
+            gap: size.$gapSmall;
         }
     }
 
-    .nav-item
+    .progressBar
     {
-        position: relative;
-
-        padding: 5px;
-        margin-right: 30px;
+        @include util.size(100%, 20px);
+        border-radius: size.$borderRadius;
 
         display: flex;
         align-items: center;
-        justify-content: center;
 
-        width: 40px;
-        height: 40px;
+        div
+        {
+            height: 20px;
+            border: 1px solid var(--c_brand-dark);
+            background: var(--c_brand);
+            opacity: .75;
 
+            background-image: linear-gradient(
+                -45deg,
+                rgba(255, 255, 255, 0.2) 25%,
+                transparent 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.2) 75%,
+                transparent 75%,
+                transparent
+            );
+
+            &:nth-of-type(odd) { cursor: help; }
+
+            &:nth-of-type(even)
+            {
+                height: 17px;
+                border-color: var(--c_border);
+                background: var(--c_bg-shade-2);
+            }
+
+            &:first-of-type
+            {
+                border-top-left-radius: size.$borderRadius;
+                border-bottom-left-radius: size.$borderRadius;
+            }
+
+            &:last-of-type
+            {
+                border-top-right-radius: size.$borderRadius;
+                border-bottom-right-radius: size.$borderRadius;
+            }
+        }
+    }
+}
+
+.theory,
+.practice,
+.open
+{
+    @extend %block;
+
+    %actionButton
+    {
+        @include util.flexCC;
+        gap: size.$gapSmall;
+
+        padding: size.$gapSmall size.$gap;
+        color: white;
         text-decoration: none;
+        background-color: var(--c_brand-dark);
+        border-radius: size.$borderRadius;
+
+        @include util.transition(background-color);
 
         &:hover
         {
-            > i { color: $c_Text; }
-            > .title { opacity: 1; }
-        }
-
-        &:last-child { margin-right: 0; }
-
-        > i
-        {
-            font-size: 27px;
-            color: $c_TextMuted;
-
-            transition: color $animSpeed;
-        }
-
-        > .title
-        {
-            pointer-events: none;
-
-            position: absolute;
-            
-            top: calc(100% + 5px);
-            left: 50%;
-            transform: translate(-50%);
-
-            white-space: nowrap;
-
-            opacity: 0;
-            transition: opacity $animSpeed;
-        }
-
-        @include layout(stretch)
-        {
-            width: 35px;
-            height: 35px;
-
-            margin-right: 20px;
-
-            > i { font-size: 23px; }
-            > .title { font-size: 90%; }
-        }
-
-        @include layout(mini)
-        {
-            width: 30px;
-            height: 30px;
-
-            margin-right: 15px;
-
-            > i { font-size: 20px; }
-            > .title { font-size: 87%; } 
-        }
-    }
-}
-
-.subNav
-{
-    position: relative;
-
-    &:hover
-    {
-        cursor: pointer;
-
-        .itemsContainer
-        {
-            pointer-events: initial;
-            opacity: 1;
-            transform: translateX(-50%) translateY(0px);
+            background-color: var(--c_brand);
         }
     }
 
-    .itemsContainer
+    header
     {
-        cursor: initial;
-        pointer-events: none;
-        opacity: 0;
+        @extend %blockSection;
 
-        position: absolute;
+        display: flex;
+        align-items: center;
+        gap: size.$gap;
 
-        padding-top: $gap;
-        top: 100%;
-        left: 50%;
-        transform: translateX(-50%) translateY(3px);
-
-        width: 150px;
-
-        transition: opacity $animSpeed, transform $animSpeed;
-
-        .arrow, .arrow::before
+        .figure
         {
-            width: 0;
-            height: 0;
-            border-style: solid;
-        }
+            @include util.size(50px);
+            @include util.flexCC;
 
-        .arrow
-        {
-            position: absolute;
-            
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
+            flex-shrink: 0;
 
-            border-width: 0 13px 15px 13px;
-            border-color: transparent transparent $c_Border transparent;
+            border-radius: 50%;
+            background: radial-gradient(var(--c_brand), var(--c_brand-dark));
 
-            &::before
+            i
             {
-                content: "";
-
-                position: absolute;
-                top: 2px;
-                left: -12px;
-
-                border-width: 0 12px 14px 12px;
-                border-color: transparent transparent white transparent;
+                color: white;
+                font-size: 20px;
             }
         }
+
+        .info
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            h2
+            {
+                font-size: 120%;
+                a { @extend %underline; }   
+            }
+            
+            span
+            {
+                font-size: 95%;
+                color: var(--c_text-shade-1);
+            }
+        }
+
+        > a
+        {
+            @extend %actionButton;
+            width: 140px;
+            @include bp.max(mini) { display: none; }
+        }
     }
 
-    .itemsContainer .items
+    .content
     {
+        @extend %blockSection;
+        border-top: 1px solid var(--c_border);
+
         display: flex;
         flex-direction: column;
+        gap: size.$gap;
 
-        width: 100%;
-        padding: $gapSmall/2 0;
+        @include bp.max(mini) { font-size: 95%; }
 
-        background: white;
-
-        border: 1px solid $c_Border;
-        border-radius: $borderRadius;
-
-        box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.15);
-
-        .sep
+        > .button
         {
-            width: calc(100% - 2 * #{$gapSmall});
-            margin: $gapSmall/2 $gapSmall;
-            border-bottom: 1px solid $c_Border;
-        }
+            display: none;
+            justify-content: center;
 
-        .outLinks
-        {
-            @include flexCC;
+            @include bp.max(mini) { display: flex; }
 
-            .subNav-item
+            a
             {
-                padding: $gapSmall;
-                font-size: 110%;
-                .title { display: none; }
+                @extend %actionButton;
+                width: 200px;
             }
         }
-    }
-}
-
-.subNav-item
-{
-    display: flex;
-    align-items: center;
-    padding: $gapSmall/2 $gapSmall;
-    
-    color: $c_TextMuted;
-    text-decoration: none;
-
-    transition: color $animSpeed;
-
-    &:hover
-    {
-        color: $c_Text;
-    }
-
-    i
-    {
-        width: 20px;
-        text-align: center;
-    }
-
-    .title
-    {
-        flex: 1;
-        margin-left: $gapSmall;
-        font-size: 93%;
     }
 }

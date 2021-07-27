@@ -1,0 +1,13 @@
+.example(class={ noSolution: !solution })
+    header(title= solution ? 'Показать решение' : null)
+        .title Пример
+
+        if solution
+            i.fas.fa-check.switcher
+
+    .task.content!= task
+
+    if solution
+        .solution
+            h3 Решение
+            .content!= solution

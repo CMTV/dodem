@@ -1,0 +1,7 @@
+@mixin difficultyColors
+{
+    &--easy         { color: #45a827cc; }
+    &--normal       { color: #9e8917cc; }
+    &--hard         { color: #da3131cc; }
+    &--impossible   { color: #da316ecc; }
+}

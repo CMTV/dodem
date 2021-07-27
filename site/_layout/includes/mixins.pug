@@ -1,67 +1,31 @@
-mixin pageTitle(icon, title)
-    .pageTitle
-        if icon != null
-            i(class=icon)
-        h2 !{title}
+mixin preloadFont(fontPath)
+    link(
+        rel="preload",
+        href=`/site/fonts/${fontPath}`,
+        as="font",
+        type="font/ttf",
+        crossorigin="anonymous"
+    )
 
-mixin bookRefs(refs, type)
-    -
-        let single = (refs.length === 1);
-        let article = (single ? 'статье' : 'статьях');
-        let text = '';
+mixin style(stylePath)
+    link(
+        rel="stylesheet"
+        href=`/site/styles/${stylePath}`
+    )
 
-        switch (type)
-        {
-            case 'tasks':
-                text = `Вся необходимая теория для решения этих задач понятно и подробно расписана в ${article}:`;
-                break;
-            case 'task':
-                text = `Вся необходимая теория для решения этой задачи понятно и подробно расписана в ${article}:`;
-                break;
-            case 'protoTask':
-                text = `Эта прото-задача является отрывком теории, которая понятно и подробно расписана в ${article}:`;
-                break;
-        }
+mixin script(scriptPath)
+    script(src=`/site/scripts/${scriptPath}`)
 
-    .contentBlock.bookRefs(class=`type--${type}`)
-        .body
-            .content
-                i.fas.fa-book
-                .inner
-                    p=text
-                    ul
-                        each ref in refs
-                            li
-                                a(href=`https://omath.ru/${ref.url}`, target="_blank")= ref.title
-mixin contentBlock
-    .contentBlock
-        block
+//-
+//-
+//-
 
-mixin avatar(src, link)
-    .avatarContainer(href=link)
-
-        if (link)
-            a(href=link)
-                img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
-
-        else
-            div
-                img.avatar(src=(src ? src : '/site/graphics/defaultAvatar.svg'))
-
-mixin ad
-    .darkMagicContainer
-        .noDarkMagic
-            .contentBlock
-                .body
-                    i.fas.fa-handshake
-                    .message <strong>Да, да... Реклама всех бесит!</strong>Все решения пишутся на добровольной основе. Нет рекламы, нет дохода — нет мотивации поддерживать сайт. Если решение вам помогло, помогите и нам — добавьте сайт в исключения блокировщика!
-        .yesDarkMagic
-            block
-
-mixin adBefore
-    +ad.
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Демидович] Перед решением --> <ins class="adsbygoogle" style="display:block; height: 100px" data-ad-client="ca-pub-8094912170389944" data-ad-slot="9148242804" data-ad-format="horizontal" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
-
-mixin adAfter
-    +ad.
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script> <!-- [Демидович] После решения --> <ins class="adsbygoogle" style="display:block; height: 100px" data-ad-client="ca-pub-8094912170389944" data-ad-slot="4277939948" data-ad-format="horizontal" data-full-width-responsive="true"></ins> <script> (adsbygoogle = window.adsbygoogle || []).push({}); </script>
+mixin bookPageLink(bookPage)
+    a.bookRef(href=bookPage.getLink())
+        .type(class='type--' + bookPage.type.className)
+            span= bookPage.type.letter
+        .info
+            .title= bookPage.title
+            
+            if (bookPage.desc)
+                .desc!= bookPage.desc

@@ -1,0 +1,31 @@
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/toc';
+
+main > h2 { @extend %chapter; }
+
+main > .paragraph
+{
+    @extend %paragraph;
+
+    > header > a::before { display: none; }
+
+    > header > .terms
+    {
+        display: flex;
+        align-items: center;
+        gap: size.$gapSmall;
+
+        @include toc.paragraphMeta('Страницы');
+
+        @include bp.max(mini)
+        {
+            gap: 5px;
+            i { display: none; }
+        }
+    }
+
+    .topic > .terms{ @extend %topicMeta; }
+}

@@ -1,0 +1,29 @@
+@use 'sass:string';
+
+@use 'defs/misc';
+
+@mixin flexCC
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin size($width, $height: $width)
+{
+    width: $width;
+    height: $height;
+}
+
+@mixin transition($properties...)
+{
+    $value: '';
+
+    @each $property in $properties
+    {
+        $value: $value + ' ' + $property + ',';
+    }
+
+    transition: all misc.$transitionSpeed ease;
+    transition-property: #{string.slice($value, 0, -2)};
+}

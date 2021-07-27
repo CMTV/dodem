@@ -1,0 +1,38 @@
+extends /templates/default
+
+include /includes/block
+
+mixin task(task)
+    .task
+        header
+            .typeCircle
+                i.fas.fa-hashtag
+            
+            .taskInfo
+                .title: a(href="/tasks/" + task.num) Задача #{task.num}
+                .attrs
+                    +blockAttr(task.difficulty)
+                    each attr in task.attrs
+                        +blockAttr(attr)
+            
+            .actions
+                +blockActionBtn(task.goto)
+        
+        .taskContent!= task.task
+
+mixin group(group)
+    .groupTop
+        .groupSepTop
+        .groupTask!= group.groupTask
+    
+    each task in group.tasks
+        +task(task)
+
+    .groupSepBottom
+
+block body
+    each contentItem in contentItems
+        if (contentItem.type === 'task')
+            +task(contentItem)
+        else
+            +group(contentItem)

@@ -1,0 +1,1 @@
+Смотрите прото-задачу <b:[П-ссылка](advanced/proto/sequence-lim/limit-point)>.

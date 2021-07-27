@@ -1,0 +1,46 @@
+mixin locationSep(isCurrent = false)
+    i.fas.fa-chevron-right.sep(class={ currentPointer: isCurrent })
+
+mixin locationPart(part, isFirst, isLast)
+    if (!isFirst)
+        +locationSep
+
+    a.part(href=part.link, title=part.title)
+        if (part.icon)
+            i(class=part.icon)
+        
+        if (!part.iconOnly || isLast)
+            span= (isLast ? part.title : part.getShortcut())
+
+.location
+    .collapsed
+        .parts
+            each part, i in location.parts.slice(0, -1)
+                +locationPart(part, i == 0, i == location.parts.length - 2)                        
+            
+            if (location.accentLast)
+                +locationSep(true)
+
+            .fadeOverlay
+
+        if (location.accentLast)
+            - let lastPart = location.getLast();
+            
+            h1
+                if (lastPart.icon)
+                    i(class=lastPart.icon)
+                
+                span=lastPart.title
+
+        .btnSwitcher(title="Развернуть")
+                i.fas.fa-sort-amount-down
+
+    .expanded
+        .parts
+            each part, i in location.parts
+                .part
+                    .sep └<span>─</span>
+                    a.title(href=part.link)= part.title
+
+        .btnSwitcher(title="Свернуть")
+            i.fas.fa-compress-alt

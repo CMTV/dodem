@@ -1,0 +1,1 @@
+$$ \lim_{n\to\infty} nq^n = 0, \ \text{если } |q| < 1 $$

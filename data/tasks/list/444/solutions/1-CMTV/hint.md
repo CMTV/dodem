@@ -1,0 +1,1 @@
+Воспользуйтесь прото-задачей <b:[П-ссылка](advanced/proto/common/power-diff)>.

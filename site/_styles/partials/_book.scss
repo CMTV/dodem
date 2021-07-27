@@ -1,0 +1,76 @@
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/content';
+@use 'partials/util';
+
+%bookRef
+{
+    display: flex;
+    align-items: center;
+    gap: size.$gap;
+    padding: size.$gap;
+    
+    text-decoration: none;
+
+    @include util.transition(background-color);
+
+    &:hover { background-color: var(--c_bg-shade-1); }
+
+    .type
+    {
+        flex-shrink: 0;
+
+        @include util.flexCC;
+        @include util.size(45px);
+
+        color: white;
+        font-size: 19px;
+        font-weight: bold;
+        border-radius: 50%;
+
+        @each $type in definition, theorem, method, other
+        {
+            &.type--#{$type} { @include block.blockTypeGradient($type); }
+        }
+
+        &.type--other span
+        {
+            position: relative;
+            top: -2px;
+            left: -1px;
+        }
+    }
+
+    .info
+    {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .title { color: var(--c_text); }
+
+        .desc
+        {
+            color: var(--c_text-shade-1);
+            font-size: 90%;
+        }
+    }
+
+    @include bp.max(mini)
+    {
+        .type
+        {
+            font-size: 16px;
+            @include util.size(40px);
+        }
+
+        .info .desc { display: none; }
+    }
+
+    &:not(:last-of-type)
+    {
+        border-bottom: 1px solid var(--c_border);
+    }
+}

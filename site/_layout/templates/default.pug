@@ -1,32 +1,142 @@
+include /includes/mixins
+
+mixin altMenuItem(name, link, icon, label, hint)
+    a.listItem(class=name, href=link, title=hint)
+        i(class=icon)
+        span=label
+
 doctype html
-html(lang="ru")
-
+include /includes/art.html
+html
     head
-        include /includes/head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes")
 
-    body(class=type)
-        .bgContainer
-            .bgSlider
+        title= seo.getFullTitle()
+        meta(name="description", content=seo.desc)
 
-        .siteContainer
+        link(rel="canonical" href=canonical())
 
-            .progressContainer(title=`Решено ${progress.solved} из 4462 задач (${progress.percent}%)`)
-                .progress
-                    each fraction in progress.fractions
-                        div(style=`flex: ${Math.abs(fraction)} 0;`)
+        meta(name="keywords", content=seo.getKeywords().join(', '))
 
-            .mainContent
+        if (seo.img)
+            meta(name="og:image", content=seo.img)
 
-                include /includes/header
+        meta(name="generator", content="DODEM Static Site Generator")
+        meta(name="build-time", content=config.buildTime)
+
+        //- Параметры темы
+        meta(name="color-scheme", content="")
+        meta(name="theme-color", content="")
+
+        //- Иконки сайта
+        link(rel="icon", href="/site/graphics/favicon/favicon.svg")
+        link(rel="icon", type="image/png", href="/site/graphics/favicon/favicon.png")
+
+        //- Font Awesome
+        link(href="/site/vendor/font-awesome/css/all.min.css", rel="stylesheet")
+
+        //- KaTeX
+        link(href="/site/vendor/katex/katex.min.css", rel="stylesheet")
+
+        //- Базовая таблица стилей
+        link(href="/site/styles/global.css", rel="stylesheet")
+
+        block vendorCSS
+        block vendor
+
+        if (hasStyle)
+            link(href=`/site/styles/${pageName}.css`, rel="stylesheet")
+
+        block styles
+        
+        block head
+
+        //- Верификация Yandex
+        meta(name="yandex-verification", content="7ff246512ec9d0f4")
+
+        //- Yandex счетчик
+        include /includes/vendor/yandex.html
+
+        //- Google
+        include /includes/vendor/google.html
+
+    body(class=bodyClass())
+        include /includes/theme
+
+        .bg
+            .formulas
+            .fog
+
+        .site
+            header
+                .artLine
+                .headerContent
+                    a.logo(href="/")
+                        .logo-figure
+                            include /includes/logo.svg
+                        .logo-title Демидович
+
+                    nav
+                        a(href="/tasks").nav-item.tasks
+                            i.fas.fa-hashtag
+                            span Задачи
+
+                        a(href="/book").nav-item.book
+                            i.fas.fa-book
+                            span Справочник
+
+                        a.nav-item.search
+                            i.fas.fa-search
+                            span Поиск
+
+                        .nav-item.altMenuContainer
+                            i.fas.fa-bars
+                            span Меню
+
+                            .altMenu
+                                .list
+                                    +altMenuItem("donate", "/donaters", "fas fa-hand-holding-usd", "Поддержать")
+                                    +altMenuItem("history", "/history", "fas fa-history", "Хронология")
+                                    +altMenuItem("solvers", "/solvers", "fas fa-users", "Решатели")
+                                    +altMenuItem("problems", "/problems", "fas fa-bug", "Проблемы")
+
+                                .sep
+                                
+                                .iconList
+                                    a.themeSwitcher(onclick="toggleTheme()", title="Переключение цветовой схемы сайта")
+                                        i.fas.fa-sun.light
+                                        i.fas.fa-moon.dark
+
+                                    a(href="https://bydef.ru", title="Форум", target="_blank")
+                                        i.fas.fa-comments
+
+                                    a(href="https://github.com/CMTV/dodem", title="Исходный код сайта", target="_blank")
+                                        i.fas.fa-code
+
+                                //- Предотвращение случайного клика при вызове меню на сенсорных экранах
+                                .clickPreventer(tabindex="0")
+                
                 include /includes/search
 
-                block content
+
+            main
+                if (location.hasLocation())
+                    include /includes/location
+
+                block body
 
             footer
-                .contentArea
-                    .left
-                        a(href="http://radkopeter.ru/", title="Главный Анти-Демидович") Петр Радько
-                    .center
-                        a(href="/", title="На главную") Д
-                    .right
-                        a(href="https://vk.com/nagibin2509", title="Наставник главного Анти-Демидовича") Николай Нагибин
+                .quote
+                    blockquote Математика для ученого - то же самое, что скальпель для анатома.
+                    a(target="_blank").by Нильс Абель
+
+        block vendorJS
+
+        //- Базовые скрипты сайта
+        script(src="/site/scripts/global.js")
+
+        if (hasScript)
+            script(src=`/site/scripts/${pageName}.js`)
+
+        block scripts

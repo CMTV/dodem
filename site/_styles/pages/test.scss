@@ -1,0 +1,8 @@
+@use 'partials/block';
+@use 'partials/content';
+
+.contentContainer
+{
+    @extend %block;
+    > .content { @extend %blockSection, %CONTENT; }
+}

@@ -1,0 +1,1 @@
+$$ f(x) = \arcsin(\sin x) $$

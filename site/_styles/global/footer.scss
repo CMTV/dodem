@@ -1,0 +1,52 @@
+@use 'defs/breakpoint' as bp;
+@use 'defs/size';
+
+@use 'partials/block';
+@use 'partials/hover';
+
+.site > footer
+{
+    @extend %blockDeco;
+
+    border: none;
+    border-top: 1px solid var(--c_border);
+    border-radius: 0;
+
+    .quote
+    {
+        //* { line-height: 1; }
+
+        @extend %blockLogic;
+        padding: size.$gap 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 7px;
+
+        @include bp.max(mini) { padding: size.$gap; }
+
+        blockquote
+        {
+            color: var(--c_text-shade-1);
+
+            @include bp.max(mini) { font-size: 90%; }
+        }
+
+        .by
+        {
+            color: var(--c_text-shade-2);
+            font-size: 90%;
+
+            @include hover.colorAccent(var(--c_text-shade-1));
+
+            &::before
+            {
+                content: '—';
+                color: var(--c_text-shade-2);
+                margin-right: size.$gapSmall;
+            }
+        }
+    }
+}

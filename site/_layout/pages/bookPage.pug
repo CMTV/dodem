@@ -1,0 +1,52 @@
+extends /templates/default
+
+include /includes/mixins
+
+block body
+    
+    .contentBlock
+        header
+            .typeCircle(class=`typeCircle--${info.type.className}`)
+                span= info.type.letter
+
+            .info
+                h1.title= info.title
+
+                if (info.desc)
+                    .desc!= info.desc
+        
+        .content!= content
+
+    if (tasks.length !== 0)
+        .taskUsage
+            header
+                i.fas.fa-sitemap.fa-fw.fa-rotate-90
+                span Зависимые задачи
+            .taskList
+                .scrollContainer
+                    each taskNum in tasks
+                        a.task(href="/tasks/" + taskNum)= taskNum
+    
+    if (dependencies.length != 0 || dependents.length != 0)
+        .bookRefs
+            header
+                i.fas.fa-book.fa-fw
+                span Связи в справке
+
+            if (dependencies.length != 0)
+                .dependencies
+                    i.fas.fa-level-up-alt.fa-fw
+                    span Зависит от
+                
+                .list
+                    each dependency in dependencies
+                        +bookPageLink(dependency)
+            
+            if (dependents.length != 0)
+                .dependents
+                    i.fas.fa-level-down-alt.fa-fw
+                    span Используется в
+                
+                .list
+                    each dependent in dependents
+                        +bookPageLink(dependent)

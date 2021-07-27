@@ -1,0 +1,82 @@
+@use 'sass:color';
+@use 'sass:map';
+
+@mixin themeColorVar($name, $light, $dark)
+{
+    $property: '--c_#{$name}';
+
+    body:not(.theme--dark) &    { #{$property}: $light; }
+    body.theme--dark &          { #{$property}: $dark; }
+}
+
+@mixin themeLight { body:not(.theme--dark) & { @content; } }
+@mixin themeDark { body.theme--dark & { @content; } }
+
+//
+//
+//
+
+@function themeColor($light, $dark)
+{
+    @return (
+        light: $light,
+        dark: $dark
+    );
+}
+
+@function paletteColor($colorName, $theme)
+{
+    @return map.get(map.get($palette, $colorName), $theme);
+}
+
+//
+// Цветовая палитра сайта
+//
+
+$palette: (
+    brand:              #009FF4,
+    brand-dark:         color.scale(#009FF4, $lightness: -25%),
+    brand-light:        color.scale(#009FF4, $lightness:  25%),
+
+    bg-body:            themeColor(#EDEFF0, #1E1E1E),
+    bg:                 themeColor(#ffffff, #252526),
+    bg-shade-1:         themeColor(#F7F7F7, #2D2D2D),
+    bg-shade-2:         themeColor(#F0F0F0, #373737),
+    bg-shade-3:         themeColor(#E4E4E4, #3A3A3C),
+    bg-shade-4:         themeColor(#CDCDCD, #4D4D50),
+    bg-brand:           themeColor(#D2EEFF, #234B64),
+    bg-brand-shade:     themeColor(#AFE0FF, #2A5A78),
+
+    text:               themeColor(#282828, #C3C3C3),
+    text-shade-1:       themeColor(#757575, #919191),
+    text-shade-2:       themeColor(#B4B4B4, #555555),
+    text-brand:         #0082C8,
+    text-brand-shade:   themeColor(#0072AF, #0092E1),
+
+    border:             themeColor(#D4D6D7, #373737),
+
+    shadow:             themeColor(rgba(#000, .05), rgba(#fff, .035)),
+    shadow-pop:         themeColor(rgba(0,0,0,.15), rgba(0,0,0,.4)),
+
+    selection:          themeColor(#acd6e4, #00445A),
+
+    // Цвета типов
+
+    type-task:          themeColor(#1672B9, #1c91eb),
+    type-definition:    themeColor(#118811, #14a314),
+    type-theorem:       themeColor(#c3295e, #fd4385),
+    type-other:         themeColor(#B29400, #B29400)
+);
+
+//
+// Цвета типов блоков
+//
+
+$blockTypeColors: (
+    task:       #1672B9,
+    definition: green,
+    theorem:    brown,
+    method:     #9700B2,
+    other:      #B29400,
+    solution:   #828282,
+)

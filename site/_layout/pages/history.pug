@@ -1,0 +1,38 @@
+extends /templates/default
+
+include /includes/block
+
+block body
+    each historyBlock in historyBlocks
+        .historyBlock(id=historyBlock.date)
+            header
+                .info
+                    .title= historyBlock.getTitleDate().slice(0, -3)
+
+                    if (historyBlock.hasStats())
+                        .stats
+                            if (historyBlock.taskData.hasAny())
+                                .task
+                                    i.fas.fa-hashtag
+                                    span Задачи:
+                                    if (historyBlock.taskData.add)
+                                        span.add= historyBlock.taskData.add
+                                    if (historyBlock.taskData.edit)
+                                        span.edit= historyBlock.taskData.edit
+
+                            if (historyBlock.bookData.hasAny())
+                                .book
+                                    i.fas.fa-book
+                                    span Справка:
+                                    if (historyBlock.bookData.add)
+                                        span.add= historyBlock.bookData.add
+                                    if (historyBlock.bookData.edit)
+                                        span.edit= historyBlock.bookData.edit
+
+                .actions
+                    - let btn = { name: 'content', hint: 'Описание обновления', icon: 'fas fa-eye' }
+                    +blockActionBtn(btn)
+            
+            .content(data-pane="content")
+                .pane.pane--loading
+                    img(src="/site/graphics/loading.svg")

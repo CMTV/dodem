@@ -1,1 +1,0 @@
-Воспользуйтесь прото-задачей <p:[sequences/limits/exp-log-transition]>.

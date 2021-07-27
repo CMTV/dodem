@@ -1,0 +1,1 @@
+Воспользуйтесь прото-задачей <b:[П-ссылка](advanced/proto/sequence-lim/exp-log-transition)>.

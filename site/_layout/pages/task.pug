@@ -1,0 +1,108 @@
+extends /templates/default
+
+include /includes/block
+include /includes/mixins
+
+block body
+
+    //-
+    //- Блок задачи
+    //-
+
+    .task
+        header
+            .typeCircle
+                i.fas.fa-hashtag
+            
+            .taskInfo
+                .title Задача #{task.num}
+                .attrs
+                    +blockAttr(task.difficulty)
+                    if task.attrs
+                        each attr in task.attrs
+                            +blockAttr(attr)
+            
+            .actions
+                each action in ['hint', 'answer', 'note']
+                    if (task[action].content)
+                        +blockActionBtn(task[action])
+
+        if (task.groupTask)
+            - rStart = task.groupTask.range.start;
+            - rEnd = task.groupTask.range.end;
+            
+            .groupTask(title=`Общее условие для задач с ${rStart} по ${rEnd}`)!= task.groupTask.task
+
+        .taskContent!= task.task
+         
+        each action in ['hint', 'answer', 'note']
+            if (task[action].content)
+                +blockActionPane(task[action])
+
+    //-
+    //- Решения
+    //-
+
+    each solution, i in solutions
+        .solution
+            header
+                if (solution.solver.hasAvatar)
+                    img.typeCircle(src=solution.solver.avatar())
+                else
+                    .typeCircle
+                        i.fas.fa-user
+
+                .solutionInfo
+                    .main
+                        .order(title="Номер решения")= i+1
+                        a.solver(href="/solvers")= solution.solver.name
+
+                    if (solution.attrs)
+                        .attrs
+                            each attr in solution.attrs
+                                +blockAttr(attr)
+
+                .actions
+                    each action in ['hint', 'solution']
+                        if (solution[action].content)
+                            +blockActionBtn(solution[action])
+                    
+                    if (solution.hasDeps())
+                        +blockActionBtn({ name: 'dependencies', hint: 'Зависимости', icon: 'fas fa-reply-all fa-flip-horizontal' })
+
+            each action in ['hint', 'solution']
+                if (solution[action].content)
+                    +blockActionPane(solution[action])
+
+            if (solution.hasDeps())
+                div(class="dependencies", data-pane="dependencies")
+                    .title
+                        i.fas.fa-reply-all.fa-flip-horizontal.fa-fw
+                        span Зависимости
+                        
+                    .list
+                        each taskDep in solution.taskDeps
+                            a.task(href="/tasks/" + taskDep)
+                                .type
+                                    i.fas.fa-hashtag
+                                .label Задача #{taskDep}
+
+                        each helpDep in solution.helpDeps
+                            +bookPageLink(helpDep)
+
+    //-
+    //- Навигация по задачам
+    //-
+
+    .taskNav
+        if (nav.previous)
+            a.previous(href="/tasks/" + nav.previous, title="Предыдущая задача")
+                i.fas.fa-arrow-left
+                span= nav.previous
+        else
+            div
+        
+        if (nav.next)
+            a.next(href="/tasks/" + nav.next, title="Следующая задача")
+                span= nav.next
+                i.fas.fa-arrow-right

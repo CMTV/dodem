@@ -1,0 +1,17 @@
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/hover';
+@use 'partials/util';
+@use 'partials/toc';
+
+main > h2 { @extend %chapter; }
+
+main > .paragraph
+{
+    @extend %paragraph;
+
+    > header > .taskRange { @include toc.paragraphMeta('Задачи'); }
+    .topic > .taskRange { @extend %topicMeta; }
+}

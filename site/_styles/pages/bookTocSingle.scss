@@ -1,0 +1,84 @@
+@use 'sass:map';
+
+@use 'defs/color';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/hover';
+@use 'partials/util';
+
+main > .term
+{
+    @extend %block, %blockHeader, %blockActions;
+
+    @include bp.max(mini)
+    {
+        flex-direction: row;
+    }
+
+    .typeCircle
+    {
+        flex-shrink: 0;
+        color: white;
+        font-size: 20px;
+        @include util.size(50px);
+
+        @each $type in 'definition', 'theorem', 'method', 'other'
+        {
+            &--#{$type} { @include block.blockTypeContainer($type); }
+        }
+
+        &--other span
+        {
+            position: relative;
+            top: -2px;
+            left: -1px;
+        }
+
+        @include bp.max(mini) { display: none; }
+    }
+
+    .info
+    {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .title, .desc { line-height: initial; }
+
+        .title
+        {
+            display: flex;
+            gap: size.$gapSmall;
+            font-size: 110%;
+
+            @include bp.max(mini) { font-size: 100%; }
+
+            .typeLetter
+            {
+                display: none;
+                @include bp.max(mini) { display: block; }
+
+                @each $type in 'definition', 'theorem', 'method', 'other'
+                {
+                    &.#{$type} { color: map.get(color.$blockTypeColors, $type); }
+                }
+            }
+
+            a
+            {
+                @extend %underline;
+            }
+        }
+
+        .desc
+        {
+            color: var(--c_text-shade-1);
+            font-size: 95%;
+
+            @include bp.max(mini) { font-size: 88%; }
+        }
+    }
+}

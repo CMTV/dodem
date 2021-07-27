@@ -1,5 +1,5 @@
 # Vendor
-site/libs/* linguist-vendored
+site/vendor/* linguist-vendored
 site/fonts/* linguist-vendored
 
 # Doc data

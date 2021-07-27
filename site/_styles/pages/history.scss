@@ -1,78 +1,100 @@
-@import '../import';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
 
-.historyList
+@use 'partials/block';
+@use 'partials/util';
+@use 'partials/content';
+
+main > .historyBlock
 {
-    .anchor
+    @extend %block;
+
+    > header
     {
-        &:target + .historyItem
-        {
-            @include cbBorderColor($c_BrandDark);
-        }
-    }
+        @extend %blockHeader, %blockActions;
 
-    .historyItem
-    {
-        .head .tab a
+        @include bp.max(mini)
         {
-            color: $c_BrandDark;
-            font-family: monospace;
-            font-weight: bold;
-            font-size: 15px;
-            text-decoration: none;
+            flex-direction: row;
         }
 
-        &:not(:last-of-type)
+        > .info
         {
-            margin-bottom: $gapBig * 1.5;
-        }
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: size.$gapSmall;
 
-        .diff
-        {
-            border-top: 1px solid $c_BorderLigth;
-            padding: $gap;
-
-            .add, .edit
+            .title
             {
-                display: flex;
-                align-items: center;
+                font-size: 115%;
+                font-weight: bold;
 
-                i
+                .num
                 {
-                    width: 20px;
-                    margin-right: $gapSmall;
-
-                    cursor: help;
-                    
-                    font-size: 18px;
-                    color: $c_TextMuted;
-                }
-
-                div
-                {
-                    flex: 1;
-                    flex-wrap: wrap;
-
-                    a
-                    {
-                        color: $c_TextMuted;
-                        font-size: 15px;
-                        text-decoration: none;
-                        transition: color $animSpeed;
-
-                        &:hover { color: $c_Text; }
-
-                        &::after
-                        {
-                            content: ", ";
-                            color: $c_TextMuted;
-                        }
-
-                        &:last-of-type::after { content: ""; }
-                    }
+                    margin-right: size.$gapSmall;
+                    color: var(--c_text-shade-1);
                 }
             }
 
-            .add + .edit { margin-top: $gapSmall; }
+            .stats
+            {
+                display: flex;
+                align-items: center;
+                gap: size.$gap;
+
+                color: var(--c_text-shade-1);
+
+                .task, .book
+                {
+                    display: flex;
+                    gap: size.$gapSmall;
+
+                    i
+                    {
+                        display: none;
+                        @include bp.max(mini) { display: block; }
+                    }
+
+                    span:first-of-type { @include bp.max(mini) { display: none; } }
+
+                    .add    { color: #3BB412; }
+                    .edit   { color: #BE8E13; }
+
+                    .add + .edit { margin-left: 0; }
+
+                    .add::before, .edit::before { margin-right: 1px; }
+                    .add::before     { content: '+'; }
+                    .edit::before    { content: '±'; }
+                }
+            }
         }
     }
+
+    > .content
+    {
+        @extend %blockSection;
+        border-top: 1px solid var(--c_border);
+
+        &:not(._active) { display: none; }
+
+        .pane
+        {
+            &--loading
+            {
+                @include util.flexCC;
+
+                img
+                {
+                    display: block;
+                    width: 200px;
+                    filter: brightness(.5);
+
+                    @include bp.max(mini) { width: 150px; }
+                }
+            }
+        }
+    }
+
+    &._itemLoaded > .content { @extend %CONTENT; }
 }

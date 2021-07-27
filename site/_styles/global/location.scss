@@ -1,0 +1,187 @@
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+@use 'partials/block';
+@use 'partials/hover';
+
+.location
+{
+    &._expanded         { .collapsed { display: none; } }
+    &:not(._expanded)   { .expanded { display: none; } }
+}
+
+.location
+{
+    $locColor: var(--c_text-shade-1);
+    $locFontSize: 90%;
+
+    //
+    // Кнопка переключатель
+    //
+
+    .btnSwitcher
+    {
+        position: absolute;
+        top: -1px;
+        right: 0;
+        padding: size.$gapSmall;
+
+        color: $locColor;
+        @include hover.colorAccent(var(--c_text));
+
+        i { font-size: 120%; }
+    }
+
+    //
+    // Свернутая локация (по умолчанию)
+    //
+
+    .collapsed
+    {
+        @extend %block;
+
+        position: relative;
+
+        .parts
+        {
+            @extend %blockSectionCondensed;
+
+            position: relative;
+    
+            overflow: hidden;
+
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            gap: size.$gapSmall;
+
+            font-size: $locFontSize;
+    
+            .part
+            {
+                color: inherit;
+                display: flex;
+                align-items: center;
+                flex-shrink: 0;
+                gap: 7px;
+    
+                color: $locColor;
+                &[href] { @include hover.colorAccent(var(--c_text)); }
+
+                i { font-size: 110%; }
+            }
+            
+            .sep
+            {
+                position: relative;
+                top: 1px;
+                color: var(--c_text-shade-2);
+                font-size: 85%;
+
+                &.currentPointer
+                {
+                    transform: rotateZ(90deg);
+                }
+            }
+    
+            @include bp.max(mini)
+            {
+                .sep:not(.currentPointer)   { display: none; }
+                .part:not(:last-of-type)    { display: none; }
+            }
+
+            .fadeOverlay
+            {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                right: 0;
+                width: 50px;
+                background: linear-gradient(to right, transparent, var(--c_bg) 30%);
+                border-top-right-radius: size.$borderRadius;
+                border-bottom-right-radius: size.$borderRadius;
+            }
+        }
+
+        .parts + h1
+        {
+            border-top: 1px solid var(--c_border);
+        }
+
+        h1
+        {
+            @extend %blockSectionCondensed;
+
+            font-size: 125%;
+            font-weight: bold;
+
+            display: flex;
+            align-items: center;
+            gap: size.$gapSmall;
+
+            @include bp.max(mini)
+            {
+                font-size: 115%;
+            }
+        }
+
+        .btnSwitcher i { transform: scaleX(-1); }
+    }
+
+    //
+    // Развернутая локация
+    //
+
+    .expanded
+    {
+        @extend %block;
+
+        position: relative;
+
+        .parts
+        {
+            @extend %blockSection;
+
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-size: $locFontSize;
+
+            .part
+            {
+                display: flex;
+                gap: 3px;
+                align-items: flex-start;
+
+                // Отступы
+
+                --marginLeft: 25px;
+                @include bp.max(mini) { --marginLeft: 15px; }
+
+                @for $i from 2 through 10
+                {
+                    &:nth-of-type(#{$i}) { margin-left: max(0px, (#{$i} - 2) * var(--marginLeft)); }
+                }
+
+                //
+
+                &:last-of-type { font-weight: bold; }
+
+                .title
+                {
+                    color: $locColor;
+                    &[href] { @include hover.colorAccent(var(--c_text)); }
+                }
+
+                .sep
+                {
+                    position: relative;
+                    left: -4px;
+                    color: var(--c_text-shade-2);
+
+                    @include bp.max(mini) { span { display: none; } }
+                }
+                &:first-of-type { .sep { display: none; } }
+            }
+        }
+    }
+}

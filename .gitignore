@@ -1,5 +1,8 @@
-/_engine
-/out
-
 # Node JS
 /node_modules
+
+# Готовый сайт
+/dist
+
+# Подключаемые библиотеки
+/site/vendor

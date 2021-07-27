@@ -1,0 +1,254 @@
+@use 'sass:color' as sassColor;
+@use 'sass:map';
+
+@use 'defs/color';
+@use 'defs/size';
+
+@use 'partials/util';
+
+
+@mixin componentBlock($bgColor, $borderColor)
+{
+    border: 1px solid $borderColor;
+    border-radius: size.$borderRadius;
+
+    header
+    {
+        margin: 3px;
+        padding: size.$gapSmall;
+        background: $bgColor;
+        border-radius: size.$borderRadius;
+    }
+}
+
+@mixin componentBlockContent
+{
+    padding: size.$gapSmall size.$gapSmall + 3px;
+    padding-top: size.$gapSmall - 3px;
+}
+
+@mixin defineBlockColorVars($typeName)
+{
+    
+    @include color.themeColorVar(
+        '_bg',
+        sassColor.change(color.paletteColor('type-' + $typeName, 'light'), $alpha: .175),
+        sassColor.change(color.paletteColor('type-' + $typeName, 'dark'),  $alpha: .175),
+    );
+
+    @include color.themeColorVar(
+        '_border',
+        sassColor.change(color.paletteColor('type-' + $typeName, 'light'), $alpha: .4),
+        sassColor.change(color.paletteColor('type-' + $typeName, 'dark'),  $alpha: .25),
+    );
+}
+
+//
+//
+//
+
+@mixin spoiler
+{
+    .spoiler
+    {
+        @include componentBlock(var(--c_bg-shade-2), var(--c_border));
+        
+        &:not(._opened)
+        {
+            header .switcher .off   { display: none; }
+            > .content { display: none; }
+        }
+
+        &._opened header .switcher .on { display: none;}
+
+        header
+        {
+            display: flex;
+            align-items: center;       
+
+            .katex-display { padding: 1px 0; }
+
+            &:hover
+            {
+                cursor: pointer;
+                .switcher { color: var(--c_text); }
+            }
+
+            .title { flex: 1; }
+
+            .switcher
+            {
+                color: var(--c_text-shade-1);
+                @include util.transition(color);
+            }
+        }
+
+        > .content
+        {
+            @include componentBlockContent;
+            font-size: 93%;
+        }
+    }
+}
+
+@mixin taskLink
+{
+    a.taskLink
+    {
+        color: var(--c_type-task);
+        white-space: nowrap;
+
+        i
+        {
+            font-size: 93%;
+            margin-right: 3px;
+        }
+    }
+}
+
+@mixin helpLink
+{
+    a.helpLink
+    {
+        @each $type in 'definition', 'theorem', 'method', 'other'
+        {
+            &--#{$type} { color: var(--c_type-#{$type}); }
+        }
+    }
+}
+
+@mixin definition
+{
+    .definition
+    {
+        @include defineBlockColorVars('definition');
+        @include componentBlock(var(--c__bg), var(--c__border));
+
+        > .content
+        {
+            @include componentBlockContent;
+
+            .defTerm
+            {
+                color: var(--c_type-definition);
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+@mixin theorem
+{
+    .theorem
+    {
+        @include defineBlockColorVars('theorem');
+        @include componentBlock(var(--c__bg), var(--c__border));
+
+        &._opened header .switcher { color: var(--c_type-theorem) !important; }
+        &:not(._opened)
+        {
+            > .proof { display: none; }
+        }
+
+        &:not(.noProof) header:hover { cursor: pointer; }
+
+        header
+        {
+            display: flex;
+            align-items: center;
+
+            .title { flex: 1; }
+
+            &:hover .switcher { color: var(--c_text); }
+
+            .title { flex: 1; }
+
+            .switcher
+            {
+                color: var(--c_text-shade-1);
+                @include util.transition(color);
+            }
+        }
+
+        > .content
+        {
+            @include componentBlockContent;
+        }
+
+        > .proof
+        {
+            h3
+            {
+                padding: 0 size.$gapSmall + 3px;
+                padding-bottom: 5px;
+
+                color: var(--c_text-shade-1);
+                font-size: 95%;
+                font-style: italic;
+                font-weight: normal;
+                border-bottom: 1px solid var(--c__border);
+            }
+
+            > .content
+            {
+                @include componentBlockContent;
+                padding-top: size.$gapSmall;
+            }
+        }
+    }
+}
+
+@mixin example
+{
+    .example
+    {
+        @include componentBlock(var(--c_bg-shade-2), var(--c_border));
+
+        &:not(._opened) > .solution { display: none; }
+        &:not(.noSolution) header:hover { cursor: pointer; }
+
+        header
+        {
+            display: flex;
+            align-items: center;
+
+            .title { flex: 1; }
+
+            &:hover .switcher { color: var(--c_text); }
+
+            .title { flex: 1; }
+
+            .switcher
+            {
+                color: var(--c_text-shade-1);
+                @include util.transition(color);
+            }
+        }
+
+        > .content
+        {
+            @include componentBlockContent;
+        }
+
+        > .solution
+        {
+            h3
+            {
+                padding: 0 size.$gapSmall + 3px;
+                padding-bottom: 5px;
+
+                color: var(--c_text-shade-1);
+                font-size: 95%;
+                font-style: italic;
+                font-weight: normal;
+                border-bottom: 1px solid var(--c_border);
+            }
+
+            > .content
+            {
+                @include componentBlockContent;
+                padding-top: size.$gapSmall;
+            }
+        }
+    }
+}

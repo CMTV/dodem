@@ -1,0 +1,60 @@
+{
+    "advanced/proto/common":
+    [
+        "abs",
+        "exp-monotonic",
+        "irr-inequality",
+        "power-diff",
+        "simple-abs",
+        "sin-arg-tg-inequality",
+        "trig-period"
+    ],
+
+    "advanced/proto/sequence":
+    [
+        "bounds-operations"
+    ],
+
+    "advanced/proto/sequence-lim":
+    [
+        "bm-bb",
+        "elementary",
+        "exp-log-transition",
+        "exp-ratio",
+        "expand",
+        "geometric-progression",
+        "harmonic-series",
+        "independency",
+        "limit-point-bounds",
+        "limit-point-def",
+        "limit-point",
+        "limits-inequality",
+        "log-ratio",
+        "max-limit-points",
+        "max-min-limit-points",
+        "second-wonderful"
+    ],
+
+    "advanced/proto/f-lim":
+    [
+        "bm-bb-operations",
+        "bm-bb",
+        "composition",
+        "elementary",
+        "f-power",
+        "finite-props",
+        "first-wonderful",
+        "infty-relations",
+        "limit"
+    ],
+
+    "advanced/proto/f-continuity":
+    [
+        "arifm-props",
+        "complex-exp",
+        "composition",
+        "exp",
+        "point-continuity",
+        "trigonom"
+    ]
+}

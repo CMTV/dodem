@@ -1,0 +1,28 @@
+mixin blockActionBtn(bA)
+    a.action(
+        class=bA.name,
+        title=bA.hint,
+        href=bA.link
+    ): i.fa-fw(class=bA.icon)
+
+mixin blockActionLink(name, link, icon, hint, newTab)
+    a.action(
+        class=name,
+        title=hint,
+        href=link,
+        target= newTab ? "_blank" : null
+    ): i(class=icon)
+
+mixin blockActionPane(bA)
+    div(class=bA.name, data-pane=bA.name)
+        .title
+            if (bA.icon)
+                i.fa-fw(class=bA.icon)
+            span=bA.hint
+            
+        .content!=bA.content
+
+mixin blockAttr(attr)
+    .attr(class=attr.getCSSClass())
+        i(class=attr.icon)
+        span=attr.name.label

@@ -1,1 +1,0 @@
-См. прото-задачу <p:[f/limits/continuity/trigonom]>.

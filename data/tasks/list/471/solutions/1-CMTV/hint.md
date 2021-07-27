@@ -1,0 +1,1 @@
+Воспользуйтесь первым замечательным пределом (<b:[П-ссылка](advanced/proto/f-lim/first-wonderful)>), а также теоремой о пределе сложной функции (<b:[П-ссылка](advanced/proto/f-lim/composition)>).

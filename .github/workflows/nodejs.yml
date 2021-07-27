@@ -14,11 +14,12 @@ jobs:
       - name: Building site
         run: |
           npm install
-          tsc
-          gulp build-out
+          npm i -g ts-node
+          ts-node src/scripts/filldb
+          ts-node src/scripts/build
       - name: Deploy site to gh-pages branch
         uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
         with:
           repo-token: ${{ secrets.GH_PAT }}
-          site-directory: out
+          site-directory: dist
           commit-message: Deploy to GH Pages

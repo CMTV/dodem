@@ -1,0 +1,1 @@
+$$ y = \arcsin \frac{2x}{1+x} $$

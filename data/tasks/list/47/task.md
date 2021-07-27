@@ -1,0 +1,1 @@
+$$ \limn \left( \sqrt{n+1} - \sqrt{n} \right) $$

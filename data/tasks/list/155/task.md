@@ -1,0 +1,1 @@
+$$ y = \sqrt{\sin(\sqrt{x})} $$

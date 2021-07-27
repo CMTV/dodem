@@ -1,0 +1,133 @@
+@use 'defs/color';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/hover';
+@use 'partials/component';
+
+%CONTENT
+{
+    font-size: 103%;
+    line-height: 1.5;
+
+    text-align: justify;
+    hyphens: auto;
+
+    @include bp.max(mini)
+    {
+        font-size: 95%;
+        text-align: left;
+    }
+
+    $contentGap: 20px; //size.$gapStruct;
+    
+    > *, .content > *                       { margin-bottom: $contentGap; }
+    > :last-child, .content > :last-child   { margin-bottom: 0; }
+
+    h2
+    {
+        font-size: 115%;
+        text-align: left;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--c_border);
+    }
+
+    hr
+    {
+        height: 0;
+        background: transparent;
+        border-bottom: 1px solid var(--c_border);
+    }
+
+    a
+    {
+        color: var(--c_text-brand-shade);
+        @extend %underline;
+
+        //&:visited   { color: #0b0080; }
+        &:active    { color: #faa700; }
+    }
+
+    //
+    // KaTeX
+    //
+
+    .katex-display
+    {
+        padding: 5px 0;
+        margin: 0;
+
+        .katex-html
+        {
+            display: flex;
+            row-gap: $contentGap;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+
+            .base
+            {
+                align-self: baseline;
+            }
+        }
+
+        overflow: hidden;
+        overflow-x: auto;
+
+        &::-webkit-scrollbar { height: 5px; }
+
+        &::-webkit-scrollbar-track { background: var(--c_bg); }
+
+        &::-webkit-scrollbar-thumb
+        {
+            background: var(--c_bg-shade-3);
+            &:hover { background: var(--c_bg-shade-4); }
+        }
+    }
+
+    //
+    // Images
+    //
+
+    img
+    {
+        display: block;
+        margin: auto;
+
+        max-width: 100%;
+        height: auto;
+
+        &:not(.noInvert)
+        {
+            @include color.themeDark
+            {
+                filter: hue-rotate(180deg) invert(100%);
+            }
+        }
+
+        @for $i from 1 through 9 { &.w#{$i} { width: 10% * $i; } }
+
+        @include bp.max(mini)
+        {            
+            width: auto !important;
+
+            &[src$=".svg"]
+            {
+                width: 100% !important;
+            }
+        }
+    }
+
+    //
+    // Components
+    //
+
+    @include component.spoiler;
+
+    @include component.taskLink;
+    @include component.helpLink;
+
+    @include component.definition;
+    @include component.theorem;
+    @include component.example;
+}

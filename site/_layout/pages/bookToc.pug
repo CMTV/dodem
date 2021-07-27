@@ -1,0 +1,25 @@
+extends /templates/default
+
+mixin chapter(title, paragraphs)
+    if (paragraphs.length > 0)
+        h2= title
+
+        each paragraph in paragraphs
+            .paragraph
+                header
+                    a(href="/book/" + paragraph.id)= paragraph.title
+                    .terms(title="Определения, теоремы, методы и т.д.")
+                        i.fas.fa-shapes
+                        span= paragraph.termCount
+
+                if (paragraph.topics.length > 0)
+                    .topics
+                        each topic in paragraph.topics
+                            .topic
+                                a(href="/book/" + topic.id)= topic.title
+                                .terms(title="Определения, теоремы, методы и т.д.")
+                                    span= topic.termCount
+
+block body
+    +chapter('Элементарная математика', elementary)
+    +chapter('Высшая математика', advanced)

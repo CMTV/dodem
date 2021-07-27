@@ -1,0 +1,95 @@
+extends /templates/default
+
+block body
+
+    .progress
+        header
+            h2 Проект готов на #{progressPercent}%
+            a.lastUpdate(href="/history", title="Перейти на страницу прогресса")
+                span Обновление #{lastUpdate}
+                i.fas.fa-arrow-right
+        .progressBar
+            each part in progressParts
+                div(style=`flex: ${part.frac} 0;`, title=part.getTitle())
+
+    .theory
+        header
+            .figure
+                i.fas.fa-book
+            .info
+                h2
+                    a(href="/book") Теория
+                span #{helpNum} определений, теорем, приемов и т.д.
+            a(href="/book")
+                i.fas.fa-user-graduate
+                span Учить
+        .content
+            p.
+                Высшая математика — один из лучших способов прокачки мозгов.<br>
+                Начинается она с математического анализа.<br>
+                И здесь его системное изложение.
+
+            ul
+                li Весь математический анализ в одном месте
+                li Теория расписана понятно и с примерами
+                li Рассмотрены все тонкие моменты
+
+            .button
+                a(href="/book")
+                    i.fas.fa-user-graduate
+                    span Учить
+
+    .practice
+        header
+            .figure
+                i.fas.fa-hashtag
+            .info
+                h2
+                    a(href="/tasks") Практика
+                span Решено #{solvedNum} задач из 4460
+            a(href="/tasks")
+                i.fas.fa-dumbbell
+                span Решать
+        .content
+            p.
+                Лучший способ усвоить теорию — прорешать большое количество задач.<br>
+                И задачи должны быть интересные, сложные и нестандартные.<br>
+                Самый крутой задачник на эту тему — Демидовича.<br>
+                Он и составляет всю практическую базу сайта.
+
+            ul
+                li Каждая задача имеет подробное, строгое и понятное решение
+                li Большинство решений снабжены указаниями
+                li Удобные ссылки с задач на теорию
+
+            .button
+                a(href="/tasks")
+                    i.fas.fa-dumbbell
+                    span Решать
+
+    .open
+        header
+            .figure
+                i.fas.fa-users
+            .info
+                h2
+                    a(href="/solvers") Сообщество
+                span #{solverNum} решателей
+            a(href="/solvers")
+                i.fas.fa-comments
+                span Общаться
+        .content
+            p.
+                В одиночку пройти этот путь тяжело.<br>
+                Возникают вопросы в осмыслении теории и решении задач.<br>
+                Здесь вы найдете помощь и поддержку со стороны единомышленников.
+
+            ul
+                li Ответы на вопросы по теории и практике
+                li Обсуждение своих и чужих решений
+                li Возможность опубликовать свои материалы
+
+            .button
+                a(href="/solvers")
+                    i.fas.fa-comments
+                    span Общаться

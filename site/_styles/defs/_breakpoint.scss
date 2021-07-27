@@ -1,0 +1,18 @@
+@use 'sass:map';
+@use 'size';
+
+$points: (
+    stretch: size.$content + (2 * size.$gap),
+    hBreak: 600px,
+    mini: 500px,
+);
+
+@mixin max($bp, $shift: 0)
+{
+    @media (max-width: map.get($points, $bp) + $shift) { @content; }
+}
+
+@mixin min($bp, $shift: 0)
+{
+    @media (min-width: map.get($points, $bp) + $shift) { @content; }
+}

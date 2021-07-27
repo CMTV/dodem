@@ -1,0 +1,110 @@
+@use 'defs/color';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/task';
+@use 'partials/content';
+@use 'partials/hover';
+@use 'partials/util';
+
+main > .task
+{
+    @extend %block;
+    
+    > header
+    {
+        @extend %blockHeader, %blockActions;
+        .attrs { @extend %blockAttrs; }
+
+        border-bottom: 1px solid var(--c_border);
+
+        .typeCircle
+        {
+            @include block.blockTypeContainer(task)
+            {
+                @include util.size(50px);
+                color: white;
+                i { font-size: 20px; }
+            }
+        }
+
+        .taskInfo
+        {
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+            gap: size.$gapSmall;
+
+            @include bp.max(mini) { align-items: flex-start; }
+
+            .title
+            {
+                font-size: 110%;
+                font-weight: bold;
+
+                a
+                {
+                    @extend %underline;
+                    color: var(--c_text);
+                }
+            }
+
+            .attrs .attr:not(.difficulty)
+            {
+                @include bp.max(mini) { span { display: none; } }
+            }
+
+            .attrs .attr.difficulty { @include task.difficultyColors; }
+        }
+
+        @include bp.max(mini)
+        {
+            flex-direction: row;
+            .typeCircle { display: none; }
+        }
+    }
+
+    .taskContent { @extend %blockSection, %CONTENT; }
+}
+
+main
+{
+    > .groupTop > .groupSepTop,
+    > .groupSepBottom
+    {
+        @include color.themeColorVar('_sep', #A2A2A2, #5D5D5D);
+
+        @extend %blockLogic;
+        height: 25px;
+        border: 3px solid var(--c__sep);
+
+        @include bp.max(mini) { margin: 0 size.$gap; }
+    }
+
+    > .groupTop > .groupSepTop
+    {
+        border-bottom: none;
+        border-top-left-radius:     size.$borderRadius;
+        border-top-right-radius:    size.$borderRadius;
+    }
+
+    > .groupSepBottom
+    {
+        border-top: none;
+        border-bottom-left-radius:  size.$borderRadius;
+        border-bottom-right-radius: size.$borderRadius;
+    }
+}
+
+main > .groupTop > .groupTask
+{
+    @extend %blockLogic;
+
+    text-align: center;
+    margin-top: 10px;
+    padding: 0 size.$gap;
+
+    @include bp.max(mini) { padding: 0 size.$gapBig; }
+}

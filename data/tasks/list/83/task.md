@@ -1,0 +1,1 @@
+$$ x_n = \frac{\sin 1}{2} + \frac{\sin 2}{2^2} + \ldots + \frac{\sin n}{2^n} $$

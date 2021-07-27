@@ -1,0 +1,1 @@
+$$ \text{а) } \limf{x}{0} \left( \frac{1+x}{2+x} \right)^{(1-\sqrt{x})/(1-x)}; \\[10px] \text{б) } \limf{x}{1} \left(\frac{1+x}{2+x}\right)^{(1-\sqrt{x})/(1-x)}; \qquad \text{в) } \limf{x}{+\infty} \left(\frac{1+x}{2+x}\right)^{(1-\sqrt{x})/(1-x)} $$

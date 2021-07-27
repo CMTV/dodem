@@ -1,0 +1,34 @@
+@use 'sass:meta';
+@use 'sass:map';
+
+@use 'defs/color';
+
+//
+// Генерация цветовой палитры сайта в виде CSS переменных (светлой и темной)
+//
+
+body
+{
+    @each $name, $variants in color.$palette
+    {
+        $color: $variants;
+
+        @if (meta.type-of($variants) == 'map')
+        {
+            $color: map.get($variants, 'light');
+        }
+
+        --c_#{$name}: #{$color};
+    }
+
+    &.theme--dark
+    {
+        @each $name, $variants in color.$palette
+        {
+            @if (meta.type-of($variants) == 'map')
+            {
+                --c_#{$name}: #{map.get($variants, 'dark')};
+            }
+        }
+    }
+}

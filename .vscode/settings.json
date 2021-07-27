@@ -1,0 +1,5 @@
+{
+    "json.schemas": [
+        { "fileMatch": ["/data/tasks/solvers/**/*.json"], "url": "/.vscode/schemas/solver.json" }
+    ]
+}

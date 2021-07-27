@@ -1,0 +1,1 @@
+Воспользуйтесь прото-задачами <b:[П-ссылка](advanced/proto/f-lim/elementary)>, <b:[П-ссылка](advanced/proto/f-lim/finite-props)> и <b:[П-ссылка](advanced/proto/f-lim/bm-bb-operations)>.

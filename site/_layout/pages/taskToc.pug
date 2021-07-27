@@ -1,0 +1,21 @@
+extends /templates/default
+
+mixin chapter(chapter)
+    h2!= chapter.title
+
+    each paragraph, i in chapter.paragraphs
+        .paragraph
+            header
+                a(href='/tasks/' + paragraph.id)!= (i+1) + '. ' + paragraph.title
+                .taskRange(title="Номера задач в параграфе")= paragraph.taskRange.toString()
+            
+            if (paragraph.topics.length !== 0)
+                .topics
+                    each topic in paragraph.topics
+                        .topic
+                            a(href='/tasks/' + topic.id)!= topic.title
+                            .taskRange(title="Номера задач в теме")= topic.taskRange.toString()
+
+block body
+    each chapter in chapters
+        +chapter(chapter)

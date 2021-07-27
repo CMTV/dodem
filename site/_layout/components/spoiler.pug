@@ -1,7 +1,7 @@
 .spoiler
-    .head(title="Раскрыть")
+    header(title="Раскрыть пояснение")
         .title!= title
-        .toggleButton
-            i.fas
-    .contentHolder
-        .content!= content
+        .switcher
+            i.fas.fa-eye.fa-fw.on
+            i.fas.fa-eye-slash.fa-fw.off
+    .content!= content

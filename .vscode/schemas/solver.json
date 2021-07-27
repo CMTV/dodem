@@ -1,0 +1,20 @@
+{
+    "properties":
+    {
+        "name": {
+            "type": "string",
+            "description": "Имя решателя или его псевдоним"
+        },
+
+        "link": {
+            "type": "string",
+            "description": "Ссылка на личную страницу или сайт решателя"
+        },
+
+        "slogan": {
+            "type": "string",
+            "description": "Лозунг решателя"
+        }
+    },
+    "required": [ "name" ]
+}

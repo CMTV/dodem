@@ -1,0 +1,1 @@
+$$ x_n = \left( 1 + \frac{1}{n} \right)^n\cdot(-1)^n+\sin\frac{n\pi}{4} $$

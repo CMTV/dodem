@@ -1,0 +1,54 @@
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/util';
+
+body > .bg
+{
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    .formulas, .fog { position: absolute; @include util.size(100%); }
+
+    .formulas
+    {
+        background-image: url(/site/graphics/bg/formulasBg.svg);
+        background-size: 750px;
+        opacity: .1;
+    }
+
+    .fog
+    {
+        background-image: url(/site/graphics/bg/fog.png);
+        background-position: 500px 0;
+        background-size: 500px;
+
+        animation: bgMovement 10s linear infinite;
+        @keyframes bgMovement { from    { background-position: 0 0; } }
+    }
+
+    @include bp.max(stretch)
+    {
+        .formulas { opacity: .05; }
+
+        .fog
+        {
+            display: none;
+            animation: none;
+        }
+    }
+}
+
+body.theme--dark > .bg
+{
+    .formulas
+    {
+        opacity: .08;
+        filter: invert(1);
+        @include bp.max(stretch) { opacity: .03; }
+    }
+
+    .fog { background-image: url(/site/graphics/bg/fog-dark.png); }
+}

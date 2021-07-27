@@ -1,0 +1,61 @@
+extends /templates/default
+
+include /includes/block
+
+block body
+
+    .donateBlock
+        .info
+            h2 Станьте спонсором!
+            .desc.
+                Решать задачи, писать теорию и поддерживать сайт — сложная и трудоемкая работа.
+                Ваша финансовая поддержка сильно упрощает и ускоряет процесс.
+
+        a.donateButton(href="https://boosty.to/dodem", target="_blank") Поддержать
+
+    if (patrons)
+        each patron in patrons
+            .patron
+                header
+                    .avatar(class={ noAvatar: !patron.hasAvatar })
+                        if (patron.hasAvatar)
+                            img(src=patron.avatar())
+                        else
+                            i.fas.fa-user
+                    
+                    .info
+                        .name= patron.name
+
+                        if (patron.slogan)
+                            .slogan= patron.slogan
+                    
+                    .actions
+                        if (patron.about.content)
+                            +blockActionBtn(patron.about)
+                        if (patron.link)
+                            +blockActionLink('patronLink', patron.link, 'fas fa-external-link-alt', 'Ссылка спонсора', true)
+                
+                if (patron.about.content)
+                    +blockActionPane(patron.about)
+
+    if (teammates)
+        .teammates
+            header
+                h2 Соратники
+            .list
+                each teammate in teammates
+                    a.teammate(href=teammate.link)
+                        .avatar(class={ noAvatar: !teammate.hasAvatar })
+                            if (teammate.hasAvatar)
+                                img(src=teammate.avatar())
+                            else
+                                i.fas.fa-user
+                        span= teammate.name
+
+    if (helpers)
+        .helpers
+            header
+                h2 Помощники
+            .list
+                each helper in helpers
+                    a.helper(href=helper.link)= helper.name

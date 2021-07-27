@@ -1,1 +1,0 @@
-Воспользуйтесь прото-задачей <p:[f/limits/continuity/complex-exp]>.

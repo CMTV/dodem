@@ -1,0 +1,13 @@
+.theorem(class={ noProof: !proof })
+    header(title= proof ? 'Показать доказательство' : null)
+        .title!= title
+
+        if proof
+            i.fas.fa-gavel.switcher
+
+    .statement.content!= statement
+
+    if proof
+        .proof
+            h3 Доказательство
+            .content!= proof

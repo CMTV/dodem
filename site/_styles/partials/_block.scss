@@ -1,0 +1,199 @@
+@use 'sass:color' as sassColor;
+@use 'sass:map';
+
+@use 'defs/color';
+@use 'defs/breakpoint' as bp;
+@use 'defs/size';
+
+@use 'partials/util';
+
+%blockDeco
+{
+    background: var(--c_bg);
+    border: 1px solid var(--c_border);
+    border-radius: size.$borderRadius;
+    box-shadow: 0 1px 3px 1px var(--c_shadow);
+
+    @include color.themeDark 
+    {
+        box-shadow: 0 0 2px 1px var(--c_shadow);
+    }
+
+    @include bp.max(mini)
+    {
+        border-radius: 0;
+        border-left: none;
+        border-right: none;
+    }
+}
+
+%blockLogic
+{
+    position: relative;
+    width: size.$content;
+
+    margin: 0 auto;
+
+    @include bp.max(stretch)
+    {
+        width: auto;
+        margin: 0 size.$gap;
+    }
+
+    @include bp.max(mini)
+    {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+%block
+{
+    @extend %blockDeco, %blockLogic;
+}
+
+%blockSection           { padding: size.$gap; }
+%blockSectionCondensed  { padding: size.$gapSmall size.$gap; }
+
+%blockSep
+{
+    height: 50px;
+    display: flex;
+    align-items: center;
+
+    padding: 0 size.$gap;
+
+    color: var(--c_text-shade-1);
+    font-size: 110%;
+    font-weight: bold;
+    
+    background: var(--c_bg-shade-1);
+
+    i
+    {
+        margin-right: size.$gapSmall;
+    }
+}
+
+%blockActions
+{
+    .actions
+    {
+        display: flex;
+        gap: size.$gap;
+
+        > .action
+        {
+            @include util.flexCC;
+            @include util.size(45px);
+
+            color:      var(--c_text-shade-1);
+            text-decoration: none;
+            background: var(--c_bg-shade-3);
+
+            border-radius: size.$borderRadius;
+
+            cursor: pointer;
+
+            @include util.transition(color, background-color);
+            
+            i { font-size: 110%; }
+
+            &:hover
+            {
+                color:      var(--c_text);
+                background: var(--c_bg-shade-4);
+            }
+
+            &._active
+            {
+                color:      var(--c_text-brand);
+                background: var(--c_bg-brand);
+            
+                &:hover
+                {
+                    color:      var(--c_text-brand-shade);
+                    background: var(--c_bg-brand-shade);
+                }
+            }
+        }
+    }
+}
+
+%blockAttrs
+{
+    display: flex;
+    gap: size.$gap;
+    flex-wrap: wrap;
+
+    font-size: 90%;
+    color: var(--c_text-shade-1);
+
+    @include bp.max(mini) { justify-content: center; }
+
+    .attr
+    {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+
+        i { font-size: 87%; }
+    }
+}
+
+%blockType
+{
+    @include util.size(55px);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+@mixin blockTypeGradient($typeColor)
+{
+    $gradColor: map.get(color.$blockTypeColors, $typeColor);
+    $gradColorDark: sassColor.scale($gradColor, $lightness: -20%);
+    background: radial-gradient($gradColor, $gradColorDark);
+}
+
+@mixin blockTypeContainer($typeColor)
+{
+    @extend %blockType;
+
+    @include blockTypeGradient($typeColor);
+    @include util.flexCC;
+
+    @content;
+}
+
+%blockHeader
+{
+    @extend %blockSection;
+
+    display: flex;
+    align-items: center;
+    gap: size.$gap;
+
+    * { line-height: 1; }
+
+    @include bp.max(mini) { flex-direction: column; }
+}
+
+%blockPane
+{
+    &:not(._active)
+    {
+        overflow: hidden;
+        height: 0;
+        pointer-events: none;
+        touch-action: none;
+    }
+
+    > .title
+    {
+        @extend %blockSep;
+
+        border-top: 1px solid var(--c_border);
+        border-bottom: 1px solid var(--c_border);
+    }
+    > .content { @extend %blockSection; }
+}

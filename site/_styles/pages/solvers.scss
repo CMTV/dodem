@@ -1,154 +1,135 @@
-@import '../import';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
 
-.solvers
+@use 'partials/block';
+@use 'partials/util';
+@use 'partials/hover';
+@use 'partials/content';
+
+main > .solver
 {
-    .contentBlock.solver
+    @extend %block;
+
+    > header
     {
-        margin-top: $gapStruct;
+        @extend %blockHeader, %blockActions;
 
-        .anchor:target + .body { border-color: $c_BrandDark; }
-
-        .body
+        .typeCircle
         {
-            .solverInfo
+            &:not(.hasAvatar)
             {
-                padding: $gap;
-
-                display: flex;
-                align-items: center;
-
-                border-bottom: 1px solid $c_BorderLigth;
-
-                .avatarContainer
+                @include block.blockTypeContainer(solution)
                 {
-                    .avatar
-                    {
-                        width: 55px;
-                        height: 55px;
-                    }
-                }
-
-                .nameSlogan
-                {
-                    flex: 1;
-                    margin: 0 $gap;
-
-                    .name
-                    {
-                        font-size: 105%;
-                    }
-
-                    .slogan
-                    {
-                        font-size: 95%;
-                        color: $c_TextMuted;
-                    }
-                }
-
-                .stats
-                {
-                    @include flexCC;
-                    flex-direction: column;
-                    
-                    .solutions, .tasks { cursor: help; }
-
-                    .solutions
-                    {
-                        font-size: 22px;
-                    }
-
-                    .tasks
-                    {
-                        font-size: 90%;
-                        color: $c_TextMuted;
-                    }
-                }
-
-                @include layout(mini)
-                {
-                    flex-direction: column;
-
-                    .nameSlogan
-                    {
-                        margin: $gap 0 5px;
-                        text-align: center;
-                    }
-
-                    .stats
-                    {
-                        flex-direction: row;
-                        font-size: 107%;
-
-                        .tasks
-                        {
-                            margin-left: 7px;
-
-                            &::before
-                            {
-                                content: "(";
-                                color: $c_TextMMuted;
-                            }
-
-                            &::after
-                            {
-                                content: ")";
-                                color: $c_TextMMuted;
-                            }
-                        }
-                    }
+                    color: white;
+                    i { font-size: 22px; }
                 }
             }
 
-            .solvedContainer
+            &.hasAvatar
             {
-                background: $c_BgMuted;
-                border-bottom-left-radius: $borderRadius;
-                border-bottom-right-radius: $borderRadius;
+                @extend %blockType;
 
-                padding: $gap;
-
-                display: flex;
-
-                overflow: hidden;
-                overflow-x: auto;
-
-                &::-webkit-scrollbar { height: 7px; }
-
-                &::-webkit-scrollbar-thumb
+                img
                 {
-                    background: $c_Border;
-                    &:hover { background-color: $c_BorderDark; }
+                    @include util.size(60px);
+                    border-radius: 50%;
                 }
+            }
+
+            @include util.size(60px !important);
+        }
+
+        .info
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: size.$gapSmall;
+
+            @include bp.max(mini) { text-align: center; }
+
+            .name
+            {
+                font-weight: bold;
+                font-size: 115%;
+            }
+
+            .slogan
+            {
+                color: var(--c_text-shade-1);
+            }
+        }
+    }
+
+    > .bio
+    {
+        @extend %blockPane;
+        .content { @extend %CONTENT; }
+    }
+
+    > .tasks
+    {
+        display: flex;
+        align-items: stretch;
+
+        border-top: 1px solid var(--c_border);
+        background: var(--c_bg-shade-1);
+
+        line-height: 1;
+
+        .total, .listContainer
+        {
+            padding: size.$gapSmall;
+        }
+
+        .total
+        {
+            display: flex;
+            align-items: center;
+
+            font-weight: bold;
+            color: var(--c_text-shade-1);
+
+            cursor: help;
+            border-right: 1px solid var(--c_border);
+
+            i { margin-right: 5px; }
+        }
+
+        .listContainer
+        {
+            overflow-x: auto;
+
+            &::-webkit-scrollbar
+            {
+                height: 4px;
+            }
+
+            &::-webkit-scrollbar-thumb
+            {
+                background: var(--c_bg-shade-4);
+            }
+
+            .list
+            {
+                flex: 1;
+                display: flex;
+                gap: size.$gapSmall;
 
                 .task
                 {
+                    @include util.flexCC;
                     flex-shrink: 0;
 
-                    background: white;
-                    padding: 4px 0;
-
-                    width: 50px;
-
                     font-size: 90%;
-                    color: $c_TextMuted;
-                    text-align: center;
-                    text-decoration: none;
+                    color: var(--c_text-shade-1);
+                    @include hover.colorAccent(var(--c_text));
 
-                    border: 1px solid $c_Border;
-                    border-radius: $borderRadius;
-
-                    transition: color $animSpeed, border-color $animSpeed;
-
-                    &:hover
-                    {
-                        color: $c_Text;
-                        border-color: $c_BorderDark;
-                    }
-
-                    &:not(:last-of-type)
-                    {
-                        margin-right: $gapSmall;
-                    }
+                    padding: 5px 0;
+                    width: 70px;
+                    border: 1px solid var(--c_border);
+                    border-radius: size.$borderRadius;
+                    background: var(--c_bg);
                 }
             }
         }

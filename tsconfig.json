@@ -1,13 +1,10 @@
 {
     "compilerOptions":
     {
-        "module": "commonjs",
         "esModuleInterop": true,
-        "target": "es6",
-        "noImplicitAny": true,
-        "moduleResolution": "node",
-        "sourceMap": true,
-        "outDir": "_engine",
-        "rootDir": "engine"
-    }
+        "baseUrl": "./",
+        "paths": { "src/*": ["./src/*"] }
+    },
+    "ts-node": { "require": ["tsconfig-paths/register"] },
+    "exclude": ["site/_scripts/*"]
 }

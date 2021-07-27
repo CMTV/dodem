@@ -1,0 +1,20 @@
+extends /templates/default
+
+include /includes/block
+
+block body
+    each term in terms
+        .term
+            .typeCircle(class=`typeCircle--${term.type.className}`)
+                span= term.type.letter
+            
+            .info
+                h2.title
+                    span.typeLetter(class=term.type.className)= term.type.letter
+                    a(href=term.getLink())= term.title
+
+                if (term.desc)
+                    .desc!= term.desc
+
+            .actions
+                +blockActionLink('goto', term.getLink(), 'fas fa-arrow-right', 'Перейти на эту страницу')

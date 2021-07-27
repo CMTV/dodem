@@ -1,225 +1,199 @@
-@import '../import.scss';
+@use 'defs/color';
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
 
-.donate
+@use 'partials/block';
+@use 'partials/hover';
+@use 'partials/util';
+@use 'partials/content';
+
+.donateBlock
 {
-    float: right;
-    padding: $gapSmall $gap;
-    
-    position: relative;
-    top: -5px;
+    @extend %block, %blockSection;
 
-    //font-size: 95%;
-    text-decoration: none;
-    color: darken($c_Donate, 5%);
+    display: flex;
+    align-items: center;
+    gap: size.$gap;
 
-    background: mix(white, $c_Donate, 97%);
+    @include color.themeColorVar('_donateBg', #FFF8F0, #282217);
+    background: var(--c__donateBg);
 
-    border: 2px solid $c_Donate;
-    border-radius: $borderRadius;
+    @include color.themeColorVar(_donateBorder, #FFD3A0, #3C2D00);
+    border-color: var(--c__donateBorder);
 
-    transition: border-color $animSpeed;
-
-    @include layout(stretch)
+    @include bp.max(mini)
     {
-        margin-right: $gap;
+        text-align: center;
+        flex-direction: column;
     }
 
-    i
+    .info
     {
-        margin-right: 7px;
-        transition: transform $animSpeed;
-    }
+        flex: 1;
 
-    &:hover
-    {
-        border-color: darken($c_Donate, 15%);
-
-        i { transform: scale(1.1); }
-    }
-}
-
-.pageTitle
-{
-    justify-content: start;
-    text-align: left;
-}
-
-.tier1
-{
-    margin-top: $gapStruct * 2;
-
-    .donater
-    {
-        &:not(:first-of-type)
+        h2
         {
-            margin-top: $gapStruct;
+            font-size: 115%;
+            margin-bottom: 5px;
         }
 
-        .body
+        .desc
         {
-            display: flex;
-            align-items: center;
+            font-size: 95%;
+        }
+    }
 
-            padding: $gap;
+    .donateButton
+    {
+        padding: size.$gapSmall size.$gap;
+        background: #E69600;
+        border-radius: size.$borderRadius;
+        
+        color: white;
+        font-weight: bold;
+        letter-spacing: .5px;
+        text-transform: uppercase;
+        text-decoration: none;
 
-            .avatarContainer .avatar
-            {
-                width: 55px;
-                height: 55px;
-            }
+        @include util.transition(background-color);
 
-            .nameMessage
-            {
-                flex: 1;
-                margin: 0 $gap;
-
-                .name
-                {
-                    font-size: 105%;
-                }
-
-                .message
-                {
-                    font-size: 95%;
-                    color: $c_TextMuted;
-                }
-            }
-
-            .link
-            {
-                font-size: 20px;
-                color: $c_TextMuted;
-                transition: color $animSpeed;
-
-                &:hover { color: $c_Text; }
-            }
-
-            @include layout(mini)
-            {
-                flex-direction: column;
-
-                .nameMessage
-                {
-                    text-align: center;
-                    margin: $gapSmall 0;
-                }
-            }
+        &:hover
+        {
+            background-color: #CD8500;
         }
     }
 }
 
-.tier2, .tier3, .archive
+main > .helpers,
+main > .teammates
 {
-    margin-top: $gapStruct;
+    @extend %block;
 
-    .donaters .body
+    > header
+    {
+        @extend %blockHeader;
+        h2 { font-size: 115%; }
+    }
+}
+
+main > .helpers > .list
+{
+    @extend %blockSection;
+    border-top: 1px solid var(--c_border);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: size.$gapSmall;
+
+    .helper
+    {
+        color: var(--c_text);
+        @extend %underline;
+
+        &:not(:last-of-type)::after
+        {
+            content: ",";
+            color: var(--c_text-shade-1);
+        }
+    }
+}
+
+main > .teammates > .list
+{
+    @extend %blockSection;
+    border-top: 1px solid var(--c_border);
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: size.$gapSmall;
+
+    .teammate
     {
         display: flex;
-        flex-wrap: wrap;
-        
-        padding: $gap;
-        padding-top: 0;
-        padding-right: $gap - $gapSmall;
+        align-items: center;
 
-        .donater
+        color: var(--c_text);
+        @extend %underline;
+
+        .avatar
         {
-            @include flexCC;
-            margin-right: $gapSmall;
-            margin-top: $gap;
+            @include util.flexCC;
+            margin-right: 7px;
+
+            &, img
+            {
+                @include util.size(35px);
+                border-radius: 50%;
+            }
+
+            &.noAvatar
+            {
+                @include block.blockTypeGradient(solution);
+                color: white;
+                
+                i { font-size: 15px; }
+            }
         }
 
-        .donater:not(:last-of-type)
+        &:not(:last-of-type)::after
         {
-            &::after
-            {
-                content: ",";
-                color: $c_TextMuted;
-            }
+            content: ",";
+            color: var(--c_text-shade-1);
         }
     }
 }
 
-.tier2
+main > .patron
 {
-    .body
+    @extend %block;
+
+    > header
     {
-        @include layout(mini)
+        @extend %blockHeader, %blockActions;
+
+        .avatar
         {
-            justify-content: center;
-        }
-    }
+            @include util.flexCC;
 
-    .donater
-    {
-        .avatarContainer .avatar
-        {
-            width: 30px;
-            height: 30px;
-        }
-
-        .name
-        {
-            margin-left: 5px;
-            white-space: nowrap;
-        }
-    }
-}
-
-.archive
-{
-    .head .tab
-    {
-        cursor: help;
-        color: $c_Text;
-    }
-
-    .donater
-    {
-        color: $c_TextMuted;
-
-        .tier
-        {
-            cursor: help;
-            margin-left: 5px;
-            color: $c_TextMMuted;
-        }
-    }
-}
-
-.noDonaters
-{
-    margin-top: $gapStruct * 1.5;
-    .body
-    {
-        @include flexCC;
-        padding: $gap;
-
-        i
-        {
-            font-size: 100px;
-            color: $c_TextMuted;
-        }
-
-        .message
-        {
-            width: 300px;
-            margin-left: 30px;
-            font-size: 105%;
-
-            a
+            &, img
             {
-                //font-weight: bold;
+                @include util.size(60px);
+                border-radius: 50%;
+            }
+
+            &.noAvatar
+            {
+                @include block.blockTypeGradient(solution);
+                
+                i
+                {
+                    color: white;
+                    font-size: 22px;
+                }
             }
         }
 
-        @include layout(mini)
+        .info
         {
-            i { font-size: 60px; }
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: size.$gapSmall;
 
-            .message
+            @include bp.max(mini) { text-align: center; }
+
+            .name
             {
-                margin-left: $gap;
+                font-weight: bold;
+                font-size: 115%;
+            }
+
+            .slogan
+            {
+                color: var(--c_text-shade-1);
             }
         }
     }
+
+    > .about { @extend %blockPane, %CONTENT; }
 }

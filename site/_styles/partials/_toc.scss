@@ -1,0 +1,102 @@
+@use 'defs/size';
+@use 'defs/breakpoint' as bp;
+
+@use 'partials/block';
+@use 'partials/hover';
+
+%chapter
+{
+    @extend %blockLogic;
+
+    color: var(--c_text-shade-1);
+    font-size: 120%;
+
+    @include bp.max(mini)
+    {
+        text-align: center;
+        font-size: 115%;
+        margin: 0 size.$gap;
+    }
+}
+
+%paragraph
+{
+    @extend %block;
+
+    > header
+    {
+        @extend %blockHeader;
+        justify-content: space-between;
+
+        @include bp.max(mini) { gap: size.$gapSmall; }
+
+        a
+        {
+            font-size: 105%;
+            font-weight: bold;
+            line-height: initial;
+
+            @extend %underline;
+
+            &::before
+            {
+                content: "§";
+                margin-right: 1px;
+            }
+
+            @include bp.max(mini)
+            {
+                font-size: 100%;
+                text-align: center;
+            }
+        }
+    }
+
+    > .topics
+    {
+        @extend %blockSectionCondensed;
+        border-top: 1px solid var(--c_border);
+
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+
+        > .topic
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: size.$gap;
+
+            a
+            {
+                padding: 5px 0;
+                color: var(--c_text-shade-1);
+                @extend %underline;
+
+                @include bp.max(mini) { font-size: 90%; }
+            }
+        }
+    }
+}
+
+%generalMeta
+{
+    flex-shrink: 0;
+    font-size: 90%;
+    cursor: help;
+    @include bp.max(mini) { font-size: 85%; }
+}
+
+@mixin paragraphMeta($label)
+{
+    @extend %generalMeta;
+    color: var(--c_text-shade-1);
+    @include bp.max(mini) { &::before { content: $label + ": "; } }
+}
+
+%topicMeta
+{
+    @extend %generalMeta;
+    color: var(--c_text-shade-2);
+}

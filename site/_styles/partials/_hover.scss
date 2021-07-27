@@ -1,0 +1,34 @@
+@use 'defs/misc';
+
+@use 'partials/util';
+
+%hoverable
+{
+    &[href]
+    {
+        cursor: pointer;
+    }
+}
+
+%underline
+{
+    @extend %hoverable;
+
+    color: inherit;
+    text-decoration-color: transparent;
+
+    @include util.transition(text-decoration-color);
+
+    &:hover { text-decoration-color: inherit; }
+}
+
+@mixin colorAccent($hoverColor, $underline: false)
+{
+    @extend %hoverable;
+
+    @if (not $underline) { text-decoration: none; }
+
+    @include util.transition(color);
+
+    &:hover { color: $hoverColor; }
+}

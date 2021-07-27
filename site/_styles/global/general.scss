@@ -1,0 +1,63 @@
+@use 'defs/size';
+
+//
+// Сброс стандартных стилей
+//
+
+*
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+}
+
+//
+// Общие стили
+//
+
+html
+{
+    scroll-padding-top: 80px; // Фикс прокрутки из-за липкой шапки
+}
+
+body
+{
+    position: relative;
+    color: var(--c_text);
+    font-family: 'Open Sans', 'Segoe UI', sans-serif;
+    background: var(--c_bg-body);
+
+    > .site
+    {
+        position: relative;
+        z-index: 1;
+     
+        min-height: 100vh;
+        
+        display: flex;
+        flex-direction: column;
+        gap: size.$gapStruct;
+        
+        > header, > main, > footer { flex-shrink: 0; }
+
+        > main
+        {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: size.$gapStruct;
+        }
+    }
+}
+
+ul, ol
+{
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+::selection
+{
+    background-color: var(--c_selection);
+}
