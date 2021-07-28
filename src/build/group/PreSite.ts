@@ -1,6 +1,6 @@
 import { ProcessGroup } from "@cmtv/processes";
 
-import { MoveCNAME, MoveKatexFiles, MoveSiteFiles, Reset } from "../process/site/base";
+import { MoveRootFiles, MoveKatexFiles, MoveSiteFiles, Reset } from "../process/site/base";
 import { PreScripts, PreStyles } from "../process/site/preprocess";
 
 export class PreSite extends ProcessGroup
@@ -13,7 +13,7 @@ export class PreSite extends ProcessGroup
             new Reset,
             new MoveSiteFiles,
             new MoveKatexFiles,
-            new MoveCNAME,
+            new MoveRootFiles,
             new PreStyles,
             new PreScripts
         ];

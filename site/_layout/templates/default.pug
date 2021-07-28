@@ -7,7 +7,7 @@ mixin altMenuItem(name, link, icon, label, hint)
 
 doctype html
 include /includes/art.html
-html
+html(lang="ru")
     head
         meta(charset="UTF-8")
         meta(name="viewport", content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes")
@@ -54,12 +54,6 @@ html
 
         //- Верификация Yandex
         meta(name="yandex-verification", content="7ff246512ec9d0f4")
-
-        //- Yandex счетчик
-        include /includes/vendor/yandex.html
-
-        //- Google
-        include /includes/vendor/google.html
 
     body(class=bodyClass())
         include /includes/theme
@@ -140,3 +134,13 @@ html
             script(src=`/site/scripts/${pageName}.js`)
 
         block scripts
+
+        //-
+        //-
+        //-
+
+        //- Yandex счетчик
+        include /includes/vendor/yandex.html
+
+        //- Google
+        include /includes/vendor/google.html

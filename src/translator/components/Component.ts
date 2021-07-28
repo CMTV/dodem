@@ -8,6 +8,11 @@ export abstract class Component<TView>
 
     getComponentHtml(view: TView)
     {
-        return Preprocessor.renderPug(`components/${this.name}.pug`, view);
+        return Component.getRender(this.name, view);
+    }
+
+    static getRender(componentName: string, view)
+    {
+        return Preprocessor.renderPug(`components/${componentName}.pug`, view);
     }
 }

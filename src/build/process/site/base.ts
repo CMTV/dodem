@@ -38,9 +38,14 @@ export class MoveKatexFiles extends Process
     }
 }
 
-export class MoveCNAME extends Process
+export class MoveRootFiles extends Process
 {
-    processName() { return 'Перемещение файла CNAME'; }
+    rootFiles = ['_CNAME', '_robots.txt']
 
-    process() { IO.copyFile('site/_CNAME', 'dist/CNAME'); }
+    processName() { return 'Перемещение корневых файлов'; }
+
+    process()
+    {
+        this.rootFiles.forEach((rootFile) => IO.copyFile('site/' + rootFile, 'dist/' + rootFile.substring(1)));
+    }
 }

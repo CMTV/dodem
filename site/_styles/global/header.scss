@@ -118,6 +118,8 @@
                 color: var(--c_text-shade-1);
                 @include hover.colorAccent(var(--c_text));
 
+                cursor: pointer;
+
                 @include bp.max(stretch) { &.search, &.altMenuContainer { > span { display: none; } } }
                 @include bp.max(hBreak) { > span { display: none; } }
 

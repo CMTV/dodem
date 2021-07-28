@@ -1,7 +1,6 @@
 import { Translator } from "../Translator";
-import { Component } from "./Component";
 
-class TheoremView
+export class TheoremView
 {
     title =     'Теорема';
     statement:  string;
@@ -9,7 +8,7 @@ class TheoremView
 
     constructor(title: string, content: string)
     {
-        if (title.length !== 0)
+        if (title !== null)
             this.title = Translator.renderMath(title.trim());
         
         let parts = content.split(/^\|\|\| proof$/gm);
@@ -18,16 +17,5 @@ class TheoremView
 
         if (parts.length > 1)
             this.proof = Translator.renderSimple(parts[1]);
-    }
-}
-
-export class Theorem extends Component<TheoremView>
-{
-    name = 'theorem';
-    regexp = /^\|\|\| theorem(.*?)$([\s\S]*?)^\|\|\|$/gm;
-
-    render(str: string): string
-    {
-        return str.replace(this.regexp, (match, title, content) => this.getComponentHtml(new TheoremView(title, content)));
     }
 }

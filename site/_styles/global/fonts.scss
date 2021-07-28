@@ -8,6 +8,7 @@
     src: url('/site/fonts/open-sans/OpenSans-Regular.ttf');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face
@@ -16,6 +17,7 @@
     src: url('/site/fonts/open-sans/OpenSans-Italic.ttf');
     font-style: italic;
     font-weight: normal;
+    font-display: swap;
 }
 
 @font-face
@@ -24,6 +26,7 @@
     src: url('/site/fonts/open-sans/OpenSans-SemiBold.ttf');
     font-style: normal;
     font-weight: bold;
+    font-display: swap;
 }
 
 //
@@ -36,4 +39,5 @@
     src: url('/site/fonts/yandex.ttf');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
 }

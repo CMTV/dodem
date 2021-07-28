@@ -199,7 +199,7 @@ onmessage = (e) =>
             });
 
             let lunrResults = search.index.search(terms.join(' '));
-            console.log(lunrResults);
+            //console.log(lunrResults);
 
             //var waitTill = new Date(new Date().getTime() + 2 * 1000);
             //while(waitTill > new Date()){}

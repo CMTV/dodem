@@ -1,11 +1,9 @@
 import katexRender from 'katex-render';
 
-import { Definition } from './components/Definition';
-import { Example } from './components/Example';
+import { Blocker } from './Blocker';
+
 import { HelpLink } from './components/HelpLink';
-import { Spoiler } from './components/Spoiler';
 import { TaskLink } from './components/TaskLink';
-import { Theorem } from './components/Theorem';
 
 const mdIt = require('markdown-it')({
     html: true,
@@ -45,7 +43,7 @@ export class Translator
     {
         if (typeof str !== 'string') return str;
 
-        str = this.renderBlockComponents(str);
+        str = Blocker.render(str);
         str = this.renderSimple(str);
 
         return str;
@@ -59,17 +57,6 @@ export class Translator
     static renderMustaches(str: string): string
     {
         Object.keys(this.MUSTACHE).forEach(key => str = str.replace(new RegExp(`{{ ${key} }}`, 'gm'), this.MUSTACHE[key]));
-        return str;
-    }
-
-    static renderBlockComponents(str: string): string
-    {
-        str = this.renderSpoilers(str);
-        
-        str = this.renderDefinitions(str);
-        str = this.renderTheorems(str);
-        str = this.renderExamples(str); 
-
         return str;
     }
 
@@ -94,11 +81,6 @@ export class Translator
     // COMPONENTS
     //
 
-    static renderSpoilers(str: string): string  { return (new Spoiler).render(str); }
     static renderTaskLinks(str: string): string { return (new TaskLink).render(str); }
     static renderHelpLinks(str: string): string { return (new HelpLink).render(str); }
-
-    static renderDefinitions(str: string): string   { return (new Definition).render(str); }
-    static renderTheorems(str: string): string      { return (new Theorem).render(str); }
-    static renderExamples(str: string): string      { return (new Example).render(str); }
 }

@@ -12,7 +12,7 @@
     border: 1px solid $borderColor;
     border-radius: size.$borderRadius;
 
-    header
+    > header
     {
         margin: 3px;
         padding: size.$gapSmall;
@@ -55,11 +55,11 @@
         
         &:not(._opened)
         {
-            header .switcher .off   { display: none; }
+            > header .switcher .off   { display: none; }
             > .content { display: none; }
         }
 
-        &._opened header .switcher .on { display: none;}
+        &._opened > header .switcher .on { display: none;}
 
         header
         {
@@ -144,15 +144,15 @@
         @include defineBlockColorVars('theorem');
         @include componentBlock(var(--c__bg), var(--c__border));
 
-        &._opened header .switcher { color: var(--c_type-theorem) !important; }
+        &._opened > header .switcher { color: var(--c_type-theorem) !important; }
         &:not(._opened)
         {
             > .proof { display: none; }
         }
 
-        &:not(.noProof) header:hover { cursor: pointer; }
+        &:not(.noProof) > header:hover { cursor: pointer; }
 
-        header
+        > header
         {
             display: flex;
             align-items: center;
@@ -205,9 +205,9 @@
         @include componentBlock(var(--c_bg-shade-2), var(--c_border));
 
         &:not(._opened) > .solution { display: none; }
-        &:not(.noSolution) header:hover { cursor: pointer; }
+        &:not(.noSolution) > header:hover { cursor: pointer; }
 
-        header
+        > header
         {
             display: flex;
             align-items: center;
