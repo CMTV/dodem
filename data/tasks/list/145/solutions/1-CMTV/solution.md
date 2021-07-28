@@ -108,7 +108,7 @@ $$
     = \frac{1}{\underbrace{1 + 1 + 1^2 + \ldots}_{p+1 \text{ слагаемых}}} = \frac{1}{p+1}
 $$
 
-Мы воспользовались тем, что $\frac{n+1}{n}\to 1$ (см. прото-задачу <b:[П-ссылка](advanced/proto/sequence-lim/elementary)>).
+Мы воспользовались тем, что $ \frac{n+1}{n}\to 1$ (см. прото-задачу <b:[П-ссылка](advanced/proto/sequence-lim/elementary)>).
 
 Итак, мы доказали, что
 
