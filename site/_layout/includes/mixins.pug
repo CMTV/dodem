@@ -37,16 +37,11 @@ mixin adsAfter
     +ads(4277939948)
 
 mixin ads(slot)
-    .darkMagicContainer
-        .noDarkMagic
-            i.fas.fa-handshake
-            .message <strong>Да, да... Реклама всех бесит!</strong>Все решения пишутся на добровольной основе. Нет рекламы, нет дохода, нет мотивации поддерживать сайт. Если сайт вам помог, помогите и нам — добавьте сайт в исключения блокировщика!
-        .yesDarkMagic
-            ins.adsbygoogle(
-                style="display:block, min-height: 200px",
-                data-ad-client="ca-pub-8094912170389944",
-                data-ad-slot=slot,
-                data-full-width-responsive="true",
-            )
-            script.
-                (adsbygoogle = window.adsbygoogle || []).push({});
+    .darkMagic
+        ins.adsbygoogle(
+            style="display:block",
+            data-ad-client="ca-pub-8094912170389944",
+            data-ad-slot=slot
+        )
+        script.
+            (adsbygoogle = window.adsbygoogle || []).push({});

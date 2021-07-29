@@ -4,53 +4,10 @@
 
 @use 'partials/block';
 
-.darkMagicContainer
+.darkMagic
 {
     overflow: hidden;
+    @extend %blockLogic;
 
-    .noDarkMagic
-    {
-        &:not(._showing) { display: none; }
-
-        @extend %block, %blockSectionCondensed;
-
-        @include color.themeColorVar('_color',  #600,   #d16d6d);
-        @include color.themeColorVar('_border', #B90000,#4a2929);
-        @include color.themeColorVar('_bg',     #FFEAEA,#2D1E1E);
-
-        display: flex;
-        align-items: center;
-        gap: size.$gap;
-
-        border-color: var(--c__border);
-        background-color: var(--c__bg);
-
-        > i
-        {
-            color: var(--c__color);
-            font-size: 55px;
-
-            @include bp.max(mini) { display: none; }
-        }
-
-        > .message
-        {
-            font-size: 95%;
-            
-            strong
-            {
-                color: var(--c__color);
-                display: block;
-                margin-bottom: 3px;
-            }
-
-            @include bp.max(mini) { font-size: 90%; }
-        }
-    }
-
-    .yesDarkMagic
-    {
-        @extend %blockLogic;
-        height: 100px;
-    }
+    &:not(._hasAds) { display: none; }
 }

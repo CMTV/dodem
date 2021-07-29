@@ -2,17 +2,22 @@ declare var adsbygoogle;
 
 window.addEventListener('load', () =>
 {
-    if (typeof adsbygoogle === 'undefined' || adsbygoogle.loaded !== true)
-    {
-        document.querySelectorAll('.noDarkMagic').forEach(elem => elem.classList.add('_showing'));
-        document.querySelectorAll('.yesDarkMagic').forEach(elem => elem.remove());
-    }
+    let adScript = document.createElement('script');
+        adScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8094912170389944';
+        adScript.async = true;
+        adScript.crossOrigin = 'anonymous';
 
-    document.querySelectorAll('.darkMagicContainer').forEach(adContainer =>
+    document.head.append(adScript);
+
+    document.querySelectorAll('.darkMagic').forEach(adContainer =>
     {
         let adElem = adContainer.querySelector('ins.adsbygoogle');
 
-        let callback = () => { if (adElem.getAttribute('data-ad-status') === 'unfilled') adContainer.remove(); }
+        let callback = () =>
+        {
+            let isFilled = adElem.getAttribute('data-ad-status') === 'filled';
+            adContainer.classList.toggle('_hasAds', isFilled);
+        }
         callback();
 
         let adsObserver = new MutationObserver(callback);
