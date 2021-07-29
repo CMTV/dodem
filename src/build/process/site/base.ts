@@ -40,7 +40,7 @@ export class MoveKatexFiles extends Process
 
 export class MoveRootFiles extends Process
 {
-    rootFiles = ['_CNAME', '_robots.txt']
+    rootFiles = ['_CNAME', '_robots.txt', '_ads.txt']
 
     processName() { return 'Перемещение корневых файлов'; }
 

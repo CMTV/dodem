@@ -43,6 +43,8 @@ block body
     //- Решения
     //-
 
+    +adsBefore
+
     each solution, i in solutions
         .solution
             header
@@ -89,6 +91,8 @@ block body
 
                         each helpDep in solution.helpDeps
                             +bookPageLink(helpDep)
+
+    +adsAfter
 
     //-
     //- Навигация по задачам

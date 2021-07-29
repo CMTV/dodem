@@ -1,5 +1,10 @@
 extends /templates/default
 
+include /includes/mixins
+
 block body
+
+    +adsBefore
+
     .contentContainer
         .content!= content

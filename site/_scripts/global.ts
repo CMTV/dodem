@@ -9,4 +9,6 @@ import "./includes/components/spoiler";
 import "./includes/components/theorem";
 import "./includes/components/example";
 
+import "./includes/darkMagic";
+
 new Footer;

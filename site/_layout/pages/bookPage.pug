@@ -4,6 +4,8 @@ include /includes/mixins
 
 block body
     
+    +adsBefore
+
     .contentBlock
         header
             .typeCircle(class=`typeCircle--${info.type.className}`)
@@ -16,6 +18,8 @@ block body
                     .desc!= info.desc
         
         .content!= content
+
+    +adsAfter
 
     if (tasks.length !== 0)
         .taskUsage
