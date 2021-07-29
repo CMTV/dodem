@@ -30,7 +30,7 @@ SITEMAP.init();
 
 (new TaskToc).run();
 (new Page_TaskTocSingle).run();
-(new Page_Task).run(); // Очень длинный процесс!
+// (new Page_Task).run(); // Очень длинный процесс!
 
 (new Page_Solvers).run();
 

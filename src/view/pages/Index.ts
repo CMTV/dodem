@@ -1,5 +1,5 @@
 import { Constant } from "src/util/Constant";
-import { Page } from "./Page";
+import { Page, PageOgImg } from "./Page";
 
 export class Index extends Page
 {

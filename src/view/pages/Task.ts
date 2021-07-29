@@ -1,7 +1,7 @@
 import { LocationPart } from "../partials/location";
 import { Solution } from "../partials/solution";
 import { Task as PartialTask } from "../partials/task";
-import { Page } from "./Page";
+import { Page, PageOgImg } from "./Page";
 
 export class Task extends Page
 {
@@ -20,6 +20,12 @@ export class Task extends Page
     {
         super();
         this.location.parts.push(LocationPart.TASKS);
+    }
+
+    compile()
+    {
+        this.ogImg = new PageOgImg(`Задача ${this.task.num}`);
+        super.compile();
     }
 
     dest() { return `tasks/${this.task.num}/index.html`;}
