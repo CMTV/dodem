@@ -1,0 +1,1 @@
+\[f(x) = \frac{4}{\pi}\sum_{k=0}^\infty \frac{(-1)^k}{ (2k+1)^2}\sin(2k+1)x\]

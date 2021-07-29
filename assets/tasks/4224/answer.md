@@ -1,0 +1,1 @@
+$$ \frac{a^3}{6}\left( \sqrt{\ch^3 2t_0} -1\right) $$
