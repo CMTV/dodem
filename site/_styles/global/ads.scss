@@ -6,6 +6,8 @@
 
 .darkMagicContainer
 {
+    overflow: hidden;
+
     .noDarkMagic
     {
         &:not(._showing) { display: none; }
@@ -49,6 +51,6 @@
     .yesDarkMagic
     {
         @extend %blockLogic;
-        overflow-x: hidden;
+        height: 100px;
     }
 }
