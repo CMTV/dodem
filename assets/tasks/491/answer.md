@@ -1,1 +1,0 @@
-$$ \frac{2\ctg a}{sin^2 a} $$

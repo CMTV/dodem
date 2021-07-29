@@ -1,1 +1,0 @@
-$$ X = (-\infty, -\sqrt{3}) \cup [0, \sqrt{3}] $$

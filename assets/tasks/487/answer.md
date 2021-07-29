@@ -1,1 +1,0 @@
-$$ -\cos a\cosec^2 a, \quad a \neq k\pi \quad k\in\Z $$

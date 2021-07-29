@@ -1,1 +1,0 @@
-$$ E_y = \set{1 \leq y \leq 2} $$

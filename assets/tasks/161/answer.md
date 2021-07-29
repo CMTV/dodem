@@ -1,1 +1,0 @@
-$$ 10^{-\frac{\pi}{2}+2\pi k} < x < 10^{\frac{\pi}{2} + 2\pi k}, \quad k\in\mathbb{Z} $$

@@ -1,1 +1,0 @@
-$$ x = \phi(y) = \frac{1-y}{1+y} \quad (y\neq -1) $$

@@ -1,1 +1,0 @@
-$$ m_0 = -\sqrt{2} \qquad M_0 = \sqrt{2} $$

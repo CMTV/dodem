@@ -1,1 +1,0 @@
-$$ \sup x_n = 2 \\ \inf x_n = 0 \\ \overline{\limn} x_n = 2 \\ \underline{\limn} x_n = 0 $$

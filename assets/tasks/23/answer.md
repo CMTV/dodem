@@ -1,1 +1,0 @@
-$$ \left[\begin{array}{ll} x \geq 12 \\ x \leq -8 \end{array}\right. $$

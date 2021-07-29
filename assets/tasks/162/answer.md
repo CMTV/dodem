@@ -1,1 +1,0 @@
-$$ X = \set{x\in\mathbb{R} \ : \ x\geq 0 \land x = -1, -2, \ldots} $$

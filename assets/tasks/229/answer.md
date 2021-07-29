@@ -1,1 +1,0 @@
-$$ x = \phi(y) = \frac{1}{2}\ln\frac{1+y}{1-y} \quad (-1 < y < 1) $$

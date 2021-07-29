@@ -1,1 +1,0 @@
-$$ \frac{\alpha}{m} + \frac{\beta}{n} $$

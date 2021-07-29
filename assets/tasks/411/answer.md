@@ -1,1 +1,0 @@
-$$ \text{а) } 1 \quad \text{б) } \frac{2}{3} \quad \text{в) } \frac{1}{2} $$

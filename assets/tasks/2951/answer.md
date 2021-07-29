@@ -1,1 +1,0 @@
-\[\frac{16}{\pi}\sum_{n=1}^{\infty} \frac{(-1)^{n+1}n}{(4n^2-1)^2} \sin 2nx\]

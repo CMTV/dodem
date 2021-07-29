@@ -1,1 +1,0 @@
-$$ \sec^2 a, \quad a \neq (2k+1)\frac{\pi}{2} \quad k\in\Z $$

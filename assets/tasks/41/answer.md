@@ -1,1 +1,0 @@
-$$ \begin{array} {|c|c|c|c|c|c|}\hline \varepsilon & 0.1 & 0.01 & 0.001 & 0.0001 & \ldots \\ \hline N & 9 & 99 & 999 & 9999 &  \\ \hline  \end{array} $$

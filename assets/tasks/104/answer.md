@@ -1,1 +1,0 @@
-$$ \sup x_n = \overline{\limn} x_n = 6 \\ \inf x_n = \underline{\limn} x_n = -4 $$

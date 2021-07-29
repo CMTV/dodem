@@ -1,1 +1,0 @@
-$$ \sup x_n = +\infty \\ \inf x_n = -\infty \\ \overline{\limn} x_n = +\infty \\ \underline{\limn} x_n = -\infty $$
