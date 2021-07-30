@@ -1,33 +1,5 @@
-||| theorem Теорема Пифагора
+Привет, мир!
 
-Содержимое теоремы
+$$ \left(\frac{x+|x|}{2}\right)^2 + \left(\frac{x - |x|}{2}\right)^2 = \frac{x^2 + 2x|x| + x^2 + x^2 - 2x|x| + x^2}{4} $$
 
-    ||| spoiler
-
-    Первый спойлер
-
-    |||
-
-jklj
-
-||| proof
-
-Доказательство
-
-    ||| theorem
-
-    ЕЩЕ один!!
-
-    ||| proof
-
-    FUUCK YOU!
-
-        ||| spoiler
-
-        sdfsdsdfjdsf
-
-        |||
-
-    |||
-
-|||
+Конец сообщения!

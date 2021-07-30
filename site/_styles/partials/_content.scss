@@ -59,16 +59,10 @@
 
         .katex-html
         {
-            display: flex;
-            row-gap: $contentGap;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
+            white-space: normal;
+            margin: -#{$contentGap} 0;
 
-            .base
-            {
-                align-self: baseline;
-            }
+            .base { margin: $contentGap 0; }
         }
 
         overflow: hidden;

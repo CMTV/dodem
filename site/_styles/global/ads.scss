@@ -13,5 +13,4 @@
     @include bp.max(mini)       { width: 100%; margin: 0; }
 
     &:not(._hasAds) { margin: -1 * size.$gapStruct / 2 auto; }
-
 }
