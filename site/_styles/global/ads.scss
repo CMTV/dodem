@@ -8,7 +8,9 @@
 {
     overflow: hidden;
     @extend %blockLogic;
-    @include bp.max(stretch) { width: 100% }
+
+    @include bp.max(stretch)    { width: calc(100% - 2 * #{size.$gap}); }
+    @include bp.max(mini)       { width: 100%; margin: 0; }
 
     &:not(._hasAds) { margin: -1 * size.$gapStruct / 2 auto; }
 
