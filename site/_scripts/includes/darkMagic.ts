@@ -23,4 +23,8 @@ window.addEventListener('load', () =>
         let adsObserver = new MutationObserver(callback);
         adsObserver.observe(adElem, { attributeFilter: ['data-ad-status'] });
     });
+
+    // Prevent Google ads 'min-height' injection
+    let siteElem = document.querySelector('body > .site');
+    new MutationObserver(() => { siteElem.removeAttribute('style'); }).observe(siteElem, { attributeFilter: ['style'] } );
 });

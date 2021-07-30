@@ -1,5 +1,8 @@
 # Node JS
 /node_modules
 
+# Готовая база данных
+/data/dodem.db
+
 # Готовый сайт
 /dist

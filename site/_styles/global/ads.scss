@@ -8,6 +8,8 @@
 {
     overflow: hidden;
     @extend %blockLogic;
+    width: 100%;
 
     &:not(._hasAds) { margin: -1 * size.$gapStruct / 2 auto; }
+
 }

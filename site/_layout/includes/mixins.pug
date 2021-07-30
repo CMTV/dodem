@@ -39,9 +39,11 @@ mixin adsAfter
 mixin ads(slot)
     .darkMagic
         ins.adsbygoogle(
-            style="display:block",
+            style="display:block;max-height:300px!important",
             data-ad-client="ca-pub-8094912170389944",
             data-ad-slot=slot
+            data-ad-format="horizontal",
+            data-full-width-responsive="true"
         )
         script.
             (adsbygoogle = window.adsbygoogle || []).push({});
