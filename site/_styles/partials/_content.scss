@@ -60,9 +60,9 @@
         .katex-html
         {
             white-space: normal;
-            margin: -#{$contentGap} 0;
+            margin-bottom: -$contentGap;
 
-            .base { margin: $contentGap 0; }
+            .base { margin-bottom: $contentGap; }
         }
 
         overflow: hidden;
