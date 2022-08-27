@@ -15,6 +15,7 @@ import { Page_Index } from 'src/build/process/site/Page_Index';
 import { Search } from 'src/build/process/site/search';
 import { Page_Donaters } from 'src/build/process/site/Page_Donate';
 import { SITEMAP, WriteSitemap } from 'src/build/process/site/Sitemap';
+import { exit } from 'process';
 
 let config = new BuildConfig;
     config.devMode = false;
@@ -52,3 +53,5 @@ SITEMAP.init();
 (new WriteSitemap).run();
 
 console.log('\n' + chalk.magenta('Сборка завершена!'));
+
+exit(0);

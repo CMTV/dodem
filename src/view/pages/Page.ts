@@ -94,7 +94,7 @@ export abstract class Page
     {
         SITEMAP.urls.push(this.canonical());
 
-        this.paintOgImg();
+        //this.paintOgImg();
 
         Preprocessor.compilePug(`pages/${this.pageName}.pug`, this, this.dest());
         

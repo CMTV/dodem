@@ -55,6 +55,11 @@ html(lang="ru")
         //- Верификация Yandex
         meta(name="yandex-verification", content="7ff246512ec9d0f4")
 
+        //- Yandex.RTB
+        script.
+            window.yaContextCb=window.yaContextCb||[]
+        script(src="https://yandex.ru/ads/system/context.js", async)
+
     body(class=bodyClass())
         include /includes/theme
 
