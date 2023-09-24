@@ -1,5 +1,6 @@
 import { CONFIG } from "src/build/BuildConfig";
 import { SITEMAP } from "src/build/process/site/Sitemap";
+import { OgPaint } from "src/util/OgPaint";
 import { Preprocessor } from "src/util/Preprocessor";
 import { Location, LocationPart } from "../partials/location";
 
@@ -38,6 +39,26 @@ export class PageSEO
     }
 }
 
+export class PageOgImg
+{
+    static id = 0;
+
+    name: string;
+    title: string;
+
+    constructor(title: string)
+    {
+        this.title = title;
+        PageOgImg.id++;
+    }
+
+    getId()
+    {
+        return `${PageOgImg.id}-${this.name}`;
+    }
+}
+
+
 export abstract class Page
 {
     //
@@ -47,6 +68,7 @@ export abstract class Page
     config = CONFIG;
     location: Location;
     seo: PageSEO;
+    ogImg: PageOgImg;
 
     canonical = () => (CONFIG.getUrl() + '/' + this.dest()).replace('/index.html', '');
     bodyClass = () => this.pageName;
@@ -81,5 +103,9 @@ export abstract class Page
         
         if (this.hasStyle)
             Preprocessor.buildStyle(`pages/${this.pageName}.scss`, `${this.pageName}.css`);
+    }
+
+    private paintOgImg()
+    {
     }
 }
