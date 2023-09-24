@@ -1,7 +1,7 @@
 import { LocationPart } from "../partials/location";
 import { Solution } from "../partials/solution";
 import { Task as PartialTask } from "../partials/task";
-import { Page, PageOgImg } from "./Page";
+import { Page } from "./Page";
 
 export class Task extends Page
 {
@@ -24,7 +24,7 @@ export class Task extends Page
 
     compile()
     {
-        this.ogImg = new PageOgImg(`Задача ${this.task.num}`);
+        //this.ogImg = new PageOgImg(`Задача ${this.task.num}`);
         super.compile();
     }
 

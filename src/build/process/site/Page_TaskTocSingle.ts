@@ -5,7 +5,6 @@ import { GroupTask, Task, TaskTocItem, TocItemType } from "src/db/Entity";
 import { Assets } from "src/translator/Assets";
 import { Translator } from "src/translator/Translator";
 import { Range } from "src/util/Range";
-import { PageOgImg } from "src/view/pages/Page";
 import { GroupContentItem, TaskContentItem, TaskTocSingle as Page } from "src/view/pages/TaskTocSingle";
 import { LocationPart } from "src/view/partials/location";
 import { Difficulty, TaskAttr } from "src/view/partials/task";
@@ -35,7 +34,7 @@ export class Page_TaskTocSingle extends Process
         page.seo.title =    `Задачи: ${taskTocItem.title}`;
         page.seo.desc =     `Все задачи по теме "${taskTocItem.title}" из задачника Демидовича с подробными решениями.`;
 
-        page.ogImg = new PageOgImg(`З: ${taskTocItem.title}`);
+        //page.ogImg = new PageOgImg(`З: ${taskTocItem.title}`);
 
         page.locId = taskTocItem.tocTaskId;
         this.getLocParts(taskTocItem).forEach(part => page.location.parts.push(part));
