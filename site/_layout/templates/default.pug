@@ -120,6 +120,73 @@ html(lang="ru")
 
 
             main
+
+                <style>
+                    .omath {
+                    position: relative;
+                    width: 800px;
+                    margin: 0 auto;
+                    padding: 15px;
+                    background: linear-gradient(to right, #1582df, #509aff);
+                    border: 1px solid #3d75c1;
+                    border-radius: 3px;
+                    box-shadow: 0 1px 3px 1px var(--c_shadow);
+                    display: flex;
+                    align-items: center;
+                    gap: 15px;
+                    color: white;
+                    }
+                    .omath img {
+                    width: 50px;
+                    }
+                    .omath .info {
+                    flex: 1;
+                    display: flex;
+                    font-size: 115%;
+                    flex-direction: column;
+                    gap: 5px;
+                    }
+                    .omath a.goto {
+                    text-decoration: none;
+                    background: white;
+                    border-radius: 3px;
+                    color: #1582df;
+                    font-weight: bold;
+                    padding: 10px;
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    }
+                    .omath a.goto img {
+                    width: 20px;
+                    }
+                    @media (max-width: 830px) {
+                    .omath {
+                        width: auto;
+                        margin: 0 15px;
+                    }
+                    .omath .info {
+                        font-size: 95%;
+                    }
+                    }
+                    @media (max-width: 500px) {
+                    .omath {
+                        margin-left: 0;
+                        margin-right: 0;
+                        border-radius: 0;
+                    }
+                    .omath a.goto span {
+                        display: none;
+                    }
+                    }
+                    </style>
+                <div class="omath"><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iX9Ch0LvQvtC5XzEiIGRhdGEtbmFtZT0i0KHQu9C+0LkgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogI2ZmZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtMjU2LDBDMTE0LjYyLDAsMCwxMTQuNjIsMCwyNTZzMTE0LjYyLDI1NiwyNTYsMjU2LDI1Ni0xMTQuNjIsMjU2LTI1NlMzOTcuMzgsMCwyNTYsMFptMCw1MTJjLTEwNi43Ny0zNi0xODMuNjUtMTM3LTE4My42NS0yNTUuOTVTMTQ5LjIzLDM2LjA5LDI1NiwuMDVjMTA2Ljc3LDM2LDE4My42NSwxMzcsMTgzLjY1LDI1NnMtNzYuODgsMjE5Ljg2LTE4My42NSwyNTUuOTVabTExNi0zMzkuODJ2MTc3LjMzYy4wMS45OS0uMjgsMS45Ni0uODUsMi43Ny0uNzkuOTctMS44NiwxLjY3LTMuMDcsMi0xLjkzLjYxLTMuOTEsMS4wMy01LjkyLDEuMjMtMy4xMi4zNC02LjI1LjUtOS4zOS40Ni0zLjA4LjAzLTYuMTctLjEyLTkuMjMtLjQ2LTEuOTktLjItMy45NC0uNjEtNS44NC0xLjIzLTEuMi0uMzUtMi4yNy0xLjA1LTMuMDctMi0uNjEtLjc5LS45NC0xLjc3LS45My0yLjc3di0xNjEuOTVoLS4zMWwtNTcuNjcsMTYxLjhjLS4zNywxLjI2LTEuMDYsMi40LTIsMy4zMS0xLjA5Ljk2LTIuMzgsMS42Ny0zLjc3LDIuMDctMS45Ny41OC00LjAxLjkyLTYuMDcsMS0yLjQ3LjE2LTUuNDQuMjMtOC45My4yM3MtNi40Ni0uMTMtOC45Mi0uMzhjLTIuMDYtLjE4LTQuMS0uNTktNi4wNy0xLjIzLTEuMzgtLjQ0LTIuNjYtMS4xNS0zLjc3LTIuMDgtLjg5LS43Ny0xLjUzLTEuNzktMS44NS0yLjkybC01NS42Ny0xNjEuOGgtLjMxdjE2MmMwLC45OS0uMjksMS45Ni0uODUsMi43Ny0uODEuOTgtMS45MSwxLjY5LTMuMTUsMi0xLjkzLjYtMy45MSwxLjAyLTUuOTIsMS4yMy0zLjA5LjM0LTYuMi41LTkuMzEuNDYtMy4wOC4wMy02LjE3LS4xMi05LjIzLS40Ni0yLjAxLS4yLTMuOTktLjYyLTUuOTItMS4yMy0xLjIxLS4zMy0yLjI4LTEuMDMtMy4wNy0yLS41Ny0uODEtLjg2LTEuNzgtLjg1LTIuNzd2LTE3Ny4zOGMwLTUuMjMsMS4zOC05LjIzLDQuMTUtMTJzNi40NS00LjE2LDExLjA1LTQuMThoMjYuNDVjNC4wOC0uMDYsOC4xNS4zMiwxMi4xNSwxLjE1LDMuMTYuNjcsNi4xNCwxLjk3LDguNzcsMy44NCwyLjU0LDEuODksNC42NCw0LjMsNi4xNSw3LjA4LDEuODUsMy40NCwzLjI5LDcuMDcsNC4zMSwxMC44NGw0My4wNiwxMTguNTloLjYybDQ0LjYtMTE4LjI4YzEuMTEtMy43NywyLjU4LTcuNDMsNC4zOS0xMC45MiwxLjM5LTIuNzIsMy4yNy01LjE3LDUuNTMtNy4yMywyLjE1LTEuODcsNC43LTMuMjEsNy40Ni0zLjkyLDMuMjctLjgyLDYuNjMtMS4yLDEwLTEuMTVoMjcuMjVjMi40My0uMDUsNC44NC4zMSw3LjE1LDEuMDcsMS44OC42NCwzLjU3LDEuNzIsNC45MywzLjE2LDEuMzMsMS40NiwyLjMyLDMuMTksMi45Miw1LjA3LjcsMi4yMywxLjA0LDQuNTUsMSw2Ljg4WiIvPgo8L3N2Zz4="/>
+                <div class="info">
+                    <p>Новый проект на основе наработок этого сайта.</p>
+                    <p>Понятная теория, конспекты и задачник в одном сайте!</p>
+                </div><a class="goto" href="https://omath.ru"><span>Попробовать</span><img src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyBpZD0iX9Ch0LvQvtC5XzEiIGRhdGEtbmFtZT0i0KHQu9C+0LkgMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgNDQ4IDUxMiI+CiAgPGRlZnM+CiAgICA8c3R5bGU+CiAgICAgIC5jbHMtMSB7CiAgICAgICAgZmlsbDogIzE1ODJkZjsKICAgICAgfQogICAgPC9zdHlsZT4KICA8L2RlZnM+CiAgPHBhdGggY2xhc3M9ImNscy0xIiBkPSJtNDM4LjYsMjc4LjZjMTIuNS0xMi41LDEyLjUtMzIuOCwwLTQ1LjNsLTE2MC0xNjBjLTEyLjUtMTIuNS0zMi44LTEyLjUtNDUuMywwcy0xMi41LDMyLjgsMCw0NS4zbDEwNS41LDEwNS40SDMyYy0xNy43LDAtMzIsMTQuMy0zMiwzMnMxNC4zLDMyLDMyLDMyaDMwNi43bC0xMDUuMywxMDUuNGMtMTIuNSwxMi41LTEyLjUsMzIuOCwwLDQ1LjNzMzIuOCwxMi41LDQ1LjMsMGwxNjAtMTYwLS4xLS4xWiIvPgo8L3N2Zz4="/></a>
+                </div>
+
                 if (location.hasLocation())
                     include /includes/location
 
