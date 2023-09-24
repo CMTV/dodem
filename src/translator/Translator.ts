@@ -64,7 +64,8 @@ export class Translator
     {
         let katexConfig = {
             macros: mathMacro,
-            minRuleThickness: 0.06
+            minRuleThickness: 0.06,
+            throwOnError: false
         }
 
         str = katexRender(str, { katexOptions: katexConfig });
