@@ -4,7 +4,6 @@ import { DB } from "src/db/Db";
 import { BookTocItem, TocItemType } from "src/db/Entity";
 import { Translator } from "src/translator/Translator";
 import { BookTocSingle as BookTocSinglePage } from "src/view/pages/BookTocSingle";
-import { PageOgImg } from "src/view/pages/Page";
 import { BookPageInfo, BookPageType } from "src/view/partials/book";
 import { LocationPart } from "src/view/partials/location";
 
@@ -31,7 +30,7 @@ export class Page_BookTocSingle extends Process
         page.seo.title = '';
         page.seo.desc = `Все определения, теоремы и полезные фишки по теме "${bookTocItem.title}".`;
 
-        page.ogImg = new PageOgImg(bookTocItem.title);
+        //page.ogImg = new PageOgImg(bookTocItem.title);
 
         page.locId = bookTocItem.tocBookId;
         this.getLocParts(bookTocItem).forEach((part, i) =>
