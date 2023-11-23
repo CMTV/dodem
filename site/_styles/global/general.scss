@@ -1,4 +1,6 @@
 @use 'defs/size';
+@use 'defs/breakpoint' as bp;
+@use 'partials/util';
 
 //
 // Сброс стандартных стилей
@@ -60,4 +62,125 @@ ul, ol
 ::selection
 {
     background-color: var(--c_selection);
+}
+
+//
+// Баннер OMath
+//
+
+.omath
+{
+    position: relative;
+    width: 800px;
+    margin: 0 auto;
+    padding: 15px;
+    background: linear-gradient(to right, #1582df, #509aff);
+    border: 1px solid #3d75c1;
+    border-radius: 3px;
+    box-shadow: 0 1px 3px 1px var(--c_shadow);
+    
+    color: white;
+
+    header
+    {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 1px solid white;
+
+        img
+        {
+            width: 50px;
+        }
+
+        .info
+        {
+            flex: 1;
+            display: flex;
+            font-size: 115%;
+            flex-direction: column;
+            gap: 5px;
+
+            @include bp.max(stretch)
+            {
+                font-size: 95%;
+            }
+        }
+
+        a.goto
+        {
+            text-decoration: none;
+            background: white;
+            border-radius: 3px;
+            color: #1582df;
+            font-weight: bold;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            img { width: 20px; }
+
+            @include bp.max(mini)
+            {
+                span { display: none;}
+            }
+        }
+    }
+
+    .topics
+    {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-bottom: 10px;
+
+        .topic
+        {
+            padding: 5px 10px;
+            color: white;
+            text-decoration: none;
+            border-radius: 3px;
+            background: #58a0f9;
+            border: 1px solid transparent;
+            font-size: 92%;
+
+            @include util.transition(border-color);
+
+            &:hover
+            {
+                border-color: white;
+            }
+        }
+    }
+
+    .seeAll
+    {
+        font-weight: 600;
+        color: #b5d8ff;
+        text-decoration-color: transparent;
+        @include util.transition(text-decoration-color);
+        text-align: center;
+
+        &:hover
+        {
+            text-decoration-color: inherit;
+        }
+    }
+
+    @include bp.max(stretch)
+    {
+        width: auto;
+        margin: 0 15px;
+    }
+
+    @include bp.max(mini)
+    {
+        margin-left: 0;
+        margin-right: 0;
+        border-radius: 0;
+    }
 }
