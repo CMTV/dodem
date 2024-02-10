@@ -132,6 +132,10 @@ html(lang="ru")
                     .topics
 
                     script.
+                        let hotTopics = [
+                            ['Бином Ньютона',    'https://omath.ru/article/combinatorics/binomial-theorem'],
+                        ]
+
                         let topics = [
                             ['Сочетания',           'https://omath.ru/article/combinatorics/combination'],
                             ['Перестановки',        'https://omath.ru/article/combinatorics/permutation'],
@@ -140,7 +144,6 @@ html(lang="ru")
                             ['Правило умножения',   'https://omath.ru/article/combinatorics/rules/product'],
                             ['Правило сложения',    'https://omath.ru/article/combinatorics/rules/sum'],
                             ['Прямой перебор',      'https://omath.ru/article/combinatorics/brute-force'],
-                            ['🔥 Бином Ньютона',    'https://omath.ru/article/combinatorics/binomial-theorem'],
                             ['Комбинаторика',       'https://omath.ru/article/combinatorics/preface'],
                         ]
 
@@ -155,15 +158,31 @@ html(lang="ru")
 
                         shuffleArray(topics);
 
-                        let container = document.querySelector('.omath .topics');
-                        topics.slice(0, 5).forEach(topicArr =>
+                        function makeTopicElem(topicArr, isHot)
                         {
                             let a = document.createElement('a');
                                 a.classList.add('topic');
                                 a.setAttribute('href', topicArr[1]);
                                 a.innerText = topicArr[0];
-                            
-                            container.appendChild(a);
+
+                            if (isHot)
+                            {
+                                a.classList.add('hot');
+                                a.setAttribute('title', 'Новинка!');
+                                a.innerHTML = '<i class="fas fa-fire"></i>' + a.innerHTML;
+                            }
+
+                            return a;
+                        }
+
+                        let container = document.querySelector('.omath .topics');
+
+                        hotTopics.forEach(topicArr => {
+                            container.appendChild(makeTopicElem(topicArr, true));
+                        })
+
+                        topics.slice(0, 4).forEach(topicArr => {
+                            container.appendChild(makeTopicElem(topicArr, false));
                         });
 
                     a.seeAll(href="https://omath.ru") Посмотреть все темы!

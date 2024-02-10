@@ -140,6 +140,10 @@ ul, ol
 
         .topic
         {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
             padding: 5px 10px;
             color: white;
             text-decoration: none;
@@ -149,6 +153,11 @@ ul, ol
             font-size: 92%;
 
             @include util.transition(border-color);
+
+            &.hot
+            {
+                background: linear-gradient(45deg, #ef7829, #f15d2c);
+            }
 
             &:hover
             {
